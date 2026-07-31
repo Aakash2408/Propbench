@@ -1,0 +1,32 @@
+id: mined-aastypescoral-006
+title: Add wolfgang maya traits
+family: uncategorized
+date: '2026-04-30'
+author: gunasree
+source: git-mined
+source_repo: AASTypesCoral
+source_commit: 65c33eeadf1c822d1b5cbfc91107a8ff7206ed8d
+difficulty: easy
+trigger:
+  package: AASTypesCoral
+  files:
+  - model/AASDestinationInputTypes.xsd.model.xml
+  intent: Add wolfgang maya traits
+  diff_summary: 'Primary change: model/AASDestinationInputTypes.xsd.model.xml (+17/-0)'
+consequences:
+- package: AASTypesCoral
+  files:
+  - model/AddressAttributeTypes.xsd.model.xml
+  description: 'Co-changed: model/AddressAttributeTypes.xsd.model.xml (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from AASTypesCoral commit 65c33eea. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

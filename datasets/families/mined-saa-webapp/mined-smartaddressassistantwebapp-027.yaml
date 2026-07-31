@@ -1,0 +1,116 @@
+id: mined-smartaddressassistantwebapp-027
+title: '[CDPRevamp] Phase 1: Desktop JSP ViewModel Migration - Layouts + Simple Attributes
+  (Proposal E)'
+family: uncategorized
+date: '2026-04-12'
+author: Aakash Sangwan
+source: git-mined
+source_repo: SmartAddressAssistantWebApp
+source_commit: bd436f09c8d8b07091a5e3a3e1ecdde243e1c07e
+difficulty: hard
+trigger:
+  package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/desktop/securityAccessCodeFormRefactored.jsp
+  intent: '[CDPRevamp] Phase 1: Desktop JSP ViewModel Migration - Layouts + Simple
+    Attributes (Proposal E)'
+  diff_summary: 'Primary change: webapp/WEB-INF/views/cdp/desktop/securityAccessCodeFormRefactored.jsp
+    (+73/-0)'
+consequences:
+- package: SmartAddressAssistantWebApp
+  files:
+  - build.xml
+  description: 'Co-changed: build.xml (+18/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/model/CommonPageContext.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/model/CommonPageContext.java
+    (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/model/DeliveryProfileViewModel.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/model/DeliveryProfileViewModel.java
+    (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/desktop/cdpCsgIntegratedRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/desktop/cdpCsgIntegratedRefactored.jsp
+    (+15/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/desktop/defaultCdpRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/desktop/defaultCdpRefactored.jsp
+    (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/desktop/freeTextInstructionFormListItemRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/desktop/freeTextInstructionFormListItemRefactored.jsp
+    (+19/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/desktop/freeTextInstructionFormRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/desktop/freeTextInstructionFormRefactored.jsp
+    (+24/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/desktop/landingPageCommonRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/desktop/landingPageCommonRefactored.jsp
+    (+68/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/desktop/landingPagePopoverRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/desktop/landingPagePopoverRefactored.jsp
+    (+14/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/desktop/landingPageStandaloneRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/desktop/landingPageStandaloneRefactored.jsp
+    (+18/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 11
+notes: Auto-mined from SmartAddressAssistantWebApp commit bd436f09. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

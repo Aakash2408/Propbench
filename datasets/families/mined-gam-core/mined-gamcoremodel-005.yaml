@@ -1,0 +1,32 @@
+id: mined-gamcoremodel-005
+title: Generated appweaver artifacts
+family: configuration-evolution
+date: '2025-08-29'
+author: Datta Dwarampudi
+source: git-mined
+source_repo: GAMCoreModel
+source_commit: 8c7d28a6273067840598477f8d85e1b4ab0b9d0c
+difficulty: easy
+trigger:
+  package: GAMCoreModel
+  files:
+  - .appweaver/metadata/Units_GAMCoreModel.json
+  intent: Generated appweaver artifacts
+  diff_summary: 'Primary change: .appweaver/metadata/Units_GAMCoreModel.json (+1872/-0)'
+consequences:
+- package: GAMCoreModel
+  files:
+  - .appweaver/metadata/BrazilPackage_GAMCoreModel.json
+  description: 'Co-changed: .appweaver/metadata/BrazilPackage_GAMCoreModel.json (+130/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from GAMCoreModel commit 8c7d28a6. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

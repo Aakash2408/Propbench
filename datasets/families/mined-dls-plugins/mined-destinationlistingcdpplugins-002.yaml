@@ -1,0 +1,45 @@
+id: mined-destinationlistingcdpplugins-002
+title: 'Added weblab A2I_AEXP_ADDRESS_DELIVERY_INSTRUCTIONS_SONAR_NUDGES_MIGRATION_1400675
+  as a kill switch '
+family: uncategorized
+date: '2026-04-21'
+author: Gauri Singhal
+source: git-mined
+source_repo: DestinationListingCDPPlugins
+source_commit: 85b640c32bf0a05bf82ddd12b52caa7f864873eb
+difficulty: medium
+trigger:
+  package: DestinationListingCDPPlugins
+  files:
+  - src/com/amazon/destinationlisting/plugin/decorate/AddressDeliveryInstructionsDecoratorPlugin.java
+  intent: Added weblab A2I_AEXP_ADDRESS_DELIVERY_INSTRUCTIONS_SONAR_NUDGES_MIGRATION_1400675
+    as a kill switch in AddressDeliveryInstructionsDecoratorPlugin
+  diff_summary: 'Primary change: src/com/amazon/destinationlisting/plugin/decorate/AddressDeliveryInstructionsDecoratorPlugin.java
+    (+16/-0)'
+consequences:
+- package: DestinationListingCDPPlugins
+  files:
+  - src/com/amazon/destinationlisting/plugin/metrics/Counters.java
+  description: 'Co-changed: src/com/amazon/destinationlisting/plugin/metrics/Counters.java
+    (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: DestinationListingCDPPlugins
+  files:
+  - tst/com/amazon/destinationlisting/plugin/decorate/AddressDeliveryInstructionsDecoratorPluginTest.java
+  description: 'Co-changed: tst/com/amazon/destinationlisting/plugin/decorate/AddressDeliveryInstructionsDecoratorPluginTest.java
+    (+45/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from DestinationListingCDPPlugins commit 85b640c3. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

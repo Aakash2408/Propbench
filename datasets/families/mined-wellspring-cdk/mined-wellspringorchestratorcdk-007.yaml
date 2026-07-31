@@ -1,0 +1,40 @@
+id: mined-wellspringorchestratorcdk-007
+title: Mark eval-dashboard tasks complete
+family: uncategorized
+date: '2026-06-30'
+author: David Madsen
+source: git-mined
+source_repo: WellspringOrchestratorCDK
+source_commit: ff871ff84ae9466aeeb3d230856a999d62a1cfbe
+difficulty: medium
+trigger:
+  package: WellspringOrchestratorCDK
+  files:
+  - src/evalPipelineStack.ts
+  intent: Mark eval-dashboard tasks complete
+  diff_summary: 'Primary change: src/evalPipelineStack.ts (+4/-4)'
+consequences:
+- package: WellspringOrchestratorCDK
+  files:
+  - .kiro/specs/eval-dashboard/tasks.md
+  description: 'Co-changed: .kiro/specs/eval-dashboard/tasks.md (+45/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringOrchestratorCDK
+  files:
+  - src/__tests__/evalPipelineStack.spec.ts
+  description: 'Co-changed: src/__tests__/evalPipelineStack.spec.ts (+122/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from WellspringOrchestratorCDK commit ff871ff8. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

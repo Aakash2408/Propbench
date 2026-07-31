@@ -1,0 +1,156 @@
+id: mined-smartaddressassistantwebapp-003
+title: '[CDPRevamp] Wire MCS photo upload into SAA WebApp — controller, accessor,
+  config, EXIF parser'
+family: configuration-evolution
+date: '2026-05-29'
+author: Qasim Bhatia
+source: git-mined
+source_repo: SmartAddressAssistantWebApp
+source_commit: 39fa3234130881dd600a5780b3fa1b13deee0ddd
+difficulty: hard
+trigger:
+  package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/resource/ExifGeoExtractor.java
+  intent: '[CDPRevamp] Wire MCS photo upload into SAA WebApp — controller, accessor,
+    config, EXIF parser'
+  diff_summary: 'Primary change: src/com/amazon/saa/webapp/resource/ExifGeoExtractor.java
+    (+294/-0)'
+consequences:
+- package: SmartAddressAssistantWebApp
+  files:
+  - Config
+  description: 'Co-changed: Config (+5/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - configuration/brazil-config/global/McsPhotoUploadConfig.cfg
+  description: 'Co-changed: configuration/brazil-config/global/McsPhotoUploadConfig.cfg
+    (+102/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/accessor/McsAccessor.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/accessor/McsAccessor.java (+145/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/config/McsConfig.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/config/McsConfig.java (+122/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/controller/core/apiController/deliveryProfile/DeliveryPhotoUploadController.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/controller/core/apiController/deliveryProfile/DeliveryPhotoUploadController.java
+    (+67/-24)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/model/apiModel/deliveryProfile/DeletePhotoRequest.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/model/apiModel/deliveryProfile/DeletePhotoRequest.java
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/model/apiModel/deliveryProfile/UploadPhotoResponse.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/model/apiModel/deliveryProfile/UploadPhotoResponse.java
+    (+14/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/resource/DeliveryPhotoResizeUtil.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/resource/DeliveryPhotoResizeUtil.java
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - tst/com/amazon/saa/webapp/accessor/McsAccessorTest.java
+  description: 'Co-changed: tst/com/amazon/saa/webapp/accessor/McsAccessorTest.java
+    (+175/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - tst/com/amazon/saa/webapp/controller/core/apiController/deliveryProfile/DeliveryPhotoUploadControllerTest.java
+  description: 'Co-changed: tst/com/amazon/saa/webapp/controller/core/apiController/deliveryProfile/DeliveryPhotoUploadControllerTest.java
+    (+73/-16)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - tst/com/amazon/saa/webapp/resource/ExifGeoExtractorTest.java
+  description: 'Co-changed: tst/com/amazon/saa/webapp/resource/ExifGeoExtractorTest.java
+    (+145/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - tst/resources/test-images/12_gps_nikon_dscn0010.jpg
+  description: 'Co-changed: tst/resources/test-images/12_gps_nikon_dscn0010.jpg (+0/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - tst/resources/test-images/13_gps_nikon_dscn0042.jpg
+  description: 'Co-changed: tst/resources/test-images/13_gps_nikon_dscn0042.jpg (+0/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - tst/resources/test-images/14_gps_nokia_mobile.jpg
+  description: 'Co-changed: tst/resources/test-images/14_gps_nokia_mobile.jpg (+0/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/controllerTesting/landingPage.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/controllerTesting/landingPage.jsp
+    (+26/-42)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 16
+notes: Auto-mined from SmartAddressAssistantWebApp commit 39fa3234. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

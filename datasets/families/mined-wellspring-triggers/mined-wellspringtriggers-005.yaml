@@ -1,0 +1,54 @@
+id: mined-wellspringtriggers-005
+title: 'feat: Defect trigger — DELIVERY_DEFECT_GEOMIND, TRIGGER_MODE, postal_codes,
+  ingestionDate fallback'
+family: uncategorized
+date: '2026-06-11'
+author: Akshit Verma
+source: git-mined
+source_repo: WellspringTriggers
+source_commit: 3adeb300fd89f22bcc4a5a6e9190f9a7d41c7235
+difficulty: medium
+trigger:
+  package: WellspringTriggers
+  files:
+  - trigger-handler/src/main/java/com/amazon/wellspringtriggers/triggerhandler/TriggerHandlerLambda.java
+  intent: 'feat: Defect trigger — DELIVERY_DEFECT_GEOMIND, TRIGGER_MODE, postal_codes,
+    ingestionDate fallback'
+  diff_summary: 'Primary change: trigger-handler/src/main/java/com/amazon/wellspringtriggers/triggerhandler/TriggerHandlerLambda.java
+    (+22/-8)'
+consequences:
+- package: WellspringTriggers
+  files:
+  - trigger-handler/src/main/java/com/amazon/wellspringtriggers/triggerhandler/GlueJobStarter.java
+  description: 'Co-changed: trigger-handler/src/main/java/com/amazon/wellspringtriggers/triggerhandler/GlueJobStarter.java
+    (+4/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringTriggers
+  files:
+  - trigger-handler/src/test/java/com/amazon/wellspringtriggers/triggerhandler/GlueJobStarterTest.java
+  description: 'Co-changed: trigger-handler/src/test/java/com/amazon/wellspringtriggers/triggerhandler/GlueJobStarterTest.java
+    (+4/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringTriggers
+  files:
+  - trigger-handler/src/test/java/com/amazon/wellspringtriggers/triggerhandler/TriggerHandlerLambdaTest.java
+  description: 'Co-changed: trigger-handler/src/test/java/com/amazon/wellspringtriggers/triggerhandler/TriggerHandlerLambdaTest.java
+    (+5/-5)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 4
+notes: Auto-mined from WellspringTriggers commit 3adeb300. Trigger heuristic may be
+  wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

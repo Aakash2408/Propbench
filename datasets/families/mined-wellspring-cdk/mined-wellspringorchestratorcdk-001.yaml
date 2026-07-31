@@ -1,0 +1,40 @@
+id: mined-wellspringorchestratorcdk-001
+title: 'feat: Signal 3 CDK stack (NectoChangeset SNS → SQS → Lambda)'
+family: infrastructure-evolution
+date: '2026-07-27'
+author: Aakash Sangwan
+source: git-mined
+source_repo: WellspringOrchestratorCDK
+source_commit: a74c1b1641394dede21c4f12d7eda32f732a58f6
+difficulty: medium
+trigger:
+  package: WellspringOrchestratorCDK
+  files:
+  - src/hierarchySignalTriggerStack.ts
+  intent: 'feat: Signal 3 CDK stack (NectoChangeset SNS → SQS → Lambda)'
+  diff_summary: 'Primary change: src/hierarchySignalTriggerStack.ts (+240/-0)'
+consequences:
+- package: WellspringOrchestratorCDK
+  files:
+  - src/app.ts
+  description: 'Co-changed: src/app.ts (+20/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringOrchestratorCDK
+  files:
+  - src/stageConfig.ts
+  description: 'Co-changed: src/stageConfig.ts (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from WellspringOrchestratorCDK commit a74c1b16. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

@@ -1,0 +1,32 @@
+id: mined-arx-opscdk-017
+title: Restricting the IAM role sts:TagSession
+family: infrastructure-evolution
+date: '2025-09-02'
+author: Abhishek Pandey
+source: git-mined
+source_repo: ARX-OpsCDK
+source_commit: 90d9ecfb3134e5ab115cd1e5ba162e4c54fe706c
+difficulty: easy
+trigger:
+  package: ARX-OpsCDK
+  files:
+  - lib/stacks/adamIntegrationTestsTodStack.ts
+  intent: Restricting the IAM role sts:TagSession
+  diff_summary: 'Primary change: lib/stacks/adamIntegrationTestsTodStack.ts (+4/-4)'
+consequences:
+- package: ARX-OpsCDK
+  files:
+  - lib/tests/adamIntegrationTestsTodStack.test.ts
+  description: 'Co-changed: lib/tests/adamIntegrationTestsTodStack.test.ts (+12/-12)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from ARX-OpsCDK commit 90d9ecfb. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

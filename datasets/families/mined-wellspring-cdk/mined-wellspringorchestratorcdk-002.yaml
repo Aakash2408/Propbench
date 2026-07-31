@@ -1,0 +1,40 @@
+id: mined-wellspringorchestratorcdk-002
+title: 'feat: Signal 2 CDK stack (DMS v2-rdr-event-notifier SNS → SQS → Lambda)'
+family: infrastructure-evolution
+date: '2026-07-27'
+author: Aakash Sangwan
+source: git-mined
+source_repo: WellspringOrchestratorCDK
+source_commit: f151917271460e102f55b77d4fd186eb98ebd3b3
+difficulty: medium
+trigger:
+  package: WellspringOrchestratorCDK
+  files:
+  - src/defectSignalTriggerStack.ts
+  intent: 'feat: Signal 2 CDK stack (DMS v2-rdr-event-notifier SNS → SQS → Lambda)'
+  diff_summary: 'Primary change: src/defectSignalTriggerStack.ts (+205/-0)'
+consequences:
+- package: WellspringOrchestratorCDK
+  files:
+  - src/app.ts
+  description: 'Co-changed: src/app.ts (+19/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringOrchestratorCDK
+  files:
+  - src/stageConfig.ts
+  description: 'Co-changed: src/stageConfig.ts (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from WellspringOrchestratorCDK commit f1519172. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

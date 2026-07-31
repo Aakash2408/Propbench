@@ -1,0 +1,49 @@
+id: mined-geostudiodeliveryhistorylambda-007
+title: '[TA/SEL] Onboard lambda functions to Convoy'
+family: configuration-evolution
+date: '2025-10-30'
+author: Qasim Bhatia
+source: git-mined
+source_repo: GeoStudioDeliveryHistoryLambda
+source_commit: a212356ee2ab7d0329e262dfd935bf5bd641ad41
+difficulty: medium
+trigger:
+  package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/client/GDPSClient.java
+  intent: '[TA/SEL] Onboard lambda functions to Convoy'
+  diff_summary: 'Primary change: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/client/GDPSClient.java
+    (+14/-8)'
+consequences:
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - Config
+  description: 'Co-changed: Config (+3/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - build.gradle.kts
+  description: 'Co-changed: build.gradle.kts (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - configuration/aws_lambda/lambda-transform.yml
+  description: 'Co-changed: configuration/aws_lambda/lambda-transform.yml (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 4
+notes: Auto-mined from GeoStudioDeliveryHistoryLambda commit a212356e. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

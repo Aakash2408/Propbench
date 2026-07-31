@@ -1,0 +1,105 @@
+id: mined-youraccountaddressbook-006
+title: 'chore(weblab): Remove ARX_ADDRESS_LABELS_434336 weblab code'
+family: refactor
+date: '2026-06-24'
+author: Kanchan Hingorani
+source: git-mined
+source_repo: YourAccountAddressBook
+source_commit: ede7f5f86dcc53d83e6ad9dc573a5e40705f511f
+difficulty: medium
+trigger:
+  package: YourAccountAddressBook
+  files:
+  - webapp/WEB-INF/views/address-form.ftl
+  intent: 'chore(weblab): Remove ARX_ADDRESS_LABELS_434336 weblab code'
+  diff_summary: 'Primary change: webapp/WEB-INF/views/address-form.ftl (+3/-24)'
+consequences:
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/features/addressbook/AddressBookFeatureProvider.scala
+  description: 'Co-changed: src/com/amazon/identity/address/features/addressbook/AddressBookFeatureProvider.scala
+    (+0/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/features/addressbook/EditAddressController.scala
+  description: 'Co-changed: src/com/amazon/identity/address/features/addressbook/EditAddressController.scala
+    (+2/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/features/addressbook/impl/EditAddressControllerImpl.scala
+  description: 'Co-changed: src/com/amazon/identity/address/features/addressbook/impl/EditAddressControllerImpl.scala
+    (+2/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/features/addressbook/widgets/AddressFormWidget.scala
+  description: 'Co-changed: src/com/amazon/identity/address/features/addressbook/widgets/AddressFormWidget.scala
+    (+2/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/serviceaccessors/WebLabServiceAccessor.scala
+  description: 'Co-changed: src/com/amazon/identity/address/serviceaccessors/WebLabServiceAccessor.scala
+    (+3/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/features/addressbook/AddressBookFeatureProviderTests.scala
+  description: 'Co-changed: tst/com/amazon/identity/address/features/addressbook/AddressBookFeatureProviderTests.scala
+    (+0/-24)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/features/editAddress/EditAddressControllerTests.scala
+  description: 'Co-changed: tst/com/amazon/identity/address/features/editAddress/EditAddressControllerTests.scala
+    (+0/-13)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/features/editAddress/impl/EditAddressControllerImplTests.scala
+  description: 'Co-changed: tst/com/amazon/identity/address/features/editAddress/impl/EditAddressControllerImplTests.scala
+    (+0/-13)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/features/serviceaccessors/WebLabServiceAccessorTest.scala
+  description: 'Co-changed: tst/com/amazon/identity/address/features/serviceaccessors/WebLabServiceAccessorTest.scala
+    (+0/-14)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 10
+notes: Auto-mined from YourAccountAddressBook commit ede7f5f8. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

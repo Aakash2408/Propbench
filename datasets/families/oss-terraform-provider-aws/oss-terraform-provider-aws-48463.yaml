@@ -1,0 +1,42 @@
+id: oss-terraform-provider-aws-48463
+title: 'bugfix: HTTP requests and responses always masked in logs'
+family: bugfix
+date: '2026-06-18'
+author: YakDriver
+source: github-api-mined
+source_repo: hashicorp/terraform-provider-aws
+source_url: https://github.com/hashicorp/terraform-provider-aws/pull/48463
+source_pr: 48463
+difficulty: medium
+trigger:
+  package: hashicorp/terraform-provider-aws
+  files:
+  - internal/conns/awsclient.go
+  intent: 'bugfix: HTTP requests and responses always masked in logs'
+  diff_summary: 'Primary: internal/conns/awsclient.go (+23/-3)'
+consequences:
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/conns/awsclient_request_context_test.go
+  description: 'added: internal/conns/awsclient_request_context_test.go (+115/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/provider/framework/wrap.go
+  description: 'modified: internal/provider/framework/wrap.go (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from hashicorp/terraform-provider-aws PR #48463. Trigger heuristic applied.
+  Needs review.'

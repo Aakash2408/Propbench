@@ -1,0 +1,71 @@
+id: "integration-tests-01"
+title: "Add DefectLifecycleTest Coral API integration tests"
+
+family: "integration-tests"
+date: "2026-07-13"
+author: "aakkaash"
+cr_ids:
+  - "CR-288852323"
+
+trigger:
+  package: "RepeatDefectsManagementServiceTests"
+  version_set: "RepeatDefectsManagementService/release"
+  files:
+    - "tst/com/amazon/rdms/integration/DefectLifecycleTest.java"
+  intent: "Add integration tests covering CreateDefect, GetDefect, UpdateDefect, GetDefectsByFingerprint Coral APIs"
+  diff_summary: |
+    New test class with 4 chained methods (priority + dependsOnMethods):
+    testCreateDefect → testGetDefect → testUpdateDefect → testGetDefectsByFingerprint.
+    Uses fresh random addressId + trackingId per run. No pre-seeded data.
+
+consequences:
+  - package: "RepeatDefectsManagementServiceTests"
+    version_set: "RepeatDefectsManagementService/release"
+    files:
+      - "configuration/testng-development.xml"
+    description: "TestNG XML needs new test class registered (local only — Hydra injects its own)"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.70
+    reasoning: "TestNG XML must reference new test classes. But this is local-only config — Hydra pipeline uses its own config. Easy to forget when running locally."
+
+expert_reasoning: |
+  This is a MINIMAL propagation case. Adding a test class to an existing
+  test package requires almost no other changes.
+  
+  The only "propagation" is the TestNG XML file which registers the test
+  for local execution. In Hydra (CI), tests are discovered automatically.
+  
+  The expert knows:
+  1. No Config file changes needed (SQS SDK was already present)
+  2. No build dependency changes (Coral client already in the package)
+  3. testng-development.xml is local-only and NOT committed to mainline
+  4. Hydra uses qualifier=Base.NA.Beta.NAWS, not the local qualifier
+
+common_mistakes:
+  - "Committing testng-development.xml with local qualifier (breaks Hydra)"
+  - "Using qualifier=beta.us-east-1 in Hydra CLI (causes endpoint resolution failure)"
+  - "Running development-integ-tests without running release first (SSLHandshakeException)"
+  - "Assuming DHS is reachable from beta Lambda VPC (it's not — DNS resolution fails)"
+
+tags:
+  - "single-package"
+  - "minimal-propagation"
+  - "test-addition"
+  - "runtime-gotchas"
+
+effort:
+  actual_hours: 8
+  mechanical_hours: 2
+  review_hours: 4
+  packages_touched: 1
+  crs_raised: 1
+
+notes: |
+  Another negative/minimal case. The engine should predict very little
+  downstream propagation for adding a test to an existing test package.
+  
+  The real complexity here isn't propagation — it's RUNTIME gotchas
+  (DHS DNS, qualifier format, TLS truststore). Those are a different
+  kind of expert knowledge that the prediction engine might not capture,
+  but they're valuable to document for the "what did the expert know?" corpus.

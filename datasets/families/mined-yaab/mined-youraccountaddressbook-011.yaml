@@ -1,0 +1,97 @@
+id: mined-youraccountaddressbook-011
+title: Weblab cleanup  PAX_ARX_YAAB_MIGRATE_TO_DATAPATH_GATEWAY_VIEW_CLIENT_1283354
+family: uncategorized
+date: '2026-02-19'
+author: Kanchan Hingorani
+source: git-mined
+source_repo: YourAccountAddressBook
+source_commit: ab8694a88d77e53b5995fbdfef9814f12a336afd
+difficulty: medium
+trigger:
+  package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/serviceaccessors/DatapathServiceAccessorTests.scala
+  intent: Weblab cleanup  PAX_ARX_YAAB_MIGRATE_TO_DATAPATH_GATEWAY_VIEW_CLIENT_1283354
+  diff_summary: 'Primary change: tst/com/amazon/identity/address/serviceaccessors/DatapathServiceAccessorTests.scala
+    (+5/-24)'
+consequences:
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/features/addressbook/AddressBookFeatureProvider.scala
+  description: 'Co-changed: src/com/amazon/identity/address/features/addressbook/AddressBookFeatureProvider.scala
+    (+1/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/serviceaccessors/DatapathServiceAccessor.scala
+  description: 'Co-changed: src/com/amazon/identity/address/serviceaccessors/DatapathServiceAccessor.scala
+    (+5/-16)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/serviceaccessors/ServiceClientFactory.scala
+  description: 'Co-changed: src/com/amazon/identity/address/serviceaccessors/ServiceClientFactory.scala
+    (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/serviceaccessors/WebLabServiceAccessor.scala
+  description: 'Co-changed: src/com/amazon/identity/address/serviceaccessors/WebLabServiceAccessor.scala
+    (+7/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/serviceaccessors/datapath/DatapathClientGenerator.scala
+  description: 'Co-changed: src/com/amazon/identity/address/serviceaccessors/datapath/DatapathClientGenerator.scala
+    (+1/-10)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/features/addressbook/AddressBookFeatureProviderTests.scala
+  description: 'Co-changed: tst/com/amazon/identity/address/features/addressbook/AddressBookFeatureProviderTests.scala
+    (+3/-21)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/features/serviceaccessors/WebLabServiceAccessorTest.scala
+  description: 'Co-changed: tst/com/amazon/identity/address/features/serviceaccessors/WebLabServiceAccessorTest.scala
+    (+15/-9)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/serviceaccessors/datapath/DatapathClientGeneratorTest.scala
+  description: 'Co-changed: tst/com/amazon/identity/address/serviceaccessors/datapath/DatapathClientGeneratorTest.scala
+    (+1/-13)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 9
+notes: Auto-mined from YourAccountAddressBook commit ab8694a8. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

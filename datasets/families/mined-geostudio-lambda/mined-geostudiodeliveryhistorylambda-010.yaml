@@ -1,0 +1,70 @@
+id: mined-geostudiodeliveryhistorylambda-010
+title: '[TA/SEL] Add TA Token rehydration for SQS messages'
+family: uncategorized
+date: '2025-09-24'
+author: Qasim Bhatia
+source: git-mined
+source_repo: GeoStudioDeliveryHistoryLambda
+source_commit: 98c68adf8fa8f531bb0b7b7c0954dd0d59f48094
+difficulty: medium
+trigger:
+  package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/auth/TransitiveAuthTokenRetriever.java
+  intent: '[TA/SEL] Add TA Token rehydration for SQS messages'
+  diff_summary: 'Primary change: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/auth/TransitiveAuthTokenRetriever.java
+    (+69/-6)'
+consequences:
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/handler/DeliveryHistoryEventHandler.java
+  description: 'Co-changed: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/handler/DeliveryHistoryEventHandler.java
+    (+25/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/java/com/amazon/geostudiodeliveryhistory/lambda/auth/TransitiveAuthTokenRetrieverTest.java
+  description: 'Co-changed: src/test/java/com/amazon/geostudiodeliveryhistory/lambda/auth/TransitiveAuthTokenRetrieverTest.java
+    (+216/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/java/com/amazon/geostudiodeliveryhistory/lambda/client/GDPSClientTest.java
+  description: 'Co-changed: src/test/java/com/amazon/geostudiodeliveryhistory/lambda/client/GDPSClientTest.java
+    (+39/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/java/com/amazon/geostudiodeliveryhistory/lambda/handler/DeliveryHistoryEventHandlerTest.java
+  description: 'Co-changed: src/test/java/com/amazon/geostudiodeliveryhistory/lambda/handler/DeliveryHistoryEventHandlerTest.java
+    (+130/-60)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/java/com/amazon/geostudiodeliveryhistory/lambda/processor/BackfillMessageProcessorTest.java
+  description: 'Co-changed: src/test/java/com/amazon/geostudiodeliveryhistory/lambda/processor/BackfillMessageProcessorTest.java
+    (+94/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 6
+notes: Auto-mined from GeoStudioDeliveryHistoryLambda commit 98c68adf. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

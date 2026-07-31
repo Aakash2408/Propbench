@@ -1,0 +1,63 @@
+id: mined-smartaddressassistantwebapp-022
+title: '[CDPRevamp] Migrate mobile simple attribute form JSPs to ViewModel pattern
+  (Proposal E - dead code)'
+family: uncategorized
+date: '2026-04-20'
+author: Shivam Singla
+source: git-mined
+source_repo: SmartAddressAssistantWebApp
+source_commit: d98df2accb54603ae694510a7d575af272d60c51
+difficulty: medium
+trigger:
+  package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/accessCodeFormRefactored.jsp
+  intent: '[CDPRevamp] Migrate mobile simple attribute form JSPs to ViewModel pattern
+    (Proposal E - dead code)'
+  diff_summary: 'Primary change: webapp/WEB-INF/views/cdp/mobile/accessCodeFormRefactored.jsp
+    (+40/-0)'
+consequences:
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/callBoxFormRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/callBoxFormRefactored.jsp
+    (+36/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/freeTextInstructionFormExpanderRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/freeTextInstructionFormExpanderRefactored.jsp
+    (+23/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/freeTextInstructionFormRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/freeTextInstructionFormRefactored.jsp
+    (+32/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/physicalKeyFobFormRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/physicalKeyFobFormRefactored.jsp
+    (+24/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 5
+notes: Auto-mined from SmartAddressAssistantWebApp commit d98df2ac. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

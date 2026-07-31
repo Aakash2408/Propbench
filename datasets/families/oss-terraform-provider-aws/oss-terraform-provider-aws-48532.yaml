@@ -1,0 +1,66 @@
+id: oss-terraform-provider-aws-48532
+title: '`r/aws_glue_catalog_table`: Fix in-place update of `VIRTUAL_VIEW` tables'
+family: bugfix
+date: '2026-06-23'
+author: YakDriver
+source: github-api-mined
+source_repo: hashicorp/terraform-provider-aws
+source_url: https://github.com/hashicorp/terraform-provider-aws/pull/48532
+source_pr: 48532
+difficulty: medium
+trigger:
+  package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/glue/catalog_table.go
+  intent: '`r/aws_glue_catalog_table`: Fix in-place update of `VIRTUAL_VIEW` tables'
+  diff_summary: 'Primary: internal/service/glue/catalog_table.go (+13/-0)'
+consequences:
+- package: hashicorp/terraform-provider-aws
+  files:
+  - .ci/swissshepherd-full.hcl
+  description: 'modified: .ci/swissshepherd-full.hcl (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - .ci/swissshepherd-weak.hcl
+  description: 'modified: .ci/swissshepherd-weak.hcl (+4/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - .ci/tools/go.mod
+  description: 'modified: .ci/tools/go.mod (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/glue/catalog_table_test.go
+  description: 'modified: internal/service/glue/catalog_table_test.go (+79/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - website/docs/r/glue_catalog_table.html.markdown
+  description: 'modified: website/docs/r/glue_catalog_table.html.markdown (+79/-76)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from hashicorp/terraform-provider-aws PR #48532. Trigger heuristic applied.
+  Needs review.'

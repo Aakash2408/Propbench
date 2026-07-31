@@ -1,0 +1,89 @@
+id: mined-smartaddressassistantwebapp-024
+title: '[CDP-Revamp] Add CdpFeatureFlags gap-fill and refactored mobile landing page
+  JSPs (dead code)'
+family: refactor
+date: '2026-04-15'
+author: Shivam Singla
+source: git-mined
+source_repo: SmartAddressAssistantWebApp
+source_commit: 2c9dae3ddda0b94324403dd3daf2e6b5169104b6
+difficulty: medium
+trigger:
+  package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/landingPageCommonRefactored.jsp
+  intent: '[CDP-Revamp] Add CdpFeatureFlags gap-fill and refactored mobile landing
+    page JSPs (dead code)'
+  diff_summary: 'Primary change: webapp/WEB-INF/views/cdp/mobile/landingPageCommonRefactored.jsp
+    (+147/-0)'
+consequences:
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/model/CdpFeatureFlags.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/model/CdpFeatureFlags.java (+9/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/provider/CdpFeatureFlagsProvider.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/provider/CdpFeatureFlagsProvider.java
+    (+38/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - tst/com/amazon/saa/webapp/provider/CdpFeatureFlagsProviderTest.java
+  description: 'Co-changed: tst/com/amazon/saa/webapp/provider/CdpFeatureFlagsProviderTest.java
+    (+93/-4)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/cdpCsgIntegratedRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/cdpCsgIntegratedRefactored.jsp
+    (+29/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/landingPagePopoverRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/landingPagePopoverRefactored.jsp
+    (+65/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/landingPageStandaloneRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/landingPageStandaloneRefactored.jsp
+    (+55/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/pageHeaderRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/pageHeaderRefactored.jsp
+    (+20/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 8
+notes: Auto-mined from SmartAddressAssistantWebApp commit 2c9dae3d. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

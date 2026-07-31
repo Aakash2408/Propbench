@@ -1,0 +1,48 @@
+id: mined-arx-opscdk-014
+title: Adding permissions required by TPSGeneratorWorker hosts
+family: uncategorized
+date: '2025-12-03'
+author: Jatin Batra
+source: git-mined
+source_repo: ARX-OpsCDK
+source_commit: 9ed36c452de2db347949d220cdb038e20961bae9
+difficulty: medium
+trigger:
+  package: ARX-OpsCDK
+  files:
+  - lib/stacks/dlsTodStressTestStack.ts
+  intent: Adding permissions required by TPSGeneratorWorker hosts
+  diff_summary: 'Primary change: lib/stacks/dlsTodStressTestStack.ts (+58/-2)'
+consequences:
+- package: ARX-OpsCDK
+  files:
+  - README.md
+  description: 'Co-changed: README.md (+10/-8)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: ARX-OpsCDK
+  files:
+  - lib/constants/hostclasses.ts
+  description: 'Co-changed: lib/constants/hostclasses.ts (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: ARX-OpsCDK
+  files:
+  - lib/tests/dlsTodStressTestStack.test.ts
+  description: 'Co-changed: lib/tests/dlsTodStressTestStack.test.ts (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 4
+notes: Auto-mined from ARX-OpsCDK commit 9ed36c45. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

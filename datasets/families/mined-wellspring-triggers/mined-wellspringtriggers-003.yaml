@@ -1,0 +1,83 @@
+id: mined-wellspringtriggers-003
+title: 'feat: Building Summary trigger handler (Signal 1: DH changes)'
+family: configuration-evolution
+date: '2026-07-13'
+author: Aakash Sangwan
+source: git-mined
+source_repo: WellspringTriggers
+source_commit: 8def74ec2e9eb7dadd563f168922230f9d3c0d91
+difficulty: medium
+trigger:
+  package: WellspringTriggers
+  files:
+  - building-summary-trigger/src/main/java/com/amazon/wellspringtriggers/buildingsummary/BuildingSummaryTriggerHandler.java
+  intent: 'feat: Building Summary trigger handler (Signal 1: DH changes)'
+  diff_summary: 'Primary change: building-summary-trigger/src/main/java/com/amazon/wellspringtriggers/buildingsummary/BuildingSummaryTriggerHandler.java
+    (+226/-0)'
+consequences:
+- package: WellspringTriggers
+  files:
+  - Config
+  description: 'Co-changed: Config (+2/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringTriggers
+  files:
+  - build.gradle.kts
+  description: 'Co-changed: build.gradle.kts (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringTriggers
+  files:
+  - building-summary-trigger/.jqwik-database
+  description: 'Co-changed: building-summary-trigger/.jqwik-database (+0/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringTriggers
+  files:
+  - building-summary-trigger/build.gradle.kts
+  description: 'Co-changed: building-summary-trigger/build.gradle.kts (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringTriggers
+  files:
+  - building-summary-trigger/src/test/java/com/amazon/wellspringtriggers/buildingsummary/BuildingSummaryTriggerHandlerTest.java
+  description: 'Co-changed: building-summary-trigger/src/test/java/com/amazon/wellspringtriggers/buildingsummary/BuildingSummaryTriggerHandlerTest.java
+    (+223/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringTriggers
+  files:
+  - dispatch-lambda/src/main/java/com/amazon/wellspringtriggers/dispatch/DispatchLambda.java
+  description: 'Co-changed: dispatch-lambda/src/main/java/com/amazon/wellspringtriggers/dispatch/DispatchLambda.java
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringTriggers
+  files:
+  - settings.gradle.kts
+  description: 'Co-changed: settings.gradle.kts (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 8
+notes: Auto-mined from WellspringTriggers commit 8def74ec. Trigger heuristic may be
+  wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

@@ -1,0 +1,54 @@
+id: mined-geostudiodeliveryhistorylambda-005
+title: 'refactor(concession): Replace order-matching with hybrid shipmentId/orderId
+  trackingId resolution'
+family: refactor
+date: '2026-05-10'
+author: kiranbob
+source: git-mined
+source_repo: GeoStudioDeliveryHistoryLambda
+source_commit: f2183daf18ca71d385351192c913f8d53fe52985
+difficulty: medium
+trigger:
+  package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/helper/concession/enricher/ConcessionEventEnricher.java
+  intent: 'refactor(concession): Replace order-matching with hybrid shipmentId/orderId
+    trackingId resolution'
+  diff_summary: 'Primary change: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/helper/concession/enricher/ConcessionEventEnricher.java
+    (+152/-88)'
+consequences:
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/accessor/TCDSAccessor.java
+  description: 'Co-changed: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/accessor/TCDSAccessor.java
+    (+46/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/java/com/amazon/geostudiodeliveryhistory/lambda/accessor/TCDSAccessorTest.java
+  description: 'Co-changed: src/test/java/com/amazon/geostudiodeliveryhistory/lambda/accessor/TCDSAccessorTest.java
+    (+125/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/java/com/amazon/geostudiodeliveryhistory/lambda/helper/concession/enricher/ConcessionEventEnricherTest.java
+  description: 'Co-changed: src/test/java/com/amazon/geostudiodeliveryhistory/lambda/helper/concession/enricher/ConcessionEventEnricherTest.java
+    (+166/-237)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 4
+notes: Auto-mined from GeoStudioDeliveryHistoryLambda commit f2183daf. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

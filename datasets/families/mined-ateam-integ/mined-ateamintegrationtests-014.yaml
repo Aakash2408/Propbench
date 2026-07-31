@@ -1,0 +1,70 @@
+id: mined-ateamintegrationtests-014
+title: Added integration tests for IS_PLACE_BLOCKED attribute in FR and AU
+family: test-evolution
+date: '2025-05-18'
+author: Divya Raman
+source: git-mined
+source_repo: AteamIntegrationTests
+source_commit: c0e206b43964623d2ab9ba8e7b10bc0a2ba06b83
+difficulty: medium
+trigger:
+  package: AteamIntegrationTests
+  files:
+  - data/selection/AU/testScenarios/source-precedence-majority/IsPlaceBlocked.prototxt
+  intent: Added integration tests for IS_PLACE_BLOCKED attribute in FR and AU
+  diff_summary: 'Primary change: data/selection/AU/testScenarios/source-precedence-majority/IsPlaceBlocked.prototxt
+    (+190/-0)'
+consequences:
+- package: AteamIntegrationTests
+  files:
+  - data/gamUpdates/AU/testScenarios/IsPlaceBlocked.prototxt
+  description: 'Co-changed: data/gamUpdates/AU/testScenarios/IsPlaceBlocked.prototxt
+    (+147/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/gamUpdates/FR/testScenarios/IsPlaceBlocked.prototxt
+  description: 'Co-changed: data/gamUpdates/FR/testScenarios/IsPlaceBlocked.prototxt
+    (+147/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/ingestion/AU/testScenarios/IsPlaceBlocked.prototxt
+  description: 'Co-changed: data/ingestion/AU/testScenarios/IsPlaceBlocked.prototxt
+    (+135/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/ingestion/FR/testScenarios/IsPlaceBlocked.prototxt
+  description: 'Co-changed: data/ingestion/FR/testScenarios/IsPlaceBlocked.prototxt
+    (+135/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/FR/testScenarios/source-precedence-majority/IsPlaceBlocked.prototxt
+  description: 'Co-changed: data/selection/FR/testScenarios/source-precedence-majority/IsPlaceBlocked.prototxt
+    (+190/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 6
+notes: Auto-mined from AteamIntegrationTests commit c0e206b4. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

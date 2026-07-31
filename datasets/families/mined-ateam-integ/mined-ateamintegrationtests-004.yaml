@@ -1,0 +1,54 @@
+id: mined-ateamintegrationtests-004
+title: Added integration test for PO_BOX attribute with AMZL_DELIVERY_STATION source
+  in AU
+family: test-evolution
+date: '2026-01-16'
+author: Aakash Sangwan
+source: git-mined
+source_repo: AteamIntegrationTests
+source_commit: 566d0b7bb054fd16520915c2d41a7829e8f966bc
+difficulty: medium
+trigger:
+  package: AteamIntegrationTests
+  files:
+  - data/ingestion/US/testScenarios/PoBoxProducer.prototxt
+  intent: Added integration test for PO_BOX attribute with AMZL_DELIVERY_STATION source
+    in AU
+  diff_summary: 'Primary change: data/ingestion/US/testScenarios/PoBoxProducer.prototxt
+    (+71/-0)'
+consequences:
+- package: AteamIntegrationTests
+  files:
+  - data/selection/AU/testScenarios/source-precedence-majority/PoBox.prototxt
+  description: 'Co-changed: data/selection/AU/testScenarios/source-precedence-majority/PoBox.prototxt
+    (+23/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/GB/testScenarios/source-precedence-majority/PoBox.prototxt
+  description: 'Co-changed: data/selection/GB/testScenarios/source-precedence-majority/PoBox.prototxt
+    (+23/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/US/testScenarios/source-precedence-majority/PoBox.prototxt
+  description: 'Co-changed: data/selection/US/testScenarios/source-precedence-majority/PoBox.prototxt
+    (+23/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 4
+notes: Auto-mined from AteamIntegrationTests commit 566d0b7b. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

@@ -1,0 +1,36 @@
+id: mined-smartaddressassistantwebapp-002
+title: '[CDP Revamp] Fix DogRiskComponentBuilder value comparison in refactored CDP
+  path'
+family: refactor
+date: '2026-05-29'
+author: Shivam Singla
+source: git-mined
+source_repo: SmartAddressAssistantWebApp
+source_commit: c49968bfedc070f8c5fd3ca77ce0eef65591f2ed
+difficulty: easy
+trigger:
+  package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/builder/attribute/DogRiskComponentBuilder.java
+  intent: '[CDP Revamp] Fix DogRiskComponentBuilder value comparison in refactored
+    CDP path'
+  diff_summary: 'Primary change: src/com/amazon/saa/webapp/builder/attribute/DogRiskComponentBuilder.java
+    (+2/-2)'
+consequences:
+- package: SmartAddressAssistantWebApp
+  files:
+  - tst/com/amazon/saa/webapp/builder/attribute/AttributeComponentBuilderTest.java
+  description: 'Co-changed: tst/com/amazon/saa/webapp/builder/attribute/AttributeComponentBuilderTest.java
+    (+3/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from SmartAddressAssistantWebApp commit c49968bf. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

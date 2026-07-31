@@ -1,0 +1,185 @@
+id: oss-terraform-provider-aws-48488
+title: Make UUID generation VCR-aware
+family: uncategorized
+date: '2026-06-22'
+author: ewbankkit
+source: github-api-mined
+source_repo: hashicorp/terraform-provider-aws
+source_url: https://github.com/hashicorp/terraform-provider-aws/pull/48488
+source_pr: 48488
+difficulty: medium
+trigger:
+  package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/connect/phone_number.go
+  intent: Make UUID generation VCR-aware
+  diff_summary: 'Primary: internal/service/connect/phone_number.go (+13/-28)'
+consequences:
+- package: hashicorp/terraform-provider-aws
+  files:
+  - .ci/semgrep/acctest/vcr/uuid.yml
+  description: 'added: .ci/semgrep/acctest/vcr/uuid.yml (+18/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - go.mod
+  description: 'modified: go.mod (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/create/uuid.go
+  description: 'added: internal/create/uuid.go (+29/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/create/uuid_test.go
+  description: 'added: internal/create/uuid_test.go (+86/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/appfabric/app_authorization.go
+  description: 'modified: internal/service/appfabric/app_authorization.go (+4/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/appfabric/app_authorization_connection.go
+  description: 'modified: internal/service/appfabric/app_authorization_connection.go
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/appfabric/app_authorization_tags_gen_test.go
+  description: 'modified: internal/service/appfabric/app_authorization_tags_gen_test.go
+    (+106/-21)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/appfabric/app_bundle.go
+  description: 'modified: internal/service/appfabric/app_bundle.go (+3/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/appfabric/app_bundle_identity_gen_test.go
+  description: 'modified: internal/service/appfabric/app_bundle_identity_gen_test.go
+    (+4/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/appfabric/app_bundle_tags_gen_test.go
+  description: 'modified: internal/service/appfabric/app_bundle_tags_gen_test.go (+21/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/appfabric/ingestion.go
+  description: 'modified: internal/service/appfabric/ingestion.go (+4/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/appfabric/ingestion_destination.go
+  description: 'modified: internal/service/appfabric/ingestion_destination.go (+4/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/cognitoidentity/openid_token_for_developer_identity_ephemeral_test.go
+  description: 'modified: internal/service/cognitoidentity/openid_token_for_developer_identity_ephemeral_test.go
+    (+4/-10)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/ec2/verifiedaccess_instance_logging_configuration.go
+  description: 'modified: internal/service/ec2/verifiedaccess_instance_logging_configuration.go
+    (+10/-27)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/ec2/verifiedaccess_instance_logging_configuration_test.go
+  description: 'modified: internal/service/ec2/verifiedaccess_instance_logging_configuration_test.go
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/grafana/license_association_test.go
+  description: 'modified: internal/service/grafana/license_association_test.go (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/networkflowmonitor/monitor.go
+  description: 'modified: internal/service/networkflowmonitor/monitor.go (+5/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/networkflowmonitor/scope.go
+  description: 'modified: internal/service/networkflowmonitor/scope.go (+2/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - website/docs/r/verifiedaccess_instance_logging_configuration.html.markdown
+  description: 'modified: website/docs/r/verifiedaccess_instance_logging_configuration.html.markdown
+    (+2/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 20
+notes: 'Mined from hashicorp/terraform-provider-aws PR #48488. Trigger heuristic applied.
+  Needs review.'

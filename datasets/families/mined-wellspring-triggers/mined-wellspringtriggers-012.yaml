@@ -1,0 +1,34 @@
+id: mined-wellspringtriggers-012
+title: 'fix(dispatch): Improve error logging with exception class and message'
+family: bugfix
+date: '2026-05-21'
+author: Akshit Verma
+source: git-mined
+source_repo: WellspringTriggers
+source_commit: 07257afe9a60eb64ebb51440a54e2554ea2cf804
+difficulty: easy
+trigger:
+  package: WellspringTriggers
+  files:
+  - dispatch-lambda/src/main/java/com/amazon/wellspringtriggers/dispatch/WellspringOrchestratorClient.java
+  intent: 'fix(dispatch): Improve error logging with exception class and message'
+  diff_summary: 'Primary change: dispatch-lambda/src/main/java/com/amazon/wellspringtriggers/dispatch/WellspringOrchestratorClient.java
+    (+5/-5)'
+consequences:
+- package: WellspringTriggers
+  files:
+  - dispatch-lambda/src/main/java/com/amazon/wellspringtriggers/dispatch/CoralOrchestratorApiClient.java
+  description: 'Co-changed: dispatch-lambda/src/main/java/com/amazon/wellspringtriggers/dispatch/CoralOrchestratorApiClient.java
+    (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from WellspringTriggers commit 07257afe. Trigger heuristic may be
+  wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

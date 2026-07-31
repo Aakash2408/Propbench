@@ -1,0 +1,43 @@
+id: mined-geostudiodeliveryhistorylambda-009
+title: Implemented validator for SDS/SSA
+family: uncategorized
+date: '2025-10-13'
+author: Sowjanya Dodda
+source: git-mined
+source_repo: GeoStudioDeliveryHistoryLambda
+source_commit: 97d05fd6482ced95acb457e121df1fbc8739416e
+difficulty: medium
+trigger:
+  package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/validator/DeliveryDataSQSEventValidator.java
+  intent: Implemented validator for SDS/SSA
+  diff_summary: 'Primary change: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/validator/DeliveryDataSQSEventValidator.java
+    (+141/-0)'
+consequences:
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/constant/Constants.java
+  description: 'Co-changed: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/constant/Constants.java
+    (+28/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/java/com/amazon/geostudiodeliveryhistory/lambda/validator/DeliveryDataSQSEventValidatorTest.java
+  description: 'Co-changed: src/test/java/com/amazon/geostudiodeliveryhistory/lambda/validator/DeliveryDataSQSEventValidatorTest.java
+    (+319/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from GeoStudioDeliveryHistoryLambda commit 97d05fd6. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

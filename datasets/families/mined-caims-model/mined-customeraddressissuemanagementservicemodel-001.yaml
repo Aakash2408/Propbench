@@ -1,0 +1,41 @@
+id: mined-customeraddressissuemanagementservicemodel-001
+title: '[CDPRevamp] Add GetPlaceDeliveryProfile operation to CAIMS model'
+family: uncategorized
+date: '2026-04-06'
+author: Qasim Bhatia
+source: git-mined
+source_repo: CustomerAddressIssueManagementServiceModel
+source_commit: 08978a2e1d48799a941d4e0bc6073870d9c657a5
+difficulty: medium
+trigger:
+  package: CustomerAddressIssueManagementServiceModel
+  files:
+  - model/model-datatypes.xml
+  intent: '[CDPRevamp] Add GetPlaceDeliveryProfile operation to CAIMS model'
+  diff_summary: 'Primary change: model/model-datatypes.xml (+36/-0)'
+consequences:
+- package: CustomerAddressIssueManagementServiceModel
+  files:
+  - model/main.xml
+  description: 'Co-changed: model/main.xml (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: CustomerAddressIssueManagementServiceModel
+  files:
+  - model/operations.xml
+  description: 'Co-changed: model/operations.xml (+13/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from CustomerAddressIssueManagementServiceModel commit 08978a2e.
+  Trigger heuristic may be wrong. Needs human review to confirm trigger/consequence
+  split and add expert_reasoning.

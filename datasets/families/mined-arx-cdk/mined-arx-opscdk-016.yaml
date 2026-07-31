@@ -1,0 +1,32 @@
+id: mined-arx-opscdk-016
+title: Adding dynamoDB policy to ADAM role for enabling caching in ADAM workflows.
+family: uncategorized
+date: '2025-09-16'
+author: Abhishek Pandey
+source: git-mined
+source_repo: ARX-OpsCDK
+source_commit: 3ff558aa4ac540307ecb7f28fe5454b24b8738f9
+difficulty: easy
+trigger:
+  package: ARX-OpsCDK
+  files:
+  - lib/stacks/adamIntegrationTestsTodStack.ts
+  intent: Adding dynamoDB policy to ADAM role for enabling caching in ADAM workflows.
+  diff_summary: 'Primary change: lib/stacks/adamIntegrationTestsTodStack.ts (+17/-0)'
+consequences:
+- package: ARX-OpsCDK
+  files:
+  - lib/tests/adamIntegrationTestsTodStack.test.ts
+  description: 'Co-changed: lib/tests/adamIntegrationTestsTodStack.test.ts (+67/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from ARX-OpsCDK commit 3ff558aa. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

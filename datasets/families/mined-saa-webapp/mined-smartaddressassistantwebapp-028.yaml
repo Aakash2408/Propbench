@@ -1,0 +1,106 @@
+id: mined-smartaddressassistantwebapp-028
+title: '[CDPRevamp] SAA wiring for PID Capture and Place Data Prefill (Phase 4)'
+family: configuration-evolution
+date: '2026-04-10'
+author: Qasim Bhatia
+source: git-mined
+source_repo: SmartAddressAssistantWebApp
+source_commit: f01cba0f1bad9431ef4ccf11450f4a07dbafcc62
+difficulty: medium
+trigger:
+  package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/resource/WeblabGate.java
+  intent: '[CDPRevamp] SAA wiring for PID Capture and Place Data Prefill (Phase 4)'
+  diff_summary: 'Primary change: src/com/amazon/saa/webapp/resource/WeblabGate.java
+    (+21/-48)'
+consequences:
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/accessor/CAIMSAccessor.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/accessor/CAIMSAccessor.java
+    (+31/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/config/WeblabGateConfig.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/config/WeblabGateConfig.java
+    (+6/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/dao/DeliveryProfileDAO.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/dao/DeliveryProfileDAO.java
+    (+16/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/dao/implementation/DeliveryProfileDAOImplementation.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/dao/implementation/DeliveryProfileDAOImplementation.java
+    (+27/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/model/apiModel/addressWizard/dataTypes/AdditionalField.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/model/apiModel/addressWizard/dataTypes/AdditionalField.java
+    (+14/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/resource/CdpViewModelProvider.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/resource/CdpViewModelProvider.java
+    (+56/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - tst/com/amazon/saa/webapp/dao/implementation/DeliveryProfileDAOImplementationTest.java
+  description: 'Co-changed: tst/com/amazon/saa/webapp/dao/implementation/DeliveryProfileDAOImplementationTest.java
+    (+78/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - tst/com/amazon/saa/webapp/resource/CdpViewModelProviderTest.java
+  description: 'Co-changed: tst/com/amazon/saa/webapp/resource/CdpViewModelProviderTest.java
+    (+92/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - tst/com/amazon/saa/webapp/resource/WeblabGateTest.java
+  description: 'Co-changed: tst/com/amazon/saa/webapp/resource/WeblabGateTest.java
+    (+161/-206)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 10
+notes: Auto-mined from SmartAddressAssistantWebApp commit f01cba0f. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

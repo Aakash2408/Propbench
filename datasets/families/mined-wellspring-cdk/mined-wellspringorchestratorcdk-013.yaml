@@ -1,0 +1,32 @@
+id: mined-wellspringorchestratorcdk-013
+title: adding vpc connectivity for GEMS
+family: uncategorized
+date: '2026-06-01'
+author: Swetha Palli
+source: git-mined
+source_repo: WellspringOrchestratorCDK
+source_commit: 73b18386ea93baf5d213f08030b4b1d96ff89d67
+difficulty: easy
+trigger:
+  package: WellspringOrchestratorCDK
+  files:
+  - src/foundationalResourcesStack.ts
+  intent: adding vpc connectivity for GEMS
+  diff_summary: 'Primary change: src/foundationalResourcesStack.ts (+6/-3)'
+consequences:
+- package: WellspringOrchestratorCDK
+  files:
+  - src/serviceStack.ts
+  description: 'Co-changed: src/serviceStack.ts (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from WellspringOrchestratorCDK commit 73b18386. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

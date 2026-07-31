@@ -1,0 +1,34 @@
+id: mined-aixattributeconfigdata-006
+title: Update appweaver artifacts with enhanced interface metadata
+family: configuration-evolution
+date: '2025-11-14'
+author: Datta Dwarampudi
+source: git-mined
+source_repo: AIXAttributeConfigData
+source_commit: f3e6120d97836559baf2fdffe54770fa1e4edf7e
+difficulty: easy
+trigger:
+  package: AIXAttributeConfigData
+  files:
+  - .appweaver/metadata/Units_AIXAttributeConfigData.json
+  intent: Update appweaver artifacts with enhanced interface metadata
+  diff_summary: 'Primary change: .appweaver/metadata/Units_AIXAttributeConfigData.json
+    (+1058/-203)'
+consequences:
+- package: AIXAttributeConfigData
+  files:
+  - .appweaver/metadata/BrazilPackage_AIXAttributeConfigData.json
+  description: 'Co-changed: .appweaver/metadata/BrazilPackage_AIXAttributeConfigData.json
+    (+150/-74)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from AIXAttributeConfigData commit f3e6120d. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

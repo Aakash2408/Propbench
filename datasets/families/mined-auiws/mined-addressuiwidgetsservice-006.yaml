@@ -1,0 +1,97 @@
+id: mined-addressuiwidgetsservice-006
+title: 'Feat(pre-validation): Add AppConfig lever kill switch for pre-validation'
+family: uncategorized
+date: '2026-07-13'
+author: Kanchan Hingorani
+source: git-mined
+source_repo: AddressUIWidgetsService
+source_commit: 26fc498c839edb74e2aefb17a57885bbbe36c710
+difficulty: medium
+trigger:
+  package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/orchestrator/AddressFormHandlerTests.scala
+  intent: 'Feat(pre-validation): Add AppConfig lever kill switch for pre-validation'
+  diff_summary: 'Primary change: tst/com/amazon/addressuiwidgetsservice/orchestrator/AddressFormHandlerTests.scala
+    (+19/-0)'
+consequences:
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/lever/LeverDefinition.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/lever/LeverDefinition.scala
+    (+12/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/orchestration/AjaxOperationOrchestrator.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/orchestration/AjaxOperationOrchestrator.scala
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/orchestration/handlers/AddressFormHandler.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/orchestration/handlers/AddressFormHandler.scala
+    (+12/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/orchestration/handlers/AddressFormHandlerFactory.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/orchestration/handlers/AddressFormHandlerFactory.scala
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/orchestration/operations/PreValidateAddressProvider.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/orchestration/operations/PreValidateAddressProvider.scala
+    (+11/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/orchestrator/AddressFormHandlerFactoryTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/orchestrator/AddressFormHandlerFactoryTests.scala
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/orchestrator/AjaxOrchestratorTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/orchestrator/AjaxOrchestratorTests.scala
+    (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/orchestrator/operations/PreValidateAddressProviderTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/orchestrator/operations/PreValidateAddressProviderTests.scala
+    (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 9
+notes: Auto-mined from AddressUIWidgetsService commit 26fc498c. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

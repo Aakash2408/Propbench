@@ -1,0 +1,70 @@
+id: mined-geostudiodeliveryhistorylambda-014
+title: made fifo sns topic and added unit tests for it.
+family: test-evolution
+date: '2025-06-16'
+author: vibhanshu
+source: git-mined
+source_repo: GeoStudioDeliveryHistoryLambda
+source_commit: a8ada20ad88f9cf136f8c8bd42d470cc3a8c998d
+difficulty: medium
+trigger:
+  package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/accessor/SNSAccessor.java
+  intent: made fifo sns topic and added unit tests for it.
+  diff_summary: 'Primary change: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/accessor/SNSAccessor.java
+    (+43/-11)'
+consequences:
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/dagger/module/ServiceModule.java
+  description: 'Co-changed: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/dagger/module/ServiceModule.java
+    (+47/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/util/DynamoDBUtil.java
+  description: 'Co-changed: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/util/DynamoDBUtil.java
+    (+14/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/java/com/amazon/geostudiodeliveryhistory/lambda/BaseTestClass.java
+  description: 'Co-changed: src/test/java/com/amazon/geostudiodeliveryhistory/lambda/BaseTestClass.java
+    (+8/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/java/com/amazon/geostudiodeliveryhistory/lambda/accessor/SNSAccessorTest.java
+  description: 'Co-changed: src/test/java/com/amazon/geostudiodeliveryhistory/lambda/accessor/SNSAccessorTest.java
+    (+46/-13)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/java/com/amazon/geostudiodeliveryhistory/lambda/util/DynamoDBUtilTest.java
+  description: 'Co-changed: src/test/java/com/amazon/geostudiodeliveryhistory/lambda/util/DynamoDBUtilTest.java
+    (+2/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 6
+notes: Auto-mined from GeoStudioDeliveryHistoryLambda commit a8ada20a. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

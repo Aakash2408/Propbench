@@ -1,0 +1,91 @@
+id: "config-changes-01"
+title: "Remove US from GeoRaven geocode-ingestion-config"
+
+family: "config-changes"
+date: "2026-06-15"
+author: "aakkaash"
+cr_ids:
+  - "CR-285750479"
+
+trigger:
+  package: "CSGAndGCSIntegrationLambdaGeo"
+  version_set: "CustomerSourcedGeocodes/release"
+  files:
+    - "configuration/geocode-ingestion-config.json"
+  intent: "Disable GeoRaven geocode ingestion for US market"
+  diff_summary: |
+    Removed the US country block from geocode-ingestion-config.json
+    to stop GeoRaven from processing US geocodes.
+
+consequences:
+  - package: "CSGAndGCSIntegrationLambdaGeo"
+    version_set: "CustomerSourcedGeocodes/release"
+    files:
+      - "configuration/geocode-ingestion-config.json"
+    description: "PlacesGeoRaven invoker ALSO reads this config and still fires for US — removing the US block broke PlacesGeoRaven, not just GeoRaven"
+    mechanical: false
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.30
+    reasoning: "This is tribal knowledge. The config file is shared by MULTIPLE invokers (GeoRaven AND PlacesGeoRaven). Only someone who knows the full invocation graph would predict this."
+    surprise: true
+
+expert_reasoning: |
+  This is a FAILURE CASE — the expert (me) did NOT predict this correctly.
+  
+  The config file geocode-ingestion-config.json is consumed by multiple
+  Lambda invokers within the same package:
+  - GeoRaven (the one we wanted to disable for US)
+  - PlacesGeoRaven (which still needs US config)
+  
+  Removing the US block disabled BOTH invokers. The correct fix was to
+  add a per-invoker gate, not remove the country block.
+  
+  This is interesting because:
+  1. Static analysis of imports would show both invokers read the same config
+  2. But the INTENT ("disable GeoRaven for US") doesn't map cleanly to
+     "remove config block" because of the shared-config pattern
+  3. A prediction engine that understood multi-invoker patterns would have
+     flagged this as risky
+
+common_mistakes:
+  - "Assuming a config file is consumed by only one invoker"
+  - "Not checking ALL Lambda handlers in a multi-handler package before changing shared config"
+  - "Removing a country block instead of adding a per-invoker disable flag"
+  - "Leaving orphaned config that confuses future readers"
+
+difficulty: "expert"
+required_knowledge:
+  - "runtime_behavior"       # understanding multi-invoker Lambda pattern
+  - "deployment_topology"    # knowing both GeoRaven AND PlacesGeoRaven read this config
+  - "ownership"              # same package, different logical consumers
+not_required:
+  - "historical_pattern"     # no prior example of this failure
+  - "dependency_graph"       # graph is MISLEADING here (shows one consumer, not two)
+misleading_signals:
+  - "dependency_graph suggests only GeoRaven reads the config (wrong — PlacesGeoRaven does too)"
+
+tags:
+  - "single-package"
+  - "config-driven"
+  - "multi-invoker-pattern"
+  - "expert-got-it-wrong"
+  - "hidden-coupling"
+  - "SURPRISE"
+
+effort:
+  actual_hours: 8
+  mechanical_hours: 1
+  debug_hours: 6  # finding out WHY it broke PlacesGeoRaven
+  packages_touched: 1
+  crs_raised: 1
+
+notes: |
+  THIS IS THE MOST VALUABLE TYPE OF ENTRY.
+  
+  It represents a case where even the expert made the wrong prediction.
+  The engine should eventually be BETTER than the expert here by doing
+  exhaustive static analysis that humans skip.
+  
+  Key research question: Can the Architect strategy (static analysis of
+  who reads this config file) catch this even when the Historian and
+  Pattern Matcher cannot?

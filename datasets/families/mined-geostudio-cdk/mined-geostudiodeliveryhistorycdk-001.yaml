@@ -1,0 +1,32 @@
+id: mined-geostudiodeliveryhistorycdk-001
+title: Add WellspringOrchestrator cross-account SNS subscribe access (gamma)
+family: configuration-evolution
+date: '2026-07-20'
+author: Aakash Sangwan
+source: git-mined
+source_repo: GeoStudioDeliveryHistoryCDK
+source_commit: 8bb73ed731da3fe8eae6ee92cec1b596f6e4a067
+difficulty: easy
+trigger:
+  package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/constructs/crossaccount/configProvider.ts
+  intent: Add WellspringOrchestrator cross-account SNS subscribe access (gamma)
+  diff_summary: 'Primary change: lib/constructs/crossaccount/configProvider.ts (+15/-0)'
+consequences:
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/constructs/policyProvider/snsPolicyProvider.ts
+  description: 'Co-changed: lib/constructs/policyProvider/snsPolicyProvider.ts (+12/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from GeoStudioDeliveryHistoryCDK commit 8bb73ed7. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

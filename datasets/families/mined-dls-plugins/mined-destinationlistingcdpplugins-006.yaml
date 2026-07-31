@@ -1,0 +1,107 @@
+id: mined-destinationlistingcdpplugins-006
+title: Add RequestContext support to DestinationAwareDecoratePlugin for processsing
+  AddressDeliveryInstruct
+family: configuration-evolution
+date: '2025-09-25'
+author: kiranbob
+source: git-mined
+source_repo: DestinationListingCDPPlugins
+source_commit: 70bc08e3f38961b2c94b6f36e78f01b46817df64
+difficulty: medium
+trigger:
+  package: DestinationListingCDPPlugins
+  files:
+  - src/com/amazon/destinationlisting/plugin/request/mapper/AddressDeliveryInstructionsPluginRequestMapper.java
+  intent: Add RequestContext support to DestinationAwareDecoratePlugin for processsing
+    AddressDeliveryInstructions Request and updating the implementations accordingly
+  diff_summary: 'Primary change: src/com/amazon/destinationlisting/plugin/request/mapper/AddressDeliveryInstructionsPluginRequestMapper.java
+    (+17/-14)'
+consequences:
+- package: DestinationListingCDPPlugins
+  files:
+  - Config
+  description: 'Co-changed: Config (+3/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: DestinationListingCDPPlugins
+  files:
+  - src/com/amazon/destinationlisting/plugin/business/manager/AddressDeliveryInstructionsManager.java
+  description: 'Co-changed: src/com/amazon/destinationlisting/plugin/business/manager/AddressDeliveryInstructionsManager.java
+    (+13/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: DestinationListingCDPPlugins
+  files:
+  - src/com/amazon/destinationlisting/plugin/decorate/AddressDeliveryInstructionsDecoratorPlugin.java
+  description: 'Co-changed: src/com/amazon/destinationlisting/plugin/decorate/AddressDeliveryInstructionsDecoratorPlugin.java
+    (+9/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: DestinationListingCDPPlugins
+  files:
+  - src/com/amazon/destinationlisting/plugin/request/AddressDeliveryInstructionPluginRequest.java
+  description: 'Co-changed: src/com/amazon/destinationlisting/plugin/request/AddressDeliveryInstructionPluginRequest.java
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: DestinationListingCDPPlugins
+  files:
+  - src/com/amazon/destinationlisting/plugin/request/mapper/CustomerDeliveryProfilePluginRequestMapper.java
+  description: 'Co-changed: src/com/amazon/destinationlisting/plugin/request/mapper/CustomerDeliveryProfilePluginRequestMapper.java
+    (+6/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: DestinationListingCDPPlugins
+  files:
+  - tst/com/amazon/destinationlisting/plugin/business/manager/AddressDeliveryInstructionsManagerTest.java
+  description: 'Co-changed: tst/com/amazon/destinationlisting/plugin/business/manager/AddressDeliveryInstructionsManagerTest.java
+    (+8/-4)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: DestinationListingCDPPlugins
+  files:
+  - tst/com/amazon/destinationlisting/plugin/decorate/AddressDeliveryInstructionsDecoratorPluginTest.java
+  description: 'Co-changed: tst/com/amazon/destinationlisting/plugin/decorate/AddressDeliveryInstructionsDecoratorPluginTest.java
+    (+10/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: DestinationListingCDPPlugins
+  files:
+  - tst/com/amazon/destinationlisting/plugin/request/mapper/AddressAddressDeliveryInstructionsPluginRequestMapperTest.java
+  description: 'Co-changed: tst/com/amazon/destinationlisting/plugin/request/mapper/AddressAddressDeliveryInstructionsPluginRequestMapperTest.java
+    (+27/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: DestinationListingCDPPlugins
+  files:
+  - tst/com/amazon/destinationlisting/plugin/request/mapper/CustomerDeliveryProfilePluginRequestMapperTest.java
+  description: 'Co-changed: tst/com/amazon/destinationlisting/plugin/request/mapper/CustomerDeliveryProfilePluginRequestMapperTest.java
+    (+13/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 10
+notes: Auto-mined from DestinationListingCDPPlugins commit 70bc08e3. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

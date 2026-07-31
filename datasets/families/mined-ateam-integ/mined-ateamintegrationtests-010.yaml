@@ -1,0 +1,52 @@
+id: mined-ateamintegrationtests-010
+title: Adding integration tests for DeliveryPreferenceMandate attribute
+family: test-evolution
+date: '2025-05-25'
+author: Manaswini Gorthi
+source: git-mined
+source_repo: AteamIntegrationTests
+source_commit: 433607412191cb3facf7ad4fae7104a0fcc095f6
+difficulty: medium
+trigger:
+  package: AteamIntegrationTests
+  files:
+  - data/ingestion/US/testScenarios/campusScenarios/DELIVERY_PREFERENCE_MANDATE.prototxt
+  intent: Adding integration tests for DeliveryPreferenceMandate attribute
+  diff_summary: 'Primary change: data/ingestion/US/testScenarios/campusScenarios/DELIVERY_PREFERENCE_MANDATE.prototxt
+    (+146/-0)'
+consequences:
+- package: AteamIntegrationTests
+  files:
+  - data/gamUpdates/US/testScenarios/DeliveryPreferenceMandate.prototxt
+  description: 'Co-changed: data/gamUpdates/US/testScenarios/DeliveryPreferenceMandate.prototxt
+    (+147/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/propagated/US/testScenarios/campusScenarios/DELIVERY_PREFERENCE_MANDATE.prototxt
+  description: 'Co-changed: data/propagated/US/testScenarios/campusScenarios/DELIVERY_PREFERENCE_MANDATE.prototxt
+    (+52/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/US/testScenarios/campusScenarios/DELIVERY_PREFERENCE_MANDATE.prototxt
+  description: 'Co-changed: data/selection/US/testScenarios/campusScenarios/DELIVERY_PREFERENCE_MANDATE.prototxt
+    (+52/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 4
+notes: Auto-mined from AteamIntegrationTests commit 43360741. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

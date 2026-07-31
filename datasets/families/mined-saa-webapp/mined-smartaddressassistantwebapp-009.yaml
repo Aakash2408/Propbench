@@ -1,0 +1,71 @@
+id: mined-smartaddressassistantwebapp-009
+title: '[CDP Revamp] Wire DeliveryProfileController (popover) to refactored view model
+  behind weblab'
+family: refactor
+date: '2026-05-13'
+author: Shivam Singla
+source: git-mined
+source_repo: SmartAddressAssistantWebApp
+source_commit: 87e69eda0a18165eec76b795d65422df670ff3c6
+difficulty: medium
+trigger:
+  package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/desktop/landingPagePopoverRefactored.jsp
+  intent: '[CDP Revamp] Wire DeliveryProfileController (popover) to refactored view
+    model behind weblab'
+  diff_summary: 'Primary change: webapp/WEB-INF/views/cdp/desktop/landingPagePopoverRefactored.jsp
+    (+64/-4)'
+consequences:
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/controller/core/DeliveryProfileController.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/controller/core/DeliveryProfileController.java
+    (+40/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/model/CommonPageContext.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/model/CommonPageContext.java
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/provider/DeliveryProfileViewProvider.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/provider/DeliveryProfileViewProvider.java
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/resource/WeblabGate.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/resource/WeblabGate.java (+9/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - tst/com/amazon/saa/webapp/controller/core/DeliveryProfileControllerTest.java
+  description: 'Co-changed: tst/com/amazon/saa/webapp/controller/core/DeliveryProfileControllerTest.java
+    (+211/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 6
+notes: Auto-mined from SmartAddressAssistantWebApp commit 87e69eda. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

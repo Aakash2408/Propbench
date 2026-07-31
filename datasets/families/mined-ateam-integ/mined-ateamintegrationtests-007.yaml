@@ -1,0 +1,151 @@
+id: mined-ateamintegrationtests-007
+title: '[BH Accuracy] Adding selection integration tests for BH Accuracy attribute'
+family: test-evolution
+date: '2025-06-19'
+author: Qasim Bhatia
+source: git-mined
+source_repo: AteamIntegrationTests
+source_commit: 7c1fbab230c1983b629b38d8f4e81c759a92077a
+difficulty: hard
+trigger:
+  package: AteamIntegrationTests
+  files:
+  - data/selection/US/testScenarios/campusScenarios/businessHoursAccuracy.prototxt
+  intent: '[BH Accuracy] Adding selection integration tests for BH Accuracy attribute'
+  diff_summary: 'Primary change: data/selection/US/testScenarios/campusScenarios/businessHoursAccuracy.prototxt
+    (+52/-0)'
+consequences:
+- package: AteamIntegrationTests
+  files:
+  - data/selection/US/testScenarios/AccessPointHubSource.prototxt
+  description: 'Co-changed: data/selection/US/testScenarios/AccessPointHubSource.prototxt
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/US/testScenarios/codeC_Unit_SelectionTests.prototxt
+  description: 'Co-changed: data/selection/US/testScenarios/codeC_Unit_SelectionTests.prototxt
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/US/testScenarios/filterStrategy/Gatecode.prototxt
+  description: 'Co-changed: data/selection/US/testScenarios/filterStrategy/Gatecode.prototxt
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/US/testScenarios/source-category-timetamp-priority-strategy/BusinessHours.prototxt
+  description: 'Co-changed: data/selection/US/testScenarios/source-category-timetamp-priority-strategy/BusinessHours.prototxt
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/US/testScenarios/source-precedence-majority/AMZLBulk.prototxt
+  description: 'Co-changed: data/selection/US/testScenarios/source-precedence-majority/AMZLBulk.prototxt
+    (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/US/testScenarios/source-precedence-majority/CampusType.prototxt
+  description: 'Co-changed: data/selection/US/testScenarios/source-precedence-majority/CampusType.prototxt
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/US/testScenarios/source-precedence-majority/IsCommonDeliveryPlace.prototxt
+  description: 'Co-changed: data/selection/US/testScenarios/source-precedence-majority/IsCommonDeliveryPlace.prototxt
+    (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/US/testScenarios/source-precedence-majority/IsPlaceBlocked.prototxt
+  description: 'Co-changed: data/selection/US/testScenarios/source-precedence-majority/IsPlaceBlocked.prototxt
+    (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/US/testScenarios/source-precedence-majority/MappedAccessPointTypes.prototxt
+  description: 'Co-changed: data/selection/US/testScenarios/source-precedence-majority/MappedAccessPointTypes.prototxt
+    (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/US/testScenarios/source-precedence-majority/SCBulk.prototxt
+  description: 'Co-changed: data/selection/US/testScenarios/source-precedence-majority/SCBulk.prototxt
+    (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/US/testScenarios/source-precedence-majority/detailedPropertyType.prototxt
+  description: 'Co-changed: data/selection/US/testScenarios/source-precedence-majority/detailedPropertyType.prototxt
+    (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/US/testScenarios/union-selection-strategy/BlockedCarriers.prototxt
+  description: 'Co-changed: data/selection/US/testScenarios/union-selection-strategy/BlockedCarriers.prototxt
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/US/testScenarios/union-selection-strategy/DepriCarriers.prototxt
+  description: 'Co-changed: data/selection/US/testScenarios/union-selection-strategy/DepriCarriers.prototxt
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/US/testScenarios/union-selection-strategy/ExceptionDates.prototxt
+  description: 'Co-changed: data/selection/US/testScenarios/union-selection-strategy/ExceptionDates.prototxt
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 15
+notes: Auto-mined from AteamIntegrationTests commit 7c1fbab2. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

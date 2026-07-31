@@ -1,0 +1,42 @@
+id: mined-aixattributeconfigdata-005
+title: Remove vending of LLM_VERIFIED and LLM_DERIVED
+family: configuration-evolution
+date: '2026-01-27'
+author: Vrishab Jain
+source: git-mined
+source_repo: AIXAttributeConfigData
+source_commit: ea824d2da20b9a1737f20060a3d3d0262a2dfa4d
+difficulty: medium
+trigger:
+  package: AIXAttributeConfigData
+  files:
+  - configuration/attribute-config-data/ACCESS_CODES.json
+  intent: Remove vending of LLM_VERIFIED and LLM_DERIVED
+  diff_summary: 'Primary change: configuration/attribute-config-data/ACCESS_CODES.json
+    (+0/-2)'
+consequences:
+- package: AIXAttributeConfigData
+  files:
+  - configuration/attribute-config-data/DELIVERY_HINT.json
+  description: 'Co-changed: configuration/attribute-config-data/DELIVERY_HINT.json
+    (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AIXAttributeConfigData
+  files:
+  - configuration/attribute-config-data/HAS_DOG.json
+  description: 'Co-changed: configuration/attribute-config-data/HAS_DOG.json (+0/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from AIXAttributeConfigData commit ea824d2d. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

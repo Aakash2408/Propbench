@@ -1,0 +1,74 @@
+id: mined-arx-opscdk-003
+title: Creating appConfig for disabling Address Pre-validation
+family: configuration-evolution
+date: '2026-06-25'
+author: Kanchan Hingorani
+source: git-mined
+source_repo: ARX-OpsCDK
+source_commit: 07bb747a54ccfa2b53efee8947eab58cb09c420a
+difficulty: medium
+trigger:
+  package: ARX-OpsCDK
+  files:
+  - lib/config/aws-app-config/levers/validators/disableAddressPreValidationValidator.json
+  intent: Creating appConfig for disabling Address Pre-validation
+  diff_summary: 'Primary change: lib/config/aws-app-config/levers/validators/disableAddressPreValidationValidator.json
+    (+169/-0)'
+consequences:
+- package: ARX-OpsCDK
+  files:
+  - lib/config/aws-app-config/levers/policies/disableAddressPreValidationPolicy.json
+  description: 'Co-changed: lib/config/aws-app-config/levers/policies/disableAddressPreValidationPolicy.json
+    (+22/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: ARX-OpsCDK
+  files:
+  - lib/constants/appConfigConstants.ts
+  description: 'Co-changed: lib/constants/appConfigConstants.ts (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: ARX-OpsCDK
+  files:
+  - lib/constructs/awsAppConfigConstruct.ts
+  description: 'Co-changed: lib/constructs/awsAppConfigConstruct.ts (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: ARX-OpsCDK
+  files:
+  - lib/stacks/awsAppConfigStack.ts
+  description: 'Co-changed: lib/stacks/awsAppConfigStack.ts (+13/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: ARX-OpsCDK
+  files:
+  - lib/tests/awsAppConfigConstruct.test.ts
+  description: 'Co-changed: lib/tests/awsAppConfigConstruct.test.ts (+23/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: ARX-OpsCDK
+  files:
+  - lib/tests/awsAppConfigStack.test.ts
+  description: 'Co-changed: lib/tests/awsAppConfigStack.test.ts (+29/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 7
+notes: Auto-mined from ARX-OpsCDK commit 07bb747a. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

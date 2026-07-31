@@ -1,0 +1,34 @@
+id: mined-aixattributeconfigdata-002
+title: Introducing 2 new Robot delivery attributes in AAS - https://issues.amazon.com/issues/P433167218
+family: configuration-evolution
+date: '2026-06-09'
+author: Ruchira Saha
+source: git-mined
+source_repo: AIXAttributeConfigData
+source_commit: ecd2fcc52f2b0203ed567dd7b50ad2f2526adb92
+difficulty: easy
+trigger:
+  package: AIXAttributeConfigData
+  files:
+  - configuration/attribute-config-data/ROBOT_DELIVERY_BLOCKED.json
+  intent: Introducing 2 new Robot delivery attributes in AAS - https://issues.amazon.com/issues/P433167218
+  diff_summary: 'Primary change: configuration/attribute-config-data/ROBOT_DELIVERY_BLOCKED.json
+    (+271/-0)'
+consequences:
+- package: AIXAttributeConfigData
+  files:
+  - configuration/attribute-config-data/CUSTOMER_ROBOT_OPT_OUT.json
+  description: 'Co-changed: configuration/attribute-config-data/CUSTOMER_ROBOT_OPT_OUT.json
+    (+87/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from AIXAttributeConfigData commit ecd2fcc5. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

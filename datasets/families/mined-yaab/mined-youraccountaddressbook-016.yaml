@@ -1,0 +1,51 @@
+id: mined-youraccountaddressbook-016
+title: Add new alertId for pickup Location related exception
+family: uncategorized
+date: '2026-01-23'
+author: Aashi Bhatia
+source: git-mined
+source_repo: YourAccountAddressBook
+source_commit: 51029287f583edace255e838c444b6c70a66e640
+difficulty: medium
+trigger:
+  package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/features/addressbook/DeleteAddressController.scala
+  intent: Add new alertId for pickup Location related exception
+  diff_summary: 'Primary change: src/com/amazon/identity/address/features/addressbook/DeleteAddressController.scala
+    (+9/-3)'
+consequences:
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/utils/Alerts.scala
+  description: 'Co-changed: src/com/amazon/identity/address/utils/Alerts.scala (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/utils/constants/StringID.scala
+  description: 'Co-changed: src/com/amazon/identity/address/utils/constants/StringID.scala
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/features/deleteAddress/DeleteAddressControllerTest.scala
+  description: 'Co-changed: tst/com/amazon/identity/address/features/deleteAddress/DeleteAddressControllerTest.scala
+    (+16/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 4
+notes: Auto-mined from YourAccountAddressBook commit 51029287. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

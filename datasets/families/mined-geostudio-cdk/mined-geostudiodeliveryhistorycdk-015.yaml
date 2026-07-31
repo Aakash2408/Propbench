@@ -1,0 +1,48 @@
+id: mined-geostudiodeliveryhistorycdk-015
+title: '[TA/SEL] Onboard lambda functions to Convoy'
+family: configuration-evolution
+date: '2025-10-30'
+author: Qasim Bhatia
+source: git-mined
+source_repo: GeoStudioDeliveryHistoryCDK
+source_commit: 42323a87ea3b3020e275d3e3ff4a6253940e1e20
+difficulty: medium
+trigger:
+  package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/config/superStar.ts
+  intent: '[TA/SEL] Onboard lambda functions to Convoy'
+  diff_summary: 'Primary change: lib/config/superStar.ts (+6/-0)'
+consequences:
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/stacks/lambda.ts
+  description: 'Co-changed: lib/stacks/lambda.ts (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/stacks/superStar.ts
+  description: 'Co-changed: lib/stacks/superStar.ts (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - package.json
+  description: 'Co-changed: package.json (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 4
+notes: Auto-mined from GeoStudioDeliveryHistoryCDK commit 42323a87. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

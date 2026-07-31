@@ -1,0 +1,48 @@
+id: mined-geostudiodeliveryhistorycdk-016
+title: Created a SQS queue for SDS/SSA
+family: uncategorized
+date: '2025-10-08'
+author: Sowjanya Dodda
+source: git-mined
+source_repo: GeoStudioDeliveryHistoryCDK
+source_commit: d65bc7a78b2d05bdf7647d67b392b10a4cf9a982
+difficulty: medium
+trigger:
+  package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/stacks/queue.ts
+  intent: Created a SQS queue for SDS/SSA
+  diff_summary: 'Primary change: lib/stacks/queue.ts (+16/-1)'
+consequences:
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/constants/constants.ts
+  description: 'Co-changed: lib/constants/constants.ts (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/stacks/lambda.ts
+  description: 'Co-changed: lib/stacks/lambda.ts (+5/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/stageBuilder.ts
+  description: 'Co-changed: lib/stageBuilder.ts (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 4
+notes: Auto-mined from GeoStudioDeliveryHistoryCDK commit d65bc7a7. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

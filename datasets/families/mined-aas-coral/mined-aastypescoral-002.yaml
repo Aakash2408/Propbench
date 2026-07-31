@@ -1,0 +1,43 @@
+id: mined-aastypescoral-002
+title: '[Coral Migration] Introduce 2 new Robot delivery attributes (CustomerRobotOptOut,
+  RobotDeliveryBlock'
+family: uncategorized
+date: '2026-06-18'
+author: Ruchira Saha
+source: git-mined
+source_repo: AASTypesCoral
+source_commit: ff468037613a9694303c167a5bc8e1da4bf40fcc
+difficulty: medium
+trigger:
+  package: AASTypesCoral
+  files:
+  - model/AddressAuthorityTypes.xsd.codigo.model.xml
+  intent: '[Coral Migration] Introduce 2 new Robot delivery attributes (CustomerRobotOptOut,
+    RobotDeliveryBlocked)'
+  diff_summary: 'Primary change: model/AddressAuthorityTypes.xsd.codigo.model.xml
+    (+6/-0)'
+consequences:
+- package: AASTypesCoral
+  files:
+  - model/AddressAttributeTypes.xsd.model.xml
+  description: 'Co-changed: model/AddressAttributeTypes.xsd.model.xml (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AASTypesCoral
+  files:
+  - model/AddressAuthorityTypes.xsd.model.xml
+  description: 'Co-changed: model/AddressAuthorityTypes.xsd.model.xml (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from AASTypesCoral commit ff468037. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

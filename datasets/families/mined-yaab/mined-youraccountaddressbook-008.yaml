@@ -1,0 +1,43 @@
+id: mined-youraccountaddressbook-008
+title: 'fix: Remove Lombok annotations to fix JDK 25 build failure'
+family: configuration-evolution
+date: '2026-05-15'
+author: Suraj Dhankad
+source: git-mined
+source_repo: YourAccountAddressBook
+source_commit: 21ced6cdbf9374ed726b5e10b2e7ca3a3d54dbcb
+difficulty: medium
+trigger:
+  package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/horizonte/metrics/symlinker/ServiceLogSymlinker.java
+  intent: 'fix: Remove Lombok annotations to fix JDK 25 build failure'
+  diff_summary: 'Primary change: src/com/amazon/identity/address/horizonte/metrics/symlinker/ServiceLogSymlinker.java
+    (+3/-2)'
+consequences:
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/horizonte/metrics/symlinker/SymlinkerConfig.java
+  description: 'Co-changed: src/com/amazon/identity/address/horizonte/metrics/symlinker/SymlinkerConfig.java
+    (+3/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/horizonte/metrics/symlinker/ServiceLogSymlinkerTest.java
+  description: 'Co-changed: tst/com/amazon/identity/address/horizonte/metrics/symlinker/ServiceLogSymlinkerTest.java
+    (+3/-7)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from YourAccountAddressBook commit 21ced6cd. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

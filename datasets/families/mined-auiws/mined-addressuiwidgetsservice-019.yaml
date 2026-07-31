@@ -1,0 +1,75 @@
+id: mined-addressuiwidgetsservice-019
+title: Wire AddressAuthZValidator into CreateAddress and UpdateAddress to validate
+  customer authorization f
+family: refactor
+date: '2026-06-20'
+author: Rohit
+source: git-mined
+source_repo: AddressUIWidgetsService
+source_commit: 41511b69a54709874140d098ed663a8238c6a66f
+difficulty: medium
+trigger:
+  package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/activity/CreateAddressActivityTests.scala
+  intent: Wire AddressAuthZValidator into CreateAddress and UpdateAddress to validate
+    customer authorization for create/edit operations. Add US country code restriction
+    on Create/Update entities, throwing InvalidInputException for non-US addresses.
+    Map InvalidInputException to a 400 ErrorCodeInvalidInput response in Create, Update,
+    and Remove activities.
+  diff_summary: 'Primary change: tst/com/amazon/addressuiwidgetsservice/activity/CreateAddressActivityTests.scala
+    (+65/-4)'
+consequences:
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/activity/CreateAddressActivity.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/activity/CreateAddressActivity.scala
+    (+14/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/activity/RemoveAddressActivity.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/activity/RemoveAddressActivity.scala
+    (+4/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/activity/UpdateAddressActivity.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/activity/UpdateAddressActivity.scala
+    (+9/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/activity/RemoveAddressActivityTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/activity/RemoveAddressActivityTests.scala
+    (+19/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/activity/UpdateAddressActivityTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/activity/UpdateAddressActivityTests.scala
+    (+66/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 6
+notes: Auto-mined from AddressUIWidgetsService commit 41511b69. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

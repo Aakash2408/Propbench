@@ -1,0 +1,43 @@
+id: mined-smartaddressassistantwebapp-010
+title: Add CloudAuth and config-driven qualifier for DeliveryHistoryService
+family: configuration-evolution
+date: '2026-05-15'
+author: Aakash Sangwan
+source: git-mined
+source_repo: SmartAddressAssistantWebApp
+source_commit: 550cc16357a29a6ccfbff73bf8029cad5a631b76
+difficulty: medium
+trigger:
+  package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/pom/v2/shared/suggestedMarkers.jsp
+  intent: Add CloudAuth and config-driven qualifier for DeliveryHistoryService
+  diff_summary: 'Primary change: webapp/WEB-INF/views/pom/v2/shared/suggestedMarkers.jsp
+    (+0/-53)'
+consequences:
+- package: SmartAddressAssistantWebApp
+  files:
+  - configuration/brazil-config/global/DeliveryHistoryService.cfg
+  description: 'Co-changed: configuration/brazil-config/global/DeliveryHistoryService.cfg
+    (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/config/DeliveryHistoryServiceConfig.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/config/DeliveryHistoryServiceConfig.java
+    (+10/-15)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from SmartAddressAssistantWebApp commit 550cc163. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

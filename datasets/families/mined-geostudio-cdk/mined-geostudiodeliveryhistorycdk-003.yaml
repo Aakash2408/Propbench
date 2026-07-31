@@ -1,0 +1,32 @@
+id: mined-geostudiodeliveryhistorycdk-003
+title: 'feat(queue): Harden SQS queues and expand region country code mappings'
+family: uncategorized
+date: '2026-07-03'
+author: kiranbob
+source: git-mined
+source_repo: GeoStudioDeliveryHistoryCDK
+source_commit: f8aa4b00d82227f3059b1dbc6a764e5fd03dc0f7
+difficulty: easy
+trigger:
+  package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/stacks/queue.ts
+  intent: 'feat(queue): Harden SQS queues and expand region country code mappings'
+  diff_summary: 'Primary change: lib/stacks/queue.ts (+9/-2)'
+consequences:
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/constants/snsFilters.ts
+  description: 'Co-changed: lib/constants/snsFilters.ts (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from GeoStudioDeliveryHistoryCDK commit f8aa4b00. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

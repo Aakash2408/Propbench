@@ -1,0 +1,34 @@
+id: mined-smartaddressassistantwebapp-005
+title: '[CDP Revamp] Add refactored JSPs for POM PDL and POM-in-CDP delivery location'
+family: refactor
+date: '2026-05-26'
+author: Shivam Singla
+source: git-mined
+source_repo: SmartAddressAssistantWebApp
+source_commit: 0f478404725251e37b9d6ee817b8bad0704a6300
+difficulty: easy
+trigger:
+  package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/pom/mobile/pdl/personalisedCdfPomApplicableOnlyPdlRefactored.jsp
+  intent: '[CDP Revamp] Add refactored JSPs for POM PDL and POM-in-CDP delivery location'
+  diff_summary: 'Primary change: webapp/WEB-INF/views/pom/mobile/pdl/personalisedCdfPomApplicableOnlyPdlRefactored.jsp
+    (+128/-0)'
+consequences:
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/pom/v2/mobile/deliveryLocationRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/pom/v2/mobile/deliveryLocationRefactored.jsp
+    (+59/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from SmartAddressAssistantWebApp commit 0f478404. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

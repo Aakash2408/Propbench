@@ -1,0 +1,105 @@
+id: oss-terraform-provider-aws-48460
+title: 'resource/aws_cloudfront_anycast_ip_list: Generate tag tests'
+family: test-evolution
+date: '2026-06-22'
+author: gdavison
+source: github-api-mined
+source_repo: hashicorp/terraform-provider-aws
+source_url: https://github.com/hashicorp/terraform-provider-aws/pull/48460
+source_pr: 48460
+difficulty: medium
+trigger:
+  package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/cloudfront/testdata/AnycastIPList/tags_ignore/main_gen.tf
+  intent: 'resource/aws_cloudfront_anycast_ip_list: Generate tag tests'
+  diff_summary: 'Primary: internal/service/cloudfront/testdata/AnycastIPList/tags_ignore/main_gen.tf
+    (+42/-0)'
+consequences:
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/cloudfront/anycast_ip_list.go
+  description: 'modified: internal/service/cloudfront/anycast_ip_list.go (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/cloudfront/anycast_ip_list_tags_gen_test.go
+  description: 'added: internal/service/cloudfront/anycast_ip_list_tags_gen_test.go
+    (+2353/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/cloudfront/anycast_ip_list_test.go
+  description: 'modified: internal/service/cloudfront/anycast_ip_list_test.go (+1/-97)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/cloudfront/tags_gen_test.go
+  description: 'added: internal/service/cloudfront/tags_gen_test.go (+19/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/cloudfront/testdata/AnycastIPList/tags/main_gen.tf
+  description: 'added: internal/service/cloudfront/testdata/AnycastIPList/tags/main_gen.tf
+    (+22/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/cloudfront/testdata/AnycastIPList/tagsComputed1/main_gen.tf
+  description: 'added: internal/service/cloudfront/testdata/AnycastIPList/tagsComputed1/main_gen.tf
+    (+26/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/cloudfront/testdata/AnycastIPList/tagsComputed2/main_gen.tf
+  description: 'added: internal/service/cloudfront/testdata/AnycastIPList/tagsComputed2/main_gen.tf
+    (+37/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/cloudfront/testdata/AnycastIPList/tags_defaults/main_gen.tf
+  description: 'added: internal/service/cloudfront/testdata/AnycastIPList/tags_defaults/main_gen.tf
+    (+33/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/cloudfront/testdata/tmpl/anycast_ip_list_basic.gtpl
+  description: 'added: internal/service/cloudfront/testdata/tmpl/anycast_ip_list_basic.gtpl
+    (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 10
+notes: 'Mined from hashicorp/terraform-provider-aws PR #48460. Trigger heuristic applied.
+  Needs review.'

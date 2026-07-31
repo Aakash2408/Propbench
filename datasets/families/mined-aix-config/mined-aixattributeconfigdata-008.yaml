@@ -1,0 +1,62 @@
+id: mined-aixattributeconfigdata-008
+title: Add RODB conciliation rule for manual source propagation and selection for
+  ACCESS_CODES, ADDRESS_TYP
+family: configuration-evolution
+date: '2025-05-30'
+author: Siva Sai Kollakota
+source: git-mined
+source_repo: AIXAttributeConfigData
+source_commit: ef410e02f6c58df2a6ff0fe1f3aff57f4febbe9c
+difficulty: medium
+trigger:
+  package: AIXAttributeConfigData
+  files:
+  - configuration/attribute-config-data/ACCESS_CODES.json
+  intent: Add RODB conciliation rule for manual source propagation and selection for
+    ACCESS_CODES, ADDRESS_TYPE, GATECODE and BUSINESS_HRS attributes for US region
+  diff_summary: 'Primary change: configuration/attribute-config-data/ACCESS_CODES.json
+    (+41/-7)'
+consequences:
+- package: AIXAttributeConfigData
+  files:
+  - configuration/attribute-config-data/ADDRESS_TYPE.json
+  description: 'Co-changed: configuration/attribute-config-data/ADDRESS_TYPE.json
+    (+41/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AIXAttributeConfigData
+  files:
+  - configuration/attribute-config-data/BUSINESS_HRS.json
+  description: 'Co-changed: configuration/attribute-config-data/BUSINESS_HRS.json
+    (+337/-311)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AIXAttributeConfigData
+  files:
+  - configuration/attribute-config-data/CANDIDATE_GATECODES.json
+  description: 'Co-changed: configuration/attribute-config-data/CANDIDATE_GATECODES.json
+    (+39/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AIXAttributeConfigData
+  files:
+  - configuration/attribute-config-data/GATECODE.json
+  description: 'Co-changed: configuration/attribute-config-data/GATECODE.json (+41/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 5
+notes: Auto-mined from AIXAttributeConfigData commit ef410e02. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

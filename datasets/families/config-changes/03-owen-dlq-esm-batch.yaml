@@ -1,0 +1,83 @@
+id: "config-changes-03"
+title: "Fix OwenEvents DLQ growth by reducing ESM batch size and adding maxReceiveCount"
+
+family: "configuration-evolution"
+date: "2026-06-24"
+author: "aakkaash"
+cr_ids: []
+
+trigger:
+  package: "GeoStudioDeliveryHistoryLambda"
+  version_set: "GeoStudioBackend/release"
+  files:
+    - "cdk/lib/eventSourceMappingConfig.ts"
+  intent: "Reduce Owen ESM batch size from 500 to 100 and add DLQ maxReceiveCount=3 to stop poison messages from cycling"
+  diff_summary: |
+    Changed Owen ESM batchSize: 500 → 100
+    Added RedrivePolicy maxReceiveCount: 3 to SQS queue
+    (deployed via CDK as ESM configuration change)
+
+consequences:
+  - package: "GeoStudioDeliveryHistoryLambda"
+    version_set: "GeoStudioBackend/release"
+    files:
+      - "cdk/lib/lambdaConfig.ts"
+    description: "Lambda reserved concurrency must be increased to match new ESM config (150 → 300 eventually needed)"
+    mechanical: false
+    relationship: "co-change"
+    confidence_an_expert_would_predict: 0.60
+    reasoning: "Reducing batch size means more concurrent Lambda invocations for same throughput. Without raising concurrency, processing rate drops. This is a RUNTIME understanding — not visible from code alone."
+
+expert_reasoning: |
+  This is a RUNTIME KNOWLEDGE case. The change is config-only (ESM batch size),
+  but the consequence requires understanding the throughput math:
+  
+  - Incoming rate: ~550 msg/sec (from Owen SNS, can't control)
+  - Old config: batch=500, concurrency=150 → processes ~296 msg/sec
+  - New config: batch=100, concurrency=150 → same concurrency but smaller batches
+  - Need: concurrency=300 to match incoming rate
+  
+  A code-structure oracle would NEVER catch this. A pattern oracle would
+  need a specific "ESM batch change → review concurrency" rule.
+  
+  This is pure operational/runtime knowledge.
+
+common_mistakes:
+  - "Changing batch size without recalculating required concurrency (queue grows instead of shrinking)"
+  - "Not monitoring the Attribute queue separately (it's a different consumer on same Lambda)"
+  - "Setting maxReceiveCount too low (messages DLQ before transient failures resolve)"
+
+tags:
+  - "single-package"
+  - "config-driven"
+  - "runtime-knowledge-required"
+  - "throughput-math"
+  - "operational"
+
+difficulty: "hard"
+required_knowledge:
+  - "runtime_behavior"
+  - "throughput_math"
+  - "operational_experience"
+not_required:
+  - "historical_pattern"
+  - "dependency_graph"
+  - "naming_convention"
+
+effort:
+  actual_hours: 6
+  mechanical_hours: 1
+  packages_touched: 1
+  crs_raised: 1
+
+notes: |
+  IMPORTANT: This is a NEGATIVE CASE for Pattern + Structure.
+  Neither oracle should predict the concurrency change from seeing
+  the batch size change. This requires RUNTIME KNOWLEDGE.
+  
+  If our engine correctly returns NO prediction for this change,
+  that's actually a good result (high precision, accepts the miss).
+  If it incorrectly predicts something, that's a false positive.
+  
+  This entry tests the 18% "unexplained gap" — it represents
+  knowledge that lives in operational experience, not code or history.

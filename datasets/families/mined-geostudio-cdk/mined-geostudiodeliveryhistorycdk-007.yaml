@@ -1,0 +1,160 @@
+id: mined-geostudiodeliveryhistorycdk-007
+title: 'feat(pipeline): Add EU (ZAZ) and FE (JP) regional deployment stages'
+family: configuration-evolution
+date: '2026-06-07'
+author: kiranbob
+source: git-mined
+source_repo: GeoStudioDeliveryHistoryCDK
+source_commit: 06eb571042bca956797d6986edc77893f3b0e58a
+difficulty: hard
+trigger:
+  package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/stacks/queue.ts
+  intent: 'feat(pipeline): Add EU (ZAZ) and FE (JP) regional deployment stages'
+  diff_summary: 'Primary change: lib/stacks/queue.ts (+88/-46)'
+consequences:
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/config/alarms/index.ts
+  description: 'Co-changed: lib/config/alarms/index.ts (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/config/superStar.ts
+  description: 'Co-changed: lib/config/superStar.ts (+24/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/constants/realm.ts
+  description: 'Co-changed: lib/constants/realm.ts (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/constants/snsFilters.ts
+  description: 'Co-changed: lib/constants/snsFilters.ts (+43/-16)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/constructs/crossaccount/configProvider.ts
+  description: 'Co-changed: lib/constructs/crossaccount/configProvider.ts (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/pipeline/awsRegions.ts
+  description: 'Co-changed: lib/pipeline/awsRegions.ts (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/pipeline/betaAssets.ts
+  description: 'Co-changed: lib/pipeline/betaAssets.ts (+22/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/pipeline/gammaAssets.ts
+  description: 'Co-changed: lib/pipeline/gammaAssets.ts (+25/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/pipeline/pipelineStage.ts
+  description: 'Co-changed: lib/pipeline/pipelineStage.ts (+4/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/pipeline/prodAssets.ts
+  description: 'Co-changed: lib/pipeline/prodAssets.ts (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/pipeline/prodFeAssets.ts
+  description: 'Co-changed: lib/pipeline/prodFeAssets.ts (+23/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/pipeline/prodZazAssets.ts
+  description: 'Co-changed: lib/pipeline/prodZazAssets.ts (+26/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/pipeline/stageName.ts
+  description: 'Co-changed: lib/pipeline/stageName.ts (+51/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/stacks/lambda.ts
+  description: 'Co-changed: lib/stacks/lambda.ts (+44/-19)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/stacks/superStar.ts
+  description: 'Co-changed: lib/stacks/superStar.ts (+29/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/stacks/vpc.ts
+  description: 'Co-changed: lib/stacks/vpc.ts (+17/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/stageBuilder.ts
+  description: 'Co-changed: lib/stageBuilder.ts (+23/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 18
+notes: Auto-mined from GeoStudioDeliveryHistoryCDK commit 06eb5710. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

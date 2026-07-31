@@ -1,0 +1,32 @@
+id: mined-arx-opscdk-007
+title: Updating dev-dsk host classes permission for cloudwatch logs
+family: uncategorized
+date: '2025-12-23'
+author: Kanchan Hingorani
+source: git-mined
+source_repo: ARX-OpsCDK
+source_commit: 7c9e5a02369f4133c8f6ffc11bc67b0ab53fddcc
+difficulty: easy
+trigger:
+  package: ARX-OpsCDK
+  files:
+  - lib/stacks/cloudwatchLogsStack.ts
+  intent: Updating dev-dsk host classes permission for cloudwatch logs
+  diff_summary: 'Primary change: lib/stacks/cloudwatchLogsStack.ts (+2/-0)'
+consequences:
+- package: ARX-OpsCDK
+  files:
+  - lib/tests/cloudwatchLogsStack.test.ts
+  description: 'Co-changed: lib/tests/cloudwatchLogsStack.test.ts (+5/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from ARX-OpsCDK commit 7c9e5a02. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

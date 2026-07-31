@@ -1,0 +1,35 @@
+id: mined-ateamintegrationtests-009
+title: '[BH Accuracy] Adding trickle ingestion integration tests for BH Accuracy attribute'
+family: test-evolution
+date: '2025-06-18'
+author: Qasim Bhatia
+source: git-mined
+source_repo: AteamIntegrationTests
+source_commit: 39e9d3fbc647b417b55d06e0bed613a6e2be36cf
+difficulty: easy
+trigger:
+  package: AteamIntegrationTests
+  files:
+  - data/ingestion/US/testScenarios/campusScenarios/businessHoursAccuracy.prototxt
+  intent: '[BH Accuracy] Adding trickle ingestion integration tests for BH Accuracy
+    attribute'
+  diff_summary: 'Primary change: data/ingestion/US/testScenarios/campusScenarios/businessHoursAccuracy.prototxt
+    (+153/-0)'
+consequences:
+- package: AteamIntegrationTests
+  files:
+  - data/ingestion/US/testScenarios/campusScenarios/DELIVERY_PREFERENCE_MANDATE.prototxt
+  description: 'Co-changed: data/ingestion/US/testScenarios/campusScenarios/DELIVERY_PREFERENCE_MANDATE.prototxt
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from AteamIntegrationTests commit 39e9d3fb. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

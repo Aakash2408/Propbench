@@ -1,0 +1,124 @@
+id: mined-addressuiwidgetsservice-013
+title: 'feat: Add AIMS funnel observability metrics'
+family: configuration-evolution
+date: '2026-06-29'
+author: Jatin Batra
+source: git-mined
+source_repo: AddressUIWidgetsService
+source_commit: 9c807d8f040f47aec8565be98f03e0318a58ab3b
+difficulty: hard
+trigger:
+  package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/orchestrator/AddressFormOrchestratorTests.scala
+  intent: 'feat: Add AIMS funnel observability metrics'
+  diff_summary: 'Primary change: tst/com/amazon/addressuiwidgetsservice/orchestrator/AddressFormOrchestratorTests.scala
+    (+157/-0)'
+consequences:
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/addressformconfig/model/AddressFormConfig.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/addressformconfig/model/AddressFormConfig.scala
+    (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/addressformconfig/orchestration/AddressFormConfigGenerator.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/addressformconfig/orchestration/AddressFormConfigGenerator.scala
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/constants/AddressFieldIds.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/constants/AddressFieldIds.scala
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/constants/Counters.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/constants/Counters.scala
+    (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/orchestration/AddressFormOrchestrator.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/orchestration/AddressFormOrchestrator.scala
+    (+15/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessor.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessor.scala
+    (+11/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/views/address/AddressSuggestionsView.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/views/address/AddressSuggestionsView.scala
+    (+6/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/views/address/HiddenAddressFormOptionsView.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/views/address/HiddenAddressFormOptionsView.scala
+    (+17/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/views/address/forms/AddressFormView.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/views/address/forms/AddressFormView.scala
+    (+16/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessorTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessorTests.scala
+    (+30/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/views/address/HiddenAddressFormOptionsViewTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/views/address/HiddenAddressFormOptionsViewTests.scala
+    (+71/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 12
+notes: Auto-mined from AddressUIWidgetsService commit 9c807d8f. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

@@ -1,0 +1,49 @@
+id: mined-aastypescoral-007
+title: Change boolean type to Object
+family: configuration-evolution
+date: '2025-09-03'
+author: gunasree
+source: git-mined
+source_repo: AASTypesCoral
+source_commit: 09759f4744982c2a89aa51b62a33e3762a304f40
+difficulty: medium
+trigger:
+  package: AASTypesCoral
+  files:
+  - model/AASDestinationInputTypes.xsd.model.xml
+  intent: Change boolean type to Object
+  diff_summary: 'Primary change: model/AASDestinationInputTypes.xsd.model.xml (+3/-0)'
+consequences:
+- package: AASTypesCoral
+  files:
+  - Config
+  description: 'Co-changed: Config (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AASTypesCoral
+  files:
+  - model/AddressAttributeTypes.xsd.model.xml
+  description: 'Co-changed: model/AddressAttributeTypes.xsd.model.xml (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AASTypesCoral
+  files:
+  - model/DestinationConstraintViolationTypes.xsd.model.xml
+  description: 'Co-changed: model/DestinationConstraintViolationTypes.xsd.model.xml
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 4
+notes: Auto-mined from AASTypesCoral commit 09759f47. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

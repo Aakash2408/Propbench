@@ -1,0 +1,32 @@
+id: mined-wellspringtriggers-010
+title: 'feat(logging): Add log4j2.xml config for Lambda appender with INFO level'
+family: uncategorized
+date: '2026-05-26'
+author: Akshit Verma
+source: git-mined
+source_repo: WellspringTriggers
+source_commit: 704461d0944ae88fb5361e250dd6eaeb3122721f
+difficulty: easy
+trigger:
+  package: WellspringTriggers
+  files:
+  - dispatch-lambda/src/main/resources/log4j2.xml
+  intent: 'feat(logging): Add log4j2.xml config for Lambda appender with INFO level'
+  diff_summary: 'Primary change: dispatch-lambda/src/main/resources/log4j2.xml (+13/-0)'
+consequences:
+- package: WellspringTriggers
+  files:
+  - trigger-handler/src/main/resources/log4j2.xml
+  description: 'Co-changed: trigger-handler/src/main/resources/log4j2.xml (+13/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from WellspringTriggers commit 704461d0. Trigger heuristic may be
+  wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

@@ -1,0 +1,52 @@
+id: mined-geostudiodeliveryhistorylambda-011
+title: '[TA/SEL] Add TA Token to TCDS and ConcessionService calls'
+family: uncategorized
+date: '2025-09-24'
+author: Qasim Bhatia
+source: git-mined
+source_repo: GeoStudioDeliveryHistoryLambda
+source_commit: 899edf48c0399b0624bf842e483ab7a94461aa26
+difficulty: medium
+trigger:
+  package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/accessor/TCDSAccessor.java
+  intent: '[TA/SEL] Add TA Token to TCDS and ConcessionService calls'
+  diff_summary: 'Primary change: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/accessor/TCDSAccessor.java
+    (+35/-12)'
+consequences:
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/client/ConcessionServiceClient.java
+  description: 'Co-changed: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/client/ConcessionServiceClient.java
+    (+27/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/java/com/amazon/geostudiodeliveryhistory/lambda/accessor/TCDSAccessorTest.java
+  description: 'Co-changed: src/test/java/com/amazon/geostudiodeliveryhistory/lambda/accessor/TCDSAccessorTest.java
+    (+6/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/java/com/amazon/geostudiodeliveryhistory/lambda/client/ConcessionServiceClientTest.java
+  description: 'Co-changed: src/test/java/com/amazon/geostudiodeliveryhistory/lambda/client/ConcessionServiceClientTest.java
+    (+17/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 4
+notes: Auto-mined from GeoStudioDeliveryHistoryLambda commit 899edf48. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

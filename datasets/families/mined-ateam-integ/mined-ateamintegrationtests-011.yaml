@@ -1,0 +1,160 @@
+id: mined-ateamintegrationtests-011
+title: Added Integration tests for FF attribute
+family: test-evolution
+date: '2025-06-06'
+author: Anjali Mamilla
+source: git-mined
+source_repo: AteamIntegrationTests
+source_commit: 56c575404e2f6a81cd5fd778d91418ae109c93e7
+difficulty: hard
+trigger:
+  package: AteamIntegrationTests
+  files:
+  - data/selection/AE/testScenarios/source-precedence-majority/FREIGHT_FORWARDER.prototxt
+  intent: Added Integration tests for FF attribute
+  diff_summary: 'Primary change: data/selection/AE/testScenarios/source-precedence-majority/FREIGHT_FORWARDER.prototxt
+    (+160/-0)'
+consequences:
+- package: AteamIntegrationTests
+  files:
+  - data/selection/AT/testScenarios/source-precedence-majority/FREIGHT_FORWARDER.prototxt
+  description: 'Co-changed: data/selection/AT/testScenarios/source-precedence-majority/FREIGHT_FORWARDER.prototxt
+    (+160/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/BE/testScenarios/source-precedence-majority/FREIGHT_FORWARDER.prototxt
+  description: 'Co-changed: data/selection/BE/testScenarios/source-precedence-majority/FREIGHT_FORWARDER.prototxt
+    (+160/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/CA/testScenarios/source-precedence-majority/FREIGHT_FORWARDER.prototxt
+  description: 'Co-changed: data/selection/CA/testScenarios/source-precedence-majority/FREIGHT_FORWARDER.prototxt
+    (+160/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/DE/testScenarios/source-precedence-majority/FREIGHT_FORWARDER.prototxt
+  description: 'Co-changed: data/selection/DE/testScenarios/source-precedence-majority/FREIGHT_FORWARDER.prototxt
+    (+160/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/EG/testScenarios/source-precedence-majority/FREIGHT_FORWARDER.prototxt
+  description: 'Co-changed: data/selection/EG/testScenarios/source-precedence-majority/FREIGHT_FORWARDER.prototxt
+    (+160/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/ES/testScenarios/source-precedence-majority/FREIGHT_FORWARDER.prototxt
+  description: 'Co-changed: data/selection/ES/testScenarios/source-precedence-majority/FREIGHT_FORWARDER.prototxt
+    (+160/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/FR/testScenarios/source-precedence-majority/FREIGHT_FORWARDER.prototxt
+  description: 'Co-changed: data/selection/FR/testScenarios/source-precedence-majority/FREIGHT_FORWARDER.prototxt
+    (+160/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/GB/testScenarios/source-precedence-majority/FREIGHT_FORWARDER.prototxt
+  description: 'Co-changed: data/selection/GB/testScenarios/source-precedence-majority/FREIGHT_FORWARDER.prototxt
+    (+160/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/IE/testScenarios/source-precedence-majority/FREIGHT_FORWARDER.prototxt
+  description: 'Co-changed: data/selection/IE/testScenarios/source-precedence-majority/FREIGHT_FORWARDER.prototxt
+    (+160/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/IT/testScenarios/source-precedence-majority/FREIGHT_FORWARDER.prototxt
+  description: 'Co-changed: data/selection/IT/testScenarios/source-precedence-majority/FREIGHT_FORWARDER.prototxt
+    (+160/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/MX/testScenarios/source-precedence-majority/FREIGHT_FORWARDER.prototxt
+  description: 'Co-changed: data/selection/MX/testScenarios/source-precedence-majority/FREIGHT_FORWARDER.prototxt
+    (+160/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/NL/testScenarios/source-precedence-majority/FREIGHT_FORWARDER.prototxt
+  description: 'Co-changed: data/selection/NL/testScenarios/source-precedence-majority/FREIGHT_FORWARDER.prototxt
+    (+160/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/PT/testScenarios/source-precedence-majority/FREIGHT_FORWARDER.prototxt
+  description: 'Co-changed: data/selection/PT/testScenarios/source-precedence-majority/FREIGHT_FORWARDER.prototxt
+    (+114/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/SA/testScenarios/source-precedence-majority/FREIGHT_FORWARDER.prototxt
+  description: 'Co-changed: data/selection/SA/testScenarios/source-precedence-majority/FREIGHT_FORWARDER.prototxt
+    (+160/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/US/testScenarios/source-precedence-majority/FREIGHT_FORWARDER.prototxt
+  description: 'Co-changed: data/selection/US/testScenarios/source-precedence-majority/FREIGHT_FORWARDER.prototxt
+    (+46/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 16
+notes: Auto-mined from AteamIntegrationTests commit 56c57540. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

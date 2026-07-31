@@ -1,0 +1,70 @@
+id: mined-addressuiwidgetsservice-001
+title: enabling cdp for PR + PT + ZA marketplaces
+family: configuration-evolution
+date: '2026-03-24'
+author: Aakash Sangwan
+source: git-mined
+source_repo: AddressUIWidgetsService
+source_commit: 37c81aac8ab55e98e5c1e9089420eeef05c7e249
+difficulty: medium
+trigger:
+  package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/marketplace/MarketplaceToAwzLiveCountriesProvider.scala
+  intent: enabling cdp for PR + PT + ZA marketplaces
+  diff_summary: 'Primary change: src/com/amazon/addressuiwidgetsservice/marketplace/MarketplaceToAwzLiveCountriesProvider.scala
+    (+202/-51)'
+consequences:
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/addressformconfig/base/PRAddressFormConfig.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/addressformconfig/base/PRAddressFormConfig.scala
+    (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/addressformconfig/base/ZANewMobileAddressFormConfig.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/addressformconfig/base/ZANewMobileAddressFormConfig.scala
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/constants/CountryCodes.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/constants/CountryCodes.scala
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/addressformconfig/base/PRAddressFormConfigTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/addressformconfig/base/PRAddressFormConfigTests.scala
+    (+4/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/addressformconfig/base/ZANewMobileAddressFormConfigTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/addressformconfig/base/ZANewMobileAddressFormConfigTests.scala
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 6
+notes: Auto-mined from AddressUIWidgetsService commit 37c81aac. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

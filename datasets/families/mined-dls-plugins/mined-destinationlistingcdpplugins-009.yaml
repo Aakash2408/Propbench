@@ -1,0 +1,52 @@
+id: mined-destinationlistingcdpplugins-009
+title: added nudges support for list destination to avoid unnecessary error logs
+family: uncategorized
+date: '2025-07-23'
+author: kiranbob
+source: git-mined
+source_repo: DestinationListingCDPPlugins
+source_commit: 51e12d9d9f3f7499b2dcda806d09787d3c33d4c3
+difficulty: medium
+trigger:
+  package: DestinationListingCDPPlugins
+  files:
+  - src/com/amazon/destinationlisting/plugin/request/mapper/AddressDeliveryInstructionsPluginRequestMapper.java
+  intent: added nudges support for list destination to avoid unnecessary error logs
+  diff_summary: 'Primary change: src/com/amazon/destinationlisting/plugin/request/mapper/AddressDeliveryInstructionsPluginRequestMapper.java
+    (+24/-1)'
+consequences:
+- package: DestinationListingCDPPlugins
+  files:
+  - src/com/amazon/destinationlisting/plugin/destination/mapper/AddressDeliveryInstructionsPluginDestinationInfoMapper.java
+  description: 'Co-changed: src/com/amazon/destinationlisting/plugin/destination/mapper/AddressDeliveryInstructionsPluginDestinationInfoMapper.java
+    (+22/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: DestinationListingCDPPlugins
+  files:
+  - tst/com/amazon/destinationlisting/plugin/destination/mapper/AddressDeliveryInstructionsPluginDestinationInfoMapperTest.java
+  description: 'Co-changed: tst/com/amazon/destinationlisting/plugin/destination/mapper/AddressDeliveryInstructionsPluginDestinationInfoMapperTest.java
+    (+10/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: DestinationListingCDPPlugins
+  files:
+  - tst/com/amazon/destinationlisting/plugin/request/mapper/AddressAddressDeliveryInstructionsPluginRequestMapperTest.java
+  description: 'Co-changed: tst/com/amazon/destinationlisting/plugin/request/mapper/AddressAddressDeliveryInstructionsPluginRequestMapperTest.java
+    (+6/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 4
+notes: Auto-mined from DestinationListingCDPPlugins commit 51e12d9d. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

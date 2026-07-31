@@ -1,0 +1,97 @@
+id: mined-addressuiwidgetsservice-022
+title: Gate new AAPI activities behind a weblab
+family: uncategorized
+date: '2026-06-12'
+author: Rohit
+source: git-mined
+source_repo: AddressUIWidgetsService
+source_commit: 2c436f5e53adaad6148ae485689b25ddda7645f0
+difficulty: medium
+trigger:
+  package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessorTests.scala
+  intent: Gate new AAPI activities behind a weblab
+  diff_summary: 'Primary change: tst/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessorTests.scala
+    (+33/-0)'
+consequences:
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/activity/CreateAddressActivity.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/activity/CreateAddressActivity.scala
+    (+8/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/activity/RemoveAddressActivity.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/activity/RemoveAddressActivity.scala
+    (+8/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/activity/UpdateAddressActivity.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/activity/UpdateAddressActivity.scala
+    (+6/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/constants/amazonapi/AmazonAPIOperationConstants.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/constants/amazonapi/AmazonAPIOperationConstants.scala
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessor.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessor.scala
+    (+18/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/activity/CreateAddressActivityTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/activity/CreateAddressActivityTests.scala
+    (+25/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/activity/RemoveAddressActivityTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/activity/RemoveAddressActivityTests.scala
+    (+19/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/activity/UpdateAddressActivityTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/activity/UpdateAddressActivityTests.scala
+    (+19/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 9
+notes: Auto-mined from AddressUIWidgetsService commit 2c436f5e. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

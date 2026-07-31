@@ -1,0 +1,60 @@
+id: mined-youraccountaddressbook-015
+title: Update Error string and metric for pickup location alert
+family: uncategorized
+date: '2026-01-29'
+author: Aashi Bhatia
+source: git-mined
+source_repo: YourAccountAddressBook
+source_commit: 642052571283d419d08b6fde3eac172946c83bac
+difficulty: medium
+trigger:
+  package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/features/addressbook/DeleteAddressController.scala
+  intent: Update Error string and metric for pickup location alert
+  diff_summary: 'Primary change: src/com/amazon/identity/address/features/addressbook/DeleteAddressController.scala
+    (+1/-1)'
+consequences:
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/utils/Alerts.scala
+  description: 'Co-changed: src/com/amazon/identity/address/utils/Alerts.scala (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/utils/constants/Counters.scala
+  description: 'Co-changed: src/com/amazon/identity/address/utils/constants/Counters.scala
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/utils/constants/StringID.scala
+  description: 'Co-changed: src/com/amazon/identity/address/utils/constants/StringID.scala
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/features/deleteAddress/DeleteAddressControllerTest.scala
+  description: 'Co-changed: tst/com/amazon/identity/address/features/deleteAddress/DeleteAddressControllerTest.scala
+    (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 5
+notes: Auto-mined from YourAccountAddressBook commit 64205257. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

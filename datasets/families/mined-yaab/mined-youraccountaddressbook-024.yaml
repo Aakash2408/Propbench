@@ -1,0 +1,52 @@
+id: mined-youraccountaddressbook-024
+title: enabling cdp for TH + ID marketplaces
+family: uncategorized
+date: '2025-10-23'
+author: James Hancock
+source: git-mined
+source_repo: YourAccountAddressBook
+source_commit: f71cc71d02ff2ab89cf6eb12fcb05630af991b1b
+difficulty: medium
+trigger:
+  package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/features/addressbook/AddressBookFeatureProviderTests.scala
+  intent: enabling cdp for TH + ID marketplaces
+  diff_summary: 'Primary change: tst/com/amazon/identity/address/features/addressbook/AddressBookFeatureProviderTests.scala
+    (+70/-0)'
+consequences:
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/features/addressbook/AddressBookFeatureProvider.scala
+  description: 'Co-changed: src/com/amazon/identity/address/features/addressbook/AddressBookFeatureProvider.scala
+    (+4/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/serviceaccessors/WebLabServiceAccessor.scala
+  description: 'Co-changed: src/com/amazon/identity/address/serviceaccessors/WebLabServiceAccessor.scala
+    (+12/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/features/serviceaccessors/WebLabServiceAccessorTest.scala
+  description: 'Co-changed: tst/com/amazon/identity/address/features/serviceaccessors/WebLabServiceAccessorTest.scala
+    (+42/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 4
+notes: Auto-mined from YourAccountAddressBook commit f71cc71d. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

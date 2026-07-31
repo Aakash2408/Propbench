@@ -1,0 +1,79 @@
+id: mined-smartaddressassistantwebapp-011
+title: '[CDP Revamp] Fix refactored attribute form JSPs (viewData → data + renderHints)'
+family: refactor
+date: '2026-05-07'
+author: Shivam Singla
+source: git-mined
+source_repo: SmartAddressAssistantWebApp
+source_commit: 77193c7d72155f9b9c1efc9c793f13a041ee19af
+difficulty: medium
+trigger:
+  package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/shared/otherDeliveryInstructionsRefactored.jsp
+  intent: '[CDP Revamp] Fix refactored attribute form JSPs (viewData → data + renderHints)'
+  diff_summary: 'Primary change: webapp/WEB-INF/views/cdp/shared/otherDeliveryInstructionsRefactored.jsp
+    (+17/-20)'
+consequences:
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/desktop/deliveryDaysFormRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/desktop/deliveryDaysFormRefactored.jsp
+    (+9/-10)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/desktop/freeTextInstructionFormRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/desktop/freeTextInstructionFormRefactored.jsp
+    (+2/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/desktop/securityAccessCodeFormRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/desktop/securityAccessCodeFormRefactored.jsp
+    (+10/-11)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/businessHours/businessHoursDefaultFormRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/businessHours/businessHoursDefaultFormRefactored.jsp
+    (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/shared/dogRiskLevelFormRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/shared/dogRiskLevelFormRefactored.jsp
+    (+6/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/shared/freeTextInstructionFormWithAccessibilityRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/shared/freeTextInstructionFormWithAccessibilityRefactored.jsp
+    (+6/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 7
+notes: Auto-mined from SmartAddressAssistantWebApp commit 77193c7d. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

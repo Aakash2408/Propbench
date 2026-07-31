@@ -1,0 +1,75 @@
+id: "config-changes-02"
+title: "Fix DHS client handshake with domain-aware qualifier and KeyMaster optional"
+
+family: "config-changes"
+date: "2026-07-06"
+author: "aakkaash"
+cr_ids: []
+
+trigger:
+  package: "SmartAddressAssistantWebApp"
+  version_set: "SmartAddressAssistantHorizonte/release"
+  files:
+    - "src/main/java/com/amazon/saa/service/KeyMasterUtils.java"
+  intent: "Fix DHS client TLS handshake failure by making KeyMaster decryption optional and using domain-aware qualifier for DHS endpoint resolution"
+  diff_summary: |
+    KeyMasterUtils: made decryption optional (graceful fallback when KeyMaster unavailable)
+    DeliveryHistoryServiceConfig: use domain-aware qualifier for endpoint resolution
+    DeliveryHistoryManager: integrate DHS client with KeyMaster decryption flow
+
+consequences:
+  - package: "SmartAddressAssistantWebApp"
+    version_set: "SmartAddressAssistantHorizonte/release"
+    files:
+      - "src/main/java/com/amazon/saa/config/DeliveryHistoryServiceConfig.java"
+    description: "Config class for DHS client with domain-aware qualifier"
+    mechanical: false
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.90
+    reasoning: "Config + Utils + Manager are the standard 3-class pattern for service integrations in this codebase."
+
+  - package: "SmartAddressAssistantWebApp"
+    version_set: "SmartAddressAssistantHorizonte/release"
+    files:
+      - "src/main/java/com/amazon/saa/delivery/DeliveryHistoryManager.java"
+    description: "Manager class wiring DHS client with KeyMaster decryption"
+    mechanical: false
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.85
+    reasoning: "The manager is where the integration logic lives. KeyMasterUtils is just the utility — it needs a consumer."
+
+expert_reasoning: |
+  This is an INTRA-package propagation case. All 3 files are in the same
+  package. The expert knows:
+  1. KeyMasterUtils is a utility — it never works alone. There's always a
+     Config (how to connect) and a Manager (how to use it).
+  2. The DHS integration follows the same pattern as every other external
+     service integration in SAA: Config → Client → Manager → API endpoint.
+  3. Changing the Utils without updating the Manager means the fix doesn't
+     actually reach the API call path.
+
+common_mistakes:
+  - "Only fixing KeyMasterUtils without updating the DHS config (qualifier issue persists)"
+  - "Not testing with brazil-build server (requires env -u PYTHONPATH prefix for AAA subprocess)"
+  - "Forgetting that DHS endpoint resolution is domain-dependent (beta vs gamma vs prod)"
+
+tags:
+  - "single-package"
+  - "multi-file"
+  - "service-integration"
+  - "3-class-pattern"
+  - "intra-package-propagation"
+
+effort:
+  actual_hours: 12
+  mechanical_hours: 3
+  review_hours: 4
+  packages_touched: 1
+  crs_raised: 1
+
+notes: |
+  Interesting because this tests INTRA-package prediction (same package,
+  which files within it?). The engine needs to understand the
+  Config-Utils-Manager pattern to predict that changing Utils requires
+  changing Config and Manager too. This is a code-structure pattern, not
+  a package-dependency pattern.

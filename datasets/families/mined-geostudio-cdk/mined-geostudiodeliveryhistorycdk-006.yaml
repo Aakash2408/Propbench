@@ -1,0 +1,42 @@
+id: mined-geostudiodeliveryhistorycdk-006
+title: 'refactor(cloudauth): Use SecureCloudAuth construct for all regions including
+  eu-south-2'
+family: configuration-evolution
+date: '2026-06-08'
+author: kiranbob
+source: git-mined
+source_repo: GeoStudioDeliveryHistoryCDK
+source_commit: 99fcd0f8f743cf760fe0bfc55e445a09ab315101
+difficulty: medium
+trigger:
+  package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/stacks/superStar.ts
+  intent: 'refactor(cloudauth): Use SecureCloudAuth construct for all regions including
+    eu-south-2'
+  diff_summary: 'Primary change: lib/stacks/superStar.ts (+3/-23)'
+consequences:
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/stacks/vpc.ts
+  description: 'Co-changed: lib/stacks/vpc.ts (+16/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - package.json
+  description: 'Co-changed: package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from GeoStudioDeliveryHistoryCDK commit 99fcd0f8. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

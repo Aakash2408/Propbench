@@ -1,0 +1,144 @@
+id: mined-geostudiodeliveryhistorycdk-011
+title: Revert "Add OpenSearch domain with OSIS zero-ETL pipeline + slow logs"
+family: configuration-evolution
+date: '2026-05-17'
+author: Hitesh Lalwani
+source: git-mined
+source_repo: GeoStudioDeliveryHistoryCDK
+source_commit: 3100894c874287d07213927308636ad64273fa90
+difficulty: hard
+trigger:
+  package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/stacks/opensearch.ts
+  intent: Revert "Add OpenSearch domain with OSIS zero-ETL pipeline + slow logs"
+  diff_summary: 'Primary change: lib/stacks/opensearch.ts (+0/-275)'
+consequences:
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - jest.config.js
+  description: 'Co-changed: jest.config.js (+18/-9)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/config/opensearch.ts
+  description: 'Co-changed: lib/config/opensearch.ts (+0/-50)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/config/superStar.ts
+  description: 'Co-changed: lib/config/superStar.ts (+5/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/constants/constants.ts
+  description: 'Co-changed: lib/constants/constants.ts (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/constants/dashboardConstants.ts
+  description: 'Co-changed: lib/constants/dashboardConstants.ts (+1/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/constants/opensearchConstants.ts
+  description: 'Co-changed: lib/constants/opensearchConstants.ts (+0/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/constants/snsFilters.ts
+  description: 'Co-changed: lib/constants/snsFilters.ts (+20/-20)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/constructs/crossaccount/configProvider.ts
+  description: 'Co-changed: lib/constructs/crossaccount/configProvider.ts (+17/-17)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/constructs/policyProvider/snsPolicyProvider.ts
+  description: 'Co-changed: lib/constructs/policyProvider/snsPolicyProvider.ts (+25/-26)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/constructs/privateLink/cloudAuthLink.ts
+  description: 'Co-changed: lib/constructs/privateLink/cloudAuthLink.ts (+15/-15)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/stacks/lambda.ts
+  description: 'Co-changed: lib/stacks/lambda.ts (+16/-18)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/stacks/queue.ts
+  description: 'Co-changed: lib/stacks/queue.ts (+11/-21)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/stacks/superStar.ts
+  description: 'Co-changed: lib/stacks/superStar.ts (+47/-52)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/stacks/vpc.ts
+  description: 'Co-changed: lib/stacks/vpc.ts (+47/-46)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/stageBuilder.ts
+  description: 'Co-changed: lib/stageBuilder.ts (+1/-18)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 16
+notes: Auto-mined from GeoStudioDeliveryHistoryCDK commit 3100894c. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

@@ -1,0 +1,97 @@
+id: mined-repeatdefectsmanagementservicetests-002
+title: added tests for GetDefectDetailsByAddressId GetRepeatDefectDetailsByAddressId
+  and GetRepeatDefectSta
+family: test-evolution
+date: '2026-02-03'
+author: Shivam Singla
+source: git-mined
+source_repo: RepeatDefectsManagementServiceTests
+source_commit: cd07d5d619bfcdf42cd49bce086952a81a6a2d30
+difficulty: medium
+trigger:
+  package: RepeatDefectsManagementServiceTests
+  files:
+  - src/main/java/com/amazon/repeatdefectsmanagementservice/DefectManagementServiceClientFactory.java
+  intent: added tests for GetDefectDetailsByAddressId GetRepeatDefectDetailsByAddressId
+    and GetRepeatDefectStatusByAddressId api
+  diff_summary: 'Primary change: src/main/java/com/amazon/repeatdefectsmanagementservice/DefectManagementServiceClientFactory.java
+    (+27/-0)'
+consequences:
+- package: RepeatDefectsManagementServiceTests
+  files:
+  - Config
+  description: 'Co-changed: Config (+10/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: RepeatDefectsManagementServiceTests
+  files:
+  - build.gradle.kts
+  description: 'Co-changed: build.gradle.kts (+10/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: RepeatDefectsManagementServiceTests
+  files:
+  - configuration/aws_lambda/lambda-transform.yml
+  description: 'Co-changed: configuration/aws_lambda/lambda-transform.yml (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: RepeatDefectsManagementServiceTests
+  files:
+  - src/main/java/com/amazon/repeatdefectsmanagementservice/GetDefectDetailsByAddressIdTest.java
+  description: 'Co-changed: src/main/java/com/amazon/repeatdefectsmanagementservice/GetDefectDetailsByAddressIdTest.java
+    (+76/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: RepeatDefectsManagementServiceTests
+  files:
+  - src/main/java/com/amazon/repeatdefectsmanagementservice/GetRepeatDefectDetailsByAddressIdTest.java
+  description: 'Co-changed: src/main/java/com/amazon/repeatdefectsmanagementservice/GetRepeatDefectDetailsByAddressIdTest.java
+    (+96/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: RepeatDefectsManagementServiceTests
+  files:
+  - src/main/java/com/amazon/repeatdefectsmanagementservice/GetRepeatDefectStatusByAddressIdTest.java
+  description: 'Co-changed: src/main/java/com/amazon/repeatdefectsmanagementservice/GetRepeatDefectStatusByAddressIdTest.java
+    (+81/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: RepeatDefectsManagementServiceTests
+  files:
+  - src/main/java/com/amazon/repeatdefectsmanagementservice/SimpleIntegrationTest.java
+  description: 'Co-changed: src/main/java/com/amazon/repeatdefectsmanagementservice/SimpleIntegrationTest.java
+    (+0/-48)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: RepeatDefectsManagementServiceTests
+  files:
+  - src/main/java/com/amazon/repeatdefectsmanagementservice/TestConstants.java
+  description: 'Co-changed: src/main/java/com/amazon/repeatdefectsmanagementservice/TestConstants.java
+    (+20/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 9
+notes: Auto-mined from RepeatDefectsManagementServiceTests commit cd07d5d6. Trigger
+  heuristic may be wrong. Needs human review to confirm trigger/consequence split
+  and add expert_reasoning.

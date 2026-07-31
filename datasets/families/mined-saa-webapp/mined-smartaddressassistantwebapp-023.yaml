@@ -1,0 +1,144 @@
+id: mined-smartaddressassistantwebapp-023
+title: '[CDPRevamp] Migrate mobile group expander + PDL JSPs to ViewModel pattern
+  (Proposal E - dead code)'
+family: uncategorized
+date: '2026-04-20'
+author: Shivam Singla
+source: git-mined
+source_repo: SmartAddressAssistantWebApp
+source_commit: 2381deea3a9f6bd33290525703931a990923f158
+difficulty: hard
+trigger:
+  package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/pdl/personalisedCdpPdlRefactored.jsp
+  intent: '[CDPRevamp] Migrate mobile group expander + PDL JSPs to ViewModel pattern
+    (Proposal E - dead code)'
+  diff_summary: 'Primary change: webapp/WEB-INF/views/cdp/mobile/pdl/personalisedCdpPdlRefactored.jsp
+    (+226/-0)'
+consequences:
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/model/CommonPageContext.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/model/CommonPageContext.java
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/provider/DeliveryProfileViewProvider.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/provider/DeliveryProfileViewProvider.java
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/defaultGroupExpanderRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/defaultGroupExpanderRefactored.jsp
+    (+60/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/pdl/dobbyLocker/dobbyLockerExpanderMobileRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/pdl/dobbyLocker/dobbyLockerExpanderMobileRefactored.jsp
+    (+26/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/pdl/dobbyLocker/dobbyLockerOptionMobileRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/pdl/dobbyLocker/dobbyLockerOptionMobileRefactored.jsp
+    (+20/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/pdl/pdlNeighborOptionRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/pdl/pdlNeighborOptionRefactored.jsp
+    (+97/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/pdl/personalisedCdpApplicableOnlyPdlRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/pdl/personalisedCdpApplicableOnlyPdlRefactored.jsp
+    (+175/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/pdl/personalisedCdpPdlWithNeighborRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/pdl/personalisedCdpPdlWithNeighborRefactored.jsp
+    (+169/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/pdl/personalisedCdpPdlWithTopNeighborRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/pdl/personalisedCdpPdlWithTopNeighborRefactored.jsp
+    (+162/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/pdl/withNeighbor/preferredDeliveryLocationFormExpanderRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/pdl/withNeighbor/preferredDeliveryLocationFormExpanderRefactored.jsp
+    (+23/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/pdl/withNeighbor/preferredDeliveryLocationFormRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/pdl/withNeighbor/preferredDeliveryLocationFormRefactored.jsp
+    (+26/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/pdl/withoutNeighbor/preferredDeliveryLocationFormExpanderRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/pdl/withoutNeighbor/preferredDeliveryLocationFormExpanderRefactored.jsp
+    (+23/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/pdl/withoutNeighbor/preferredDeliveryLocationFormRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/pdl/withoutNeighbor/preferredDeliveryLocationFormRefactored.jsp
+    (+26/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 14
+notes: Auto-mined from SmartAddressAssistantWebApp commit 2381deea. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

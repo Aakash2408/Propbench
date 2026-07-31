@@ -1,0 +1,34 @@
+id: mined-cdpmodelgenerator-004
+title: Generated appweaver artifacts
+family: configuration-evolution
+date: '2025-08-29'
+author: Datta Dwarampudi
+source: git-mined
+source_repo: CdpModelGenerator
+source_commit: c26696a1867e2a47f3af718d992f1930cae96cbb
+difficulty: easy
+trigger:
+  package: CdpModelGenerator
+  files:
+  - .appweaver/metadata/Units_CdpModelGenerator.json
+  intent: Generated appweaver artifacts
+  diff_summary: 'Primary change: .appweaver/metadata/Units_CdpModelGenerator.json
+    (+2199/-0)'
+consequences:
+- package: CdpModelGenerator
+  files:
+  - .appweaver/metadata/BrazilPackage_CdpModelGenerator.json
+  description: 'Co-changed: .appweaver/metadata/BrazilPackage_CdpModelGenerator.json
+    (+138/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from CdpModelGenerator commit c26696a1. Trigger heuristic may be
+  wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

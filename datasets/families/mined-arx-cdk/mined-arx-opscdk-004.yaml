@@ -1,0 +1,48 @@
+id: mined-arx-opscdk-004
+title: add new prod deployment strategy
+family: configuration-evolution
+date: '2026-06-12'
+author: Suraj Dhankad
+source: git-mined
+source_repo: ARX-OpsCDK
+source_commit: d1e15e8cc25d3bedb9edbf6a9348a68e1618cfe0
+difficulty: medium
+trigger:
+  package: ARX-OpsCDK
+  files:
+  - lib/stacks/awsAppConfigStack.ts
+  intent: add new prod deployment strategy
+  diff_summary: 'Primary change: lib/stacks/awsAppConfigStack.ts (+38/-4)'
+consequences:
+- package: ARX-OpsCDK
+  files:
+  - README.md
+  description: 'Co-changed: README.md (+38/-13)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: ARX-OpsCDK
+  files:
+  - lib/deployTest/devApp.ts
+  description: 'Co-changed: lib/deployTest/devApp.ts (+19/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: ARX-OpsCDK
+  files:
+  - lib/infrastructurePipeline/pipeline.ts
+  description: 'Co-changed: lib/infrastructurePipeline/pipeline.ts (+5/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 4
+notes: Auto-mined from ARX-OpsCDK commit d1e15e8c. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

@@ -1,0 +1,115 @@
+id: mined-addressuiwidgetsservice-017
+title: 'feat(pre-validation): Add PreValidateAddress AJAX operation'
+family: uncategorized
+date: '2026-06-25'
+author: Kanchan Hingorani
+source: git-mined
+source_repo: AddressUIWidgetsService
+source_commit: 64617e1fc40cd896da8c16b2a013b4db1ef459b4
+difficulty: hard
+trigger:
+  package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/prevalidation/PreValidationTokenUtilityTests.scala
+  intent: 'feat(pre-validation): Add PreValidateAddress AJAX operation'
+  diff_summary: 'Primary change: tst/com/amazon/addressuiwidgetsservice/prevalidation/PreValidationTokenUtilityTests.scala
+    (+272/-0)'
+consequences:
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/constants/AddressFieldIds.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/constants/AddressFieldIds.scala
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/constants/AddressFormTokenConstants.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/constants/AddressFormTokenConstants.scala
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/constants/Counters.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/constants/Counters.scala
+    (+13/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/orchestration/AjaxOperationOrchestrator.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/orchestration/AjaxOperationOrchestrator.scala
+    (+12/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/orchestration/operations/PreValidateAddressProvider.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/orchestration/operations/PreValidateAddressProvider.scala
+    (+108/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/prevalidation/PreValidationTokenUtility.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/prevalidation/PreValidationTokenUtility.scala
+    (+157/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessor.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessor.scala
+    (+10/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/orchestrator/AjaxOrchestratorTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/orchestrator/AjaxOrchestratorTests.scala
+    (+93/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/orchestrator/operations/PreValidateAddressProviderTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/orchestrator/operations/PreValidateAddressProviderTests.scala
+    (+228/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessorTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessorTests.scala
+    (+24/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 11
+notes: Auto-mined from AddressUIWidgetsService commit 64617e1f. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

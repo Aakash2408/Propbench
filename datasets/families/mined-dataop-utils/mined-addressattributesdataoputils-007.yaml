@@ -1,0 +1,32 @@
+id: mined-addressattributesdataoputils-007
+title: Adding PathingJar to fix build issue
+family: configuration-evolution
+date: '2025-06-16'
+author: Manaswini Gorthi
+source: git-mined
+source_repo: AddressAttributesDataOpUtils
+source_commit: d74b08b914e1fc162ca97bc4a88cab55e2ad762d
+difficulty: easy
+trigger:
+  package: AddressAttributesDataOpUtils
+  files:
+  - build.xml
+  intent: Adding PathingJar to fix build issue
+  diff_summary: 'Primary change: build.xml (+2/-0)'
+consequences:
+- package: AddressAttributesDataOpUtils
+  files:
+  - Config
+  description: 'Co-changed: Config (+1/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from AddressAttributesDataOpUtils commit d74b08b9. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

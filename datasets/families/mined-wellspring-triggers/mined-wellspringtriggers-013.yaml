@@ -1,0 +1,33 @@
+id: mined-wellspringtriggers-013
+title: 'test(dispatch): Add CoralOrchestratorApiClient unit tests + steering doc'
+family: test-evolution
+date: '2026-05-21'
+author: Akshit Verma
+source: git-mined
+source_repo: WellspringTriggers
+source_commit: 36a8c9592517337095de8121c82f734a01f22418
+difficulty: easy
+trigger:
+  package: WellspringTriggers
+  files:
+  - .kiro/steering/coding-guidelines.md
+  intent: 'test(dispatch): Add CoralOrchestratorApiClient unit tests + steering doc'
+  diff_summary: 'Primary change: .kiro/steering/coding-guidelines.md (+159/-0)'
+consequences:
+- package: WellspringTriggers
+  files:
+  - dispatch-lambda/src/test/java/com/amazon/wellspringtriggers/dispatch/CoralOrchestratorApiClientTest.java
+  description: 'Co-changed: dispatch-lambda/src/test/java/com/amazon/wellspringtriggers/dispatch/CoralOrchestratorApiClientTest.java
+    (+111/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from WellspringTriggers commit 36a8c959. Trigger heuristic may be
+  wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

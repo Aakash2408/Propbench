@@ -1,0 +1,43 @@
+id: mined-geostudiodeliveryhistorylambda-013
+title: '[GeoStudioDeliveryHistoryLambda] Modify DeliveryHistoryDDBEventProcessor'
+family: uncategorized
+date: '2025-06-30'
+author: Adithya Mahadasyam
+source: git-mined
+source_repo: GeoStudioDeliveryHistoryLambda
+source_commit: a93edbbd202aa90ab2d041d4fcb67312c26c509a
+difficulty: medium
+trigger:
+  package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/processor/DeliveryHistoryDDBEventProcessor.java
+  intent: '[GeoStudioDeliveryHistoryLambda] Modify DeliveryHistoryDDBEventProcessor'
+  diff_summary: 'Primary change: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/processor/DeliveryHistoryDDBEventProcessor.java
+    (+16/-13)'
+consequences:
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/constant/Constants.java
+  description: 'Co-changed: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/constant/Constants.java
+    (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/java/com/amazon/geostudiodeliveryhistory/lambda/processor/DeliveryHistoryDDBEventProcessorTest.java
+  description: 'Co-changed: src/test/java/com/amazon/geostudiodeliveryhistory/lambda/processor/DeliveryHistoryDDBEventProcessorTest.java
+    (+36/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from GeoStudioDeliveryHistoryLambda commit a93edbbd. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

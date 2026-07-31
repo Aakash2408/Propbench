@@ -1,0 +1,45 @@
+id: mined-ateamintegrationtests-001
+title: 'test: Add ingestion integration tests for NO_PHOTO_ON_DELIVERY, DRIVEWAY_ACCESS,
+  CUSTOMER_MOBILITY_I'
+family: test-evolution
+date: '2026-06-10'
+author: Aakash Sangwan
+source: git-mined
+source_repo: AteamIntegrationTests
+source_commit: bd0b6cfd59f8045dcecb69ea48190e0f301fc30a
+difficulty: medium
+trigger:
+  package: AteamIntegrationTests
+  files:
+  - data/ingestion/US/testScenarios/CUSTOMER_MOBILITY_ISSUES.prototxt
+  intent: 'test: Add ingestion integration tests for NO_PHOTO_ON_DELIVERY, DRIVEWAY_ACCESS,
+    CUSTOMER_MOBILITY_ISSUES'
+  diff_summary: 'Primary change: data/ingestion/US/testScenarios/CUSTOMER_MOBILITY_ISSUES.prototxt
+    (+128/-0)'
+consequences:
+- package: AteamIntegrationTests
+  files:
+  - data/ingestion/US/testScenarios/DRIVEWAY_ACCESS.prototxt
+  description: 'Co-changed: data/ingestion/US/testScenarios/DRIVEWAY_ACCESS.prototxt
+    (+152/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/ingestion/US/testScenarios/NO_PHOTO_ON_DELIVERY.prototxt
+  description: 'Co-changed: data/ingestion/US/testScenarios/NO_PHOTO_ON_DELIVERY.prototxt
+    (+128/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from AteamIntegrationTests commit bd0b6cfd. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

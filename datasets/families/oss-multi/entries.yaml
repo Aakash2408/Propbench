@@ -1,0 +1,314 @@
+# PropBench OSS Entries — Kubernetes
+# Source: github.com/kubernetes/kubernetes
+
+---
+id: "oss-k8s-01"
+title: "Remove PodSecurityPolicy API (v1.25)"
+family: "oss-kubernetes"
+date: "2022-08-23"
+author: "kubernetes-team"
+source: "https://github.com/kubernetes/kubernetes/pull/109798"
+
+trigger:
+  package: "kubernetes"
+  version_set: "kubernetes/master"
+  files:
+    - "pkg/apis/policy/types.go"
+    - "staging/src/k8s.io/api/policy/v1beta1/types.go"
+  intent: "Remove PodSecurityPolicy resource type entirely after deprecation in v1.21"
+  diff_summary: |
+    Remove PodSecurityPolicy, PodSecurityPolicyList types and all associated
+    admission controller, validation, and defaulting logic.
+
+consequences:
+  - package: "kubernetes"
+    files:
+      - "plugin/pkg/admission/security/podsecurity/admission.go"
+      - "plugin/pkg/admission/security/podsecurity/admission_test.go"
+    description: "PSP admission controller must be removed"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.95
+    reasoning: "Admission plugin directly implements the removed API"
+
+  - package: "kubernetes"
+    files:
+      - "pkg/registry/policy/podsecuritypolicy/strategy.go"
+      - "pkg/registry/policy/podsecuritypolicy/storage/storage.go"
+    description: "API server storage/registry for PSP"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.90
+    reasoning: "Storage layer for the removed resource type"
+
+  - package: "kubernetes"
+    files:
+      - "test/e2e/auth/pod_security_policy.go"
+    description: "E2E tests for PodSecurityPolicy"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.90
+    reasoning: "E2E tests directly exercise removed feature"
+
+  - package: "kubernetes"
+    files:
+      - "staging/src/k8s.io/client-go/kubernetes/typed/policy/v1beta1/podsecuritypolicy.go"
+    description: "Generated client code for PSP"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.85
+    reasoning: "Client-go generated code mirrors API types"
+
+  - package: "kubernetes"
+    files:
+      - "pkg/generated/openapi/zz_generated.openapi.go"
+    description: "Generated OpenAPI spec includes PSP definitions"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.60
+    reasoning: "Generated file — often forgotten in manual propagation"
+
+---
+id: "oss-k8s-02"
+title: "Rename --master flag to --server across all CLI tools"
+family: "oss-kubernetes"
+date: "2023-06-15"
+author: "kubernetes-team"
+source: "https://github.com/kubernetes/kubernetes/issues/118279"
+
+trigger:
+  package: "kubernetes"
+  version_set: "kubernetes/master"
+  files:
+    - "cmd/kubectl/kubectl.go"
+    - "staging/src/k8s.io/client-go/tools/clientcmd/client_config.go"
+  intent: "Replace non-inclusive term --master with --server in all CLI flags"
+  diff_summary: |
+    Rename --master flag to --server. Keep --master as hidden deprecated alias.
+
+consequences:
+  - package: "kubernetes"
+    files:
+      - "cmd/kube-apiserver/app/server.go"
+      - "cmd/kube-controller-manager/app/controllermanager.go"
+      - "cmd/kube-scheduler/app/server.go"
+    description: "All kube-* binaries have --master flag"
+    mechanical: true
+    relationship: "pattern"
+    confidence_an_expert_would_predict: 0.85
+    reasoning: "Same flag used across all server binaries"
+
+  - package: "kubernetes"
+    files:
+      - "test/cmd/kubectl.sh"
+      - "test/e2e/kubectl/kubectl.go"
+    description: "Integration tests pass --master flag"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.80
+    reasoning: "Tests use the renamed flag"
+
+  - package: "kubernetes"
+    files:
+      - "staging/src/k8s.io/client-go/rest/config.go"
+    description: "REST config has Master field"
+    mechanical: false
+    relationship: "causal"
+    confidence_an_expert_would_predict: 0.55
+    reasoning: "Internal struct field — not obvious from CLI change"
+
+# PropBench OSS Entries — Django
+# Source: github.com/django/django
+
+---
+id: "oss-django-01"
+title: "Remove JSONField from django.contrib.postgres (moved to core)"
+family: "oss-django"
+date: "2023-04-01"
+author: "django-team"
+source: "https://github.com/django/django/pull/16553"
+
+trigger:
+  package: "django"
+  version_set: "django/main"
+  files:
+    - "django/contrib/postgres/fields/jsonb.py"
+  intent: "Remove JSONField from contrib.postgres — it's been in django.db.models since 3.1"
+  diff_summary: |
+    Delete django.contrib.postgres.fields.JSONField class.
+    All imports must change to django.db.models.JSONField.
+
+consequences:
+  - package: "django"
+    files:
+      - "tests/postgres_tests/test_json.py"
+    description: "Tests importing from contrib.postgres path"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.95
+    reasoning: "Tests directly import the removed module"
+
+  - package: "django"
+    files:
+      - "docs/ref/contrib/postgres/fields.txt"
+    description: "Documentation references removed import path"
+    mechanical: true
+    relationship: "pattern"
+    confidence_an_expert_would_predict: 0.80
+    reasoning: "Docs teach the old import path"
+
+  - package: "django"
+    files:
+      - "django/contrib/postgres/fields/__init__.py"
+    description: "Package __init__ exports the removed class"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.90
+    reasoning: "Module's public API still exports it"
+
+---
+id: "oss-django-02"
+title: "Deprecate django.utils.timezone.utc in favor of datetime.timezone.utc"
+family: "oss-django"
+date: "2024-01-10"
+author: "django-team"
+source: "https://docs.djangoproject.com/en/5.0/releases/5.0/"
+
+trigger:
+  package: "django"
+  version_set: "django/main"
+  files:
+    - "django/utils/timezone.py"
+  intent: "Deprecate custom UTC class — stdlib datetime.timezone.utc is sufficient"
+  diff_summary: |
+    Add deprecation warning to django.utils.timezone.utc.
+    All internal usages should use datetime.timezone.utc instead.
+
+consequences:
+  - package: "django"
+    files:
+      - "django/db/backends/base/operations.py"
+      - "django/db/models/fields/__init__.py"
+    description: "DB operations import timezone.utc for datetime handling"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.75
+    reasoning: "Internal imports of the deprecated utility"
+
+  - package: "django"
+    files:
+      - "tests/utils_tests/test_timezone.py"
+    description: "Tests for the timezone module"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.90
+    reasoning: "Direct test file for changed module"
+
+  - package: "django"
+    files:
+      - "docs/ref/utils.txt"
+      - "docs/topics/i18n/timezones.txt"
+    description: "Documentation references deprecated utility"
+    mechanical: false
+    relationship: "pattern"
+    confidence_an_expert_would_predict: 0.65
+    reasoning: "Docs need deprecation note — not always caught"
+
+# PropBench OSS Entries — Next.js
+# Source: github.com/vercel/next.js
+
+---
+id: "oss-nextjs-01"
+title: "Remove getServerSideProps from app/ directory (app router)"
+family: "oss-nextjs"
+date: "2023-11-01"
+author: "vercel-team"
+source: "https://nextjs.org/docs/app/building-your-application/upgrading/app-router-migration"
+
+trigger:
+  package: "next"
+  version_set: "next/canary"
+  files:
+    - "packages/next/src/server/render.tsx"
+    - "packages/next/src/build/webpack/loaders/next-app-loader.ts"
+  intent: "In app/ directory, getServerSideProps/getStaticProps are not supported — use server components + fetch"
+  diff_summary: |
+    Emit build error when getServerSideProps/getStaticProps are used in app/ dir files.
+    Pages must use async server components with direct fetch/DB access.
+
+consequences:
+  - package: "next"
+    files:
+      - "test/e2e/app-dir/app-static/app-static.test.ts"
+      - "test/e2e/app-dir/app/app.test.ts"
+    description: "E2E tests for app directory data fetching"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.85
+    reasoning: "Tests validate the new behavior"
+
+  - package: "next"
+    files:
+      - "packages/next/src/build/analysis/get-page-static-info.ts"
+    description: "Static analysis that detects page data methods"
+    mechanical: true
+    relationship: "causal"
+    confidence_an_expert_would_predict: 0.60
+    reasoning: "Build analysis must know which methods are banned in app/"
+
+  - package: "next"
+    files:
+      - "errors/gsp-gssp-in-app-dir.md"
+    description: "Error documentation explaining the migration path"
+    mechanical: false
+    relationship: "pattern"
+    confidence_an_expert_would_predict: 0.70
+    reasoning: "Error messages need corresponding documentation"
+
+---
+id: "oss-nextjs-02"
+title: "Replace next/image with next/legacy/image (layout prop removal)"
+family: "oss-nextjs"
+date: "2022-10-26"
+author: "vercel-team"
+source: "https://nextjs.org/blog/next-13"
+
+trigger:
+  package: "next"
+  version_set: "next/canary"
+  files:
+    - "packages/next/src/client/image-component.tsx"
+  intent: "Remove layout, objectFit, objectPosition props from next/image — use style prop instead"
+  diff_summary: |
+    next/image no longer accepts layout='fill'|'fixed'|'intrinsic'|'responsive'.
+    Old API moved to next/legacy/image. New API uses width/height + style.
+
+consequences:
+  - package: "next"
+    files:
+      - "test/integration/image-component/test/index.test.ts"
+      - "test/e2e/next-image/test/index.test.ts"
+    description: "Image component tests use layout prop"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.90
+    reasoning: "Tests directly use the removed props"
+
+  - package: "next"
+    files:
+      - "packages/next/src/client/legacy/image.tsx"
+    description: "Legacy image component must be created with old API"
+    mechanical: true
+    relationship: "causal"
+    confidence_an_expert_would_predict: 0.75
+    reasoning: "Old API preserved in legacy path — architectural decision"
+
+  - package: "next"
+    files:
+      - "docs/api-reference/next/image.md"
+      - "docs/upgrading.md"
+    description: "Image docs reference removed props"
+    mechanical: true
+    relationship: "pattern"
+    confidence_an_expert_would_predict: 0.80
+    reasoning: "API docs must match new interface"

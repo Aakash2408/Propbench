@@ -1,0 +1,32 @@
+id: mined-aastypescoral-010
+title: Added coral models for ODM specific codigo models
+family: test-evolution
+date: '2025-05-06'
+author: Gunasree Kunkulagunta
+source: git-mined
+source_repo: AASTypesCoral
+source_commit: 59e6ddaa138a0b471b6432abb327f1c8df8f07b8
+difficulty: easy
+trigger:
+  package: AASTypesCoral
+  files:
+  - model/DestinationTypes.xsd.codigo.model.xml
+  intent: Added coral models for ODM specific codigo models
+  diff_summary: 'Primary change: model/DestinationTypes.xsd.codigo.model.xml (+27/-0)'
+consequences:
+- package: AASTypesCoral
+  files:
+  - model/DestinationTypes.xsd.model.xml
+  description: 'Co-changed: model/DestinationTypes.xsd.model.xml (+20/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from AASTypesCoral commit 59e6ddaa. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

@@ -1,0 +1,185 @@
+id: mined-geostudiodeliveryhistorylambda-002
+title: '[RDR][CITE] Add infrastructure, ingestion logic, and DMS wiring for CS contact
+  defects'
+family: configuration-evolution
+date: '2026-05-22'
+author: Qasim Bhatia
+source: git-mined
+source_repo: GeoStudioDeliveryHistoryLambda
+source_commit: 70c504bc38c6945cd487bb118d6b9055601a44bf
+difficulty: hard
+trigger:
+  package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/processor/CSContactMessageProcessor.java
+  intent: '[RDR][CITE] Add infrastructure, ingestion logic, and DMS wiring for CS
+    contact defects'
+  diff_summary: 'Primary change: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/processor/CSContactMessageProcessor.java
+    (+142/-0)'
+consequences:
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/constant/CiteMetadataKeys.java
+  description: 'Co-changed: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/constant/CiteMetadataKeys.java
+    (+25/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/constant/Constants.java
+  description: 'Co-changed: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/constant/Constants.java
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/factory/SQSMessageProcessorFactory.java
+  description: 'Co-changed: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/factory/SQSMessageProcessorFactory.java
+    (+12/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/handler/DeliveryHistoryEventHandler.java
+  description: 'Co-changed: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/handler/DeliveryHistoryEventHandler.java
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/util/CsDateParser.java
+  description: 'Co-changed: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/util/CsDateParser.java
+    (+42/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/util/DynamoDBUtil.java
+  description: 'Co-changed: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/util/DynamoDBUtil.java
+    (+52/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/java/com/amazon/geostudiodeliveryhistory/lambda/factory/SQSMessageProcessorFactoryTest.java
+  description: 'Co-changed: src/test/java/com/amazon/geostudiodeliveryhistory/lambda/factory/SQSMessageProcessorFactoryTest.java
+    (+9/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/java/com/amazon/geostudiodeliveryhistory/lambda/handler/DeliveryHistoryEventHandlerTest.java
+  description: 'Co-changed: src/test/java/com/amazon/geostudiodeliveryhistory/lambda/handler/DeliveryHistoryEventHandlerTest.java
+    (+3/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/java/com/amazon/geostudiodeliveryhistory/lambda/processor/CSContactMessageProcessorTest.java
+  description: 'Co-changed: src/test/java/com/amazon/geostudiodeliveryhistory/lambda/processor/CSContactMessageProcessorTest.java
+    (+137/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/java/com/amazon/geostudiodeliveryhistory/lambda/util/CsDateParserTest.java
+  description: 'Co-changed: src/test/java/com/amazon/geostudiodeliveryhistory/lambda/util/CsDateParserTest.java
+    (+48/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/java/com/amazon/geostudiodeliveryhistory/lambda/util/DynamoDBUtilTest.java
+  description: 'Co-changed: src/test/java/com/amazon/geostudiodeliveryhistory/lambda/util/DynamoDBUtilTest.java
+    (+71/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/resources/cscontact/missing-comm-id.json
+  description: 'Co-changed: src/test/resources/cscontact/missing-comm-id.json (+6/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/resources/cscontact/missing-cs-date-created.json
+  description: 'Co-changed: src/test/resources/cscontact/missing-cs-date-created.json
+    (+7/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/resources/cscontact/missing-tracking-id.json
+  description: 'Co-changed: src/test/resources/cscontact/missing-tracking-id.json
+    (+6/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/resources/cscontact/non-numeric-address-id.json
+  description: 'Co-changed: src/test/resources/cscontact/non-numeric-address-id.json
+    (+7/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/resources/cscontact/unknown-event-type.json
+  description: 'Co-changed: src/test/resources/cscontact/unknown-event-type.json (+7/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/resources/cscontact/valid-insert.json
+  description: 'Co-changed: src/test/resources/cscontact/valid-insert.json (+18/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/resources/cscontact/valid-modify.json
+  description: 'Co-changed: src/test/resources/cscontact/valid-modify.json (+18/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 19
+notes: Auto-mined from GeoStudioDeliveryHistoryLambda commit 70c504bc. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

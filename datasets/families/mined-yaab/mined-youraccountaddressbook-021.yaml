@@ -1,0 +1,52 @@
+id: mined-youraccountaddressbook-021
+title: holding change
+family: uncategorized
+date: '2025-10-28'
+author: leo feng
+source: git-mined
+source_repo: YourAccountAddressBook
+source_commit: 7948e605fd9095f9a1eb5597885724328549de3b
+difficulty: medium
+trigger:
+  package: YourAccountAddressBook
+  files:
+  - webapp/WEB-INF/views/mobile/sad-delete-address-bottom-sheet.ftl
+  intent: holding change
+  diff_summary: 'Primary change: webapp/WEB-INF/views/mobile/sad-delete-address-bottom-sheet.ftl
+    (+10/-9)'
+consequences:
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/utils/constants/StringID.scala
+  description: 'Co-changed: src/com/amazon/identity/address/utils/constants/StringID.scala
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - webapp/WEB-INF/views/desktop/sad-delete-address-modal.ftl
+  description: 'Co-changed: webapp/WEB-INF/views/desktop/sad-delete-address-modal.ftl
+    (+12/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - webapp/WEB-INF/views/mobile/sad-delete-address-confirm-bottom-sheet.ftl
+  description: 'Co-changed: webapp/WEB-INF/views/mobile/sad-delete-address-confirm-bottom-sheet.ftl
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 4
+notes: Auto-mined from YourAccountAddressBook commit 7948e605. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

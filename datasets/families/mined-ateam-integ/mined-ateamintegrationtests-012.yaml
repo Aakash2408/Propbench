@@ -1,0 +1,34 @@
+id: mined-ateamintegrationtests-012
+title: Changes to Exception Date for EG and AE region
+family: interface-evolution
+date: '2025-06-03'
+author: Vibhanshu .
+source: git-mined
+source_repo: AteamIntegrationTests
+source_commit: 7b6104f63efc3737a20ffdb6333de0c2cf560848
+difficulty: easy
+trigger:
+  package: AteamIntegrationTests
+  files:
+  - data/selection/AE/testScenarios/canonical-selection-strategies/AddressType_BizHrs_ExceptionDates.prototxt
+  intent: Changes to Exception Date for EG and AE region
+  diff_summary: 'Primary change: data/selection/AE/testScenarios/canonical-selection-strategies/AddressType_BizHrs_ExceptionDates.prototxt
+    (+4/-4)'
+consequences:
+- package: AteamIntegrationTests
+  files:
+  - data/selection/EG/testScenarios/canonical-selection-strategies/AddressType_BizHrs_ExceptionDates.prototxt
+  description: 'Co-changed: data/selection/EG/testScenarios/canonical-selection-strategies/AddressType_BizHrs_ExceptionDates.prototxt
+    (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from AteamIntegrationTests commit 7b6104f6. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

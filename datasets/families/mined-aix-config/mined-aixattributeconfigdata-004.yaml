@@ -1,0 +1,43 @@
+id: mined-aixattributeconfigdata-004
+title: create a new source GLOBAL_STORE
+family: configuration-evolution
+date: '2026-01-08'
+author: Chirag Valecha
+source: git-mined
+source_repo: AIXAttributeConfigData
+source_commit: 29c50d93c2ef31455106caaedb7d290f5bd8b00d
+difficulty: medium
+trigger:
+  package: AIXAttributeConfigData
+  files:
+  - configuration/attribute-config-data/BUSINESS_HRS.json
+  intent: create a new source GLOBAL_STORE
+  diff_summary: 'Primary change: configuration/attribute-config-data/BUSINESS_HRS.json
+    (+113/-51)'
+consequences:
+- package: AIXAttributeConfigData
+  files:
+  - configuration/attribute-config-data/ADDRESS_TYPE.json
+  description: 'Co-changed: configuration/attribute-config-data/ADDRESS_TYPE.json
+    (+41/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AIXAttributeConfigData
+  files:
+  - configuration/attribute-config-data/EXCEPTION_DATES.json
+  description: 'Co-changed: configuration/attribute-config-data/EXCEPTION_DATES.json
+    (+53/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from AIXAttributeConfigData commit 29c50d93. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

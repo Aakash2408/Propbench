@@ -1,0 +1,80 @@
+id: mined-ateamintegrationtests-013
+title: Changes to add integration tests for MANUAL source propagation and selection
+  priority changes for AC
+family: test-evolution
+date: '2025-05-30'
+author: Siva Sai Kollakota
+source: git-mined
+source_repo: AteamIntegrationTests
+source_commit: 1294bef92ae3cca0f41850d37a878fb9dde054cd
+difficulty: medium
+trigger:
+  package: AteamIntegrationTests
+  files:
+  - data/selection/US/testScenarios/campusScenarios/ACCESS_CODES.prototxt
+  intent: Changes to add integration tests for MANUAL source propagation and selection
+    priority changes for ACCESS_CODES, ADDRESS_TYPE, GATECODE and BUSINESS_HRS attributes
+    for US region
+  diff_summary: 'Primary change: data/selection/US/testScenarios/campusScenarios/ACCESS_CODES.prototxt
+    (+53/-0)'
+consequences:
+- package: AteamIntegrationTests
+  files:
+  - Config
+  description: 'Co-changed: Config (+13/-6)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/propagated/US/testScenarios/AccessCodes.prototxt
+  description: 'Co-changed: data/propagated/US/testScenarios/AccessCodes.prototxt
+    (+47/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/propagated/US/testScenarios/AddressType.prototxt
+  description: 'Co-changed: data/propagated/US/testScenarios/AddressType.prototxt
+    (+47/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/propagated/US/testScenarios/GateCode.prototxt
+  description: 'Co-changed: data/propagated/US/testScenarios/GateCode.prototxt (+47/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/US/testScenarios/campusScenarios/ADDRESS_TYPE.prototxt
+  description: 'Co-changed: data/selection/US/testScenarios/campusScenarios/ADDRESS_TYPE.prototxt
+    (+53/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/US/testScenarios/campusScenarios/GATECODE.prototxt
+  description: 'Co-changed: data/selection/US/testScenarios/campusScenarios/GATECODE.prototxt
+    (+56/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 7
+notes: Auto-mined from AteamIntegrationTests commit 1294bef9. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

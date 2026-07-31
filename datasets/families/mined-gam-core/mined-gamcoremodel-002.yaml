@@ -1,0 +1,32 @@
+id: mined-gamcoremodel-002
+title: Revert "Migrate GAMCoreModel to JDK17 as v2.0 interface"
+family: configuration-evolution
+date: '2026-05-07'
+author: Qasim Bhatia
+source: git-mined
+source_repo: GAMCoreModel
+source_commit: 1aa0457de510311188ae5344d01d94d2e8dad8c7
+difficulty: easy
+trigger:
+  package: GAMCoreModel
+  files:
+  - build.xml
+  intent: Revert "Migrate GAMCoreModel to JDK17 as v2.0 interface"
+  diff_summary: 'Primary change: build.xml (+2/-3)'
+consequences:
+- package: GAMCoreModel
+  files:
+  - Config
+  description: 'Co-changed: Config (+9/-15)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from GAMCoreModel commit 1aa0457d. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

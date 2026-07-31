@@ -1,0 +1,32 @@
+id: mined-wellspringorchestratorcdk-009
+title: 'feat: Add defectGdlIdentifier prop and config for delivery defect'
+family: uncategorized
+date: '2026-06-08'
+author: Anirudh Sharma
+source: git-mined
+source_repo: WellspringOrchestratorCDK
+source_commit: 3e4209de285f73aa5bcf4f35c4b2a944afd564f0
+difficulty: easy
+trigger:
+  package: WellspringOrchestratorCDK
+  files:
+  - src/postContextStack.ts
+  intent: 'feat: Add defectGdlIdentifier prop and config for delivery defect'
+  diff_summary: 'Primary change: src/postContextStack.ts (+6/-2)'
+consequences:
+- package: WellspringOrchestratorCDK
+  files:
+  - src/deliveryEventTriggerStack.ts
+  description: 'Co-changed: src/deliveryEventTriggerStack.ts (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from WellspringOrchestratorCDK commit 3e4209de. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

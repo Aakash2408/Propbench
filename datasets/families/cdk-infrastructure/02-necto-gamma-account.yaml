@@ -1,0 +1,69 @@
+id: "cdk-infrastructure-02"
+title: "Add ARS Prod account to NectoChangesetProcessorCDK gamma clientAccounts"
+
+family: "cdk-infrastructure"
+date: "2025-12-15"
+author: "pavansag"
+cr_ids:
+  - "CR-234884386"
+
+trigger:
+  package: "NectoChangesetProcessorCDK"
+  version_set: "NectoChangesetProcessor/release"
+  files:
+    - "lib/config.ts"
+  intent: "Enable ARS Prod account (657876334136) to subscribe to NectoChangeset events in gamma"
+  diff_summary: |
+    Single line addition: added '657876334136' to the gamma stage's
+    clientAccounts array in config.ts.
+
+consequences: []
+  # This is a ZERO propagation case.
+  # Adding a client account to CDK config requires NO downstream changes.
+  # The subscriber (ARS) makes their own changes independently.
+
+expert_reasoning: |
+  This is the simplest possible CDK change — adding an account ID to an array.
+  
+  The expert knows:
+  1. clientAccounts is a CDK config that gets deployed as an SNS topic policy
+  2. The subscribing account (ARS) handles their own subscription creation
+  3. No code changes needed in NectoChangesetProcessor itself
+  4. No changes needed in the subscriber's packages (they do their own work)
+  
+  This is a TRUE ZERO propagation case. The engine should predict NOTHING.
+  Any prediction is a false positive.
+
+common_mistakes:
+  - "Thinking the subscriber needs a CR in this repo too (they handle their own subscription)"
+  - "Over-scoping: adding Lambda handler changes when only the policy needs updating"
+
+tags:
+  - "single-package"
+  - "single-file"
+  - "single-line"
+  - "zero-propagation"
+  - "infrastructure-grant"
+
+effort:
+  actual_hours: 1
+  mechanical_hours: 1
+  review_hours: 2
+  packages_touched: 1
+  crs_raised: 1
+
+notes: |
+  CRITICAL NEGATIVE CASE.
+  
+  The engine MUST predict nothing here. Any downstream prediction is wrong.
+  This tests whether the engine has proper "precision brakes" — knowing
+  when NOT to predict propagation.
+  
+  Compare with cdk-infrastructure-01 (SNS cross-account) which looks similar
+  (granting cross-account access) but DOES have consumer-side propagation.
+  The difference: in -01, WE are building both sides. In -02, the subscriber
+  (ARS team) handles their own changes independently.
+  
+  The engine needs to distinguish "I'm granting access to MY consumer" vs
+  "I'm granting access to ANOTHER team's consumer." That requires intent
+  understanding, not just structural analysis.

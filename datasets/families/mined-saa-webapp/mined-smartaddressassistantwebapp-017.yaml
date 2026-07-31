@@ -1,0 +1,60 @@
+id: mined-smartaddressassistantwebapp-017
+title: 'WIP: delivery history backend integration changes'
+family: test-evolution
+date: '2026-05-04'
+author: Aakash Sangwan
+source: git-mined
+source_repo: SmartAddressAssistantWebApp
+source_commit: 883551c959d66b41dd086d4e01ffb4086a5896fc
+difficulty: medium
+trigger:
+  package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/resource/DeliveryProfileViewModelBuilder.java
+  intent: 'WIP: delivery history backend integration changes'
+  diff_summary: 'Primary change: src/com/amazon/saa/webapp/resource/DeliveryProfileViewModelBuilder.java
+    (+14/-3)'
+consequences:
+- package: SmartAddressAssistantWebApp
+  files:
+  - Config
+  description: 'Co-changed: Config (+0/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/controller/core/PinOnMapPageController.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/controller/core/PinOnMapPageController.java
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/controller/core/apiController/addressWizard/DeliveryInstructionsViewController.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/controller/core/apiController/addressWizard/DeliveryInstructionsViewController.java
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/model/DeliveryProfileViewModel.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/model/DeliveryProfileViewModel.java
+    (+3/-10)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 5
+notes: Auto-mined from SmartAddressAssistantWebApp commit 883551c9. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

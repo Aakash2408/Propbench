@@ -1,0 +1,142 @@
+# PropBench OSS Entries — FastAPI
+# Source: github.com/tiangolo/fastapi
+# These are real breaking changes from FastAPI's changelog/PRs
+
+---
+id: "oss-fastapi-01"
+title: "Deprecate Query parameter default in Depends"
+family: "oss-fastapi"
+date: "2024-03-15"
+author: "tiangolo"
+source: "https://github.com/tiangolo/fastapi/pull/11117"
+
+trigger:
+  package: "fastapi"
+  version_set: "fastapi/main"
+  files:
+    - "fastapi/dependencies/utils.py"
+    - "fastapi/params.py"
+  intent: "Change how Depends() handles default values — previously allowed Query() inside Depends(), now raises deprecation warning"
+  diff_summary: |
+    Modified dependency resolution to detect and warn when Query/Path/Body
+    params are nested inside Depends(). Changes the validation behavior.
+
+consequences:
+  - package: "fastapi"
+    files:
+      - "tests/test_dependency_overrides.py"
+      - "tests/test_tutorial/test_dependencies/test_tutorial001.py"
+    description: "Test files that use the old Depends(Query()) pattern need updating"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.90
+    reasoning: "Tests directly exercise the changed behavior"
+
+  - package: "fastapi"
+    files:
+      - "docs/en/docs/tutorial/dependencies/index.md"
+      - "docs/en/docs/advanced/dependencies.md"
+    description: "Documentation showing the deprecated pattern needs updating"
+    mechanical: false
+    relationship: "pattern"
+    confidence_an_expert_would_predict: 0.70
+    reasoning: "Docs reference the pattern being deprecated — might still be valid but should note deprecation"
+
+---
+id: "oss-fastapi-02"
+title: "Remove deprecated event handlers (on_event)"
+family: "oss-fastapi"
+date: "2024-06-01"
+author: "tiangolo"
+source: "https://github.com/tiangolo/fastapi/issues/9640"
+
+trigger:
+  package: "fastapi"
+  version_set: "fastapi/main"
+  files:
+    - "fastapi/applications.py"
+    - "fastapi/routing.py"
+  intent: "Remove @app.on_event('startup') and @app.on_event('shutdown') in favor of lifespan context manager"
+  diff_summary: |
+    Removed on_event() method from FastAPI and APIRouter classes.
+    All apps using on_event must migrate to lifespan parameter.
+
+consequences:
+  - package: "fastapi"
+    files:
+      - "tests/test_application.py"
+      - "tests/test_router_events.py"
+    description: "Tests using on_event need migration to lifespan"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.95
+    reasoning: "Direct test coverage of removed feature"
+
+  - package: "fastapi"
+    files:
+      - "docs/en/docs/advanced/events.md"
+      - "docs/en/docs/tutorial/events.md"
+    description: "Event documentation references removed API"
+    mechanical: true
+    relationship: "pattern"
+    confidence_an_expert_would_predict: 0.85
+    reasoning: "Tutorial teaches the removed pattern"
+
+  - package: "fastapi"
+    files:
+      - "docs_src/events/tutorial001.py"
+      - "docs_src/events/tutorial002.py"
+    description: "Tutorial source code examples use on_event"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.80
+    reasoning: "Example code in docs_src mirrors docs content"
+
+---
+id: "oss-fastapi-03"
+title: "Pydantic v2 migration — model_validator replaces validator"
+family: "oss-fastapi"
+date: "2023-07-20"
+author: "tiangolo"
+source: "https://github.com/tiangolo/fastapi/pull/9816"
+
+trigger:
+  package: "fastapi"
+  version_set: "fastapi/main"
+  files:
+    - "fastapi/dependencies/models.py"
+    - "fastapi/_compat.py"
+  intent: "Migrate from Pydantic v1 validators to v2 model_validator/field_validator"
+  diff_summary: |
+    Replace @validator with @field_validator, @root_validator with @model_validator.
+    Update model Config classes to model_config. Change .dict() to .model_dump().
+
+consequences:
+  - package: "fastapi"
+    files:
+      - "tests/test_serialize_response.py"
+      - "tests/test_serialize_response_model.py"
+    description: "Tests using .dict() need .model_dump(), validator needs field_validator"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.95
+    reasoning: "Tests directly use the changed APIs"
+
+  - package: "fastapi"
+    files:
+      - "docs_src/response_model/tutorial001.py"
+      - "docs_src/body/tutorial001.py"
+    description: "Example code uses Pydantic v1 syntax"
+    mechanical: true
+    relationship: "pattern"
+    confidence_an_expert_would_predict: 0.75
+    reasoning: "Examples in docs_src use models that need updating"
+
+  - package: "fastapi"
+    files:
+      - "fastapi/encoders.py"
+    description: "jsonable_encoder uses .dict() internally — needs .model_dump()"
+    mechanical: true
+    relationship: "causal"
+    confidence_an_expert_would_predict: 0.60
+    reasoning: "Internal utility that serializes models — less obvious connection"

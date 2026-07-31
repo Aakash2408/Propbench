@@ -1,0 +1,52 @@
+id: mined-youraccountaddressbook-014
+title: Clean up weblab PAX_ARX_KYC_MASH_BACK_V2_UPDATED_1336693 for treatment T1
+family: uncategorized
+date: '2026-02-03'
+author: Divyanshu Singh Rathore
+source: git-mined
+source_repo: YourAccountAddressBook
+source_commit: 370280012db0d0e495508a61f5fc26ef1ec43607
+difficulty: medium
+trigger:
+  package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/features/addressbook/widgets/KycMashBackToWidget.scala
+  intent: Clean up weblab PAX_ARX_KYC_MASH_BACK_V2_UPDATED_1336693 for treatment T1
+  diff_summary: 'Primary change: src/com/amazon/identity/address/features/addressbook/widgets/KycMashBackToWidget.scala
+    (+2/-13)'
+consequences:
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/serviceaccessors/WebLabServiceAccessor.scala
+  description: 'Co-changed: src/com/amazon/identity/address/serviceaccessors/WebLabServiceAccessor.scala
+    (+0/-12)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/features/addressbook/widgets/KycMashBackToWidgetTest.scala
+  description: 'Co-changed: tst/com/amazon/identity/address/features/addressbook/widgets/KycMashBackToWidgetTest.scala
+    (+2/-18)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/features/serviceaccessors/WebLabServiceAccessorTest.scala
+  description: 'Co-changed: tst/com/amazon/identity/address/features/serviceaccessors/WebLabServiceAccessorTest.scala
+    (+1/-24)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 4
+notes: Auto-mined from YourAccountAddressBook commit 37028001. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

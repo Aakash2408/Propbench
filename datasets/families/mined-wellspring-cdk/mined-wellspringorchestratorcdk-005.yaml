@@ -1,0 +1,72 @@
+id: mined-wellspringorchestratorcdk-005
+title: 'feat(eval): Wire Necto Lambda, remove GDPS, enable all stages'
+family: configuration-evolution
+date: '2026-07-01'
+author: David Madsen
+source: git-mined
+source_repo: WellspringOrchestratorCDK
+source_commit: abe94d88f00a57065519bb95b5d3347ec1e5fafc
+difficulty: medium
+trigger:
+  package: WellspringOrchestratorCDK
+  files:
+  - src/evalPipelineStack.ts
+  intent: 'feat(eval): Wire Necto Lambda, remove GDPS, enable all stages'
+  diff_summary: 'Primary change: src/evalPipelineStack.ts (+16/-18)'
+consequences:
+- package: WellspringOrchestratorCDK
+  files:
+  - .kiro/specs/eval-dashboard/design.md
+  description: 'Co-changed: .kiro/specs/eval-dashboard/design.md (+124/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringOrchestratorCDK
+  files:
+  - .kiro/specs/eval-dashboard/requirements.md
+  description: 'Co-changed: .kiro/specs/eval-dashboard/requirements.md (+61/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringOrchestratorCDK
+  files:
+  - src/__tests__/evalPipelineStack.spec.ts
+  description: 'Co-changed: src/__tests__/evalPipelineStack.spec.ts (+0/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringOrchestratorCDK
+  files:
+  - src/app.ts
+  description: 'Co-changed: src/app.ts (+2/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringOrchestratorCDK
+  files:
+  - src/serviceStack.ts
+  description: 'Co-changed: src/serviceStack.ts (+29/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringOrchestratorCDK
+  files:
+  - src/stageConfig.ts
+  description: 'Co-changed: src/stageConfig.ts (+5/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 7
+notes: Auto-mined from WellspringOrchestratorCDK commit abe94d88. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

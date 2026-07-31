@@ -1,0 +1,64 @@
+id: mined-arx-opscdk-010
+title: Adding IAM roles needed for cloudwatch.
+family: infrastructure-evolution
+date: '2025-12-16'
+author: Abhishek Pandey
+source: git-mined
+source_repo: ARX-OpsCDK
+source_commit: f2c0cb625d088762fcb916cab9ce33c13e4f42ae
+difficulty: medium
+trigger:
+  package: ARX-OpsCDK
+  files:
+  - lib/stacks/cloudwatchLogsStack.ts
+  intent: Adding IAM roles needed for cloudwatch.
+  diff_summary: 'Primary change: lib/stacks/cloudwatchLogsStack.ts (+88/-0)'
+consequences:
+- package: ARX-OpsCDK
+  files:
+  - lib/config/pipelineStageConfigs.ts
+  description: 'Co-changed: lib/config/pipelineStageConfigs.ts (+37/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: ARX-OpsCDK
+  files:
+  - lib/constants/hostclasses.ts
+  description: 'Co-changed: lib/constants/hostclasses.ts (+32/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: ARX-OpsCDK
+  files:
+  - lib/constants/stackConstants.ts
+  description: 'Co-changed: lib/constants/stackConstants.ts (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: ARX-OpsCDK
+  files:
+  - lib/tests/cloudwatchLogsStack.test.ts
+  description: 'Co-changed: lib/tests/cloudwatchLogsStack.test.ts (+456/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: ARX-OpsCDK
+  files:
+  - lib/tests/pipeline.test.ts
+  description: 'Co-changed: lib/tests/pipeline.test.ts (+12/-6)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 6
+notes: Auto-mined from ARX-OpsCDK commit f2c0cb62. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

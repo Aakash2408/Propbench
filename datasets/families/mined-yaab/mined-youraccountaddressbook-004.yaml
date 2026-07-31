@@ -1,0 +1,42 @@
+id: mined-youraccountaddressbook-004
+title: 'chore(deps): Upgrade AaaTlsJavaSupport 1.1 and J2ee_servlet 4.x'
+family: dependency-evolution
+date: '2026-07-02'
+author: Ayan Goel
+source: git-mined
+source_repo: YourAccountAddressBook
+source_commit: 676c5193b764b418bffc7e45d423aa44496073b8
+difficulty: medium
+trigger:
+  package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/filters/RedirectToSSLFilter.scala
+  intent: 'chore(deps): Upgrade AaaTlsJavaSupport 1.1 and J2ee_servlet 4.x'
+  diff_summary: 'Primary change: src/com/amazon/identity/address/filters/RedirectToSSLFilter.scala
+    (+2/-2)'
+consequences:
+- package: YourAccountAddressBook
+  files:
+  - Config
+  description: 'Co-changed: Config (+3/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/filters/RedirectToSSLFilterTest.scala
+  description: 'Co-changed: tst/com/amazon/identity/address/filters/RedirectToSSLFilterTest.scala
+    (+11/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from YourAccountAddressBook commit 676c5193. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

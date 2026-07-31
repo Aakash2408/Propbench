@@ -1,0 +1,56 @@
+id: mined-aastypescoral-011
+title: Add Coral models for DestinationTypes
+family: configuration-evolution
+date: '2025-04-28'
+author: Gunasree Kunkulagunta
+source: git-mined
+source_repo: AASTypesCoral
+source_commit: 582421b6993f4dec90dc05e329bfd4374b8524e6
+difficulty: medium
+trigger:
+  package: AASTypesCoral
+  files:
+  - model/DestinationTypes.xsd.codigo.model.xml
+  intent: Add Coral models for DestinationTypes
+  diff_summary: 'Primary change: model/DestinationTypes.xsd.codigo.model.xml (+26/-1)'
+consequences:
+- package: AASTypesCoral
+  files:
+  - Config
+  description: 'Co-changed: Config (+4/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AASTypesCoral
+  files:
+  - model/AASDestinationInputTypes.xsd.codigo.model.xml
+  description: 'Co-changed: model/AASDestinationInputTypes.xsd.codigo.model.xml (+296/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AASTypesCoral
+  files:
+  - model/AASDestinationInputTypes.xsd.model.xml
+  description: 'Co-changed: model/AASDestinationInputTypes.xsd.model.xml (+285/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AASTypesCoral
+  files:
+  - model/DestinationTypes.xsd.model.xml
+  description: 'Co-changed: model/DestinationTypes.xsd.model.xml (+15/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 5
+notes: Auto-mined from AASTypesCoral commit 582421b6. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

@@ -1,0 +1,78 @@
+id: mined-aixattributeconfigdata-003
+title: 'feat: Add LMAQ_VERIFIED and LLM_DERIVED_V2 sources to attribute configs'
+family: configuration-evolution
+date: '2026-05-29'
+author: Utsav Misra
+source: git-mined
+source_repo: AIXAttributeConfigData
+source_commit: 4110f397c922ae6ffbae9fded21fca449635145d
+difficulty: medium
+trigger:
+  package: AIXAttributeConfigData
+  files:
+  - configuration/attribute-config-data/BUSINESS_HRS.json
+  intent: 'feat: Add LMAQ_VERIFIED and LLM_DERIVED_V2 sources to attribute configs'
+  diff_summary: 'Primary change: configuration/attribute-config-data/BUSINESS_HRS.json
+    (+541/-177)'
+consequences:
+- package: AIXAttributeConfigData
+  files:
+  - configuration/attribute-config-data/ACCESS_CODES.json
+  description: 'Co-changed: configuration/attribute-config-data/ACCESS_CODES.json
+    (+11/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AIXAttributeConfigData
+  files:
+  - configuration/attribute-config-data/ADDRESS_TYPE.json
+  description: 'Co-changed: configuration/attribute-config-data/ADDRESS_TYPE.json
+    (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AIXAttributeConfigData
+  files:
+  - configuration/attribute-config-data/DELIVERY_HINT.json
+  description: 'Co-changed: configuration/attribute-config-data/DELIVERY_HINT.json
+    (+29/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AIXAttributeConfigData
+  files:
+  - configuration/attribute-config-data/EXCEPTION_DATES.json
+  description: 'Co-changed: configuration/attribute-config-data/EXCEPTION_DATES.json
+    (+48/-19)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AIXAttributeConfigData
+  files:
+  - configuration/attribute-config-data/HAS_DOG.json
+  description: 'Co-changed: configuration/attribute-config-data/HAS_DOG.json (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AIXAttributeConfigData
+  files:
+  - configuration/attribute-config-data/PHYSICAL_KEY_ACCESS.json
+  description: 'Co-changed: configuration/attribute-config-data/PHYSICAL_KEY_ACCESS.json
+    (+31/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 7
+notes: Auto-mined from AIXAttributeConfigData commit 4110f397. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

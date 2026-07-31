@@ -1,0 +1,87 @@
+# PropBench OSS Entries — React
+# Source: github.com/facebook/react
+
+---
+id: "oss-react-01"
+title: "Remove legacy context API (contextTypes/getChildContext)"
+family: "oss-react"
+date: "2024-04-01"
+author: "react-team"
+source: "https://github.com/facebook/react/pull/28270"
+
+trigger:
+  package: "react"
+  version_set: "react/main"
+  files:
+    - "packages/react/src/ReactContext.js"
+    - "packages/react-reconciler/src/ReactFiberContext.js"
+  intent: "Remove legacy context API that was deprecated since React 16.3"
+  diff_summary: |
+    Remove contextTypes, childContextTypes, and getChildContext support.
+    All usages must migrate to React.createContext + useContext.
+
+consequences:
+  - package: "react"
+    files:
+      - "packages/react/src/__tests__/ReactContextValidator-test.js"
+      - "packages/react-dom/src/__tests__/ReactLegacyContext-test.js"
+    description: "Tests for legacy context behavior"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.95
+    reasoning: "Direct test files for removed feature"
+
+  - package: "react"
+    files:
+      - "packages/react-reconciler/src/ReactFiberBeginWork.js"
+    description: "Fiber reconciler has context propagation logic"
+    mechanical: true
+    relationship: "causal"
+    confidence_an_expert_would_predict: 0.70
+    reasoning: "Context propagation during reconciliation — architectural coupling"
+
+  - package: "react"
+    files:
+      - "packages/react-devtools-shared/src/backend/renderer.js"
+    description: "DevTools reads context for component inspection"
+    mechanical: false
+    relationship: "co-change"
+    confidence_an_expert_would_predict: 0.40
+    reasoning: "DevTools is a separate concern — easy to miss"
+    surprise: true
+
+---
+id: "oss-react-02"
+title: "Replace useEffect cleanup with useInsertionEffect for CSS-in-JS"
+family: "oss-react"
+date: "2024-01-15"
+author: "react-team"
+source: "https://react.dev/blog/2024/04/25/react-19"
+
+trigger:
+  package: "react"
+  version_set: "react/main"
+  files:
+    - "packages/react-dom/src/client/ReactDOMHostConfig.js"
+  intent: "Change style injection timing — useInsertionEffect fires before DOM mutations"
+  diff_summary: |
+    Style injection via useEffect now warns. Libraries must use useInsertionEffect.
+
+consequences:
+  - package: "react"
+    files:
+      - "packages/react-dom/src/__tests__/ReactDOMServerIntegration-test.js"
+    description: "SSR tests that verify style injection order"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.80
+    reasoning: "Tests validate the timing behavior"
+
+  - package: "react"
+    files:
+      - "packages/react/src/ReactHooks.js"
+    description: "Hook implementation needs ordering change"
+    mechanical: true
+    relationship: "causal"
+    confidence_an_expert_would_predict: 0.75
+    reasoning: "useInsertionEffect ordering relative to useEffect"

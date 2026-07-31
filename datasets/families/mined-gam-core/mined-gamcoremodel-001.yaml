@@ -1,0 +1,34 @@
+id: mined-gamcoremodel-001
+title: Add ARS_RESOLVED producer to address source schema and mapping
+family: interface-evolution
+date: '2026-06-01'
+author: Spoorthi Vadlakonda
+source: git-mined
+source_repo: GAMCoreModel
+source_commit: ac51c10bc99de9ac640cc9f65c848d5718671838
+difficulty: easy
+trigger:
+  package: GAMCoreModel
+  files:
+  - configuration/proto-data/addressSource/AddressSourceMapping.prototxt
+  intent: Add ARS_RESOLVED producer to address source schema and mapping
+  diff_summary: 'Primary change: configuration/proto-data/addressSource/AddressSourceMapping.prototxt
+    (+5/-1)'
+consequences:
+- package: GAMCoreModel
+  files:
+  - configuration/proto-schema/addressSource/AddressSourceName.proto
+  description: 'Co-changed: configuration/proto-schema/addressSource/AddressSourceName.proto
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from GAMCoreModel commit ac51c10b. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

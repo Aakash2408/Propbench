@@ -1,0 +1,79 @@
+id: mined-youraccountaddressbook-002
+title: 'chore: Remove dead code from the Codebase'
+family: refactor
+date: '2026-07-10'
+author: Aashi Bhatia
+source: git-mined
+source_repo: YourAccountAddressBook
+source_commit: fc41f0619f50861894e64fcf99abc948629de254
+difficulty: medium
+trigger:
+  package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/utils/constants/StringID.scala
+  intent: 'chore: Remove dead code from the Codebase'
+  diff_summary: 'Primary change: src/com/amazon/identity/address/utils/constants/StringID.scala
+    (+5/-6)'
+consequences:
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/features/addressbook/AddressBookFeatureProvider.scala
+  description: 'Co-changed: src/com/amazon/identity/address/features/addressbook/AddressBookFeatureProvider.scala
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/utils/constants/Counters.scala
+  description: 'Co-changed: src/com/amazon/identity/address/utils/constants/Counters.scala
+    (+0/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/utils/constants/MavObjects.scala
+  description: 'Co-changed: src/com/amazon/identity/address/utils/constants/MavObjects.scala
+    (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/utils/constants/RefTags.scala
+  description: 'Co-changed: src/com/amazon/identity/address/utils/constants/RefTags.scala
+    (+1/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/utils/constants/RequestMappings.scala
+  description: 'Co-changed: src/com/amazon/identity/address/utils/constants/RequestMappings.scala
+    (+0/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/utils/constants/StringConstants.scala
+  description: 'Co-changed: src/com/amazon/identity/address/utils/constants/StringConstants.scala
+    (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 7
+notes: Auto-mined from YourAccountAddressBook commit fc41f061. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

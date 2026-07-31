@@ -1,0 +1,34 @@
+id: mined-repeatdefectsmanagementservicetests-001
+title: added integration test for DefectEventProcessorLambda UPDATE path via SQS
+family: test-evolution
+date: '2026-07-16'
+author: Aakash Sangwan
+source: git-mined
+source_repo: RepeatDefectsManagementServiceTests
+source_commit: 89d0e48e10d5ccf6eb3d8df4d778416de11f7414
+difficulty: easy
+trigger:
+  package: RepeatDefectsManagementServiceTests
+  files:
+  - src/main/java/com/amazon/repeatdefectsmanagementservice/DefectEventProcessorLambdaTest.java
+  intent: added integration test for DefectEventProcessorLambda UPDATE path via SQS
+  diff_summary: 'Primary change: src/main/java/com/amazon/repeatdefectsmanagementservice/DefectEventProcessorLambdaTest.java
+    (+217/-0)'
+consequences:
+- package: RepeatDefectsManagementServiceTests
+  files:
+  - Config
+  description: 'Co-changed: Config (+1/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from RepeatDefectsManagementServiceTests commit 89d0e48e. Trigger
+  heuristic may be wrong. Needs human review to confirm trigger/consequence split
+  and add expert_reasoning.

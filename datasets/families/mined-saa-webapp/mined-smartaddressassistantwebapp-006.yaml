@@ -1,0 +1,34 @@
+id: mined-smartaddressassistantwebapp-006
+title: '[OE] Fix merge from live failure due to DestinationListingInterface'
+family: bugfix
+date: '2026-05-25'
+author: Qasim Bhatia
+source: git-mined
+source_repo: SmartAddressAssistantWebApp
+source_commit: e7e9448bb41311450438afc3eb33fb83576c95f4
+difficulty: easy
+trigger:
+  package: SmartAddressAssistantWebApp
+  files:
+  - tst/com/amazon/saa/webapp/accessor/DestinationListingServiceAccessorTest.java
+  intent: '[OE] Fix merge from live failure due to DestinationListingInterface'
+  diff_summary: 'Primary change: tst/com/amazon/saa/webapp/accessor/DestinationListingServiceAccessorTest.java
+    (+0/-1)'
+consequences:
+- package: SmartAddressAssistantWebApp
+  files:
+  - tst/com/amazon/saa/webapp/dao/implementation/AddressInterceptDAOImplTest.java
+  description: 'Co-changed: tst/com/amazon/saa/webapp/dao/implementation/AddressInterceptDAOImplTest.java
+    (+0/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from SmartAddressAssistantWebApp commit e7e9448b. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

@@ -1,0 +1,63 @@
+id: mined-geostudiodeliveryhistorylambda-001
+title: 'Fix concession item count validation: use Container-Item quantity from TCDS
+  and concededItems quanti'
+family: bugfix
+date: '2026-05-22'
+author: Aakash Sangwan
+source: git-mined
+source_repo: GeoStudioDeliveryHistoryLambda
+source_commit: 5f60a80ef929c26cc741b67d6d9a57652c07733d
+difficulty: medium
+trigger:
+  package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/helper/concession/enricher/ConcessionEventEnricher.java
+  intent: 'Fix concession item count validation: use Container-Item quantity from
+    TCDS and concededItems quantity from ConcessionService'
+  diff_summary: 'Primary change: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/helper/concession/enricher/ConcessionEventEnricher.java
+    (+91/-40)'
+consequences:
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/extractor/TCDSExtractor.java
+  description: 'Co-changed: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/extractor/TCDSExtractor.java
+    (+34/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/model/concession/TCDSResolutionResult.java
+  description: 'Co-changed: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/model/concession/TCDSResolutionResult.java
+    (+14/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/java/com/amazon/geostudiodeliveryhistory/lambda/extractor/TCDSExtractorTest.java
+  description: 'Co-changed: src/test/java/com/amazon/geostudiodeliveryhistory/lambda/extractor/TCDSExtractorTest.java
+    (+71/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/java/com/amazon/geostudiodeliveryhistory/lambda/helper/concession/enricher/ConcessionEventEnricherTest.java
+  description: 'Co-changed: src/test/java/com/amazon/geostudiodeliveryhistory/lambda/helper/concession/enricher/ConcessionEventEnricherTest.java
+    (+214/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 5
+notes: Auto-mined from GeoStudioDeliveryHistoryLambda commit 5f60a80e. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

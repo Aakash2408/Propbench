@@ -1,0 +1,32 @@
+id: mined-gamcoremodel-003
+title: Migrate GAMCoreModel to JDK17 as v2.0 interface
+family: configuration-evolution
+date: '2026-04-29'
+author: Spoorthi Vadlakonda
+source: git-mined
+source_repo: GAMCoreModel
+source_commit: a872f16e076f2279234c2aad280a1c5919ce2d96
+difficulty: easy
+trigger:
+  package: GAMCoreModel
+  files:
+  - build.xml
+  intent: Migrate GAMCoreModel to JDK17 as v2.0 interface
+  diff_summary: 'Primary change: build.xml (+3/-2)'
+consequences:
+- package: GAMCoreModel
+  files:
+  - Config
+  description: 'Co-changed: Config (+15/-9)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from GAMCoreModel commit a872f16e. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

@@ -1,0 +1,96 @@
+id: mined-smartaddressassistantwebapp-020
+title: '[CDPRevamp] Add Rekognition content moderation gate — Phase 1.5'
+family: configuration-evolution
+date: '2026-04-22'
+author: Qasim Bhatia
+source: git-mined
+source_repo: SmartAddressAssistantWebApp
+source_commit: c7705d264c91898ae7e55f6dc39025b9b05859fb
+difficulty: medium
+trigger:
+  package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/resource/ContentModerationResource.java
+  intent: '[CDPRevamp] Add Rekognition content moderation gate — Phase 1.5'
+  diff_summary: 'Primary change: src/com/amazon/saa/webapp/resource/ContentModerationResource.java
+    (+234/-0)'
+consequences:
+- package: SmartAddressAssistantWebApp
+  files:
+  - Config
+  description: 'Co-changed: Config (+3/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - configuration/brazil-config/global/RekognitionConfig.cfg
+  description: 'Co-changed: configuration/brazil-config/global/RekognitionConfig.cfg
+    (+28/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/config/RekognitionConfig.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/config/RekognitionConfig.java
+    (+55/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/config/utils/ContentModerationConstants.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/config/utils/ContentModerationConstants.java
+    (+88/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/controller/core/apiController/deliveryProfile/DeliveryPhotoUploadController.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/controller/core/apiController/deliveryProfile/DeliveryPhotoUploadController.java
+    (+19/-11)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/exception/ContentModerationUnavailableException.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/exception/ContentModerationUnavailableException.java
+    (+18/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - tst/com/amazon/saa/webapp/controller/core/apiController/deliveryProfile/DeliveryPhotoUploadControllerTest.java
+  description: 'Co-changed: tst/com/amazon/saa/webapp/controller/core/apiController/deliveryProfile/DeliveryPhotoUploadControllerTest.java
+    (+66/-19)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - tst/com/amazon/saa/webapp/resource/ContentModerationResourceTest.java
+  description: 'Co-changed: tst/com/amazon/saa/webapp/resource/ContentModerationResourceTest.java
+    (+470/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 9
+notes: Auto-mined from SmartAddressAssistantWebApp commit c7705d26. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

@@ -1,0 +1,34 @@
+id: mined-youraccountaddressbook-025
+title: Fixing permission error for datapathQueryRequest
+family: bugfix
+date: '2025-10-30'
+author: Kanchan Hingorani
+source: git-mined
+source_repo: YourAccountAddressBook
+source_commit: 865fbd56757290fcd5b7a4b8a791074f19154cdf
+difficulty: easy
+trigger:
+  package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/serviceaccessors/DatapathServiceAccessor.scala
+  intent: Fixing permission error for datapathQueryRequest
+  diff_summary: 'Primary change: src/com/amazon/identity/address/serviceaccessors/DatapathServiceAccessor.scala
+    (+18/-5)'
+consequences:
+- package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/serviceaccessors/DatapathServiceAccessorTests.scala
+  description: 'Co-changed: tst/com/amazon/identity/address/serviceaccessors/DatapathServiceAccessorTests.scala
+    (+9/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from YourAccountAddressBook commit 865fbd56. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

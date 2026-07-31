@@ -1,0 +1,79 @@
+id: "aas-onboarding-01"
+title: "Onboard WELLSPRING source for address attributes"
+
+family: "aas-onboarding"
+date: "2025-09-15"
+author: "team"  # historical, exact author unknown
+cr_ids: []
+
+trigger:
+  package: "AIXAttributeConfigData"
+  version_set: "AddressAuthorityServiceNext/release"
+  files:
+    - "configuration/attributes/DELIVERY_HINT.json"
+    - "configuration/attributes/SAFE_PLACE.json"
+  intent: "Onboard WELLSPRING as a new attribute source for multiple attributes including DELIVERY_HINT and SAFE_PLACE"
+  diff_summary: |
+    Added WELLSPRING to selectionConfig, strategyConfigEntry, and
+    propagationConfig sections across multiple attribute JSON files.
+    Pattern: add source at BUILDING level with propagation down to UNIT.
+
+consequences:
+  - package: "GAMCoreModel"
+    version_set: "AddressAuthorityServiceNext/release"
+    files:
+      - "configuration/SourceConfiguration.prototxt"
+    description: "Register WELLSPRING and PROPAGATED.BUILDING.WELLSPRING sources in proto config"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.98
+    reasoning: "SourceConfiguration.prototxt is the runtime registry. Every new source must be registered here or it silently fails."
+
+  - package: "AteamIntegrationTests"
+    version_set: "ATEAMIntegTest/release"
+    files:
+      - "tst/com/amazon/aas/integration/WellspringSourceTest.java"
+    description: "Integration test validating WELLSPRING source resolution end-to-end"
+    mechanical: false
+    relationship: "co-change"
+    confidence_an_expert_would_predict: 0.85
+    reasoning: "Standard practice: every source onboarding gets an integ test. Different VS requires separate CR."
+
+  - package: "AASTypesCoral"
+    version_set: "AASTypesCoral/release"
+    files: []
+    description: "Coral type sync — followed months later"
+    mechanical: true
+    relationship: "co-change"
+    optional: true
+    lag: "3-6 months"
+    confidence_an_expert_would_predict: 0.40
+    reasoning: "Coral sync is decoupled and arrives much later. Not part of initial onboarding scope."
+
+expert_reasoning: |
+  This was the FIRST time the AAS source onboarding pattern was established
+  for building-level sources. It set the template that GLOBAL_STORE and
+  LLM_DERIVED_V2 followed exactly.
+  
+  Key insight: the 3-package pattern (AIXAttributeConfigData + GAMCoreModel +
+  AteamIntegrationTests) became the canonical onboarding playbook after this.
+  Any future source onboarding MUST touch all three.
+
+common_mistakes:
+  - "Not registering in SourceConfiguration.prototxt — source deploys but silently never activates"
+  - "Putting integ test in same CR — different version set, won't build"
+  - "Missing the propagation entries (only adding selection without propagation)"
+
+tags:
+  - "multi-package"
+  - "config-driven"
+  - "pattern-establishing"
+  - "cross-version-set"
+  - "silent-failure-if-missed"
+
+effort:
+  actual_hours: 24
+  mechanical_hours: 8
+  review_hours: 12
+  packages_touched: 3
+  crs_raised: 2

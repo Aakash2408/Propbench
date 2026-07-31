@@ -1,0 +1,54 @@
+id: mined-smartaddressassistantwebapp-029
+title: '[CDPRevamp] Wire DeliveryProfileViewProvider through existing infrastructure
+  stack'
+family: uncategorized
+date: '2026-04-09'
+author: Aakash Sangwan
+source: git-mined
+source_repo: SmartAddressAssistantWebApp
+source_commit: 55de9b0d5729bbc17036cb46ca62185a46d8d3f8
+difficulty: medium
+trigger:
+  package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/provider/DeliveryProfileViewProvider.java
+  intent: '[CDPRevamp] Wire DeliveryProfileViewProvider through existing infrastructure
+    stack'
+  diff_summary: 'Primary change: src/com/amazon/saa/webapp/provider/DeliveryProfileViewProvider.java
+    (+62/-0)'
+consequences:
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/controller/core/DeliveryProfileBaseController.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/controller/core/DeliveryProfileBaseController.java
+    (+24/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - tst/com/amazon/saa/webapp/controller/core/DeliveryProfileBaseControllerTest.java
+  description: 'Co-changed: tst/com/amazon/saa/webapp/controller/core/DeliveryProfileBaseControllerTest.java
+    (+37/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - tst/com/amazon/saa/webapp/provider/DeliveryProfileViewProviderTest.java
+  description: 'Co-changed: tst/com/amazon/saa/webapp/provider/DeliveryProfileViewProviderTest.java
+    (+109/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 4
+notes: Auto-mined from SmartAddressAssistantWebApp commit 55de9b0d. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

@@ -1,0 +1,133 @@
+id: mined-addressuiwidgetsservice-011
+title: 'feat(pin-on-maps): forward geocode confidence to CAIMS (weblab-gated)'
+family: uncategorized
+date: '2026-07-05'
+author: nsalk
+source: git-mined
+source_repo: AddressUIWidgetsService
+source_commit: 6999ec2a5efa8363f6d6f88f240bb0f460176a14
+difficulty: hard
+trigger:
+  package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/serviceAccessors/AddressDetailsAccessorTests.scala
+  intent: 'feat(pin-on-maps): forward geocode confidence to CAIMS (weblab-gated)'
+  diff_summary: 'Primary change: tst/com/amazon/addressuiwidgetsservice/serviceAccessors/AddressDetailsAccessorTests.scala
+    (+108/-1)'
+consequences:
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/constants/AddressFieldIds.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/constants/AddressFieldIds.scala
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/models/AddressDetailsHttpContextModel.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/models/AddressDetailsHttpContextModel.scala
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/models/AddressFormOptionsModel.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/models/AddressFormOptionsModel.scala
+    (+4/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/serviceAccessors/AddressDetailsAccessor.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/serviceAccessors/AddressDetailsAccessor.scala
+    (+27/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessor.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessor.scala
+    (+19/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/widgets/EnterAddress/AddressFormViewGenerator.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/widgets/EnterAddress/AddressFormViewGenerator.scala
+    (+4/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/widgets/PinOnMaps/PinOnMapsServiceMobileView.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/widgets/PinOnMaps/PinOnMapsServiceMobileView.scala
+    (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/widgets/PinOnMaps/PinOnMapsViewGenerator.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/widgets/PinOnMaps/PinOnMapsViewGenerator.scala
+    (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessorTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessorTests.scala
+    (+28/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/widgets/EnterAddress/AddressFormViewGeneratorTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/widgets/EnterAddress/AddressFormViewGeneratorTests.scala
+    (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/widgets/PinOnMaps/PinOnMapsServiceMobileViewTest.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/widgets/PinOnMaps/PinOnMapsServiceMobileViewTest.scala
+    (+27/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/widgets/PinOnMaps/PinOnMapsViewGeneratorTest.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/widgets/PinOnMaps/PinOnMapsViewGeneratorTest.scala
+    (+40/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 13
+notes: Auto-mined from AddressUIWidgetsService commit 6999ec2a. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

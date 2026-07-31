@@ -1,0 +1,124 @@
+id: mined-addressuiwidgetsservice-007
+title: Add LocationAndPersonalInfoSummary component for dynamic address form
+family: configuration-evolution
+date: '2026-06-22'
+author: Batool AbuRumman
+source: git-mined
+source_repo: AddressUIWidgetsService
+source_commit: 22afeeb09180799382b5903e41b3bfdb3dd73c26
+difficulty: hard
+trigger:
+  package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/views/address/LocationAndPersonalInfoSummaryView.scala
+  intent: Add LocationAndPersonalInfoSummary component for dynamic address form
+  diff_summary: 'Primary change: src/com/amazon/addressuiwidgetsservice/views/address/LocationAndPersonalInfoSummaryView.scala
+    (+140/-0)'
+consequences:
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/constants/AddressFieldIds.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/constants/AddressFieldIds.scala
+    (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/constants/Assets.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/constants/Assets.scala
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/constants/Strings.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/constants/Strings.scala
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/views/address/forms/AddressFormView.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/views/address/forms/AddressFormView.scala
+    (+10/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/widgets/AddressFormFields/LocationAndPersonalInfoSummaryFormField.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/widgets/AddressFormFields/LocationAndPersonalInfoSummaryFormField.scala
+    (+37/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/widgets/PinOnMaps/SinglePageMapAndAddressForm.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/widgets/PinOnMaps/SinglePageMapAndAddressForm.scala
+    (+15/-9)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/widgets/mapper/AddressFormFieldConfigMapper.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/widgets/mapper/AddressFormFieldConfigMapper.scala
+    (+18/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/views/address/LocationAndPersonalInfoSummaryViewTest.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/views/address/LocationAndPersonalInfoSummaryViewTest.scala
+    (+144/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/widgets/AddressFormFields/LocationAndPersonalInfoSummaryFormFieldTest.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/widgets/AddressFormFields/LocationAndPersonalInfoSummaryFormFieldTest.scala
+    (+107/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/widgets/PinOnMaps/SinglePageMapAndAddressFormTest.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/widgets/PinOnMaps/SinglePageMapAndAddressFormTest.scala
+    (+96/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/widgets/mapper/AddressFormFieldConfigMapperTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/widgets/mapper/AddressFormFieldConfigMapperTests.scala
+    (+46/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 12
+notes: Auto-mined from AddressUIWidgetsService commit 22afeeb0. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

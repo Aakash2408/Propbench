@@ -1,0 +1,90 @@
+id: mined-smartaddressassistantwebapp-021
+title: '[CDPRevamp] Migrate mobile business hours, delivery hours, and exception dates
+  JSPs to ViewModel pat'
+family: uncategorized
+date: '2026-04-21'
+author: Shivam Singla
+source: git-mined
+source_repo: SmartAddressAssistantWebApp
+source_commit: 686a85816ff433d9e3c7c9cc4d74f02e1f4bfe08
+difficulty: medium
+trigger:
+  package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/deliveryHoursGroupExpanderRefactored.jsp
+  intent: '[CDPRevamp] Migrate mobile business hours, delivery hours, and exception
+    dates JSPs to ViewModel pattern (Proposal E - dead code)'
+  diff_summary: 'Primary change: webapp/WEB-INF/views/cdp/mobile/deliveryHoursGroupExpanderRefactored.jsp
+    (+82/-0)'
+consequences:
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/businessHours/businessHoursCustomFormExpanderRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/businessHours/businessHoursCustomFormExpanderRefactored.jsp
+    (+18/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/businessHours/businessHoursCustomFormRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/businessHours/businessHoursCustomFormRefactored.jsp
+    (+64/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/businessHours/businessHoursDefaultFormExpanderRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/businessHours/businessHoursDefaultFormExpanderRefactored.jsp
+    (+11/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/businessHours/businessHoursDefaultFormRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/businessHours/businessHoursDefaultFormRefactored.jsp
+    (+78/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/businessHours/businessHoursExpanderHeadingRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/businessHours/businessHoursExpanderHeadingRefactored.jsp
+    (+19/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/deliveryHoursFormRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/deliveryHoursFormRefactored.jsp
+    (+48/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/exceptionDatesFormRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/exceptionDatesFormRefactored.jsp
+    (+77/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 8
+notes: Auto-mined from SmartAddressAssistantWebApp commit 686a8581. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

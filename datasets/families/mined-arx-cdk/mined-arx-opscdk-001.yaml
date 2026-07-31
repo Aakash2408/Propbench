@@ -1,0 +1,40 @@
+id: mined-arx-opscdk-001
+title: add rollback alarms
+family: configuration-evolution
+date: '2026-07-07'
+author: Suraj Dhankad
+source: git-mined
+source_repo: ARX-OpsCDK
+source_commit: ea5f08ebccc93b0870203f56c1a203382fe7248f
+difficulty: medium
+trigger:
+  package: ARX-OpsCDK
+  files:
+  - lib/constants/appConfigConstants.ts
+  intent: add rollback alarms
+  diff_summary: 'Primary change: lib/constants/appConfigConstants.ts (+14/-0)'
+consequences:
+- package: ARX-OpsCDK
+  files:
+  - lib/stacks/awsAppConfigStack.ts
+  description: 'Co-changed: lib/stacks/awsAppConfigStack.ts (+6/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: ARX-OpsCDK
+  files:
+  - lib/tests/awsAppConfigStack.test.ts
+  description: 'Co-changed: lib/tests/awsAppConfigStack.test.ts (+12/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from ARX-OpsCDK commit ea5f08eb. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

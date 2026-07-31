@@ -1,0 +1,45 @@
+id: mined-aixattributeconfigdata-001
+title: 'feat: Add AIX pipeline configs for NO_PHOTO_ON_DELIVERY, DRIVEWAY_ACCESS,
+  CUSTOMER_MOBILITY_ISSUES'
+family: configuration-evolution
+date: '2026-06-09'
+author: Aakash Sangwan
+source: git-mined
+source_repo: AIXAttributeConfigData
+source_commit: e9caf283f3602ecb5ffb0b34db5ee6c3567577f5
+difficulty: medium
+trigger:
+  package: AIXAttributeConfigData
+  files:
+  - configuration/attribute-config-data/CUSTOMER_MOBILITY_ISSUES.json
+  intent: 'feat: Add AIX pipeline configs for NO_PHOTO_ON_DELIVERY, DRIVEWAY_ACCESS,
+    CUSTOMER_MOBILITY_ISSUES'
+  diff_summary: 'Primary change: configuration/attribute-config-data/CUSTOMER_MOBILITY_ISSUES.json
+    (+45/-0)'
+consequences:
+- package: AIXAttributeConfigData
+  files:
+  - configuration/attribute-config-data/DRIVEWAY_ACCESS.json
+  description: 'Co-changed: configuration/attribute-config-data/DRIVEWAY_ACCESS.json
+    (+46/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AIXAttributeConfigData
+  files:
+  - configuration/attribute-config-data/NO_PHOTO_ON_DELIVERY.json
+  description: 'Co-changed: configuration/attribute-config-data/NO_PHOTO_ON_DELIVERY.json
+    (+45/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from AIXAttributeConfigData commit e9caf283. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

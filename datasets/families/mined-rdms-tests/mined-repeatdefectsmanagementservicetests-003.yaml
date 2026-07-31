@@ -1,0 +1,35 @@
+id: mined-repeatdefectsmanagementservicetests-003
+title: Onboarding to appweaver
+family: configuration-evolution
+date: '2025-09-03'
+author: Shaishav Maisuria
+source: git-mined
+source_repo: RepeatDefectsManagementServiceTests
+source_commit: d70a5fd10758e98f71a52377eb1357cdb6f8169a
+difficulty: easy
+trigger:
+  package: RepeatDefectsManagementServiceTests
+  files:
+  - .appweaver/metadata/Units_RepeatDefectsManagementServiceTests.json
+  intent: Onboarding to appweaver
+  diff_summary: 'Primary change: .appweaver/metadata/Units_RepeatDefectsManagementServiceTests.json
+    (+136/-0)'
+consequences:
+- package: RepeatDefectsManagementServiceTests
+  files:
+  - .appweaver/metadata/BrazilPackage_RepeatDefectsManagementServiceTests.json
+  description: 'Co-changed: .appweaver/metadata/BrazilPackage_RepeatDefectsManagementServiceTests.json
+    (+117/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from RepeatDefectsManagementServiceTests commit d70a5fd1. Trigger
+  heuristic may be wrong. Needs human review to confirm trigger/consequence split
+  and add expert_reasoning.

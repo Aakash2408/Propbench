@@ -1,0 +1,40 @@
+id: mined-wellspringorchestratorcdk-003
+title: 'feat: Building Summary trigger CDK stack (Signal 1 infra)'
+family: infrastructure-evolution
+date: '2026-07-13'
+author: Aakash Sangwan
+source: git-mined
+source_repo: WellspringOrchestratorCDK
+source_commit: f0af7a239f11ed39b1332f1b97d0090a2218fed5
+difficulty: medium
+trigger:
+  package: WellspringOrchestratorCDK
+  files:
+  - src/buildingSummaryTriggerStack.ts
+  intent: 'feat: Building Summary trigger CDK stack (Signal 1 infra)'
+  diff_summary: 'Primary change: src/buildingSummaryTriggerStack.ts (+140/-0)'
+consequences:
+- package: WellspringOrchestratorCDK
+  files:
+  - src/app.ts
+  description: 'Co-changed: src/app.ts (+17/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringOrchestratorCDK
+  files:
+  - src/stageConfig.ts
+  description: 'Co-changed: src/stageConfig.ts (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from WellspringOrchestratorCDK commit f0af7a23. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

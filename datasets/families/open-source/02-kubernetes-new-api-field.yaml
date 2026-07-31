@@ -1,0 +1,153 @@
+id: "oss-kubernetes-01"
+title: "Add new field 'minReadySeconds' to StatefulSet API"
+
+family: "interface-evolution"
+date: "2021-08-01"
+author: "kubernetes-contributor"
+source: "kubernetes/kubernetes"
+source_url: "https://github.com/kubernetes/kubernetes/pull/101316"
+
+# Based on the known Kubernetes API evolution pattern.
+# Adding a field to a core API type follows a rigid, well-documented process.
+
+trigger:
+  package: "kubernetes/kubernetes"
+  version_set: null
+  files:
+    - "staging/src/k8s.io/api/apps/v1/types.go"
+  intent: "Add 'MinReadySeconds' field to StatefulSetSpec to support minimum ready time before marking pod as available"
+  diff_summary: |
+    In types.go (the Go struct definition for StatefulSetSpec):
+    - Added field: MinReadySeconds int32
+    - Added json tag: `json:"minReadySeconds,omitempty"`
+    - Added protobuf tag
+
+consequences:
+  - package: "kubernetes/kubernetes"
+    files:
+      - "staging/src/k8s.io/api/apps/v1/generated.proto"
+    description: "Protobuf definition must include the new field"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.98
+    reasoning: "K8s API types always have a mirrored .proto. Generated from the Go types. Must be regenerated."
+
+  - package: "kubernetes/kubernetes"
+    files:
+      - "staging/src/k8s.io/api/apps/v1/zz_generated.deepcopy.go"
+    description: "DeepCopy generated code must include the new field"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.95
+    reasoning: "All K8s types with new fields need regenerated deepcopy. `make generate` does this."
+
+  - package: "kubernetes/kubernetes"
+    files:
+      - "pkg/apis/apps/validation/validation.go"
+    description: "Validation logic for the new field (e.g., must be >= 0)"
+    mechanical: false
+    relationship: "co-change"
+    confidence_an_expert_would_predict: 0.90
+    reasoning: "Every new API field needs validation. K8s has a dedicated validation package."
+
+  - package: "kubernetes/kubernetes"
+    files:
+      - "pkg/apis/apps/validation/validation_test.go"
+    description: "Test cases for the validation of the new field"
+    mechanical: true
+    relationship: "co-change"
+    confidence_an_expert_would_predict: 0.88
+    reasoning: "Validation tests are required. Mirrors validation.go 1:1."
+
+  - package: "kubernetes/kubernetes"
+    files:
+      - "pkg/controller/statefulset/stateful_set_control.go"
+    description: "Controller logic must respect MinReadySeconds when evaluating pod readiness"
+    mechanical: false
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.75
+    reasoning: "The controller is WHERE the field takes effect at runtime. Requires understanding what the field DOES, not just that it exists."
+
+  - package: "kubernetes/kubernetes"
+    files:
+      - "test/e2e/apps/statefulset.go"
+    description: "E2E test for the new field behavior"
+    mechanical: false
+    relationship: "co-change"
+    confidence_an_expert_would_predict: 0.70
+    reasoning: "E2E tests expected for new API features. Location follows naming convention."
+
+  - package: "kubernetes/kubernetes"
+    files:
+      - "api/openapi-spec/swagger.json"
+    description: "OpenAPI spec regenerated to include new field"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.85
+    reasoning: "Generated file. `make update` regenerates. Experienced contributors know this."
+
+expert_reasoning: |
+  Kubernetes API evolution is one of the most rigidly structured processes
+  in open source. Adding a field to a core API type touches:
+  
+  1. types.go (trigger) — the Go struct
+  2. generated.proto — protobuf mirror (generated)
+  3. zz_generated.deepcopy.go — deep copy (generated)
+  4. validation.go — input validation
+  5. validation_test.go — validation tests
+  6. Controller code — where the field takes effect
+  7. E2E tests — behavior tests
+  8. swagger.json — OpenAPI spec (generated)
+  
+  An experienced K8s contributor knows ALL of these from the trigger alone.
+  The first 3 are STRUCTURAL (generated from types.go).
+  The rest are ORGANIZATIONAL MEMORY (documented in KEP process, contribution guide).
+  
+  KEY INSIGHT: Even in an extremely well-structured open-source project,
+  the propagation pattern is nearly identical to Amazon's:
+  - Some consequences are structurally derivable (generated files)
+  - Some require organizational knowledge (validation package, e2e location)
+  - Some require understanding INTENT (controller logic = what does the field DO?)
+
+common_mistakes:
+  - "Forgetting to run make generate (leaves generated files stale)"
+  - "Not adding feature gate (new fields usually require a gate in alpha)"
+  - "Missing the conversion functions (v1 ↔ internal type)"
+  - "Not considering the statefulset controller impact"
+
+tags:
+  - "open-source"
+  - "kubernetes"
+  - "interface-evolution"
+  - "generated-artifacts"
+  - "multi-layer-propagation"
+
+generalization_notes: |
+  PATTERN ORACLE: Would STRONGLY fire if we had a "K8s API field addition" playbook.
+  The pattern is as rigid as AAS onboarding — perhaps MORE so.
+  
+  STRUCTURE ORACLE: Would catch 3/7 consequences:
+  - generated.proto (naming convention: types.go → generated.proto)
+  - zz_generated.deepcopy.go (naming convention: zz_generated*)
+  - swagger.json (known generated file)
+  Would MISS 4/7:
+  - validation.go (different directory, no import link)
+  - validation_test.go (follows from validation.go, not trigger)
+  - controller (requires intent understanding)
+  - e2e test (convention, not structure)
+  
+  VERDICT: Pattern=~90% recall, Structure=~43% recall on this entry.
+  SAME DECOMPOSITION AS AMAZON. The channels transfer.
+  
+  H3 SUPPORTED: Organizational patterns and structural conventions
+  are universal properties of mature software projects.
+
+difficulty: "medium"
+required_knowledge:
+  - "historical_pattern"
+  - "organizational_convention"
+  - "generated_artifacts"
+  - "intent_understanding"  # for the controller
+not_required:
+  - "runtime_behavior"
+  - "deployment_topology"

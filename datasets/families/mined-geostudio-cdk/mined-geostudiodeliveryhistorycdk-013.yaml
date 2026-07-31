@@ -1,0 +1,64 @@
+id: mined-geostudiodeliveryhistorycdk-013
+title: Add SDS/SSA SNS topic integration with cross-environment support
+family: test-evolution
+date: '2025-11-04'
+author: Sowjanya Dodda
+source: git-mined
+source_repo: GeoStudioDeliveryHistoryCDK
+source_commit: 8f53a3566f153f815ca6e35e623c3430bc3254a2
+difficulty: medium
+trigger:
+  package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/stacks/queue.ts
+  intent: Add SDS/SSA SNS topic integration with cross-environment support
+  diff_summary: 'Primary change: lib/stacks/queue.ts (+9/-9)'
+consequences:
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/pipeline/betaAssets.ts
+  description: 'Co-changed: lib/pipeline/betaAssets.ts (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/pipeline/gammaAssets.ts
+  description: 'Co-changed: lib/pipeline/gammaAssets.ts (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/pipeline/pipelineStage.ts
+  description: 'Co-changed: lib/pipeline/pipelineStage.ts (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/pipeline/prodAssets.ts
+  description: 'Co-changed: lib/pipeline/prodAssets.ts (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/stageBuilder.ts
+  description: 'Co-changed: lib/stageBuilder.ts (+4/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 6
+notes: Auto-mined from GeoStudioDeliveryHistoryCDK commit 8f53a356. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

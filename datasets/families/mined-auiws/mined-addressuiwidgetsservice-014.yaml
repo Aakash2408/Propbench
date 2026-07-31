@@ -1,0 +1,54 @@
+id: mined-addressuiwidgetsservice-014
+title: 'fix(spring): Break WeblabServiceAccessor DI cycle; drop dead FormIdProvider
+  dep'
+family: configuration-evolution
+date: '2026-06-30'
+author: Ayan Goel
+source: git-mined
+source_repo: AddressUIWidgetsService
+source_commit: d19bd745a1ad18a6423a4c65607ba634d881483b
+difficulty: medium
+trigger:
+  package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessorTests.scala
+  intent: 'fix(spring): Break WeblabServiceAccessor DI cycle; drop dead FormIdProvider
+    dep'
+  diff_summary: 'Primary change: tst/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessorTests.scala
+    (+1/-3)'
+consequences:
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/addressformconfig/orchestration/ClientIdProvider.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/addressformconfig/orchestration/ClientIdProvider.scala
+    (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessor.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessor.scala
+    (+0/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/utility/CookieWeblabOverrides.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/utility/CookieWeblabOverrides.scala
+    (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 4
+notes: Auto-mined from AddressUIWidgetsService commit d19bd745. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

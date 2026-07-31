@@ -1,0 +1,108 @@
+id: mined-smartaddressassistantwebapp-004
+title: '[CDPRevamp] Phase 4: JSP Wiring + ViewData + POM Refactored Section (Proposal
+  E)'
+family: refactor
+date: '2026-05-25'
+author: Aakash Sangwan
+source: git-mined
+source_repo: SmartAddressAssistantWebApp
+source_commit: 475ddf4a0dea1cef5f783d91437f920b91f76733
+difficulty: medium
+trigger:
+  package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/pom/v2/mobile/deliveryDetailsSectionRefactored.jsp
+  intent: '[CDPRevamp] Phase 4: JSP Wiring + ViewData + POM Refactored Section (Proposal
+    E)'
+  diff_summary: 'Primary change: webapp/WEB-INF/views/pom/v2/mobile/deliveryDetailsSectionRefactored.jsp
+    (+148/-0)'
+consequences:
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/builder/attribute/AccessCodesComponentBuilder.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/builder/attribute/AccessCodesComponentBuilder.java
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/builder/attribute/CallBoxComponentBuilder.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/builder/attribute/CallBoxComponentBuilder.java
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/builder/attribute/PhysicalKeyComponentBuilder.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/builder/attribute/PhysicalKeyComponentBuilder.java
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/builder/attribute/PreferredDeliveryLocationComponentBuilder.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/builder/attribute/PreferredDeliveryLocationComponentBuilder.java
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/controller/core/PinOnMapPageController.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/controller/core/PinOnMapPageController.java
+    (+27/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/controller/core/apiController/addressWizard/DeliveryInstructionsViewController.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/controller/core/apiController/addressWizard/DeliveryInstructionsViewController.java
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/model/AttributeComponent.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/model/AttributeComponent.java
+    (+10/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/landingPageCommonRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/landingPageCommonRefactored.jsp
+    (+7/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/pom/v2/mobile/landingPageRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/pom/v2/mobile/landingPageRefactored.jsp
+    (+64/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 10
+notes: Auto-mined from SmartAddressAssistantWebApp commit 475ddf4a. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

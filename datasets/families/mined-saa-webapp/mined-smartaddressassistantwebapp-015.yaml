@@ -1,0 +1,170 @@
+id: mined-smartaddressassistantwebapp-015
+title: '[CDP Revamp] Extend models, providers, and view model builder for standalone
+  controller'
+family: uncategorized
+date: '2026-05-07'
+author: Shivam Singla
+source: git-mined
+source_repo: SmartAddressAssistantWebApp
+source_commit: ca348716d17862a344a9ad2f517df7adde16f133
+difficulty: hard
+trigger:
+  package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/provider/DeliveryProfileViewProvider.java
+  intent: '[CDP Revamp] Extend models, providers, and view model builder for standalone
+    controller'
+  diff_summary: 'Primary change: src/com/amazon/saa/webapp/provider/DeliveryProfileViewProvider.java
+    (+83/-3)'
+consequences:
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/controller/core/PinOnMapPageController.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/controller/core/PinOnMapPageController.java
+    (+4/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/controller/core/apiController/addressWizard/DeliveryInstructionsViewController.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/controller/core/apiController/addressWizard/DeliveryInstructionsViewController.java
+    (+4/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/model/CommonPageContext.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/model/CommonPageContext.java
+    (+11/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/model/DeliveryProfileViewModel.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/model/DeliveryProfileViewModel.java
+    (+7/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/model/attributedata/HoursOfOperation.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/model/attributedata/HoursOfOperation.java
+    (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/model/dataprovider/DeliveryProfileData.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/model/dataprovider/DeliveryProfileData.java
+    (+13/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/model/dataprovider/DeliveryProfileRequest.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/model/dataprovider/DeliveryProfileRequest.java
+    (+20/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/provider/dataprovider/impl/CaimsDeliveryProfileDataProvider.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/provider/dataprovider/impl/CaimsDeliveryProfileDataProvider.java
+    (+9/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/resource/DeliveryProfileViewModelBuilder.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/resource/DeliveryProfileViewModelBuilder.java
+    (+15/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/resource/WeblabGate.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/resource/WeblabGate.java (+10/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - tst/com/amazon/saa/webapp/builder/attribute/HoursOfOperationTranslatorTest.java
+  description: 'Co-changed: tst/com/amazon/saa/webapp/builder/attribute/HoursOfOperationTranslatorTest.java
+    (+3/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - tst/com/amazon/saa/webapp/controller/core/DeliveryProfileBaseControllerTest.java
+  description: 'Co-changed: tst/com/amazon/saa/webapp/controller/core/DeliveryProfileBaseControllerTest.java
+    (+24/-23)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - tst/com/amazon/saa/webapp/provider/DeliveryProfileViewProviderTest.java
+  description: 'Co-changed: tst/com/amazon/saa/webapp/provider/DeliveryProfileViewProviderTest.java
+    (+12/-5)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - tst/com/amazon/saa/webapp/provider/dataprovider/impl/CaimsDeliveryProfileDataProviderTest.java
+  description: 'Co-changed: tst/com/amazon/saa/webapp/provider/dataprovider/impl/CaimsDeliveryProfileDataProviderTest.java
+    (+2/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - tst/com/amazon/saa/webapp/provider/dataprovider/impl/TenantAwareDeliveryProfileDataProviderTest.java
+  description: 'Co-changed: tst/com/amazon/saa/webapp/provider/dataprovider/impl/TenantAwareDeliveryProfileDataProviderTest.java
+    (+6/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - tst/com/amazon/saa/webapp/resource/DeliveryProfileViewModelBuilderTest.java
+  description: 'Co-changed: tst/com/amazon/saa/webapp/resource/DeliveryProfileViewModelBuilderTest.java
+    (+11/-6)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 17
+notes: Auto-mined from SmartAddressAssistantWebApp commit ca348716. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

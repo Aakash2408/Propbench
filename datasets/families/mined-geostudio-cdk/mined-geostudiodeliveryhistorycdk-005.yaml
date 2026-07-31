@@ -1,0 +1,104 @@
+id: mined-geostudiodeliveryhistorycdk-005
+title: 'feat(cdk): Add Grok PTRS consumption infrastructure (rebased on mainline)'
+family: infrastructure-evolution
+date: '2026-06-10'
+author: Hitesh Lalwani
+source: git-mined
+source_repo: GeoStudioDeliveryHistoryCDK
+source_commit: 6b133a73cab6b1e7e5c3db57b449b1498daf083c
+difficulty: hard
+trigger:
+  package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/stacks/queue.ts
+  intent: 'feat(cdk): Add Grok PTRS consumption infrastructure (rebased on mainline)'
+  diff_summary: 'Primary change: lib/stacks/queue.ts (+66/-3)'
+consequences:
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/constants/constants.ts
+  description: 'Co-changed: lib/constants/constants.ts (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/pipeline/betaAssets.ts
+  description: 'Co-changed: lib/pipeline/betaAssets.ts (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/pipeline/gammaAssets.ts
+  description: 'Co-changed: lib/pipeline/gammaAssets.ts (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/pipeline/pipelineStage.ts
+  description: 'Co-changed: lib/pipeline/pipelineStage.ts (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/pipeline/prodAssets.ts
+  description: 'Co-changed: lib/pipeline/prodAssets.ts (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/pipeline/prodFeAssets.ts
+  description: 'Co-changed: lib/pipeline/prodFeAssets.ts (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/pipeline/prodZazAssets.ts
+  description: 'Co-changed: lib/pipeline/prodZazAssets.ts (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/stacks/lambda.ts
+  description: 'Co-changed: lib/stacks/lambda.ts (+11/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/stageBuilder.ts
+  description: 'Co-changed: lib/stageBuilder.ts (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - test/queueStack.test.ts
+  description: 'Co-changed: test/queueStack.test.ts (+106/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 11
+notes: Auto-mined from GeoStudioDeliveryHistoryCDK commit 6b133a73. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

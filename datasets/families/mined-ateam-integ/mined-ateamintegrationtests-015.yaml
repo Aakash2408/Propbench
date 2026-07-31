@@ -1,0 +1,45 @@
+id: mined-ateamintegrationtests-015
+title: Modified integration tests of IS_PLACE_BLOCKED attribute's source to AMZL_SDS_DSL
+  from LMQ
+family: test-evolution
+date: '2025-02-28'
+author: Divya Raman
+source: git-mined
+source_repo: AteamIntegrationTests
+source_commit: 01673ff5ee0ba32753ba441c72c231423fa723b2
+difficulty: medium
+trigger:
+  package: AteamIntegrationTests
+  files:
+  - data/gamUpdates/US/testScenarios/IsPlaceBlocked.prototxt
+  intent: Modified integration tests of IS_PLACE_BLOCKED attribute's source to AMZL_SDS_DSL
+    from LMQ
+  diff_summary: 'Primary change: data/gamUpdates/US/testScenarios/IsPlaceBlocked.prototxt
+    (+13/-13)'
+consequences:
+- package: AteamIntegrationTests
+  files:
+  - data/ingestion/US/testScenarios/IsPlaceBlocked.prototxt
+  description: 'Co-changed: data/ingestion/US/testScenarios/IsPlaceBlocked.prototxt
+    (+10/-10)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/US/testScenarios/source-precedence-majority/IsPlaceBlocked.prototxt
+  description: 'Co-changed: data/selection/US/testScenarios/source-precedence-majority/IsPlaceBlocked.prototxt
+    (+13/-13)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from AteamIntegrationTests commit 01673ff5. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

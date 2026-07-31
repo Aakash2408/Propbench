@@ -1,0 +1,64 @@
+id: mined-arx-opscdk-018
+title: Added IAM role for running ADAM tests in AUIWS and Cheetah pipelines
+family: test-evolution
+date: '2025-09-02'
+author: Abhishek Pandey
+source: git-mined
+source_repo: ARX-OpsCDK
+source_commit: 7b4f97e72e6b9c5206aad06c83cdcc00ed2e9671
+difficulty: medium
+trigger:
+  package: ARX-OpsCDK
+  files:
+  - lib/tests/pipeline.test.ts
+  intent: Added IAM role for running ADAM tests in AUIWS and Cheetah pipelines
+  diff_summary: 'Primary change: lib/tests/pipeline.test.ts (+3/-2)'
+consequences:
+- package: ARX-OpsCDK
+  files:
+  - lib/config/pipelineStageConfigs.ts
+  description: 'Co-changed: lib/config/pipelineStageConfigs.ts (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: ARX-OpsCDK
+  files:
+  - lib/constants/adamWorkflowConstants.ts
+  description: 'Co-changed: lib/constants/adamWorkflowConstants.ts (+18/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: ARX-OpsCDK
+  files:
+  - lib/constants/stackConstants.ts
+  description: 'Co-changed: lib/constants/stackConstants.ts (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: ARX-OpsCDK
+  files:
+  - lib/stacks/adamIntegrationTestsTodStack.ts
+  description: 'Co-changed: lib/stacks/adamIntegrationTestsTodStack.ts (+105/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: ARX-OpsCDK
+  files:
+  - lib/tests/adamIntegrationTestsTodStack.test.ts
+  description: 'Co-changed: lib/tests/adamIntegrationTestsTodStack.test.ts (+207/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 6
+notes: Auto-mined from ARX-OpsCDK commit 7b4f97e7. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

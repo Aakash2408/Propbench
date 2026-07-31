@@ -1,0 +1,94 @@
+id: "country-expansion-01"
+title: "Add PR/PT/ZA country support to CdpModelGenerator"
+
+family: "country-expansion"
+date: "2026-07-20"
+author: "aakkaash"
+cr_ids:
+  - "CR-290623815"  # Main own-market PR/PT/ZA design
+  - "CR-290677619"  # Holiday additions (10 missing holidays)
+
+trigger:
+  package: "CdpModelGenerator"
+  version_set: "SmartAddressAssistantHorizonte/release"
+  files:
+    - "src/personalizedCdpConfig/**"
+    - "src/plainCdpConfig/**"
+  intent: "Add PR, PT, and ZA as own-market countries with full CDP configuration (personalized + plain, holidays, safe-place values, property types)"
+  diff_summary: |
+    Added country-specific config blocks for PR, PT, ZA across:
+    - personalizedCdpConfig (property types, safe-place values, DogRiskLevel)
+    - plainCdpConfig (BusinessHours, PDL, SafePlace)
+    - PlainCdpModel.yaml root router (country routing)
+    - ExceptionDatesProvider.yaml (national holidays)
+
+consequences:
+  - package: "CdpModelGenerator"
+    version_set: "SmartAddressAssistantHorizonte/release"
+    files:
+      - "src/plainCdpConfig/PlainCdpModel.yaml"
+    description: "Add country to root router — without this, all plain sub-configs are unreachable"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.95
+    reasoning: "PlainCdpModel.yaml is the ROOT router. Missing entry = dead config. This was the ZA bug — added sub-configs but forgot the router."
+
+  - package: "CdpModelGenerator"
+    version_set: "SmartAddressAssistantHorizonte/release"
+    files:
+      - "src/ExceptionDatesProvider.yaml"
+    description: "Add national holidays for each new country"
+    mechanical: true
+    relationship: "co-change"
+    confidence_an_expert_would_predict: 0.90
+    reasoning: "Every country expansion requires holidays. The authoritative list comes from the country launch QA doc. Easy to miss specific dates."
+
+  - package: "CdpModelGenerator"
+    version_set: "SmartAddressAssistantHorizonte/release"
+    files:
+      - "src/plainCdpConfig/PR/*"
+      - "src/plainCdpConfig/PT/*"
+      - "src/plainCdpConfig/ZA/*"
+    description: "Plain CDP sub-configs for each new country"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.88
+    reasoning: "Plain configs needed for non-personalized fallback. Pattern is identical to existing countries."
+
+expert_reasoning: |
+  1. PlainCdpModel.yaml is the root router — this is the most commonly missed
+     file because it's not obvious from the directory structure.
+  2. PR is its OWN market (not US-parity). It has own property types, own
+     safe-place values, own holidays. Adding PR to US nodes creates dead config.
+  3. ExceptionDatesProvider must match the authoritative Quip doc exactly.
+     Previous expansion attempts missed holidays that were later found in QA.
+  4. CAIMS composition is SERVER-SIDE. Local SAA rebuild does NOT validate
+     the config — only CAIMS VFI deploy reveals composition errors.
+
+common_mistakes:
+  - "Modeling PR as US-parity instead of own-market (creates ambiguous config)"
+  - "Forgetting PlainCdpModel.yaml root router (ZA bug — sub-configs unreachable)"
+  - "Missing holidays from the authoritative list (found during QA, not dev)"
+  - "Thinking local brazil-build server validates composition (it doesn't — CAIMS is server-side)"
+  - "Adding PR to US-only nodes like DogRiskLevelGroup or AccessCode"
+
+tags:
+  - "single-package-multi-file"
+  - "config-driven"
+  - "domain-knowledge-heavy"
+  - "server-side-validation-only"
+  - "easy-to-miss-root-config"
+
+effort:
+  actual_hours: 24
+  mechanical_hours: 6
+  review_hours: 12
+  packages_touched: 1
+  crs_raised: 2
+  
+notes: |
+  This is interesting because it's a SINGLE package but with complex
+  internal dependencies between config files. The prediction challenge
+  isn't "which package" but "which files within the package."
+  This tests whether the engine can predict intra-package propagation,
+  not just inter-package.

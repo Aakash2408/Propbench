@@ -1,0 +1,52 @@
+id: mined-addressuiwidgetsservice-020
+title: add weblab for lever testing
+family: test-evolution
+date: '2026-06-17'
+author: Suraj Dhankad
+source: git-mined
+source_repo: AddressUIWidgetsService
+source_commit: 65831bf17234e7612cb9bb2afb969c0a4ab73753
+difficulty: medium
+trigger:
+  package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessorTests.scala
+  intent: add weblab for lever testing
+  diff_summary: 'Primary change: tst/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessorTests.scala
+    (+30/-0)'
+consequences:
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/addressformconfig/orchestration/AddressFormConfigGenerator.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/addressformconfig/orchestration/AddressFormConfigGenerator.scala
+    (+5/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessor.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessor.scala
+    (+18/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/addressformconfig/orchestration/AddressFormConfigGeneratorTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/addressformconfig/orchestration/AddressFormConfigGeneratorTests.scala
+    (+6/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 4
+notes: Auto-mined from AddressUIWidgetsService commit 65831bf1. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

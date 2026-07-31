@@ -1,0 +1,34 @@
+id: mined-ateamintegrationtests-006
+title: Updating integration tests for SC_BULK_DELIVERY attribute
+family: test-evolution
+date: '2025-07-16'
+author: Manaswini Gorthi
+source: git-mined
+source_repo: AteamIntegrationTests
+source_commit: 2c4f517db2c44e82cfc14a08b2252a5cb2f8cb62
+difficulty: easy
+trigger:
+  package: AteamIntegrationTests
+  files:
+  - data/propagated/US/testScenarios/SC_BULK_DELIVERY.prototxt
+  intent: Updating integration tests for SC_BULK_DELIVERY attribute
+  diff_summary: 'Primary change: data/propagated/US/testScenarios/SC_BULK_DELIVERY.prototxt
+    (+72/-0)'
+consequences:
+- package: AteamIntegrationTests
+  files:
+  - data/selection/US/testScenarios/source-precedence-majority/SCBulk.prototxt
+  description: 'Co-changed: data/selection/US/testScenarios/source-precedence-majority/SCBulk.prototxt
+    (+33/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from AteamIntegrationTests commit 2c4f517d. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

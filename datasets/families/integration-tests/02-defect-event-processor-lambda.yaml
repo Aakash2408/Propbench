@@ -1,0 +1,83 @@
+id: "integration-tests-02"
+title: "Add DefectEventProcessorLambda SQS integration test"
+
+family: "integration-tests"
+date: "2026-07-16"
+author: "aakkaash"
+cr_ids:
+  - "CR-289673698"
+
+trigger:
+  package: "RepeatDefectsManagementServiceTests"
+  version_set: "RepeatDefectsManagementService/release"
+  files:
+    - "tst/com/amazon/rdms/integration/DefectEventProcessorLambdaTest.java"
+  intent: "Add Lambda integration test that sends SQS message to trigger DefectEventProcessorLambda and verifies DDB state changes"
+  diff_summary: |
+    New test class with 2 chained methods:
+    testDefectEventCreatePath (sends SQS CREATE event) →
+    testDefectEventUpdatePath (sends SQS UPDATE event, verifies timestamp change).
+    Uses parameterized queue URL. Fresh random addressId + trackingId.
+
+consequences:
+  - package: "RepeatDefectsManagementServiceTests"
+    version_set: "RepeatDefectsManagementService/release"
+    files:
+      - "Config"
+    description: "Add AwsJavaSdk-Sqs = 2.0 dependency to Brazil Config file"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.85
+    reasoning: "SQS SendMessage requires the SDK. If the test imports SqsClient, the package needs the dependency. Build will fail without it."
+
+  - package: "RepeatDefectsManagementServiceTests"
+    version_set: "RepeatDefectsManagementService/release"
+    files:
+      - "configuration/testng-development.xml"
+    description: "Register new test class + add defectEventQueueUrl parameter"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.70
+    reasoning: "TestNG XML needs test class registration and @Parameters declaration for the queue URL."
+
+expert_reasoning: |
+  Unlike DefectLifecycleTest (pure Coral API calls), this Lambda test needs
+  SQS SDK to send messages. That triggers a BUILD dependency change.
+  
+  The expert recognizes:
+  1. New import (software.amazon.awssdk.services.sqs) → Config file needs the dep
+  2. SQS queue URL is environment-specific → parameterize via TestNG XML
+  3. Lambda processes asynchronously → need sleep/retry logic in test assertions
+  4. CREATE path blocked in beta (DHS DNS issue) → only UPDATE path works
+  
+  The prediction here is: changing test code that imports a NEW SDK
+  requires a Config dependency addition. That's a structural prediction
+  the Architect strategy should catch.
+
+common_mistakes:
+  - "Forgetting to add SQS dependency to Config (import exists but build fails)"
+  - "Hardcoding queue URL instead of parameterizing (breaks across environments)"
+  - "Not realizing CREATE path is blocked in beta (DHS DNS ticket pending)"
+  - "Running development-integ-tests after clean without release first (TLS truststore missing)"
+
+tags:
+  - "single-package"
+  - "dependency-addition"
+  - "test-addition"
+  - "build-dependency-propagation"
+
+effort:
+  actual_hours: 12
+  mechanical_hours: 3
+  review_hours: 4
+  packages_touched: 1
+  crs_raised: 1
+
+notes: |
+  Contrasts with integration-tests-01 (DefectLifecycleTest). That one had
+  NO Config change needed because Coral client SDK was already present.
+  This one DOES need a Config change because SQS is a new dependency.
+  
+  The engine should learn: "new import that doesn't exist in current deps →
+  Config file needs updating." That's a structural signal the Architect
+  strategy can detect by comparing imports against existing Config entries.

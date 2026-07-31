@@ -1,0 +1,76 @@
+id: mined-wellspringtriggers-014
+title: 'fix(dispatch): Wire Coral CloudAuth client with proper config resolution'
+family: configuration-evolution
+date: '2026-05-21'
+author: Akshit Verma
+source: git-mined
+source_repo: WellspringTriggers
+source_commit: 6876b419e8f3fd99d375730ff0e0e6409b5b54ce
+difficulty: medium
+trigger:
+  package: WellspringTriggers
+  files:
+  - dispatch-lambda/src/main/java/com/amazon/wellspringtriggers/dispatch/CoralOrchestratorApiClient.java
+  intent: 'fix(dispatch): Wire Coral CloudAuth client with proper config resolution'
+  diff_summary: 'Primary change: dispatch-lambda/src/main/java/com/amazon/wellspringtriggers/dispatch/CoralOrchestratorApiClient.java
+    (+102/-0)'
+consequences:
+- package: WellspringTriggers
+  files:
+  - Config
+  description: 'Co-changed: Config (+10/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringTriggers
+  files:
+  - build.gradle.kts
+  description: 'Co-changed: build.gradle.kts (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringTriggers
+  files:
+  - common/src/main/java/com/amazon/wellspringtriggers/common/model/TriggerRecord.java
+  description: 'Co-changed: common/src/main/java/com/amazon/wellspringtriggers/common/model/TriggerRecord.java
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringTriggers
+  files:
+  - configuration/aws_lambda/lambda-transform.yml
+  description: 'Co-changed: configuration/aws_lambda/lambda-transform.yml (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringTriggers
+  files:
+  - dispatch-lambda/src/main/java/com/amazon/wellspringtriggers/dispatch/DispatchLambda.java
+  description: 'Co-changed: dispatch-lambda/src/main/java/com/amazon/wellspringtriggers/dispatch/DispatchLambda.java
+    (+46/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringTriggers
+  files:
+  - dispatch-lambda/src/test/java/com/amazon/wellspringtriggers/dispatch/DispatchLambdaTest.java
+  description: 'Co-changed: dispatch-lambda/src/test/java/com/amazon/wellspringtriggers/dispatch/DispatchLambdaTest.java
+    (+6/-5)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 7
+notes: Auto-mined from WellspringTriggers commit 6876b419. Trigger heuristic may be
+  wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

@@ -1,0 +1,104 @@
+id: mined-wellspringtriggers-008
+title: 'feat(dispatch): Pass agentFarmName from trigger record to orchestrator'
+family: bugfix
+date: '2026-06-04'
+author: Akshit Verma
+source: git-mined
+source_repo: WellspringTriggers
+source_commit: 2751b501828e13e8b561175ce3841f9d8e54142a
+difficulty: medium
+trigger:
+  package: WellspringTriggers
+  files:
+  - build.log
+  intent: 'feat(dispatch): Pass agentFarmName from trigger record to orchestrator'
+  diff_summary: 'Primary change: build.log (+0/-161)'
+consequences:
+- package: WellspringTriggers
+  files:
+  - .gitignore
+  description: 'Co-changed: .gitignore (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringTriggers
+  files:
+  - common/src/main/java/com/amazon/wellspringtriggers/common/model/TriggerRecord.java
+  description: 'Co-changed: common/src/main/java/com/amazon/wellspringtriggers/common/model/TriggerRecord.java
+    (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringTriggers
+  files:
+  - dispatch-lambda/src/main/java/com/amazon/wellspringtriggers/dispatch/CoralOrchestratorApiClient.java
+  description: 'Co-changed: dispatch-lambda/src/main/java/com/amazon/wellspringtriggers/dispatch/CoralOrchestratorApiClient.java
+    (+10/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringTriggers
+  files:
+  - dispatch-lambda/src/main/java/com/amazon/wellspringtriggers/dispatch/DispatchLambda.java
+  description: 'Co-changed: dispatch-lambda/src/main/java/com/amazon/wellspringtriggers/dispatch/DispatchLambda.java
+    (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringTriggers
+  files:
+  - dispatch-lambda/src/main/java/com/amazon/wellspringtriggers/dispatch/OrchestratorApiClient.java
+  description: 'Co-changed: dispatch-lambda/src/main/java/com/amazon/wellspringtriggers/dispatch/OrchestratorApiClient.java
+    (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringTriggers
+  files:
+  - dispatch-lambda/src/main/java/com/amazon/wellspringtriggers/dispatch/WellspringOrchestratorClient.java
+  description: 'Co-changed: dispatch-lambda/src/main/java/com/amazon/wellspringtriggers/dispatch/WellspringOrchestratorClient.java
+    (+4/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringTriggers
+  files:
+  - dispatch-lambda/src/test/java/com/amazon/wellspringtriggers/dispatch/CoralOrchestratorApiClientTest.java
+  description: 'Co-changed: dispatch-lambda/src/test/java/com/amazon/wellspringtriggers/dispatch/CoralOrchestratorApiClientTest.java
+    (+5/-5)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringTriggers
+  files:
+  - dispatch-lambda/src/test/java/com/amazon/wellspringtriggers/dispatch/DispatchLambdaTest.java
+  description: 'Co-changed: dispatch-lambda/src/test/java/com/amazon/wellspringtriggers/dispatch/DispatchLambdaTest.java
+    (+5/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringTriggers
+  files:
+  - dispatch-lambda/src/test/java/com/amazon/wellspringtriggers/dispatch/WellspringOrchestratorClientTest.java
+  description: 'Co-changed: dispatch-lambda/src/test/java/com/amazon/wellspringtriggers/dispatch/WellspringOrchestratorClientTest.java
+    (+15/-15)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 10
+notes: Auto-mined from WellspringTriggers commit 2751b501. Trigger heuristic may be
+  wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

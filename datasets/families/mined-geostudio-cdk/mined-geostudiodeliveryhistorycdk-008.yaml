@@ -1,0 +1,104 @@
+id: mined-geostudiodeliveryhistorycdk-008
+title: 'feat(monitoring): Add CloudWatch alarm stack with composite hierarchy'
+family: configuration-evolution
+date: '2026-05-28'
+author: Hitesh Lalwani
+source: git-mined
+source_repo: GeoStudioDeliveryHistoryCDK
+source_commit: 5e3efb2f6eb31f291e5ffff2d275168d39a02b1e
+difficulty: hard
+trigger:
+  package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/stacks/monitoringStack.ts
+  intent: 'feat(monitoring): Add CloudWatch alarm stack with composite hierarchy'
+  diff_summary: 'Primary change: lib/stacks/monitoringStack.ts (+383/-0)'
+consequences:
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/config/alarms/beta.ts
+  description: 'Co-changed: lib/config/alarms/beta.ts (+35/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/config/alarms/gamma.ts
+  description: 'Co-changed: lib/config/alarms/gamma.ts (+35/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/config/alarms/index.ts
+  description: 'Co-changed: lib/config/alarms/index.ts (+20/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/config/alarms/prod.ts
+  description: 'Co-changed: lib/config/alarms/prod.ts (+36/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/config/alarms/types.ts
+  description: 'Co-changed: lib/config/alarms/types.ts (+35/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/monitoringStack.ts
+  description: 'Co-changed: lib/monitoringStack.ts (+0/-279)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/serviceStack.ts
+  description: 'Co-changed: lib/serviceStack.ts (+0/-241)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/stageBuilder.ts
+  description: 'Co-changed: lib/stageBuilder.ts (+35/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - test/monitoringStack.test.ts
+  description: 'Co-changed: test/monitoringStack.test.ts (+56/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - test/serviceStack.test.ts
+  description: 'Co-changed: test/serviceStack.test.ts (+0/-15)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 11
+notes: Auto-mined from GeoStudioDeliveryHistoryCDK commit 5e3efb2f. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

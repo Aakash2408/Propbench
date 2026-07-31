@@ -1,0 +1,43 @@
+id: mined-geostudiodeliveryhistorylambda-006
+title: 'feat: Use ObjectState and ObjectReason from EventDetails in PTRS notification'
+family: uncategorized
+date: '2026-04-02'
+author: Utsav Misra
+source: git-mined
+source_repo: GeoStudioDeliveryHistoryLambda
+source_commit: 151c90a5ef08d13aa815c0efeb8871ab90d2f63c
+difficulty: medium
+trigger:
+  package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/util/DynamoDBUtil.java
+  intent: 'feat: Use ObjectState and ObjectReason from EventDetails in PTRS notification'
+  diff_summary: 'Primary change: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/util/DynamoDBUtil.java
+    (+30/-2)'
+consequences:
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/persistence/DeliveryHistoryPersistenceHelper.java
+  description: 'Co-changed: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/persistence/DeliveryHistoryPersistenceHelper.java
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/java/com/amazon/geostudiodeliveryhistory/lambda/util/DynamoDBUtilTest.java
+  description: 'Co-changed: src/test/java/com/amazon/geostudiodeliveryhistory/lambda/util/DynamoDBUtilTest.java
+    (+52/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from GeoStudioDeliveryHistoryLambda commit 151c90a5. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

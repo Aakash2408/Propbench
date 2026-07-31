@@ -1,0 +1,35 @@
+id: mined-customeraddressissuemanagementservicemodel-002
+title: Generated appweaver artifacts
+family: configuration-evolution
+date: '2025-08-29'
+author: Datta Dwarampudi
+source: git-mined
+source_repo: CustomerAddressIssueManagementServiceModel
+source_commit: 6ea091a8d918eb4c572332d98e1f02a781968bd2
+difficulty: easy
+trigger:
+  package: CustomerAddressIssueManagementServiceModel
+  files:
+  - .appweaver/metadata/Units_CustomerAddressIssueManagementServiceModel.json
+  intent: Generated appweaver artifacts
+  diff_summary: 'Primary change: .appweaver/metadata/Units_CustomerAddressIssueManagementServiceModel.json
+    (+152/-0)'
+consequences:
+- package: CustomerAddressIssueManagementServiceModel
+  files:
+  - .appweaver/metadata/BrazilPackage_CustomerAddressIssueManagementServiceModel.json
+  description: 'Co-changed: .appweaver/metadata/BrazilPackage_CustomerAddressIssueManagementServiceModel.json
+    (+128/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from CustomerAddressIssueManagementServiceModel commit 6ea091a8.
+  Trigger heuristic may be wrong. Needs human review to confirm trigger/consequence
+  split and add expert_reasoning.

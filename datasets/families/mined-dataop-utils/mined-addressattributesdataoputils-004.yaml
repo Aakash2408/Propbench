@@ -1,0 +1,45 @@
+id: mined-addressattributesdataoputils-004
+title: '[CDPRevamp] Implement GetPlaceDeliveryProfile activity and shared attribute
+  processing pipeline'
+family: uncategorized
+date: '2026-04-09'
+author: Qasim Bhatia
+source: git-mined
+source_repo: AddressAttributesDataOpUtils
+source_commit: e76e72cf7d871902b97e31256f0ce31231a3310a
+difficulty: medium
+trigger:
+  package: AddressAttributesDataOpUtils
+  files:
+  - src/com/amazon/addressattributes/translators/GdpsAttributeTransformer.java
+  intent: '[CDPRevamp] Implement GetPlaceDeliveryProfile activity and shared attribute
+    processing pipeline'
+  diff_summary: 'Primary change: src/com/amazon/addressattributes/translators/GdpsAttributeTransformer.java
+    (+35/-32)'
+consequences:
+- package: AddressAttributesDataOpUtils
+  files:
+  - src/com/amazon/addressattributes/model/GdpsAttributeTransformResult.java
+  description: 'Co-changed: src/com/amazon/addressattributes/model/GdpsAttributeTransformResult.java
+    (+0/-23)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressAttributesDataOpUtils
+  files:
+  - tst/com/amazon/addressattributes/translators/GdpsAttributeTransformerTest.java
+  description: 'Co-changed: tst/com/amazon/addressattributes/translators/GdpsAttributeTransformerTest.java
+    (+28/-58)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from AddressAttributesDataOpUtils commit e76e72cf. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

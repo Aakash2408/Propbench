@@ -1,0 +1,45 @@
+id: mined-ateamintegrationtests-003
+title: Updated Integration test data according to latest Exception Dates for AE, SA
+  and EG
+family: test-evolution
+date: '2026-03-12'
+author: Tanisha Bhati
+source: git-mined
+source_repo: AteamIntegrationTests
+source_commit: 9295fa77fd1cfab2b040d17ebc120eb8efe53a73
+difficulty: medium
+trigger:
+  package: AteamIntegrationTests
+  files:
+  - data/selection/AE/testScenarios/canonical-selection-strategies/AddressType_BizHrs_ExceptionDates.prototxt
+  intent: Updated Integration test data according to latest Exception Dates for AE,
+    SA and EG
+  diff_summary: 'Primary change: data/selection/AE/testScenarios/canonical-selection-strategies/AddressType_BizHrs_ExceptionDates.prototxt
+    (+4/-4)'
+consequences:
+- package: AteamIntegrationTests
+  files:
+  - data/selection/EG/testScenarios/canonical-selection-strategies/AddressType_BizHrs_ExceptionDates.prototxt
+  description: 'Co-changed: data/selection/EG/testScenarios/canonical-selection-strategies/AddressType_BizHrs_ExceptionDates.prototxt
+    (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/SA/testScenarios/canonical-selection-strategies/AddressType_BizHrs_ExceptionDates.prototxt
+  description: 'Co-changed: data/selection/SA/testScenarios/canonical-selection-strategies/AddressType_BizHrs_ExceptionDates.prototxt
+    (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from AteamIntegrationTests commit 9295fa77. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

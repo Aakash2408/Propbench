@@ -1,0 +1,32 @@
+id: mined-aastypescoral-004
+title: Box primitive fields to ensure Coral serializes default values
+family: uncategorized
+date: '2026-05-22'
+author: Dev Gupta
+source: git-mined
+source_repo: AASTypesCoral
+source_commit: 42fd154e633b219c7cd202175f9958f611f58a78
+difficulty: easy
+trigger:
+  package: AASTypesCoral
+  files:
+  - model/AddressAttributeTypes.xsd.model.xml
+  intent: Box primitive fields to ensure Coral serializes default values
+  diff_summary: 'Primary change: model/AddressAttributeTypes.xsd.model.xml (+4/-0)'
+consequences:
+- package: AASTypesCoral
+  files:
+  - model/AddressAuthorityTypes.xsd.model.xml
+  description: 'Co-changed: model/AddressAuthorityTypes.xsd.model.xml (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from AASTypesCoral commit 42fd154e. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

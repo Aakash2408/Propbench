@@ -1,0 +1,69 @@
+id: mined-csgandgcsintegrationlambdageo-002
+title: Allow ingestion of US POM geocodes into GeoRaven to support rollback
+family: configuration-evolution
+date: '2025-09-26'
+author: Pranavya Akula
+source: git-mined
+source_repo: CSGAndGCSIntegrationLambdaGeo
+source_commit: 2a24377cca23f92e25930f018b7c0d126367d677
+difficulty: medium
+trigger:
+  package: CSGAndGCSIntegrationLambdaGeo
+  files:
+  - configuration/geocode-ingestion-config.json
+  intent: Allow ingestion of US POM geocodes into GeoRaven to support rollback
+  diff_summary: 'Primary change: configuration/geocode-ingestion-config.json (+1/-1)'
+consequences:
+- package: CSGAndGCSIntegrationLambdaGeo
+  files:
+  - configuration/brazil-config/app/CSGAndGCSIntegrationLambdaGeo.cfg
+  description: 'Co-changed: configuration/brazil-config/app/CSGAndGCSIntegrationLambdaGeo.cfg
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: CSGAndGCSIntegrationLambdaGeo
+  files:
+  - src/main/java/com/amazon/csgandgcsintegrationlambdageo/lambda/dagger/modules/LambdaModule.java
+  description: 'Co-changed: src/main/java/com/amazon/csgandgcsintegrationlambdageo/lambda/dagger/modules/LambdaModule.java
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: CSGAndGCSIntegrationLambdaGeo
+  files:
+  - src/main/java/com/amazon/csgandgcsintegrationlambdageo/lambda/invokers/PlacesGeoRavenIngestionClientInvoker.java
+  description: 'Co-changed: src/main/java/com/amazon/csgandgcsintegrationlambdageo/lambda/invokers/PlacesGeoRavenIngestionClientInvoker.java
+    (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: CSGAndGCSIntegrationLambdaGeo
+  files:
+  - src/test/java/com/amazon/csgandgcsintegrationlambdageo/lambda/invokers/GeoRavenIngestionClientInvokerTest.java
+  description: 'Co-changed: src/test/java/com/amazon/csgandgcsintegrationlambdageo/lambda/invokers/GeoRavenIngestionClientInvokerTest.java
+    (+4/-4)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: CSGAndGCSIntegrationLambdaGeo
+  files:
+  - src/test/java/com/amazon/csgandgcsintegrationlambdageo/lambda/testhelpers/TestObjects.java
+  description: 'Co-changed: src/test/java/com/amazon/csgandgcsintegrationlambdageo/lambda/testhelpers/TestObjects.java
+    (+9/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 6
+notes: Auto-mined from CSGAndGCSIntegrationLambdaGeo commit 2a24377c. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

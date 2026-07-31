@@ -1,0 +1,88 @@
+id: "aas-onboarding-04"
+title: "Onboard NO_PHOTO_ON_DELIVERY, DRIVEWAY_ACCESS, CUSTOMER_MOBILITY_ISSUES boolean attributes"
+
+family: "aas-onboarding"
+date: "2026-06-09"
+author: "aakkaash"
+cr_ids: []
+
+trigger:
+  package: "AIXAttributeConfigData"
+  version_set: "AddressAuthorityServiceNext/release"
+  files:
+    - "configuration/attributes/NO_PHOTO_ON_DELIVERY.json"
+    - "configuration/attributes/DRIVEWAY_ACCESS.json"
+    - "configuration/attributes/CUSTOMER_MOBILITY_ISSUES.json"
+  intent: "Add three new boolean attributes to AAS with CUSTOMER source at ADDRESS_ID level"
+  diff_summary: |
+    Created 3 new attribute JSON config files following the standard boolean
+    attribute template (selectionConfig, strategyConfigEntry for CUSTOMER source
+    at ADDRESS_ID level, US marketplace).
+
+consequences:
+  - package: "GAMCoreModel"
+    version_set: "AddressAuthorityServiceNext/release"
+    files:
+      - "src/main/proto/attribute_types.proto"
+    description: "Add 3 new attribute enum values to the AttributeType proto"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.98
+    reasoning: "Proto enum is the source of truth for valid attribute types. Without this, runtime rejects the attribute."
+
+  - package: "CustomerAddressIssueManagementServiceModel"
+    version_set: "AddressAuthorityServiceNext/release"
+    files:
+      - "src/main/model/service-model.json"
+    description: "Add attributes to CAIMS service model for API exposure"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.75
+    reasoning: "CAIMS exposes attributes to customers. New attributes need model entries. Less obvious than GAMCoreModel."
+
+  - package: "AddressAttributesDataOpUtils"
+    version_set: "AddressAuthorityServiceNext/release"
+    files:
+      - "src/main/java/com/amazon/aas/dataop/AttributeValidator.java"
+    description: "Add validation rules for new boolean attributes"
+    mechanical: true
+    relationship: "co-change"
+    confidence_an_expert_would_predict: 0.70
+    reasoning: "DataOpUtils has validation logic per attribute type. Not strictly required but standard practice."
+
+expert_reasoning: |
+  Boolean attributes at ADDRESS_ID level are the simplest onboarding case.
+  No propagation needed (single level), no complex strategy (just CUSTOMER source).
+  
+  The key knowledge is: 4 packages always change for new attributes, even simple ones:
+  1. AIXAttributeConfigData (config — the trigger)
+  2. GAMCoreModel (proto enum — runtime requirement)
+  3. CustomerAddressIssueManagementServiceModel (API model — customer-facing)
+  4. AddressAttributesDataOpUtils (validation — standard practice)
+  
+  GeoStudio does NOT need changes — it handles attributes generically via String field.
+
+common_mistakes:
+  - "Including GeoStudio in scope (handles attributes generically, no changes needed)"
+  - "Missing CAIMS service model (attribute works internally but not via customer API)"
+  - "Padding the package list with maybes instead of verifying each is actually needed"
+
+tags:
+  - "multi-package"
+  - "config-driven"
+  - "pattern-repeating"
+  - "simple-boolean"
+  - "same-version-set"
+
+effort:
+  actual_hours: 8
+  mechanical_hours: 6
+  review_hours: 4
+  packages_touched: 4
+  crs_raised: 1
+
+notes: |
+  Simpler than source onboarding because no propagation, no cross-VS issues.
+  All 4 packages on the same VS (AddressAuthorityServiceNext/release).
+  Good test case for whether the engine over-predicts (adds GeoStudio)
+  or under-predicts (misses DataOpUtils).

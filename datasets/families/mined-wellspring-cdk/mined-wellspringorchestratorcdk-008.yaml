@@ -1,0 +1,40 @@
+id: mined-wellspringorchestratorcdk-008
+title: 'feat(eval): Add EvalPipelineStack with Step Functions, EventBridge, alarm'
+family: configuration-evolution
+date: '2026-06-23'
+author: David Madsen
+source: git-mined
+source_repo: WellspringOrchestratorCDK
+source_commit: f49df669dd9dabe3948536fdb61ed619f3b7a601
+difficulty: medium
+trigger:
+  package: WellspringOrchestratorCDK
+  files:
+  - src/evalPipelineStack.ts
+  intent: 'feat(eval): Add EvalPipelineStack with Step Functions, EventBridge, alarm'
+  diff_summary: 'Primary change: src/evalPipelineStack.ts (+241/-0)'
+consequences:
+- package: WellspringOrchestratorCDK
+  files:
+  - src/app.ts
+  description: 'Co-changed: src/app.ts (+14/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringOrchestratorCDK
+  files:
+  - src/stageConfig.ts
+  description: 'Co-changed: src/stageConfig.ts (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from WellspringOrchestratorCDK commit f49df669. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

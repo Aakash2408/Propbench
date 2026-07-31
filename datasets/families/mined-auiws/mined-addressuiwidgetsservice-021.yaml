@@ -1,0 +1,52 @@
+id: mined-addressuiwidgetsservice-021
+title: 'refactor: Clean up CJP_ARX_DISABLE_SOFT_DEPENDENCIES_987795 weblab'
+family: configuration-evolution
+date: '2026-06-15'
+author: Jatin Batra
+source: git-mined
+source_repo: AddressUIWidgetsService
+source_commit: fe261b54a6806a15ee07bfa7d0dec02760085b93
+difficulty: medium
+trigger:
+  package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessorTests.scala
+  intent: 'refactor: Clean up CJP_ARX_DISABLE_SOFT_DEPENDENCIES_987795 weblab'
+  diff_summary: 'Primary change: tst/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessorTests.scala
+    (+0/-25)'
+consequences:
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/addressformconfig/orchestration/AddressFormConfigGenerator.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/addressformconfig/orchestration/AddressFormConfigGenerator.scala
+    (+1/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessor.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessor.scala
+    (+0/-17)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/addressformconfig/orchestration/AddressFormConfigGeneratorTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/addressformconfig/orchestration/AddressFormConfigGeneratorTests.scala
+    (+0/-20)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 4
+notes: Auto-mined from AddressUIWidgetsService commit fe261b54. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

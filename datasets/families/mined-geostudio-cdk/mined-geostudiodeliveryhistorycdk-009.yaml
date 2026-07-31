@@ -1,0 +1,98 @@
+id: mined-geostudiodeliveryhistorycdk-009
+title: '[RDR][CITE] Add infrastructure, ingestion logic, and DMS wiring for CS contact
+  defects'
+family: configuration-evolution
+date: '2026-05-22'
+author: Qasim Bhatia
+source: git-mined
+source_repo: GeoStudioDeliveryHistoryCDK
+source_commit: 0102d32b96fdddd6f903cb1df6b75e1c8d82bbb1
+difficulty: medium
+trigger:
+  package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/stacks/queue.ts
+  intent: '[RDR][CITE] Add infrastructure, ingestion logic, and DMS wiring for CS
+    contact defects'
+  diff_summary: 'Primary change: lib/stacks/queue.ts (+30/-1)'
+consequences:
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - Config
+  description: 'Co-changed: Config (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/constants/constants.ts
+  description: 'Co-changed: lib/constants/constants.ts (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/constants/snsFilters.ts
+  description: 'Co-changed: lib/constants/snsFilters.ts (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/pipeline/betaAssets.ts
+  description: 'Co-changed: lib/pipeline/betaAssets.ts (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/pipeline/gammaAssets.ts
+  description: 'Co-changed: lib/pipeline/gammaAssets.ts (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/pipeline/pipelineStage.ts
+  description: 'Co-changed: lib/pipeline/pipelineStage.ts (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/pipeline/prodAssets.ts
+  description: 'Co-changed: lib/pipeline/prodAssets.ts (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/stacks/lambda.ts
+  description: 'Co-changed: lib/stacks/lambda.ts (+13/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/stageBuilder.ts
+  description: 'Co-changed: lib/stageBuilder.ts (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 10
+notes: Auto-mined from GeoStudioDeliveryHistoryCDK commit 0102d32b. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

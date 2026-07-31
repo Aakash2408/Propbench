@@ -1,0 +1,43 @@
+id: mined-aastypescoral-001
+title: 'feat: Add NO_PHOTO_ON_DELIVERY, DRIVEWAY_ACCESS, CUSTOMER_MOBILITY_ISSUES
+  to Coral model'
+family: uncategorized
+date: '2026-07-01'
+author: Aakash Sangwan
+source: git-mined
+source_repo: AASTypesCoral
+source_commit: 0e4453bc79d710914718dc73af55deb71df21626
+difficulty: medium
+trigger:
+  package: AASTypesCoral
+  files:
+  - model/AddressAuthorityTypes.xsd.codigo.model.xml
+  intent: 'feat: Add NO_PHOTO_ON_DELIVERY, DRIVEWAY_ACCESS, CUSTOMER_MOBILITY_ISSUES
+    to Coral model'
+  diff_summary: 'Primary change: model/AddressAuthorityTypes.xsd.codigo.model.xml
+    (+9/-0)'
+consequences:
+- package: AASTypesCoral
+  files:
+  - model/AddressAttributeTypes.xsd.model.xml
+  description: 'Co-changed: model/AddressAttributeTypes.xsd.model.xml (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AASTypesCoral
+  files:
+  - model/AddressAuthorityTypes.xsd.model.xml
+  description: 'Co-changed: model/AddressAuthorityTypes.xsd.model.xml (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from AASTypesCoral commit 0e4453bc. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

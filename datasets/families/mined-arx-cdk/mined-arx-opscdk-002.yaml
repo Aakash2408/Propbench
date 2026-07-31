@@ -1,0 +1,64 @@
+id: mined-arx-opscdk-002
+title: 'feat: Deploy DLS alarms via DLSCWAlarms library'
+family: configuration-evolution
+date: '2026-07-03'
+author: Abhishek Pandey
+source: git-mined
+source_repo: ARX-OpsCDK
+source_commit: c1afe851d00345fb6d1ca897be530ce5fbed2786
+difficulty: medium
+trigger:
+  package: ARX-OpsCDK
+  files:
+  - lib/stacks/dlsAlarmsStack.ts
+  intent: 'feat: Deploy DLS alarms via DLSCWAlarms library'
+  diff_summary: 'Primary change: lib/stacks/dlsAlarmsStack.ts (+53/-0)'
+consequences:
+- package: ARX-OpsCDK
+  files:
+  - Config
+  description: 'Co-changed: Config (+1/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: ARX-OpsCDK
+  files:
+  - lib/config/pipelineStageConfigs.ts
+  description: 'Co-changed: lib/config/pipelineStageConfigs.ts (+31/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: ARX-OpsCDK
+  files:
+  - lib/constants/stackConstants.ts
+  description: 'Co-changed: lib/constants/stackConstants.ts (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: ARX-OpsCDK
+  files:
+  - lib/tests/pipeline.test.ts
+  description: 'Co-changed: lib/tests/pipeline.test.ts (+10/-5)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: ARX-OpsCDK
+  files:
+  - package.json
+  description: 'Co-changed: package.json (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 6
+notes: Auto-mined from ARX-OpsCDK commit c1afe851. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

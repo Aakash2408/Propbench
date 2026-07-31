@@ -1,0 +1,33 @@
+id: mined-wellspringtriggers-011
+title: 'fix(dispatch): Migrate from CloudAuth to IAM SigV4 authentication'
+family: infrastructure-evolution
+date: '2026-05-21'
+author: Akshit Verma
+source: git-mined
+source_repo: WellspringTriggers
+source_commit: c3bc503d946559184fc579664f374716ef7e1b3e
+difficulty: easy
+trigger:
+  package: WellspringTriggers
+  files:
+  - dispatch-lambda/src/main/java/com/amazon/wellspringtriggers/dispatch/CoralOrchestratorApiClient.java
+  intent: 'fix(dispatch): Migrate from CloudAuth to IAM SigV4 authentication'
+  diff_summary: 'Primary change: dispatch-lambda/src/main/java/com/amazon/wellspringtriggers/dispatch/CoralOrchestratorApiClient.java
+    (+7/-14)'
+consequences:
+- package: WellspringTriggers
+  files:
+  - Config
+  description: 'Co-changed: Config (+1/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from WellspringTriggers commit c3bc503d. Trigger heuristic may be
+  wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

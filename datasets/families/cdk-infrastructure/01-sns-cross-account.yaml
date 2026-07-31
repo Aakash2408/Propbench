@@ -1,0 +1,79 @@
+id: "cdk-infrastructure-01"
+title: "Grant Wellspring Orchestrator cross-account SNS subscribe access"
+
+family: "cdk-infrastructure"
+date: "2026-07-10"
+author: "aakkaash"
+cr_ids: []
+
+trigger:
+  package: "GeoStudioDeliveryHistoryCDK"
+  version_set: "GeoStudioBackend/release"
+  files:
+    - "lib/configProvider.ts"
+    - "lib/snsPolicyProvider.ts"
+  intent: "Allow WellspringOrchestrator account (739951718670) to subscribe to DeliveryHistoryDDBEventSNS topic for Building Summary signals 2 and 4"
+  diff_summary: |
+    configProvider.ts: added getWellspringOrchestratorAWSAccountId() returning
+    '739951718670' for GAMMA, undefined for others.
+    snsPolicyProvider.ts: conditionally adds Wellspring principal to SNS topic policy.
+
+consequences:
+  - package: "WellspringOrchestratorCDK"
+    version_set: "WellspringOrchestrator/development"
+    files:
+      - "lib/triggerStack.ts"
+    description: "Create SQS queue + SNS subscription in Wellspring account to receive events"
+    mechanical: false
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.80
+    reasoning: "Granting access is only half — the consumer side needs a queue + subscription. Cross-account SNS always has two sides."
+
+  - package: "WellspringTriggers"
+    version_set: "WellspringOrchestrator/development"
+    files:
+      - "building-summary-trigger/src/main/java/BuildingSummaryTriggerHandler.java"
+    description: "Lambda handler code to process the SNS events from DHS topic"
+    mechanical: false
+    relationship: "co-change"
+    confidence_an_expert_would_predict: 0.60
+    reasoning: "The CDK grant enables the data flow, but the processing code needs to exist too. Less obvious as 'propagation' — more like 'the other half of the feature'."
+
+expert_reasoning: |
+  Cross-account SNS access is ALWAYS a two-sided change:
+  1. Producer side: add principal to SNS topic policy (this trigger)
+  2. Consumer side: create SQS queue + SNS subscription + Lambda handler
+  
+  The expert knows this because cross-account messaging never works with
+  just one side. But these are in DIFFERENT packages on DIFFERENT version sets
+  owned by DIFFERENT teams (DHS team vs Wellspring team).
+  
+  The tricky part: from the trigger alone (GeoStudioDeliveryHistoryCDK change),
+  predicting that WellspringTriggers needs a new Lambda handler requires
+  understanding the INTENT, not just the code change.
+
+common_mistakes:
+  - "Only doing the producer side and forgetting the consumer subscription"
+  - "Not realizing the consumer is in a different account/VS/team ownership"
+  - "Creating subscription before the policy grant (deploy order matters)"
+
+tags:
+  - "cross-account"
+  - "cross-version-set"
+  - "two-sided-change"
+  - "infrastructure"
+  - "intent-required"
+
+effort:
+  actual_hours: 4
+  mechanical_hours: 2
+  review_hours: 2
+  packages_touched: 3
+  crs_raised: 2
+
+notes: |
+  This is an interesting case because predicting the consumer-side changes
+  requires understanding the INTENT ("Building Summary needs to receive
+  delivery events") rather than just structural analysis. The Architect
+  strategy (dependency graph) won't catch this — only the Reasoner or
+  Pattern Matcher (cross-account SNS = two sides) would predict it.

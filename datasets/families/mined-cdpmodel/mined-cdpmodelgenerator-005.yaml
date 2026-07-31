@@ -1,0 +1,61 @@
+id: mined-cdpmodelgenerator-005
+title: '[CDF] Expand all questions for CDF ingress point type'
+family: configuration-evolution
+date: '2025-08-20'
+author: Qasim Bhatia
+source: git-mined
+source_repo: CdpModelGenerator
+source_commit: 67686aa04807a24003f7b01f6e7d0c1371261ad4
+difficulty: medium
+trigger:
+  package: CdpModelGenerator
+  files:
+  - configuration/personalizedCdpConfig/propertyTypeGroup/HousePropertyTypeGroup.yaml
+  intent: '[CDF] Expand all questions for CDF ingress point type'
+  diff_summary: 'Primary change: configuration/personalizedCdpConfig/propertyTypeGroup/HousePropertyTypeGroup.yaml
+    (+17/-0)'
+consequences:
+- package: CdpModelGenerator
+  files:
+  - configuration/personalizedCdpConfig/propertyTypeGroup/ApartmentPropertyTypeGroup.yaml
+  description: 'Co-changed: configuration/personalizedCdpConfig/propertyTypeGroup/ApartmentPropertyTypeGroup.yaml
+    (+16/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: CdpModelGenerator
+  files:
+  - configuration/personalizedCdpConfig/propertyTypeGroup/BusinessPropertyTypeGroup.yaml
+  description: 'Co-changed: configuration/personalizedCdpConfig/propertyTypeGroup/BusinessPropertyTypeGroup.yaml
+    (+16/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: CdpModelGenerator
+  files:
+  - configuration/personalizedCdpConfig/propertyTypeGroup/OtherPropertyTypeGroup.yaml
+  description: 'Co-changed: configuration/personalizedCdpConfig/propertyTypeGroup/OtherPropertyTypeGroup.yaml
+    (+16/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: CdpModelGenerator
+  files:
+  - configuration/personalizedCdpConfig/propertyTypeGroup/TownhomePropertyTypeGroup.yaml
+  description: 'Co-changed: configuration/personalizedCdpConfig/propertyTypeGroup/TownhomePropertyTypeGroup.yaml
+    (+17/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 5
+notes: Auto-mined from CdpModelGenerator commit 67686aa0. Trigger heuristic may be
+  wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

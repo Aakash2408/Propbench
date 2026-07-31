@@ -1,0 +1,60 @@
+id: mined-geostudiodeliveryhistorylambda-012
+title: Call GDPS with NPE token
+family: configuration-evolution
+date: '2025-07-28'
+author: Vrishab Jain
+source: git-mined
+source_repo: GeoStudioDeliveryHistoryLambda
+source_commit: 1c7b7b250e771e580889b4b8225fa671b4848b89
+difficulty: medium
+trigger:
+  package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/auth/TransitiveAuthTokenRetriever.java
+  intent: Call GDPS with NPE token
+  diff_summary: 'Primary change: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/auth/TransitiveAuthTokenRetriever.java
+    (+39/-0)'
+consequences:
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - Config
+  description: 'Co-changed: Config (+4/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/client/GDPSClient.java
+  description: 'Co-changed: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/client/GDPSClient.java
+    (+16/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/dagger/module/AuthModule.java
+  description: 'Co-changed: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/dagger/module/AuthModule.java
+    (+30/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/java/com/amazon/geostudiodeliveryhistory/lambda/client/GDPSClientTest.java
+  description: 'Co-changed: src/test/java/com/amazon/geostudiodeliveryhistory/lambda/client/GDPSClientTest.java
+    (+18/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 5
+notes: Auto-mined from GeoStudioDeliveryHistoryLambda commit 1c7b7b25. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

@@ -1,0 +1,115 @@
+id: mined-geostudiodeliveryhistorylambda-004
+title: 'feat(lambda): Add numeric-only addressId validation'
+family: uncategorized
+date: '2026-05-19'
+author: Utsav Misra
+source: git-mined
+source_repo: GeoStudioDeliveryHistoryLambda
+source_commit: 293e7cba9ff11fbe4679bce1a508e5e8b5c9922b
+difficulty: hard
+trigger:
+  package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/validator/AddressIdValidator.java
+  intent: 'feat(lambda): Add numeric-only addressId validation'
+  diff_summary: 'Primary change: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/validator/AddressIdValidator.java
+    (+24/-0)'
+consequences:
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/constant/ErrorMessages.java
+  description: 'Co-changed: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/constant/ErrorMessages.java
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/processor/BackfillMessageProcessor.java
+  description: 'Co-changed: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/processor/BackfillMessageProcessor.java
+    (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/processor/PTRSMessageProcessor.java
+  description: 'Co-changed: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/processor/PTRSMessageProcessor.java
+    (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/validator/DeliveryDataSQSEventValidator.java
+  description: 'Co-changed: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/validator/DeliveryDataSQSEventValidator.java
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/java/com/amazon/geostudiodeliveryhistory/lambda/BaseTestClass.java
+  description: 'Co-changed: src/test/java/com/amazon/geostudiodeliveryhistory/lambda/BaseTestClass.java
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/java/com/amazon/geostudiodeliveryhistory/lambda/processor/BackfillMessageProcessorTest.java
+  description: 'Co-changed: src/test/java/com/amazon/geostudiodeliveryhistory/lambda/processor/BackfillMessageProcessorTest.java
+    (+26/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/java/com/amazon/geostudiodeliveryhistory/lambda/processor/PTRSMessageProcessorTest.java
+  description: 'Co-changed: src/test/java/com/amazon/geostudiodeliveryhistory/lambda/processor/PTRSMessageProcessorTest.java
+    (+8/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/java/com/amazon/geostudiodeliveryhistory/lambda/util/DynamoDBUtilTest.java
+  description: 'Co-changed: src/test/java/com/amazon/geostudiodeliveryhistory/lambda/util/DynamoDBUtilTest.java
+    (+3/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/java/com/amazon/geostudiodeliveryhistory/lambda/validator/AddressIdValidatorTest.java
+  description: 'Co-changed: src/test/java/com/amazon/geostudiodeliveryhistory/lambda/validator/AddressIdValidatorTest.java
+    (+44/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/java/com/amazon/geostudiodeliveryhistory/lambda/validator/DeliveryDataSQSEventValidatorTest.java
+  description: 'Co-changed: src/test/java/com/amazon/geostudiodeliveryhistory/lambda/validator/DeliveryDataSQSEventValidatorTest.java
+    (+7/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 11
+notes: Auto-mined from GeoStudioDeliveryHistoryLambda commit 293e7cba. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

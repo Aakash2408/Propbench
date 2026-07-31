@@ -1,0 +1,40 @@
+id: mined-wellspringorchestratorcdk-010
+title: (feat) add GeomindOutputCommitter SQS CommitIntakeQueue configuration
+family: configuration-evolution
+date: '2026-06-08'
+author: Swetha Palli
+source: git-mined
+source_repo: WellspringOrchestratorCDK
+source_commit: 72b20f86da925ca515f01dc0dfd00b7e94b7c481
+difficulty: medium
+trigger:
+  package: WellspringOrchestratorCDK
+  files:
+  - src/serviceStack.ts
+  intent: (feat) add GeomindOutputCommitter SQS CommitIntakeQueue configuration
+  diff_summary: 'Primary change: src/serviceStack.ts (+173/-1)'
+consequences:
+- package: WellspringOrchestratorCDK
+  files:
+  - src/app.ts
+  description: 'Co-changed: src/app.ts (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringOrchestratorCDK
+  files:
+  - src/stageConfig.ts
+  description: 'Co-changed: src/stageConfig.ts (+39/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from WellspringOrchestratorCDK commit 72b20f86. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

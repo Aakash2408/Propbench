@@ -1,0 +1,95 @@
+id: "aas-onboarding-03"
+title: "Add LLM_DERIVED_V2 source for DELIVERY_HINT at BUILDING and UNIT level"
+
+family: "aas-onboarding"
+date: "2026-07-24"
+author: "aakkaash"
+cr_ids:
+  - "CR-291722104"  # AIXAttributeConfigData + GAMCoreModel
+  - "CR-291743376"  # AteamIntegrationTests
+
+trigger:
+  package: "AIXAttributeConfigData"
+  version_set: "AddressAuthorityServiceNext/release"
+  files:
+    - "configuration/attributes/DELIVERY_HINT.json"
+  intent: "Add LLM_DERIVED_V2 as a source at BUILDING and UNIT level for US, with propagation from BUILDING down to UPIDs"
+  diff_summary: |
+    Added LLM_DERIVED_V2 to three config sections:
+    - propagationConfig: US BUILDING + CAMPUS entries
+    - selectionConfig.sourceWhitelist: US BUILDING + US UNIT entries
+    - strategyConfigEntry: US BUILDING + US UNIT entries
+    Each follows exact same structure as existing WELLSPRING entries.
+
+consequences:
+  - package: "GAMCoreModel"
+    version_set: "AddressAuthorityServiceNext/release"
+    files:
+      - "configuration/SourceConfiguration.prototxt"
+    description: "Add PROPAGATED.BUILDING.LLM_DERIVED_V2 and PROPAGATED.CAMPUS.LLM_DERIVED_V2 source entries"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.98
+    reasoning: "Runtime requires PROPAGATED.X.SOURCE registry entries for propagation to function. Without this, the AIX config change silently does nothing."
+
+  - package: "AteamIntegrationTests"
+    version_set: "ATEAMIntegTest/release"
+    files:
+      - "tst/com/amazon/aas/integration/DeliveryHintLlmDerivedV2Test.java"
+    description: "Integration test validating the new source resolves correctly end-to-end"
+    mechanical: false
+    relationship: "co-change"
+    confidence_an_expert_would_predict: 0.85
+    reasoning: "Every source onboarding historically includes an integ test. Not structurally required but always done. Different VS complicates — junior engineers miss this."
+
+  - package: "AASTypesCoral"
+    version_set: "AASTypesCoral/release"
+    files: []
+    description: "Coral model type sync — historically lags 3-6 months after main onboarding"
+    mechanical: true
+    relationship: "co-change"
+    optional: true
+    lag: "3-6 months"
+    confidence_an_expert_would_predict: 0.45
+    reasoning: "AASTypesCoral syncs eventually but is never part of the initial CR set. Knowing this prevents wasted time trying to include it."
+
+expert_reasoning: |
+  1. Pattern recognition: WELLSPRING (Sep 2025) and GLOBAL_STORE both touched
+     exactly AIXAttributeConfigData + GAMCoreModel + AteamIntegrationTests.
+  2. Structural knowledge: SourceConfiguration.prototxt is the runtime registry.
+     If a source isn't registered there, propagation config is dead code.
+  3. Process knowledge: AteamIntegrationTests is on a DIFFERENT version set
+     (ATEAMIntegTest/release), requiring a separate CR. Juniors try to put
+     everything in one CR and get confused when the build fails.
+  4. Temporal knowledge: AASTypesCoral always comes months later. Experienced
+     engineers know not to block on it.
+
+common_mistakes:
+  - "Forgetting GAMCoreModel — change deploys but propagation silently fails at runtime with no error"
+  - "Trying to put AteamIntegrationTests in the same CR as AIXAttributeConfigData — different VS"
+  - "Including AASTypesCoral in scope — causes unnecessary delays"
+  - "Copying WELLSPRING pattern but not adapting level (BUILDING vs UNIT) correctly"
+
+difficulty: "medium"
+required_knowledge:
+  - "historical_pattern"     # WELLSPRING/GLOBAL_STORE set the template
+  - "dependency_graph"       # GAMCoreModel is structurally required
+  - "domain_semantics"       # understanding what "source onboarding" means
+not_required:
+  - "runtime_behavior"
+  - "ownership"
+  - "deployment_topology"
+
+tags:
+  - "multi-package"
+  - "config-driven"
+  - "pattern-repeating"
+  - "cross-version-set"
+  - "silent-failure-if-missed"
+
+effort:
+  actual_hours: 16
+  mechanical_hours: 4
+  review_hours: 8
+  packages_touched: 3
+  crs_raised: 2

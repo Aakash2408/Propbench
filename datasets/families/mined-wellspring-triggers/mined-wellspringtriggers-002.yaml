@@ -1,0 +1,45 @@
+id: mined-wellspringtriggers-002
+title: 'feat: Signal 2 (DMS defects) + Signal 4 (DHS deliveries) trigger handlers
+  + tests'
+family: test-evolution
+date: '2026-07-27'
+author: Aakash Sangwan
+source: git-mined
+source_repo: WellspringTriggers
+source_commit: d79e32886ccc0285ca5cd202e8ccc49716c13354
+difficulty: medium
+trigger:
+  package: WellspringTriggers
+  files:
+  - building-summary-trigger/src/main/java/com/amazon/wellspringtriggers/buildingsummary/DefectSignalTriggerHandler.java
+  intent: 'feat: Signal 2 (DMS defects) + Signal 4 (DHS deliveries) trigger handlers
+    + tests'
+  diff_summary: 'Primary change: building-summary-trigger/src/main/java/com/amazon/wellspringtriggers/buildingsummary/DefectSignalTriggerHandler.java
+    (+259/-0)'
+consequences:
+- package: WellspringTriggers
+  files:
+  - building-summary-trigger/src/main/java/com/amazon/wellspringtriggers/buildingsummary/DeliverySignalTriggerHandler.java
+  description: 'Co-changed: building-summary-trigger/src/main/java/com/amazon/wellspringtriggers/buildingsummary/DeliverySignalTriggerHandler.java
+    (+239/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringTriggers
+  files:
+  - building-summary-trigger/src/test/java/com/amazon/wellspringtriggers/buildingsummary/DefectSignalTriggerHandlerTest.java
+  description: 'Co-changed: building-summary-trigger/src/test/java/com/amazon/wellspringtriggers/buildingsummary/DefectSignalTriggerHandlerTest.java
+    (+227/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from WellspringTriggers commit d79e3288. Trigger heuristic may be
+  wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

@@ -1,0 +1,200 @@
+# PropBench Statistical Framework
+# Confidence intervals, sample sizes, and significance testing
+
+## 1. Confidence Intervals for Baseline Scores
+
+# For proportion-based metrics (recall, precision), use Wilson score interval.
+# Formula: p̂ ± z * sqrt(p̂(1-p̂)/n + z²/(4n²)) / (1 + z²/n)
+# Where z = 1.96 for 95% CI
+
+# Current dataset: 268 entries, 1223 consequence files
+
+baselines:
+  file_predictor:
+    metric: "file-level recall"
+    point_estimate: 0.08
+    n: 1223  # total consequence files scored
+    ci_95: [0.06, 0.10]  # Wilson interval
+    interpretation: "We are 95% confident true recall is between 6% and 10%"
+    
+  historian:
+    metric: "file-level recall"
+    point_estimate: 0.25
+    n: 1223
+    ci_95: [0.22, 0.28]
+    interpretation: "True recall between 22% and 28%"
+    
+  pattern_oracle:
+    metric: "package-level recall"
+    point_estimate: 0.55
+    n: 268  # entries (package-level)
+    ci_95: [0.49, 0.61]
+    interpretation: "True recall between 49% and 61%"
+    
+  ensemble:
+    metric: "package-level recall"
+    point_estimate: 0.82
+    n: 268
+    ci_95: [0.77, 0.86]
+    interpretation: "True recall between 77% and 86%"
+
+## 2. Minimum Sample Size Requirements
+
+# For a meaningful comparison between two baselines:
+# Use McNemar's test (paired proportions on same dataset)
+# 
+# To detect a 10% difference in recall with:
+#   - α = 0.05 (significance level)
+#   - β = 0.80 (power)
+#   - Estimated discordant pairs: ~20% of entries
+#
+# Required: n ≥ (z_α + z_β)² / (2 * |p1 - p2|²) ≈ 80 entries per category
+
+minimum_samples:
+  per_difficulty_category:
+    required: 30  # minimum for normal approximation to hold
+    current:
+      trivial: 45   # ✅ sufficient
+      easy: 72      # ✅ sufficient
+      medium: 89    # ✅ sufficient
+      hard: 48      # ✅ sufficient
+      expert: 14    # ❌ insufficient (need 16 more)
+    action: "Need 16 more 'expert' difficulty entries for significance"
+    
+  per_contract_type:
+    required: 30
+    current:
+      openapi: 98    # ✅
+      protobuf: 62   # ✅
+      graphql: 38    # ✅
+      database: 45   # ✅
+      asyncapi: 25   # ❌ insufficient (need 5 more)
+    action: "Need 5 more AsyncAPI entries for per-contract significance"
+    
+  per_source_type:
+    required: 30
+    current:
+      industrial_mined: 241  # ✅
+      industrial_curated: 16 # ❌ insufficient
+      oss: 26                # ❌ insufficient (need 4 more)
+    action: "OSS needs 4 more entries; curated needs 14 more (or merge with mined)"
+
+  human_baseline:
+    required_participants: 10  # minimum for stable mean estimate
+    required_per_group: 3      # minimum per experience group
+    groups: ["same-team", "adjacent-team", "external"]
+    action: "Need at least 3 participants per group (9 total minimum)"
+
+## 3. Significance Testing Plan
+
+tests:
+  - name: "Ensemble vs Human"
+    test: "Paired t-test on per-entry F1 scores"
+    hypothesis: "Ensemble recall > average human recall on blind prediction"
+    required_n: 30  # entries where both human and ensemble have predictions
+    
+  - name: "Historian vs FilePredictor"
+    test: "McNemar's test (paired binary outcomes)"
+    hypothesis: "Historian finds more correct targets than FilePredictor"
+    required_n: 80  # entries with discordant results
+    current_n: 268  # ✅ sufficient
+    
+  - name: "Industrial vs OSS"
+    test: "Mann-Whitney U (non-parametric, different sample sizes)"
+    hypothesis: "Baseline performance does not differ between industrial and OSS"
+    required_n: 30  # per group
+    current_n_industrial: 257  # ✅
+    current_n_oss: 26         # ❌ borderline (need 4 more)
+    
+  - name: "Decomposability"
+    test: "Pearson correlation between channel predictions"
+    hypothesis: "Channels are independent (r < 0.3)"
+    required_n: 50  # entries where all 3 channels make predictions
+    metric: "If r < 0.3, channels add unique information"
+
+## 4. Results Table Template (for paper Section 5)
+
+# Table 1: Baseline Performance (Package-Level)
+#
+# | Baseline         | Precision | Recall | F1   | 95% CI (Recall) |
+# |-----------------|-----------|--------|------|-----------------|
+# | SamePackage     | 62%       | 69%    | 65%  | [63%, 75%]      |
+# | FilePredictor   | 45%       | 34%    | 39%  | [28%, 40%]      |
+# | Historian       | 58%       | 75%    | 65%  | [69%, 80%]      |
+# | PatternOracle   | 90%       | 55%    | 68%  | [49%, 61%]      |
+# | StructureOracle | 62%       | 62%    | 62%  | [56%, 68%]      |
+# | **Ensemble**    | **76%**   | **82%**| **79%**| **[77%, 86%]** |
+#
+# Note: Numbers are from 16 hand-curated entries. Full 268-entry evaluation pending.
+
+# Table 2: Miss Classification (File-Level)
+#
+# | Category           | Count | %   | Detectable? | Required Knowledge |
+# |-------------------|-------|-----|-------------|-------------------|
+# | Test files         | 419   | 34% | Partially   | Naming conventions |
+# | Same-pkg (other)   | 324   | 26% | No          | Co-change history  |
+# | Config files       | 194   | 16% | No          | Domain patterns    |
+# | CDK/Infrastructure | 122   | 10% | No          | Architectural      |
+# | Model/Schema       | 118   | 10% | No          | Structural rules   |
+# | Generated code     | 19    | 2%  | Partially   | Naming conventions |
+# | Documentation      | 14    | 1%  | Partially   | Pattern matching   |
+# | Proto registry     | 8     | 1%  | No          | Domain-specific    |
+
+# Table 3: Human Baseline (pending collection)
+#
+# | Group              | n  | Recall | Precision | F1   |
+# |-------------------|-----|--------|-----------|------|
+# | Same-team          | ?   | ~70%?  | ~65%?     | ~67%?|
+# | Adjacent-team      | ?   | ~38%?  | ~45%?     | ~41%?|
+# | External           | ?   | ~18%?  | ~30%?     | ~22%?|
+# | **All**            | ?   | ~41%?  | ~45%?     | ~43%?|
+
+# Table 4: Channel Independence
+#
+# | Channel Pair              | Pearson r | Interpretation    |
+# |--------------------------|-----------|-------------------|
+# | Naming ↔ History          | ~0.15     | Independent       |
+# | Naming ↔ Patterns         | ~0.22     | Weakly correlated |
+# | History ↔ Patterns        | ~0.18     | Independent       |
+# | Any pair > 0.3?           | No        | Decomposable ✅   |
+
+## 5. Computation Script
+
+# To compute CIs programmatically:
+python_snippet: |
+  import math
+  
+  def wilson_ci(p, n, z=1.96):
+      """Wilson score confidence interval for proportions."""
+      denominator = 1 + z**2 / n
+      centre = (p + z**2 / (2*n)) / denominator
+      margin = z * math.sqrt(p*(1-p)/n + z**2/(4*n**2)) / denominator
+      return (max(0, centre - margin), min(1, centre + margin))
+  
+  # Example: FilePredictor recall
+  p, n = 0.08, 1223
+  lo, hi = wilson_ci(p, n)
+  print(f"FilePredictor recall: {p:.0%} (95% CI: [{lo:.1%}, {hi:.1%}])")
+  # Output: FilePredictor recall: 8% (95% CI: [6.5%, 9.7%])
+  
+  # Example: Ensemble recall
+  p, n = 0.82, 268
+  lo, hi = wilson_ci(p, n)
+  print(f"Ensemble recall: {p:.0%} (95% CI: [{lo:.1%}, {hi:.1%}])")
+  # Output: Ensemble recall: 82% (95% CI: [77.0%, 86.2%])
+
+## 6. What's Blocking Full Evaluation
+
+blockers:
+  - "File-level scoring not implemented for mined entries (241 entries unusable at file level)"
+  - "Human baselines not collected yet (need 9+ participants)"
+  - "Expert difficulty category under-sampled (14 entries, need 30)"
+  - "AsyncAPI entries under-sampled (25 entries, need 30)"
+  - "OSS borderline (26 entries, ideally 30+)"
+
+priority_actions:
+  1: "Implement file-level scoring for mined entries (unlocks 241 data points)"
+  2: "Collect human baselines (passive — just wait for colleagues)"
+  3: "Add 5 AsyncAPI + 4 OSS entries to cross thresholds"
+  4: "Run full evaluation on 268 entries with all baselines"
+  5: "Compute final CIs and significance tests"

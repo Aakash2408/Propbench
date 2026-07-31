@@ -1,0 +1,36 @@
+id: mined-addressuiwidgetsservice-025
+title: '[Away][FR-6340] Add check for POM ZA T2 to enable different providers per
+  treatment'
+family: uncategorized
+date: '2026-06-02'
+author: Noor Jaradat
+source: git-mined
+source_repo: AddressUIWidgetsService
+source_commit: 5ff87354cb3f0a18390062618cefd008595103d3
+difficulty: easy
+trigger:
+  package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessorTests.scala
+  intent: '[Away][FR-6340] Add check for POM ZA T2 to enable different providers per
+    treatment'
+  diff_summary: 'Primary change: tst/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessorTests.scala
+    (+56/-0)'
+consequences:
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessor.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessor.scala
+    (+3/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from AddressUIWidgetsService commit 5ff87354. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

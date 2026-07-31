@@ -1,0 +1,45 @@
+id: mined-smartaddressassistantwebapp-014
+title: '[CDP Revamp] Add renderHints to attribute component builders for refactored
+  JSPs'
+family: refactor
+date: '2026-05-05'
+author: Shivam Singla
+source: git-mined
+source_repo: SmartAddressAssistantWebApp
+source_commit: 5dbd6b00168676bd22b1de17eb7d731c3b2c6202
+difficulty: medium
+trigger:
+  package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/builder/attribute/DogRiskComponentBuilder.java
+  intent: '[CDP Revamp] Add renderHints to attribute component builders for refactored
+    JSPs'
+  diff_summary: 'Primary change: src/com/amazon/saa/webapp/builder/attribute/DogRiskComponentBuilder.java
+    (+9/-0)'
+consequences:
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/builder/attribute/BusinessHoursComponentBuilder.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/builder/attribute/BusinessHoursComponentBuilder.java
+    (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - tst/com/amazon/saa/webapp/builder/attribute/AttributeComponentBuilderTest.java
+  description: 'Co-changed: tst/com/amazon/saa/webapp/builder/attribute/AttributeComponentBuilderTest.java
+    (+52/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from SmartAddressAssistantWebApp commit 5dbd6b00. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

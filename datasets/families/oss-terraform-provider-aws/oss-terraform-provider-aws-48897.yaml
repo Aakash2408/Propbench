@@ -1,0 +1,226 @@
+id: oss-terraform-provider-aws-48897
+title: New Lambda Microvms Service
+family: interface-evolution
+date: '2026-07-10'
+author: hashrr
+source: github-api-mined
+source_repo: hashicorp/terraform-provider-aws
+source_url: https://github.com/hashicorp/terraform-provider-aws/pull/48897
+source_pr: 48897
+difficulty: medium
+trigger:
+  package: hashicorp/terraform-provider-aws
+  files:
+  - .ci/.semgrep-service-name2.yml
+  intent: New Lambda Microvms Service
+  diff_summary: 'Primary: .ci/.semgrep-service-name2.yml (+61/-46)'
+consequences:
+- package: hashicorp/terraform-provider-aws
+  files:
+  - .ci/.semgrep-service-name0.yml
+  description: 'modified: .ci/.semgrep-service-name0.yml (+15/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - .ci/.semgrep-service-name1.yml
+  description: 'modified: .ci/.semgrep-service-name1.yml (+28/-15)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - .ci/.semgrep-service-name3.yml
+  description: 'modified: .ci/.semgrep-service-name3.yml (+18/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - .teamcity/components/generated/services_all.kt
+  description: 'modified: .teamcity/components/generated/services_all.kt (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - go.mod
+  description: 'modified: go.mod (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - infrastructure/repository/labels-service.tf
+  description: 'modified: infrastructure/repository/labels-service.tf (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/conns/awsclient_gen.go
+  description: 'modified: internal/conns/awsclient_gen.go (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/provider/framework/provider_gen.go
+  description: 'modified: internal/provider/framework/provider_gen.go (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/provider/sdkv2/provider_gen.go
+  description: 'modified: internal/provider/sdkv2/provider_gen.go (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/provider/sdkv2/service_packages_gen.go
+  description: 'modified: internal/provider/sdkv2/service_packages_gen.go (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/cloudfront/testdata/MultiTenantDistribution/tags/main_gen.tf
+  description: 'added: internal/service/cloudfront/testdata/MultiTenantDistribution/tags/main_gen.tf
+    (+65/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/cloudfront/testdata/MultiTenantDistribution/tagsComputed1/main_gen.tf
+  description: 'added: internal/service/cloudfront/testdata/MultiTenantDistribution/tagsComputed1/main_gen.tf
+    (+69/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/cloudfront/testdata/MultiTenantDistribution/tagsComputed2/main_gen.tf
+  description: 'added: internal/service/cloudfront/testdata/MultiTenantDistribution/tagsComputed2/main_gen.tf
+    (+80/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/cloudfront/testdata/MultiTenantDistribution/tags_defaults/main_gen.tf
+  description: 'added: internal/service/cloudfront/testdata/MultiTenantDistribution/tags_defaults/main_gen.tf
+    (+76/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/cloudfront/testdata/MultiTenantDistribution/tags_ignore/main_gen.tf
+  description: 'added: internal/service/cloudfront/testdata/MultiTenantDistribution/tags_ignore/main_gen.tf
+    (+85/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/lambdamicrovms/generate.go
+  description: 'added: internal/service/lambdamicrovms/generate.go (+9/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/lambdamicrovms/service_endpoint_resolver_gen.go
+  description: 'added: internal/service/lambdamicrovms/service_endpoint_resolver_gen.go
+    (+93/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/lambdamicrovms/service_endpoints_gen_test.go
+  description: 'added: internal/service/lambdamicrovms/service_endpoints_gen_test.go
+    (+613/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/lambdamicrovms/service_package_gen.go
+  description: 'added: internal/service/lambdamicrovms/service_package_gen.go (+90/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/sweep/service_packages_gen_test.go
+  description: 'modified: internal/sweep/service_packages_gen_test.go (+2/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - names/consts_gen.go
+  description: 'modified: names/consts_gen.go (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - names/data/names_data.hcl
+  description: 'modified: names/data/names_data.hcl (+23/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - website/allowed-subcategories.txt
+  description: 'modified: website/allowed-subcategories.txt (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - website/docs/guides/custom-service-endpoints.html.markdown
+  description: 'modified: website/docs/guides/custom-service-endpoints.html.markdown
+    (+1/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 25
+notes: 'Mined from hashicorp/terraform-provider-aws PR #48897. Trigger heuristic applied.
+  Needs review.'

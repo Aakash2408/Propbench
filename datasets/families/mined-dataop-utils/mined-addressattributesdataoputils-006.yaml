@@ -1,0 +1,34 @@
+id: mined-addressattributesdataoputils-006
+title: Generated appweaver artifacts
+family: configuration-evolution
+date: '2025-08-29'
+author: Datta Dwarampudi
+source: git-mined
+source_repo: AddressAttributesDataOpUtils
+source_commit: 27f3afdf79741c16a0a700a618ce37369bd55055
+difficulty: easy
+trigger:
+  package: AddressAttributesDataOpUtils
+  files:
+  - .appweaver/metadata/Units_AddressAttributesDataOpUtils.json
+  intent: Generated appweaver artifacts
+  diff_summary: 'Primary change: .appweaver/metadata/Units_AddressAttributesDataOpUtils.json
+    (+404/-0)'
+consequences:
+- package: AddressAttributesDataOpUtils
+  files:
+  - .appweaver/metadata/BrazilPackage_AddressAttributesDataOpUtils.json
+  description: 'Co-changed: .appweaver/metadata/BrazilPackage_AddressAttributesDataOpUtils.json
+    (+148/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from AddressAttributesDataOpUtils commit 27f3afdf. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

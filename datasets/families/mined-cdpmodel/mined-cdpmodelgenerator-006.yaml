@@ -1,0 +1,97 @@
+id: mined-cdpmodelgenerator-006
+title: '[MELAKA] Adding CDP config for TH + ID + VN'
+family: configuration-evolution
+date: '2025-05-21'
+author: James Hancock(jmhanc)
+source: git-mined
+source_repo: CdpModelGenerator
+source_commit: 5c678a76ca78ced507de026c03da47f1df729bfe
+difficulty: medium
+trigger:
+  package: CdpModelGenerator
+  files:
+  - configuration/personalizedCdpConfig/PropertyTypeCdpModel.yaml
+  intent: '[MELAKA] Adding CDP config for TH + ID + VN'
+  diff_summary: 'Primary change: configuration/personalizedCdpConfig/PropertyTypeCdpModel.yaml
+    (+6/-0)'
+consequences:
+- package: CdpModelGenerator
+  files:
+  - configuration/personalizedCdpConfig/attribute/BusinessHours.yaml
+  description: 'Co-changed: configuration/personalizedCdpConfig/attribute/BusinessHours.yaml
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: CdpModelGenerator
+  files:
+  - configuration/personalizedCdpConfig/attribute/ExceptionDatesProvider.yaml
+  description: 'Co-changed: configuration/personalizedCdpConfig/attribute/ExceptionDatesProvider.yaml
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: CdpModelGenerator
+  files:
+  - configuration/personalizedCdpConfig/attribute/PreferredDeliveryLocationAttributeJsp.yaml
+  description: 'Co-changed: configuration/personalizedCdpConfig/attribute/PreferredDeliveryLocationAttributeJsp.yaml
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: CdpModelGenerator
+  files:
+  - configuration/personalizedCdpConfig/attribute/PreferredDeliveryLocationAttributeProvider.yaml
+  description: 'Co-changed: configuration/personalizedCdpConfig/attribute/PreferredDeliveryLocationAttributeProvider.yaml
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: CdpModelGenerator
+  files:
+  - configuration/personalizedCdpConfig/propertyTypeGroup/ApartmentPropertyTypeGroup.yaml
+  description: 'Co-changed: configuration/personalizedCdpConfig/propertyTypeGroup/ApartmentPropertyTypeGroup.yaml
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: CdpModelGenerator
+  files:
+  - configuration/personalizedCdpConfig/propertyTypeGroup/BusinessPropertyTypeGroup.yaml
+  description: 'Co-changed: configuration/personalizedCdpConfig/propertyTypeGroup/BusinessPropertyTypeGroup.yaml
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: CdpModelGenerator
+  files:
+  - configuration/personalizedCdpConfig/propertyTypeGroup/HousePropertyTypeGroup.yaml
+  description: 'Co-changed: configuration/personalizedCdpConfig/propertyTypeGroup/HousePropertyTypeGroup.yaml
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: CdpModelGenerator
+  files:
+  - configuration/personalizedCdpConfig/propertyTypeGroup/OtherPropertyTypeGroup.yaml
+  description: 'Co-changed: configuration/personalizedCdpConfig/propertyTypeGroup/OtherPropertyTypeGroup.yaml
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 9
+notes: Auto-mined from CdpModelGenerator commit 5c678a76. Trigger heuristic may be
+  wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

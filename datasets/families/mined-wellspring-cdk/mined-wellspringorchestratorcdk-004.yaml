@@ -1,0 +1,32 @@
+id: mined-wellspringorchestratorcdk-004
+title: enable commit for deliver events and add committer kms
+family: configuration-evolution
+date: '2026-07-07'
+author: Swetha Palli
+source: git-mined
+source_repo: WellspringOrchestratorCDK
+source_commit: 4fc8e1bfdc610731ebb2a8b566214b9589ae43f9
+difficulty: easy
+trigger:
+  package: WellspringOrchestratorCDK
+  files:
+  - src/stageConfig.ts
+  intent: enable commit for deliver events and add committer kms
+  diff_summary: 'Primary change: src/stageConfig.ts (+13/-0)'
+consequences:
+- package: WellspringOrchestratorCDK
+  files:
+  - src/serviceStack.ts
+  description: 'Co-changed: src/serviceStack.ts (+3/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from WellspringOrchestratorCDK commit 4fc8e1bf. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

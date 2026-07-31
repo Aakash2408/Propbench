@@ -1,0 +1,43 @@
+id: mined-addressuiwidgetsservice-005
+title: 'fix(widget-context): Remove resolveWidgetContext from ClientIdProvider'
+family: configuration-evolution
+date: '2026-07-12'
+author: Aashi Bhatia
+source: git-mined
+source_repo: AddressUIWidgetsService
+source_commit: e7953bd05abd10d7ce35d5f6b1c9d67c10f0e6bb
+difficulty: medium
+trigger:
+  package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/addressformconfig/orchestration/ClientIdProviderTests.scala
+  intent: 'fix(widget-context): Remove resolveWidgetContext from ClientIdProvider'
+  diff_summary: 'Primary change: tst/com/amazon/addressuiwidgetsservice/addressformconfig/orchestration/ClientIdProviderTests.scala
+    (+6/-40)'
+consequences:
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/addressformconfig/orchestration/ClientIdProvider.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/addressformconfig/orchestration/ClientIdProvider.scala
+    (+3/-16)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/utility/CookieWeblabOverridesTest.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/utility/CookieWeblabOverridesTest.scala
+    (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from AddressUIWidgetsService commit e7953bd0. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

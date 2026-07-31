@@ -1,0 +1,33 @@
+id: mined-aastypescoral-003
+title: Add BusinessHoursAccuracy and DeliveryPreferenceMandate fields in DeliveryInformationType
+family: uncategorized
+date: '2026-05-25'
+author: Gunasree Kunkulagunta
+source: git-mined
+source_repo: AASTypesCoral
+source_commit: 215ffc2242fd6dbbafd1892c6cec52d9c4735a65
+difficulty: easy
+trigger:
+  package: AASTypesCoral
+  files:
+  - model/AddressAuthorityTypes.xsd.codigo.model.xml
+  intent: Add BusinessHoursAccuracy and DeliveryPreferenceMandate fields in DeliveryInformationType
+  diff_summary: 'Primary change: model/AddressAuthorityTypes.xsd.codigo.model.xml
+    (+6/-0)'
+consequences:
+- package: AASTypesCoral
+  files:
+  - model/AddressAuthorityTypes.xsd.model.xml
+  description: 'Co-changed: model/AddressAuthorityTypes.xsd.model.xml (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from AASTypesCoral commit 215ffc22. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

@@ -1,0 +1,32 @@
+id: mined-wellspringorchestratorcdk-011
+title: Adding a stack to fetch defect post context data
+family: uncategorized
+date: '2026-06-02'
+author: Shruti Shinde
+source: git-mined
+source_repo: WellspringOrchestratorCDK
+source_commit: 798610344d41465f006d47682abb41df76beee82
+difficulty: easy
+trigger:
+  package: WellspringOrchestratorCDK
+  files:
+  - src/postContextStack.ts
+  intent: Adding a stack to fetch defect post context data
+  diff_summary: 'Primary change: src/postContextStack.ts (+127/-0)'
+consequences:
+- package: WellspringOrchestratorCDK
+  files:
+  - src/app.ts
+  description: 'Co-changed: src/app.ts (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from WellspringOrchestratorCDK commit 79861034. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

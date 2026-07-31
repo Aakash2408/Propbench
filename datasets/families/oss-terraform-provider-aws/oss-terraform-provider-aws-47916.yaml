@@ -1,0 +1,50 @@
+id: oss-terraform-provider-aws-47916
+title: 'resource/aws_cloudfront_function: Add tags support'
+family: interface-evolution
+date: '2026-06-04'
+author: arditti
+source: github-api-mined
+source_repo: hashicorp/terraform-provider-aws
+source_url: https://github.com/hashicorp/terraform-provider-aws/pull/47916
+source_pr: 47916
+difficulty: medium
+trigger:
+  package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/cloudfront/function.go
+  intent: 'resource/aws_cloudfront_function: Add tags support'
+  diff_summary: 'Primary: internal/service/cloudfront/function.go (+10/-0)'
+consequences:
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/cloudfront/function_test.go
+  description: 'modified: internal/service/cloudfront/function_test.go (+106/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/cloudfront/service_package_gen.go
+  description: 'modified: internal/service/cloudfront/service_package_gen.go (+4/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - website/docs/r/cloudfront_function.html.markdown
+  description: 'modified: website/docs/r/cloudfront_function.html.markdown (+2/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from hashicorp/terraform-provider-aws PR #47916. Trigger heuristic applied.
+  Needs review.'

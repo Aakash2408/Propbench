@@ -1,0 +1,116 @@
+id: mined-smartaddressassistantwebapp-030
+title: '[CDPRevamp] Fix Spring wiring for AttributeComponentRegistry and builder beans'
+family: configuration-evolution
+date: '2026-04-02'
+author: Qasim Bhatia
+source: git-mined
+source_repo: SmartAddressAssistantWebApp
+source_commit: 194e11283a274ba1371ea4b3e86d4ffe8f850b43
+difficulty: hard
+trigger:
+  package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/config/AttributeComponentRegistryConfig.java
+  intent: '[CDPRevamp] Fix Spring wiring for AttributeComponentRegistry and builder
+    beans'
+  diff_summary: 'Primary change: src/com/amazon/saa/webapp/config/AttributeComponentRegistryConfig.java
+    (+12/-21)'
+consequences:
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/builder/attribute/AccessCodesComponentBuilder.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/builder/attribute/AccessCodesComponentBuilder.java
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/builder/attribute/AddressInstructionsComponentBuilder.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/builder/attribute/AddressInstructionsComponentBuilder.java
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/builder/attribute/BusinessHoursComponentBuilder.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/builder/attribute/BusinessHoursComponentBuilder.java
+    (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/builder/attribute/CallBoxComponentBuilder.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/builder/attribute/CallBoxComponentBuilder.java
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/builder/attribute/DogRiskComponentBuilder.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/builder/attribute/DogRiskComponentBuilder.java
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/builder/attribute/ExceptionDatesComponentBuilder.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/builder/attribute/ExceptionDatesComponentBuilder.java
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/builder/attribute/OtherDeliveryInstructionsComponentBuilder.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/builder/attribute/OtherDeliveryInstructionsComponentBuilder.java
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/builder/attribute/PhysicalKeyComponentBuilder.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/builder/attribute/PhysicalKeyComponentBuilder.java
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/builder/attribute/PinOnMapComponentBuilder.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/builder/attribute/PinOnMapComponentBuilder.java
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/builder/attribute/PreferredDeliveryLocationComponentBuilder.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/builder/attribute/PreferredDeliveryLocationComponentBuilder.java
+    (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 11
+notes: Auto-mined from SmartAddressAssistantWebApp commit 194e1128. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

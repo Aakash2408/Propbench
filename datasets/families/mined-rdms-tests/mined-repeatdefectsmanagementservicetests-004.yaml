@@ -1,0 +1,34 @@
+id: mined-repeatdefectsmanagementservicetests-004
+title: Fix tests after changes in model
+family: test-evolution
+date: '2025-04-16'
+author: Vrishab Jain
+source: git-mined
+source_repo: RepeatDefectsManagementServiceTests
+source_commit: 3452dac97ca908fe85a5d1a7408a9a5ae1145119
+difficulty: easy
+trigger:
+  package: RepeatDefectsManagementServiceTests
+  files:
+  - src/main/java/com/amazon/repeatdefectsmanagementservice/SimpleIntegrationTest.java
+  intent: Fix tests after changes in model
+  diff_summary: 'Primary change: src/main/java/com/amazon/repeatdefectsmanagementservice/SimpleIntegrationTest.java
+    (+2/-1)'
+consequences:
+- package: RepeatDefectsManagementServiceTests
+  files:
+  - Config
+  description: 'Co-changed: Config (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from RepeatDefectsManagementServiceTests commit 3452dac9. Trigger
+  heuristic may be wrong. Needs human review to confirm trigger/consequence split
+  and add expert_reasoning.

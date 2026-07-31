@@ -1,0 +1,88 @@
+id: mined-smartaddressassistantwebapp-007
+title: '[CDP Revamp] Wire DeliveryInstructionsViewController to refactored view model'
+family: refactor
+date: '2026-05-19'
+author: Shivam Singla
+source: git-mined
+source_repo: SmartAddressAssistantWebApp
+source_commit: 1a3ab095bc67e6e2ab31cc0f6886d35c1ee9e5aa
+difficulty: medium
+trigger:
+  package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdpcsg/mobile/landingPageRefactored.jsp
+  intent: '[CDP Revamp] Wire DeliveryInstructionsViewController to refactored view
+    model'
+  diff_summary: 'Primary change: webapp/WEB-INF/views/cdpcsg/mobile/landingPageRefactored.jsp
+    (+73/-0)'
+consequences:
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/controller/core/apiController/addressWizard/DeliveryInstructionsViewController.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/controller/core/apiController/addressWizard/DeliveryInstructionsViewController.java
+    (+22/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/provider/CdpFeatureFlagsProvider.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/provider/CdpFeatureFlagsProvider.java
+    (+15/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/resource/WeblabGate.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/resource/WeblabGate.java (+9/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdpcsg/commonHtmlElementsRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdpcsg/commonHtmlElementsRefactored.jsp
+    (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdpcsg/desktop/landingCDPRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdpcsg/desktop/landingCDPRefactored.jsp
+    (+34/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdpcsg/desktop/landingPageRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdpcsg/desktop/landingPageRefactored.jsp
+    (+40/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdpcsg/mobile/landingCDPRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdpcsg/mobile/landingCDPRefactored.jsp
+    (+44/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 8
+notes: Auto-mined from SmartAddressAssistantWebApp commit 1a3ab095. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

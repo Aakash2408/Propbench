@@ -1,0 +1,107 @@
+id: mined-smartaddressassistantwebapp-018
+title: Revert "[CDPRevamp] Integrate Alexandria photo upload and download in Devo
+  — Phase 2"
+family: test-evolution
+date: '2026-04-30'
+author: Qasim Bhatia
+source: git-mined
+source_repo: SmartAddressAssistantWebApp
+source_commit: 68a1fb85a4efb3a53e432acdf9ac8ed5c52ecdb5
+difficulty: medium
+trigger:
+  package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/accessor/AlexandriaAccessor.java
+  intent: Revert "[CDPRevamp] Integrate Alexandria photo upload and download in Devo
+    — Phase 2"
+  diff_summary: 'Primary change: src/com/amazon/saa/webapp/accessor/AlexandriaAccessor.java
+    (+0/-178)'
+consequences:
+- package: SmartAddressAssistantWebApp
+  files:
+  - Config
+  description: 'Co-changed: Config (+0/-6)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - configuration/brazil-config/global/AlexandriaConfig.cfg
+  description: 'Co-changed: configuration/brazil-config/global/AlexandriaConfig.cfg
+    (+0/-60)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/config/AlexandriaConfig.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/config/AlexandriaConfig.java
+    (+0/-104)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/controller/core/apiController/deliveryProfile/DeliveryPhotoUploadController.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/controller/core/apiController/deliveryProfile/DeliveryPhotoUploadController.java
+    (+22/-93)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/model/apiModel/deliveryProfile/DeletePhotoRequest.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/model/apiModel/deliveryProfile/DeletePhotoRequest.java
+    (+11/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/model/apiModel/deliveryProfile/UploadPhotoResponse.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/model/apiModel/deliveryProfile/UploadPhotoResponse.java
+    (+18/-12)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - tst/com/amazon/saa/webapp/accessor/AlexandriaAccessorTest.java
+  description: 'Co-changed: tst/com/amazon/saa/webapp/accessor/AlexandriaAccessorTest.java
+    (+0/-269)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - tst/com/amazon/saa/webapp/controller/core/apiController/deliveryProfile/DeliveryPhotoUploadControllerTest.java
+  description: 'Co-changed: tst/com/amazon/saa/webapp/controller/core/apiController/deliveryProfile/DeliveryPhotoUploadControllerTest.java
+    (+399/-340)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/controllerTesting/landingPage.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/controllerTesting/landingPage.jsp
+    (+15/-30)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 10
+notes: Auto-mined from SmartAddressAssistantWebApp commit 68a1fb85. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

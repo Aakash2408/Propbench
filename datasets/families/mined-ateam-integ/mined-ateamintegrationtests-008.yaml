@@ -1,0 +1,60 @@
+id: mined-ateamintegrationtests-008
+title: '[BH Accuracy] Adding propagation integration tests for BH Accuracy attribute'
+family: test-evolution
+date: '2025-06-18'
+author: Qasim Bhatia
+source: git-mined
+source_repo: AteamIntegrationTests
+source_commit: 90bfee135b6c8b0928926d2bf898add77add4b4b
+difficulty: medium
+trigger:
+  package: AteamIntegrationTests
+  files:
+  - data/propagated/US/testScenarios/campusScenarios/businessHoursAccuracy.prototxt
+  intent: '[BH Accuracy] Adding propagation integration tests for BH Accuracy attribute'
+  diff_summary: 'Primary change: data/propagated/US/testScenarios/campusScenarios/businessHoursAccuracy.prototxt
+    (+55/-0)'
+consequences:
+- package: AteamIntegrationTests
+  files:
+  - data/propagated/Default/testScenarios/PropertyType.prototxt
+  description: 'Co-changed: data/propagated/Default/testScenarios/PropertyType.prototxt
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/propagated/US/testScenarios/CampusType.prototxt
+  description: 'Co-changed: data/propagated/US/testScenarios/CampusType.prototxt (+1/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/propagated/US/testScenarios/IsCommonDeliveryPlace.prototxt
+  description: 'Co-changed: data/propagated/US/testScenarios/IsCommonDeliveryPlace.prototxt
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/propagated/US/testScenarios/campusIngestedPIDData.prototxt
+  description: 'Co-changed: data/propagated/US/testScenarios/campusIngestedPIDData.prototxt
+    (+3/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 5
+notes: Auto-mined from AteamIntegrationTests commit 90bfee13. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

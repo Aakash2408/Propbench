@@ -1,0 +1,72 @@
+id: mined-cdpmodelgenerator-003
+title: '[CdpModelGenerator] Add featureGateId and layoutId fields for CDP revamp (dead
+  code)'
+family: configuration-evolution
+date: '2026-03-25'
+author: Aakash Sangwan
+source: git-mined
+source_repo: CdpModelGenerator
+source_commit: 0055c815039462f44af4c5fc5025fde8d51394f0
+difficulty: medium
+trigger:
+  package: CdpModelGenerator
+  files:
+  - src/com/amazon/ate/deliveryprofile/model/AttributeGroup.java
+  intent: '[CdpModelGenerator] Add featureGateId and layoutId fields for CDP revamp
+    (dead code)'
+  diff_summary: 'Primary change: src/com/amazon/ate/deliveryprofile/model/AttributeGroup.java
+    (+7/-0)'
+consequences:
+- package: CdpModelGenerator
+  files:
+  - configuration/personalizedCdpConfig/PropertyTypeCdpModel.yaml
+  description: 'Co-changed: configuration/personalizedCdpConfig/PropertyTypeCdpModel.yaml
+    (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: CdpModelGenerator
+  files:
+  - configuration/personalizedCdpConfig/attributeGroup/DogRiskLevelGroup.yaml
+  description: 'Co-changed: configuration/personalizedCdpConfig/attributeGroup/DogRiskLevelGroup.yaml
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: CdpModelGenerator
+  files:
+  - configuration/personalizedCdpConfig/attributeGroup/PinOnMapDeliveryLocationGroup.yaml
+  description: 'Co-changed: configuration/personalizedCdpConfig/attributeGroup/PinOnMapDeliveryLocationGroup.yaml
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: CdpModelGenerator
+  files:
+  - configuration/personalizedCdpConfig/attributeGroup/PreferredDeliveryLocationGroup.yaml
+  description: 'Co-changed: configuration/personalizedCdpConfig/attributeGroup/PreferredDeliveryLocationGroup.yaml
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: CdpModelGenerator
+  files:
+  - src/com/amazon/ate/deliveryprofile/model/PropertyTypeCDPModel.java
+  description: 'Co-changed: src/com/amazon/ate/deliveryprofile/model/PropertyTypeCDPModel.java
+    (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 6
+notes: Auto-mined from CdpModelGenerator commit 0055c815. Trigger heuristic may be
+  wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

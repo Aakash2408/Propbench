@@ -1,0 +1,86 @@
+id: mined-addressattributesdataoputils-005
+title: '[CDPRevamp] Add GdpsAttributeTransformer to AddressAttributesDataOpUtils'
+family: configuration-evolution
+date: '2026-04-07'
+author: Qasim Bhatia
+source: git-mined
+source_repo: AddressAttributesDataOpUtils
+source_commit: 4da68562dcf5c489ed9f4d2322e17bf746e43b62
+difficulty: medium
+trigger:
+  package: AddressAttributesDataOpUtils
+  files:
+  - src/com/amazon/addressattributes/translators/GdpsAttributeTransformer.java
+  intent: '[CDPRevamp] Add GdpsAttributeTransformer to AddressAttributesDataOpUtils'
+  diff_summary: 'Primary change: src/com/amazon/addressattributes/translators/GdpsAttributeTransformer.java
+    (+271/-0)'
+consequences:
+- package: AddressAttributesDataOpUtils
+  files:
+  - Config
+  description: 'Co-changed: Config (+3/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressAttributesDataOpUtils
+  files:
+  - build.xml
+  description: 'Co-changed: build.xml (+33/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressAttributesDataOpUtils
+  files:
+  - configuration/brazil-config/test/GdpsAttributeTransformerTestConfig.cfg
+  description: 'Co-changed: configuration/brazil-config/test/GdpsAttributeTransformerTestConfig.cfg
+    (+5/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressAttributesDataOpUtils
+  files:
+  - src/com/amazon/addressattributes/model/GdpsAttributeTransformResult.java
+  description: 'Co-changed: src/com/amazon/addressattributes/model/GdpsAttributeTransformResult.java
+    (+23/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressAttributesDataOpUtils
+  files:
+  - src/com/amazon/addressattributes/model/GdpsRawAttribute.java
+  description: 'Co-changed: src/com/amazon/addressattributes/model/GdpsRawAttribute.java
+    (+19/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressAttributesDataOpUtils
+  files:
+  - src/com/amazon/addressattributes/translators/AddressAttributesEnvelopeTranslator.java
+  description: 'Co-changed: src/com/amazon/addressattributes/translators/AddressAttributesEnvelopeTranslator.java
+    (+6/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressAttributesDataOpUtils
+  files:
+  - tst/com/amazon/addressattributes/translators/GdpsAttributeTransformerTest.java
+  description: 'Co-changed: tst/com/amazon/addressattributes/translators/GdpsAttributeTransformerTest.java
+    (+275/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 8
+notes: Auto-mined from AddressAttributesDataOpUtils commit 4da68562. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

@@ -1,0 +1,48 @@
+id: mined-arx-opscdk-008
+title: Removes ICAM Stack and permissions
+family: configuration-evolution
+date: '2025-12-18'
+author: Jatin Batra
+source: git-mined
+source_repo: ARX-OpsCDK
+source_commit: c1bc695f2e70696b09deebbef2179c0001bc40c1
+difficulty: medium
+trigger:
+  package: ARX-OpsCDK
+  files:
+  - lib/stacks/ICAMStack.ts
+  intent: Removes ICAM Stack and permissions
+  diff_summary: 'Primary change: lib/stacks/ICAMStack.ts (+0/-119)'
+consequences:
+- package: ARX-OpsCDK
+  files:
+  - lib/config/pipelineStageConfigs.ts
+  description: 'Co-changed: lib/config/pipelineStageConfigs.ts (+0/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: ARX-OpsCDK
+  files:
+  - lib/constants/stackConstants.ts
+  description: 'Co-changed: lib/constants/stackConstants.ts (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: ARX-OpsCDK
+  files:
+  - lib/tests/pipeline.test.ts
+  description: 'Co-changed: lib/tests/pipeline.test.ts (+1/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 4
+notes: Auto-mined from ARX-OpsCDK commit c1bc695f. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

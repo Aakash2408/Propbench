@@ -1,0 +1,79 @@
+id: mined-addressuiwidgetsservice-012
+title: 'feat(pre-validation): Skip synchronous AVS on submit when pre-validated'
+family: uncategorized
+date: '2026-07-03'
+author: Kanchan Hingorani
+source: git-mined
+source_repo: AddressUIWidgetsService
+source_commit: 949670d5653c8e8ed76acb895635aa02af3a9003
+difficulty: medium
+trigger:
+  package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/orchestrator/AddressFormHandlerTests.scala
+  intent: 'feat(pre-validation): Skip synchronous AVS on submit when pre-validated'
+  diff_summary: 'Primary change: tst/com/amazon/addressuiwidgetsservice/orchestrator/AddressFormHandlerTests.scala
+    (+165/-0)'
+consequences:
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/models/ContinuationContextModel.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/models/ContinuationContextModel.scala
+    (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/models/ContinuationContextModelFactory.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/models/ContinuationContextModelFactory.scala
+    (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/orchestration/handlers/AddressFormHandler.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/orchestration/handlers/AddressFormHandler.scala
+    (+63/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/orchestration/handlers/AddressFormHandlerFactory.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/orchestration/handlers/AddressFormHandlerFactory.scala
+    (+23/-11)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/models/ContinuationContextModelFactoryTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/models/ContinuationContextModelFactoryTests.scala
+    (+19/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/orchestrator/AddressFormHandlerFactoryTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/orchestrator/AddressFormHandlerFactoryTests.scala
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 7
+notes: Auto-mined from AddressUIWidgetsService commit 949670d5. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

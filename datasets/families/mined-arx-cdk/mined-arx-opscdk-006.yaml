@@ -1,0 +1,50 @@
+id: mined-arx-opscdk-006
+title: Adding Medic role to allow medic to have access to the cloudwatch logs published
+  by DLS
+family: configuration-evolution
+date: '2026-01-06'
+author: Abhishek Pandey
+source: git-mined
+source_repo: ARX-OpsCDK
+source_commit: 657a54b3642c5d93e65d11f3651f1bdd1cd1da47
+difficulty: medium
+trigger:
+  package: ARX-OpsCDK
+  files:
+  - lib/stacks/cloudwatchLogsStack.ts
+  intent: Adding Medic role to allow medic to have access to the cloudwatch logs published
+    by DLS
+  diff_summary: 'Primary change: lib/stacks/cloudwatchLogsStack.ts (+4/-0)'
+consequences:
+- package: ARX-OpsCDK
+  files:
+  - Config
+  description: 'Co-changed: Config (+1/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: ARX-OpsCDK
+  files:
+  - lib/tests/cloudwatchLogsStack.test.ts
+  description: 'Co-changed: lib/tests/cloudwatchLogsStack.test.ts (+72/-29)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: ARX-OpsCDK
+  files:
+  - package.json
+  description: 'Co-changed: package.json (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 4
+notes: Auto-mined from ARX-OpsCDK commit 657a54b3. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

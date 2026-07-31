@@ -1,0 +1,115 @@
+id: mined-addressuiwidgetsservice-024
+title: Added customizations required for AB External storefront customers
+family: configuration-evolution
+date: '2026-05-04'
+author: Tammana Raju
+source: git-mined
+source_repo: AddressUIWidgetsService
+source_commit: bf61d947311ecdd8e080241ea5e365cfbb47ae95
+difficulty: hard
+trigger:
+  package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/addressformconfig/orchestration/AddressFormConfigGeneratorTests.scala
+  intent: Added customizations required for AB External storefront customers
+  diff_summary: 'Primary change: tst/com/amazon/addressuiwidgetsservice/addressformconfig/orchestration/AddressFormConfigGeneratorTests.scala
+    (+91/-3)'
+consequences:
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/addressformconfig/orchestration/AddressFormConfigGenerator.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/addressformconfig/orchestration/AddressFormConfigGenerator.scala
+    (+30/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/constants/Counters.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/constants/Counters.scala
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/features/scopeBased/ABStorefrontScopeFeatureFormConfig.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/features/scopeBased/ABStorefrontScopeFeatureFormConfig.scala
+    (+13/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/features/scopeBased/ScopeBasedFeatureFormConfig.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/features/scopeBased/ScopeBasedFeatureFormConfig.scala
+    (+5/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/features/scopeBased/ScopeBasedFeatureFormConfigFactory.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/features/scopeBased/ScopeBasedFeatureFormConfigFactory.scala
+    (+5/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/models/AddressFormOptionsModel.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/models/AddressFormOptionsModel.scala
+    (+6/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/widgets/AddressFormFields/HiddenCountryDropdownAddressFormField.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/widgets/AddressFormFields/HiddenCountryDropdownAddressFormField.scala
+    (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/widgets/EnterAddress/FormFields/AbstractDropDownAddressFormField.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/widgets/EnterAddress/FormFields/AbstractDropDownAddressFormField.scala
+    (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/features/scopeBased/ABStorefrontScopeFeatureFormConfigTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/features/scopeBased/ABStorefrontScopeFeatureFormConfigTests.scala
+    (+39/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/features/scopeBased/ScopeBasedFeatureFormConfigFactoryTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/features/scopeBased/ScopeBasedFeatureFormConfigFactoryTests.scala
+    (+13/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 11
+notes: Auto-mined from AddressUIWidgetsService commit bf61d947. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

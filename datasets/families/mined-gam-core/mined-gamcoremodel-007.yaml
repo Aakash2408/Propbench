@@ -1,0 +1,42 @@
+id: mined-gamcoremodel-007
+title: Removed LombokVerifier-1.0 to fix SAS risk
+family: configuration-evolution
+date: '2025-07-21'
+author: Ruchira Saha
+source: git-mined
+source_repo: GAMCoreModel
+source_commit: 9f37b72c804b5db637dfce17aefdb21461818091
+difficulty: medium
+trigger:
+  package: GAMCoreModel
+  files:
+  - tst/com/amazon/gam/model/utils/AttributeMapUtilsTest.java
+  intent: Removed LombokVerifier-1.0 to fix SAS risk
+  diff_summary: 'Primary change: tst/com/amazon/gam/model/utils/AttributeMapUtilsTest.java
+    (+25/-4)'
+consequences:
+- package: GAMCoreModel
+  files:
+  - Config
+  description: 'Co-changed: Config (+0/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GAMCoreModel
+  files:
+  - tst/com/amazon/gam/model/attribute/deduper/BusinessHrsDeduperTest.java
+  description: 'Co-changed: tst/com/amazon/gam/model/attribute/deduper/BusinessHrsDeduperTest.java
+    (+8/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from GAMCoreModel commit 9f37b72c. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

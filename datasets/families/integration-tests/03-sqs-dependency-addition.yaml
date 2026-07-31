@@ -1,0 +1,80 @@
+id: "integration-tests-03"
+title: "Add SQS SDK dependency for Lambda integration test"
+
+family: "dependency-evolution"
+date: "2026-07-16"
+author: "aakkaash"
+cr_ids:
+  - "CR-289673698"
+
+trigger:
+  package: "RepeatDefectsManagementServiceTests"
+  version_set: "RepeatDefectsManagementService/release"
+  files:
+    - "tst/com/amazon/rdms/integration/DefectEventProcessorLambdaTest.java"
+  intent: "Write Lambda integ test that sends SQS messages — requires adding SQS SDK that isn't currently a dependency"
+  diff_summary: |
+    New test class importing software.amazon.awssdk.services.sqs.SqsClient.
+    Sends SQS message to trigger Lambda, waits, verifies DDB state via Coral API.
+
+consequences:
+  - package: "RepeatDefectsManagementServiceTests"
+    version_set: "RepeatDefectsManagementService/release"
+    files:
+      - "Config"
+    description: "Brazil Config must add AwsJavaSdk-Sqs = 2.0 (build fails without it)"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.90
+    reasoning: "New import not in existing deps → build fails. Expert checks Config immediately when adding new SDK usage."
+
+  - package: "RepeatDefectsManagementServiceTests"
+    version_set: "RepeatDefectsManagementService/release"
+    files:
+      - "configuration/testng-development.xml"
+    description: "TestNG XML needs new test class + @Parameters for queue URL (local dev only)"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.65
+    reasoning: "TestNG requires class registration + parameter declaration. But this is local-only config — Hydra injects its own."
+
+expert_reasoning: |
+  This is a DEPENDENCY EVOLUTION case. The test code introduces a new SDK
+  import that doesn't exist in the package's current dependencies.
+  
+  The expert's process:
+  1. See new import (SqsClient) → check Config for AwsJavaSdk-Sqs
+  2. Not there → add it (AwsJavaSdk-Sqs = 2.0)
+  3. TestNG: register class + parameterize queue URL
+  
+  This is structurally detectable: new import → missing dep → Config change.
+  An AST-aware Structure oracle could catch this perfectly.
+
+common_mistakes:
+  - "Forgetting Config dep (import compiles in IDE with workspace deps but fails in brazil-build)"
+  - "Hardcoding queue URL instead of parameterizing (breaks across environments)"
+  - "Committing testng-development.xml with local qualifier (breaks Hydra)"
+  - "Running integ-tests after clean without release first (TLS truststore missing)"
+
+tags:
+  - "single-package"
+  - "dependency-addition"
+  - "build-dependency"
+  - "structurally-detectable"
+
+difficulty: "easy"
+required_knowledge:
+  - "dependency_graph"
+  - "build_system_rules"
+not_required:
+  - "historical_pattern"
+  - "runtime_behavior"
+  - "domain_semantics"
+
+propagation_unit: "file"
+
+effort:
+  actual_hours: 12
+  mechanical_hours: 2
+  packages_touched: 1
+  crs_raised: 1

@@ -1,0 +1,34 @@
+id: mined-gamcoremodel-009
+title: Adding GeoSage source
+family: interface-evolution
+date: '2025-04-03'
+author: Arun Kumar
+source: git-mined
+source_repo: GAMCoreModel
+source_commit: fc37ab612a1d2cdf9971ea400074c4e03498d235
+difficulty: easy
+trigger:
+  package: GAMCoreModel
+  files:
+  - configuration/proto-data/addressSource/AddressSourceMapping.prototxt
+  intent: Adding GeoSage source
+  diff_summary: 'Primary change: configuration/proto-data/addressSource/AddressSourceMapping.prototxt
+    (+4/-0)'
+consequences:
+- package: GAMCoreModel
+  files:
+  - configuration/proto-schema/addressSource/AddressSourceName.proto
+  description: 'Co-changed: configuration/proto-schema/addressSource/AddressSourceName.proto
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from GAMCoreModel commit fc37ab61. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

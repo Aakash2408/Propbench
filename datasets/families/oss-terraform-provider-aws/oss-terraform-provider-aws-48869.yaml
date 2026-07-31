@@ -1,0 +1,43 @@
+id: oss-terraform-provider-aws-48869
+title: 'resource/aws_eks_pod_identity_association: add policy argument'
+family: interface-evolution
+date: '2026-07-24'
+author: jpastoor
+source: github-api-mined
+source_repo: hashicorp/terraform-provider-aws
+source_url: https://github.com/hashicorp/terraform-provider-aws/pull/48869
+source_pr: 48869
+difficulty: medium
+trigger:
+  package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/eks/pod_identity_association.go
+  intent: 'resource/aws_eks_pod_identity_association: add policy argument'
+  diff_summary: 'Primary: internal/service/eks/pod_identity_association.go (+18/-12)'
+consequences:
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/eks/pod_identity_association_test.go
+  description: 'modified: internal/service/eks/pod_identity_association_test.go (+98/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - website/docs/r/eks_pod_identity_association.html.markdown
+  description: 'modified: website/docs/r/eks_pod_identity_association.html.markdown
+    (+23/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from hashicorp/terraform-provider-aws PR #48869. Trigger heuristic applied.
+  Needs review.'

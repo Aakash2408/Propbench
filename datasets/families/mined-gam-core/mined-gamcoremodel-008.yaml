@@ -1,0 +1,34 @@
+id: mined-gamcoremodel-008
+title: Adding WELLSPRING_JENGA REGRID GATEWAY as new source of data
+family: interface-evolution
+date: '2025-05-07'
+author: Rishi Khandelwal
+source: git-mined
+source_repo: GAMCoreModel
+source_commit: 43f90e3343cdd3321f885505897fefcf7795e5fd
+difficulty: easy
+trigger:
+  package: GAMCoreModel
+  files:
+  - configuration/proto-data/addressSource/AddressSourceMapping.prototxt
+  intent: Adding WELLSPRING_JENGA REGRID GATEWAY as new source of data
+  diff_summary: 'Primary change: configuration/proto-data/addressSource/AddressSourceMapping.prototxt
+    (+12/-0)'
+consequences:
+- package: GAMCoreModel
+  files:
+  - configuration/proto-schema/addressSource/AddressSourceName.proto
+  description: 'Co-changed: configuration/proto-schema/addressSource/AddressSourceName.proto
+    (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from GAMCoreModel commit 43f90e33. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

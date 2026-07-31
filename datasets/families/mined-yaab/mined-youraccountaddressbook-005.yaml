@@ -1,0 +1,52 @@
+id: mined-youraccountaddressbook-005
+title: 'feat: [NL/BE/SA/AE expansion] Add delivery preferences link to YourAccountAddressBook'
+family: uncategorized
+date: '2026-06-25'
+author: Aurora Ruiz
+source: git-mined
+source_repo: YourAccountAddressBook
+source_commit: 9272dec08379246218a140e825fc0cd22e697b90
+difficulty: medium
+trigger:
+  package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/features/addressbook/AddressBookFeatureProviderTests.scala
+  intent: 'feat: [NL/BE/SA/AE expansion] Add delivery preferences link to YourAccountAddressBook'
+  diff_summary: 'Primary change: tst/com/amazon/identity/address/features/addressbook/AddressBookFeatureProviderTests.scala
+    (+102/-2)'
+consequences:
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/features/addressbook/AddressBookFeatureProvider.scala
+  description: 'Co-changed: src/com/amazon/identity/address/features/addressbook/AddressBookFeatureProvider.scala
+    (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/serviceaccessors/WebLabServiceAccessor.scala
+  description: 'Co-changed: src/com/amazon/identity/address/serviceaccessors/WebLabServiceAccessor.scala
+    (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/features/serviceaccessors/WebLabServiceAccessorTest.scala
+  description: 'Co-changed: tst/com/amazon/identity/address/features/serviceaccessors/WebLabServiceAccessorTest.scala
+    (+4/-4)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 4
+notes: Auto-mined from YourAccountAddressBook commit 9272dec0. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

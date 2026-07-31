@@ -1,0 +1,36 @@
+id: mined-destinationlistingcdpplugins-008
+title: Replace logging with metrics for nudge retrieval failures and filter the requests
+  with OwnerCustomer
+family: uncategorized
+date: '2025-07-31'
+author: kiranbob
+source: git-mined
+source_repo: DestinationListingCDPPlugins
+source_commit: 9aac84f8881c813a76c86e25688a605b61867400
+difficulty: easy
+trigger:
+  package: DestinationListingCDPPlugins
+  files:
+  - src/com/amazon/destinationlisting/plugin/business/manager/AddressDeliveryInstructionsManager.java
+  intent: Replace logging with metrics for nudge retrieval failures and filter the
+    requests with OwnerCustomerId as null"
+  diff_summary: 'Primary change: src/com/amazon/destinationlisting/plugin/business/manager/AddressDeliveryInstructionsManager.java
+    (+6/-1)'
+consequences:
+- package: DestinationListingCDPPlugins
+  files:
+  - src/com/amazon/destinationlisting/plugin/metrics/Counters.java
+  description: 'Co-changed: src/com/amazon/destinationlisting/plugin/metrics/Counters.java
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from DestinationListingCDPPlugins commit 9aac84f8. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

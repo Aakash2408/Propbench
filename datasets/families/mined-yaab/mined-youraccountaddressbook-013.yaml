@@ -1,0 +1,43 @@
+id: mined-youraccountaddressbook-013
+title: remove none radio button and change cancel button to skip for T2 of SAD Delete
+family: refactor
+date: '2026-01-28'
+author: leo feng
+source: git-mined
+source_repo: YourAccountAddressBook
+source_commit: c3b802914106f230deee15893ad81d872ebc7cb5
+difficulty: medium
+trigger:
+  package: YourAccountAddressBook
+  files:
+  - webapp/WEB-INF/views/mobile/sad-delete-address-bottom-sheet.ftl
+  intent: remove none radio button and change cancel button to skip for T2 of SAD
+    Delete
+  diff_summary: 'Primary change: webapp/WEB-INF/views/mobile/sad-delete-address-bottom-sheet.ftl
+    (+20/-15)'
+consequences:
+- package: YourAccountAddressBook
+  files:
+  - webapp/WEB-INF/views/desktop/sad-delete-address-modal.ftl
+  description: 'Co-changed: webapp/WEB-INF/views/desktop/sad-delete-address-modal.ftl
+    (+10/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - webapp/WEB-INF/views/sad-delete-modal-support.ftl
+  description: 'Co-changed: webapp/WEB-INF/views/sad-delete-modal-support.ftl (+0/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from YourAccountAddressBook commit c3b80291. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

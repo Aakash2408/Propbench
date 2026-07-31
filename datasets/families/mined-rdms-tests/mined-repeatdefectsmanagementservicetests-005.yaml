@@ -1,0 +1,34 @@
+id: mined-repeatdefectsmanagementservicetests-005
+title: Re-branding RDMS to DMS
+family: uncategorized
+date: '2025-04-02'
+author: Vrishab Jain
+source: git-mined
+source_repo: RepeatDefectsManagementServiceTests
+source_commit: 212517599a007392192d30708d3ad2eb757d04d8
+difficulty: easy
+trigger:
+  package: RepeatDefectsManagementServiceTests
+  files:
+  - .gitignore
+  intent: Re-branding RDMS to DMS
+  diff_summary: 'Primary change: .gitignore (+1/-0)'
+consequences:
+- package: RepeatDefectsManagementServiceTests
+  files:
+  - src/main/java/com/amazon/repeatdefectsmanagementservice/SimpleIntegrationTest.java
+  description: 'Co-changed: src/main/java/com/amazon/repeatdefectsmanagementservice/SimpleIntegrationTest.java
+    (+6/-6)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from RepeatDefectsManagementServiceTests commit 21251759. Trigger
+  heuristic may be wrong. Needs human review to confirm trigger/consequence split
+  and add expert_reasoning.

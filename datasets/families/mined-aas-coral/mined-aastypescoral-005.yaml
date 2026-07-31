@@ -1,0 +1,43 @@
+id: mined-aastypescoral-005
+title: '[CDPRevamp] Add CUSTOMER_DELIVERY_LOCATION_PHOTO attribute to AAS type system
+  and AIX pipeline'
+family: uncategorized
+date: '2026-04-15'
+author: Qasim Bhatia
+source: git-mined
+source_repo: AASTypesCoral
+source_commit: cf11db3e83e05bc83e777c12d8429803153bffdf
+difficulty: medium
+trigger:
+  package: AASTypesCoral
+  files:
+  - model/AddressAuthorityTypes.xsd.codigo.model.xml
+  intent: '[CDPRevamp] Add CUSTOMER_DELIVERY_LOCATION_PHOTO attribute to AAS type
+    system and AIX pipeline'
+  diff_summary: 'Primary change: model/AddressAuthorityTypes.xsd.codigo.model.xml
+    (+3/-0)'
+consequences:
+- package: AASTypesCoral
+  files:
+  - model/AddressAttributeTypes.xsd.model.xml
+  description: 'Co-changed: model/AddressAttributeTypes.xsd.model.xml (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AASTypesCoral
+  files:
+  - model/AddressAuthorityTypes.xsd.model.xml
+  description: 'Co-changed: model/AddressAuthorityTypes.xsd.model.xml (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from AASTypesCoral commit cf11db3e. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

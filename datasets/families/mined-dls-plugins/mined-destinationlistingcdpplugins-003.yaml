@@ -1,0 +1,34 @@
+id: mined-destinationlistingcdpplugins-003
+title: Add EU marketplace support for SafePlace nudges (GB, FR, IT, ES, EG)
+family: uncategorized
+date: '2026-01-27'
+author: Prince Kumar
+source: git-mined
+source_repo: DestinationListingCDPPlugins
+source_commit: e46199557b04a1c543fb4b6b280811072d972245
+difficulty: easy
+trigger:
+  package: DestinationListingCDPPlugins
+  files:
+  - src/com/amazon/destinationlisting/plugin/decorate/AddressDeliveryInstructionsDecoratorPlugin.java
+  intent: Add EU marketplace support for SafePlace nudges (GB, FR, IT, ES, EG)
+  diff_summary: 'Primary change: src/com/amazon/destinationlisting/plugin/decorate/AddressDeliveryInstructionsDecoratorPlugin.java
+    (+14/-7)'
+consequences:
+- package: DestinationListingCDPPlugins
+  files:
+  - src/com/amazon/destinationlisting/plugin/business/util/CountryNudgeEligibilityUtil.java
+  description: 'Co-changed: src/com/amazon/destinationlisting/plugin/business/util/CountryNudgeEligibilityUtil.java
+    (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from DestinationListingCDPPlugins commit e4619955. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

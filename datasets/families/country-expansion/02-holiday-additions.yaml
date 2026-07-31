@@ -1,0 +1,82 @@
+id: "country-expansion-02"
+title: "Add 10 missing holidays for PR, PT, ZA to ExceptionDatesProvider"
+
+family: "country-expansion"
+date: "2026-07-20"
+author: "aakkaash"
+cr_ids:
+  - "CR-290677619"
+
+trigger:
+  package: "CdpModelGenerator"
+  version_set: "SmartAddressAssistantHorizonte/release"
+  files:
+    - "src/ExceptionDatesProvider.yaml"
+  intent: "Add all missing holidays from authoritative Quip QA doc for PR (4), PT (4), and ZA (2)"
+  diff_summary: |
+    Added 10 holiday entries:
+    PR: Emancipation Day, Good Friday, Juneteenth, Christmas Eve
+    PT: Carnival, Easter Sunday, Corpus Christi, Saint Anthony's Day
+    ZA: Family Day, Women's Day (observed)
+    3 new stringIds needed: cdp_emancipation_day_pr, cdp_saint_anthony_day_pt,
+    cdp_national_womens_day_za_observed
+
+consequences:
+  - package: "CdpModelGenerator"
+    version_set: "SmartAddressAssistantHorizonte/release"
+    files: []
+    description: "No other files in CdpModelGenerator needed changing — holidays are self-contained in ExceptionDatesProvider.yaml"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.95
+    reasoning: "ExceptionDatesProvider is isolated. Adding holidays doesn't affect routing or other configs."
+
+  - package: "AST Translation Tool"
+    version_set: "unknown"
+    files: []
+    description: "3 new stringIds need translation registration (en_US, es_US for PR; pt_PT for PT; en for ZA)"
+    mechanical: true
+    relationship: "co-change"
+    optional: true
+    lag: "separate process"
+    confidence_an_expert_would_predict: 0.55
+    reasoning: "New stringIds require AST translation registration. Not a code change but a process step that's easy to forget."
+
+expert_reasoning: |
+  This is a SIMPLE case — holidays are self-contained within ExceptionDatesProvider.yaml.
+  No routing changes needed. No other config files affected.
+  
+  The only propagation is the AST translation registration for new stringIds,
+  which is a separate process (not a code change in another package).
+  
+  The expert knows NOT to over-predict here. A junior might think "new holidays
+  means updating PersonalizedCdpConfig" — but holidays are only in the plain
+  exception dates config, not the personalized flow.
+
+common_mistakes:
+  - "Thinking holidays affect PersonalizedCdpConfig (they don't — only ExceptionDatesProvider)"
+  - "Forgetting to register new stringIds with AST translation tool"
+  - "Applying Saint Anthony's Day PT-wide when it's historically Lisbon-only (config can't scope to city)"
+  - "Not including ALL holidays from authoritative list (previous QA caught gaps)"
+
+tags:
+  - "single-package"
+  - "single-file"
+  - "minimal-propagation"
+  - "process-step-required"
+  - "over-prediction-risk"
+
+effort:
+  actual_hours: 3
+  mechanical_hours: 2
+  review_hours: 1
+  packages_touched: 1
+  crs_raised: 1
+
+notes: |
+  This is valuable as a NEGATIVE case for the prediction engine.
+  A good engine should predict NOTHING downstream (beyond the trigger itself).
+  If the engine predicts PlainCdpModel or PersonalizedCdpConfig changes,
+  that's a false positive — the engine is over-predicting.
+  
+  Tests the "precision" side: don't hallucinate dependencies that don't exist.

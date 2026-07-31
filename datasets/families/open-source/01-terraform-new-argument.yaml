@@ -1,0 +1,117 @@
+id: "oss-terraform-01"
+title: "Add new argument 'job_run_queuing_enabled' to aws_glue_job resource"
+
+family: "interface-evolution"
+date: "2024-08-22"
+author: "open-source-contributor"
+source: "terraform-provider-aws"
+source_url: "https://github.com/hashicorp/terraform-provider-aws/issues/38991"
+
+# This is a THOUGHT EXPERIMENT based on the known terraform-provider-aws
+# contribution pattern. The actual PR may differ, but the PATTERN is
+# well-documented in their contribution guide.
+
+trigger:
+  package: "terraform-provider-aws"
+  version_set: null
+  files:
+    - "internal/service/glue/job.go"
+  intent: "Add optional 'job_run_queuing_enabled' argument to aws_glue_job resource to support job run queuing feature"
+  diff_summary: |
+    In job.go (the resource schema definition):
+    - Added new Schema entry: "job_run_queuing_enabled" (TypeBool, Optional)
+    - Added to expandGlueJob(): read the new attribute and set in API call
+    - Added to flattenGlueJob(): read from API response and set in state
+
+consequences:
+  - package: "terraform-provider-aws"
+    files:
+      - "internal/service/glue/job_test.go"
+    description: "Acceptance test for the new argument (TestAccGlueJob_jobRunQueuing)"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.98
+    reasoning: "Terraform provider contribution guide REQUIRES acceptance tests for new arguments. PR won't be merged without them. The test file mirrors the resource file 1:1."
+
+  - package: "terraform-provider-aws"
+    files:
+      - "website/docs/r/glue_job.html.markdown"
+    description: "Documentation for the new argument in the resource page"
+    mechanical: true
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.95
+    reasoning: "Documentation is REQUIRED for all new arguments. The docs file mirrors the resource name. Every contributor knows this."
+
+  - package: "terraform-provider-aws"
+    files:
+      - ".changelog/XXXXX.txt"
+    description: "Changelog entry for the new feature"
+    mechanical: true
+    relationship: "co-change"
+    confidence_an_expert_would_predict: 0.90
+    reasoning: "terraform-provider-aws uses per-PR changelog files. Every contribution needs one. First-time contributors often forget this."
+
+expert_reasoning: |
+  The terraform-provider-aws has an EXTREMELY well-documented contribution pattern:
+  
+  Adding a new argument to an existing resource ALWAYS requires:
+  1. Schema definition in resource file (the trigger)
+  2. Acceptance test (same service directory, _test.go suffix)
+  3. Documentation (website/docs/r/ or website/docs/d/)
+  4. Changelog entry (.changelog/<PR-number>.txt)
+  
+  This pattern is documented in:
+  - https://github.com/hashicorp/terraform-provider-aws/blob/main/docs/add-a-new-resource.md
+  - CONTRIBUTING.md
+  - PR template
+  
+  An experienced Terraform contributor predicts ALL FOUR files from seeing
+  only the schema change. This is pure PATTERN knowledge — identical to
+  AAS source onboarding at Amazon.
+  
+  KEY INSIGHT: The pattern is ORGANIZATIONAL (documented in contribution guide),
+  not structural (can't derive "needs changelog" from code structure alone).
+
+common_mistakes:
+  - "Forgetting the changelog file (bot will comment asking for it)"
+  - "Writing test but not running it with TF_ACC=1 (tests hit real AWS)"
+  - "Putting docs in wrong directory (r/ vs d/ for resource vs data source)"
+  - "Not adding the argument to both expand AND flatten functions"
+
+tags:
+  - "open-source"
+  - "terraform"
+  - "interface-evolution"
+  - "well-documented-pattern"
+  - "organizational-memory-dominated"
+
+# GENERALIZATION ANALYSIS
+generalization_notes: |
+  PATTERN ORACLE PREDICTION:
+  Would it fire? YES — if we had a "Terraform new argument" playbook.
+  The pattern is identical to AAS onboarding:
+    "Adding X to schema → test + docs + changelog ALWAYS needed"
+  
+  STRUCTURE ORACLE PREDICTION:
+  Would it fire? PARTIALLY.
+  - _test.go file mirrors resource file → Structure could catch this
+  - website/docs/ has naming convention → Structure could catch this
+  - .changelog/ has no structural link → Structure would MISS this
+  
+  HYPOTHESIS H3 TEST:
+  - Pattern channel: TRANSFERS (organizational playbooks exist in OSS too)
+  - Structure channel: PARTIALLY TRANSFERS (naming conventions are universal)
+  - The "changelog" requirement is pure org memory (identical to "different VS" knowledge at Amazon)
+  
+  VERDICT: The same decomposition applies. Pattern + Structure would get ~75%
+  on this change. The missing 25% is organizational process knowledge
+  (changelog format, PR template requirements) — same as at Amazon.
+
+difficulty: "medium"
+required_knowledge:
+  - "historical_pattern"
+  - "organizational_convention"
+  - "file_naming_convention"
+not_required:
+  - "runtime_behavior"
+  - "dependency_graph"

@@ -1,0 +1,88 @@
+id: mined-addressuiwidgetsservice-003
+title: add set address to default in create and update address
+family: uncategorized
+date: '2026-07-01'
+author: Ziqian Luo
+source: git-mined
+source_repo: AddressUIWidgetsService
+source_commit: 303c0b2cdf44fbc3dcfc9acc8bb50a846de40bd2
+difficulty: medium
+trigger:
+  package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/activity/UpdateAddressActivityTests.scala
+  intent: add set address to default in create and update address
+  diff_summary: 'Primary change: tst/com/amazon/addressuiwidgetsservice/activity/UpdateAddressActivityTests.scala
+    (+81/-0)'
+consequences:
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/activity/CreateAddressActivity.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/activity/CreateAddressActivity.scala
+    (+8/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/activity/UpdateAddressActivity.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/activity/UpdateAddressActivity.scala
+    (+7/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/constants/amazonapi/AmazonAPIOperationConstants.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/constants/amazonapi/AmazonAPIOperationConstants.scala
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/coral/handlers/CoralV3EntityHintHandler.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/coral/handlers/CoralV3EntityHintHandler.scala
+    (+4/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/utility/AmazonAPISharedHelper.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/utility/AmazonAPISharedHelper.scala
+    (+49/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/activity/CreateAddressActivityTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/activity/CreateAddressActivityTests.scala
+    (+62/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/utility/AmazonAPISharedHelperTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/utility/AmazonAPISharedHelperTests.scala
+    (+73/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 8
+notes: Auto-mined from AddressUIWidgetsService commit 303c0b2c. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

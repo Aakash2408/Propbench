@@ -1,0 +1,115 @@
+id: mined-geostudiodeliveryhistorylambda-008
+title: Implemented Processor for SDS/SSA sns events
+family: uncategorized
+date: '2025-10-29'
+author: Sowjanya Dodda
+source: git-mined
+source_repo: GeoStudioDeliveryHistoryLambda
+source_commit: 0432ccacea3f7d22436441e7258c7b9ef20b40b0
+difficulty: hard
+trigger:
+  package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/processor/DeliveryDataMessageProcessor.java
+  intent: Implemented Processor for SDS/SSA sns events
+  diff_summary: 'Primary change: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/processor/DeliveryDataMessageProcessor.java
+    (+109/-0)'
+consequences:
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/constant/Constants.java
+  description: 'Co-changed: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/constant/Constants.java
+    (+1/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/enums/EventSourceName.java
+  description: 'Co-changed: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/enums/EventSourceName.java
+    (+7/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/enums/SQSEventSource.java
+  description: 'Co-changed: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/enums/SQSEventSource.java
+    (+6/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/factory/SQSMessageProcessorFactory.java
+  description: 'Co-changed: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/factory/SQSMessageProcessorFactory.java
+    (+12/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/handler/DeliveryHistoryEventHandler.java
+  description: 'Co-changed: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/handler/DeliveryHistoryEventHandler.java
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/util/DynamoDBUtil.java
+  description: 'Co-changed: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/util/DynamoDBUtil.java
+    (+67/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/java/com/amazon/geostudiodeliveryhistory/lambda/factory/SQSMessageProcessorFactoryTest.java
+  description: 'Co-changed: src/test/java/com/amazon/geostudiodeliveryhistory/lambda/factory/SQSMessageProcessorFactoryTest.java
+    (+10/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/java/com/amazon/geostudiodeliveryhistory/lambda/handler/DeliveryHistoryEventHandlerTest.java
+  description: 'Co-changed: src/test/java/com/amazon/geostudiodeliveryhistory/lambda/handler/DeliveryHistoryEventHandlerTest.java
+    (+61/-6)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/java/com/amazon/geostudiodeliveryhistory/lambda/processor/DeliveryDataMessageProcessorTest.java
+  description: 'Co-changed: src/test/java/com/amazon/geostudiodeliveryhistory/lambda/processor/DeliveryDataMessageProcessorTest.java
+    (+419/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/test/java/com/amazon/geostudiodeliveryhistory/lambda/util/DynamoDBUtilTest.java
+  description: 'Co-changed: src/test/java/com/amazon/geostudiodeliveryhistory/lambda/util/DynamoDBUtilTest.java
+    (+260/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 11
+notes: Auto-mined from GeoStudioDeliveryHistoryLambda commit 0432ccac. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

@@ -1,0 +1,152 @@
+id: mined-addressuiwidgetsservice-023
+title: 'feat(widget-context): CR7 — Migrate orchestrators + feature providers to WidgetContextProvider
+  behin'
+family: configuration-evolution
+date: '2026-06-04'
+author: Aashi Bhatia
+source: git-mined
+source_repo: AddressUIWidgetsService
+source_commit: 12556aada7fc2ab438ee503b5bb9c88adf0d2991
+difficulty: hard
+trigger:
+  package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/features/AddressFeatureProvider.scala
+  intent: 'feat(widget-context): CR7 — Migrate orchestrators + feature providers to
+    WidgetContextProvider behind weblab'
+  diff_summary: 'Primary change: src/com/amazon/addressuiwidgetsservice/features/AddressFeatureProvider.scala
+    (+27/-11)'
+consequences:
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/addressformconfig/feature/AddressFormFeaturesEligibilityProvider.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/addressformconfig/feature/AddressFormFeaturesEligibilityProvider.scala
+    (+14/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/features/addresswizard/AddressWizardFeatureProvider.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/features/addresswizard/AddressWizardFeatureProvider.scala
+    (+15/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/features/locationaware/AddressFormPrePopulation.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/features/locationaware/AddressFormPrePopulation.scala
+    (+13/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/orchestration/AddressDataOperationOrchestrator.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/orchestration/AddressDataOperationOrchestrator.scala
+    (+13/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/orchestration/AddressFormOrchestrator.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/orchestration/AddressFormOrchestrator.scala
+    (+17/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/addressformconfig/feature/AddressFormFeaturesEligibilityProviderTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/addressformconfig/feature/AddressFormFeaturesEligibilityProviderTests.scala
+    (+29/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/addressformconfig/orchestration/AddressFormConfigGeneratorTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/addressformconfig/orchestration/AddressFormConfigGeneratorTests.scala
+    (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/features/AddressFeatureProviderTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/features/AddressFeatureProviderTests.scala
+    (+29/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/features/addresswizard/AddressWizardFeatureProviderTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/features/addresswizard/AddressWizardFeatureProviderTests.scala
+    (+25/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/features/locationaware/AddressFormPrePopulationTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/features/locationaware/AddressFormPrePopulationTests.scala
+    (+34/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/models/AddressModelFactoryTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/models/AddressModelFactoryTests.scala
+    (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/orchestrator/AddressDataOperationOrchestratorTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/orchestrator/AddressDataOperationOrchestratorTests.scala
+    (+29/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/orchestrator/AddressFormOrchestratorTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/orchestrator/AddressFormOrchestratorTests.scala
+    (+27/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/test/StandardMocks.scala
+  description: 'Co-changed: tst/test/StandardMocks.scala (+2/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 15
+notes: Auto-mined from AddressUIWidgetsService commit 12556aad. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

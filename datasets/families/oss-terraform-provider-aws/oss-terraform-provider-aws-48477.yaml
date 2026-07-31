@@ -1,0 +1,104 @@
+id: oss-terraform-provider-aws-48477
+title: '🤖🤖🤖 cloudfront: Generate tag tests for `aws_cloudfront_trust_store`'
+family: test-evolution
+date: '2026-06-22'
+author: gdavison
+source: github-api-mined
+source_repo: hashicorp/terraform-provider-aws
+source_url: https://github.com/hashicorp/terraform-provider-aws/pull/48477
+source_pr: 48477
+difficulty: medium
+trigger:
+  package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/cloudfront/testdata/TrustStore/tags_ignore/main_gen.tf
+  intent: '🤖🤖🤖 cloudfront: Generate tag tests for `aws_cloudfront_trust_store`'
+  diff_summary: 'Primary: internal/service/cloudfront/testdata/TrustStore/tags_ignore/main_gen.tf
+    (+83/-0)'
+consequences:
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/cloudfront/tags_gen_test.go
+  description: 'added: internal/service/cloudfront/tags_gen_test.go (+19/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/cloudfront/testdata/TrustStore/tags/main_gen.tf
+  description: 'added: internal/service/cloudfront/testdata/TrustStore/tags/main_gen.tf
+    (+63/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/cloudfront/testdata/TrustStore/tagsComputed1/main_gen.tf
+  description: 'added: internal/service/cloudfront/testdata/TrustStore/tagsComputed1/main_gen.tf
+    (+67/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/cloudfront/testdata/TrustStore/tagsComputed2/main_gen.tf
+  description: 'added: internal/service/cloudfront/testdata/TrustStore/tagsComputed2/main_gen.tf
+    (+78/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/cloudfront/testdata/TrustStore/tags_defaults/main_gen.tf
+  description: 'added: internal/service/cloudfront/testdata/TrustStore/tags_defaults/main_gen.tf
+    (+74/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/cloudfront/testdata/tmpl/trust_store_basic.gtpl
+  description: 'added: internal/service/cloudfront/testdata/tmpl/trust_store_basic.gtpl
+    (+47/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/cloudfront/trust_store.go
+  description: 'modified: internal/service/cloudfront/trust_store.go (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/cloudfront/trust_store_tags_gen_test.go
+  description: 'added: internal/service/cloudfront/trust_store_tags_gen_test.go (+2431/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/cloudfront/trust_store_test.go
+  description: 'modified: internal/service/cloudfront/trust_store_test.go (+0/-134)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 10
+notes: 'Mined from hashicorp/terraform-provider-aws PR #48477. Trigger heuristic applied.
+  Needs review.'

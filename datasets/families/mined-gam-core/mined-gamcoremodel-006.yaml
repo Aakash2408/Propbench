@@ -1,0 +1,36 @@
+id: mined-gamcoremodel-006
+title: Add DEEP_NAP_WELLSPRING as a new Producer for LG creation from the Science
+  Team
+family: interface-evolution
+date: '2025-08-18'
+author: Nishant Jain
+source: git-mined
+source_repo: GAMCoreModel
+source_commit: b6b6e98997254cfefe0285806ccc6c121c5b3061
+difficulty: easy
+trigger:
+  package: GAMCoreModel
+  files:
+  - configuration/proto-data/addressSource/AddressSourceMapping.prototxt
+  intent: Add DEEP_NAP_WELLSPRING as a new Producer for LG creation from the Science
+    Team
+  diff_summary: 'Primary change: configuration/proto-data/addressSource/AddressSourceMapping.prototxt
+    (+4/-0)'
+consequences:
+- package: GAMCoreModel
+  files:
+  - configuration/proto-schema/addressSource/AddressSourceName.proto
+  description: 'Co-changed: configuration/proto-schema/addressSource/AddressSourceName.proto
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from GAMCoreModel commit b6b6e989. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

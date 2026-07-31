@@ -1,0 +1,33 @@
+id: mined-ateamintegrationtests-005
+title: Adding integrtion tests for ADDRESS_TYPE DE
+family: test-evolution
+date: '2025-07-20'
+author: Manaswini Gorthi
+source: git-mined
+source_repo: AteamIntegrationTests
+source_commit: e617959e8ad110a356320dbb347d65ea10ee46fa
+difficulty: easy
+trigger:
+  package: AteamIntegrationTests
+  files:
+  - data/selection/DE/testScenarios/source-precedence-majority/AddressType.prototxt
+  intent: Adding integrtion tests for ADDRESS_TYPE DE
+  diff_summary: 'Primary change: data/selection/DE/testScenarios/source-precedence-majority/AddressType.prototxt
+    (+23/-0)'
+consequences:
+- package: AteamIntegrationTests
+  files:
+  - data/selection/DE/testScenarios/DSLSource.prototxt
+  description: 'Co-changed: data/selection/DE/testScenarios/DSLSource.prototxt (+3/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from AteamIntegrationTests commit e617959e. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

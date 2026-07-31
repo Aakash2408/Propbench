@@ -1,0 +1,86 @@
+id: mined-youraccountaddressbook-007
+title: '[Away][PrimeAir] Weblab Removal: PA_ARX_SPOT_SELECTION_EXPERIMENT_941682'
+family: uncategorized
+date: '2026-04-28'
+author: Apratim Tripathi
+source: git-mined
+source_repo: YourAccountAddressBook
+source_commit: 535991248e978a6c94440e118848830227c29fd8
+difficulty: medium
+trigger:
+  package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/serviceaccessors/AddressUIWidgetsServiceAccessorTests.scala
+  intent: '[Away][PrimeAir] Weblab Removal: PA_ARX_SPOT_SELECTION_EXPERIMENT_941682'
+  diff_summary: 'Primary change: tst/com/amazon/identity/address/serviceaccessors/AddressUIWidgetsServiceAccessorTests.scala
+    (+1/-31)'
+consequences:
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/features/addressbook/widgets/AddressBookWidget.scala
+  description: 'Co-changed: src/com/amazon/identity/address/features/addressbook/widgets/AddressBookWidget.scala
+    (+0/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/serviceaccessors/AddressUIWidgetsServiceAccessor.scala
+  description: 'Co-changed: src/com/amazon/identity/address/serviceaccessors/AddressUIWidgetsServiceAccessor.scala
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/serviceaccessors/WebLabServiceAccessor.scala
+  description: 'Co-changed: src/com/amazon/identity/address/serviceaccessors/WebLabServiceAccessor.scala
+    (+3/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/features/addressbook/widgets/AddressBookWidgetTest.scala
+  description: 'Co-changed: tst/com/amazon/identity/address/features/addressbook/widgets/AddressBookWidgetTest.scala
+    (+0/-6)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/features/serviceaccessors/WebLabServiceAccessorTest.scala
+  description: 'Co-changed: tst/com/amazon/identity/address/features/serviceaccessors/WebLabServiceAccessorTest.scala
+    (+0/-21)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - webapp/WEB-INF/views/desktop/list-all-addresses.ftl
+  description: 'Co-changed: webapp/WEB-INF/views/desktop/list-all-addresses.ftl (+12/-14)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - webapp/WEB-INF/views/mobile/list-all-addresses.ftl
+  description: 'Co-changed: webapp/WEB-INF/views/mobile/list-all-addresses.ftl (+12/-15)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 8
+notes: Auto-mined from YourAccountAddressBook commit 53599124. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

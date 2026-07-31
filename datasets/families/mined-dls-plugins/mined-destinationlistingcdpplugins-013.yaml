@@ -1,0 +1,33 @@
+id: mined-destinationlistingcdpplugins-013
+title: Upgrade all DLS dependencies to JDK17
+family: dependency-evolution
+date: '2025-01-23'
+author: Ramesh Daddagol
+source: git-mined
+source_repo: DestinationListingCDPPlugins
+source_commit: 3f9f65b6ce3cef3f8beec44b5758418c65bd3c0a
+difficulty: easy
+trigger:
+  package: DestinationListingCDPPlugins
+  files:
+  - src/com/amazon/destinationlisting/plugin/business/util/CountryCDPEligibilityUtil.java
+  intent: Upgrade all DLS dependencies to JDK17
+  diff_summary: 'Primary change: src/com/amazon/destinationlisting/plugin/business/util/CountryCDPEligibilityUtil.java
+    (+8/-5)'
+consequences:
+- package: DestinationListingCDPPlugins
+  files:
+  - Config
+  description: 'Co-changed: Config (+5/-6)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from DestinationListingCDPPlugins commit 3f9f65b6. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

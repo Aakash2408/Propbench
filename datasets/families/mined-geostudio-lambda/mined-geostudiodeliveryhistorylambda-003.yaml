@@ -1,0 +1,43 @@
+id: mined-geostudiodeliveryhistorylambda-003
+title: '[RDR][CITE] Add model definitions for CS contact defect integration'
+family: test-evolution
+date: '2026-05-21'
+author: Qasim Bhatia
+source: git-mined
+source_repo: GeoStudioDeliveryHistoryLambda
+source_commit: ba56e10ac2264ea9fe95c147e77dc9d27db3074a
+difficulty: medium
+trigger:
+  package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/model/cscontact/CSContactEvent.java
+  intent: '[RDR][CITE] Add model definitions for CS contact defect integration'
+  diff_summary: 'Primary change: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/model/cscontact/CSContactEvent.java
+    (+139/-0)'
+consequences:
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/enums/EventSourceName.java
+  description: 'Co-changed: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/enums/EventSourceName.java
+    (+9/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryLambda
+  files:
+  - src/main/java/com/amazon/geostudiodeliveryhistory/lambda/enums/SQSEventSource.java
+  description: 'Co-changed: src/main/java/com/amazon/geostudiodeliveryhistory/lambda/enums/SQSEventSource.java
+    (+8/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from GeoStudioDeliveryHistoryLambda commit ba56e10a. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

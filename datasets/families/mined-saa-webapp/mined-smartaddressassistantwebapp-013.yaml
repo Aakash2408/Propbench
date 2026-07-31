@@ -1,0 +1,72 @@
+id: mined-smartaddressassistantwebapp-013
+title: '[CDP Revamp] Create refactored business-hours tags and consuming JSPs for
+  Proposal E'
+family: refactor
+date: '2026-05-07'
+author: Shivam Singla
+source: git-mined
+source_repo: SmartAddressAssistantWebApp
+source_commit: a6a23d56ad2d1574f1f4d47d420c03934812d724
+difficulty: medium
+trigger:
+  package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/tags/businessHours/business-hours-drop-down-refactored.tag
+  intent: '[CDP Revamp] Create refactored business-hours tags and consuming JSPs for
+    Proposal E'
+  diff_summary: 'Primary change: webapp/WEB-INF/tags/businessHours/business-hours-drop-down-refactored.tag
+    (+98/-0)'
+consequences:
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/tags/businessHours/business-hours-refactored.tag
+  description: 'Co-changed: webapp/WEB-INF/tags/businessHours/business-hours-refactored.tag
+    (+129/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/deliveryHoursSummaryHolderRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/deliveryHoursSummaryHolderRefactored.jsp
+    (+28/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/desktop/businessHours/businessHoursSameRowSatSunFormRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/desktop/businessHours/businessHoursSameRowSatSunFormRefactored.jsp
+    (+50/-20)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/deliveryHoursFormRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/deliveryHoursFormRefactored.jsp
+    (+31/-14)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/exceptionDatesFormRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/exceptionDatesFormRefactored.jsp
+    (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 6
+notes: Auto-mined from SmartAddressAssistantWebApp commit a6a23d56. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

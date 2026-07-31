@@ -1,0 +1,90 @@
+id: "cdk-infrastructure-03"
+title: "Add Building Summary workflow to WellspringPlaceAttributeTool with Bedrock LLM integration"
+
+family: "infrastructure-evolution"
+date: "2026-07-03"
+author: "aakkaash"
+cr_ids:
+  - "CR-291104343"
+
+trigger:
+  package: "WellspringPlaceAttributeTool"
+  version_set: "WellspringOrchestrator/development"
+  files:
+    - "src/wellspring_place_attribute/building_summary_workflow.py"
+    - "src/wellspring_place_attribute/invoke_model.py"
+  intent: "Add building_summary_workflow that invokes Bedrock imported model to generate building summaries from delivery hints"
+  diff_summary: |
+    New workflow file: building_summary_workflow.py (orchestrates hint collection → LLM → write result)
+    Modified invoke_model.py: switch from bedrock to bedrock-runtime, add imported model ARN support
+
+consequences:
+  - package: "WellspringLearningCDK"
+    version_set: "WellspringOrchestrator/development"
+    files:
+      - "lib/agents-stack.ts"
+    description: "CDK stack needs Bedrock InvokeModel IAM permission + BEDROCK_MODEL_ARN env var for the Lambda/Batch job"
+    mechanical: false
+    relationship: "structural"
+    confidence_an_expert_would_predict: 0.90
+    reasoning: "If Python code calls bedrock-runtime:InvokeModel, the IAM role needs the permission. CDK stack defines the IAM role."
+
+  - package: "WellspringTriggers"
+    version_set: "WellspringOrchestrator/development"
+    files:
+      - "building-summary-trigger/src/main/java/BuildingSummaryTriggerHandler.java"
+    description: "Trigger Lambda that feeds events into the Building Summary workflow via SQS"
+    mechanical: false
+    relationship: "co-change"
+    confidence_an_expert_would_predict: 0.70
+    reasoning: "A new workflow needs a trigger. But this is a design decision — the trigger could have been an ESM, a cron, or something else."
+
+  - package: "WellspringOrchestratorCDK"
+    version_set: "WellspringOrchestrator/development"
+    files:
+      - "lib/orchestrator-stack.ts"
+    description: "Orchestrator CDK needs routing config for the new trigger source"
+    mechanical: false
+    relationship: "co-change"
+    confidence_an_expert_would_predict: 0.55
+    reasoning: "The orchestrator routes triggers to workflows. New workflow = new routing entry. Less obvious without knowing the MML architecture."
+
+expert_reasoning: |
+  Adding a new workflow to an agent farm is a multi-package change because
+  the architecture spans: trigger → orchestrator → agent → CDK (IAM/env).
+  
+  The expert knows:
+  1. bedrock-runtime call → IAM permission in CDK (structural)
+  2. New workflow → needs a trigger (architectural pattern)
+  3. Trigger → orchestrator routing (architectural pattern)
+  
+  None of these are purely mechanical. They require understanding the
+  end-to-end architecture of the agent farm system.
+
+common_mistakes:
+  - "Forgetting IAM permission for bedrock-runtime:InvokeModel (Lambda fails at runtime with AccessDenied)"
+  - "Not adding the model ARN as an environment variable (hardcoded in code = not deployable across stages)"
+  - "Assuming the orchestrator knows about the new trigger automatically (needs explicit routing config)"
+
+tags:
+  - "multi-package"
+  - "infrastructure"
+  - "new-feature"
+  - "cross-account"
+  - "requires-architectural-knowledge"
+
+difficulty: "hard"
+required_knowledge:
+  - "architectural_pattern"
+  - "iam_permissions"
+  - "runtime_behavior"
+not_required:
+  - "historical_pattern"
+  - "naming_convention"
+
+effort:
+  actual_hours: 40
+  mechanical_hours: 8
+  review_hours: 16
+  packages_touched: 4
+  crs_raised: 4

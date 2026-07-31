@@ -1,0 +1,40 @@
+id: mined-arx-opscdk-009
+title: Added segragated region hostclasses for YourAccount Address Book
+family: uncategorized
+date: '2025-12-17'
+author: Abhishek Pandey
+source: git-mined
+source_repo: ARX-OpsCDK
+source_commit: 5afc1c7b11295f992bd6165523d1ea4e790f627a
+difficulty: medium
+trigger:
+  package: ARX-OpsCDK
+  files:
+  - lib/constants/hostclasses.ts
+  intent: Added segragated region hostclasses for YourAccount Address Book
+  diff_summary: 'Primary change: lib/constants/hostclasses.ts (+57/-0)'
+consequences:
+- package: ARX-OpsCDK
+  files:
+  - lib/stacks/cloudwatchLogsStack.ts
+  description: 'Co-changed: lib/stacks/cloudwatchLogsStack.ts (+1/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: ARX-OpsCDK
+  files:
+  - lib/tests/cloudwatchLogsStack.test.ts
+  description: 'Co-changed: lib/tests/cloudwatchLogsStack.test.ts (+34/-7)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from ARX-OpsCDK commit 5afc1c7b. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

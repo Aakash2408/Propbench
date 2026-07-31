@@ -1,0 +1,52 @@
+id: mined-youraccountaddressbook-019
+title: Handle Delete action error more gracefully
+family: uncategorized
+date: '2025-12-19'
+author: Aashi Bhatia
+source: git-mined
+source_repo: YourAccountAddressBook
+source_commit: 309a69c9277cc82a5cc5e93617825f4923b5ab93
+difficulty: medium
+trigger:
+  package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/serviceaccessors/WebLabServiceAccessor.scala
+  intent: Handle Delete action error more gracefully
+  diff_summary: 'Primary change: src/com/amazon/identity/address/serviceaccessors/WebLabServiceAccessor.scala
+    (+7/-1)'
+consequences:
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/features/addressbook/DeleteAddressController.scala
+  description: 'Co-changed: src/com/amazon/identity/address/features/addressbook/DeleteAddressController.scala
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/features/deleteAddress/DeleteAddressControllerTest.scala
+  description: 'Co-changed: tst/com/amazon/identity/address/features/deleteAddress/DeleteAddressControllerTest.scala
+    (+18/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/features/serviceaccessors/WebLabServiceAccessorTest.scala
+  description: 'Co-changed: tst/com/amazon/identity/address/features/serviceaccessors/WebLabServiceAccessorTest.scala
+    (+21/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 4
+notes: Auto-mined from YourAccountAddressBook commit 309a69c9. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

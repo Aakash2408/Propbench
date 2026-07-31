@@ -1,0 +1,34 @@
+id: mined-addressuiwidgetsservice-010
+title: 'feat(AIMS): Re-enable visible country dropdown in secondary form'
+family: configuration-evolution
+date: '2026-07-07'
+author: Jatin Batra
+source: git-mined
+source_repo: AddressUIWidgetsService
+source_commit: b5381a67e56fd74b2a8674c35829c1c578778b47
+difficulty: easy
+trigger:
+  package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/addressformconfig/base/addresswizard/USAddressWizardWithAIMSTests.scala
+  intent: 'feat(AIMS): Re-enable visible country dropdown in secondary form'
+  diff_summary: 'Primary change: tst/com/amazon/addressuiwidgetsservice/addressformconfig/base/addresswizard/USAddressWizardWithAIMSTests.scala
+    (+5/-5)'
+consequences:
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/addressformconfig/base/addresswizard/USAddressWizardWithAIMS.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/addressformconfig/base/addresswizard/USAddressWizardWithAIMS.scala
+    (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from AddressUIWidgetsService commit b5381a67. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

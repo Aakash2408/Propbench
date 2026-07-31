@@ -1,0 +1,48 @@
+id: mined-arx-opscdk-005
+title: 'feat(datapath): Add S3 + Glue infrastructure for DLS Datapath user logs'
+family: configuration-evolution
+date: '2026-05-08'
+author: Abhishek Pandey
+source: git-mined
+source_repo: ARX-OpsCDK
+source_commit: 8e543f3e7c8c1ceeb7e78b30fd268b942a4fa769
+difficulty: medium
+trigger:
+  package: ARX-OpsCDK
+  files:
+  - lib/stacks/datapathLogsStack.ts
+  intent: 'feat(datapath): Add S3 + Glue infrastructure for DLS Datapath user logs'
+  diff_summary: 'Primary change: lib/stacks/datapathLogsStack.ts (+143/-0)'
+consequences:
+- package: ARX-OpsCDK
+  files:
+  - lib/config/pipelineStageConfigs.ts
+  description: 'Co-changed: lib/config/pipelineStageConfigs.ts (+37/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: ARX-OpsCDK
+  files:
+  - lib/constants/stackConstants.ts
+  description: 'Co-changed: lib/constants/stackConstants.ts (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: ARX-OpsCDK
+  files:
+  - lib/tests/pipeline.test.ts
+  description: 'Co-changed: lib/tests/pipeline.test.ts (+14/-8)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 4
+notes: Auto-mined from ARX-OpsCDK commit 8e543f3e. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

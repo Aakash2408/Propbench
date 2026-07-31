@@ -1,0 +1,51 @@
+id: mined-youraccountaddressbook-017
+title: reverting commit that removed sad delete t2
+family: refactor
+date: '2025-12-11'
+author: leo feng
+source: git-mined
+source_repo: YourAccountAddressBook
+source_commit: 88c7281de34cda74901f87fc740670dfd1889722
+difficulty: medium
+trigger:
+  package: YourAccountAddressBook
+  files:
+  - webapp/WEB-INF/views/desktop/sad-delete-address-modal.ftl
+  intent: reverting commit that removed sad delete t2
+  diff_summary: 'Primary change: webapp/WEB-INF/views/desktop/sad-delete-address-modal.ftl
+    (+110/-0)'
+consequences:
+- package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/features/serviceaccessors/WebLabServiceAccessorTest.scala
+  description: 'Co-changed: tst/com/amazon/identity/address/features/serviceaccessors/WebLabServiceAccessorTest.scala
+    (+14/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - webapp/WEB-INF/views/mobile/sad-delete-address-bottom-sheet.ftl
+  description: 'Co-changed: webapp/WEB-INF/views/mobile/sad-delete-address-bottom-sheet.ftl
+    (+94/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - webapp/WEB-INF/views/sad-delete-modal-support.ftl
+  description: 'Co-changed: webapp/WEB-INF/views/sad-delete-modal-support.ftl (+8/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 4
+notes: Auto-mined from YourAccountAddressBook commit 88c7281d. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

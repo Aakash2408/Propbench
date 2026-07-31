@@ -1,0 +1,53 @@
+id: mined-smartaddressassistantwebapp-001
+title: 'Fix DHS client: domain-aware qualifier + CloudAuth inline creds + KeyMaster
+  optional'
+family: configuration-evolution
+date: '2026-06-12'
+author: Aakash Sangwan
+source: git-mined
+source_repo: SmartAddressAssistantWebApp
+source_commit: e707cab2676bb349c7dc9e6f77352e7321f7c66c
+difficulty: medium
+trigger:
+  package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/config/DeliveryHistoryServiceConfig.java
+  intent: 'Fix DHS client: domain-aware qualifier + CloudAuth inline creds + KeyMaster
+    optional'
+  diff_summary: 'Primary change: src/com/amazon/saa/webapp/config/DeliveryHistoryServiceConfig.java
+    (+48/-17)'
+consequences:
+- package: SmartAddressAssistantWebApp
+  files:
+  - configuration/brazil-config/global/DeliveryHistoryService.cfg
+  description: 'Co-changed: configuration/brazil-config/global/DeliveryHistoryService.cfg
+    (+4/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - src/com/amazon/saa/webapp/util/KeyMasterUtils.java
+  description: 'Co-changed: src/com/amazon/saa/webapp/util/KeyMasterUtils.java (+6/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/pom/v2/shared/commonMapAttributes.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/pom/v2/shared/commonMapAttributes.jsp
+    (+11/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 4
+notes: Auto-mined from SmartAddressAssistantWebApp commit e707cab2. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

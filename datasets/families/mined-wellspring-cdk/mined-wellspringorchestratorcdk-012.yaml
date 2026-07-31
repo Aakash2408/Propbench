@@ -1,0 +1,64 @@
+id: mined-wellspringorchestratorcdk-012
+title: adding prod accounts to WellspringOrchestrator
+family: configuration-evolution
+date: '2026-06-02'
+author: Swetha Palli
+source: git-mined
+source_repo: WellspringOrchestratorCDK
+source_commit: 76104703a0df1b7eace484e37ca03e13775e3ebd
+difficulty: medium
+trigger:
+  package: WellspringOrchestratorCDK
+  files:
+  - src/app.ts
+  intent: adding prod accounts to WellspringOrchestrator
+  diff_summary: 'Primary change: src/app.ts (+114/-175)'
+consequences:
+- package: WellspringOrchestratorCDK
+  files:
+  - src/clientAccessConfig.ts
+  description: 'Co-changed: src/clientAccessConfig.ts (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringOrchestratorCDK
+  files:
+  - src/constants.ts
+  description: 'Co-changed: src/constants.ts (+11/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringOrchestratorCDK
+  files:
+  - src/foundationalResourcesStack.ts
+  description: 'Co-changed: src/foundationalResourcesStack.ts (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringOrchestratorCDK
+  files:
+  - src/serviceStack.ts
+  description: 'Co-changed: src/serviceStack.ts (+47/-64)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringOrchestratorCDK
+  files:
+  - src/stageConfig.ts
+  description: 'Co-changed: src/stageConfig.ts (+183/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 6
+notes: Auto-mined from WellspringOrchestratorCDK commit 76104703. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

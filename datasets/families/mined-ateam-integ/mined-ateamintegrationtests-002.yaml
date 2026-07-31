@@ -1,0 +1,61 @@
+id: mined-ateamintegrationtests-002
+title: 'Add EU5 integ tests: MACHINE_INFERRED ranked above AMZL_DELIVERY_STATION'
+family: test-evolution
+date: '2026-06-03'
+author: gunasree
+source: git-mined
+source_repo: AteamIntegrationTests
+source_commit: bbb08525094dd88c696c0284a63551d14373586c
+difficulty: medium
+trigger:
+  package: AteamIntegrationTests
+  files:
+  - data/selection/DE/testScenarios/source-precedence-majority/BusinessHrs.prototxt
+  intent: 'Add EU5 integ tests: MACHINE_INFERRED ranked above AMZL_DELIVERY_STATION'
+  diff_summary: 'Primary change: data/selection/DE/testScenarios/source-precedence-majority/BusinessHrs.prototxt
+    (+41/-1)'
+consequences:
+- package: AteamIntegrationTests
+  files:
+  - data/selection/ES/testScenarios/source-precedence-majority/BusinessHrs.prototxt
+  description: 'Co-changed: data/selection/ES/testScenarios/source-precedence-majority/BusinessHrs.prototxt
+    (+41/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/FR/testScenarios/source-precedence-majority/BusinessHrs.prototxt
+  description: 'Co-changed: data/selection/FR/testScenarios/source-precedence-majority/BusinessHrs.prototxt
+    (+41/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/GB/testScenarios/source-precedence-majority/BusinessHrs.prototxt
+  description: 'Co-changed: data/selection/GB/testScenarios/source-precedence-majority/BusinessHrs.prototxt
+    (+40/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AteamIntegrationTests
+  files:
+  - data/selection/IT/testScenarios/source-precedence-majority/BusinessHrs.prototxt
+  description: 'Co-changed: data/selection/IT/testScenarios/source-precedence-majority/BusinessHrs.prototxt
+    (+41/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 5
+notes: Auto-mined from AteamIntegrationTests commit bbb08525. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

@@ -1,0 +1,120 @@
+id: oss-terraform-provider-aws-49076
+title: 'resource/aws_cloudwatch_log_storage_tier_policy: Add intelligent logs tiering'
+family: interface-evolution
+date: '2026-07-28'
+author: bonclay7
+source: github-api-mined
+source_repo: hashicorp/terraform-provider-aws
+source_url: https://github.com/hashicorp/terraform-provider-aws/pull/49076
+source_pr: 49076
+difficulty: medium
+trigger:
+  package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/logs/storage_tier_policy.go
+  intent: 'resource/aws_cloudwatch_log_storage_tier_policy: Add intelligent logs tiering'
+  diff_summary: 'Primary: internal/service/logs/storage_tier_policy.go (+158/-0)'
+consequences:
+- package: hashicorp/terraform-provider-aws
+  files:
+  - .ci/swissshepherd-weak.hcl
+  description: 'modified: .ci/swissshepherd-weak.hcl (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/logs/exports_test.go
+  description: 'modified: internal/service/logs/exports_test.go (+2/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/logs/logs_test.go
+  description: 'modified: internal/service/logs/logs_test.go (+6/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/logs/service_package_gen.go
+  description: 'modified: internal/service/logs/service_package_gen.go (+10/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/logs/storage_tier_policy_identity_gen_test.go
+  description: 'added: internal/service/logs/storage_tier_policy_identity_gen_test.go
+    (+217/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/logs/storage_tier_policy_test.go
+  description: 'added: internal/service/logs/storage_tier_policy_test.go (+182/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/logs/testdata/StorageTierPolicy/basic/main_gen.tf
+  description: 'added: internal/service/logs/testdata/StorageTierPolicy/basic/main_gen.tf
+    (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/logs/testdata/StorageTierPolicy/region_override/main_gen.tf
+  description: 'added: internal/service/logs/testdata/StorageTierPolicy/region_override/main_gen.tf
+    (+15/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/logs/testdata/StorageTierPolicy/standard/main.tf
+  description: 'added: internal/service/logs/testdata/StorageTierPolicy/standard/main.tf
+    (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/logs/testdata/tmpl/storage_tier_policy_basic.gtpl
+  description: 'added: internal/service/logs/testdata/tmpl/storage_tier_policy_basic.gtpl
+    (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - website/docs/r/cloudwatch_log_storage_tier_policy.html.markdown
+  description: 'added: website/docs/r/cloudwatch_log_storage_tier_policy.html.markdown
+    (+76/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 12
+notes: 'Mined from hashicorp/terraform-provider-aws PR #49076. Trigger heuristic applied.
+  Needs review.'

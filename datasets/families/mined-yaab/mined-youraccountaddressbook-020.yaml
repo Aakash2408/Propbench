@@ -1,0 +1,42 @@
+id: mined-youraccountaddressbook-020
+title: remove none radio button
+family: refactor
+date: '2025-10-29'
+author: leo feng
+source: git-mined
+source_repo: YourAccountAddressBook
+source_commit: bfd4821c416bdef6f58550ce463ae8f73d329fc4
+difficulty: medium
+trigger:
+  package: YourAccountAddressBook
+  files:
+  - webapp/WEB-INF/views/mobile/sad-delete-address-bottom-sheet.ftl
+  intent: remove none radio button
+  diff_summary: 'Primary change: webapp/WEB-INF/views/mobile/sad-delete-address-bottom-sheet.ftl
+    (+0/-8)'
+consequences:
+- package: YourAccountAddressBook
+  files:
+  - webapp/WEB-INF/views/desktop/sad-delete-address-confirm-modal.ftl
+  description: 'Co-changed: webapp/WEB-INF/views/desktop/sad-delete-address-confirm-modal.ftl
+    (+5/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - webapp/WEB-INF/views/sad-delete-modal-support.ftl
+  description: 'Co-changed: webapp/WEB-INF/views/sad-delete-modal-support.ftl (+0/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from YourAccountAddressBook commit bfd4821c. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

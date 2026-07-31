@@ -1,0 +1,42 @@
+id: mined-youraccountaddressbook-012
+title: cloudwatch-onboarding
+family: configuration-evolution
+date: '2026-02-09'
+author: Suraj Dhankad
+source: git-mined
+source_repo: YourAccountAddressBook
+source_commit: 97339a656174639eef00b4e1fc037f66fe73b5b6
+difficulty: medium
+trigger:
+  package: YourAccountAddressBook
+  files:
+  - configuration/brazil-config/app/YourAccountAddressBook.cfg
+  intent: cloudwatch-onboarding
+  diff_summary: 'Primary change: configuration/brazil-config/app/YourAccountAddressBook.cfg
+    (+33/-2)'
+consequences:
+- package: YourAccountAddressBook
+  files:
+  - Config
+  description: 'Co-changed: Config (+5/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - configuration/etc/cwinternalagent/yaab-cw-logs-config.json
+  description: 'Co-changed: configuration/etc/cwinternalagent/yaab-cw-logs-config.json
+    (+25/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from YourAccountAddressBook commit 97339a65. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

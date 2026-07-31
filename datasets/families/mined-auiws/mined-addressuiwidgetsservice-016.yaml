@@ -1,0 +1,52 @@
+id: mined-addressuiwidgetsservice-016
+title: 'feat(pre-validation): Add PreValidateAddress AJAX operation'
+family: uncategorized
+date: '2026-06-26'
+author: Kanchan Hingorani
+source: git-mined
+source_repo: AddressUIWidgetsService
+source_commit: 9a87f2ada0dd58223b78e4f137940b758040ec92
+difficulty: medium
+trigger:
+  package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/prevalidation/PreValidationTokenUtilityTests.scala
+  intent: 'feat(pre-validation): Add PreValidateAddress AJAX operation'
+  diff_summary: 'Primary change: tst/com/amazon/addressuiwidgetsservice/prevalidation/PreValidationTokenUtilityTests.scala
+    (+36/-1)'
+consequences:
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/orchestration/operations/PreValidateAddressProvider.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/orchestration/operations/PreValidateAddressProvider.scala
+    (+3/-11)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/prevalidation/PreValidationTokenUtility.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/prevalidation/PreValidationTokenUtility.scala
+    (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/orchestrator/operations/PreValidateAddressProviderTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/orchestrator/operations/PreValidateAddressProviderTests.scala
+    (+6/-16)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 4
+notes: Auto-mined from AddressUIWidgetsService commit 9a87f2ad. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

@@ -1,0 +1,48 @@
+id: mined-geostudiodeliveryhistorycdk-017
+title: made fifo sns topic and added unit tests for it.
+family: test-evolution
+date: '2025-06-16'
+author: vibhanshu
+source: git-mined
+source_repo: GeoStudioDeliveryHistoryCDK
+source_commit: 54d156a40c5c5f6435085f2722a7551f47cefbc1
+difficulty: medium
+trigger:
+  package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/stacks/lambda.ts
+  intent: made fifo sns topic and added unit tests for it.
+  diff_summary: 'Primary change: lib/stacks/lambda.ts (+23/-5)'
+consequences:
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/constants/constants.ts
+  description: 'Co-changed: lib/constants/constants.ts (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - lib/constructs/policyProvider/snsPolicyProvider.ts
+  description: 'Co-changed: lib/constructs/policyProvider/snsPolicyProvider.ts (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: GeoStudioDeliveryHistoryCDK
+  files:
+  - package.json
+  description: 'Co-changed: package.json (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 4
+notes: Auto-mined from GeoStudioDeliveryHistoryCDK commit 54d156a4. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

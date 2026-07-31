@@ -1,0 +1,96 @@
+id: mined-youraccountaddressbook-018
+title: JLC3 Migration
+family: configuration-evolution
+date: '2025-12-16'
+author: Suraj Dhankad
+source: git-mined
+source_repo: YourAccountAddressBook
+source_commit: 43c4145830a60cc007fcbb4fd9a14cdd413af1fd
+difficulty: medium
+trigger:
+  package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/spring/LMSCachingConfiguration.scala
+  intent: JLC3 Migration
+  diff_summary: 'Primary change: src/com/amazon/identity/address/spring/LMSCachingConfiguration.scala
+    (+0/-68)'
+consequences:
+- package: YourAccountAddressBook
+  files:
+  - Config
+  description: 'Co-changed: Config (+7/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - configuration/brazil-config/app/YourAccountAddressBook.cfg
+  description: 'Co-changed: configuration/brazil-config/app/YourAccountAddressBook.cfg
+    (+10/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/core/platform/i18n/LocalizationClientProvider.java
+  description: 'Co-changed: src/com/amazon/core/platform/i18n/LocalizationClientProvider.java
+    (+60/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/webapp/config/CustomOverrideDataConfiguration.scala
+  description: 'Co-changed: src/com/amazon/identity/address/webapp/config/CustomOverrideDataConfiguration.scala
+    (+40/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/webapp/config/CustomRootConfig.scala
+  description: 'Co-changed: src/com/amazon/identity/address/webapp/config/CustomRootConfig.scala
+    (+16/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/core/platform/i18n/LocalizationClientProviderTest.java
+  description: 'Co-changed: tst/com/amazon/core/platform/i18n/LocalizationClientProviderTest.java
+    (+51/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/webapp/config/CustomOverrideDataConfigurationTest.java
+  description: 'Co-changed: tst/com/amazon/identity/address/webapp/config/CustomOverrideDataConfigurationTest.java
+    (+61/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/webapp/config/CustomRootConfigTest.java
+  description: 'Co-changed: tst/com/amazon/identity/address/webapp/config/CustomRootConfigTest.java
+    (+14/-13)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 9
+notes: Auto-mined from YourAccountAddressBook commit 43c41458. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

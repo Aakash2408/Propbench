@@ -1,0 +1,139 @@
+id: mined-smartaddressassistantwebapp-012
+title: '[CDP Revamp] Fix refactored page layout JSPs for Proposal E rendering path'
+family: refactor
+date: '2026-05-07'
+author: Shivam Singla
+source: git-mined
+source_repo: SmartAddressAssistantWebApp
+source_commit: 57e5a883d98e69e61e323408319f86c01867484c
+difficulty: hard
+trigger:
+  package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/desktop/landingPageCommonRefactored.jsp
+  intent: '[CDP Revamp] Fix refactored page layout JSPs for Proposal E rendering path'
+  diff_summary: 'Primary change: webapp/WEB-INF/views/cdp/desktop/landingPageCommonRefactored.jsp
+    (+154/-61)'
+consequences:
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/cdpBusinessMetricsFieldsRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/cdpBusinessMetricsFieldsRefactored.jsp
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/cdpSummaryRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/cdpSummaryRefactored.jsp (+36/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/customerInfoRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/customerInfoRefactored.jsp (+26/-9)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/desktop/cdpCsgIntegratedRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/desktop/cdpCsgIntegratedRefactored.jsp
+    (+18/-15)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/desktop/deliveryDaysGroupExpanderRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/desktop/deliveryDaysGroupExpanderRefactored.jsp
+    (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/desktop/landingPageStandaloneRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/desktop/landingPageStandaloneRefactored.jsp
+    (+83/-18)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/cdpCsgIntegratedRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/cdpCsgIntegratedRefactored.jsp
+    (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/defaultGroupExpanderRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/defaultGroupExpanderRefactored.jsp
+    (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/deliveryHoursGroupExpanderRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/deliveryHoursGroupExpanderRefactored.jsp
+    (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/mobile/landingPageCommonRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/mobile/landingPageCommonRefactored.jsp
+    (+10/-9)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/personalisedCdpRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/personalisedCdpRefactored.jsp
+    (+138/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/propertyTypeSelector.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/propertyTypeSelector.jsp (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: SmartAddressAssistantWebApp
+  files:
+  - webapp/WEB-INF/views/cdp/propertyTypeSelectorRefactored.jsp
+  description: 'Co-changed: webapp/WEB-INF/views/cdp/propertyTypeSelectorRefactored.jsp
+    (+35/-18)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 14
+notes: Auto-mined from SmartAddressAssistantWebApp commit 57e5a883. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

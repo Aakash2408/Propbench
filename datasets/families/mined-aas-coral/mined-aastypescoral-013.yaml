@@ -1,0 +1,84 @@
+id: mined-aastypescoral-013
+title: Add Coral Models for Constraint Violations
+family: configuration-evolution
+date: '2025-04-10'
+author: Gunasree Kunkulagunta
+source: git-mined
+source_repo: AASTypesCoral
+source_commit: e98f24be9457d4279aee2c16369c09ad21d0ebbd
+difficulty: medium
+trigger:
+  package: AASTypesCoral
+  files:
+  - model/DestinationConstraintViolationTypes.xsd.codigo.model.xml
+  intent: Add Coral Models for Constraint Violations
+  diff_summary: 'Primary change: model/DestinationConstraintViolationTypes.xsd.codigo.model.xml
+    (+92/-0)'
+consequences:
+- package: AASTypesCoral
+  files:
+  - .gitignore
+  description: 'Co-changed: .gitignore (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AASTypesCoral
+  files:
+  - Config
+  description: 'Co-changed: Config (+7/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AASTypesCoral
+  files:
+  - model/AccessPointConstraintViolationTypes.xsd.codigo.model.xml
+  description: 'Co-changed: model/AccessPointConstraintViolationTypes.xsd.codigo.model.xml
+    (+38/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AASTypesCoral
+  files:
+  - model/AccessPointConstraintViolationTypes.xsd.model.xml
+  description: 'Co-changed: model/AccessPointConstraintViolationTypes.xsd.model.xml
+    (+38/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AASTypesCoral
+  files:
+  - model/DestinationConstraintViolationTypes.xsd.model.xml
+  description: 'Co-changed: model/DestinationConstraintViolationTypes.xsd.model.xml
+    (+62/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AASTypesCoral
+  files:
+  - model/DestinationTypes.xsd.codigo.model.xml
+  description: 'Co-changed: model/DestinationTypes.xsd.codigo.model.xml (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AASTypesCoral
+  files:
+  - model/DestinationTypes.xsd.model.xml
+  description: 'Co-changed: model/DestinationTypes.xsd.model.xml (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 8
+notes: Auto-mined from AASTypesCoral commit e98f24be. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

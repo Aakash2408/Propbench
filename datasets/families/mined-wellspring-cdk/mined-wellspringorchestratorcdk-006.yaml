@@ -1,0 +1,40 @@
+id: mined-wellspringorchestratorcdk-006
+title: 'feat(alarms): Add DefectsTrigger CloudWatch alarms'
+family: uncategorized
+date: '2026-06-30'
+author: David Madsen
+source: git-mined
+source_repo: WellspringOrchestratorCDK
+source_commit: a2a43bfa5b026ff40dba5e334b1e3293011d06b3
+difficulty: medium
+trigger:
+  package: WellspringOrchestratorCDK
+  files:
+  - src/serviceStack.ts
+  intent: 'feat(alarms): Add DefectsTrigger CloudWatch alarms'
+  diff_summary: 'Primary change: src/serviceStack.ts (+59/-2)'
+consequences:
+- package: WellspringOrchestratorCDK
+  files:
+  - src/__tests__/serviceStack.spec.ts
+  description: 'Co-changed: src/__tests__/serviceStack.spec.ts (+83/-7)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringOrchestratorCDK
+  files:
+  - src/foundationalResourcesStack.ts
+  description: 'Co-changed: src/foundationalResourcesStack.ts (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from WellspringOrchestratorCDK commit a2a43bfa. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

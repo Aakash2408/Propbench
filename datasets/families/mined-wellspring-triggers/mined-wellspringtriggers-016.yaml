@@ -1,0 +1,40 @@
+id: mined-wellspringtriggers-016
+title: 'docs(spec): Add delivery-event-trigger requirements and design'
+family: test-evolution
+date: '2026-05-18'
+author: Akshit Verma
+source: git-mined
+source_repo: WellspringTriggers
+source_commit: f5f1ef594cd073a7299ed7c48ca874d1654e92b6
+difficulty: medium
+trigger:
+  package: WellspringTriggers
+  files:
+  - .kiro/specs/delivery-event-trigger/.config.kiro
+  intent: 'docs(spec): Add delivery-event-trigger requirements and design'
+  diff_summary: 'Primary change: .kiro/specs/delivery-event-trigger/.config.kiro (+1/-0)'
+consequences:
+- package: WellspringTriggers
+  files:
+  - .kiro/specs/delivery-event-trigger/design.md
+  description: 'Co-changed: .kiro/specs/delivery-event-trigger/design.md (+407/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringTriggers
+  files:
+  - .kiro/specs/delivery-event-trigger/requirements.md
+  description: 'Co-changed: .kiro/specs/delivery-event-trigger/requirements.md (+100/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from WellspringTriggers commit f5f1ef59. Trigger heuristic may be
+  wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

@@ -1,0 +1,34 @@
+id: mined-ateamintegrationtests-017
+title: Updated DE selection and propagation test cases for compliance changes
+family: test-evolution
+date: '2025-01-24'
+author: Manglam Paliwal
+source: git-mined
+source_repo: AteamIntegrationTests
+source_commit: 4420e989dfa5db7a04674beef93ba9850978f6c8
+difficulty: easy
+trigger:
+  package: AteamIntegrationTests
+  files:
+  - data/propagated/DE/testScenarios/EASEL_DE_LAUNCH.prototxt
+  intent: Updated DE selection and propagation test cases for compliance changes
+  diff_summary: 'Primary change: data/propagated/DE/testScenarios/EASEL_DE_LAUNCH.prototxt
+    (+4/-4)'
+consequences:
+- package: AteamIntegrationTests
+  files:
+  - data/selection/DE/testScenarios/EASEL_DE_LAUNCH.prototxt
+  description: 'Co-changed: data/selection/DE/testScenarios/EASEL_DE_LAUNCH.prototxt
+    (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from AteamIntegrationTests commit 4420e989. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

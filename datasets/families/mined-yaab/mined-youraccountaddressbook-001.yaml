@@ -1,0 +1,52 @@
+id: mined-youraccountaddressbook-001
+title: enabling cdp for PR + PT + ZA marketplaces
+family: uncategorized
+date: '2026-03-23'
+author: Aakash Sangwan
+source: git-mined
+source_repo: YourAccountAddressBook
+source_commit: 31cbe42603cf634fd69ac53f6794f70b4a3f0226
+difficulty: medium
+trigger:
+  package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/features/addressbook/AddressBookFeatureProviderTests.scala
+  intent: enabling cdp for PR + PT + ZA marketplaces
+  diff_summary: 'Primary change: tst/com/amazon/identity/address/features/addressbook/AddressBookFeatureProviderTests.scala
+    (+105/-0)'
+consequences:
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/features/addressbook/AddressBookFeatureProvider.scala
+  description: 'Co-changed: src/com/amazon/identity/address/features/addressbook/AddressBookFeatureProvider.scala
+    (+12/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/serviceaccessors/WebLabServiceAccessor.scala
+  description: 'Co-changed: src/com/amazon/identity/address/serviceaccessors/WebLabServiceAccessor.scala
+    (+17/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/features/serviceaccessors/WebLabServiceAccessorTest.scala
+  description: 'Co-changed: tst/com/amazon/identity/address/features/serviceaccessors/WebLabServiceAccessorTest.scala
+    (+63/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 4
+notes: Auto-mined from YourAccountAddressBook commit 31cbe426. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

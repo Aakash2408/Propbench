@@ -1,0 +1,241 @@
+id: oss-terraform-provider-aws-49022
+title: 'rekognition: add resource identity to service'
+family: interface-evolution
+date: '2026-07-28'
+author: johnsonaj
+source: github-api-mined
+source_repo: hashicorp/terraform-provider-aws
+source_url: https://github.com/hashicorp/terraform-provider-aws/pull/49022
+source_pr: 49022
+difficulty: medium
+trigger:
+  package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rekognition/project.go
+  intent: 'rekognition: add resource identity to service'
+  diff_summary: 'Primary: internal/service/rekognition/project.go (+84/-87)'
+consequences:
+- package: hashicorp/terraform-provider-aws
+  files:
+  - .ci/swissshepherd-weak.hcl
+  description: 'modified: .ci/swissshepherd-weak.hcl (+0/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rekognition/collection.go
+  description: 'modified: internal/service/rekognition/collection.go (+8/-18)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rekognition/collection_identity_gen_test.go
+  description: 'added: internal/service/rekognition/collection_identity_gen_test.go
+    (+310/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rekognition/project_identity_gen_test.go
+  description: 'added: internal/service/rekognition/project_identity_gen_test.go (+310/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rekognition/project_test.go
+  description: 'modified: internal/service/rekognition/project_test.go (+25/-17)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rekognition/service_package_gen.go
+  description: 'modified: internal/service/rekognition/service_package_gen.go (+17/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rekognition/stream_processor.go
+  description: 'modified: internal/service/rekognition/stream_processor.go (+14/-37)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rekognition/stream_processor_identity_gen_test.go
+  description: 'added: internal/service/rekognition/stream_processor_identity_gen_test.go
+    (+315/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rekognition/sweep.go
+  description: 'added: internal/service/rekognition/sweep.go (+88/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rekognition/testdata/Collection/basic/main_gen.tf
+  description: 'added: internal/service/rekognition/testdata/Collection/basic/main_gen.tf
+    (+12/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rekognition/testdata/Collection/basic_v6.56.0/main_gen.tf
+  description: 'added: internal/service/rekognition/testdata/Collection/basic_v6.56.0/main_gen.tf
+    (+22/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rekognition/testdata/Collection/region_override/main_gen.tf
+  description: 'added: internal/service/rekognition/testdata/Collection/region_override/main_gen.tf
+    (+20/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rekognition/testdata/Project/basic/main_gen.tf
+  description: 'added: internal/service/rekognition/testdata/Project/basic/main_gen.tf
+    (+13/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rekognition/testdata/Project/basic_v6.56.0/main_gen.tf
+  description: 'added: internal/service/rekognition/testdata/Project/basic_v6.56.0/main_gen.tf
+    (+23/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rekognition/testdata/Project/region_override/main_gen.tf
+  description: 'added: internal/service/rekognition/testdata/Project/region_override/main_gen.tf
+    (+21/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rekognition/testdata/StreamProcessor/basic/main_gen.tf
+  description: 'added: internal/service/rekognition/testdata/StreamProcessor/basic/main_gen.tf
+    (+72/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rekognition/testdata/StreamProcessor/basic_v6.56.0/main_gen.tf
+  description: 'added: internal/service/rekognition/testdata/StreamProcessor/basic_v6.56.0/main_gen.tf
+    (+82/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rekognition/testdata/StreamProcessor/region_override/main_gen.tf
+  description: 'added: internal/service/rekognition/testdata/StreamProcessor/region_override/main_gen.tf
+    (+86/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rekognition/testdata/tmpl/collection_basic.gtpl
+  description: 'added: internal/service/rekognition/testdata/tmpl/collection_basic.gtpl
+    (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rekognition/testdata/tmpl/project_basic.gtpl
+  description: 'added: internal/service/rekognition/testdata/tmpl/project_basic.gtpl
+    (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rekognition/testdata/tmpl/stream_processor_basic.gtpl
+  description: 'added: internal/service/rekognition/testdata/tmpl/stream_processor_basic.gtpl
+    (+69/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/sweep/register_gen_test.go
+  description: 'modified: internal/sweep/register_gen_test.go (+2/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - website/docs/r/rekognition_collection.html.markdown
+  description: 'modified: website/docs/r/rekognition_collection.html.markdown (+29/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - website/docs/r/rekognition_project.html.markdown
+  description: 'modified: website/docs/r/rekognition_project.html.markdown (+27/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - website/docs/r/rekognition_stream_processor.html.markdown
+  description: 'modified: website/docs/r/rekognition_stream_processor.html.markdown
+    (+55/-30)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 26
+notes: 'Mined from hashicorp/terraform-provider-aws PR #49022. Trigger heuristic applied.
+  Needs review.'

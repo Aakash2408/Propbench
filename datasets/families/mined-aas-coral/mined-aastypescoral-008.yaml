@@ -1,0 +1,49 @@
+id: mined-aastypescoral-008
+title: Added coral models to be in sync with codigo AASTypes package
+family: uncategorized
+date: '2025-07-25'
+author: Gunasree Kunkulagunta
+source: git-mined
+source_repo: AASTypesCoral
+source_commit: ab84536cecc09ecc5e42bb662678edcf0385579b
+difficulty: medium
+trigger:
+  package: AASTypesCoral
+  files:
+  - model/AddressAttributeTypes.xsd.codigo.model.xml
+  intent: Added coral models to be in sync with codigo AASTypes package
+  diff_summary: 'Primary change: model/AddressAttributeTypes.xsd.codigo.model.xml
+    (+60/-0)'
+consequences:
+- package: AASTypesCoral
+  files:
+  - model/AddressAttributeTypes.xsd.model.xml
+  description: 'Co-changed: model/AddressAttributeTypes.xsd.model.xml (+49/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AASTypesCoral
+  files:
+  - model/AddressAuthorityTypes.xsd.codigo.model.xml
+  description: 'Co-changed: model/AddressAuthorityTypes.xsd.codigo.model.xml (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AASTypesCoral
+  files:
+  - model/AddressAuthorityTypes.xsd.model.xml
+  description: 'Co-changed: model/AddressAuthorityTypes.xsd.model.xml (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 4
+notes: Auto-mined from AASTypesCoral commit ab84536c. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

@@ -1,0 +1,43 @@
+id: mined-youraccountaddressbook-009
+title: Weblab Cleanup for PAX_ARX_ARF_HARDBLOCK_NEW_UI_1297969 and PAX_ARX_ARF_HARDBLOCK_NEW_UI_TRIGGER_130
+family: uncategorized
+date: '2026-04-13'
+author: Jatin Batra
+source: git-mined
+source_repo: YourAccountAddressBook
+source_commit: e41c1d80cd32da9aaaa1a511319ca2ac9916d3c6
+difficulty: medium
+trigger:
+  package: YourAccountAddressBook
+  files:
+  - webapp/WEB-INF/views/mobile/delete-address-bottom-sheet-arf-hard-block.ftl
+  intent: Weblab Cleanup for PAX_ARX_ARF_HARDBLOCK_NEW_UI_1297969 and PAX_ARX_ARF_HARDBLOCK_NEW_UI_TRIGGER_1301382
+  diff_summary: 'Primary change: webapp/WEB-INF/views/mobile/delete-address-bottom-sheet-arf-hard-block.ftl
+    (+1/-17)'
+consequences:
+- package: YourAccountAddressBook
+  files:
+  - webapp/WEB-INF/views/mobile/edit-address-bottom-sheet-arf-hard-block.ftl
+  description: 'Co-changed: webapp/WEB-INF/views/mobile/edit-address-bottom-sheet-arf-hard-block.ftl
+    (+1/-17)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - webapp/WEB-INF/views/shared/address-modal-footer-arf-hard-block.ftl
+  description: 'Co-changed: webapp/WEB-INF/views/shared/address-modal-footer-arf-hard-block.ftl
+    (+1/-19)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 3
+notes: Auto-mined from YourAccountAddressBook commit e41c1d80. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

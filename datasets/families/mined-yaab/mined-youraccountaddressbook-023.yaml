@@ -1,0 +1,79 @@
+id: mined-youraccountaddressbook-023
+title: Updating mash back layout to migrate out of gurupa endpoint in KYC.
+family: uncategorized
+date: '2025-11-12'
+author: Abhishek Pandey
+source: git-mined
+source_repo: YourAccountAddressBook
+source_commit: 2f6dcb05abf8adbb61ea62b36b8709b5394a392b
+difficulty: medium
+trigger:
+  package: YourAccountAddressBook
+  files:
+  - webapp/WEB-INF/views/kyc-mash-back-to-v2-updated.ftl
+  intent: Updating mash back layout to migrate out of gurupa endpoint in KYC.
+  diff_summary: 'Primary change: webapp/WEB-INF/views/kyc-mash-back-to-v2-updated.ftl
+    (+16/-0)'
+consequences:
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/features/addressbook/widgets/KycMashBackToWidget.scala
+  description: 'Co-changed: src/com/amazon/identity/address/features/addressbook/widgets/KycMashBackToWidget.scala
+    (+7/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/serviceaccessors/WebLabServiceAccessor.scala
+  description: 'Co-changed: src/com/amazon/identity/address/serviceaccessors/WebLabServiceAccessor.scala
+    (+13/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/utils/constants/Links.scala
+  description: 'Co-changed: src/com/amazon/identity/address/utils/constants/Links.scala
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/features/addressbook/widgets/KycMashBackToWidgetTest.scala
+  description: 'Co-changed: tst/com/amazon/identity/address/features/addressbook/widgets/KycMashBackToWidgetTest.scala
+    (+5/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/features/serviceaccessors/WebLabServiceAccessorTest.scala
+  description: 'Co-changed: tst/com/amazon/identity/address/features/serviceaccessors/WebLabServiceAccessorTest.scala
+    (+22/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/utils/LinksTests.scala
+  description: 'Co-changed: tst/com/amazon/identity/address/utils/LinksTests.scala
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 7
+notes: Auto-mined from YourAccountAddressBook commit 2f6dcb05. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

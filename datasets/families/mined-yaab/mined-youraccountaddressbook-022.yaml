@@ -1,0 +1,54 @@
+id: mined-youraccountaddressbook-022
+title: Fix exception handling to return 400 Bad Request instead of 500 Internal Server
+  Error
+family: bugfix
+date: '2025-11-19'
+author: Aashi Bhatia
+source: git-mined
+source_repo: YourAccountAddressBook
+source_commit: d1cd441721b37379813c5b53546f4dd7a45eadb8
+difficulty: medium
+trigger:
+  package: YourAccountAddressBook
+  files:
+  - tst/com/amazon/identity/address/web/core/spring/DefaultYAABControllerHandlerExceptionResolverTests.scala
+  intent: Fix exception handling to return 400 Bad Request instead of 500 Internal
+    Server Error
+  diff_summary: 'Primary change: tst/com/amazon/identity/address/web/core/spring/DefaultYAABControllerHandlerExceptionResolverTests.scala
+    (+17/-0)'
+consequences:
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/serviceaccessors/AddressServiceAccessor.scala
+  description: 'Co-changed: src/com/amazon/identity/address/serviceaccessors/AddressServiceAccessor.scala
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/utils/constants/Counters.scala
+  description: 'Co-changed: src/com/amazon/identity/address/utils/constants/Counters.scala
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: YourAccountAddressBook
+  files:
+  - src/com/amazon/identity/address/web/core/spring/DefaultYAABControllerHandlerExceptionResolver.scala
+  description: 'Co-changed: src/com/amazon/identity/address/web/core/spring/DefaultYAABControllerHandlerExceptionResolver.scala
+    (+13/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 4
+notes: Auto-mined from YourAccountAddressBook commit d1cd4417. Trigger heuristic may
+  be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

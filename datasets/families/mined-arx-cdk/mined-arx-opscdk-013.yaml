@@ -1,0 +1,34 @@
+id: mined-arx-opscdk-013
+title: Adding mws permissions to Tod Sts role for uploading metrics and for Windtunnel
+  to get those metrics
+family: uncategorized
+date: '2025-12-11'
+author: Jatin Batra
+source: git-mined
+source_repo: ARX-OpsCDK
+source_commit: 44e557cef72c0a1dfa819b61fd3bcf2dd3a5969e
+difficulty: easy
+trigger:
+  package: ARX-OpsCDK
+  files:
+  - lib/stacks/dlsTodStressTestStack.ts
+  intent: Adding mws permissions to Tod Sts role for uploading metrics and for Windtunnel
+    to get those metrics
+  diff_summary: 'Primary change: lib/stacks/dlsTodStressTestStack.ts (+36/-31)'
+consequences:
+- package: ARX-OpsCDK
+  files:
+  - lib/tests/dlsTodStressTestStack.test.ts
+  description: 'Co-changed: lib/tests/dlsTodStressTestStack.test.ts (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 2
+notes: Auto-mined from ARX-OpsCDK commit 44e557ce. Trigger heuristic may be wrong.
+  Needs human review to confirm trigger/consequence split and add expert_reasoning.

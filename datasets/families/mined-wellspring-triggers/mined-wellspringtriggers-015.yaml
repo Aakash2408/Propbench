@@ -1,0 +1,60 @@
+id: mined-wellspringtriggers-015
+title: 'fix: Add DAnDA client + remove NECTO hierarchy (pending access)'
+family: configuration-evolution
+date: '2026-05-20'
+author: Akshit Verma
+source: git-mined
+source_repo: WellspringTriggers
+source_commit: 58c832f5f6e87603d7b84aff31422f6fa06d3db0
+difficulty: medium
+trigger:
+  package: WellspringTriggers
+  files:
+  - trigger-handler/src/main/java/com/amazon/wellspringtriggers/triggerhandler/TriggerHandlerLambda.java
+  intent: 'fix: Add DAnDA client + remove NECTO hierarchy (pending access)'
+  diff_summary: 'Primary change: trigger-handler/src/main/java/com/amazon/wellspringtriggers/triggerhandler/TriggerHandlerLambda.java
+    (+101/-43)'
+consequences:
+- package: WellspringTriggers
+  files:
+  - Config
+  description: 'Co-changed: Config (+4/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringTriggers
+  files:
+  - trigger-handler/src/main/java/com/amazon/wellspringtriggers/triggerhandler/GlueJobStarter.java
+  description: 'Co-changed: trigger-handler/src/main/java/com/amazon/wellspringtriggers/triggerhandler/GlueJobStarter.java
+    (+26/-42)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringTriggers
+  files:
+  - trigger-handler/src/test/java/com/amazon/wellspringtriggers/triggerhandler/GlueJobStarterTest.java
+  description: 'Co-changed: trigger-handler/src/test/java/com/amazon/wellspringtriggers/triggerhandler/GlueJobStarterTest.java
+    (+9/-8)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: WellspringTriggers
+  files:
+  - trigger-handler/src/test/java/com/amazon/wellspringtriggers/triggerhandler/TriggerHandlerLambdaTest.java
+  description: 'Co-changed: trigger-handler/src/test/java/com/amazon/wellspringtriggers/triggerhandler/TriggerHandlerLambdaTest.java
+    (+91/-29)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 5
+notes: Auto-mined from WellspringTriggers commit 58c832f5. Trigger heuristic may be
+  wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.

@@ -1,0 +1,88 @@
+id: mined-addressuiwidgetsservice-015
+title: HTML-encode address-suggestion hidden fields behind weblab
+family: uncategorized
+date: '2026-06-29'
+author: Suraj Dhankad
+source: git-mined
+source_repo: AddressUIWidgetsService
+source_commit: 3d1cccaf680ef379d49d8eccd46262a680a7a4e4
+difficulty: medium
+trigger:
+  package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/models/AddressModelFactoryTests.scala
+  intent: HTML-encode address-suggestion hidden fields behind weblab
+  diff_summary: 'Primary change: tst/com/amazon/addressuiwidgetsservice/models/AddressModelFactoryTests.scala
+    (+167/-1)'
+consequences:
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/models/AddressModelFactory.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/models/AddressModelFactory.scala
+    (+28/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessor.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessor.scala
+    (+18/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/utility/HtmlEncodingExclusionEvaluator.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/utility/HtmlEncodingExclusionEvaluator.scala
+    (+4/-9)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - src/com/amazon/addressuiwidgetsservice/views/generic/HiddenInputView.scala
+  description: 'Co-changed: src/com/amazon/addressuiwidgetsservice/views/generic/HiddenInputView.scala
+    (+27/-13)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessorTests.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/serviceAccessors/WeblabServiceAccessorTests.scala
+    (+33/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/utility/HtmlEncodingExclusionEvaluatorTest.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/utility/HtmlEncodingExclusionEvaluatorTest.scala
+    (+17/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+- package: AddressUIWidgetsService
+  files:
+  - tst/com/amazon/addressuiwidgetsservice/views/address/HiddenInputViewTest.scala
+  description: 'Co-changed: tst/com/amazon/addressuiwidgetsservice/views/address/HiddenInputViewTest.scala
+    (+43/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from git history (needs human review)
+tags:
+- git-mined
+- needs-review
+effort:
+  packages_touched: 1
+  files_changed: 8
+notes: Auto-mined from AddressUIWidgetsService commit 3d1cccaf. Trigger heuristic
+  may be wrong. Needs human review to confirm trigger/consequence split and add expert_reasoning.
