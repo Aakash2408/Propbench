@@ -1,3 +1,4 @@
+from __future__ import annotations
 """
 judgment-engine/src/experts/pattern_expert.py
 

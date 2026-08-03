@@ -1,3 +1,4 @@
+from __future__ import annotations
 """
 judgment-engine/src/benchmark.py
 
@@ -10,8 +11,6 @@ Everything reduces to this one invocation.
 import yaml
 from pathlib import Path
 from datetime import datetime
-from typing import Protocol
-
 from .models import (
     Change, Consequence, Prediction, Relationship, Difficulty,
     ReplayResult, BenchmarkReport

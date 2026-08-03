@@ -1,3 +1,4 @@
+from __future__ import annotations
 """
 judgment-engine/src/models.py
 
@@ -10,7 +11,12 @@ scores them separately. The ensemble comes last.
 from dataclasses import dataclass, field
 from datetime import datetime
 from enum import Enum
-from typing import Optional, Protocol
+from typing import Optional
+try:
+    from typing import Protocol
+except ImportError:
+    class Protocol:
+        pass
 
 
 class Relationship(Enum):
