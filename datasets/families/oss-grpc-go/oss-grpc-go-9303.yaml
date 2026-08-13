@@ -1,0 +1,97 @@
+id: oss-grpc-go-9303
+title: 'grpcsync: change refcounted utility to use value'
+family: uncategorized
+date: '2026-08-12'
+author: eshitachandwani
+source: github-api-mined
+source_repo: grpc/grpc-go
+source_url: https://github.com/grpc/grpc-go/pull/9303
+source_pr: 9303
+difficulty: medium
+trigger:
+  package: grpc/grpc-go
+  files:
+  - internal/credentials/xds/handshake_info.go
+  intent: 'grpcsync: change refcounted utility to use value'
+  diff_summary: 'Primary: internal/credentials/xds/handshake_info.go (+8/-7)'
+consequences:
+- package: grpc/grpc-go
+  files:
+  - credentials/xds/xds.go
+  description: 'modified: credentials/xds/xds.go (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - credentials/xds/xds_client_test.go
+  description: 'modified: credentials/xds/xds_client_test.go (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - credentials/xds/xds_server_test.go
+  description: 'modified: credentials/xds/xds_server_test.go (+4/-4)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/credentials/xds/handshake_info_test.go
+  description: 'modified: internal/credentials/xds/handshake_info_test.go (+8/-8)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/grpcsync/refcounted.go
+  description: 'modified: internal/grpcsync/refcounted.go (+9/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/xds/balancer/clusterimpl/clusterimpl.go
+  description: 'modified: internal/xds/balancer/clusterimpl/clusterimpl.go (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/xds/httpfilter/extproc/ext_proc.go
+  description: 'modified: internal/xds/httpfilter/extproc/ext_proc.go (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/xds/resolver/serviceconfig.go
+  description: 'modified: internal/xds/resolver/serviceconfig.go (+5/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/xds/server/conn_wrapper.go
+  description: 'modified: internal/xds/server/conn_wrapper.go (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 10
+notes: 'Mined from grpc/grpc-go PR #9303. Trigger heuristic applied. Needs review.'

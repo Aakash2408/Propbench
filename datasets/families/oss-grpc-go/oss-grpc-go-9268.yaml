@@ -1,0 +1,58 @@
+id: oss-grpc-go-9268
+title: 'credentials/alts: support max frame size negotiation via env var'
+family: interface-evolution
+date: '2026-08-04'
+author: thuan-tq
+source: github-api-mined
+source_repo: grpc/grpc-go
+source_url: https://github.com/grpc/grpc-go/pull/9268
+source_pr: 9268
+difficulty: medium
+trigger:
+  package: grpc/grpc-go
+  files:
+  - credentials/alts/internal/conn/record.go
+  intent: 'credentials/alts: support max frame size negotiation via env var'
+  diff_summary: 'Primary: credentials/alts/internal/conn/record.go (+14/-5)'
+consequences:
+- package: grpc/grpc-go
+  files:
+  - credentials/alts/internal/conn/record_test.go
+  description: 'modified: credentials/alts/internal/conn/record_test.go (+118/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - credentials/alts/internal/handshaker/handshaker.go
+  description: 'modified: credentials/alts/internal/handshaker/handshaker.go (+5/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - credentials/alts/internal/handshaker/handshaker_test.go
+  description: 'modified: credentials/alts/internal/handshaker/handshaker_test.go
+    (+63/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/envconfig/envconfig.go
+  description: 'modified: internal/envconfig/envconfig.go (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from grpc/grpc-go PR #9268. Trigger heuristic applied. Needs review.'

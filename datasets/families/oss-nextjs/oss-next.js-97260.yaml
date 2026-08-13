@@ -1,0 +1,41 @@
+id: oss-next.js-97260
+title: '[test] Redirect the deployment host in-process for proxy deploy tests'
+family: dependency-evolution
+date: '2026-08-12'
+author: unstubbable
+source: github-api-mined
+source_repo: vercel/next.js
+source_url: https://github.com/vercel/next.js/pull/97260
+source_pr: 97260
+difficulty: medium
+trigger:
+  package: vercel/next.js
+  files:
+  - test/lib/next-modes/next-deploy.ts
+  intent: '[test] Redirect the deployment host in-process for proxy deploy tests'
+  diff_summary: 'Primary: test/lib/next-modes/next-deploy.ts (+81/-8)'
+consequences:
+- package: vercel/next.js
+  files:
+  - test/lib/browsers/launch.js
+  description: 'modified: test/lib/browsers/launch.js (+10/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - test/lib/browsers/playwright.ts
+  description: 'modified: test/lib/browsers/playwright.ts (+29/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from vercel/next.js PR #97260. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,69 @@
+id: oss-kubernetes-138957
+title: 'kubeadm: use dedicated ClusterRole for apiserver kubelet client'
+family: uncategorized
+date: '2026-05-11'
+author: neolit123
+source: github-api-mined
+source_repo: kubernetes/kubernetes
+source_url: https://github.com/kubernetes/kubernetes/pull/138957
+source_pr: 138957
+difficulty: medium
+trigger:
+  package: kubernetes/kubernetes
+  files:
+  - cmd/kubeadm/app/phases/bootstraptoken/node/tlsbootstrap.go
+  intent: 'kubeadm: use dedicated ClusterRole for apiserver kubelet client'
+  diff_summary: 'Primary: cmd/kubeadm/app/phases/bootstraptoken/node/tlsbootstrap.go
+    (+22/-0)'
+consequences:
+- package: kubernetes/kubernetes
+  files:
+  - cmd/kubeadm/app/cmd/phases/init/bootstraptoken.go
+  description: 'modified: cmd/kubeadm/app/cmd/phases/init/bootstraptoken.go (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - cmd/kubeadm/app/cmd/phases/upgrade/apply/bootstraptoken.go
+  description: 'modified: cmd/kubeadm/app/cmd/phases/upgrade/apply/bootstraptoken.go
+    (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - cmd/kubeadm/app/constants/constants.go
+  description: 'modified: cmd/kubeadm/app/constants/constants.go (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - cmd/kubeadm/app/phases/bootstraptoken/node/tlsbootstrap_test.go
+  description: 'modified: cmd/kubeadm/app/phases/bootstraptoken/node/tlsbootstrap_test.go
+    (+57/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - cmd/kubeadm/app/phases/certs/certlist.go
+  description: 'modified: cmd/kubeadm/app/phases/certs/certlist.go (+2/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from kubernetes/kubernetes PR #138957. Trigger heuristic applied. Needs
+  review.'

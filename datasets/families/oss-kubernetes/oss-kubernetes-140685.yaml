@@ -1,0 +1,68 @@
+id: oss-kubernetes-140685
+title: 'Automated cherry pick of #139162: Fix case where preemptor may be stuck in
+  unschedulable queue
+
+  #1393'
+family: interface-evolution
+date: '2026-08-08'
+author: iomarsayed
+source: github-api-mined
+source_repo: kubernetes/kubernetes
+source_url: https://github.com/kubernetes/kubernetes/pull/140685
+source_pr: 140685
+difficulty: medium
+trigger:
+  package: kubernetes/kubernetes
+  files:
+  - pkg/scheduler/backend/queue/scheduling_queue.go
+  intent: 'Automated cherry pick of #139162: Fix case where preemptor may be stuck
+    in unschedulable queue
+
+    #139330: Unset WasFlushedFromUnschedulable for gated pods
+
+    #139331: Make sure gated pods are flushed with the same frequency as non-gated'
+  diff_summary: 'Primary: pkg/scheduler/backend/queue/scheduling_queue.go (+15/-1)'
+consequences:
+- package: kubernetes/kubernetes
+  files:
+  - pkg/scheduler/backend/queue/scheduling_queue_test.go
+  description: 'modified: pkg/scheduler/backend/queue/scheduling_queue_test.go (+256/-10)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - pkg/scheduler/framework/types.go
+  description: 'modified: pkg/scheduler/framework/types.go (+11/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - staging/src/k8s.io/kube-scheduler/framework/interface.go
+  description: 'modified: staging/src/k8s.io/kube-scheduler/framework/interface.go
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - test/integration/scheduler/preemption/preemption_test.go
+  description: 'modified: test/integration/scheduler/preemption/preemption_test.go
+    (+121/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from kubernetes/kubernetes PR #140685. Trigger heuristic applied. Needs
+  review.'

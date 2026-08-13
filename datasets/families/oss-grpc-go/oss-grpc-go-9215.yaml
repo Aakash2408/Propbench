@@ -1,0 +1,97 @@
+id: oss-grpc-go-9215
+title: 'balancer: remove grpc.lb.pick_first.* metrics'
+family: refactor
+date: '2026-08-11'
+author: deepgolani4
+source: github-api-mined
+source_repo: grpc/grpc-go
+source_url: https://github.com/grpc/grpc-go/pull/9215
+source_pr: 9215
+difficulty: medium
+trigger:
+  package: grpc/grpc-go
+  files:
+  - balancer/pickfirst/pickfirst.go
+  intent: 'balancer: remove grpc.lb.pick_first.* metrics'
+  diff_summary: 'Primary: balancer/pickfirst/pickfirst.go (+5/-45)'
+consequences:
+- package: grpc/grpc-go
+  files:
+  - balancer/pickfirst/metrics_test.go
+  description: 'removed: balancer/pickfirst/metrics_test.go (+0/-455)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - balancer/pickfirst/pickfirst_ext_test.go
+  description: 'modified: balancer/pickfirst/pickfirst_ext_test.go (+4/-36)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - examples/features/opentelemetry/client/main.go
+  description: 'modified: examples/features/opentelemetry/client/main.go (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - examples/features/opentelemetry/server/main.go
+  description: 'modified: examples/features/opentelemetry/server/main.go (+0/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - security/advancedtls/examples/go.sum
+  description: 'modified: security/advancedtls/examples/go.sum (+0/-20)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - security/advancedtls/go.sum
+  description: 'modified: security/advancedtls/go.sum (+0/-20)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - stats/opencensus/go.sum
+  description: 'modified: stats/opencensus/go.sum (+0/-10)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - stats/opentelemetry/e2e_test.go
+  description: 'modified: stats/opentelemetry/e2e_test.go (+111/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - stats/opentelemetry/example_test.go
+  description: 'modified: stats/opentelemetry/example_test.go (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 10
+notes: 'Mined from grpc/grpc-go PR #9215. Trigger heuristic applied. Needs review.'

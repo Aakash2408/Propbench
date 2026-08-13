@@ -1,0 +1,106 @@
+id: oss-django-21235
+title: 'Fixed #36784 -- Added csp_nonce_attr template tag for CSP nonce inclusion.'
+family: interface-evolution
+date: '2026-05-06'
+author: nessita
+source: github-api-mined
+source_repo: django/django
+source_url: https://github.com/django/django/pull/21235
+source_pr: 21235
+difficulty: medium
+trigger:
+  package: django/django
+  files:
+  - tests/template_tests/syntax_tests/test_csp_nonce_attr.py
+  intent: 'Fixed #36784 -- Added csp_nonce_attr template tag for CSP nonce inclusion.'
+  diff_summary: 'Primary: tests/template_tests/syntax_tests/test_csp_nonce_attr.py
+    (+89/-0)'
+consequences:
+- package: django/django
+  files:
+  - django/forms/widgets.py
+  description: 'modified: django/forms/widgets.py (+39/-17)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - django/template/context_processors.py
+  description: 'modified: django/template/context_processors.py (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - django/template/defaulttags.py
+  description: 'modified: django/template/defaulttags.py (+6/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - django/utils/csp.py
+  description: 'modified: django/utils/csp.py (+16/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - docs/howto/csp.txt
+  description: 'modified: docs/howto/csp.txt (+24/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - docs/ref/csp.txt
+  description: 'modified: docs/ref/csp.txt (+33/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - docs/ref/templates/builtins.txt
+  description: 'modified: docs/ref/templates/builtins.txt (+30/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - docs/releases/6.1.txt
+  description: 'modified: docs/releases/6.1.txt (+5/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - docs/topics/forms/media.txt
+  description: 'modified: docs/topics/forms/media.txt (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - tests/forms_tests/tests/test_media.py
+  description: 'modified: tests/forms_tests/tests/test_media.py (+78/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 11
+notes: 'Mined from django/django PR #21235. Trigger heuristic applied. Needs review.'

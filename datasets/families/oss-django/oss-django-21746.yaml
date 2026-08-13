@@ -1,0 +1,49 @@
+id: oss-django-21746
+title: 'Fixed #37254 -- Added fields.E323 for models referenced by ManyToManyFields.'
+family: interface-evolution
+date: '2026-08-13'
+author: felixxm
+source: github-api-mined
+source_repo: django/django
+source_url: https://github.com/django/django/pull/21746
+source_pr: 21746
+difficulty: medium
+trigger:
+  package: django/django
+  files:
+  - django/db/models/fields/related.py
+  intent: 'Fixed #37254 -- Added fields.E323 for models referenced by ManyToManyFields.'
+  diff_summary: 'Primary: django/db/models/fields/related.py (+45/-0)'
+consequences:
+- package: django/django
+  files:
+  - docs/ref/checks.txt
+  description: 'modified: docs/ref/checks.txt (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - docs/releases/6.1.1.txt
+  description: 'modified: docs/releases/6.1.1.txt (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - tests/invalid_models_tests/test_relative_fields.py
+  description: 'modified: tests/invalid_models_tests/test_relative_fields.py (+42/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from django/django PR #21746. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,57 @@
+id: oss-grpc-go-9221
+title: 'extauthz: parse base and override config for A92.'
+family: uncategorized
+date: '2026-08-04'
+author: Pranjali-2501
+source: github-api-mined
+source_repo: grpc/grpc-go
+source_url: https://github.com/grpc/grpc-go/pull/9221
+source_pr: 9221
+difficulty: medium
+trigger:
+  package: grpc/grpc-go
+  files:
+  - internal/xds/httpfilter/ext_authz/ext_authz.go
+  intent: 'extauthz: parse base and override config for A92.'
+  diff_summary: 'Primary: internal/xds/httpfilter/ext_authz/ext_authz.go (+183/-0)'
+consequences:
+- package: grpc/grpc-go
+  files:
+  - internal/envconfig/xds.go
+  description: 'modified: internal/envconfig/xds.go (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/xds/httpfilter/ext_authz/config.go
+  description: 'added: internal/xds/httpfilter/ext_authz/config.go (+79/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/xds/httpfilter/ext_authz/ext_authz_test.go
+  description: 'added: internal/xds/httpfilter/ext_authz/ext_authz_test.go (+445/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/xds/xdsclient/xdsresource/unmarshal_lds.go
+  description: 'modified: internal/xds/xdsclient/xdsresource/unmarshal_lds.go (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from grpc/grpc-go PR #9221. Trigger heuristic applied. Needs review.'

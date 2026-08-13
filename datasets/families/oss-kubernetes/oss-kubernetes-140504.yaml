@@ -1,0 +1,56 @@
+id: oss-kubernetes-140504
+title: 'Automated cherry pick of #140435: DRA: key the structured allocator counter
+  caches by PoolID'
+family: uncategorized
+date: '2026-08-08'
+author: thc1006
+source: github-api-mined
+source_repo: kubernetes/kubernetes
+source_url: https://github.com/kubernetes/kubernetes/pull/140504
+source_pr: 140504
+difficulty: medium
+trigger:
+  package: kubernetes/kubernetes
+  files:
+  - staging/src/k8s.io/dynamic-resource-allocation/structured/internal/allocatortesting/allocator_testing.go
+  intent: 'Automated cherry pick of #140435: DRA: key the structured allocator counter
+    caches by PoolID'
+  diff_summary: 'Primary: staging/src/k8s.io/dynamic-resource-allocation/structured/internal/allocatortesting/allocator_testing.go
+    (+79/-0)'
+consequences:
+- package: kubernetes/kubernetes
+  files:
+  - staging/src/k8s.io/dynamic-resource-allocation/structured/internal/experimental/allocator_experimental.go
+  description: 'modified: staging/src/k8s.io/dynamic-resource-allocation/structured/internal/experimental/allocator_experimental.go
+    (+13/-13)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - staging/src/k8s.io/dynamic-resource-allocation/structured/internal/incubating/allocator_incubating.go
+  description: 'modified: staging/src/k8s.io/dynamic-resource-allocation/structured/internal/incubating/allocator_incubating.go
+    (+13/-13)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - staging/src/k8s.io/dynamic-resource-allocation/structured/internal/stable/allocator_stable.go
+  description: 'modified: staging/src/k8s.io/dynamic-resource-allocation/structured/internal/stable/allocator_stable.go
+    (+13/-13)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from kubernetes/kubernetes PR #140504. Trigger heuristic applied. Needs
+  review.'

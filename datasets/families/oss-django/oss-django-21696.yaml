@@ -1,0 +1,121 @@
+id: oss-django-21696
+title: 'Refs #28586 -- Renamed RAISE fetch mode to FETCH_RAISE.'
+family: refactor
+date: '2026-08-03'
+author: jacobtylerwalls
+source: github-api-mined
+source_repo: django/django
+source_url: https://github.com/django/django/pull/21696
+source_pr: 21696
+difficulty: medium
+trigger:
+  package: django/django
+  files:
+  - tests/basic/tests.py
+  intent: 'Refs #28586 -- Renamed RAISE fetch mode to FETCH_RAISE.'
+  diff_summary: 'Primary: tests/basic/tests.py (+5/-5)'
+consequences:
+- package: django/django
+  files:
+  - django/db/models/__init__.py
+  description: 'modified: django/db/models/__init__.py (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - django/db/models/fetch_modes.py
+  description: 'modified: django/db/models/fetch_modes.py (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - docs/ref/exceptions.txt
+  description: 'modified: docs/ref/exceptions.txt (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - docs/releases/6.1.txt
+  description: 'modified: docs/releases/6.1.txt (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - docs/topics/db/fetch-modes.txt
+  description: 'modified: docs/topics/db/fetch-modes.txt (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - tests/defer/tests.py
+  description: 'modified: tests/defer/tests.py (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - tests/generic_relations/tests.py
+  description: 'modified: tests/generic_relations/tests.py (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - tests/many_to_one/tests.py
+  description: 'modified: tests/many_to_one/tests.py (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - tests/one_to_one/tests.py
+  description: 'modified: tests/one_to_one/tests.py (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - tests/prefetch_related/tests.py
+  description: 'modified: tests/prefetch_related/tests.py (+4/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - tests/queryset_pickle/tests.py
+  description: 'modified: tests/queryset_pickle/tests.py (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - tests/raw_query/tests.py
+  description: 'modified: tests/raw_query/tests.py (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 13
+notes: 'Mined from django/django PR #21696. Trigger heuristic applied. Needs review.'

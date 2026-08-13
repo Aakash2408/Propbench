@@ -1,0 +1,171 @@
+id: oss-prisma-29980
+title: Port ref set|delete|list and format onto the engine
+family: uncategorized
+date: '2026-08-12'
+author: wmadden-electric
+source: github-api-mined
+source_repo: prisma/prisma
+source_url: https://github.com/prisma/prisma/pull/29980
+source_pr: 29980
+difficulty: medium
+trigger:
+  package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/cli/src/orm/ref/list.ts
+  intent: Port ref set|delete|list and format onto the engine
+  diff_summary: 'Primary: packages/1-framework/3-tooling/cli/src/orm/ref/list.ts (+75/-0)'
+consequences:
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/cli/src/control-api/operations/format.ts
+  description: 'modified: packages/1-framework/3-tooling/cli/src/control-api/operations/format.ts
+    (+4/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/cli/src/control-api/operations/ref.ts
+  description: 'modified: packages/1-framework/3-tooling/cli/src/control-api/operations/ref.ts
+    (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/cli/src/orm/cli.ts
+  description: 'modified: packages/1-framework/3-tooling/cli/src/orm/cli.ts (+15/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/cli/src/orm/family.ts
+  description: 'modified: packages/1-framework/3-tooling/cli/src/orm/family.ts (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/cli/src/orm/format.ts
+  description: 'added: packages/1-framework/3-tooling/cli/src/orm/format.ts (+52/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/cli/src/orm/ref/delete.ts
+  description: 'added: packages/1-framework/3-tooling/cli/src/orm/ref/delete.ts (+53/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/cli/src/orm/ref/set.ts
+  description: 'added: packages/1-framework/3-tooling/cli/src/orm/ref/set.ts (+70/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/cli/test/commands/ref.test.ts
+  description: 'removed: packages/1-framework/3-tooling/cli/test/commands/ref.test.ts
+    (+0/-469)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/cli/test/orm/format.test.ts
+  description: 'added: packages/1-framework/3-tooling/cli/test/orm/format.test.ts
+    (+234/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/cli/test/orm/ref-delete.test.ts
+  description: 'added: packages/1-framework/3-tooling/cli/test/orm/ref-delete.test.ts
+    (+108/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/cli/test/orm/ref-fixtures.ts
+  description: 'added: packages/1-framework/3-tooling/cli/test/orm/ref-fixtures.ts
+    (+152/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/cli/test/orm/ref-format-error-boundary.test.ts
+  description: 'added: packages/1-framework/3-tooling/cli/test/orm/ref-format-error-boundary.test.ts
+    (+146/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/cli/test/orm/ref-list.test.ts
+  description: 'added: packages/1-framework/3-tooling/cli/test/orm/ref-list.test.ts
+    (+118/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/cli/test/orm/ref-set.test.ts
+  description: 'added: packages/1-framework/3-tooling/cli/test/orm/ref-set.test.ts
+    (+237/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - test/integration/test/cli-journeys/format.e2e.test.ts
+  description: 'modified: test/integration/test/cli-journeys/format.e2e.test.ts (+15/-6)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - test/integration/test/cli.ref-pointer-integration.e2e.test.ts
+  description: 'modified: test/integration/test/cli.ref-pointer-integration.e2e.test.ts
+    (+33/-53)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - test/integration/test/utils/journey-test-helpers.ts
+  description: 'modified: test/integration/test/utils/journey-test-helpers.ts (+10/-17)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 18
+notes: 'Mined from prisma/prisma PR #29980. Trigger heuristic applied. Needs review.'

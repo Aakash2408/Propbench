@@ -1,0 +1,59 @@
+id: oss-prisma-29998
+title: 'The publish path gains three conformance checks: packed imports, a validator
+  that never throws, and '
+family: uncategorized
+date: '2026-08-13'
+author: wmadden-electric
+source: github-api-mined
+source_repo: prisma/prisma
+source_url: https://github.com/prisma/prisma/pull/29998
+source_pr: 29998
+difficulty: medium
+trigger:
+  package: prisma/prisma
+  files:
+  - scripts/check-conformance.mjs
+  intent: 'The publish path gains three conformance checks: packed imports, a validator
+    that never throws, and a tarball that installs'
+  diff_summary: 'Primary: scripts/check-conformance.mjs (+778/-0)'
+consequences:
+- package: prisma/prisma
+  files:
+  - .gitignore
+  description: 'modified: .gitignore (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - package.json
+  description: 'modified: package.json (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - pnpm-lock.yaml
+  description: 'modified: pnpm-lock.yaml (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - scripts/check-conformance.test.mjs
+  description: 'added: scripts/check-conformance.test.mjs (+539/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from prisma/prisma PR #29998. Trigger heuristic applied. Needs review.'

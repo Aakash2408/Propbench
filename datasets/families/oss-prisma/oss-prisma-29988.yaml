@@ -1,0 +1,75 @@
+id: oss-prisma-29988
+title: 'refactor(lint): find framework vocabulary with a Biome plugin, not a text
+  scan'
+family: refactor
+date: '2026-08-12'
+author: wmadden-electric
+source: github-api-mined
+source_repo: prisma/prisma
+source_url: https://github.com/prisma/prisma/pull/29988
+source_pr: 29988
+difficulty: medium
+trigger:
+  package: prisma/prisma
+  files:
+  - scripts/lint-framework-vocabulary.mjs
+  intent: 'refactor(lint): find framework vocabulary with a Biome plugin, not a text
+    scan'
+  diff_summary: 'Primary: scripts/lint-framework-vocabulary.mjs (+67/-105)'
+consequences:
+- package: prisma/prisma
+  files:
+  - .agents/rules/README.md
+  description: 'modified: .agents/rules/README.md (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - .agents/rules/no-family-vocabulary-in-framework.mdc
+  description: 'modified: .agents/rules/no-family-vocabulary-in-framework.mdc (+19/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - biome-plugins/no-family-vocabulary.grit
+  description: 'added: biome-plugins/no-family-vocabulary.grit (+112/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - biome.jsonc
+  description: 'modified: biome.jsonc (+5/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - scripts/lint-framework-vocabulary.config.json
+  description: 'modified: scripts/lint-framework-vocabulary.config.json (+1/-30)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - scripts/lint-framework-vocabulary.test.mjs
+  description: 'modified: scripts/lint-framework-vocabulary.test.mjs (+99/-165)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from prisma/prisma PR #29988. Trigger heuristic applied. Needs review.'

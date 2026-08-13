@@ -1,0 +1,49 @@
+id: oss-django-21239
+title: 'Fixed #37085 -- Added support for object-based form media stylesheet assets.'
+family: interface-evolution
+date: '2026-05-07'
+author: nessita
+source: github-api-mined
+source_repo: django/django
+source_url: https://github.com/django/django/pull/21239
+source_pr: 21239
+difficulty: medium
+trigger:
+  package: django/django
+  files:
+  - docs/topics/forms/media.txt
+  intent: 'Fixed #37085 -- Added support for object-based form media stylesheet assets.'
+  diff_summary: 'Primary: docs/topics/forms/media.txt (+44/-2)'
+consequences:
+- package: django/django
+  files:
+  - django/forms/widgets.py
+  description: 'modified: django/forms/widgets.py (+9/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - docs/releases/6.1.txt
+  description: 'modified: docs/releases/6.1.txt (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - tests/forms_tests/tests/test_media.py
+  description: 'modified: tests/forms_tests/tests/test_media.py (+41/-24)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from django/django PR #21239. Trigger heuristic applied. Needs review.'

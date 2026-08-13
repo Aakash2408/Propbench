@@ -1,0 +1,120 @@
+id: oss-kubernetes-141042
+title: 'test/images: bump agnhost to 2.66.1, nginx and glibc-dns-testing'
+family: dependency-evolution
+date: '2026-07-29'
+author: dims
+source: github-api-mined
+source_repo: kubernetes/kubernetes
+source_url: https://github.com/kubernetes/kubernetes/pull/141042
+source_pr: 141042
+difficulty: medium
+trigger:
+  package: kubernetes/kubernetes
+  files:
+  - test/images/kitten/BASEIMAGE
+  intent: 'test/images: bump agnhost to 2.66.1, nginx and glibc-dns-testing'
+  diff_summary: 'Primary: test/images/kitten/BASEIMAGE (+7/-7)'
+consequences:
+- package: kubernetes/kubernetes
+  files:
+  - build/dependencies.yaml
+  description: 'modified: build/dependencies.yaml (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - hack/testdata/pod-with-large-name.yaml
+  description: 'modified: hack/testdata/pod-with-large-name.yaml (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - test/e2e/dra/test-driver/deploy/example/pod-external-toleration.yaml
+  description: 'modified: test/e2e/dra/test-driver/deploy/example/pod-external-toleration.yaml
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - test/e2e/dra/test-driver/deploy/example/pod-external.yaml
+  description: 'modified: test/e2e/dra/test-driver/deploy/example/pod-external.yaml
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - test/e2e/dra/test-driver/deploy/example/pod-inline.yaml
+  description: 'modified: test/e2e/dra/test-driver/deploy/example/pod-inline.yaml
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - test/e2e/testing-manifests/kubectl/agnhost-primary-pod.yaml
+  description: 'modified: test/e2e/testing-manifests/kubectl/agnhost-primary-pod.yaml
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - test/e2e/testing-manifests/serviceloadbalancer/netexecrc.yaml
+  description: 'modified: test/e2e/testing-manifests/serviceloadbalancer/netexecrc.yaml
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - test/fixtures/doc-yaml/user-guide/multi-pod.yaml
+  description: 'modified: test/fixtures/doc-yaml/user-guide/multi-pod.yaml (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - test/fixtures/pkg/kubectl/cmd/auth/rbac-resource-plus.yaml
+  description: 'modified: test/fixtures/pkg/kubectl/cmd/auth/rbac-resource-plus.yaml
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - test/images/nautilus/BASEIMAGE
+  description: 'modified: test/images/nautilus/BASEIMAGE (+7/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - test/utils/image/manifest.go
+  description: 'modified: test/utils/image/manifest.go (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 12
+notes: 'Mined from kubernetes/kubernetes PR #141042. Trigger heuristic applied. Needs
+  review.'

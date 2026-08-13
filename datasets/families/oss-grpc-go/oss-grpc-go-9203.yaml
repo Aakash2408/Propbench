@@ -1,0 +1,41 @@
+id: oss-grpc-go-9203
+title: 'internal/transport: validate balancer and address metadata'
+family: interface-evolution
+date: '2026-08-04'
+author: buger
+source: github-api-mined
+source_repo: grpc/grpc-go
+source_url: https://github.com/grpc/grpc-go/pull/9203
+source_pr: 9203
+difficulty: medium
+trigger:
+  package: grpc/grpc-go
+  files:
+  - internal/transport/http2_client.go
+  intent: 'internal/transport: validate balancer and address metadata'
+  diff_summary: 'Primary: internal/transport/http2_client.go (+3/-0)'
+consequences:
+- package: grpc/grpc-go
+  files:
+  - stream.go
+  description: 'modified: stream.go (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - test/balancer_test.go
+  description: 'modified: test/balancer_test.go (+136/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from grpc/grpc-go PR #9203. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,58 @@
+id: oss-next.js-97205
+title: Invalidate deferred Webpack entry sources
+family: uncategorized
+date: '2026-08-12'
+author: gnoff
+source: github-api-mined
+source_repo: vercel/next.js
+source_url: https://github.com/vercel/next.js/pull/97205
+source_pr: 97205
+difficulty: medium
+trigger:
+  package: vercel/next.js
+  files:
+  - test/e2e/deferred-entries/next.config.js
+  intent: Invalidate deferred Webpack entry sources
+  diff_summary: 'Primary: test/e2e/deferred-entries/next.config.js (+64/-1)'
+consequences:
+- package: vercel/next.js
+  files:
+  - packages/next/src/build/entries.ts
+  description: 'modified: packages/next/src/build/entries.ts (+8/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - packages/next/src/build/webpack-build/impl.ts
+  description: 'modified: packages/next/src/build/webpack-build/impl.ts (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - packages/next/src/build/webpack-config.ts
+  description: 'modified: packages/next/src/build/webpack-config.ts (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - packages/next/src/build/webpack/plugins/deferred-entries-plugin.ts
+  description: 'modified: packages/next/src/build/webpack/plugins/deferred-entries-plugin.ts
+    (+9/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from vercel/next.js PR #97205. Trigger heuristic applied. Needs review.'

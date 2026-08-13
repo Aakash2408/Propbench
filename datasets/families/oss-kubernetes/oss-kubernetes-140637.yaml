@@ -1,0 +1,54 @@
+id: oss-kubernetes-140637
+title: 'Automated cherry pick of #139162: Fix case where preemptor may be stuck in
+  unschedulable queue'
+family: bugfix
+date: '2026-08-08'
+author: iomarsayed
+source: github-api-mined
+source_repo: kubernetes/kubernetes
+source_url: https://github.com/kubernetes/kubernetes/pull/140637
+source_pr: 140637
+difficulty: medium
+trigger:
+  package: kubernetes/kubernetes
+  files:
+  - pkg/scheduler/backend/queue/scheduling_queue.go
+  intent: 'Automated cherry pick of #139162: Fix case where preemptor may be stuck
+    in unschedulable queue'
+  diff_summary: 'Primary: pkg/scheduler/backend/queue/scheduling_queue.go (+4/-1)'
+consequences:
+- package: kubernetes/kubernetes
+  files:
+  - pkg/scheduler/backend/queue/scheduling_queue_test.go
+  description: 'modified: pkg/scheduler/backend/queue/scheduling_queue_test.go (+48/-8)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - staging/src/k8s.io/kube-scheduler/framework/interface.go
+  description: 'modified: staging/src/k8s.io/kube-scheduler/framework/interface.go
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - test/integration/scheduler/preemption/preemption_test.go
+  description: 'modified: test/integration/scheduler/preemption/preemption_test.go
+    (+121/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from kubernetes/kubernetes PR #140637. Trigger heuristic applied. Needs
+  review.'

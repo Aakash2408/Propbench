@@ -1,0 +1,49 @@
+id: oss-django-21591
+title: 'Fixed #37205 -- Asserted exact HttpResponse types in tests.'
+family: bugfix
+date: '2026-08-05'
+author: jonbiemond
+source: github-api-mined
+source_repo: django/django
+source_url: https://github.com/django/django/pull/21591
+source_pr: 21591
+difficulty: medium
+trigger:
+  package: django/django
+  files:
+  - tests/decorators/test_http.py
+  intent: 'Fixed #37205 -- Asserted exact HttpResponse types in tests.'
+  diff_summary: 'Primary: tests/decorators/test_http.py (+20/-20)'
+consequences:
+- package: django/django
+  files:
+  - tests/async/tests.py
+  description: 'modified: tests/async/tests.py (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - tests/decorators/test_common.py
+  description: 'modified: tests/decorators/test_common.py (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - tests/decorators/test_csrf.py
+  description: 'modified: tests/decorators/test_csrf.py (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from django/django PR #21591. Trigger heuristic applied. Needs review.'

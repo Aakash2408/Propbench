@@ -1,0 +1,140 @@
+id: oss-next.js-97247
+title: Add RDC compression rollout controls
+family: interface-evolution
+date: '2026-08-13'
+author: gnoff
+source: github-api-mined
+source_repo: vercel/next.js
+source_url: https://github.com/vercel/next.js/pull/97247
+source_pr: 97247
+difficulty: medium
+trigger:
+  package: vercel/next.js
+  files:
+  - packages/next/src/server/resume-data-cache/resume-data-cache.ts
+  intent: Add RDC compression rollout controls
+  diff_summary: 'Primary: packages/next/src/server/resume-data-cache/resume-data-cache.ts
+    (+77/-54)'
+consequences:
+- package: vercel/next.js
+  files:
+  - packages/next/errors.json
+  description: 'modified: packages/next/errors.json (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - packages/next/src/build/templates/app-page-runtime.ts
+  description: 'modified: packages/next/src/build/templates/app-page-runtime.ts (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - packages/next/src/build/templates/edge-ssr-app.ts
+  description: 'modified: packages/next/src/build/templates/edge-ssr-app.ts (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - packages/next/src/export/index.ts
+  description: 'modified: packages/next/src/export/index.ts (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - packages/next/src/export/routes/app-page.ts
+  description: 'modified: packages/next/src/export/routes/app-page.ts (+18/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - packages/next/src/export/worker.ts
+  description: 'modified: packages/next/src/export/worker.ts (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - packages/next/src/server/app-render/app-render.tsx
+  description: 'modified: packages/next/src/server/app-render/app-render.tsx (+13/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - packages/next/src/server/app-render/postponed-state.test.ts
+  description: 'modified: packages/next/src/server/app-render/postponed-state.test.ts
+    (+78/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - packages/next/src/server/app-render/postponed-state.ts
+  description: 'modified: packages/next/src/server/app-render/postponed-state.ts (+80/-18)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - packages/next/src/server/app-render/types.ts
+  description: 'modified: packages/next/src/server/app-render/types.ts (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - packages/next/src/server/base-server.ts
+  description: 'modified: packages/next/src/server/base-server.ts (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - packages/next/src/server/config-schema.ts
+  description: 'modified: packages/next/src/server/config-schema.ts (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - packages/next/src/server/config-shared.ts
+  description: 'modified: packages/next/src/server/config-shared.ts (+10/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - packages/next/src/server/resume-data-cache/resume-data-cache.test.ts
+  description: 'modified: packages/next/src/server/resume-data-cache/resume-data-cache.test.ts
+    (+68/-31)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 15
+notes: 'Mined from vercel/next.js PR #97247. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,89 @@
+id: oss-grpc-go-9248
+title: '  xds: fix certificate provider closure race during concurrent TLS handshakes'
+family: bugfix
+date: '2026-08-03'
+author: easwars
+source: github-api-mined
+source_repo: grpc/grpc-go
+source_url: https://github.com/grpc/grpc-go/pull/9248
+source_pr: 9248
+difficulty: medium
+trigger:
+  package: grpc/grpc-go
+  files:
+  - internal/credentials/xds/handshake_info.go
+  intent: '  xds: fix certificate provider closure race during concurrent TLS handshakes'
+  diff_summary: 'Primary: internal/credentials/xds/handshake_info.go (+94/-55)'
+consequences:
+- package: grpc/grpc-go
+  files:
+  - credentials/xds/xds.go
+  description: 'modified: credentials/xds/xds.go (+14/-26)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - credentials/xds/xds_client_test.go
+  description: 'modified: credentials/xds/xds_client_test.go (+6/-5)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - credentials/xds/xds_server_test.go
+  description: 'modified: credentials/xds/xds_server_test.go (+12/-11)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/credentials/xds/handshake_info_test.go
+  description: 'modified: internal/credentials/xds/handshake_info_test.go (+113/-57)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/grpcsync/refcounted.go
+  description: 'modified: internal/grpcsync/refcounted.go (+16/-18)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/grpcsync/refcounted_test.go
+  description: 'modified: internal/grpcsync/refcounted_test.go (+24/-48)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/xds/balancer/clusterimpl/clusterimpl.go
+  description: 'modified: internal/xds/balancer/clusterimpl/clusterimpl.go (+50/-48)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/xds/server/conn_wrapper.go
+  description: 'modified: internal/xds/server/conn_wrapper.go (+36/-15)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 9
+notes: 'Mined from grpc/grpc-go PR #9248. Trigger heuristic applied. Needs review.'

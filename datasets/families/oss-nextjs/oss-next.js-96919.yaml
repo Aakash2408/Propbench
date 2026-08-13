@@ -1,0 +1,41 @@
+id: oss-next.js-96919
+title: '[ci] Use OIDC tokens to read private preview builds'
+family: uncategorized
+date: '2026-08-12'
+author: eps1lon
+source: github-api-mined
+source_repo: vercel/next.js
+source_url: https://github.com/vercel/next.js/pull/96919
+source_pr: 96919
+difficulty: medium
+trigger:
+  package: vercel/next.js
+  files:
+  - scripts/wait-for-preview-tarball.mjs
+  intent: '[ci] Use OIDC tokens to read private preview builds'
+  diff_summary: 'Primary: scripts/wait-for-preview-tarball.mjs (+117/-17)'
+consequences:
+- package: vercel/next.js
+  files:
+  - scripts/test-new-tests.mjs
+  description: 'modified: scripts/test-new-tests.mjs (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - test/lib/next-modes/next-deploy.ts
+  description: 'modified: test/lib/next-modes/next-deploy.ts (+17/-9)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from vercel/next.js PR #96919. Trigger heuristic applied. Needs review.'

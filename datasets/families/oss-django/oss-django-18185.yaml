@@ -1,0 +1,51 @@
+id: oss-django-18185
+title: 'Refs #35380 -- Updated outdated images in docs/ref/contrib/admin/_images/.'
+family: uncategorized
+date: '2024-06-25'
+author: nessita
+source: github-api-mined
+source_repo: django/django
+source_url: https://github.com/django/django/pull/18185
+source_pr: 18185
+difficulty: medium
+trigger:
+  package: django/django
+  files:
+  - docs/ref/contrib/admin/_images/actions-as-modeladmin-methods.png
+  intent: 'Refs #35380 -- Updated outdated images in docs/ref/contrib/admin/_images/.'
+  diff_summary: 'Primary: docs/ref/contrib/admin/_images/actions-as-modeladmin-methods.png
+    (+0/-0)'
+consequences:
+- package: django/django
+  files:
+  - docs/ref/contrib/admin/_images/adding-actions-to-the-modeladmin.png
+  description: 'modified: docs/ref/contrib/admin/_images/adding-actions-to-the-modeladmin.png
+    (+0/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - docs/ref/contrib/admin/_images/admin-actions.png
+  description: 'modified: docs/ref/contrib/admin/_images/admin-actions.png (+0/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - docs/ref/contrib/admin/_images/list_filter.png
+  description: 'modified: docs/ref/contrib/admin/_images/list_filter.png (+0/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from django/django PR #18185. Trigger heuristic applied. Needs review.'

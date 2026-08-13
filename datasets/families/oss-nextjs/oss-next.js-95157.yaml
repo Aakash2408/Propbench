@@ -1,0 +1,84 @@
+id: oss-next.js-95157
+title: '[turbopack] Add `clusters` to chunking heuristics'
+family: interface-evolution
+date: '2026-08-12'
+author: sampoder
+source: github-api-mined
+source_repo: vercel/next.js
+source_url: https://github.com/vercel/next.js/pull/95157
+source_pr: 95157
+difficulty: medium
+trigger:
+  package: vercel/next.js
+  files:
+  - turbopack/crates/turbopack-core/src/chunk/chunking/chunk_merging_cost_benefit.md
+  intent: '[turbopack] Add `clusters` to chunking heuristics'
+  diff_summary: 'Primary: turbopack/crates/turbopack-core/src/chunk/chunking/chunk_merging_cost_benefit.md
+    (+435/-0)'
+consequences:
+- package: vercel/next.js
+  files:
+  - crates/next-core/src/next_config.rs
+  description: 'modified: crates/next-core/src/next_config.rs (+32/-18)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - packages/next/src/build/swc/index.ts
+  description: 'modified: packages/next/src/build/swc/index.ts (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - packages/next/src/server/config-schema.ts
+  description: 'modified: packages/next/src/server/config-schema.ts (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - packages/next/src/server/config-shared.ts
+  description: 'modified: packages/next/src/server/config-shared.ts (+13/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - turbopack/crates/turbo-esregex/src/lib.rs
+  description: 'modified: turbopack/crates/turbo-esregex/src/lib.rs (+152/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - turbopack/crates/turbopack-core/src/chunk/chunking/production.rs
+  description: 'modified: turbopack/crates/turbopack-core/src/chunk/chunking/production.rs
+    (+117/-159)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - turbopack/crates/turbopack-core/src/module_graph/chunk_group_info.rs
+  description: 'modified: turbopack/crates/turbopack-core/src/module_graph/chunk_group_info.rs
+    (+39/-10)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 8
+notes: 'Mined from vercel/next.js PR #95157. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,173 @@
+id: oss-prisma-29985
+title: Port lsp onto the engine by giving the language server an injectable transport
+family: uncategorized
+date: '2026-08-12'
+author: wmadden-electric
+source: github-api-mined
+source_repo: prisma/prisma
+source_url: https://github.com/prisma/prisma/pull/29985
+source_pr: 29985
+difficulty: medium
+trigger:
+  package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/language-server/src/stream-server.ts
+  intent: Port lsp onto the engine by giving the language server an injectable transport
+  diff_summary: 'Primary: packages/1-framework/3-tooling/language-server/src/stream-server.ts
+    (+241/-0)'
+consequences:
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/cli/src/bin.ts
+  description: 'modified: packages/1-framework/3-tooling/cli/src/bin.ts (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/cli/src/commands/lsp.ts
+  description: 'modified: packages/1-framework/3-tooling/cli/src/commands/lsp.ts (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/cli/src/orm/cli.ts
+  description: 'modified: packages/1-framework/3-tooling/cli/src/orm/cli.ts (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/cli/src/orm/family.ts
+  description: 'modified: packages/1-framework/3-tooling/cli/src/orm/family.ts (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/cli/src/orm/lsp.ts
+  description: 'added: packages/1-framework/3-tooling/cli/src/orm/lsp.ts (+88/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/cli/test/commands/lsp.test.ts
+  description: 'modified: packages/1-framework/3-tooling/cli/test/commands/lsp.test.ts
+    (+9/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/cli/test/orm/lsp.test.ts
+  description: 'added: packages/1-framework/3-tooling/cli/test/orm/lsp.test.ts (+161/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/language-server/README.md
+  description: 'modified: packages/1-framework/3-tooling/language-server/README.md
+    (+4/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/language-server/src/console-capture.ts
+  description: 'added: packages/1-framework/3-tooling/language-server/src/console-capture.ts
+    (+27/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/language-server/src/exports/index.ts
+  description: 'modified: packages/1-framework/3-tooling/language-server/src/exports/index.ts
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/language-server/src/guarded-connection.ts
+  description: 'added: packages/1-framework/3-tooling/language-server/src/guarded-connection.ts
+    (+72/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/language-server/src/server.ts
+  description: 'modified: packages/1-framework/3-tooling/language-server/src/server.ts
+    (+21/-37)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/language-server/src/start-server.ts
+  description: 'modified: packages/1-framework/3-tooling/language-server/src/start-server.ts
+    (+22/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/language-server/src/stdio-transport.ts
+  description: 'added: packages/1-framework/3-tooling/language-server/src/stdio-transport.ts
+    (+82/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/language-server/test/guarded-connection.test.ts
+  description: 'added: packages/1-framework/3-tooling/language-server/test/guarded-connection.test.ts
+    (+117/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/language-server/test/start-server.test.ts
+  description: 'added: packages/1-framework/3-tooling/language-server/test/start-server.test.ts
+    (+457/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/language-server/test/stdio-transport.test.ts
+  description: 'added: packages/1-framework/3-tooling/language-server/test/stdio-transport.test.ts
+    (+50/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 18
+notes: 'Mined from prisma/prisma PR #29985. Trigger heuristic applied. Needs review.'

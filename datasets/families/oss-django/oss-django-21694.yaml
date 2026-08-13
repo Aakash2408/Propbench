@@ -1,0 +1,43 @@
+id: oss-django-21694
+title: 'Fixed #37239 -- Cleared stale db_default when pk comes from related object
+  expression.'
+family: bugfix
+date: '2026-08-04'
+author: jacobtylerwalls
+source: github-api-mined
+source_repo: django/django
+source_url: https://github.com/django/django/pull/21694
+source_pr: 21694
+difficulty: medium
+trigger:
+  package: django/django
+  files:
+  - tests/field_defaults/models.py
+  intent: 'Fixed #37239 -- Cleared stale db_default when pk comes from related object
+    expression.'
+  diff_summary: 'Primary: tests/field_defaults/models.py (+21/-1)'
+consequences:
+- package: django/django
+  files:
+  - django/db/models/base.py
+  description: 'modified: django/db/models/base.py (+11/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - tests/field_defaults/tests.py
+  description: 'modified: tests/field_defaults/tests.py (+15/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from django/django PR #21694. Trigger heuristic applied. Needs review.'

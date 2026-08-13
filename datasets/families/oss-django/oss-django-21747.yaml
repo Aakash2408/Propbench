@@ -1,0 +1,43 @@
+id: oss-django-21747
+title: 'Fixed #37257, Refs #35738 -- Prevented double-dot deprecation warnings for
+  template literals.'
+family: dependency-evolution
+date: '2026-08-10'
+author: adamchainz
+source: github-api-mined
+source_repo: django/django
+source_url: https://github.com/django/django/pull/21747
+source_pr: 21747
+difficulty: medium
+trigger:
+  package: django/django
+  files:
+  - tests/template_tests/syntax_tests/test_basic.py
+  intent: 'Fixed #37257, Refs #35738 -- Prevented double-dot deprecation warnings
+    for template literals.'
+  diff_summary: 'Primary: tests/template_tests/syntax_tests/test_basic.py (+14/-0)'
+consequences:
+- package: django/django
+  files:
+  - django/template/base.py
+  description: 'modified: django/template/base.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - docs/releases/6.1.1.txt
+  description: 'modified: docs/releases/6.1.1.txt (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from django/django PR #21747. Trigger heuristic applied. Needs review.'

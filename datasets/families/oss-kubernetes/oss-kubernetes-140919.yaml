@@ -1,0 +1,141 @@
+id: oss-kubernetes-140919
+title: '[release-1.34]  Fix gomock errors and Bump to go 1.26.5'
+family: dependency-evolution
+date: '2026-08-07'
+author: kmala
+source: github-api-mined
+source_repo: kubernetes/kubernetes
+source_url: https://github.com/kubernetes/kubernetes/pull/140919
+source_pr: 140919
+difficulty: medium
+trigger:
+  package: kubernetes/kubernetes
+  files:
+  - pkg/kubelet/cm/testing/mock_container_manager.go
+  intent: '[release-1.34]  Fix gomock errors and Bump to go 1.26.5'
+  diff_summary: 'Primary: pkg/kubelet/cm/testing/mock_container_manager.go (+10/-22)'
+consequences:
+- package: kubernetes/kubernetes
+  files:
+  - .go-version
+  description: 'modified: .go-version (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - build/build-image/cross/VERSION
+  description: 'modified: build/build-image/cross/VERSION (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - build/common.sh
+  description: 'modified: build/common.sh (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - build/dependencies.yaml
+  description: 'modified: build/dependencies.yaml (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - pkg/kubelet/apis/podresources/testing/dynamic_resources_provider.go
+  description: 'modified: pkg/kubelet/apis/podresources/testing/dynamic_resources_provider.go
+    (+1/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - pkg/kubelet/cadvisor/testing/cadvisor_mock.go
+  description: 'modified: pkg/kubelet/cadvisor/testing/cadvisor_mock.go (+1/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - pkg/kubelet/cm/testing/mock_pod_container_manager.go
+  description: 'modified: pkg/kubelet/cm/testing/mock_pod_container_manager.go (+2/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - pkg/kubelet/container/testing/mock_runtime_cache.go
+  description: 'modified: pkg/kubelet/container/testing/mock_runtime_cache.go (+2/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - pkg/kubelet/container/testing/runtime_mock.go
+  description: 'modified: pkg/kubelet/container/testing/runtime_mock.go (+5/-13)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - pkg/kubelet/pod/testing/mock_manager.go
+  description: 'modified: pkg/kubelet/pod/testing/mock_manager.go (+1/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - pkg/kubelet/server/stats/testing/mock_stats_provider.go
+  description: 'modified: pkg/kubelet/server/stats/testing/mock_stats_provider.go
+    (+3/-9)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - pkg/kubelet/status/testing/mock_pod_status_provider.go
+  description: 'modified: pkg/kubelet/status/testing/mock_pod_status_provider.go (+1/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - staging/src/k8s.io/client-go/rest/mock_backoff_manager_test.go
+  description: 'modified: staging/src/k8s.io/client-go/rest/mock_backoff_manager_test.go
+    (+1/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - test/utils/image/manifest.go
+  description: 'modified: test/utils/image/manifest.go (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 15
+notes: 'Mined from kubernetes/kubernetes PR #140919. Trigger heuristic applied. Needs
+  review.'

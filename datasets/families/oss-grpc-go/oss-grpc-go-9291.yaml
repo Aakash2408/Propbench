@@ -1,0 +1,65 @@
+id: oss-grpc-go-9291
+title: 'xds: pass correct context metadata in client and server route matching.'
+family: uncategorized
+date: '2026-08-06'
+author: Pranjali-2501
+source: github-api-mined
+source_repo: grpc/grpc-go
+source_url: https://github.com/grpc/grpc-go/pull/9291
+source_pr: 9291
+difficulty: medium
+trigger:
+  package: grpc/grpc-go
+  files:
+  - internal/xds/xdsclient/xdsresource/matcher.go
+  intent: 'xds: pass correct context metadata in client and server route matching.'
+  diff_summary: 'Primary: internal/xds/xdsclient/xdsresource/matcher.go (+2/-20)'
+consequences:
+- package: grpc/grpc-go
+  files:
+  - internal/xds/resolver/serviceconfig.go
+  description: 'modified: internal/xds/resolver/serviceconfig.go (+12/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/xds/server/routing.go
+  description: 'modified: internal/xds/server/routing.go (+1/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/xds/xdsclient/xdsresource/matcher_test.go
+  description: 'modified: internal/xds/xdsclient/xdsresource/matcher_test.go (+17/-7)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - test/xds/xds_client_integration_test.go
+  description: 'modified: test/xds/xds_client_integration_test.go (+95/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - test/xds/xds_server_rbac_test.go
+  description: 'modified: test/xds/xds_server_rbac_test.go (+142/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from grpc/grpc-go PR #9291. Trigger heuristic applied. Needs review.'

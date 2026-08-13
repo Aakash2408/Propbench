@@ -1,0 +1,185 @@
+id: oss-prisma-30002
+title: Rename prisma7 package to @prisma/prisma7
+family: refactor
+date: '2026-08-13'
+author: StevenMcClankerton
+source: github-api-mined
+source_repo: prisma/prisma
+source_url: https://github.com/prisma/prisma/pull/30002
+source_pr: 30002
+difficulty: medium
+trigger:
+  package: prisma/prisma
+  files:
+  - packages/cli/src/__tests__/Init.vitest.ts
+  intent: Rename prisma7 package to @prisma/prisma7
+  diff_summary: 'Primary: packages/cli/src/__tests__/Init.vitest.ts (+30/-0)'
+consequences:
+- package: prisma/prisma
+  files:
+  - helpers/compile/plugins/resolvePathsPlugin.test.ts
+  description: 'modified: helpers/compile/plugins/resolvePathsPlugin.test.ts (+9/-6)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/cli/src/Generate.ts
+  description: 'modified: packages/cli/src/Generate.ts (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/cli/src/Init.ts
+  description: 'modified: packages/cli/src/Init.ts (+8/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/cli/src/__tests__/globalLocalVersionMismatch.test.ts
+  description: 'modified: packages/cli/src/__tests__/globalLocalVersionMismatch.test.ts
+    (+20/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/cli/src/bootstrap/Bootstrap.ts
+  description: 'modified: packages/cli/src/bootstrap/Bootstrap.ts (+5/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/cli/src/bootstrap/__tests__/Bootstrap.vitest.ts
+  description: 'modified: packages/cli/src/bootstrap/__tests__/Bootstrap.vitest.ts
+    (+24/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/cli/src/bootstrap/completion-output.ts
+  description: 'modified: packages/cli/src/bootstrap/completion-output.ts (+7/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/cli/src/utils/cli-distribution-identity.ts
+  description: 'modified: packages/cli/src/utils/cli-distribution-identity.ts (+11/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/cli/src/utils/global-local-version-mismatch.ts
+  description: 'modified: packages/cli/src/utils/global-local-version-mismatch.ts
+    (+8/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/client/tests/e2e/_utils/run.ts
+  description: 'modified: packages/client/tests/e2e/_utils/run.ts (+20/-12)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/client/tests/e2e/prisma7-compatibility/config-consumer.ts
+  description: 'modified: packages/client/tests/e2e/prisma7-compatibility/config-consumer.ts
+    (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/client/tests/e2e/prisma7-compatibility/package.json
+  description: 'modified: packages/client/tests/e2e/prisma7-compatibility/package.json
+    (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/client/tests/e2e/prisma7-compatibility/pnpm-lock.yaml
+  description: 'modified: packages/client/tests/e2e/prisma7-compatibility/pnpm-lock.yaml
+    (+25/-25)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/client/tests/e2e/prisma7-compatibility/prisma.config.ts
+  description: 'modified: packages/client/tests/e2e/prisma7-compatibility/prisma.config.ts
+    (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/client/tests/e2e/prisma7-compatibility/tests/main.test.ts
+  description: 'modified: packages/client/tests/e2e/prisma7-compatibility/tests/main.test.ts
+    (+7/-7)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/prisma7/package.json
+  description: 'modified: packages/prisma7/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/prisma7/tsconfig.build.json
+  description: 'modified: packages/prisma7/tsconfig.build.json (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - scripts/ci/publish.ts
+  description: 'modified: scripts/ci/publish.ts (+1/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - tsconfig.build.bundle.json
+  description: 'modified: tsconfig.build.bundle.json (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 20
+notes: 'Mined from prisma/prisma PR #30002. Trigger heuristic applied. Needs review.'

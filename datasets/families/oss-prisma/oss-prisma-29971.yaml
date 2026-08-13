@@ -1,0 +1,93 @@
+id: oss-prisma-29971
+title: 'TML-3196: lower the PostgreSQL floor from 17 to 15 (ADR 244)'
+family: uncategorized
+date: '2026-08-13'
+author: tensordreams
+source: github-api-mined
+source_repo: prisma/prisma
+source_url: https://github.com/prisma/prisma/pull/29971
+source_pr: 29971
+difficulty: medium
+trigger:
+  package: prisma/prisma
+  files:
+  - docs/architecture docs/adrs/ADR 244 - PostgreSQL floor lowered to 15.md
+  intent: 'TML-3196: lower the PostgreSQL floor from 17 to 15 (ADR 244)'
+  diff_summary: 'Primary: docs/architecture docs/adrs/ADR 244 - PostgreSQL floor lowered
+    to 15.md (+70/-0)'
+consequences:
+- package: prisma/prisma
+  files:
+  - docker-compose.yaml
+  description: 'modified: docker-compose.yaml (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - docs/Supported Versions.md
+  description: 'modified: docs/Supported Versions.md (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - docs/architecture docs/adrs/ADR 222 - Version support policy.md
+  description: 'modified: docs/architecture docs/adrs/ADR 222 - Version support policy.md
+    (+6/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/cli/src/commands/init/templates/env.ts
+  description: 'modified: packages/1-framework/3-tooling/cli/src/commands/init/templates/env.ts
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/1-framework/3-tooling/cli/test/commands/init/__snapshots__/templates.test.ts.snap
+  description: 'modified: packages/1-framework/3-tooling/cli/test/commands/init/__snapshots__/templates.test.ts.snap
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/3-targets/3-targets/postgres/package.json
+  description: 'modified: packages/3-targets/3-targets/postgres/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - projects/prisma-8-rc1/design-notes.md
+  description: 'modified: projects/prisma-8-rc1/design-notes.md (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - projects/prisma-8-rc1/plan.md
+  description: 'modified: projects/prisma-8-rc1/plan.md (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 9
+notes: 'Mined from prisma/prisma PR #29971. Trigger heuristic applied. Needs review.'

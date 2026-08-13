@@ -1,0 +1,65 @@
+id: oss-grpc-go-9285
+title: 'extproc: implement channel retention as part of A93'
+family: interface-evolution
+date: '2026-08-11'
+author: eshitachandwani
+source: github-api-mined
+source_repo: grpc/grpc-go
+source_url: https://github.com/grpc/grpc-go/pull/9285
+source_pr: 9285
+difficulty: medium
+trigger:
+  package: grpc/grpc-go
+  files:
+  - internal/xds/httpfilter/extproc/ext_proc.go
+  intent: 'extproc: implement channel retention as part of A93'
+  diff_summary: 'Primary: internal/xds/httpfilter/extproc/ext_proc.go (+199/-27)'
+consequences:
+- package: grpc/grpc-go
+  files:
+  - internal/xds/httpfilter/extproc/ext_proc_ext_test.go
+  description: 'modified: internal/xds/httpfilter/extproc/ext_proc_ext_test.go (+405/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/xds/resolver/serviceconfig.go
+  description: 'modified: internal/xds/resolver/serviceconfig.go (+26/-11)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/xds/resolver/xds_resolver.go
+  description: 'modified: internal/xds/resolver/xds_resolver.go (+17/-25)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/xds/resolver/xds_resolver_test.go
+  description: 'modified: internal/xds/resolver/xds_resolver_test.go (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - test/xds/xds_resolver_e2e_test.go
+  description: 'modified: test/xds/xds_resolver_e2e_test.go (+250/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from grpc/grpc-go PR #9285. Trigger heuristic applied. Needs review.'

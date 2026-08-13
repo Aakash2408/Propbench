@@ -1,0 +1,75 @@
+id: oss-django-21663
+title: 'Refs #36735 -- Added DatabaseFeatures.supports_uuid4_function_in_default feature
+  flag.'
+family: interface-evolution
+date: '2026-08-04'
+author: jacobtylerwalls
+source: github-api-mined
+source_repo: django/django
+source_url: https://github.com/django/django/pull/21663
+source_pr: 21663
+difficulty: medium
+trigger:
+  package: django/django
+  files:
+  - django/db/backends/mysql/features.py
+  intent: 'Refs #36735 -- Added DatabaseFeatures.supports_uuid4_function_in_default
+    feature flag.'
+  diff_summary: 'Primary: django/db/backends/mysql/features.py (+4/-0)'
+consequences:
+- package: django/django
+  files:
+  - django/db/backends/base/features.py
+  description: 'modified: django/db/backends/base/features.py (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - django/db/backends/oracle/features.py
+  description: 'modified: django/db/backends/oracle/features.py (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - django/db/backends/postgresql/features.py
+  description: 'modified: django/db/backends/postgresql/features.py (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - django/db/backends/sqlite3/features.py
+  description: 'modified: django/db/backends/sqlite3/features.py (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - tests/inline_formsets/models.py
+  description: 'modified: tests/inline_formsets/models.py (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - tests/inline_formsets/tests.py
+  description: 'modified: tests/inline_formsets/tests.py (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from django/django PR #21663. Trigger heuristic applied. Needs review.'

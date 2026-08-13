@@ -1,0 +1,89 @@
+id: oss-next.js-97213
+title: '[turbopack] Fix HMR for dynamic imports evaluated from layouts'
+family: bugfix
+date: '2026-08-12'
+author: sampoder
+source: github-api-mined
+source_repo: vercel/next.js
+source_url: https://github.com/vercel/next.js/pull/97213
+source_pr: 97213
+difficulty: medium
+trigger:
+  package: vercel/next.js
+  files:
+  - test/development/app-dir/layout-dynamic-import-hmr/app/[locale]/layout.tsx
+  intent: '[turbopack] Fix HMR for dynamic imports evaluated from layouts'
+  diff_summary: 'Primary: test/development/app-dir/layout-dynamic-import-hmr/app/[locale]/layout.tsx
+    (+19/-0)'
+consequences:
+- package: vercel/next.js
+  files:
+  - test/development/app-dir/layout-dynamic-import-hmr/app/[locale]/page.tsx
+  description: 'added: test/development/app-dir/layout-dynamic-import-hmr/app/[locale]/page.tsx
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - test/development/app-dir/layout-dynamic-import-hmr/app/layout.tsx
+  description: 'added: test/development/app-dir/layout-dynamic-import-hmr/app/layout.tsx
+    (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - test/development/app-dir/layout-dynamic-import-hmr/layout-dynamic-import-hmr.test.ts
+  description: 'added: test/development/app-dir/layout-dynamic-import-hmr/layout-dynamic-import-hmr.test.ts
+    (+24/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - test/development/app-dir/layout-dynamic-import-hmr/messages/en.json
+  description: 'added: test/development/app-dir/layout-dynamic-import-hmr/messages/en.json
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - test/development/app-dir/layout-dynamic-import-hmr/next.config.js
+  description: 'added: test/development/app-dir/layout-dynamic-import-hmr/next.config.js
+    (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - turbopack/crates/turbopack-nodejs/src/ecmascript/node/entry/chunk.rs
+  description: 'modified: turbopack/crates/turbopack-nodejs/src/ecmascript/node/entry/chunk.rs
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - turbopack/crates/turbopack-nodejs/src/ecmascript/node/entry/chunk_list_content.rs
+  description: 'modified: turbopack/crates/turbopack-nodejs/src/ecmascript/node/entry/chunk_list_content.rs
+    (+15/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 8
+notes: 'Mined from vercel/next.js PR #97213. Trigger heuristic applied. Needs review.'
