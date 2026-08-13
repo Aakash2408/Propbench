@@ -79,6 +79,11 @@ def check_required_fields(entry: dict) -> list[str]:
 
 def classify_entry(entry: dict) -> str:
     """Classify entry as GOOD, SUSPECT, or BAD."""
+    # Zero-propagation entries are valid negative test cases
+    tags = entry.get("tags", [])
+    if isinstance(tags, list) and "zero-propagation" in tags:
+        return "GOOD"
+
     count = get_consequence_file_count(entry)
     if count == 0:
         # Check if consequences exist but just don't have files listed

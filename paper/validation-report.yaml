@@ -1,0 +1,104 @@
+total_entries: 268
+good: 259
+suspect: 9
+bad: 0
+duplicates: 0
+per_family:
+  aas-onboarding:
+    good: 3
+    suspect: 0
+    bad: 0
+    total: 3
+  cdk-infrastructure:
+    good: 2
+    suspect: 0
+    bad: 0
+    total: 2
+  infrastructure-evolution:
+    good: 11
+    suspect: 0
+    bad: 0
+    total: 11
+  config-changes:
+    good: 2
+    suspect: 0
+    bad: 0
+    total: 2
+  configuration-evolution:
+    good: 76
+    suspect: 3
+    bad: 0
+    total: 79
+  country-expansion:
+    good: 1
+    suspect: 1
+    bad: 0
+    total: 2
+  integration-tests:
+    good: 2
+    suspect: 0
+    bad: 0
+    total: 2
+  dependency-evolution:
+    good: 3
+    suspect: 0
+    bad: 0
+    total: 3
+  uncategorized:
+    good: 71
+    suspect: 2
+    bad: 0
+    total: 73
+  test-evolution:
+    good: 36
+    suspect: 0
+    bad: 0
+    total: 36
+  interface-evolution:
+    good: 13
+    suspect: 3
+    bad: 0
+    total: 16
+  refactor:
+    good: 18
+    suspect: 0
+    bad: 0
+    total: 18
+  bugfix:
+    good: 10
+    suspect: 0
+    bad: 0
+    total: 10
+  oss-fastapi:
+    good: 3
+    suspect: 0
+    bad: 0
+    total: 3
+  oss-kubernetes:
+    good: 2
+    suspect: 0
+    bad: 0
+    total: 2
+  oss-django:
+    good: 2
+    suspect: 0
+    bad: 0
+    total: 2
+  oss-nextjs:
+    good: 2
+    suspect: 0
+    bad: 0
+    total: 2
+  oss-react:
+    good: 2
+    suspect: 0
+    bad: 0
+    total: 2
+issues:
+- index: 4
+  source: /local/home/aakkaash/.meshclaw/workspace/judgment-engine/datasets/families/cdk-infrastructure/02-necto-gamma-account.yaml
+  type: missing_fields
+  details:
+  - consequences (empty)
+bad_entry_count: 0
+bad_entry_samples: []
