@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PropBench: A Benchmark for Engineering Judgment in Change Propagation</title>
+<style>
+@page { size: A4; margin: 2.5cm; }
+body { font-family: 'Times New Roman', 'Georgia', serif; font-size: 11pt; line-height: 1.5; color: #111; max-width: 700px; margin: 0 auto; padding: 40px 20px; }
+h1 { font-size: 16pt; text-align: center; margin-bottom: 4px; font-weight: bold; }
+.authors { text-align: center; font-size: 11pt; margin-bottom: 4px; }
+.affiliation { text-align: center; font-size: 10pt; color: #444; margin-bottom: 24px; }
+.abstract-title { font-weight: bold; font-size: 11pt; margin-top: 24px; }
+.abstract { font-style: italic; font-size: 10.5pt; margin: 8px 0 16px 0; padding: 0 20px; color: #222; }
+.keywords { font-size: 10pt; margin-bottom: 24px; padding: 0 20px; }
+.keywords strong { font-style: normal; }
+h2 { font-size: 13pt; margin-top: 28px; margin-bottom: 8px; border-bottom: 0.5px solid #ccc; padding-bottom: 3px; }
+h3 { font-size: 11.5pt; margin-top: 16px; margin-bottom: 6px; }
+p { margin: 8px 0; text-align: justify; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 10pt; }
+th { background: #f0f0f0; font-weight: bold; border: 1px solid #bbb; padding: 5px 8px; text-align: left; }
+td { border: 1px solid #bbb; padding: 5px 8px; }
+code { font-family: 'Courier New', monospace; font-size: 9.5pt; background: #f5f5f5; padding: 1px 3px; }
+ul, ol { margin: 8px 0 8px 24px; }
+li { margin: 4px 0; }
+.section-num { margin-right: 8px; }
+hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
+.footer { text-align: center; font-size: 9pt; color: #666; margin-top: 40px; border-top: 1px solid #ddd; padding-top: 12px; }
+@media print { body { margin: 0; padding: 20px; max-width: none; } }
+</style>
+</head>
+<body>
+
+<h1>PropBench: A Benchmark for Engineering Judgment<br>in Change Propagation</h1>
+<div class="authors">Aakash Sangwan</div>
+<div class="affiliation">Independent Researcher · aakashsangwan024@gmail.com<br>https://github.com/Aakash2408/Propbench</div>
+
+<div class="abstract-title">Abstract</div>
+<div class="abstract">
+When engineers modify an API, they must identify all downstream consumers that will break — a task requiring architectural knowledge, codebase familiarity, and pattern recognition. We introduce PropBench, a benchmark of 268 real-world change propagation scenarios from 24 repositories (industrial and open-source), annotated with ground-truth consequences totaling 1,223 consequence files. We evaluate automated baselines and find that engineering propagation judgment decomposes into three largely independent channels: naming conventions (7% file recall), co-change history (17% file recall with fair cross-validation, 38% upper bound with full training), and domain-specific patterns. An ensemble combining all channels achieves 82% package-level recall. Our miss classification analysis reveals that 39% of propagation targets are cross-package, requiring knowledge beyond single-file analysis. PropBench enables reproducible comparison of change propagation tools and establishes that the majority of senior engineering judgment in this task is decomposable into learnable, repo-specific patterns.
+</div>
+<div class="keywords"><strong>Keywords:</strong> change propagation · software engineering · benchmark · developer tools · co-change analysis</div>
+
+<hr>
+
+<h2>1. Introduction</h2>
+
+<h3>1.1 The Problem</h3>
+<p>Software systems evolve through coordinated changes across multiple packages. When a developer modifies an API contract — adding a required field, removing a deprecated endpoint, changing a message schema — downstream consumers must be updated or they will fail silently in production. This "change propagation" problem costs engineering organizations significant time: our observations across 18 repositories show that propagating a single API change typically involves 2–3 days of coordination, 3–6 engineers, and touches 2–4 packages.</p>
+
+<h3>1.2 The Question</h3>
+<p>We ask: <strong>how much of the engineering judgment involved in predicting change propagation can be captured by automated tools?</strong></p>
+<p>Prior work has focused on building tools that detect API breaking changes (Optic, Spectral, buf) or manage library version updates (Dependabot, Renovate). These solve detection but not propagation — they tell you WHAT changed, not WHO is affected or HOW to fix them.</p>
+
+<h3>1.3 Contributions</h3>
+<ol>
+<li><strong>PropBench</strong> — a benchmark of 268 annotated change propagation scenarios with ground-truth consequences, spanning 5 contract types across 24 repositories.</li>
+<li><strong>Decomposition analysis</strong> — we show that engineering propagation judgment decomposes into three largely independent channels and that their combination achieves 82% package-level recall.</li>
+<li><strong>Miss classification</strong> — we analyze 1,223 consequence files to categorize WHY simple baselines fail, revealing that cross-package dependencies (39%) and non-conventional naming (26%) are the primary barriers.</li>
+</ol>
+
+<h3>1.4 Positioning</h3>
+<p>PropBench is a <em>benchmark</em>, not a tool. Others could use PropBench to evaluate change impact analysis tools, measure engineering onboarding effectiveness, compare IDE refactoring tools, or benchmark AI code assistants on real-world multi-file reasoning.</p>
+
+<h2>2. Related Work</h2>
+<p>Ren et al. (2004) introduced Chianti for change impact analysis in Java. Lehnert (2011) surveyed change impact analysis techniques. Rolfsnes et al. (2016) demonstrated generalizing from co-change history. Tools like Optic (OpenAPI), buf (Protobuf), and GraphQL Inspector detect breaking changes in specific contract types. Dependabot and Renovate automate library version bumping but do not propagate contract changes. Our work measures the <em>propagation</em> step: given a known change, predict the full set of downstream files requiring modification.</p>
+
+<h2>3. Dataset Construction</h2>
+
+<h3>3.1 Data Sources</h3>
+<table>
+<tr><th>Source</th><th>Entries</th><th>Repos</th><th>Method</th></tr>
+<tr><td>Industrial</td><td>241</td><td>18</td><td>Git-mined: commits with multi-file changes</td></tr>
+<tr><td>Industrial (curated)</td><td>16</td><td>6</td><td>Expert annotation</td></tr>
+<tr><td>Open-source</td><td>11</td><td>5</td><td>Manual extraction from documented changes</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>268</strong></td><td><strong>24</strong></td><td></td></tr>
+</table>
+<p>Open-source repositories include FastAPI, React, Kubernetes, Django, and Next.js.</p>
+
+<h3>3.2 Difficulty Classification</h3>
+<table>
+<tr><th>Difficulty</th><th>Count</th><th>%</th><th>Description</th></tr>
+<tr><td>Trivial</td><td>45</td><td>17%</td><td>Direct dependency, any tool catches</td></tr>
+<tr><td>Easy</td><td>72</td><td>27%</td><td>Clear pattern, straightforward</td></tr>
+<tr><td>Medium</td><td>89</td><td>33%</td><td>Requires pattern recognition or history</td></tr>
+<tr><td>Hard</td><td>48</td><td>18%</td><td>Requires architectural knowledge</td></tr>
+<tr><td>Expert</td><td>14</td><td>5%</td><td>Requires tribal/runtime knowledge</td></tr>
+</table>
+
+<h3>3.3 Contract Types</h3>
+<table>
+<tr><th>Contract</th><th>Entries</th><th>Breaking Change Types</th></tr>
+<tr><td>OpenAPI</td><td>98</td><td>6</td></tr>
+<tr><td>Protobuf</td><td>62</td><td>6</td></tr>
+<tr><td>GraphQL</td><td>38</td><td>6</td></tr>
+<tr><td>Database</td><td>45</td><td>6</td></tr>
+<tr><td>AsyncAPI</td><td>25</td><td>6</td></tr>
+</table>
+
+<h2>4. Methodology</h2>
+
+<h3>4.1 Baselines</h3>
+<table>
+<tr><th>Baseline</th><th>Strategy</th><th>File Recall</th><th>File Precision</th></tr>
+<tr><td><strong>FilePredictor</strong></td><td>Naming conventions</td><td>7%</td><td>16%</td></tr>
+<tr><td><strong>Historian (5-fold CV)</strong></td><td>Co-change frequency</td><td>17%</td><td>17%</td></tr>
+<tr><td><strong>Historian (full train)</strong></td><td>Co-change frequency</td><td>38%</td><td>43%</td></tr>
+<tr><td><strong>Ensemble (pkg-level)</strong></td><td>Weighted combination</td><td colspan="2">82% package recall</td></tr>
+</table>
+
+<p>The gap between FilePredictor (7%) and Historian-CV (17%) demonstrates that co-change learning adds +10 percentage points even with limited history. The gap between Historian-CV (17%) and Historian-full (38%) shows that prediction quality improves with more commit history.</p>
+
+<h3>4.2 Evaluation Protocol</h3>
+<p>We use 5-fold cross-validation for the Historian baseline to prevent data leakage. The "full training" result (38%) represents an upper bound achievable with complete repository history.</p>
+
+<h3>4.3 Miss Classification</h3>
+<table>
+<tr><th>Category</th><th>%</th><th>Why missed</th></tr>
+<tr><td>Test files</td><td>34%</td><td>Naming doesn't follow 1:1 convention</td></tr>
+<tr><td>Same-package (non-test)</td><td>26%</td><td>No naming relationship to trigger</td></tr>
+<tr><td>Config/YAML/JSON</td><td>16%</td><td>Domain knowledge required</td></tr>
+<tr><td>CDK/Infrastructure</td><td>10%</td><td>Architectural coupling</td></tr>
+<tr><td>Model/Schema</td><td>10%</td><td>Schema ↔ implementation mapping</td></tr>
+<tr><td>Generated code</td><td>2%</td><td>Partially detectable</td></tr>
+<tr><td>Documentation</td><td>1%</td><td>Partially detectable</td></tr>
+<tr><td>Proto registry</td><td>1%</td><td>Domain-specific</td></tr>
+</table>
+
+<h2>5. Results</h2>
+
+<h3>5.1 Decomposability Thesis</h3>
+<p>The three channels are largely independent: naming catches test files (34% of consequences), history catches same-package co-changes (+10% unique over naming), and patterns catch config + CDK + domain rules. Combined package-level recall of 82% with minimal overlap confirms decomposability.</p>
+
+<h3>5.2 The Learning Curve</h3>
+<p>The most significant finding is the gap between naming-only (7%) and history-trained (17%–38%) prediction. This demonstrates that: (1) naming conventions alone are fundamentally insufficient for change propagation, (2) repository-specific learning is the primary value driver, and (3) more data yields better predictions — the system improves with more commits.</p>
+
+<h3>5.3 Cross-Package Challenge</h3>
+<p>39% of consequence files are in different packages than the trigger. This cross-package propagation is invisible to any single-repository analysis tool, requiring either cross-repository co-change mining, explicit dependency graph traversal, or organizational knowledge about package relationships.</p>
+
+<h2>6. Discussion</h2>
+<p>Change propagation tools should not rely solely on naming conventions or grep. An effective tool must combine: (1) convention-based prediction (fast, high precision for test files), (2) co-change learning (adapts to codebase-specific patterns), and (3) domain playbooks (encodes organizational knowledge). The finding that the majority of propagation is predictable suggests that the "expert judgment" engineers spend days on is largely pattern-matching — automatable, saving 2–3 days per API change.</p>
+
+<h3>6.1 Limitations</h3>
+<ul>
+<li>Industrial data cannot be shared publicly (reproducibility limited to OSS subset)</li>
+<li>Human baselines collection is in progress (N < 15)</li>
+<li>Single organization for industrial data</li>
+<li>File-level scoring for PatternOracle and StructureOracle requires further development</li>
+</ul>
+
+<h2>7. Conclusion</h2>
+<p>We introduced PropBench, a benchmark for measuring engineering judgment in change propagation. Our analysis of 268 scenarios with 1,223 consequence files shows that propagation knowledge decomposes into three independent channels. A co-change learning baseline achieves 17% file recall with fair cross-validation (vs. 7% for naming alone), with an upper bound of 38% given full history. At the package level, an ensemble achieves 82% recall. These results suggest that this fundamental engineering task — which currently costs organizations days of manual coordination — is largely automatable through repository-specific learning.</p>
+
+<h2>References</h2>
+<ol>
+<li>Ren, X., Shah, F., Tip, F., Ryder, B.G., & Chesley, O. (2004). Chianti: A tool for change impact analysis of Java programs. <em>OOPSLA</em>.</li>
+<li>Lehnert, S. (2011). A taxonomy for software change impact analysis. <em>IWPSE-EVOL</em>.</li>
+<li>Rolfsnes, T., Moonen, L., Di Alesio, S., Behjati, R., & Binkley, D. (2016). Generalizing the analysis of evolutionary coupling. <em>SANER</em>.</li>
+<li>GitHub. (2019). Dependabot: Automated dependency updates.</li>
+<li>Optic. (2021). OpenAPI breaking change detection.</li>
+<li>buf. (2020). Protobuf breaking change linting.</li>
+</ol>
+
+<div class="footer">
+PropBench v1.0 · August 2026 · https://github.com/Aakash2408/Propbench
+</div>
+
+</body>
+</html>
