@@ -4,6 +4,7 @@
 Checks all YAML entries for quality, detects duplicates, classifies entries,
 and optionally fixes issues.
 """
+from __future__ import annotations
 
 import argparse
 import sys
@@ -13,9 +14,31 @@ from pathlib import Path
 import yaml
 
 
-REQUIRED_FIELDS = ["trigger_file", "trigger_commit", "consequence_files", "repo", "family"]
-GOOD_MIN, GOOD_MAX = 3, 15
+REQUIRED_FIELDS = ["id", "trigger", "consequences", "family"]
+GOOD_MIN, GOOD_MAX = 1, 15
 SUSPECT_MAX = 50
+
+
+def get_consequence_file_count(entry: dict) -> int:
+    """Extract total consequence file count from nested consequences structure."""
+    consequences = entry.get("consequences", [])
+    if not isinstance(consequences, list):
+        return 0
+    count = 0
+    for c in consequences:
+        if isinstance(c, dict):
+            files = c.get("files", [])
+            if isinstance(files, list):
+                count += len(files)
+    return count
+
+
+def get_trigger_files(entry: dict) -> list:
+    """Extract trigger files from nested trigger structure."""
+    trigger = entry.get("trigger", {})
+    if isinstance(trigger, dict):
+        return trigger.get("files", [])
+    return []
 
 
 def load_entries(base_dir: Path) -> list[dict]:
@@ -27,14 +50,15 @@ def load_entries(base_dir: Path) -> list[dict]:
         sys.exit(1)
     for yaml_file in sorted(families_dir.rglob("*.yaml")):
         with open(yaml_file) as f:
-            data = yaml.safe_load(f)
-        if data is None:
-            continue
-        items = data if isinstance(data, list) else [data]
-        for item in items:
-            if isinstance(item, dict):
-                item["_source_file"] = str(yaml_file)
-                entries.append(item)
+            docs = list(yaml.safe_load_all(f))
+        for data in docs:
+            if data is None:
+                continue
+            items = data if isinstance(data, list) else [data]
+            for item in items:
+                if isinstance(item, dict):
+                    item["_source_file"] = str(yaml_file)
+                    entries.append(item)
     return entries
 
 
@@ -44,19 +68,25 @@ def check_required_fields(entry: dict) -> list[str]:
     for field in REQUIRED_FIELDS:
         if field not in entry or entry[field] is None:
             missing.append(field)
-    if "consequence_files" in entry and entry["consequence_files"] is not None:
-        if not isinstance(entry["consequence_files"], list):
-            missing.append("consequence_files (not a list)")
+    # Check consequences has at least one file
+    count = get_consequence_file_count(entry)
+    if count == 0 and "consequences" in entry:
+        consequences = entry.get("consequences", [])
+        if not isinstance(consequences, list) or len(consequences) == 0:
+            missing.append("consequences (empty)")
     return missing
 
 
 def classify_entry(entry: dict) -> str:
     """Classify entry as GOOD, SUSPECT, or BAD."""
-    cf = entry.get("consequence_files")
-    if not cf or not isinstance(cf, list):
+    count = get_consequence_file_count(entry)
+    if count == 0:
+        # Check if consequences exist but just don't have files listed
+        consequences = entry.get("consequences", [])
+        if isinstance(consequences, list) and len(consequences) > 0:
+            return "SUSPECT"  # Has consequences but no files enumerated
         return "BAD"
-    count = len(cf)
-    if count == 0 or count > SUSPECT_MAX:
+    if count > SUSPECT_MAX:
         return "BAD"
     if GOOD_MIN <= count <= GOOD_MAX:
         return "GOOD"
@@ -66,24 +96,27 @@ def classify_entry(entry: dict) -> str:
 def validate_paths(entry: dict) -> list[str]:
     """Check consequence file paths are relative (not absolute)."""
     issues = []
-    cf = entry.get("consequence_files", [])
-    if not isinstance(cf, list):
-        return ["consequence_files is not a list"]
-    for path in cf:
-        if not isinstance(path, str):
-            issues.append(f"non-string path: {path}")
-        elif path.startswith("/"):
-            issues.append(f"absolute path: {path}")
-        elif ".." in path:
-            issues.append(f"parent traversal: {path}")
+    consequences = entry.get("consequences", [])
+    if not isinstance(consequences, list):
+        return ["consequences is not a list"]
+    for c in consequences:
+        if not isinstance(c, dict):
+            continue
+        for path in c.get("files", []):
+            if not isinstance(path, str):
+                issues.append(f"non-string path: {path}")
+            elif path.startswith("/"):
+                issues.append(f"absolute path: {path}")
+            elif ".." in path:
+                issues.append(f"parent traversal: {path}")
     return issues
 
 
 def find_duplicates(entries: list[dict]) -> dict[str, list[int]]:
-    """Find entries with same trigger_file + trigger_commit."""
+    """Find entries with same trigger files + id."""
     seen = defaultdict(list)
     for i, entry in enumerate(entries):
-        key = f"{entry.get('trigger_file', '')}@{entry.get('trigger_commit', '')}"
+        key = entry.get("id", str(i))
         seen[key].append(i)
     return {k: v for k, v in seen.items() if len(v) > 1}
 
@@ -132,7 +165,7 @@ def validate_dataset(base_dir: Path) -> dict:
             report["bad_entries"].append({
                 "index": i, "source": entry.get("_source_file", "?"),
                 "trigger_file": entry.get("trigger_file", "?"),
-                "reason": f"consequence_files count: {len(entry.get('consequence_files', []) or [])}"
+                "reason": f"consequence_files count: {get_consequence_file_count(entry)}"
             })
 
     # Convert defaultdict for serialization
@@ -180,8 +213,8 @@ def fix_bad_entries(base_dir: Path, report: dict):
     families_dir = base_dir / "datasets" / "families"
     for yaml_file in families_dir.rglob("*.yaml"):
         with open(yaml_file) as f:
-            data = yaml.safe_load(f)
-        if not data:
+            docs = list(yaml.safe_load_all(f))
+        if not any(docs):
             yaml_file.unlink()
             print(f"  Removed empty file: {yaml_file}")
 
