@@ -1,0 +1,63 @@
+id: oss-spring-boot-50957
+title: Add configurable timeout for JMS health indicator
+family: interface-evolution
+date: '2026-07-16'
+author: GollapudiSrikanth
+source: github-api-mined
+source_repo: spring-projects/spring-boot
+source_url: https://github.com/spring-projects/spring-boot/pull/50957
+source_pr: 50957
+difficulty: medium
+trigger:
+  package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-jms/src/main/java/org/springframework/boot/jms/autoconfigure/health/JmsHealthIndicatorProperties.java
+  intent: Add configurable timeout for JMS health indicator
+  diff_summary: 'Primary: module/spring-boot-jms/src/main/java/org/springframework/boot/jms/autoconfigure/health/JmsHealthIndicatorProperties.java
+    (+47/-0)'
+consequences:
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-jms/src/main/java/org/springframework/boot/jms/autoconfigure/health/JmsHealthContributorAutoConfiguration.java
+  description: 'modified: module/spring-boot-jms/src/main/java/org/springframework/boot/jms/autoconfigure/health/JmsHealthContributorAutoConfiguration.java
+    (+5/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-jms/src/main/java/org/springframework/boot/jms/health/JmsHealthIndicator.java
+  description: 'modified: module/spring-boot-jms/src/main/java/org/springframework/boot/jms/health/JmsHealthIndicator.java
+    (+35/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-jms/src/test/java/org/springframework/boot/jms/autoconfigure/health/JmsHealthContributorAutoConfigurationTests.java
+  description: 'modified: module/spring-boot-jms/src/test/java/org/springframework/boot/jms/autoconfigure/health/JmsHealthContributorAutoConfigurationTests.java
+    (+24/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-jms/src/test/java/org/springframework/boot/jms/health/JmsHealthIndicatorTests.java
+  description: 'modified: module/spring-boot-jms/src/test/java/org/springframework/boot/jms/health/JmsHealthIndicatorTests.java
+    (+42/-4)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from spring-projects/spring-boot PR #50957. Trigger heuristic applied.
+  Needs review.'

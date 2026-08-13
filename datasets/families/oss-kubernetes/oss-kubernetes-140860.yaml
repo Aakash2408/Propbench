@@ -1,0 +1,54 @@
+id: oss-kubernetes-140860
+title: Add storage_to_cache stage to watch dispatch metric
+family: interface-evolution
+date: '2026-07-23'
+author: richabanker
+source: github-api-mined
+source_repo: kubernetes/kubernetes
+source_url: https://github.com/kubernetes/kubernetes/pull/140860
+source_pr: 140860
+difficulty: medium
+trigger:
+  package: kubernetes/kubernetes
+  files:
+  - staging/src/k8s.io/apiserver/pkg/storage/cacher/metrics/metrics.go
+  intent: Add storage_to_cache stage to watch dispatch metric
+  diff_summary: 'Primary: staging/src/k8s.io/apiserver/pkg/storage/cacher/metrics/metrics.go
+    (+6/-0)'
+consequences:
+- package: kubernetes/kubernetes
+  files:
+  - staging/src/k8s.io/apiserver/pkg/storage/cacher/cache_watcher.go
+  description: 'modified: staging/src/k8s.io/apiserver/pkg/storage/cacher/cache_watcher.go
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - staging/src/k8s.io/apiserver/pkg/storage/cacher/cache_watcher_test.go
+  description: 'modified: staging/src/k8s.io/apiserver/pkg/storage/cacher/cache_watcher_test.go
+    (+5/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: kubernetes/kubernetes
+  files:
+  - staging/src/k8s.io/apiserver/pkg/storage/cacher/watch_cache.go
+  description: 'modified: staging/src/k8s.io/apiserver/pkg/storage/cacher/watch_cache.go
+    (+5/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from kubernetes/kubernetes PR #140860. Trigger heuristic applied. Needs
+  review.'

@@ -1,0 +1,75 @@
+id: oss-nest-17028
+title: 'feat(microservices): expose transport server getter'
+family: uncategorized
+date: '2026-08-03'
+author: OlegStrokan
+source: github-api-mined
+source_repo: nestjs/nest
+source_url: https://github.com/nestjs/nest/pull/17028
+source_pr: 17028
+difficulty: medium
+trigger:
+  package: nestjs/nest
+  files:
+  - packages/common/interfaces/microservices/transport-server.interface.ts
+  intent: 'feat(microservices): expose transport server getter'
+  diff_summary: 'Primary: packages/common/interfaces/microservices/transport-server.interface.ts
+    (+19/-0)'
+consequences:
+- package: nestjs/nest
+  files:
+  - packages/common/index.ts
+  description: 'modified: packages/common/index.ts (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: nestjs/nest
+  files:
+  - packages/common/interfaces/index.ts
+  description: 'modified: packages/common/interfaces/index.ts (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: nestjs/nest
+  files:
+  - packages/common/interfaces/nest-microservice.interface.ts
+  description: 'modified: packages/common/interfaces/nest-microservice.interface.ts
+    (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: nestjs/nest
+  files:
+  - packages/microservices/nest-microservice.ts
+  description: 'modified: packages/microservices/nest-microservice.ts (+10/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: nestjs/nest
+  files:
+  - packages/microservices/server/server.ts
+  description: 'modified: packages/microservices/server/server.ts (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: nestjs/nest
+  files:
+  - packages/microservices/test/nest-microservice.spec.ts
+  description: 'modified: packages/microservices/test/nest-microservice.spec.ts (+18/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from nestjs/nest PR #17028. Trigger heuristic applied. Needs review.'

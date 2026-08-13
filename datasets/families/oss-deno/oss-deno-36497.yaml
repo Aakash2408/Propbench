@@ -1,0 +1,65 @@
+id: oss-deno-36497
+title: 'fix(fs): require write permission for creating opens'
+family: bugfix
+date: '2026-08-12'
+author: nathanwhit
+source: github-api-mined
+source_repo: denoland/deno
+source_url: https://github.com/denoland/deno/pull/36497
+source_pr: 36497
+difficulty: medium
+trigger:
+  package: denoland/deno
+  files:
+  - ext/fs/interface.rs
+  intent: 'fix(fs): require write permission for creating opens'
+  diff_summary: 'Primary: ext/fs/interface.rs (+64/-7)'
+consequences:
+- package: denoland/deno
+  files:
+  - ext/fs/ops.rs
+  description: 'modified: ext/fs/ops.rs (+4/-14)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - ext/node/ops/fs.rs
+  description: 'modified: ext/node/ops/fs.rs (+2/-12)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/unit/files_test.ts
+  description: 'modified: tests/unit/files_test.ts (+37/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/unit_node/_fs/_fs_open_test.ts
+  description: 'modified: tests/unit_node/_fs/_fs_open_test.ts (+17/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/unit_node/_fs/_fs_readFile_test.ts
+  description: 'modified: tests/unit_node/_fs/_fs_readFile_test.ts (+91/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from denoland/deno PR #36497. Trigger heuristic applied. Needs review.'

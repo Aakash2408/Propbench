@@ -1,0 +1,41 @@
+id: oss-deno-36476
+title: 'fix(cache): combine duplicate headers for Vary matching'
+family: bugfix
+date: '2026-08-12'
+author: nathanwhit
+source: github-api-mined
+source_repo: denoland/deno
+source_url: https://github.com/denoland/deno/pull/36476
+source_pr: 36476
+difficulty: medium
+trigger:
+  package: denoland/deno
+  files:
+  - ext/cache/lib.rs
+  intent: 'fix(cache): combine duplicate headers for Vary matching'
+  diff_summary: 'Primary: ext/cache/lib.rs (+84/-26)'
+consequences:
+- package: denoland/deno
+  files:
+  - ext/cache/lscache.rs
+  description: 'modified: ext/cache/lscache.rs (+70/-9)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/unit/cache_api_test.ts
+  description: 'modified: tests/unit/cache_api_test.ts (+47/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from denoland/deno PR #36476. Trigger heuristic applied. Needs review.'

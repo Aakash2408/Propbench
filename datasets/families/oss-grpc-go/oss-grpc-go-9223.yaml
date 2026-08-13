@@ -1,0 +1,58 @@
+id: oss-grpc-go-9223
+title: 'xds: convert rds header exact/prefix/suffix/contains matches to StringMatcher'
+family: bugfix
+date: '2026-07-24'
+author: nvxbug
+source: github-api-mined
+source_repo: grpc/grpc-go
+source_url: https://github.com/grpc/grpc-go/pull/9223
+source_pr: 9223
+difficulty: medium
+trigger:
+  package: grpc/grpc-go
+  files:
+  - internal/xds/xdsclient/xdsresource/unmarshal_rds.go
+  intent: 'xds: convert rds header exact/prefix/suffix/contains matches to StringMatcher'
+  diff_summary: 'Primary: internal/xds/xdsclient/xdsresource/unmarshal_rds.go (+20/-7)'
+consequences:
+- package: grpc/grpc-go
+  files:
+  - internal/xds/xdsclient/xdsresource/matcher.go
+  description: 'modified: internal/xds/xdsclient/xdsresource/matcher.go (+0/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/xds/xdsclient/xdsresource/type_rds.go
+  description: 'modified: internal/xds/xdsclient/xdsresource/type_rds.go (+2/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/xds/xdsclient/xdsresource/unmarshal_rds_test.go
+  description: 'modified: internal/xds/xdsclient/xdsresource/unmarshal_rds_test.go
+    (+142/-16)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - scripts/vet.sh
+  description: 'modified: scripts/vet.sh (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from grpc/grpc-go PR #9223. Trigger heuristic applied. Needs review.'

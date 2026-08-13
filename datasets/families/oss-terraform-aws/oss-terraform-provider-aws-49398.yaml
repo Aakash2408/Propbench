@@ -1,0 +1,53 @@
+id: oss-terraform-provider-aws-49398
+title: ' r/aws_lakeformation_permissions: handle cross-account iam principals during
+  read'
+family: uncategorized
+date: '2026-08-12'
+author: jar-b
+source: github-api-mined
+source_repo: hashicorp/terraform-provider-aws
+source_url: https://github.com/hashicorp/terraform-provider-aws/pull/49398
+source_pr: 49398
+difficulty: medium
+trigger:
+  package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/lakeformation/permissions.go
+  intent: ' r/aws_lakeformation_permissions: handle cross-account iam principals during
+    read'
+  diff_summary: 'Primary: internal/service/lakeformation/permissions.go (+20/-5)'
+consequences:
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/lakeformation/lakeformation_test.go
+  description: 'modified: internal/service/lakeformation/lakeformation_test.go (+13/-12)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/lakeformation/permissions_data_source.go
+  description: 'modified: internal/service/lakeformation/permissions_data_source.go
+    (+3/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/lakeformation/permissions_test.go
+  description: 'modified: internal/service/lakeformation/permissions_test.go (+164/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from hashicorp/terraform-provider-aws PR #49398. Trigger heuristic applied.
+  Needs review.'

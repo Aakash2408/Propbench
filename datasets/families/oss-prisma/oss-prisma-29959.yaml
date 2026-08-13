@@ -1,0 +1,125 @@
+id: oss-prisma-29959
+title: 'refactor(sql): normalize IR node inputs through static from() factories'
+family: interface-evolution
+date: '2026-08-11'
+author: wmadden-electric
+source: github-api-mined
+source_repo: prisma/prisma
+source_url: https://github.com/prisma/prisma/pull/29959
+source_pr: 29959
+difficulty: medium
+trigger:
+  package: prisma/prisma
+  files:
+  - packages/2-sql/1-core/contract/src/ir/storage-table.ts
+  intent: 'refactor(sql): normalize IR node inputs through static from() factories'
+  diff_summary: 'Primary: packages/2-sql/1-core/contract/src/ir/storage-table.ts (+5/-15)'
+consequences:
+- package: prisma/prisma
+  files:
+  - packages/2-sql/1-core/contract/src/ir/foreign-key-reference.ts
+  description: 'modified: packages/2-sql/1-core/contract/src/ir/foreign-key-reference.ts
+    (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/2-sql/1-core/contract/src/ir/foreign-key.ts
+  description: 'modified: packages/2-sql/1-core/contract/src/ir/foreign-key.ts (+6/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/2-sql/1-core/contract/src/ir/primary-key.ts
+  description: 'modified: packages/2-sql/1-core/contract/src/ir/primary-key.ts (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/2-sql/1-core/contract/src/ir/sql-index.ts
+  description: 'modified: packages/2-sql/1-core/contract/src/ir/sql-index.ts (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/2-sql/1-core/contract/src/ir/storage-column.ts
+  description: 'modified: packages/2-sql/1-core/contract/src/ir/storage-column.ts
+    (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/2-sql/1-core/contract/src/ir/unique-constraint.ts
+  description: 'modified: packages/2-sql/1-core/contract/src/ir/unique-constraint.ts
+    (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/2-sql/1-core/contract/test/ir-node-from.test.ts
+  description: 'added: packages/2-sql/1-core/contract/test/ir-node-from.test.ts (+110/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/2-sql/1-core/schema-ir/src/ir/primary-key.ts
+  description: 'modified: packages/2-sql/1-core/schema-ir/src/ir/primary-key.ts (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/2-sql/1-core/schema-ir/src/ir/sql-check-constraint-ir.ts
+  description: 'modified: packages/2-sql/1-core/schema-ir/src/ir/sql-check-constraint-ir.ts
+    (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/2-sql/1-core/schema-ir/src/ir/sql-index-ir.ts
+  description: 'modified: packages/2-sql/1-core/schema-ir/src/ir/sql-index-ir.ts (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/2-sql/1-core/schema-ir/src/ir/sql-table-ir.ts
+  description: 'modified: packages/2-sql/1-core/schema-ir/src/ir/sql-table-ir.ts (+3/-12)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/2-sql/1-core/schema-ir/test/ir-node-from.test.ts
+  description: 'added: packages/2-sql/1-core/schema-ir/test/ir-node-from.test.ts (+103/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 13
+notes: 'Mined from prisma/prisma PR #29959. Trigger heuristic applied. Needs review.'

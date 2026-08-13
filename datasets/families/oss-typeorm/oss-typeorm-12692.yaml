@@ -1,0 +1,43 @@
+id: oss-typeorm-12692
+title: 'fix(entity-manager): validate where criteria in increment/decrement'
+family: bugfix
+date: '2026-07-13'
+author: naorpeled
+source: github-api-mined
+source_repo: typeorm/typeorm
+source_url: https://github.com/typeorm/typeorm/pull/12692
+source_pr: 12692
+difficulty: medium
+trigger:
+  package: typeorm/typeorm
+  files:
+  - src/entity-manager/EntityManager.ts
+  intent: 'fix(entity-manager): validate where criteria in increment/decrement'
+  diff_summary: 'Primary: src/entity-manager/EntityManager.ts (+32/-32)'
+consequences:
+- package: typeorm/typeorm
+  files:
+  - test/functional/repository/decrement/repository-decrement.test.ts
+  description: 'modified: test/functional/repository/decrement/repository-decrement.test.ts
+    (+56/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - test/functional/repository/increment/repository-increment.test.ts
+  description: 'modified: test/functional/repository/increment/repository-increment.test.ts
+    (+56/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from typeorm/typeorm PR #12692. Trigger heuristic applied. Needs review.'

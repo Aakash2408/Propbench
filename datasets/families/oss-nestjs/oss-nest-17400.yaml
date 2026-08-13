@@ -1,0 +1,41 @@
+id: oss-nest-17400
+title: 'refactor(core): remove async promise executor anti-patterns'
+family: refactor
+date: '2026-08-03'
+author: Se3do
+source: github-api-mined
+source_repo: nestjs/nest
+source_url: https://github.com/nestjs/nest/pull/17400
+source_pr: 17400
+difficulty: medium
+trigger:
+  package: nestjs/nest
+  files:
+  - packages/microservices/client/client-kafka.ts
+  intent: 'refactor(core): remove async promise executor anti-patterns'
+  diff_summary: 'Primary: packages/microservices/client/client-kafka.ts (+36/-43)'
+consequences:
+- package: nestjs/nest
+  files:
+  - packages/core/injector/module-ref.ts
+  description: 'modified: packages/core/injector/module-ref.ts (+13/-17)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: nestjs/nest
+  files:
+  - packages/core/nest-application-context.ts
+  description: 'modified: packages/core/nest-application-context.ts (+4/-10)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from nestjs/nest PR #17400. Trigger heuristic applied. Needs review.'

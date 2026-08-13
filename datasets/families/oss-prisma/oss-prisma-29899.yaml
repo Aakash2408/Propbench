@@ -1,0 +1,121 @@
+id: oss-prisma-29899
+title: 'TML-3170: publish releases as 8.0.0-rc.N (latest tracks the RC line)'
+family: uncategorized
+date: '2026-08-06'
+author: wmadden-electric
+source: github-api-mined
+source_repo: prisma/prisma
+source_url: https://github.com/prisma/prisma/pull/29899
+source_pr: 29899
+difficulty: medium
+trigger:
+  package: prisma/prisma
+  files:
+  - scripts/determine-version-utils.ts
+  intent: 'TML-3170: publish releases as 8.0.0-rc.N (latest tracks the RC line)'
+  diff_summary: 'Primary: scripts/determine-version-utils.ts (+73/-9)'
+consequences:
+- package: prisma/prisma
+  files:
+  - docs/oss/versioning.md
+  description: 'modified: docs/oss/versioning.md (+24/-12)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - package.json
+  description: 'modified: package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - scripts/bump-version.ts
+  description: 'renamed: scripts/bump-version.ts (+10/-9)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - scripts/check-release-notes.mjs
+  description: 'modified: scripts/check-release-notes.mjs (+8/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - scripts/check-upgrade-coverage.mjs
+  description: 'modified: scripts/check-upgrade-coverage.mjs (+14/-10)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - scripts/determine-version-utils.test.ts
+  description: 'modified: scripts/determine-version-utils.test.ts (+111/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - scripts/determine-version.ts
+  description: 'modified: scripts/determine-version.ts (+13/-35)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - scripts/lint-throws.test.mjs
+  description: 'modified: scripts/lint-throws.test.mjs (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - skills-contrib/draft-release-notes/SKILL.md
+  description: 'modified: skills-contrib/draft-release-notes/SKILL.md (+15/-14)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - skills-contrib/publish-npm-version/SKILL.md
+  description: 'modified: skills-contrib/publish-npm-version/SKILL.md (+21/-16)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - skills-contrib/record-upgrade-instructions/SKILL.md
+  description: 'modified: skills-contrib/record-upgrade-instructions/SKILL.md (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - skills/prisma-8-extension-upgrade/SKILL.md
+  description: 'modified: skills/prisma-8-extension-upgrade/SKILL.md (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 13
+notes: 'Mined from prisma/prisma PR #29899. Trigger heuristic applied. Needs review.'

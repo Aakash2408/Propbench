@@ -1,0 +1,79 @@
+id: oss-rust-156188
+title: 'riscv: promote d, e, and f target_features to CfgStableToggleUnstable'
+family: uncategorized
+date: '2026-06-08'
+author: romancardenas
+source: github-api-mined
+source_repo: rust-lang/rust
+source_url: https://github.com/rust-lang/rust/pull/156188
+source_pr: 156188
+difficulty: medium
+trigger:
+  package: rust-lang/rust
+  files:
+  - tests/ui/target-feature/cfg-stable-toggle-unstable-target-feature-attribute-riscv.stderr
+  intent: 'riscv: promote d, e, and f target_features to CfgStableToggleUnstable'
+  diff_summary: 'Primary: tests/ui/target-feature/cfg-stable-toggle-unstable-target-feature-attribute-riscv.stderr
+    (+23/-0)'
+consequences:
+- package: rust-lang/rust
+  files:
+  - compiler/rustc_target/src/target_features.rs
+  description: 'modified: compiler/rustc_target/src/target_features.rs (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/target-feature/abi-incompatible-target-feature-flag-enable.riscv.stderr
+  description: 'modified: tests/ui/target-feature/abi-incompatible-target-feature-flag-enable.riscv.stderr
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/target-feature/abi-required-target-feature-flag-disable.riscv.stderr
+  description: 'modified: tests/ui/target-feature/abi-required-target-feature-flag-disable.riscv.stderr
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/target-feature/cfg-stable-toggle-unstable-target-feature-attribute-riscv.rs
+  description: 'added: tests/ui/target-feature/cfg-stable-toggle-unstable-target-feature-attribute-riscv.rs
+    (+17/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/target-feature/cfg-stable-toggle-unstable-target-feature-flag-enable-riscv.rs
+  description: 'added: tests/ui/target-feature/cfg-stable-toggle-unstable-target-feature-flag-enable-riscv.rs
+    (+17/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/target-feature/cfg-stable-toggle-unstable-target-feature-flag-enable-riscv.stderr
+  description: 'added: tests/ui/target-feature/cfg-stable-toggle-unstable-target-feature-flag-enable-riscv.stderr
+    (+10/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from rust-lang/rust PR #156188. Trigger heuristic applied. Needs review.'

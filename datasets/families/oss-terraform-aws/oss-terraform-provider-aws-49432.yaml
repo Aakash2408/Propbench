@@ -1,0 +1,43 @@
+id: oss-terraform-provider-aws-49432
+title: 'd/aws_eks_cluster_versions: Control-plane customizations'
+family: uncategorized
+date: '2026-08-12'
+author: ewbankkit
+source: github-api-mined
+source_repo: hashicorp/terraform-provider-aws
+source_url: https://github.com/hashicorp/terraform-provider-aws/pull/49432
+source_pr: 49432
+difficulty: medium
+trigger:
+  package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/eks/cluster_versions_data_source.go
+  intent: 'd/aws_eks_cluster_versions: Control-plane customizations'
+  diff_summary: 'Primary: internal/service/eks/cluster_versions_data_source.go (+105/-9)'
+consequences:
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/eks/cluster_versions_data_source_test.go
+  description: 'modified: internal/service/eks/cluster_versions_data_source_test.go
+    (+33/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - website/docs/d/eks_cluster_versions.html.markdown
+  description: 'modified: website/docs/d/eks_cluster_versions.html.markdown (+32/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from hashicorp/terraform-provider-aws PR #49432. Trigger heuristic applied.
+  Needs review.'

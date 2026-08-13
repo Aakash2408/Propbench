@@ -1,0 +1,57 @@
+id: oss-django-21693
+title: 'Fixed #37238 -- Fixed unintentional fallback to python default for a db_default.'
+family: bugfix
+date: '2026-07-31'
+author: jacobtylerwalls
+source: github-api-mined
+source_repo: django/django
+source_url: https://github.com/django/django/pull/21693
+source_pr: 21693
+difficulty: medium
+trigger:
+  package: django/django
+  files:
+  - tests/field_defaults/tests.py
+  intent: 'Fixed #37238 -- Fixed unintentional fallback to python default for a db_default.'
+  diff_summary: 'Primary: tests/field_defaults/tests.py (+18/-0)'
+consequences:
+- package: django/django
+  files:
+  - django/db/models/base.py
+  description: 'modified: django/db/models/base.py (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - docs/ref/models/instances.txt
+  description: 'modified: docs/ref/models/instances.txt (+9/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - docs/releases/6.1.txt
+  description: 'modified: docs/releases/6.1.txt (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - tests/field_defaults/models.py
+  description: 'modified: tests/field_defaults/models.py (+10/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from django/django PR #21693. Trigger heuristic applied. Needs review.'

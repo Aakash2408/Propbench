@@ -1,0 +1,81 @@
+id: oss-rust-160978
+title: move resolve_path to Session inherent method
+family: bugfix
+date: '2026-08-13'
+author: mejrs
+source: github-api-mined
+source_repo: rust-lang/rust
+source_url: https://github.com/rust-lang/rust/pull/160978
+source_pr: 160978
+difficulty: medium
+trigger:
+  package: rust-lang/rust
+  files:
+  - compiler/rustc_session/src/session.rs
+  intent: move resolve_path to Session inherent method
+  diff_summary: 'Primary: compiler/rustc_session/src/session.rs (+37/-1)'
+consequences:
+- package: rust-lang/rust
+  files:
+  - Cargo.lock
+  description: 'modified: Cargo.lock (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - compiler/rustc_builtin_macros/src/source_util.rs
+  description: 'modified: compiler/rustc_builtin_macros/src/source_util.rs (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - compiler/rustc_expand/src/base.rs
+  description: 'modified: compiler/rustc_expand/src/base.rs (+1/-34)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - compiler/rustc_expand/src/diagnostics.rs
+  description: 'modified: compiler/rustc_expand/src/diagnostics.rs (+0/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - compiler/rustc_passes/Cargo.toml
+  description: 'modified: compiler/rustc_passes/Cargo.toml (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - compiler/rustc_passes/src/debugger_visualizer.rs
+  description: 'modified: compiler/rustc_passes/src/debugger_visualizer.rs (+1/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - compiler/rustc_session/src/diagnostics.rs
+  description: 'modified: compiler/rustc_session/src/diagnostics.rs (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 8
+notes: 'Mined from rust-lang/rust PR #160978. Trigger heuristic applied. Needs review.'

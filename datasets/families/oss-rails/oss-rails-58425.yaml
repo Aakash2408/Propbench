@@ -1,0 +1,102 @@
+id: oss-rails-58425
+title: Stop deserializing column defaults
+family: interface-evolution
+date: '2026-08-09'
+author: byroot
+source: github-api-mined
+source_repo: rails/rails
+source_url: https://github.com/rails/rails/pull/58425
+source_pr: 58425
+difficulty: medium
+trigger:
+  package: rails/rails
+  files:
+  - activerecord/lib/active_record/connection_adapters/sqlite3_adapter.rb
+  intent: Stop deserializing column defaults
+  diff_summary: 'Primary: activerecord/lib/active_record/connection_adapters/sqlite3_adapter.rb
+    (+4/-2)'
+consequences:
+- package: rails/rails
+  files:
+  - activerecord/lib/active_record/connection_adapters/column.rb
+  description: 'modified: activerecord/lib/active_record/connection_adapters/column.rb
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/test/cases/adapters/postgresql/money_test.rb
+  description: 'modified: activerecord/test/cases/adapters/postgresql/money_test.rb
+    (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/test/cases/adapters/sqlite3/sqlite3_adapter_test.rb
+  description: 'modified: activerecord/test/cases/adapters/sqlite3/sqlite3_adapter_test.rb
+    (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/test/cases/attributes_test.rb
+  description: 'modified: activerecord/test/cases/attributes_test.rb (+16/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/test/cases/defaults_test.rb
+  description: 'modified: activerecord/test/cases/defaults_test.rb (+3/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/test/cases/migration/change_schema_test.rb
+  description: 'modified: activerecord/test/cases/migration/change_schema_test.rb
+    (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/test/cases/migration/columns_test.rb
+  description: 'modified: activerecord/test/cases/migration/columns_test.rb (+3/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/test/cases/migration_test.rb
+  description: 'modified: activerecord/test/cases/migration_test.rb (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/test/schema/schema.rb
+  description: 'modified: activerecord/test/schema/schema.rb (+1/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 10
+notes: 'Mined from rails/rails PR #58425. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,51 @@
+id: oss-rails-58426
+title: Deprecate `create` alias of `insert` in connection adapters
+family: dependency-evolution
+date: '2026-08-10'
+author: kamipo
+source: github-api-mined
+source_repo: rails/rails
+source_url: https://github.com/rails/rails/pull/58426
+source_pr: 58426
+difficulty: medium
+trigger:
+  package: rails/rails
+  files:
+  - activerecord/lib/active_record/connection_adapters/abstract/database_statements.rb
+  intent: Deprecate `create` alias of `insert` in connection adapters
+  diff_summary: 'Primary: activerecord/lib/active_record/connection_adapters/abstract/database_statements.rb
+    (+1/-0)'
+consequences:
+- package: rails/rails
+  files:
+  - activerecord/test/cases/adapter_test.rb
+  description: 'modified: activerecord/test/cases/adapter_test.rb (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/test/cases/adapters/sqlite3/sqlite3_adapter_test.rb
+  description: 'modified: activerecord/test/cases/adapters/sqlite3/sqlite3_adapter_test.rb
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/test/cases/database_statements_test.rb
+  description: 'modified: activerecord/test/cases/database_statements_test.rb (+7/-8)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from rails/rails PR #58426. Trigger heuristic applied. Needs review.'

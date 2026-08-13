@@ -1,0 +1,50 @@
+id: oss-rails-58427
+title: Use bind parameters for array-form arguments in `find_by_sql` / `count_by_sql`
+family: uncategorized
+date: '2026-08-09'
+author: kamipo
+source: github-api-mined
+source_repo: rails/rails
+source_url: https://github.com/rails/rails/pull/58427
+source_pr: 58427
+difficulty: medium
+trigger:
+  package: rails/rails
+  files:
+  - activerecord/lib/active_record/relation/query_methods.rb
+  intent: Use bind parameters for array-form arguments in `find_by_sql` / `count_by_sql`
+  diff_summary: 'Primary: activerecord/lib/active_record/relation/query_methods.rb
+    (+1/-36)'
+consequences:
+- package: rails/rails
+  files:
+  - activerecord/lib/active_record/querying.rb
+  description: 'modified: activerecord/lib/active_record/querying.rb (+11/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/lib/active_record/sanitization.rb
+  description: 'modified: activerecord/lib/active_record/sanitization.rb (+25/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/test/cases/finder_test.rb
+  description: 'modified: activerecord/test/cases/finder_test.rb (+37/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from rails/rails PR #58427. Trigger heuristic applied. Needs review.'

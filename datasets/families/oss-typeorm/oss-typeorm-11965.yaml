@@ -1,0 +1,96 @@
+id: oss-typeorm-11965
+title: 'feat: support distinct count'
+family: interface-evolution
+date: '2026-06-25'
+author: Cprakhar
+source: github-api-mined
+source_repo: typeorm/typeorm
+source_url: https://github.com/typeorm/typeorm/pull/11965
+source_pr: 11965
+difficulty: medium
+trigger:
+  package: typeorm/typeorm
+  files:
+  - src/query-builder/SelectQueryBuilder.ts
+  intent: 'feat: support distinct count'
+  diff_summary: 'Primary: src/query-builder/SelectQueryBuilder.ts (+112/-90)'
+consequences:
+- package: typeorm/typeorm
+  files:
+  - docs/docs/working-with-entity-manager/3-find-options.md
+  description: 'modified: docs/docs/working-with-entity-manager/3-find-options.md
+    (+12/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - docs/docs/working-with-entity-manager/5-entity-manager-api.md
+  description: 'modified: docs/docs/working-with-entity-manager/5-entity-manager-api.md
+    (+9/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - docs/docs/working-with-entity-manager/6-repository-api.md
+  description: 'modified: docs/docs/working-with-entity-manager/6-repository-api.md
+    (+9/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - test/functional/query-builder/count/query-builder-count.test.ts
+  description: 'modified: test/functional/query-builder/count/query-builder-count.test.ts
+    (+36/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - test/functional/repository/find-methods/entity/Category.ts
+  description: 'added: test/functional/repository/find-methods/entity/Category.ts
+    (+10/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - test/functional/repository/find-methods/entity/Counters.ts
+  description: 'added: test/functional/repository/find-methods/entity/Counters.ts
+    (+11/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - test/functional/repository/find-methods/entity/Post.ts
+  description: 'modified: test/functional/repository/find-methods/entity/Post.ts (+9/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - test/functional/repository/find-methods/repostiory-find-methods.test.ts
+  description: 'modified: test/functional/repository/find-methods/repostiory-find-methods.test.ts
+    (+186/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 9
+notes: 'Mined from typeorm/typeorm PR #11965. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,49 @@
+id: oss-django-21679
+title: 'Fixed #37233 -- Prevented sort controls for unordered __str__ admin columns.'
+family: bugfix
+date: '2026-07-29'
+author: AKSHATSPAR
+source: github-api-mined
+source_repo: django/django
+source_url: https://github.com/django/django/pull/21679
+source_pr: 21679
+difficulty: medium
+trigger:
+  package: django/django
+  files:
+  - tests/admin_changelist/tests.py
+  intent: 'Fixed #37233 -- Prevented sort controls for unordered __str__ admin columns.'
+  diff_summary: 'Primary: tests/admin_changelist/tests.py (+22/-1)'
+consequences:
+- package: django/django
+  files:
+  - AUTHORS
+  description: 'modified: AUTHORS (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - django/contrib/admin/templatetags/admin_list.py
+  description: 'modified: django/contrib/admin/templatetags/admin_list.py (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - tests/admin_views/tests.py
+  description: 'modified: tests/admin_views/tests.py (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from django/django PR #21679. Trigger heuristic applied. Needs review.'

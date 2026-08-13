@@ -1,0 +1,42 @@
+id: oss-rails-58460
+title: Introduce `to_ractor_snapshot` / `load_ractor_snapshot` protocol for notifiers
+family: uncategorized
+date: '2026-08-12'
+author: kamipo
+source: github-api-mined
+source_repo: rails/rails
+source_url: https://github.com/rails/rails/pull/58460
+source_pr: 58460
+difficulty: medium
+trigger:
+  package: rails/rails
+  files:
+  - activesupport/lib/active_support/notifications/fanout.rb
+  intent: Introduce `to_ractor_snapshot` / `load_ractor_snapshot` protocol for notifiers
+  diff_summary: 'Primary: activesupport/lib/active_support/notifications/fanout.rb
+    (+10/-8)'
+consequences:
+- package: rails/rails
+  files:
+  - activesupport/lib/active_support/notifications.rb
+  description: 'modified: activesupport/lib/active_support/notifications.rb (+8/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activesupport/test/notifications_test.rb
+  description: 'modified: activesupport/test/notifications_test.rb (+47/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from rails/rails PR #58460. Trigger heuristic applied. Needs review.'

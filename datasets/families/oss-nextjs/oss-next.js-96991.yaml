@@ -1,0 +1,49 @@
+id: oss-next.js-96991
+title: 'Turbopack: accept a module type argument for import.meta.glob'
+family: uncategorized
+date: '2026-08-11'
+author: kelvinampofo
+source: github-api-mined
+source_repo: vercel/next.js
+source_url: https://github.com/vercel/next.js/pull/96991
+source_pr: 96991
+difficulty: medium
+trigger:
+  package: vercel/next.js
+  files:
+  - test/e2e/import-meta-glob/app/page.tsx
+  intent: 'Turbopack: accept a module type argument for import.meta.glob'
+  diff_summary: 'Primary: test/e2e/import-meta-glob/app/page.tsx (+20/-12)'
+consequences:
+- package: vercel/next.js
+  files:
+  - docs/01-app/03-api-reference/08-turbopack.mdx
+  description: 'modified: docs/01-app/03-api-reference/08-turbopack.mdx (+15/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - packages/next/types/global.d.ts
+  description: 'modified: packages/next/types/global.d.ts (+9/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - test/e2e/import-meta-glob/import-meta-glob.d.ts
+  description: 'removed: test/e2e/import-meta-glob/import-meta-glob.d.ts (+0/-12)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from vercel/next.js PR #96991. Trigger heuristic applied. Needs review.'

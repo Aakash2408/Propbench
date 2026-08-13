@@ -1,0 +1,79 @@
+id: oss-nest-17436
+title: ' feat: narrow body parser options to the selected parser for Express'
+family: uncategorized
+date: '2026-08-10'
+author: micalevisk
+source: github-api-mined
+source_repo: nestjs/nest
+source_url: https://github.com/nestjs/nest/pull/17436
+source_pr: 17436
+difficulty: medium
+trigger:
+  package: nestjs/nest
+  files:
+  - packages/platform-express/interfaces/nest-express-body-parser.interface.ts
+  intent: ' feat: narrow body parser options to the selected parser for Express'
+  diff_summary: 'Primary: packages/platform-express/interfaces/nest-express-body-parser.interface.ts
+    (+31/-1)'
+consequences:
+- package: nestjs/nest
+  files:
+  - integration/nest-application/use-body-parser/e2e/express.spec.ts
+  description: 'modified: integration/nest-application/use-body-parser/e2e/express.spec.ts
+    (+1/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: nestjs/nest
+  files:
+  - packages/platform-express/adapters/express-adapter.ts
+  description: 'modified: packages/platform-express/adapters/express-adapter.ts (+14/-12)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: nestjs/nest
+  files:
+  - packages/platform-express/adapters/utils/get-body-parser-options.util.ts
+  description: 'modified: packages/platform-express/adapters/utils/get-body-parser-options.util.ts
+    (+14/-9)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: nestjs/nest
+  files:
+  - packages/platform-express/interfaces/nest-express-application.interface.ts
+  description: 'modified: packages/platform-express/interfaces/nest-express-application.interface.ts
+    (+12/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: nestjs/nest
+  files:
+  - packages/platform-express/interfaces/nest-express-body-parser-options.interface.ts
+  description: 'modified: packages/platform-express/interfaces/nest-express-body-parser-options.interface.ts
+    (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: nestjs/nest
+  files:
+  - packages/platform-express/test/adapters/utils/get-body-parser-options.util.spec.ts
+  description: 'modified: packages/platform-express/test/adapters/utils/get-body-parser-options.util.spec.ts
+    (+8/-8)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from nestjs/nest PR #17436. Trigger heuristic applied. Needs review.'

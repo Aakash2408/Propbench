@@ -1,0 +1,73 @@
+id: oss-typeorm-12648
+title: 'fix: move hashing function to PlatformTools'
+family: bugfix
+date: '2026-07-06'
+author: alumni
+source: github-api-mined
+source_repo: typeorm/typeorm
+source_url: https://github.com/typeorm/typeorm/pull/12648
+source_pr: 12648
+difficulty: medium
+trigger:
+  package: typeorm/typeorm
+  files:
+  - src/platform/BrowserPlatformTools.template
+  intent: 'fix: move hashing function to PlatformTools'
+  diff_summary: 'Primary: src/platform/BrowserPlatformTools.template (+49/-25)'
+consequences:
+- package: typeorm/typeorm
+  files:
+  - gulpfile.ts
+  description: 'modified: gulpfile.ts (+20/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - src/connection/ConnectionOptionsReader.ts
+  description: 'modified: src/connection/ConnectionOptionsReader.ts (+5/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - src/platform/PlatformTools.ts
+  description: 'modified: src/platform/PlatformTools.ts (+26/-25)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - src/util/RandomGenerator.ts
+  description: 'modified: src/util/RandomGenerator.ts (+5/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - src/util/StringUtils.ts
+  description: 'modified: src/util/StringUtils.ts (+2/-37)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - test/unit/platform/platform-tools.test.ts
+  description: 'removed: test/unit/platform/platform-tools.test.ts (+0/-62)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from typeorm/typeorm PR #12648. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,97 @@
+id: oss-gin-4145
+title: 'feat(render): add bson protocol'
+family: interface-evolution
+date: '2026-01-27'
+author: laurentcau
+source: github-api-mined
+source_repo: gin-gonic/gin
+source_url: https://github.com/gin-gonic/gin/pull/4145
+source_pr: 4145
+difficulty: medium
+trigger:
+  package: gin-gonic/gin
+  files:
+  - render/bson.go
+  intent: 'feat(render): add bson protocol'
+  diff_summary: 'Primary: render/bson.go (+34/-0)'
+consequences:
+- package: gin-gonic/gin
+  files:
+  - binding/binding.go
+  description: 'modified: binding/binding.go (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gin-gonic/gin
+  files:
+  - binding/binding_nomsgpack.go
+  description: 'modified: binding/binding_nomsgpack.go (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gin-gonic/gin
+  files:
+  - binding/binding_test.go
+  description: 'modified: binding/binding_test.go (+16/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gin-gonic/gin
+  files:
+  - binding/bson.go
+  description: 'added: binding/bson.go (+30/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gin-gonic/gin
+  files:
+  - context.go
+  description: 'modified: context.go (+11/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gin-gonic/gin
+  files:
+  - context_test.go
+  description: 'modified: context_test.go (+18/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gin-gonic/gin
+  files:
+  - go.mod
+  description: 'modified: go.mod (+9/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gin-gonic/gin
+  files:
+  - go.sum
+  description: 'modified: go.sum (+10/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gin-gonic/gin
+  files:
+  - render/render_test.go
+  description: 'modified: render/render_test.go (+26/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 10
+notes: 'Mined from gin-gonic/gin PR #4145. Trigger heuristic applied. Needs review.'

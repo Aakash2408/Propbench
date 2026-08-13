@@ -1,0 +1,162 @@
+id: oss-rust-155846
+title: 'tests/ui/tuple: add annotations for reference rules'
+family: interface-evolution
+date: '2026-08-12'
+author: DanielEScherzer
+source: github-api-mined
+source_repo: rust-lang/rust
+source_url: https://github.com/rust-lang/rust/pull/155846
+source_pr: 155846
+difficulty: medium
+trigger:
+  package: rust-lang/rust
+  files:
+  - tests/ui/tuple/add-tuple-within-arguments.stderr
+  intent: 'tests/ui/tuple: add annotations for reference rules'
+  diff_summary: 'Primary: tests/ui/tuple/add-tuple-within-arguments.stderr (+4/-4)'
+consequences:
+- package: rust-lang/rust
+  files:
+  - tests/ui/tuple/add-tuple-within-arguments.rs
+  description: 'modified: tests/ui/tuple/add-tuple-within-arguments.rs (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/tuple/coercion-never.rs
+  description: 'modified: tests/ui/tuple/coercion-never.rs (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/tuple/coercion-slice.rs
+  description: 'modified: tests/ui/tuple/coercion-slice.rs (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/tuple/coercion-slice.stderr
+  description: 'modified: tests/ui/tuple/coercion-slice.stderr (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/tuple/index-float.rs
+  description: 'modified: tests/ui/tuple/index-float.rs (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/tuple/index-invalid.rs
+  description: 'modified: tests/ui/tuple/index-invalid.rs (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/tuple/index-invalid.stderr
+  description: 'modified: tests/ui/tuple/index-invalid.stderr (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/tuple/never-to-any-coercion-in-collection-issue-100727.rs
+  description: 'modified: tests/ui/tuple/never-to-any-coercion-in-collection-issue-100727.rs
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/tuple/one-tuple.rs
+  description: 'modified: tests/ui/tuple/one-tuple.rs (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/tuple/tup.rs
+  description: 'modified: tests/ui/tuple/tup.rs (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/tuple/tuple-arity-mismatch.rs
+  description: 'modified: tests/ui/tuple/tuple-arity-mismatch.rs (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/tuple/tuple-arity-mismatch.stderr
+  description: 'modified: tests/ui/tuple/tuple-arity-mismatch.stderr (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/tuple/tuple-index-not-tuple.rs
+  description: 'modified: tests/ui/tuple/tuple-index-not-tuple.rs (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/tuple/tuple-index-not-tuple.stderr
+  description: 'modified: tests/ui/tuple/tuple-index-not-tuple.stderr (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/tuple/tuple-index-out-of-bounds.rs
+  description: 'modified: tests/ui/tuple/tuple-index-out-of-bounds.rs (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/tuple/tuple-index-out-of-bounds.stderr
+  description: 'modified: tests/ui/tuple/tuple-index-out-of-bounds.stderr (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/tuple/tuple-index.rs
+  description: 'modified: tests/ui/tuple/tuple-index.rs (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 18
+notes: 'Mined from rust-lang/rust PR #155846. Trigger heuristic applied. Needs review.'

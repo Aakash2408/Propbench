@@ -1,0 +1,72 @@
+id: oss-spring-boot-51142
+title: Disable Micrometer global registry in tests by default
+family: uncategorized
+date: '2026-07-29'
+author: LordKay-sudo
+source: github-api-mined
+source_repo: spring-projects/spring-boot
+source_url: https://github.com/spring-projects/spring-boot/pull/51142
+source_pr: 51142
+difficulty: medium
+trigger:
+  package: spring-projects/spring-boot
+  files:
+  - documentation/spring-boot-docs/src/docs/antora/modules/reference/pages/actuator/metrics.adoc
+  intent: Disable Micrometer global registry in tests by default
+  diff_summary: 'Primary: documentation/spring-boot-docs/src/docs/antora/modules/reference/pages/actuator/metrics.adoc
+    (+3/-0)'
+consequences:
+- package: spring-projects/spring-boot
+  files:
+  - documentation/spring-boot-docs/src/docs/antora/modules/reference/pages/testing/spring-boot-applications.adoc
+  description: 'modified: documentation/spring-boot-docs/src/docs/antora/modules/reference/pages/testing/spring-boot-applications.adoc
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-micrometer-metrics-test/src/main/java/org/springframework/boot/micrometer/metrics/test/autoconfigure/AutoConfigureMetrics.java
+  description: 'modified: module/spring-boot-micrometer-metrics-test/src/main/java/org/springframework/boot/micrometer/metrics/test/autoconfigure/AutoConfigureMetrics.java
+    (+11/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-micrometer-metrics-test/src/main/java/org/springframework/boot/micrometer/metrics/test/autoconfigure/MetricsContextCustomizerFactory.java
+  description: 'modified: module/spring-boot-micrometer-metrics-test/src/main/java/org/springframework/boot/micrometer/metrics/test/autoconfigure/MetricsContextCustomizerFactory.java
+    (+24/-8)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-micrometer-metrics-test/src/test/java/org/springframework/boot/micrometer/metrics/test/autoconfigure/GlobalMeterRegistryIntegrationTests.java
+  description: 'added: module/spring-boot-micrometer-metrics-test/src/test/java/org/springframework/boot/micrometer/metrics/test/autoconfigure/GlobalMeterRegistryIntegrationTests.java
+    (+92/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-micrometer-metrics-test/src/test/java/org/springframework/boot/micrometer/metrics/test/autoconfigure/MetricsContextCustomizerFactoryTests.java
+  description: 'modified: module/spring-boot-micrometer-metrics-test/src/test/java/org/springframework/boot/micrometer/metrics/test/autoconfigure/MetricsContextCustomizerFactoryTests.java
+    (+90/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from spring-projects/spring-boot PR #51142. Trigger heuristic applied.
+  Needs review.'

@@ -1,0 +1,141 @@
+id: oss-prisma-29894
+title: 'feat(sql): rename check constraints in place when only their prefix changes'
+family: bugfix
+date: '2026-08-07'
+author: wmadden-electric
+source: github-api-mined
+source_repo: prisma/prisma
+source_url: https://github.com/prisma/prisma/pull/29894
+source_pr: 29894
+difficulty: medium
+trigger:
+  package: prisma/prisma
+  files:
+  - packages/3-targets/3-targets/postgres/src/core/migrations/planner.ts
+  intent: 'feat(sql): rename check constraints in place when only their prefix changes'
+  diff_summary: 'Primary: packages/3-targets/3-targets/postgres/src/core/migrations/planner.ts
+    (+106/-4)'
+consequences:
+- package: prisma/prisma
+  files:
+  - packages/3-targets/3-targets/postgres/src/core/migrations/issue-planner.ts
+  description: 'modified: packages/3-targets/3-targets/postgres/src/core/migrations/issue-planner.ts
+    (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/3-targets/3-targets/postgres/src/core/migrations/op-factory-call.ts
+  description: 'modified: packages/3-targets/3-targets/postgres/src/core/migrations/op-factory-call.ts
+    (+63/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/3-targets/3-targets/postgres/src/core/migrations/operations/constraints.ts
+  description: 'modified: packages/3-targets/3-targets/postgres/src/core/migrations/operations/constraints.ts
+    (+41/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/3-targets/3-targets/postgres/src/core/migrations/postgres-migration.ts
+  description: 'modified: packages/3-targets/3-targets/postgres/src/core/migrations/postgres-migration.ts
+    (+16/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/3-targets/3-targets/postgres/src/exports/op-factory-call.ts
+  description: 'modified: packages/3-targets/3-targets/postgres/src/exports/op-factory-call.ts
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/3-targets/3-targets/postgres/test/migrations/check-rename-planner.test.ts
+  description: 'added: packages/3-targets/3-targets/postgres/test/migrations/check-rename-planner.test.ts
+    (+275/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/3-targets/3-targets/postgres/test/migrations/planner.check-constraints.test.ts
+  description: 'modified: packages/3-targets/3-targets/postgres/test/migrations/planner.check-constraints.test.ts
+    (+10/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/3-targets/3-targets/postgres/test/migrations/render-typescript.test.ts
+  description: 'modified: packages/3-targets/3-targets/postgres/test/migrations/render-typescript.test.ts
+    (+7/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/3-targets/6-adapters/postgres/test/migrations/check-lifecycle-e2e.integration.test.ts
+  description: 'modified: packages/3-targets/6-adapters/postgres/test/migrations/check-lifecycle-e2e.integration.test.ts
+    (+48/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - projects/sql-check-constraint-unification/plan.md
+  description: 'modified: projects/sql-check-constraint-unification/plan.md (+3/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - projects/sql-check-constraint-unification/slices/check-prefix-renames-plan-as-rename-constraint/spec.md
+  description: 'added: projects/sql-check-constraint-unification/slices/check-prefix-renames-plan-as-rename-constraint/spec.md
+    (+49/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - projects/sql-check-constraint-unification/slices/checks-are-declared-opaque-expressions/spec.md
+  description: 'modified: projects/sql-check-constraint-unification/slices/checks-are-declared-opaque-expressions/spec.md
+    (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - projects/sql-check-constraint-unification/spec.md
+  description: 'modified: projects/sql-check-constraint-unification/spec.md (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 14
+notes: 'Mined from prisma/prisma PR #29894. Trigger heuristic applied. Needs review.'

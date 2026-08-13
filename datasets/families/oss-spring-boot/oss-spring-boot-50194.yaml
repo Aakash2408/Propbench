@@ -1,0 +1,54 @@
+id: oss-spring-boot-50194
+title: Expose Path getters on ApplicationHome and ApplicationTemp
+family: uncategorized
+date: '2026-07-15'
+author: zxuhan
+source: github-api-mined
+source_repo: spring-projects/spring-boot
+source_url: https://github.com/spring-projects/spring-boot/pull/50194
+source_pr: 50194
+difficulty: medium
+trigger:
+  package: spring-projects/spring-boot
+  files:
+  - core/spring-boot/src/main/java/org/springframework/boot/system/ApplicationHome.java
+  intent: Expose Path getters on ApplicationHome and ApplicationTemp
+  diff_summary: 'Primary: core/spring-boot/src/main/java/org/springframework/boot/system/ApplicationHome.java
+    (+21/-0)'
+consequences:
+- package: spring-projects/spring-boot
+  files:
+  - core/spring-boot/src/main/java/org/springframework/boot/system/ApplicationTemp.java
+  description: 'modified: core/spring-boot/src/main/java/org/springframework/boot/system/ApplicationTemp.java
+    (+6/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - core/spring-boot/src/test/java/org/springframework/boot/system/ApplicationHomeTests.java
+  description: 'modified: core/spring-boot/src/test/java/org/springframework/boot/system/ApplicationHomeTests.java
+    (+23/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - core/spring-boot/src/test/java/org/springframework/boot/system/ApplicationTempTests.java
+  description: 'modified: core/spring-boot/src/test/java/org/springframework/boot/system/ApplicationTempTests.java
+    (+6/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from spring-projects/spring-boot PR #50194. Trigger heuristic applied.
+  Needs review.'

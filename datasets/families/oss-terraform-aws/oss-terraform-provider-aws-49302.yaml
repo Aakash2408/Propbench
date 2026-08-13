@@ -1,0 +1,116 @@
+id: oss-terraform-provider-aws-49302
+title: Replaces `len(val.Elements())` with `val.Length(...)`
+family: uncategorized
+date: '2026-08-05'
+author: gdavison
+source: github-api-mined
+source_repo: hashicorp/terraform-provider-aws
+source_url: https://github.com/hashicorp/terraform-provider-aws/pull/49302
+source_pr: 49302
+difficulty: medium
+trigger:
+  package: hashicorp/terraform-provider-aws
+  files:
+  - internal/framework/flex/autoflex_expand.go
+  intent: Replaces `len(val.Elements())` with `val.Length(...)`
+  diff_summary: 'Primary: internal/framework/flex/autoflex_expand.go (+13/-13)'
+consequences:
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/framework/flex/autoflex.go
+  description: 'modified: internal/framework/flex/autoflex.go (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/framework/types/consts.go
+  description: 'modified: internal/framework/types/consts.go (+9/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/dataexchange/revision_assets.go
+  description: 'modified: internal/service/dataexchange/revision_assets.go (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/events/put_events_action.go
+  description: 'modified: internal/service/events/put_events_action.go (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/odb/network_peering_connection.go
+  description: 'modified: internal/service/odb/network_peering_connection.go (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rds/integration.go
+  description: 'modified: internal/service/rds/integration.go (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/redshift/integration.go
+  description: 'modified: internal/service/redshift/integration.go (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/sagemaker/training_job.go
+  description: 'modified: internal/service/sagemaker/training_job.go (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/securitylake/subscriber_notification.go
+  description: 'modified: internal/service/securitylake/subscriber_notification.go
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/servicequotas/auto_management.go
+  description: 'modified: internal/service/servicequotas/auto_management.go (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/wafv2/web_acl_rule_group_association.go
+  description: 'modified: internal/service/wafv2/web_acl_rule_group_association.go
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 12
+notes: 'Mined from hashicorp/terraform-provider-aws PR #49302. Trigger heuristic applied.
+  Needs review.'

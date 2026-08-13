@@ -1,0 +1,52 @@
+id: oss-rust-159839
+title: point at closure return expression in non-`FnOnce` E0271 errors
+family: uncategorized
+date: '2026-08-11'
+author: Albab-Hasan
+source: github-api-mined
+source_repo: rust-lang/rust
+source_url: https://github.com/rust-lang/rust/pull/159839
+source_pr: 159839
+difficulty: medium
+trigger:
+  package: rust-lang/rust
+  files:
+  - tests/ui/closures/closure-arg-assoc-type-mismatch.stderr
+  intent: point at closure return expression in non-`FnOnce` E0271 errors
+  diff_summary: 'Primary: tests/ui/closures/closure-arg-assoc-type-mismatch.stderr
+    (+72/-0)'
+consequences:
+- package: rust-lang/rust
+  files:
+  - compiler/rustc_trait_selection/src/error_reporting/traits/fulfillment_errors.rs
+  description: 'modified: compiler/rustc_trait_selection/src/error_reporting/traits/fulfillment_errors.rs
+    (+25/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/closures/closure-arg-assoc-type-mismatch.rs
+  description: 'added: tests/ui/closures/closure-arg-assoc-type-mismatch.rs (+30/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/mismatched_types/closure-arg-type-mismatch-issue-45727.next.stderr
+  description: 'modified: tests/ui/mismatched_types/closure-arg-type-mismatch-issue-45727.next.stderr
+    (+8/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from rust-lang/rust PR #159839. Trigger heuristic applied. Needs review.'

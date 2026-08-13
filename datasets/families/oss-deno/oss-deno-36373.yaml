@@ -1,0 +1,73 @@
+id: oss-deno-36373
+title: 'fix(ffi): validate struct return buffers'
+family: bugfix
+date: '2026-08-13'
+author: nathanwhit
+source: github-api-mined
+source_repo: denoland/deno
+source_url: https://github.com/denoland/deno/pull/36373
+source_pr: 36373
+difficulty: medium
+trigger:
+  package: denoland/deno
+  files:
+  - ext/ffi/call.rs
+  intent: 'fix(ffi): validate struct return buffers'
+  diff_summary: 'Primary: ext/ffi/call.rs (+250/-13)'
+consequences:
+- package: denoland/deno
+  files:
+  - Cargo.lock
+  description: 'modified: Cargo.lock (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - ext/ffi/00_ffi.js
+  description: 'modified: ext/ffi/00_ffi.js (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - ext/ffi/Cargo.toml
+  description: 'modified: ext/ffi/Cargo.toml (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - ext/ffi/dlfcn.rs
+  description: 'modified: ext/ffi/dlfcn.rs (+102/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - ext/ffi/ir.rs
+  description: 'modified: ext/ffi/ir.rs (+49/-19)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/ffi/testdata/test.js
+  description: 'modified: tests/ffi/testdata/test.js (+20/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from denoland/deno PR #36373. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,65 @@
+id: oss-rails-58411
+title: Active Record ractor safe ivars 2
+family: uncategorized
+date: '2026-08-11'
+author: gmcgibbon
+source: github-api-mined
+source_repo: rails/rails
+source_url: https://github.com/rails/rails/pull/58411
+source_pr: 58411
+difficulty: medium
+trigger:
+  package: rails/rails
+  files:
+  - activerecord/lib/active_record/attributes.rb
+  intent: Active Record ractor safe ivars 2
+  diff_summary: 'Primary: activerecord/lib/active_record/attributes.rb (+9/-7)'
+consequences:
+- package: rails/rails
+  files:
+  - activerecord/lib/active_record/core.rb
+  description: 'modified: activerecord/lib/active_record/core.rb (+10/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/test/cases/attributes_test.rb
+  description: 'modified: activerecord/test/cases/attributes_test.rb (+21/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/test/cases/core_test.rb
+  description: 'modified: activerecord/test/cases/core_test.rb (+26/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activesupport/lib/active_support/ractors.rb
+  description: 'modified: activesupport/lib/active_support/ractors.rb (+16/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activesupport/test/ractors_test.rb
+  description: 'modified: activesupport/test/ractors_test.rb (+16/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from rails/rails PR #58411. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,42 @@
+id: oss-terraform-provider-aws-49303
+title: 'Adds Semgrep rule for #49302'
+family: interface-evolution
+date: '2026-08-05'
+author: gdavison
+source: github-api-mined
+source_repo: hashicorp/terraform-provider-aws
+source_url: https://github.com/hashicorp/terraform-provider-aws/pull/49303
+source_pr: 49303
+difficulty: medium
+trigger:
+  package: hashicorp/terraform-provider-aws
+  files:
+  - .ci/semgrep/framework/collection_length.fixed.go
+  intent: 'Adds Semgrep rule for #49302'
+  diff_summary: 'Primary: .ci/semgrep/framework/collection_length.fixed.go (+119/-0)'
+consequences:
+- package: hashicorp/terraform-provider-aws
+  files:
+  - .ci/semgrep/framework/collection_length.go
+  description: 'added: .ci/semgrep/framework/collection_length.go (+119/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - .ci/semgrep/framework/collection_length.yml
+  description: 'added: .ci/semgrep/framework/collection_length.yml (+33/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from hashicorp/terraform-provider-aws PR #49303. Trigger heuristic applied.
+  Needs review.'

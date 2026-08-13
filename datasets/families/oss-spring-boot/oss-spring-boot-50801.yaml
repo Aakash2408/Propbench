@@ -1,0 +1,65 @@
+id: oss-spring-boot-50801
+title: JpaBaseConfiguration#entityManagerConfiguration can cause a dependency loop
+  on beans declaring Async
+family: dependency-evolution
+date: '2026-07-14'
+author: ns3154
+source: github-api-mined
+source_repo: spring-projects/spring-boot
+source_url: https://github.com/spring-projects/spring-boot/pull/50801
+source_pr: 50801
+difficulty: medium
+trigger:
+  package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-jpa/src/main/java/org/springframework/boot/jpa/EntityManagerFactoryBuilder.java
+  intent: JpaBaseConfiguration#entityManagerConfiguration can cause a dependency loop
+    on beans declaring AsyncTaskExecutor
+  diff_summary: 'Primary: module/spring-boot-jpa/src/main/java/org/springframework/boot/jpa/EntityManagerFactoryBuilder.java
+    (+30/-4)'
+consequences:
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-data-jpa/src/main/java/org/springframework/boot/data/jpa/autoconfigure/DataJpaRepositoriesAutoConfiguration.java
+  description: 'modified: module/spring-boot-data-jpa/src/main/java/org/springframework/boot/data/jpa/autoconfigure/DataJpaRepositoriesAutoConfiguration.java
+    (+1/-14)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-hibernate/src/test/java/org/springframework/boot/hibernate/autoconfigure/HibernateJpaAutoConfigurationTests.java
+  description: 'modified: module/spring-boot-hibernate/src/test/java/org/springframework/boot/hibernate/autoconfigure/HibernateJpaAutoConfigurationTests.java
+    (+23/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-jpa/src/main/java/org/springframework/boot/jpa/autoconfigure/JpaBaseConfiguration.java
+  description: 'modified: module/spring-boot-jpa/src/main/java/org/springframework/boot/jpa/autoconfigure/JpaBaseConfiguration.java
+    (+6/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-jpa/src/test/java/org/springframework/boot/jpa/EntityManagerFactoryBuilderTests.java
+  description: 'modified: module/spring-boot-jpa/src/test/java/org/springframework/boot/jpa/EntityManagerFactoryBuilderTests.java
+    (+27/-4)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from spring-projects/spring-boot PR #50801. Trigger heuristic applied.
+  Needs review.'

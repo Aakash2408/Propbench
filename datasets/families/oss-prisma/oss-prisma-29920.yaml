@@ -1,0 +1,64 @@
+id: oss-prisma-29920
+title: 'fix(driver-postgres): direct-driver transaction integrity + supabase prepared-statement
+  coverage (TM'
+family: bugfix
+date: '2026-08-07'
+author: wmadden-electric
+source: github-api-mined
+source_repo: prisma/prisma
+source_url: https://github.com/prisma/prisma/pull/29920
+source_pr: 29920
+difficulty: medium
+trigger:
+  package: prisma/prisma
+  files:
+  - skills/prisma-8-extension-upgrade/upgrades/0.17-to-8.0.0-rc.1/instructions.md
+  intent: 'fix(driver-postgres): direct-driver transaction integrity + supabase prepared-statement
+    coverage (TML-3167 follow-up)'
+  diff_summary: 'Primary: skills/prisma-8-extension-upgrade/upgrades/0.17-to-8.0.0-rc.1/instructions.md
+    (+49/-0)'
+consequences:
+- package: prisma/prisma
+  files:
+  - packages/3-extensions/supabase/test/supabase-runtime.test.ts
+  description: 'modified: packages/3-extensions/supabase/test/supabase-runtime.test.ts
+    (+103/-10)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/3-targets/7-drivers/postgres/src/postgres-driver.ts
+  description: 'modified: packages/3-targets/7-drivers/postgres/src/postgres-driver.ts
+    (+27/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/3-targets/7-drivers/postgres/test/driver.stream-portal-protection.integration.test.ts
+  description: 'modified: packages/3-targets/7-drivers/postgres/test/driver.stream-portal-protection.integration.test.ts
+    (+29/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - skills/prisma-8-extension-upgrade/upgrades/8.0.0-rc.1-to-8.0.0-rc.2/instructions.md
+  description: 'modified: skills/prisma-8-extension-upgrade/upgrades/8.0.0-rc.1-to-8.0.0-rc.2/instructions.md
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from prisma/prisma PR #29920. Trigger heuristic applied. Needs review.'

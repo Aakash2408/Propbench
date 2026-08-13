@@ -1,0 +1,99 @@
+id: oss-next.js-96941
+title: '[turbopack] Retain fewer stale cache versions and use a TTL'
+family: uncategorized
+date: '2026-08-11'
+author: lukesandberg
+source: github-api-mined
+source_repo: vercel/next.js
+source_url: https://github.com/vercel/next.js/pull/96941
+source_pr: 96941
+difficulty: medium
+trigger:
+  package: vercel/next.js
+  files:
+  - turbopack/crates/turbo-tasks-backend/src/database/db_versioning.rs
+  intent: '[turbopack] Retain fewer stale cache versions and use a TTL'
+  diff_summary: 'Primary: turbopack/crates/turbo-tasks-backend/src/database/db_versioning.rs
+    (+219/-76)'
+consequences:
+- package: vercel/next.js
+  files:
+  - Cargo.lock
+  description: 'modified: Cargo.lock (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - packages/next/src/lib/turbopack-cache-seed.ts
+  description: 'modified: packages/next/src/lib/turbopack-cache-seed.ts (+18/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - turbopack/crates/turbo-persistence/Cargo.toml
+  description: 'modified: turbopack/crates/turbo-persistence/Cargo.toml (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - turbopack/crates/turbo-persistence/README.md
+  description: 'modified: turbopack/crates/turbo-persistence/README.md (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - turbopack/crates/turbo-persistence/src/bin/sst_inspect.rs
+  description: 'modified: turbopack/crates/turbo-persistence/src/bin/sst_inspect.rs
+    (+4/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - turbopack/crates/turbo-persistence/src/db.rs
+  description: 'modified: turbopack/crates/turbo-persistence/src/db.rs (+54/-23)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - turbopack/crates/turbo-persistence/src/lib.rs
+  description: 'modified: turbopack/crates/turbo-persistence/src/lib.rs (+4/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - turbopack/crates/turbo-persistence/src/tests.rs
+  description: 'modified: turbopack/crates/turbo-persistence/src/tests.rs (+36/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - turbopack/crates/turbo-tasks-backend/Cargo.toml
+  description: 'modified: turbopack/crates/turbo-tasks-backend/Cargo.toml (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 10
+notes: 'Mined from vercel/next.js PR #96941. Trigger heuristic applied. Needs review.'

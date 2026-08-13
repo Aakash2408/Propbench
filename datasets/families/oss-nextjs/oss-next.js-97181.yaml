@@ -1,0 +1,116 @@
+id: oss-next.js-97181
+title: Allow literal exports in `'use cache'` files
+family: uncategorized
+date: '2026-08-12'
+author: unstubbable
+source: github-api-mined
+source_repo: vercel/next.js
+source_url: https://github.com/vercel/next.js/pull/97181
+source_pr: 97181
+difficulty: medium
+trigger:
+  package: vercel/next.js
+  files:
+  - test/e2e/app-dir/instant-validation/app/shells/(default)/valid-use-cache-instant-false/page.tsx
+  intent: Allow literal exports in `'use cache'` files
+  diff_summary: 'Primary: test/e2e/app-dir/instant-validation/app/shells/(default)/valid-use-cache-instant-false/page.tsx
+    (+28/-0)'
+consequences:
+- package: vercel/next.js
+  files:
+  - crates/next-custom-transforms/src/transforms/server_actions.rs
+  description: 'modified: crates/next-custom-transforms/src/transforms/server_actions.rs
+    (+12/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - crates/next-custom-transforms/tests/errors/server-actions/server-graph/14/output.js
+  description: 'modified: crates/next-custom-transforms/tests/errors/server-actions/server-graph/14/output.js
+    (+4/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - crates/next-custom-transforms/tests/errors/server-actions/server-graph/14/output.stderr
+  description: 'modified: crates/next-custom-transforms/tests/errors/server-actions/server-graph/14/output.stderr
+    (+0/-7)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - crates/next-custom-transforms/tests/fixture/server-actions/client-graph/18/input.js
+  description: 'added: crates/next-custom-transforms/tests/fixture/server-actions/client-graph/18/input.js
+    (+13/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - crates/next-custom-transforms/tests/fixture/server-actions/client-graph/18/output.js
+  description: 'added: crates/next-custom-transforms/tests/fixture/server-actions/client-graph/18/output.js
+    (+2/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - crates/next-custom-transforms/tests/fixture/server-actions/server-graph/73/input.js
+  description: 'added: crates/next-custom-transforms/tests/fixture/server-actions/server-graph/73/input.js
+    (+14/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - crates/next-custom-transforms/tests/fixture/server-actions/server-graph/73/output.js
+  description: 'added: crates/next-custom-transforms/tests/fixture/server-actions/server-graph/73/output.js
+    (+24/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - test/e2e/app-dir/instant-validation/app/shells/(default)/page.tsx
+  description: 'modified: test/e2e/app-dir/instant-validation/app/shells/(default)/page.tsx
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - test/e2e/app-dir/instant-validation/app/shells/(default)/valid-use-cache-instant-false/layout.tsx
+  description: 'added: test/e2e/app-dir/instant-validation/app/shells/(default)/valid-use-cache-instant-false/layout.tsx
+    (+10/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - test/e2e/app-dir/instant-validation/head-and-reporting.util.ts
+  description: 'modified: test/e2e/app-dir/instant-validation/head-and-reporting.util.ts
+    (+14/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 11
+notes: 'Mined from vercel/next.js PR #97181. Trigger heuristic applied. Needs review.'

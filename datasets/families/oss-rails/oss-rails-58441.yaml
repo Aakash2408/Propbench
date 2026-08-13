@@ -1,0 +1,92 @@
+id: oss-rails-58441
+title: Render Markdown lists that collapse into paragraphs
+family: uncategorized
+date: '2026-08-11'
+author: '55728'
+source: github-api-mined
+source_repo: rails/rails
+source_url: https://github.com/rails/rails/pull/58441
+source_pr: 58441
+difficulty: medium
+trigger:
+  package: rails/rails
+  files:
+  - activesupport/lib/active_support/callbacks.rb
+  intent: Render Markdown lists that collapse into paragraphs
+  diff_summary: 'Primary: activesupport/lib/active_support/callbacks.rb (+5/-2)'
+consequences:
+- package: rails/rails
+  files:
+  - actioncable/lib/action_cable/channel/test_case.rb
+  description: 'modified: actioncable/lib/action_cable/channel/test_case.rb (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - actionpack/lib/action_controller/metal/live.rb
+  description: 'modified: actionpack/lib/action_controller/metal/live.rb (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - actionpack/lib/action_controller/metal/redirecting.rb
+  description: 'modified: actionpack/lib/action_controller/metal/redirecting.rb (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - actionpack/lib/action_controller/test_case.rb
+  description: 'modified: actionpack/lib/action_controller/test_case.rb (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - actionpack/lib/action_dispatch/http/url.rb
+  description: 'modified: actionpack/lib/action_dispatch/http/url.rb (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activesupport/lib/active_support/cache/mem_cache_store.rb
+  description: 'modified: activesupport/lib/active_support/cache/mem_cache_store.rb
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activesupport/lib/active_support/cache/redis_cache_store.rb
+  description: 'modified: activesupport/lib/active_support/cache/redis_cache_store.rb
+    (+3/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activesupport/lib/active_support/dot_env_configuration.rb
+  description: 'modified: activesupport/lib/active_support/dot_env_configuration.rb
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 9
+notes: 'Mined from rails/rails PR #58441. Trigger heuristic applied. Needs review.'

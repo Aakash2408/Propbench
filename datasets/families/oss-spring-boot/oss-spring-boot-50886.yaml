@@ -1,0 +1,72 @@
+id: oss-spring-boot-50886
+title: Micrometer registries pin the application context
+family: uncategorized
+date: '2026-07-28'
+author: LordKay-sudo
+source: github-api-mined
+source_repo: spring-projects/spring-boot
+source_url: https://github.com/spring-projects/spring-boot/pull/50886
+source_pr: 50886
+difficulty: medium
+trigger:
+  package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-micrometer-metrics/src/main/java/org/springframework/boot/micrometer/metrics/autoconfigure/MeterRegistryCloser.java
+  intent: Micrometer registries pin the application context
+  diff_summary: 'Primary: module/spring-boot-micrometer-metrics/src/main/java/org/springframework/boot/micrometer/metrics/autoconfigure/MeterRegistryCloser.java
+    (+75/-0)'
+consequences:
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-micrometer-metrics/src/main/java/org/springframework/boot/micrometer/metrics/autoconfigure/MeterRegistryPostProcessor.java
+  description: 'modified: module/spring-boot-micrometer-metrics/src/main/java/org/springframework/boot/micrometer/metrics/autoconfigure/MeterRegistryPostProcessor.java
+    (+11/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-micrometer-metrics/src/main/java/org/springframework/boot/micrometer/metrics/autoconfigure/MetricsAutoConfiguration.java
+  description: 'modified: module/spring-boot-micrometer-metrics/src/main/java/org/springframework/boot/micrometer/metrics/autoconfigure/MetricsAutoConfiguration.java
+    (+5/-41)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-micrometer-metrics/src/test/java/org/springframework/boot/micrometer/metrics/autoconfigure/MeterRegistryCloserTests.java
+  description: 'added: module/spring-boot-micrometer-metrics/src/test/java/org/springframework/boot/micrometer/metrics/autoconfigure/MeterRegistryCloserTests.java
+    (+113/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-micrometer-metrics/src/test/java/org/springframework/boot/micrometer/metrics/autoconfigure/MeterRegistryPostProcessorTests.java
+  description: 'modified: module/spring-boot-micrometer-metrics/src/test/java/org/springframework/boot/micrometer/metrics/autoconfigure/MeterRegistryPostProcessorTests.java
+    (+81/-16)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-micrometer-metrics/src/test/java/org/springframework/boot/micrometer/metrics/autoconfigure/MetricsAutoConfigurationTests.java
+  description: 'modified: module/spring-boot-micrometer-metrics/src/test/java/org/springframework/boot/micrometer/metrics/autoconfigure/MetricsAutoConfigurationTests.java
+    (+0/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from spring-projects/spring-boot PR #50886. Trigger heuristic applied.
+  Needs review.'

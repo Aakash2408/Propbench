@@ -1,0 +1,45 @@
+id: oss-spring-boot-50799
+title: spring.grpc.server.health.include-overall-health is not taken into account
+family: uncategorized
+date: '2026-07-23'
+author: xfocus3
+source: github-api-mined
+source_repo: spring-projects/spring-boot
+source_url: https://github.com/spring-projects/spring-boot/pull/50799
+source_pr: 50799
+difficulty: medium
+trigger:
+  package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-grpc-server/src/main/java/org/springframework/boot/grpc/server/autoconfigure/health/AutoConfiguredHealthCheckedGrpcComponents.java
+  intent: spring.grpc.server.health.include-overall-health is not taken into account
+  diff_summary: 'Primary: module/spring-boot-grpc-server/src/main/java/org/springframework/boot/grpc/server/autoconfigure/health/AutoConfiguredHealthCheckedGrpcComponents.java
+    (+3/-3)'
+consequences:
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-grpc-server/src/test/java/org/springframework/boot/grpc/server/autoconfigure/health/AutoConfiguredHealthCheckedGrpcComponentsTests.java
+  description: 'modified: module/spring-boot-grpc-server/src/test/java/org/springframework/boot/grpc/server/autoconfigure/health/AutoConfiguredHealthCheckedGrpcComponentsTests.java
+    (+9/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-grpc-server/src/test/java/org/springframework/boot/grpc/server/autoconfigure/health/GrpcServerHealthAutoConfigurationTests.java
+  description: 'modified: module/spring-boot-grpc-server/src/test/java/org/springframework/boot/grpc/server/autoconfigure/health/GrpcServerHealthAutoConfigurationTests.java
+    (+11/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from spring-projects/spring-boot PR #50799. Trigger heuristic applied.
+  Needs review.'

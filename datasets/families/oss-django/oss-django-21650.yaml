@@ -1,0 +1,65 @@
+id: oss-django-21650
+title: 'Fixed #36027 -- Made error response rendering thread-sensitive.'
+family: bugfix
+date: '2026-07-23'
+author: carltongibson
+source: github-api-mined
+source_repo: django/django
+source_url: https://github.com/django/django/pull/21650
+source_pr: 21650
+difficulty: medium
+trigger:
+  package: django/django
+  files:
+  - tests/staticfiles_tests/test_handlers.py
+  intent: 'Fixed #36027 -- Made error response rendering thread-sensitive.'
+  diff_summary: 'Primary: tests/staticfiles_tests/test_handlers.py (+31/-2)'
+consequences:
+- package: django/django
+  files:
+  - django/contrib/staticfiles/handlers.py
+  description: 'modified: django/contrib/staticfiles/handlers.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - django/core/handlers/exception.py
+  description: 'modified: django/core/handlers/exception.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - docs/releases/6.2.txt
+  description: 'modified: docs/releases/6.2.txt (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - tests/asgi/tests.py
+  description: 'modified: tests/asgi/tests.py (+25/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - tests/asgi/urls.py
+  description: 'modified: tests/asgi/urls.py (+16/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from django/django PR #21650. Trigger heuristic applied. Needs review.'

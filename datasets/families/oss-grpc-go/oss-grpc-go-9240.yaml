@@ -1,0 +1,89 @@
+id: oss-grpc-go-9240
+title: Cherry-pick recent changes from master
+family: uncategorized
+date: '2026-07-21'
+author: easwars
+source: github-api-mined
+source_repo: grpc/grpc-go
+source_url: https://github.com/grpc/grpc-go/pull/9240
+source_pr: 9240
+difficulty: medium
+trigger:
+  package: grpc/grpc-go
+  files:
+  - internal/transport/controlbuf.go
+  intent: Cherry-pick recent changes from master
+  diff_summary: 'Primary: internal/transport/controlbuf.go (+84/-88)'
+consequences:
+- package: grpc/grpc-go
+  files:
+  - internal/envconfig/envconfig.go
+  description: 'modified: internal/envconfig/envconfig.go (+11/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/transport/controlbuf_test.go
+  description: 'added: internal/transport/controlbuf_test.go (+85/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/transport/http2_client.go
+  description: 'modified: internal/transport/http2_client.go (+7/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/transport/http2_server.go
+  description: 'modified: internal/transport/http2_server.go (+8/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/transport/transport_test.go
+  description: 'modified: internal/transport/transport_test.go (+3/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/xds/rbac/matchers.go
+  description: 'modified: internal/xds/rbac/matchers.go (+62/-13)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/xds/rbac/rbac_engine_test.go
+  description: 'modified: internal/xds/rbac/rbac_engine_test.go (+394/-65)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - scripts/vet.sh
+  description: 'modified: scripts/vet.sh (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 9
+notes: 'Mined from grpc/grpc-go PR #9240. Trigger heuristic applied. Needs review.'

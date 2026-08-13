@@ -1,0 +1,81 @@
+id: oss-tokio-8337
+title: 'runtime: add an opt-in sharded spawn_blocking queue'
+family: interface-evolution
+date: '2026-08-09'
+author: alex
+source: github-api-mined
+source_repo: tokio-rs/tokio
+source_url: https://github.com/tokio-rs/tokio/pull/8337
+source_pr: 8337
+difficulty: medium
+trigger:
+  package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/blocking/sharded.rs
+  intent: 'runtime: add an opt-in sharded spawn_blocking queue'
+  diff_summary: 'Primary: tokio/src/runtime/blocking/sharded.rs (+353/-0)'
+consequences:
+- package: tokio-rs/tokio
+  files:
+  - spellcheck.dic
+  description: 'modified: spellcheck.dic (+4/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/blocking/mod.rs
+  description: 'modified: tokio/src/runtime/blocking/mod.rs (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/blocking/pool.rs
+  description: 'modified: tokio/src/runtime/blocking/pool.rs (+86/-54)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/builder.rs
+  description: 'modified: tokio/src/runtime/builder.rs (+56/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/context.rs
+  description: 'modified: tokio/src/runtime/context.rs (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/tests/loom_blocking.rs
+  description: 'modified: tokio/src/runtime/tests/loom_blocking.rs (+50/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/util/rand.rs
+  description: 'modified: tokio/src/util/rand.rs (+1/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 8
+notes: 'Mined from tokio-rs/tokio PR #8337. Trigger heuristic applied. Needs review.'

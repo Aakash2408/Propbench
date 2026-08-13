@@ -1,0 +1,91 @@
+id: oss-deno-36407
+title: 'fix(ext/node): fix perf_hooks detail.req.url proxied path duplication'
+family: bugfix
+date: '2026-08-12'
+author: badgerbees
+source: github-api-mined
+source_repo: denoland/deno
+source_url: https://github.com/denoland/deno/pull/36407
+source_pr: 36407
+difficulty: medium
+trigger:
+  package: denoland/deno
+  files:
+  - ext/node/polyfills/_http_client.js
+  intent: 'fix(ext/node): fix perf_hooks detail.req.url proxied path duplication'
+  diff_summary: 'Primary: ext/node/polyfills/_http_client.js (+44/-22)'
+consequences:
+- package: denoland/deno
+  files:
+  - ext/node/polyfills/_http_server.js
+  description: 'modified: ext/node/polyfills/_http_server.js (+18/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/specs/cli/otel_basic/__test__.jsonc
+  description: 'modified: tests/specs/cli/otel_basic/__test__.jsonc (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/specs/cli/otel_basic/node_http_request_proxy.out
+  description: 'added: tests/specs/cli/otel_basic/node_http_request_proxy.out (+64/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/specs/cli/otel_basic/node_http_request_proxy.ts
+  description: 'added: tests/specs/cli/otel_basic/node_http_request_proxy.ts (+36/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/specs/cli/otel_basic/node_http_server_absolute_form.out
+  description: 'added: tests/specs/cli/otel_basic/node_http_server_absolute_form.out
+    (+24/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/specs/cli/otel_basic/node_http_server_absolute_form.ts
+  description: 'added: tests/specs/cli/otel_basic/node_http_server_absolute_form.ts
+    (+26/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/unit_node/http_test.ts
+  description: 'modified: tests/unit_node/http_test.ts (+44/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/unit_node/perf_hooks_test.ts
+  description: 'modified: tests/unit_node/perf_hooks_test.ts (+100/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 9
+notes: 'Mined from denoland/deno PR #36407. Trigger heuristic applied. Needs review.'

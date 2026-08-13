@@ -1,0 +1,72 @@
+id: oss-spring-boot-50418
+title: Add WAR TLD loader integration test
+family: interface-evolution
+date: '2026-06-24'
+author: codingkiddo
+source: github-api-mined
+source_repo: spring-projects/spring-boot
+source_url: https://github.com/spring-projects/spring-boot/pull/50418
+source_pr: 50418
+difficulty: medium
+trigger:
+  package: spring-projects/spring-boot
+  files:
+  - integration-test/spring-boot-loader-integration-tests/src/dockerTest/java/org/springframework/boot/loader/LoaderIntegrationTests.java
+  intent: Add WAR TLD loader integration test
+  diff_summary: 'Primary: integration-test/spring-boot-loader-integration-tests/src/dockerTest/java/org/springframework/boot/loader/LoaderIntegrationTests.java
+    (+32/-11)'
+consequences:
+- package: spring-projects/spring-boot
+  files:
+  - integration-test/spring-boot-loader-integration-tests/build.gradle
+  description: 'modified: integration-test/spring-boot-loader-integration-tests/build.gradle
+    (+12/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - integration-test/spring-boot-loader-integration-tests/spring-boot-loader-tests-war/build.gradle
+  description: 'added: integration-test/spring-boot-loader-integration-tests/spring-boot-loader-tests-war/build.gradle
+    (+41/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - integration-test/spring-boot-loader-integration-tests/spring-boot-loader-tests-war/settings.gradle
+  description: 'added: integration-test/spring-boot-loader-integration-tests/spring-boot-loader-tests-war/settings.gradle
+    (+31/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - integration-test/spring-boot-loader-integration-tests/spring-boot-loader-tests-war/src/main/java/org/springframework/boot/loaderwarapp/LoaderWarTestApplication.java
+  description: 'added: integration-test/spring-boot-loader-integration-tests/spring-boot-loader-tests-war/src/main/java/org/springframework/boot/loaderwarapp/LoaderWarTestApplication.java
+    (+36/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - integration-test/spring-boot-loader-integration-tests/spring-boot-loader-tests-war/src/main/webapp/WEB-INF/jsp/welcome.jsp
+  description: 'added: integration-test/spring-boot-loader-integration-tests/spring-boot-loader-tests-war/src/main/webapp/WEB-INF/jsp/welcome.jsp
+    (+13/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from spring-projects/spring-boot PR #50418. Trigger heuristic applied.
+  Needs review.'

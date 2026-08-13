@@ -1,0 +1,53 @@
+id: oss-prisma-29654
+title: 'fix(client): handle batched findUniqueOrThrow misses'
+family: interface-evolution
+date: '2026-07-22'
+author: Shgit29
+source: github-api-mined
+source_repo: prisma/prisma
+source_url: https://github.com/prisma/prisma/pull/29654
+source_pr: 29654
+difficulty: medium
+trigger:
+  package: prisma/prisma
+  files:
+  - packages/client/src/runtime/core/engines/client/ClientEngine.ts
+  intent: 'fix(client): handle batched findUniqueOrThrow misses'
+  diff_summary: 'Primary: packages/client/src/runtime/core/engines/client/ClientEngine.ts
+    (+8/-1)'
+consequences:
+- package: prisma/prisma
+  files:
+  - packages/client/tests/functional/issues/29638-concurrent-find-unique-or-throw/_matrix.ts
+  description: 'added: packages/client/tests/functional/issues/29638-concurrent-find-unique-or-throw/_matrix.ts
+    (+4/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/client/tests/functional/issues/29638-concurrent-find-unique-or-throw/prisma/_schema.ts
+  description: 'added: packages/client/tests/functional/issues/29638-concurrent-find-unique-or-throw/prisma/_schema.ts
+    (+33/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prisma/prisma
+  files:
+  - packages/client/tests/functional/issues/29638-concurrent-find-unique-or-throw/tests.ts
+  description: 'added: packages/client/tests/functional/issues/29638-concurrent-find-unique-or-throw/tests.ts
+    (+59/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from prisma/prisma PR #29654. Trigger heuristic applied. Needs review.'

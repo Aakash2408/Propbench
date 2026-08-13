@@ -1,0 +1,49 @@
+id: oss-tokio-8335
+title: 'time: simplify wheel constants'
+family: uncategorized
+date: '2026-08-09'
+author: vilgotf
+source: github-api-mined
+source_repo: tokio-rs/tokio
+source_url: https://github.com/tokio-rs/tokio/pull/8335
+source_pr: 8335
+difficulty: medium
+trigger:
+  package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/time/wheel/mod.rs
+  intent: 'time: simplify wheel constants'
+  diff_summary: 'Primary: tokio/src/runtime/time/wheel/mod.rs (+7/-8)'
+consequences:
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/time/wheel/level.rs
+  description: 'modified: tokio/src/runtime/time/wheel/level.rs (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/time_alt/wheel/level.rs
+  description: 'modified: tokio/src/runtime/time_alt/wheel/level.rs (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/time_alt/wheel/mod.rs
+  description: 'modified: tokio/src/runtime/time_alt/wheel/mod.rs (+7/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from tokio-rs/tokio PR #8335. Trigger heuristic applied. Needs review.'

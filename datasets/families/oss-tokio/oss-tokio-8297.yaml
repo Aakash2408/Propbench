@@ -1,0 +1,41 @@
+id: oss-tokio-8297
+title: 'rt: add error documentation for `runtime::Builder`'
+family: interface-evolution
+date: '2026-07-30'
+author: mox692
+source: github-api-mined
+source_repo: tokio-rs/tokio
+source_url: https://github.com/tokio-rs/tokio/pull/8297
+source_pr: 8297
+difficulty: medium
+trigger:
+  package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/builder.rs
+  intent: 'rt: add error documentation for `runtime::Builder`'
+  diff_summary: 'Primary: tokio/src/runtime/builder.rs (+10/-0)'
+consequences:
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/local_runtime/runtime.rs
+  description: 'modified: tokio/src/runtime/local_runtime/runtime.rs (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/runtime.rs
+  description: 'modified: tokio/src/runtime/runtime.rs (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from tokio-rs/tokio PR #8297. Trigger heuristic applied. Needs review.'

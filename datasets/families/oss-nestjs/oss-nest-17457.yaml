@@ -1,0 +1,111 @@
+id: oss-nest-17457
+title: 'fix(deps): update nest-graphql monorepo to v13.4.4'
+family: dependency-evolution
+date: '2026-08-11'
+author: renovate[bot]
+source: github-api-mined
+source_repo: nestjs/nest
+source_url: https://github.com/nestjs/nest/pull/17457
+source_pr: 17457
+difficulty: medium
+trigger:
+  package: nestjs/nest
+  files:
+  - package.json
+  intent: 'fix(deps): update nest-graphql monorepo to v13.4.4'
+  diff_summary: 'Primary: package.json (+2/-2)'
+consequences:
+- package: nestjs/nest
+  files:
+  - sample/12-graphql-schema-first/package.json
+  description: 'modified: sample/12-graphql-schema-first/package.json (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: nestjs/nest
+  files:
+  - sample/22-graphql-prisma/package.json
+  description: 'modified: sample/22-graphql-prisma/package.json (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: nestjs/nest
+  files:
+  - sample/23-graphql-code-first/package.json
+  description: 'modified: sample/23-graphql-code-first/package.json (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: nestjs/nest
+  files:
+  - sample/31-graphql-federation-code-first/gateway/package.json
+  description: 'modified: sample/31-graphql-federation-code-first/gateway/package.json
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: nestjs/nest
+  files:
+  - sample/31-graphql-federation-code-first/posts-application/package.json
+  description: 'modified: sample/31-graphql-federation-code-first/posts-application/package.json
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: nestjs/nest
+  files:
+  - sample/31-graphql-federation-code-first/users-application/package.json
+  description: 'modified: sample/31-graphql-federation-code-first/users-application/package.json
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: nestjs/nest
+  files:
+  - sample/32-graphql-federation-schema-first/gateway/package.json
+  description: 'modified: sample/32-graphql-federation-schema-first/gateway/package.json
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: nestjs/nest
+  files:
+  - sample/32-graphql-federation-schema-first/posts-application/package.json
+  description: 'modified: sample/32-graphql-federation-schema-first/posts-application/package.json
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: nestjs/nest
+  files:
+  - sample/32-graphql-federation-schema-first/users-application/package.json
+  description: 'modified: sample/32-graphql-federation-schema-first/users-application/package.json
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: nestjs/nest
+  files:
+  - sample/33-graphql-mercurius/package.json
+  description: 'modified: sample/33-graphql-mercurius/package.json (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 11
+notes: 'Mined from nestjs/nest PR #17457. Trigger heuristic applied. Needs review.'

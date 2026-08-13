@@ -1,0 +1,42 @@
+id: oss-terraform-provider-aws-49412
+title: Add control plane customization support
+family: interface-evolution
+date: '2026-08-12'
+author: madhavvishnubhatta
+source: github-api-mined
+source_repo: hashicorp/terraform-provider-aws
+source_url: https://github.com/hashicorp/terraform-provider-aws/pull/49412
+source_pr: 49412
+difficulty: medium
+trigger:
+  package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/eks/cluster.go
+  intent: Add control plane customization support
+  diff_summary: 'Primary: internal/service/eks/cluster.go (+459/-1)'
+consequences:
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/eks/cluster_test.go
+  description: 'modified: internal/service/eks/cluster_test.go (+270/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - website/docs/r/eks_cluster.html.markdown
+  description: 'modified: website/docs/r/eks_cluster.html.markdown (+57/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from hashicorp/terraform-provider-aws PR #49412. Trigger heuristic applied.
+  Needs review.'

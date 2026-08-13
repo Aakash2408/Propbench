@@ -1,0 +1,161 @@
+id: oss-terraform-provider-aws-49423
+title: 'l/`aws_backup_vault`: New List Resource + RI'
+family: interface-evolution
+date: '2026-08-12'
+author: taruntej-a
+source: github-api-mined
+source_repo: hashicorp/terraform-provider-aws
+source_url: https://github.com/hashicorp/terraform-provider-aws/pull/49423
+source_pr: 49423
+difficulty: medium
+trigger:
+  package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/backup/vault_list.go
+  intent: 'l/`aws_backup_vault`: New List Resource + RI'
+  diff_summary: 'Primary: internal/service/backup/vault_list.go (+124/-0)'
+consequences:
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/backup/service_package_gen.go
+  description: 'modified: internal/service/backup/service_package_gen.go (+15/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/backup/testdata/Vault/basic/main_gen.tf
+  description: 'added: internal/service/backup/testdata/Vault/basic/main_gen.tf (+12/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/backup/testdata/Vault/basic_v6.58.0/main_gen.tf
+  description: 'added: internal/service/backup/testdata/Vault/basic_v6.58.0/main_gen.tf
+    (+22/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/backup/testdata/Vault/list_basic/main.tf
+  description: 'added: internal/service/backup/testdata/Vault/list_basic/main.tf (+20/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/backup/testdata/Vault/list_basic/query.tfquery.hcl
+  description: 'added: internal/service/backup/testdata/Vault/list_basic/query.tfquery.hcl
+    (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/backup/testdata/Vault/list_include_resource/main.tf
+  description: 'added: internal/service/backup/testdata/Vault/list_include_resource/main.tf
+    (+28/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/backup/testdata/Vault/list_include_resource/query.tfquery.hcl
+  description: 'added: internal/service/backup/testdata/Vault/list_include_resource/query.tfquery.hcl
+    (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/backup/testdata/Vault/list_region_override/main.tf
+  description: 'added: internal/service/backup/testdata/Vault/list_region_override/main.tf
+    (+27/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/backup/testdata/Vault/list_region_override/query.tfquery.hcl
+  description: 'added: internal/service/backup/testdata/Vault/list_region_override/query.tfquery.hcl
+    (+10/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/backup/testdata/Vault/region_override/main_gen.tf
+  description: 'added: internal/service/backup/testdata/Vault/region_override/main_gen.tf
+    (+20/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/backup/testdata/tmpl/vault_basic.gtpl
+  description: 'modified: internal/service/backup/testdata/tmpl/vault_basic.gtpl (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/backup/vault.go
+  description: 'modified: internal/service/backup/vault.go (+9/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/backup/vault_identity_gen_test.go
+  description: 'added: internal/service/backup/vault_identity_gen_test.go (+317/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/backup/vault_list_test.go
+  description: 'added: internal/service/backup/vault_list_test.go (+216/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - website/docs/list-resources/backup_vault.html.markdown
+  description: 'added: website/docs/list-resources/backup_vault.html.markdown (+25/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - website/docs/r/backup_vault.html.markdown
+  description: 'modified: website/docs/r/backup_vault.html.markdown (+26/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 17
+notes: 'Mined from hashicorp/terraform-provider-aws PR #49423. Trigger heuristic applied.
+  Needs review.'

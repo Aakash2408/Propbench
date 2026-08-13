@@ -1,0 +1,59 @@
+id: oss-rust-160886
+title: Trim `GoalStalledOn::Certainty`
+family: uncategorized
+date: '2026-08-12'
+author: nnethercote
+source: github-api-mined
+source_repo: rust-lang/rust
+source_url: https://github.com/rust-lang/rust/pull/160886
+source_pr: 160886
+difficulty: medium
+trigger:
+  package: rust-lang/rust
+  files:
+  - compiler/rustc_next_trait_solver/src/solve/eval_ctxt/mod.rs
+  intent: Trim `GoalStalledOn::Certainty`
+  diff_summary: 'Primary: compiler/rustc_next_trait_solver/src/solve/eval_ctxt/mod.rs
+    (+12/-16)'
+consequences:
+- package: rust-lang/rust
+  files:
+  - compiler/rustc_next_trait_solver/src/solve/eval_ctxt/fast_path.rs
+  description: 'modified: compiler/rustc_next_trait_solver/src/solve/eval_ctxt/fast_path.rs
+    (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - compiler/rustc_trait_selection/src/solve/delegate.rs
+  description: 'modified: compiler/rustc_trait_selection/src/solve/delegate.rs (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - compiler/rustc_trait_selection/src/solve/fulfill.rs
+  description: 'modified: compiler/rustc_trait_selection/src/solve/fulfill.rs (+7/-11)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - compiler/rustc_type_ir/src/solve/mod.rs
+  description: 'modified: compiler/rustc_type_ir/src/solve/mod.rs (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from rust-lang/rust PR #160886. Trigger heuristic applied. Needs review.'

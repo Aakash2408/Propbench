@@ -1,0 +1,65 @@
+id: oss-django-21310
+title: 'Fixed #36626 -- geodjango -- Preserved milliseconds when parsing GPX …'
+family: bugfix
+date: '2026-07-31'
+author: brunifrancesco
+source: github-api-mined
+source_repo: django/django
+source_url: https://github.com/django/django/pull/21310
+source_pr: 21310
+difficulty: medium
+trigger:
+  package: django/django
+  files:
+  - django/contrib/gis/gdal/field.py
+  intent: 'Fixed #36626 -- geodjango -- Preserved milliseconds when parsing GPX …'
+  diff_summary: 'Primary: django/contrib/gis/gdal/field.py (+18/-5)'
+consequences:
+- package: django/django
+  files:
+  - django/contrib/gis/gdal/prototypes/ds.py
+  description: 'modified: django/contrib/gis/gdal/prototypes/ds.py (+7/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - docs/ref/contrib/gis/gdal.txt
+  description: 'modified: docs/ref/contrib/gis/gdal.txt (+8/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - docs/releases/6.2.txt
+  description: 'modified: docs/releases/6.2.txt (+9/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - tests/gis_tests/data/has_nulls/has_nulls.geojson
+  description: 'modified: tests/gis_tests/data/has_nulls/has_nulls.geojson (+4/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - tests/gis_tests/gdal_tests/test_ds.py
+  description: 'modified: tests/gis_tests/gdal_tests/test_ds.py (+17/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from django/django PR #21310. Trigger heuristic applied. Needs review.'

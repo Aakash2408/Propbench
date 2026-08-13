@@ -1,0 +1,143 @@
+id: oss-terraform-provider-aws-49241
+title: 'Additional validator: `tfstringvalidator.ExactlyOneOfWhenNotEquals`'
+family: interface-evolution
+date: '2026-08-07'
+author: ewbankkit
+source: github-api-mined
+source_repo: hashicorp/terraform-provider-aws
+source_url: https://github.com/hashicorp/terraform-provider-aws/pull/49241
+source_pr: 49241
+difficulty: medium
+trigger:
+  package: hashicorp/terraform-provider-aws
+  files:
+  - internal/framework/validators/internal/exactly_one_of_when.go
+  intent: 'Additional validator: `tfstringvalidator.ExactlyOneOfWhenNotEquals`'
+  diff_summary: 'Primary: internal/framework/validators/internal/exactly_one_of_when.go
+    (+157/-0)'
+consequences:
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/framework/validators/internal/also_requires_when.go
+  description: 'modified: internal/framework/validators/internal/also_requires_when.go
+    (+33/-22)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/framework/validators/internal/at_most_one_of.go
+  description: 'added: internal/framework/validators/internal/at_most_one_of.go (+83/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/framework/validators/internal/conflicts_with_when.go
+  description: 'modified: internal/framework/validators/internal/conflicts_with_when.go
+    (+8/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/framework/validators/internal/exactly_one_of.go
+  description: 'modified: internal/framework/validators/internal/exactly_one_of.go
+    (+12/-110)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/framework/validators/objectvalidator/at_most_one_of_children.go
+  description: 'modified: internal/framework/validators/objectvalidator/at_most_one_of_children.go
+    (+1/-88)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/framework/validators/objectvalidator/exactly_one_of_children.go
+  description: 'modified: internal/framework/validators/objectvalidator/exactly_one_of_children.go
+    (+1/-95)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/framework/validators/objectvalidator/objectvalidator_test.go
+  description: 'added: internal/framework/validators/objectvalidator/objectvalidator_test.go
+    (+248/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/framework/validators/objectvalidator/warn_at_most_one_of_children.go
+  description: 'modified: internal/framework/validators/objectvalidator/warn_at_most_one_of_children.go
+    (+1/-88)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/framework/validators/objectvalidator/warn_exactly_one_of_children.go
+  description: 'modified: internal/framework/validators/objectvalidator/warn_exactly_one_of_children.go
+    (+1/-95)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/framework/validators/stringvalidator/conflicts_with_when_not_equals.go
+  description: 'modified: internal/framework/validators/stringvalidator/conflicts_with_when_not_equals.go
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/framework/validators/stringvalidator/exactly_one_of_when_not_equals.go
+  description: 'added: internal/framework/validators/stringvalidator/exactly_one_of_when_not_equals.go
+    (+21/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/framework/validators/stringvalidator/exactly_one_of_when_not_equals_test.go
+  description: 'added: internal/framework/validators/stringvalidator/exactly_one_of_when_not_equals_test.go
+    (+133/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/framework/validators/stringvalidator/warn_exactly_one_of.go
+  description: 'removed: internal/framework/validators/stringvalidator/warn_exactly_one_of.go
+    (+0/-16)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 14
+notes: 'Mined from hashicorp/terraform-provider-aws PR #49241. Trigger heuristic applied.
+  Needs review.'

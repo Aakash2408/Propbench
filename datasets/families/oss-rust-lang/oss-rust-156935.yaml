@@ -1,0 +1,57 @@
+id: oss-rust-156935
+title: Introduce a `PinSafePointer` trait that generalizes `PinCoerceUnsized`
+family: uncategorized
+date: '2026-08-09'
+author: Darksonn
+source: github-api-mined
+source_repo: rust-lang/rust
+source_url: https://github.com/rust-lang/rust/pull/156935
+source_pr: 156935
+difficulty: medium
+trigger:
+  package: rust-lang/rust
+  files:
+  - library/core/src/pin.rs
+  intent: Introduce a `PinSafePointer` trait that generalizes `PinCoerceUnsized`
+  diff_summary: 'Primary: library/core/src/pin.rs (+150/-34)'
+consequences:
+- package: rust-lang/rust
+  files:
+  - library/alloc/src/boxed.rs
+  description: 'modified: library/alloc/src/boxed.rs (+21/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - library/alloc/src/rc.rs
+  description: 'modified: library/alloc/src/rc.rs (+10/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - library/alloc/src/sync.rs
+  description: 'modified: library/alloc/src/sync.rs (+11/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - library/core/src/cell.rs
+  description: 'modified: library/core/src/cell.rs (+9/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from rust-lang/rust PR #156935. Trigger heuristic applied. Needs review.'

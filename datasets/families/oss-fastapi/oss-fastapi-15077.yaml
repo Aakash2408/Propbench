@@ -1,0 +1,41 @@
+id: oss-fastapi-15077
+title: 🐛 Fix stream item type lost when using `include_router()`
+family: bugfix
+date: '2026-07-28'
+author: alex-raw
+source: github-api-mined
+source_repo: tiangolo/fastapi
+source_url: https://github.com/fastapi/fastapi/pull/15077
+source_pr: 15077
+difficulty: medium
+trigger:
+  package: tiangolo/fastapi
+  files:
+  - tests/test_sse.py
+  intent: 🐛 Fix stream item type lost when using `include_router()`
+  diff_summary: 'Primary: tests/test_sse.py (+141/-1)'
+consequences:
+- package: tiangolo/fastapi
+  files:
+  - fastapi/routing.py
+  description: 'modified: fastapi/routing.py (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tiangolo/fastapi
+  files:
+  - tests/test_stream_bare_type.py
+  description: 'modified: tests/test_stream_bare_type.py (+33/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from tiangolo/fastapi PR #15077. Trigger heuristic applied. Needs review.'

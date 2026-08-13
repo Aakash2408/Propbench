@@ -1,0 +1,62 @@
+id: oss-rails-58436
+title: Introduce builder method for alter table definitions
+family: interface-evolution
+date: '2026-08-12'
+author: adrianna-chang-shopify
+source: github-api-mined
+source_repo: rails/rails
+source_url: https://github.com/rails/rails/pull/58436
+source_pr: 58436
+difficulty: medium
+trigger:
+  package: rails/rails
+  files:
+  - activerecord/lib/active_record/connection_adapters/abstract/schema_statements.rb
+  intent: Introduce builder method for alter table definitions
+  diff_summary: 'Primary: activerecord/lib/active_record/connection_adapters/abstract/schema_statements.rb
+    (+24/-11)'
+consequences:
+- package: rails/rails
+  files:
+  - activerecord/lib/active_record/connection_adapters/abstract_mysql_adapter.rb
+  description: 'modified: activerecord/lib/active_record/connection_adapters/abstract_mysql_adapter.rb
+    (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/lib/active_record/connection_adapters/postgresql/schema_statements.rb
+  description: 'modified: activerecord/lib/active_record/connection_adapters/postgresql/schema_statements.rb
+    (+6/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/test/cases/adapters/abstract_mysql_adapter/connection_test.rb
+  description: 'modified: activerecord/test/cases/adapters/abstract_mysql_adapter/connection_test.rb
+    (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/test/cases/migration/schema_definitions_test.rb
+  description: 'modified: activerecord/test/cases/migration/schema_definitions_test.rb
+    (+18/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from rails/rails PR #58436. Trigger heuristic applied. Needs review.'

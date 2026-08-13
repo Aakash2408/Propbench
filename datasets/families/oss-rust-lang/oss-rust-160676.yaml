@@ -1,0 +1,49 @@
+id: oss-rust-160676
+title: 'rustc_public: split `def`s out of `ty`'
+family: uncategorized
+date: '2026-08-13'
+author: makai410
+source: github-api-mined
+source_repo: rust-lang/rust
+source_url: https://github.com/rust-lang/rust/pull/160676
+source_pr: 160676
+difficulty: medium
+trigger:
+  package: rust-lang/rust
+  files:
+  - compiler/rustc_public/src/ty.rs
+  intent: 'rustc_public: split `def`s out of `ty`'
+  diff_summary: 'Primary: compiler/rustc_public/src/ty.rs (+4/-1756)'
+consequences:
+- package: rust-lang/rust
+  files:
+  - compiler/rustc_public/src/crate_def.rs
+  description: 'modified: compiler/rustc_public/src/crate_def.rs (+32/-20)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - compiler/rustc_public/src/ty/def.rs
+  description: 'added: compiler/rustc_public/src/ty/def.rs (+316/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - compiler/rustc_public/src/ty/tys.rs
+  description: 'added: compiler/rustc_public/src/ty/tys.rs (+1409/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from rust-lang/rust PR #160676. Trigger heuristic applied. Needs review.'

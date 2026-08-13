@@ -1,0 +1,49 @@
+id: oss-deno-33683
+title: 'perf(ext/fetch): cache lowercased header names per Headers instance'
+family: uncategorized
+date: '2026-06-02'
+author: crowlbot
+source: github-api-mined
+source_repo: denoland/deno
+source_url: https://github.com/denoland/deno/pull/33683
+source_pr: 33683
+difficulty: medium
+trigger:
+  package: denoland/deno
+  files:
+  - ext/fetch/20_headers.js
+  intent: 'perf(ext/fetch): cache lowercased header names per Headers instance'
+  diff_summary: 'Primary: ext/fetch/20_headers.js (+82/-16)'
+consequences:
+- package: denoland/deno
+  files:
+  - ext/fetch/23_response.js
+  description: 'modified: ext/fetch/23_response.js (+6/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - ext/fetch/Cargo.toml
+  description: 'modified: ext/fetch/Cargo.toml (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - ext/fetch/benches/headers_methods.rs
+  description: 'added: ext/fetch/benches/headers_methods.rs (+92/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from denoland/deno PR #33683. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,65 @@
+id: oss-grpc-go-9262
+title: 'opentelemetry: initialize attemptInfo with fields set '
+family: uncategorized
+date: '2026-07-24'
+author: arjan-bal
+source: github-api-mined
+source_repo: grpc/grpc-go
+source_url: https://github.com/grpc/grpc-go/pull/9262
+source_pr: 9262
+difficulty: medium
+trigger:
+  package: grpc/grpc-go
+  files:
+  - stats/opentelemetry/opentelemetry.go
+  intent: 'opentelemetry: initialize attemptInfo with fields set '
+  diff_summary: 'Primary: stats/opentelemetry/opentelemetry.go (+38/-4)'
+consequences:
+- package: grpc/grpc-go
+  files:
+  - stats/opentelemetry/client_metrics.go
+  description: 'modified: stats/opentelemetry/client_metrics.go (+2/-16)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - stats/opentelemetry/client_tracing.go
+  description: 'modified: stats/opentelemetry/client_tracing.go (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - stats/opentelemetry/e2e_test.go
+  description: 'modified: stats/opentelemetry/e2e_test.go (+81/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - stats/opentelemetry/server_metrics.go
+  description: 'modified: stats/opentelemetry/server_metrics.go (+1/-22)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - stats/opentelemetry/server_tracing.go
+  description: 'modified: stats/opentelemetry/server_tracing.go (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from grpc/grpc-go PR #9262. Trigger heuristic applied. Needs review.'

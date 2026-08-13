@@ -1,0 +1,41 @@
+id: oss-django-21709
+title: 'Fixed #37236 -- Allowed altering spatial indexes on RasterField.'
+family: interface-evolution
+date: '2026-07-31'
+author: mbaragiola
+source: github-api-mined
+source_repo: django/django
+source_url: https://github.com/django/django/pull/21709
+source_pr: 21709
+difficulty: medium
+trigger:
+  package: django/django
+  files:
+  - tests/gis_tests/gis_migrations/test_operations.py
+  intent: 'Fixed #37236 -- Allowed altering spatial indexes on RasterField.'
+  diff_summary: 'Primary: tests/gis_tests/gis_migrations/test_operations.py (+39/-0)'
+consequences:
+- package: django/django
+  files:
+  - AUTHORS
+  description: 'modified: AUTHORS (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - django/contrib/gis/db/backends/postgis/schema.py
+  description: 'modified: django/contrib/gis/db/backends/postgis/schema.py (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from django/django PR #21709. Trigger heuristic applied. Needs review.'

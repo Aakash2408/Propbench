@@ -1,0 +1,92 @@
+id: oss-rust-160216
+title: clean up handling of paths in mgca
+family: uncategorized
+date: '2026-08-10'
+author: khyperia
+source: github-api-mined
+source_repo: rust-lang/rust
+source_url: https://github.com/rust-lang/rust/pull/160216
+source_pr: 160216
+difficulty: medium
+trigger:
+  package: rust-lang/rust
+  files:
+  - compiler/rustc_ast_lowering/src/lib.rs
+  intent: clean up handling of paths in mgca
+  diff_summary: 'Primary: compiler/rustc_ast_lowering/src/lib.rs (+101/-85)'
+consequences:
+- package: rust-lang/rust
+  files:
+  - compiler/rustc_ast/src/ast.rs
+  description: 'modified: compiler/rustc_ast/src/ast.rs (+11/-10)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - compiler/rustc_resolve/src/late.rs
+  description: 'modified: compiler/rustc_resolve/src/late.rs (+22/-23)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/const-generics/mgca/direct-const-arg-correct-rib.rs
+  description: 'added: tests/ui/const-generics/mgca/direct-const-arg-correct-rib.rs
+    (+13/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/const-generics/mgca/direct-const-arg-correct-rib.stderr
+  description: 'added: tests/ui/const-generics/mgca/direct-const-arg-correct-rib.stderr
+    (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/const-generics/mgca/direct_const_arg-infer-as-type.rs
+  description: 'added: tests/ui/const-generics/mgca/direct_const_arg-infer-as-type.rs
+    (+12/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/const-generics/mgca/paren.rs
+  description: 'added: tests/ui/const-generics/mgca/paren.rs (+36/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/const-generics/paren.rs
+  description: 'added: tests/ui/const-generics/paren.rs (+28/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/const-generics/paren.stderr
+  description: 'added: tests/ui/const-generics/paren.stderr (+97/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 9
+notes: 'Mined from rust-lang/rust PR #160216. Trigger heuristic applied. Needs review.'

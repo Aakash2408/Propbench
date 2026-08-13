@@ -1,0 +1,61 @@
+id: oss-typeorm-11422
+title: 'fix(tree-entity): closure junction table primary key definition should match
+  parent table'
+family: bugfix
+date: '2025-06-16'
+author: gongAll
+source: github-api-mined
+source_repo: typeorm/typeorm
+source_url: https://github.com/typeorm/typeorm/pull/11422
+source_pr: 11422
+difficulty: medium
+trigger:
+  package: typeorm/typeorm
+  files:
+  - test/functional/tree-tables/closure-table/closure-table-mysql.ts
+  intent: 'fix(tree-entity): closure junction table primary key definition should
+    match parent table'
+  diff_summary: 'Primary: test/functional/tree-tables/closure-table/closure-table-mysql.ts
+    (+135/-0)'
+consequences:
+- package: typeorm/typeorm
+  files:
+  - src/metadata-builder/ClosureJunctionEntityMetadataBuilder.ts
+  description: 'modified: src/metadata-builder/ClosureJunctionEntityMetadataBuilder.ts
+    (+14/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - test/functional/tree-tables/closure-table/entity/Foo1.ts
+  description: 'added: test/functional/tree-tables/closure-table/entity/Foo1.ts (+30/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - test/functional/tree-tables/closure-table/entity/Foo2.ts
+  description: 'added: test/functional/tree-tables/closure-table/entity/Foo2.ts (+44/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - test/functional/tree-tables/closure-table/entity/Foo3.ts
+  description: 'added: test/functional/tree-tables/closure-table/entity/Foo3.ts (+42/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from typeorm/typeorm PR #11422. Trigger heuristic applied. Needs review.'

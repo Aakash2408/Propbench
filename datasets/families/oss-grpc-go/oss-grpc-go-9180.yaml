@@ -1,0 +1,67 @@
+id: oss-grpc-go-9180
+title: 'xds/extproc: adds ClientInterceptor and ClientStream implementation for observability
+  mode for gRFC '
+family: interface-evolution
+date: '2026-07-30'
+author: eshitachandwani
+source: github-api-mined
+source_repo: grpc/grpc-go
+source_url: https://github.com/grpc/grpc-go/pull/9180
+source_pr: 9180
+difficulty: medium
+trigger:
+  package: grpc/grpc-go
+  files:
+  - internal/xds/httpfilter/extproc/ext_proc.go
+  intent: 'xds/extproc: adds ClientInterceptor and ClientStream implementation for
+    observability mode for gRFC A93'
+  diff_summary: 'Primary: internal/xds/httpfilter/extproc/ext_proc.go (+491/-142)'
+consequences:
+- package: grpc/grpc-go
+  files:
+  - internal/testutils/stats/test_metrics_recorder.go
+  description: 'modified: internal/testutils/stats/test_metrics_recorder.go (+9/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/xds/httpfilter/extproc/ext_proc_ext_test.go
+  description: 'modified: internal/xds/httpfilter/extproc/ext_proc_ext_test.go (+1372/-4)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/xds/httpfilter/extproc/metrics.go
+  description: 'added: internal/xds/httpfilter/extproc/metrics.go (+54/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/xds/httpfilter/httpfilter.go
+  description: 'modified: internal/xds/httpfilter/httpfilter.go (+4/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/xds/resolver/xds_resolver.go
+  description: 'modified: internal/xds/resolver/xds_resolver.go (+10/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from grpc/grpc-go PR #9180. Trigger heuristic applied. Needs review.'

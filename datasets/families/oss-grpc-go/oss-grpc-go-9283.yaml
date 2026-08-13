@@ -1,0 +1,43 @@
+id: oss-grpc-go-9283
+title: 'xdsclient: store per-resource error in resource state instead of overall error'
+family: uncategorized
+date: '2026-08-03'
+author: easwars
+source: github-api-mined
+source_repo: grpc/grpc-go
+source_url: https://github.com/grpc/grpc-go/pull/9283
+source_pr: 9283
+difficulty: medium
+trigger:
+  package: grpc/grpc-go
+  files:
+  - internal/xds/clients/xdsclient/authority.go
+  intent: 'xdsclient: store per-resource error in resource state instead of overall
+    error'
+  diff_summary: 'Primary: internal/xds/clients/xdsclient/authority.go (+11/-10)'
+consequences:
+- package: grpc/grpc-go
+  files:
+  - internal/xds/clients/xdsclient/test/ads_stream_ack_nack_test.go
+  description: 'modified: internal/xds/clients/xdsclient/test/ads_stream_ack_nack_test.go
+    (+7/-11)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/xds/clients/xdsclient/test/dump_test.go
+  description: 'modified: internal/xds/clients/xdsclient/test/dump_test.go (+80/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from grpc/grpc-go PR #9283. Trigger heuristic applied. Needs review.'

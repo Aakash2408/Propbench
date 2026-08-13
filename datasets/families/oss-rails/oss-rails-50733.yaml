@@ -1,0 +1,42 @@
+id: oss-rails-50733
+title: Fix single quote escapes on default generated MySQL columns
+family: interface-evolution
+date: '2024-01-17'
+author: yash
+source: github-api-mined
+source_repo: rails/rails
+source_url: https://github.com/rails/rails/pull/50733
+source_pr: 50733
+difficulty: medium
+trigger:
+  package: rails/rails
+  files:
+  - activerecord/lib/active_record/connection_adapters/mysql/schema_statements.rb
+  intent: Fix single quote escapes on default generated MySQL columns
+  diff_summary: 'Primary: activerecord/lib/active_record/connection_adapters/mysql/schema_statements.rb
+    (+1/-0)'
+consequences:
+- package: rails/rails
+  files:
+  - activerecord/test/cases/defaults_test.rb
+  description: 'modified: activerecord/test/cases/defaults_test.rb (+7/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/test/schema/mysql2_specific_schema.rb
+  description: 'modified: activerecord/test/schema/mysql2_specific_schema.rb (+1/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from rails/rails PR #50733. Trigger heuristic applied. Needs review.'

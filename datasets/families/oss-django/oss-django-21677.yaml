@@ -1,0 +1,41 @@
+id: oss-django-21677
+title: 'Fixed #37234 -- Fixed bulk_create() for late-saved related primary keys.'
+family: bugfix
+date: '2026-07-29'
+author: AKSHATSPAR
+source: github-api-mined
+source_repo: django/django
+source_url: https://github.com/django/django/pull/21677
+source_pr: 21677
+difficulty: medium
+trigger:
+  package: django/django
+  files:
+  - tests/bulk_create/tests.py
+  intent: 'Fixed #37234 -- Fixed bulk_create() for late-saved related primary keys.'
+  diff_summary: 'Primary: tests/bulk_create/tests.py (+7/-0)'
+consequences:
+- package: django/django
+  files:
+  - django/db/models/query.py
+  description: 'modified: django/db/models/query.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - docs/releases/6.0.8.txt
+  description: 'modified: docs/releases/6.0.8.txt (+4/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from django/django PR #21677. Trigger heuristic applied. Needs review.'

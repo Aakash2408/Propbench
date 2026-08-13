@@ -1,0 +1,56 @@
+id: oss-spring-boot-51128
+title: Use GracefulHandler rather than StatisticsHandler to coordinate graceful shutdown
+  of Jetty
+family: uncategorized
+date: '2026-07-27'
+author: ghost
+source: github-api-mined
+source_repo: spring-projects/spring-boot
+source_url: https://github.com/spring-projects/spring-boot/pull/51128
+source_pr: 51128
+difficulty: medium
+trigger:
+  package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-jetty/src/main/java/org/springframework/boot/jetty/JettyWebServer.java
+  intent: Use GracefulHandler rather than StatisticsHandler to coordinate graceful
+    shutdown of Jetty
+  diff_summary: 'Primary: module/spring-boot-jetty/src/main/java/org/springframework/boot/jetty/JettyWebServer.java
+    (+13/-10)'
+consequences:
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-jetty/src/main/java/org/springframework/boot/jetty/reactive/JettyReactiveWebServerFactory.java
+  description: 'modified: module/spring-boot-jetty/src/main/java/org/springframework/boot/jetty/reactive/JettyReactiveWebServerFactory.java
+    (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-jetty/src/main/java/org/springframework/boot/jetty/servlet/JettyServletWebServerFactory.java
+  description: 'modified: module/spring-boot-jetty/src/main/java/org/springframework/boot/jetty/servlet/JettyServletWebServerFactory.java
+    (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-jetty/src/test/java/org/springframework/boot/jetty/autoconfigure/reactive/JettyReactiveWebServerAutoConfigurationTests.java
+  description: 'modified: module/spring-boot-jetty/src/test/java/org/springframework/boot/jetty/autoconfigure/reactive/JettyReactiveWebServerAutoConfigurationTests.java
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from spring-projects/spring-boot PR #51128. Trigger heuristic applied.
+  Needs review.'

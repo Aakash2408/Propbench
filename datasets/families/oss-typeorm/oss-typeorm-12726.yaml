@@ -1,0 +1,52 @@
+id: oss-typeorm-12726
+title: 'fix: resolve relation values for join columns inside embedded entities'
+family: bugfix
+date: '2026-07-22'
+author: michaelbromley
+source: github-api-mined
+source_repo: typeorm/typeorm
+source_url: https://github.com/typeorm/typeorm/pull/12726
+source_pr: 12726
+difficulty: medium
+trigger:
+  package: typeorm/typeorm
+  files:
+  - test/functional/embedded/embedded-relation-id-column/entity/User.ts
+  intent: 'fix: resolve relation values for join columns inside embedded entities'
+  diff_summary: 'Primary: test/functional/embedded/embedded-relation-id-column/entity/User.ts
+    (+33/-0)'
+consequences:
+- package: typeorm/typeorm
+  files:
+  - src/metadata/ColumnMetadata.ts
+  description: 'modified: src/metadata/ColumnMetadata.ts (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - test/functional/embedded/embedded-relation-id-column/embedded-relation-id-column.test.ts
+  description: 'added: test/functional/embedded/embedded-relation-id-column/embedded-relation-id-column.test.ts
+    (+110/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - test/functional/embedded/embedded-relation-id-column/entity/Avatar.ts
+  description: 'added: test/functional/embedded/embedded-relation-id-column/entity/Avatar.ts
+    (+10/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from typeorm/typeorm PR #12726. Trigger heuristic applied. Needs review.'

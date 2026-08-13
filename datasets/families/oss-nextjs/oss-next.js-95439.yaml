@@ -1,0 +1,44 @@
+id: oss-next.js-95439
+title: Fix stale data after navigation despite revalidation
+family: bugfix
+date: '2026-08-12'
+author: gaearon
+source: github-api-mined
+source_repo: vercel/next.js
+source_url: https://github.com/vercel/next.js/pull/95439
+source_pr: 95439
+difficulty: medium
+trigger:
+  package: vercel/next.js
+  files:
+  - packages/next/src/client/components/app-router-instance.ts
+  intent: Fix stale data after navigation despite revalidation
+  diff_summary: 'Primary: packages/next/src/client/components/app-router-instance.ts
+    (+16/-5)'
+consequences:
+- package: vercel/next.js
+  files:
+  - test/e2e/app-dir/actions-discarded-navigation-revert/actions-discarded-navigation-revert.test.ts
+  description: 'modified: test/e2e/app-dir/actions-discarded-navigation-revert/actions-discarded-navigation-revert.test.ts
+    (+53/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - test/e2e/app-dir/actions-discarded-navigation-revert/app/controls.tsx
+  description: 'modified: test/e2e/app-dir/actions-discarded-navigation-revert/app/controls.tsx
+    (+12/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from vercel/next.js PR #95439. Trigger heuristic applied. Needs review.'

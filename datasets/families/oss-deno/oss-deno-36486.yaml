@@ -1,0 +1,139 @@
+id: oss-deno-36486
+title: 'fix(permissions): check resolved IP against import deny list'
+family: bugfix
+date: '2026-08-12'
+author: bartlomieju
+source: github-api-mined
+source_repo: denoland/deno
+source_url: https://github.com/denoland/deno/pull/36486
+source_pr: 36486
+difficulty: medium
+trigger:
+  package: denoland/deno
+  files:
+  - runtime/permissions/lib.rs
+  intent: 'fix(permissions): check resolved IP against import deny list'
+  diff_summary: 'Primary: runtime/permissions/lib.rs (+221/-31)'
+consequences:
+- package: denoland/deno
+  files:
+  - cli/args/mod.rs
+  description: 'modified: cli/args/mod.rs (+33/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - cli/factory.rs
+  description: 'modified: cli/factory.rs (+58/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - cli/http_util.rs
+  description: 'modified: cli/http_util.rs (+18/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - cli/tools/x.rs
+  description: 'modified: cli/tools/x.rs (+32/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - ext/fetch/dns.rs
+  description: 'modified: ext/fetch/dns.rs (+31/-10)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - ext/fetch/lib.rs
+  description: 'modified: ext/fetch/lib.rs (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - ext/fetch/tests.rs
+  description: 'modified: ext/fetch/tests.rs (+65/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - ext/kv/remote.rs
+  description: 'modified: ext/kv/remote.rs (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - ext/websocket/lib.rs
+  description: 'modified: ext/websocket/lib.rs (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/specs/permission/deny_import_resolved_ip/__test__.jsonc
+  description: 'added: tests/specs/permission/deny_import_resolved_ip/__test__.jsonc
+    (+68/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/specs/permission/deny_import_resolved_ip/main.ts
+  description: 'added: tests/specs/permission/deny_import_resolved_ip/main.ts (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/specs/permission/deny_import_resolved_ip/redirect.ts
+  description: 'added: tests/specs/permission/deny_import_resolved_ip/redirect.ts
+    (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/specs/x/permission_set_deny_import/__test__.jsonc
+  description: 'added: tests/specs/x/permission_set_deny_import/__test__.jsonc (+20/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/specs/x/permission_set_deny_import/deno.json
+  description: 'added: tests/specs/x/permission_set_deny_import/deno.json (+11/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 15
+notes: 'Mined from denoland/deno PR #36486. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,46 @@
+id: oss-terraform-provider-aws-48703
+title: 'r/aws_bedrockagentcore_gateway_target: add mcp_tool_schema and resource_priority
+  to mcp_server targe'
+family: interface-evolution
+date: '2026-08-05'
+author: jesseturner21
+source: github-api-mined
+source_repo: hashicorp/terraform-provider-aws
+source_url: https://github.com/hashicorp/terraform-provider-aws/pull/48703
+source_pr: 48703
+difficulty: medium
+trigger:
+  package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/bedrockagentcore/gateway_target.go
+  intent: 'r/aws_bedrockagentcore_gateway_target: add mcp_tool_schema and resource_priority
+    to mcp_server target'
+  diff_summary: 'Primary: internal/service/bedrockagentcore/gateway_target.go (+142/-5)'
+consequences:
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/bedrockagentcore/gateway_target_test.go
+  description: 'modified: internal/service/bedrockagentcore/gateway_target_test.go
+    (+183/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - website/docs/r/bedrockagentcore_gateway_target.html.markdown
+  description: 'modified: website/docs/r/bedrockagentcore_gateway_target.html.markdown
+    (+9/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from hashicorp/terraform-provider-aws PR #48703. Trigger heuristic applied.
+  Needs review.'

@@ -1,0 +1,49 @@
+id: oss-grpc-go-9226
+title: 'grpc: move different type RPC handling out of underlying stream implementations'
+family: interface-evolution
+date: '2026-07-22'
+author: eshitachandwani
+source: github-api-mined
+source_repo: grpc/grpc-go
+source_url: https://github.com/grpc/grpc-go/pull/9226
+source_pr: 9226
+difficulty: medium
+trigger:
+  package: grpc/grpc-go
+  files:
+  - stream.go
+  intent: 'grpc: move different type RPC handling out of underlying stream implementations'
+  diff_summary: 'Primary: stream.go (+82/-43)'
+consequences:
+- package: grpc/grpc-go
+  files:
+  - call.go
+  description: 'modified: call.go (+25/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - clientconn.go
+  description: 'modified: clientconn.go (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - stream_test.go
+  description: 'modified: stream_test.go (+90/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from grpc/grpc-go PR #9226. Trigger heuristic applied. Needs review.'

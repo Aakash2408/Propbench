@@ -1,0 +1,58 @@
+id: oss-terraform-provider-aws-49396
+title: 'r/rds_cluster: Fix downgrade error when cluster is auto upgraded'
+family: dependency-evolution
+date: '2026-08-12'
+author: johnsonaj
+source: github-api-mined
+source_repo: hashicorp/terraform-provider-aws
+source_url: https://github.com/hashicorp/terraform-provider-aws/pull/49396
+source_pr: 49396
+difficulty: medium
+trigger:
+  package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rds/cluster.go
+  intent: 'r/rds_cluster: Fix downgrade error when cluster is auto upgraded'
+  diff_summary: 'Primary: internal/service/rds/cluster.go (+18/-4)'
+consequences:
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rds/cluster_test.go
+  description: 'modified: internal/service/rds/cluster_test.go (+123/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rds/exports_test.go
+  description: 'modified: internal/service/rds/exports_test.go (+4/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rds/verify.go
+  description: 'modified: internal/service/rds/verify.go (+11/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rds/verify_test.go
+  description: 'added: internal/service/rds/verify_test.go (+57/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from hashicorp/terraform-provider-aws PR #49396. Trigger heuristic applied.
+  Needs review.'

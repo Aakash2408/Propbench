@@ -1,0 +1,41 @@
+id: oss-gin-4203
+title: 'feat(binding): add support for encoding.UnmarshalText in uri/query binding'
+family: interface-evolution
+date: '2026-01-24'
+author: takanuva15
+source: github-api-mined
+source_repo: gin-gonic/gin
+source_url: https://github.com/gin-gonic/gin/pull/4203
+source_pr: 4203
+difficulty: medium
+trigger:
+  package: gin-gonic/gin
+  files:
+  - docs/doc.md
+  intent: 'feat(binding): add support for encoding.UnmarshalText in uri/query binding'
+  diff_summary: 'Primary: docs/doc.md (+70/-6)'
+consequences:
+- package: gin-gonic/gin
+  files:
+  - binding/form_mapping.go
+  description: 'modified: binding/form_mapping.go (+48/-20)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gin-gonic/gin
+  files:
+  - binding/form_mapping_test.go
+  description: 'modified: binding/form_mapping_test.go (+390/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from gin-gonic/gin PR #4203. Trigger heuristic applied. Needs review.'

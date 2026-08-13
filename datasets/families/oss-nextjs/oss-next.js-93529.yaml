@@ -1,0 +1,78 @@
+id: oss-next.js-93529
+title: Fix debug build paths Pages Router support entries
+family: interface-evolution
+date: '2026-08-12'
+author: Stanzilla
+source: github-api-mined
+source_repo: vercel/next.js
+source_url: https://github.com/vercel/next.js/pull/93529
+source_pr: 93529
+difficulty: medium
+trigger:
+  package: vercel/next.js
+  files:
+  - packages/next/src/build/route-discovery.ts
+  intent: Fix debug build paths Pages Router support entries
+  diff_summary: 'Primary: packages/next/src/build/route-discovery.ts (+33/-1)'
+consequences:
+- package: vercel/next.js
+  files:
+  - crates/next-api/src/project.rs
+  description: 'modified: crates/next-api/src/project.rs (+8/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - test/production/debug-build-path/debug-build-paths.test.ts
+  description: 'modified: test/production/debug-build-path/debug-build-paths.test.ts
+    (+42/-5)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - test/production/debug-build-path/fixtures/default/pages/404.tsx
+  description: 'added: test/production/debug-build-path/fixtures/default/pages/404.tsx
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - test/production/debug-build-path/fixtures/default/pages/500.tsx
+  description: 'added: test/production/debug-build-path/fixtures/default/pages/500.tsx
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - test/production/debug-build-path/fixtures/default/pages/_app.tsx
+  description: 'added: test/production/debug-build-path/fixtures/default/pages/_app.tsx
+    (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - test/production/debug-build-path/fixtures/default/pages/_document.tsx
+  description: 'added: test/production/debug-build-path/fixtures/default/pages/_document.tsx
+    (+13/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from vercel/next.js PR #93529. Trigger heuristic applied. Needs review.'

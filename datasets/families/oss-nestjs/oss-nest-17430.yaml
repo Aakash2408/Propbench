@@ -1,0 +1,68 @@
+id: oss-nest-17430
+title: 'fix(core): share existing singleton providers with lazily loaded modules'
+family: bugfix
+date: '2026-08-11'
+author: shariyerShazan
+source: github-api-mined
+source_repo: nestjs/nest
+source_url: https://github.com/nestjs/nest/pull/17430
+source_pr: 17430
+difficulty: medium
+trigger:
+  package: nestjs/nest
+  files:
+  - packages/core/injector/container.ts
+  intent: 'fix(core): share existing singleton providers with lazily loaded modules'
+  diff_summary: 'Primary: packages/core/injector/container.ts (+2/-2)'
+consequences:
+- package: nestjs/nest
+  files:
+  - packages/core/injector/internal-core-module/internal-core-module-factory.ts
+  description: 'modified: packages/core/injector/internal-core-module/internal-core-module-factory.ts
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: nestjs/nest
+  files:
+  - packages/core/scanner.ts
+  description: 'modified: packages/core/scanner.ts (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: nestjs/nest
+  files:
+  - packages/core/test/injector/lazy-module-loader/lazy-module-loader.spec.ts
+  description: 'modified: packages/core/test/injector/lazy-module-loader/lazy-module-loader.spec.ts
+    (+108/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: nestjs/nest
+  files:
+  - packages/microservices/microservices-module.ts
+  description: 'modified: packages/microservices/microservices-module.ts (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: nestjs/nest
+  files:
+  - packages/microservices/test/client/client-kafka.spec.ts
+  description: 'modified: packages/microservices/test/client/client-kafka.spec.ts
+    (+1/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from nestjs/nest PR #17430. Trigger heuristic applied. Needs review.'

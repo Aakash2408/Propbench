@@ -1,0 +1,81 @@
+id: oss-spring-boot-50909
+title: Inject Customizers as ObjectProvider to keep consistency
+family: uncategorized
+date: '2026-07-14'
+author: quaff
+source: github-api-mined
+source_repo: spring-projects/spring-boot
+source_url: https://github.com/spring-projects/spring-boot/pull/50909
+source_pr: 50909
+difficulty: medium
+trigger:
+  package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-jackson/src/main/java/org/springframework/boot/jackson/autoconfigure/JacksonAutoConfiguration.java
+  intent: Inject Customizers as ObjectProvider to keep consistency
+  diff_summary: 'Primary: module/spring-boot-jackson/src/main/java/org/springframework/boot/jackson/autoconfigure/JacksonAutoConfiguration.java
+    (+6/-24)'
+consequences:
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-gson/src/main/java/org/springframework/boot/gson/autoconfigure/GsonAutoConfiguration.java
+  description: 'modified: module/spring-boot-gson/src/main/java/org/springframework/boot/gson/autoconfigure/GsonAutoConfiguration.java
+    (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-jackson2/src/main/java/org/springframework/boot/jackson2/autoconfigure/Jackson2AutoConfiguration.java
+  description: 'modified: module/spring-boot-jackson2/src/main/java/org/springframework/boot/jackson2/autoconfigure/Jackson2AutoConfiguration.java
+    (+3/-9)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-kotlinx-serialization-json/src/main/java/org/springframework/boot/kotlinx/serialization/json/autoconfigure/KotlinxSerializationJsonAutoConfiguration.java
+  description: 'modified: module/spring-boot-kotlinx-serialization-json/src/main/java/org/springframework/boot/kotlinx/serialization/json/autoconfigure/KotlinxSerializationJsonAutoConfiguration.java
+    (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-micrometer-tracing-brave/src/main/java/org/springframework/boot/micrometer/tracing/brave/autoconfigure/BraveAutoConfiguration.java
+  description: 'modified: module/spring-boot-micrometer-tracing-brave/src/main/java/org/springframework/boot/micrometer/tracing/brave/autoconfigure/BraveAutoConfiguration.java
+    (+4/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-resttestclient/src/main/java/org/springframework/boot/resttestclient/autoconfigure/RestTestClientTestAutoConfiguration.java
+  description: 'modified: module/spring-boot-resttestclient/src/main/java/org/springframework/boot/resttestclient/autoconfigure/RestTestClientTestAutoConfiguration.java
+    (+2/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-webtestclient/src/main/java/org/springframework/boot/webtestclient/autoconfigure/WebTestClientAutoConfiguration.java
+  description: 'modified: module/spring-boot-webtestclient/src/main/java/org/springframework/boot/webtestclient/autoconfigure/WebTestClientAutoConfiguration.java
+    (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from spring-projects/spring-boot PR #50909. Trigger heuristic applied.
+  Needs review.'

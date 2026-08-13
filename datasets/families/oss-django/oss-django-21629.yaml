@@ -1,0 +1,51 @@
+id: oss-django-21629
+title: 'Fixed #27734 -- Made parallel test workers reuse database clones of exited
+  workers.'
+family: bugfix
+date: '2026-07-31'
+author: ahmed5145
+source: github-api-mined
+source_repo: django/django
+source_url: https://github.com/django/django/pull/21629
+source_pr: 21629
+difficulty: medium
+trigger:
+  package: django/django
+  files:
+  - tests/test_runner/test_parallel.py
+  intent: 'Fixed #27734 -- Made parallel test workers reuse database clones of exited
+    workers.'
+  diff_summary: 'Primary: tests/test_runner/test_parallel.py (+63/-1)'
+consequences:
+- package: django/django
+  files:
+  - AUTHORS
+  description: 'modified: AUTHORS (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - django/test/runner.py
+  description: 'modified: django/test/runner.py (+67/-12)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - tests/test_runner/tests.py
+  description: 'modified: tests/test_runner/tests.py (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from django/django PR #21629. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,61 @@
+id: oss-rust-160605
+title: Three new-solver speedups
+family: interface-evolution
+date: '2026-08-12'
+author: nnethercote
+source: github-api-mined
+source_repo: rust-lang/rust
+source_url: https://github.com/rust-lang/rust/pull/160605
+source_pr: 160605
+difficulty: medium
+trigger:
+  package: rust-lang/rust
+  files:
+  - compiler/rustc_next_trait_solver/src/solve/assembly/mod.rs
+  intent: Three new-solver speedups
+  diff_summary: 'Primary: compiler/rustc_next_trait_solver/src/solve/assembly/mod.rs
+    (+42/-25)'
+consequences:
+- package: rust-lang/rust
+  files:
+  - compiler/rustc_next_trait_solver/src/solve/effect_goals.rs
+  description: 'modified: compiler/rustc_next_trait_solver/src/solve/effect_goals.rs
+    (+3/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - compiler/rustc_next_trait_solver/src/solve/normalizes_to.rs
+  description: 'modified: compiler/rustc_next_trait_solver/src/solve/normalizes_to.rs
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - compiler/rustc_next_trait_solver/src/solve/trait_goals.rs
+  description: 'modified: compiler/rustc_next_trait_solver/src/solve/trait_goals.rs
+    (+3/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - compiler/rustc_type_ir/src/predicate.rs
+  description: 'modified: compiler/rustc_type_ir/src/predicate.rs (+7/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from rust-lang/rust PR #160605. Trigger heuristic applied. Needs review.'

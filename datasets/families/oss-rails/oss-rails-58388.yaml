@@ -1,0 +1,50 @@
+id: oss-rails-58388
+title: Cleanup duplicate/unneeded requires
+family: refactor
+date: '2026-08-11'
+author: skipkayhil
+source: github-api-mined
+source_repo: rails/rails
+source_url: https://github.com/rails/rails/pull/58388
+source_pr: 58388
+difficulty: medium
+trigger:
+  package: rails/rails
+  files:
+  - actionpack/lib/action_controller/metal/renderers.rb
+  intent: Cleanup duplicate/unneeded requires
+  diff_summary: 'Primary: actionpack/lib/action_controller/metal/renderers.rb (+0/-2)'
+consequences:
+- package: rails/rails
+  files:
+  - actionpack/lib/action_controller/metal.rb
+  description: 'modified: actionpack/lib/action_controller/metal.rb (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - actionpack/lib/action_dispatch/http/mime_type.rb
+  description: 'modified: actionpack/lib/action_dispatch/http/mime_type.rb (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - actionview/lib/action_view/helpers/navigation_helper.rb
+  description: 'modified: actionview/lib/action_view/helpers/navigation_helper.rb
+    (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from rails/rails PR #58388. Trigger heuristic applied. Needs review.'

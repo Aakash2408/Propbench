@@ -1,0 +1,51 @@
+id: oss-grpc-go-9140
+title: 'xds/resolver: ensure OnCommitted is invoked on early stream creation failure
+  to prune unreferenced c'
+family: bugfix
+date: '2026-07-28'
+author: Pranjali-2501
+source: github-api-mined
+source_repo: grpc/grpc-go
+source_url: https://github.com/grpc/grpc-go/pull/9140
+source_pr: 9140
+difficulty: medium
+trigger:
+  package: grpc/grpc-go
+  files:
+  - internal/xds/resolver/serviceconfig.go
+  intent: 'xds/resolver: ensure OnCommitted is invoked on early stream creation failure
+    to prune unreferenced clusters.'
+  diff_summary: 'Primary: internal/xds/resolver/serviceconfig.go (+29/-31)'
+consequences:
+- package: grpc/grpc-go
+  files:
+  - internal/xds/resolver/xds_resolver_test.go
+  description: 'modified: internal/xds/resolver/xds_resolver_test.go (+0/-122)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - stream.go
+  description: 'modified: stream.go (+15/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - test/xds/xds_resolver_e2e_test.go
+  description: 'added: test/xds/xds_resolver_e2e_test.go (+505/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from grpc/grpc-go PR #9140. Trigger heuristic applied. Needs review.'

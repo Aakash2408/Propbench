@@ -1,0 +1,65 @@
+id: oss-deno-36551
+title: 'fix(ext/napi): track pending finalizers by identity'
+family: bugfix
+date: '2026-08-12'
+author: bartlomieju
+source: github-api-mined
+source_repo: denoland/deno
+source_url: https://github.com/denoland/deno/pull/36551
+source_pr: 36551
+difficulty: medium
+trigger:
+  package: denoland/deno
+  files:
+  - tests/napi/src/finalizer.rs
+  intent: 'fix(ext/napi): track pending finalizers by identity'
+  diff_summary: 'Primary: tests/napi/src/finalizer.rs (+93/-0)'
+consequences:
+- package: denoland/deno
+  files:
+  - ext/napi/js_native_api.rs
+  description: 'modified: ext/napi/js_native_api.rs (+43/-32)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - ext/napi/lib.rs
+  description: 'modified: ext/napi/lib.rs (+57/-18)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - runtime/worker.rs
+  description: 'modified: runtime/worker.rs (+1/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/integration/napi_tests.rs
+  description: 'modified: tests/integration/napi_tests.rs (+39/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/napi/finalizer_shared_data.js
+  description: 'added: tests/napi/finalizer_shared_data.js (+44/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from denoland/deno PR #36551. Trigger heuristic applied. Needs review.'

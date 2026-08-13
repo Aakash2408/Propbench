@@ -1,0 +1,165 @@
+id: oss-terraform-provider-aws-49418
+title: 'l/`aws_db_parameter_group` : New List Resource + RI'
+family: interface-evolution
+date: '2026-08-12'
+author: taruntej-a
+source: github-api-mined
+source_repo: hashicorp/terraform-provider-aws
+source_url: https://github.com/hashicorp/terraform-provider-aws/pull/49418
+source_pr: 49418
+difficulty: medium
+trigger:
+  package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rds/parameter_group_list.go
+  intent: 'l/`aws_db_parameter_group` : New List Resource + RI'
+  diff_summary: 'Primary: internal/service/rds/parameter_group_list.go (+109/-0)'
+consequences:
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rds/parameter_group.go
+  description: 'modified: internal/service/rds/parameter_group.go (+21/-11)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rds/parameter_group_identity_gen_test.go
+  description: 'added: internal/service/rds/parameter_group_identity_gen_test.go (+316/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rds/parameter_group_list_test.go
+  description: 'added: internal/service/rds/parameter_group_list_test.go (+219/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rds/service_package_gen.go
+  description: 'modified: internal/service/rds/service_package_gen.go (+15/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rds/testdata/ParameterGroup/basic/main_gen.tf
+  description: 'added: internal/service/rds/testdata/ParameterGroup/basic/main_gen.tf
+    (+13/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rds/testdata/ParameterGroup/basic_v6.59.0/main_gen.tf
+  description: 'added: internal/service/rds/testdata/ParameterGroup/basic_v6.59.0/main_gen.tf
+    (+23/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rds/testdata/ParameterGroup/list_basic/main.tf
+  description: 'added: internal/service/rds/testdata/ParameterGroup/list_basic/main.tf
+    (+21/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rds/testdata/ParameterGroup/list_basic/query.tfquery.hcl
+  description: 'added: internal/service/rds/testdata/ParameterGroup/list_basic/query.tfquery.hcl
+    (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rds/testdata/ParameterGroup/list_include_resource/main.tf
+  description: 'added: internal/service/rds/testdata/ParameterGroup/list_include_resource/main.tf
+    (+34/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rds/testdata/ParameterGroup/list_include_resource/query.tfquery.hcl
+  description: 'added: internal/service/rds/testdata/ParameterGroup/list_include_resource/query.tfquery.hcl
+    (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rds/testdata/ParameterGroup/list_region_override/main.tf
+  description: 'added: internal/service/rds/testdata/ParameterGroup/list_region_override/main.tf
+    (+28/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rds/testdata/ParameterGroup/list_region_override/query.tfquery.hcl
+  description: 'added: internal/service/rds/testdata/ParameterGroup/list_region_override/query.tfquery.hcl
+    (+10/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rds/testdata/ParameterGroup/region_override/main_gen.tf
+  description: 'added: internal/service/rds/testdata/ParameterGroup/region_override/main_gen.tf
+    (+21/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/rds/testdata/tmpl/parameter_group_basic.gtpl
+  description: 'added: internal/service/rds/testdata/tmpl/parameter_group_basic.gtpl
+    (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - website/docs/list-resources/db_parameter_group.html.markdown
+  description: 'added: website/docs/list-resources/db_parameter_group.html.markdown
+    (+25/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - website/docs/r/db_parameter_group.html.markdown
+  description: 'modified: website/docs/r/db_parameter_group.html.markdown (+28/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 17
+notes: 'Mined from hashicorp/terraform-provider-aws PR #49418. Trigger heuristic applied.
+  Needs review.'

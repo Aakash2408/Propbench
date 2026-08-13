@@ -1,0 +1,41 @@
+id: oss-deno-36439
+title: 'fix(fs): use a private FsFile constructor token'
+family: bugfix
+date: '2026-08-10'
+author: nathanwhit
+source: github-api-mined
+source_repo: denoland/deno
+source_url: https://github.com/denoland/deno/pull/36439
+source_pr: 36439
+difficulty: medium
+trigger:
+  package: denoland/deno
+  files:
+  - ext/fs/30_fs.js
+  intent: 'fix(fs): use a private FsFile constructor token'
+  diff_summary: 'Primary: ext/fs/30_fs.js (+7/-4)'
+consequences:
+- package: denoland/deno
+  files:
+  - ext/process/40_process.js
+  description: 'modified: ext/process/40_process.js (+6/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/unit/files_test.ts
+  description: 'modified: tests/unit/files_test.ts (+13/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from denoland/deno PR #36439. Trigger heuristic applied. Needs review.'

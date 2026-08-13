@@ -1,0 +1,42 @@
+id: oss-rails-58358
+title: Fix incorrect documentation
+family: bugfix
+date: '2026-08-09'
+author: '55728'
+source: github-api-mined
+source_repo: rails/rails
+source_url: https://github.com/rails/rails/pull/58358
+source_pr: 58358
+difficulty: medium
+trigger:
+  package: rails/rails
+  files:
+  - guides/source/association_basics.md
+  intent: Fix incorrect documentation
+  diff_summary: 'Primary: guides/source/association_basics.md (+6/-6)'
+consequences:
+- package: rails/rails
+  files:
+  - activerecord/lib/active_record/connection_handling.rb
+  description: 'modified: activerecord/lib/active_record/connection_handling.rb (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/lib/active_record/relation/query_methods.rb
+  description: 'modified: activerecord/lib/active_record/relation/query_methods.rb
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from rails/rails PR #58358. Trigger heuristic applied. Needs review.'

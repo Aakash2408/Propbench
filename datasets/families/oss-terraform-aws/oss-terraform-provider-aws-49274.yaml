@@ -1,0 +1,68 @@
+id: oss-terraform-provider-aws-49274
+title: 'resource/aws_ec2_client_vpn_route: Make target_vpc_subnet_id optional for
+  Transit Gateway-based endp'
+family: uncategorized
+date: '2026-08-10'
+author: tb102122
+source: github-api-mined
+source_repo: hashicorp/terraform-provider-aws
+source_url: https://github.com/hashicorp/terraform-provider-aws/pull/49274
+source_pr: 49274
+difficulty: medium
+trigger:
+  package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/ec2/vpnclient_route.go
+  intent: 'resource/aws_ec2_client_vpn_route: Make target_vpc_subnet_id optional for
+    Transit Gateway-based endpoints'
+  diff_summary: 'Primary: internal/service/ec2/vpnclient_route.go (+17/-6)'
+consequences:
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/acctest/knownvalue/string_not_empty.go
+  description: 'added: internal/acctest/knownvalue/string_not_empty.go (+19/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/ec2/find.go
+  description: 'modified: internal/service/ec2/find.go (+8/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/ec2/vpnclient_route_test.go
+  description: 'modified: internal/service/ec2/vpnclient_route_test.go (+78/-8)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/ec2/vpnclient_test.go
+  description: 'modified: internal/service/ec2/vpnclient_test.go (+1/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - website/docs/r/ec2_client_vpn_route.html.markdown
+  description: 'modified: website/docs/r/ec2_client_vpn_route.html.markdown (+4/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from hashicorp/terraform-provider-aws PR #49274. Trigger heuristic applied.
+  Needs review.'

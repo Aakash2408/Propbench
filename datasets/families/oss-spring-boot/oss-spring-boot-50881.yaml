@@ -1,0 +1,45 @@
+id: oss-spring-boot-50881
+title: Remove unnecessary `@Nullable`s from local array variable declarations
+family: refactor
+date: '2026-06-29'
+author: quaff
+source: github-api-mined
+source_repo: spring-projects/spring-boot
+source_url: https://github.com/spring-projects/spring-boot/pull/50881
+source_pr: 50881
+difficulty: medium
+trigger:
+  package: spring-projects/spring-boot
+  files:
+  - core/spring-boot/src/main/java/org/springframework/boot/context/properties/bind/ValueObjectBinder.java
+  intent: Remove unnecessary `@Nullable`s from local array variable declarations
+  diff_summary: 'Primary: core/spring-boot/src/main/java/org/springframework/boot/context/properties/bind/ValueObjectBinder.java
+    (+2/-2)'
+consequences:
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-actuator/src/main/java/org/springframework/boot/actuate/context/properties/Jackson2BeanSerializer.java
+  description: 'modified: module/spring-boot-actuator/src/main/java/org/springframework/boot/actuate/context/properties/Jackson2BeanSerializer.java
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-actuator/src/main/java/org/springframework/boot/actuate/context/properties/JacksonBeanSerializer.java
+  description: 'modified: module/spring-boot-actuator/src/main/java/org/springframework/boot/actuate/context/properties/JacksonBeanSerializer.java
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from spring-projects/spring-boot PR #50881. Trigger heuristic applied.
+  Needs review.'

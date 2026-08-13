@@ -1,0 +1,49 @@
+id: oss-rails-58420
+title: Refactor `MiddlewareStack::Middleware` off `Hash.ruby2_keywords_hash`
+family: refactor
+date: '2026-08-09'
+author: kamipo
+source: github-api-mined
+source_repo: rails/rails
+source_url: https://github.com/rails/rails/pull/58420
+source_pr: 58420
+difficulty: medium
+trigger:
+  package: rails/rails
+  files:
+  - actionpack/lib/action_dispatch/middleware/stack.rb
+  intent: Refactor `MiddlewareStack::Middleware` off `Hash.ruby2_keywords_hash`
+  diff_summary: 'Primary: actionpack/lib/action_dispatch/middleware/stack.rb (+11/-11)'
+consequences:
+- package: rails/rails
+  files:
+  - actionpack/lib/action_controller/metal.rb
+  description: 'modified: actionpack/lib/action_controller/metal.rb (+3/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - actionpack/test/dispatch/middleware_stack_test.rb
+  description: 'modified: actionpack/test/dispatch/middleware_stack_test.rb (+7/-4)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - railties/test/commands/middleware_test.rb
+  description: 'modified: railties/test/commands/middleware_test.rb (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from rails/rails PR #58420. Trigger heuristic applied. Needs review.'

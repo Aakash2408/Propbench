@@ -1,0 +1,89 @@
+id: oss-deno-36528
+title: 'refactor(http): remove unused raw upgrade internals'
+family: dependency-evolution
+date: '2026-08-11'
+author: nathanwhit
+source: github-api-mined
+source_repo: denoland/deno
+source_url: https://github.com/denoland/deno/pull/36528
+source_pr: 36528
+difficulty: medium
+trigger:
+  package: denoland/deno
+  files:
+  - ext/http/http_next.rs
+  intent: 'refactor(http): remove unused raw upgrade internals'
+  diff_summary: 'Primary: ext/http/http_next.rs (+0/-375)'
+consequences:
+- package: denoland/deno
+  files:
+  - Cargo.lock
+  description: 'modified: Cargo.lock (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - ext/http/00_serve.ts
+  description: 'modified: ext/http/00_serve.ts (+0/-48)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - ext/http/Cargo.toml
+  description: 'modified: ext/http/Cargo.toml (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - ext/http/lib.rs
+  description: 'modified: ext/http/lib.rs (+0/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - ext/net/01_net.js
+  description: 'modified: ext/net/01_net.js (+0/-15)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - runtime/js/90_deno_ns.js
+  description: 'modified: runtime/js/90_deno_ns.js (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/unit/internals_test.ts
+  description: 'modified: tests/unit/internals_test.ts (+5/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/unit/serve_test.ts
+  description: 'modified: tests/unit/serve_test.ts (+0/-92)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 9
+notes: 'Mined from denoland/deno PR #36528. Trigger heuristic applied. Needs review.'

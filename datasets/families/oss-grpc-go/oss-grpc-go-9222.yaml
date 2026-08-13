@@ -1,0 +1,42 @@
+id: oss-grpc-go-9222
+title: 'security/advancedtls: add SkipServerAuthEKU option to bypass server EKU verification'
+family: interface-evolution
+date: '2026-07-15'
+author: gh4683
+source: github-api-mined
+source_repo: grpc/grpc-go
+source_url: https://github.com/grpc/grpc-go/pull/9222
+source_pr: 9222
+difficulty: medium
+trigger:
+  package: grpc/grpc-go
+  files:
+  - security/advancedtls/advancedtls.go
+  intent: 'security/advancedtls: add SkipServerAuthEKU option to bypass server EKU
+    verification'
+  diff_summary: 'Primary: security/advancedtls/advancedtls.go (+29/-3)'
+consequences:
+- package: grpc/grpc-go
+  files:
+  - security/advancedtls/advancedtls_test.go
+  description: 'modified: security/advancedtls/advancedtls_test.go (+95/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - security/advancedtls/certificate_utils_test.go
+  description: 'added: security/advancedtls/certificate_utils_test.go (+81/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from grpc/grpc-go PR #9222. Trigger heuristic applied. Needs review.'

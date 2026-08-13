@@ -1,0 +1,52 @@
+id: oss-terraform-provider-aws-49340
+title: 'r/aws_mq_broker: Fix RabbitMQ broker read errors where DescribeSharedResources
+  is unavailable'
+family: bugfix
+date: '2026-08-07'
+author: osibanda
+source: github-api-mined
+source_repo: hashicorp/terraform-provider-aws
+source_url: https://github.com/hashicorp/terraform-provider-aws/pull/49340
+source_pr: 49340
+difficulty: medium
+trigger:
+  package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/mq/broker.go
+  intent: 'r/aws_mq_broker: Fix RabbitMQ broker read errors where DescribeSharedResources
+    is unavailable'
+  diff_summary: 'Primary: internal/service/mq/broker.go (+23/-6)'
+consequences:
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/mq/broker_data_source.go
+  description: 'modified: internal/service/mq/broker_data_source.go (+10/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/mq/broker_test.go
+  description: 'modified: internal/service/mq/broker_test.go (+34/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/mq/exports_test.go
+  description: 'modified: internal/service/mq/exports_test.go (+13/-11)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from hashicorp/terraform-provider-aws PR #49340. Trigger heuristic applied.
+  Needs review.'

@@ -1,0 +1,108 @@
+id: oss-rails-58461
+title: Allow ffmpeg and ffprobe input arguments to be configured
+family: uncategorized
+date: '2026-08-12'
+author: flavorjones
+source: github-api-mined
+source_repo: rails/rails
+source_url: https://github.com/rails/rails/pull/58461
+source_pr: 58461
+difficulty: medium
+trigger:
+  package: rails/rails
+  files:
+  - guides/source/configuring.md
+  intent: Allow ffmpeg and ffprobe input arguments to be configured
+  diff_summary: 'Primary: guides/source/configuring.md (+23/-0)'
+consequences:
+- package: rails/rails
+  files:
+  - activestorage/lib/active_storage.rb
+  description: 'modified: activestorage/lib/active_storage.rb (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activestorage/lib/active_storage/analyzer/audio_analyzer.rb
+  description: 'modified: activestorage/lib/active_storage/analyzer/audio_analyzer.rb
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activestorage/lib/active_storage/analyzer/video_analyzer.rb
+  description: 'modified: activestorage/lib/active_storage/analyzer/video_analyzer.rb
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activestorage/lib/active_storage/engine.rb
+  description: 'modified: activestorage/lib/active_storage/engine.rb (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activestorage/lib/active_storage/previewer/video_previewer.rb
+  description: 'modified: activestorage/lib/active_storage/previewer/video_previewer.rb
+    (+5/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activestorage/test/analyzer/audio_analyzer_test.rb
+  description: 'modified: activestorage/test/analyzer/audio_analyzer_test.rb (+11/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activestorage/test/analyzer/video_analyzer_test.rb
+  description: 'modified: activestorage/test/analyzer/video_analyzer_test.rb (+12/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activestorage/test/previewer/video_previewer_test.rb
+  description: 'modified: activestorage/test/previewer/video_previewer_test.rb (+10/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - guides/source/security.md
+  description: 'modified: guides/source/security.md (+17/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - railties/test/application/configuration_test.rb
+  description: 'modified: railties/test/application/configuration_test.rb (+28/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 11
+notes: 'Mined from rails/rails PR #58461. Trigger heuristic applied. Needs review.'

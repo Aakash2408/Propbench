@@ -1,0 +1,62 @@
+id: oss-next.js-97130
+title: '[turbopack] Bail CJS tree-shaking on `var x = module.exports = {}`'
+family: uncategorized
+date: '2026-08-11'
+author: sampoder
+source: github-api-mined
+source_repo: vercel/next.js
+source_url: https://github.com/vercel/next.js/pull/97130
+source_pr: 97130
+difficulty: medium
+trigger:
+  package: vercel/next.js
+  files:
+  - turbopack/crates/turbopack-ecmascript/src/analyzer/graph/visitor.rs
+  intent: '[turbopack] Bail CJS tree-shaking on `var x = module.exports = {}`'
+  diff_summary: 'Primary: turbopack/crates/turbopack-ecmascript/src/analyzer/graph/visitor.rs
+    (+26/-6)'
+consequences:
+- package: vercel/next.js
+  files:
+  - turbopack/crates/turbopack-tests/tests/execution/webpack/cjs-tree-shaking/bailouts/input/alias-exports-define.js
+  description: 'added: turbopack/crates/turbopack-tests/tests/execution/webpack/cjs-tree-shaking/bailouts/input/alias-exports-define.js
+    (+9/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - turbopack/crates/turbopack-tests/tests/execution/webpack/cjs-tree-shaking/bailouts/input/alias-exports-object-chain.js
+  description: 'added: turbopack/crates/turbopack-tests/tests/execution/webpack/cjs-tree-shaking/bailouts/input/alias-exports-object-chain.js
+    (+10/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - turbopack/crates/turbopack-tests/tests/execution/webpack/cjs-tree-shaking/bailouts/input/alias-exports-object.js
+  description: 'added: turbopack/crates/turbopack-tests/tests/execution/webpack/cjs-tree-shaking/bailouts/input/alias-exports-object.js
+    (+8/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - turbopack/crates/turbopack-tests/tests/execution/webpack/cjs-tree-shaking/bailouts/input/index.js
+  description: 'modified: turbopack/crates/turbopack-tests/tests/execution/webpack/cjs-tree-shaking/bailouts/input/index.js
+    (+12/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from vercel/next.js PR #97130. Trigger heuristic applied. Needs review.'

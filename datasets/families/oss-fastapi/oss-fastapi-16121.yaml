@@ -1,0 +1,105 @@
+id: oss-fastapi-16121
+title: ⬆ Bump the python-packages group with 12 updates
+family: dependency-evolution
+date: '2026-08-05'
+author: dependabot[bot]
+source: github-api-mined
+source_repo: tiangolo/fastapi
+source_url: https://github.com/fastapi/fastapi/pull/16121
+source_pr: 16121
+difficulty: medium
+trigger:
+  package: tiangolo/fastapi
+  files:
+  - uv.lock
+  intent: ⬆ Bump the python-packages group with 12 updates
+  diff_summary: 'Primary: uv.lock (+284/-280)'
+consequences:
+- package: tiangolo/fastapi
+  files:
+  - fastapi/security/api_key.py
+  description: 'modified: fastapi/security/api_key.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tiangolo/fastapi
+  files:
+  - scripts/deploy_docs_status.py
+  description: 'modified: scripts/deploy_docs_status.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tiangolo/fastapi
+  files:
+  - scripts/label_approved.py
+  description: 'modified: scripts/label_approved.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tiangolo/fastapi
+  files:
+  - scripts/notify_translations.py
+  description: 'modified: scripts/notify_translations.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tiangolo/fastapi
+  files:
+  - scripts/sponsors.py
+  description: 'modified: scripts/sponsors.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tiangolo/fastapi
+  files:
+  - scripts/topic_repos.py
+  description: 'modified: scripts/topic_repos.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tiangolo/fastapi
+  files:
+  - tests/test_jsonable_encoder.py
+  description: 'modified: tests/test_jsonable_encoder.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tiangolo/fastapi
+  files:
+  - tests/test_serialize_response_model.py
+  description: 'modified: tests/test_serialize_response_model.py (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tiangolo/fastapi
+  files:
+  - tests/test_skip_defaults.py
+  description: 'modified: tests/test_skip_defaults.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tiangolo/fastapi
+  files:
+  - tests/test_sse.py
+  description: 'modified: tests/test_sse.py (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 11
+notes: 'Mined from tiangolo/fastapi PR #16121. Trigger heuristic applied. Needs review.'

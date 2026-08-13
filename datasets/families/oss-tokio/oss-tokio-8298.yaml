@@ -1,0 +1,81 @@
+id: oss-tokio-8298
+title: 'rt: remove unstable cfgs leftovers after local runtime stabilization'
+family: refactor
+date: '2026-07-20'
+author: mattiapitossi
+source: github-api-mined
+source_repo: tokio-rs/tokio
+source_url: https://github.com/tokio-rs/tokio/pull/8298
+source_pr: 8298
+difficulty: medium
+trigger:
+  package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/builder.rs
+  intent: 'rt: remove unstable cfgs leftovers after local runtime stabilization'
+  diff_summary: 'Primary: tokio/src/runtime/builder.rs (+1/-2)'
+consequences:
+- package: tokio-rs/tokio
+  files:
+  - tests-integration/tests/macros_main.rs
+  description: 'modified: tests-integration/tests/macros_main.rs (+0/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio-util/tests/task_join_map.rs
+  description: 'modified: tokio-util/tests/task_join_map.rs (+0/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio-util/tests/task_tracker.rs
+  description: 'modified: tokio-util/tests/task_tracker.rs (+0/-4)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/task/local.rs
+  description: 'modified: tokio/src/task/local.rs (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/tests/async_send_sync.rs
+  description: 'modified: tokio/tests/async_send_sync.rs (+1/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/tests/rt_local.rs
+  description: 'modified: tokio/tests/rt_local.rs (+11/-11)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/tests/task_join_set.rs
+  description: 'modified: tokio/tests/task_join_set.rs (+0/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 8
+notes: 'Mined from tokio-rs/tokio PR #8298. Trigger heuristic applied. Needs review.'

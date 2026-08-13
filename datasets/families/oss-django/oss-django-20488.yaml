@@ -1,0 +1,65 @@
+id: oss-django-20488
+title: 'Fixed #27752 -- Fixed ordering by Model.__str__ in the admin.'
+family: bugfix
+date: '2026-07-29'
+author: VIZZARD-X
+source: github-api-mined
+source_repo: django/django
+source_url: https://github.com/django/django/pull/20488
+source_pr: 20488
+difficulty: medium
+trigger:
+  package: django/django
+  files:
+  - tests/admin_views/tests.py
+  intent: 'Fixed #27752 -- Fixed ordering by Model.__str__ in the admin.'
+  diff_summary: 'Primary: tests/admin_views/tests.py (+15/-0)'
+consequences:
+- package: django/django
+  files:
+  - django/contrib/admin/utils.py
+  description: 'modified: django/contrib/admin/utils.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - django/contrib/admin/views/main.py
+  description: 'modified: django/contrib/admin/views/main.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - tests/admin_utils/models.py
+  description: 'modified: tests/admin_utils/models.py (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - tests/admin_utils/tests.py
+  description: 'modified: tests/admin_utils/tests.py (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - tests/admin_views/models.py
+  description: 'modified: tests/admin_views/models.py (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from django/django PR #20488. Trigger heuristic applied. Needs review.'

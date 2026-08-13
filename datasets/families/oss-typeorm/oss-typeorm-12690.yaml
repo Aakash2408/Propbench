@@ -1,0 +1,52 @@
+id: oss-typeorm-12690
+title: 'fix(entity-manager): default invalidWhereValuesBehavior to throw on the write
+  path'
+family: bugfix
+date: '2026-07-10'
+author: naorpeled
+source: github-api-mined
+source_repo: typeorm/typeorm
+source_url: https://github.com/typeorm/typeorm/pull/12690
+source_pr: 12690
+difficulty: medium
+trigger:
+  package: typeorm/typeorm
+  files:
+  - src/util/OrmUtils.ts
+  intent: 'fix(entity-manager): default invalidWhereValuesBehavior to throw on the
+    write path'
+  diff_summary: 'Primary: src/util/OrmUtils.ts (+8/-7)'
+consequences:
+- package: typeorm/typeorm
+  files:
+  - src/data-source/BaseDataSourceOptions.ts
+  description: 'modified: src/data-source/BaseDataSourceOptions.ts (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - test/functional/null-undefined-handling/query-builders.test.ts
+  description: 'modified: test/functional/null-undefined-handling/query-builders.test.ts
+    (+120/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - test/unit/util/orm-utils.test.ts
+  description: 'modified: test/unit/util/orm-utils.test.ts (+14/-4)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from typeorm/typeorm PR #12690. Trigger heuristic applied. Needs review.'

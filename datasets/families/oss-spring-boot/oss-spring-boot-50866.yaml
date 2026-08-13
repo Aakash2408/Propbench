@@ -1,0 +1,63 @@
+id: oss-spring-boot-50866
+title: Remove @Nullable from local variable declarations
+family: refactor
+date: '2026-06-28'
+author: quaff
+source: github-api-mined
+source_repo: spring-projects/spring-boot
+source_url: https://github.com/spring-projects/spring-boot/pull/50866
+source_pr: 50866
+difficulty: medium
+trigger:
+  package: spring-projects/spring-boot
+  files:
+  - core/spring-boot/src/main/java/org/springframework/boot/json/BasicJsonParser.java
+  intent: Remove @Nullable from local variable declarations
+  diff_summary: 'Primary: core/spring-boot/src/main/java/org/springframework/boot/json/BasicJsonParser.java
+    (+1/-1)'
+consequences:
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-jackson/src/test/java/org/springframework/boot/jackson/autoconfigure/jsontest/app/ExampleJacksonComponent.java
+  description: 'modified: module/spring-boot-jackson/src/test/java/org/springframework/boot/jackson/autoconfigure/jsontest/app/ExampleJacksonComponent.java
+    (+2/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-micrometer-metrics/src/main/java/org/springframework/boot/micrometer/metrics/autoconfigure/PropertiesMeterFilter.java
+  description: 'modified: module/spring-boot-micrometer-metrics/src/main/java/org/springframework/boot/micrometer/metrics/autoconfigure/PropertiesMeterFilter.java
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - smoke-test/spring-boot-smoke-test-integration/src/test/java/smoketest/integration/producer/ProducerApplication.java
+  description: 'modified: smoke-test/spring-boot-smoke-test-integration/src/test/java/smoketest/integration/producer/ProducerApplication.java
+    (+1/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - smoke-test/spring-boot-smoke-test-parent-context/src/test/java/smoketest/parent/producer/ProducerApplication.java
+  description: 'modified: smoke-test/spring-boot-smoke-test-parent-context/src/test/java/smoketest/parent/producer/ProducerApplication.java
+    (+1/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from spring-projects/spring-boot PR #50866. Trigger heuristic applied.
+  Needs review.'

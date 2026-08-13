@@ -1,0 +1,56 @@
+id: oss-spring-boot-50972
+title: Methods that return the result of Map#remove are not declared with a @Nullable
+  return type
+family: refactor
+date: '2026-07-21'
+author: msridhar
+source: github-api-mined
+source_repo: spring-projects/spring-boot
+source_url: https://github.com/spring-projects/spring-boot/pull/50972
+source_pr: 50972
+difficulty: medium
+trigger:
+  package: spring-projects/spring-boot
+  files:
+  - core/spring-boot-testcontainers/src/dockerTest/java/org/springframework/boot/testcontainers/lifecycle/TestcontainersLifecycleOrderWithScopeIntegrationTests.java
+  intent: Methods that return the result of Map#remove are not declared with a @Nullable
+    return type
+  diff_summary: 'Primary: core/spring-boot-testcontainers/src/dockerTest/java/org/springframework/boot/testcontainers/lifecycle/TestcontainersLifecycleOrderWithScopeIntegrationTests.java
+    (+1/-1)'
+consequences:
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-devtools/src/main/java/org/springframework/boot/devtools/restart/RestartScopeInitializer.java
+  description: 'modified: module/spring-boot-devtools/src/main/java/org/springframework/boot/devtools/restart/RestartScopeInitializer.java
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-devtools/src/main/java/org/springframework/boot/devtools/restart/Restarter.java
+  description: 'modified: module/spring-boot-devtools/src/main/java/org/springframework/boot/devtools/restart/Restarter.java
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-webmvc-test/src/main/java/org/springframework/boot/webmvc/test/autoconfigure/WebDriverScope.java
+  description: 'modified: module/spring-boot-webmvc-test/src/main/java/org/springframework/boot/webmvc/test/autoconfigure/WebDriverScope.java
+    (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from spring-projects/spring-boot PR #50972. Trigger heuristic applied.
+  Needs review.'

@@ -1,0 +1,41 @@
+id: oss-deno-36211
+title: 'fix(ext/node): handle readv short reads'
+family: bugfix
+date: '2026-08-11'
+author: nathanwhit
+source: github-api-mined
+source_repo: denoland/deno
+source_url: https://github.com/denoland/deno/pull/36211
+source_pr: 36211
+difficulty: medium
+trigger:
+  package: denoland/deno
+  files:
+  - tests/unit_node/_fs/testdata/readv_short_read.ts
+  intent: 'fix(ext/node): handle readv short reads'
+  diff_summary: 'Primary: tests/unit_node/_fs/testdata/readv_short_read.ts (+235/-0)'
+consequences:
+- package: denoland/deno
+  files:
+  - ext/node/polyfills/fs.ts
+  description: 'modified: ext/node/polyfills/fs.ts (+79/-55)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/unit_node/_fs/_fs_read_test.ts
+  description: 'modified: tests/unit_node/_fs/_fs_read_test.ts (+137/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from denoland/deno PR #36211. Trigger heuristic applied. Needs review.'

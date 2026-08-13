@@ -1,0 +1,61 @@
+id: oss-rails-58239
+title: Refactor `CommandRecorder` to store args and kwargs separately
+family: interface-evolution
+date: '2026-08-09'
+author: kamipo
+source: github-api-mined
+source_repo: rails/rails
+source_url: https://github.com/rails/rails/pull/58239
+source_pr: 58239
+difficulty: medium
+trigger:
+  package: rails/rails
+  files:
+  - activerecord/lib/active_record/migration/command_recorder.rb
+  intent: Refactor `CommandRecorder` to store args and kwargs separately
+  diff_summary: 'Primary: activerecord/lib/active_record/migration/command_recorder.rb
+    (+92/-142)'
+consequences:
+- package: rails/rails
+  files:
+  - activerecord/lib/active_record/connection_adapters/abstract/schema_statements.rb
+  description: 'modified: activerecord/lib/active_record/connection_adapters/abstract/schema_statements.rb
+    (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/lib/active_record/migration/compatibility.rb
+  description: 'modified: activerecord/lib/active_record/migration/compatibility.rb
+    (+6/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/test/cases/invertible_migration_test.rb
+  description: 'modified: activerecord/test/cases/invertible_migration_test.rb (+4/-4)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/test/cases/migration/command_recorder_test.rb
+  description: 'modified: activerecord/test/cases/migration/command_recorder_test.rb
+    (+86/-86)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from rails/rails PR #58239. Trigger heuristic applied. Needs review.'

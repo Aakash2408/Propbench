@@ -1,0 +1,54 @@
+id: oss-spring-boot-50779
+title: Application-managed JUL bridge handler should only be removed if installed
+family: refactor
+date: '2026-07-14'
+author: dhruv-15-03
+source: github-api-mined
+source_repo: spring-projects/spring-boot
+source_url: https://github.com/spring-projects/spring-boot/pull/50779
+source_pr: 50779
+difficulty: medium
+trigger:
+  package: spring-projects/spring-boot
+  files:
+  - core/spring-boot/src/main/java/org/springframework/boot/logging/log4j2/Log4J2LoggingSystem.java
+  intent: Application-managed JUL bridge handler should only be removed if installed
+  diff_summary: 'Primary: core/spring-boot/src/main/java/org/springframework/boot/logging/log4j2/Log4J2LoggingSystem.java
+    (+6/-1)'
+consequences:
+- package: spring-projects/spring-boot
+  files:
+  - core/spring-boot/src/main/java/org/springframework/boot/logging/logback/LogbackLoggingSystem.java
+  description: 'modified: core/spring-boot/src/main/java/org/springframework/boot/logging/logback/LogbackLoggingSystem.java
+    (+6/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - core/spring-boot/src/test/java/org/springframework/boot/logging/log4j2/Log4J2LoggingSystemTests.java
+  description: 'modified: core/spring-boot/src/test/java/org/springframework/boot/logging/log4j2/Log4J2LoggingSystemTests.java
+    (+30/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - core/spring-boot/src/test/java/org/springframework/boot/logging/logback/LogbackLoggingSystemTests.java
+  description: 'modified: core/spring-boot/src/test/java/org/springframework/boot/logging/logback/LogbackLoggingSystemTests.java
+    (+15/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from spring-projects/spring-boot PR #50779. Trigger heuristic applied.
+  Needs review.'

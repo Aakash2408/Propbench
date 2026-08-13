@@ -1,0 +1,74 @@
+id: oss-spring-boot-50755
+title: Inconsistent handling of empty string values of spring.security.oauth2.resourceserver.jwt
+  issuer-uri
+family: uncategorized
+date: '2026-06-24'
+author: codingkiddo
+source: github-api-mined
+source_repo: spring-projects/spring-boot
+source_url: https://github.com/spring-projects/spring-boot/pull/50755
+source_pr: 50755
+difficulty: medium
+trigger:
+  package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-security-oauth2-resource-server/src/main/java/org/springframework/boot/security/oauth2/server/resource/autoconfigure/JwkSetUriCondition.java
+  intent: Inconsistent handling of empty string values of spring.security.oauth2.resourceserver.jwt
+    issuer-uri and jwk-set-uri
+  diff_summary: 'Primary: module/spring-boot-security-oauth2-resource-server/src/main/java/org/springframework/boot/security/oauth2/server/resource/autoconfigure/JwkSetUriCondition.java
+    (+45/-0)'
+consequences:
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-security-oauth2-resource-server/src/main/java/org/springframework/boot/security/oauth2/server/resource/autoconfigure/ConditionalOnJwkSetUriJwtDecoder.java
+  description: 'added: module/spring-boot-security-oauth2-resource-server/src/main/java/org/springframework/boot/security/oauth2/server/resource/autoconfigure/ConditionalOnJwkSetUriJwtDecoder.java
+    (+42/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-security-oauth2-resource-server/src/main/java/org/springframework/boot/security/oauth2/server/resource/autoconfigure/reactive/ReactiveOAuth2ResourceServerJwtConfiguration.java
+  description: 'modified: module/spring-boot-security-oauth2-resource-server/src/main/java/org/springframework/boot/security/oauth2/server/resource/autoconfigure/reactive/ReactiveOAuth2ResourceServerJwtConfiguration.java
+    (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-security-oauth2-resource-server/src/main/java/org/springframework/boot/security/oauth2/server/resource/autoconfigure/servlet/OAuth2ResourceServerJwtConfiguration.java
+  description: 'modified: module/spring-boot-security-oauth2-resource-server/src/main/java/org/springframework/boot/security/oauth2/server/resource/autoconfigure/servlet/OAuth2ResourceServerJwtConfiguration.java
+    (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-security-oauth2-resource-server/src/test/java/org/springframework/boot/security/oauth2/server/resource/autoconfigure/reactive/ReactiveOAuth2ResourceServerAutoConfigurationTests.java
+  description: 'modified: module/spring-boot-security-oauth2-resource-server/src/test/java/org/springframework/boot/security/oauth2/server/resource/autoconfigure/reactive/ReactiveOAuth2ResourceServerAutoConfigurationTests.java
+    (+12/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - module/spring-boot-security-oauth2-resource-server/src/test/java/org/springframework/boot/security/oauth2/server/resource/autoconfigure/servlet/OAuth2ResourceServerAutoConfigurationTests.java
+  description: 'modified: module/spring-boot-security-oauth2-resource-server/src/test/java/org/springframework/boot/security/oauth2/server/resource/autoconfigure/servlet/OAuth2ResourceServerAutoConfigurationTests.java
+    (+12/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from spring-projects/spring-boot PR #50755. Trigger heuristic applied.
+  Needs review.'

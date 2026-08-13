@@ -1,0 +1,65 @@
+id: oss-rails-58445
+title: Compile non-strict templates Ractor-locally
+family: uncategorized
+date: '2026-08-12'
+author: etiennebarrie
+source: github-api-mined
+source_repo: rails/rails
+source_url: https://github.com/rails/rails/pull/58445
+source_pr: 58445
+difficulty: medium
+trigger:
+  package: rails/rails
+  files:
+  - actionview/lib/action_view/unbound_template.rb
+  intent: Compile non-strict templates Ractor-locally
+  diff_summary: 'Primary: actionview/lib/action_view/unbound_template.rb (+31/-5)'
+consequences:
+- package: rails/rails
+  files:
+  - actionview/lib/action_view/base.rb
+  description: 'modified: actionview/lib/action_view/base.rb (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - actionview/lib/action_view/template/handlers/erb.rb
+  description: 'modified: actionview/lib/action_view/template/handlers/erb.rb (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - actionview/test/template/file_system_resolver_test.rb
+  description: 'modified: actionview/test/template/file_system_resolver_test.rb (+80/-11)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - railties/lib/rails/application.rb
+  description: 'modified: railties/lib/rails/application.rb (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - railties/test/application/ractors_test.rb
+  description: 'modified: railties/test/application/ractors_test.rb (+6/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from rails/rails PR #58445. Trigger heuristic applied. Needs review.'

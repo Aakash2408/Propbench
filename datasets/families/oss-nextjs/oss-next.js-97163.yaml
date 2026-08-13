@@ -1,0 +1,57 @@
+id: oss-next.js-97163
+title: Update gh-stack skill guidance
+family: uncategorized
+date: '2026-08-12'
+author: timneutkens
+source: github-api-mined
+source_repo: vercel/next.js
+source_url: https://github.com/vercel/next.js/pull/97163
+source_pr: 97163
+difficulty: medium
+trigger:
+  package: vercel/next.js
+  files:
+  - .agents/skills/gh-stack/SKILL.md
+  intent: Update gh-stack skill guidance
+  diff_summary: 'Primary: .agents/skills/gh-stack/SKILL.md (+121/-799)'
+consequences:
+- package: vercel/next.js
+  files:
+  - .agents/skills/gh-stack/references/commands.md
+  description: 'added: .agents/skills/gh-stack/references/commands.md (+179/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - .agents/skills/gh-stack/references/stack-design.md
+  description: 'added: .agents/skills/gh-stack/references/stack-design.md (+97/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - .agents/skills/gh-stack/references/troubleshooting.md
+  description: 'added: .agents/skills/gh-stack/references/troubleshooting.md (+159/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - skills-lock.json
+  description: 'modified: skills-lock.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from vercel/next.js PR #97163. Trigger heuristic applied. Needs review.'

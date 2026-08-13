@@ -1,0 +1,58 @@
+id: oss-django-21338
+title: 'Fixed #37111 -- Added sprints quickstart docs page.'
+family: interface-evolution
+date: '2026-07-30'
+author: tim-schilling
+source: github-api-mined
+source_repo: django/django
+source_url: https://github.com/django/django/pull/21338
+source_pr: 21338
+difficulty: medium
+trigger:
+  package: django/django
+  files:
+  - docs/internals/contributing/sprint-quickstart.txt
+  intent: 'Fixed #37111 -- Added sprints quickstart docs page.'
+  diff_summary: 'Primary: docs/internals/contributing/sprint-quickstart.txt (+193/-0)'
+consequences:
+- package: django/django
+  files:
+  - docs/internals/contributing/committing-code.txt
+  description: 'modified: docs/internals/contributing/committing-code.txt (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - docs/internals/contributing/index.txt
+  description: 'modified: docs/internals/contributing/index.txt (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - docs/internals/contributing/writing-code/unit-tests.txt
+  description: 'modified: docs/internals/contributing/writing-code/unit-tests.txt
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - docs/spelling_wordlist
+  description: 'modified: docs/spelling_wordlist (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from django/django PR #21338. Trigger heuristic applied. Needs review.'

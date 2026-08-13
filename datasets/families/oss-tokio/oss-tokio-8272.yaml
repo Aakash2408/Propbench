@@ -1,0 +1,97 @@
+id: oss-tokio-8272
+title: 'tokio-stream: add inner stream accessors to adaptors'
+family: interface-evolution
+date: '2026-08-09'
+author: Rachit2323
+source: github-api-mined
+source_repo: tokio-rs/tokio
+source_url: https://github.com/tokio-rs/tokio/pull/8272
+source_pr: 8272
+difficulty: medium
+trigger:
+  package: tokio-rs/tokio
+  files:
+  - tokio-stream/src/stream_ext/filter.rs
+  intent: 'tokio-stream: add inner stream accessors to adaptors'
+  diff_summary: 'Primary: tokio-stream/src/stream_ext/filter.rs (+26/-0)'
+consequences:
+- package: tokio-rs/tokio
+  files:
+  - tokio-stream/src/stream_ext/filter_map.rs
+  description: 'modified: tokio-stream/src/stream_ext/filter_map.rs (+26/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio-stream/src/stream_ext/map.rs
+  description: 'modified: tokio-stream/src/stream_ext/map.rs (+26/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio-stream/src/stream_ext/map_while.rs
+  description: 'modified: tokio-stream/src/stream_ext/map_while.rs (+26/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio-stream/src/stream_ext/skip.rs
+  description: 'modified: tokio-stream/src/stream_ext/skip.rs (+26/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio-stream/src/stream_ext/skip_while.rs
+  description: 'modified: tokio-stream/src/stream_ext/skip_while.rs (+26/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio-stream/src/stream_ext/take.rs
+  description: 'modified: tokio-stream/src/stream_ext/take.rs (+26/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio-stream/src/stream_ext/take_while.rs
+  description: 'modified: tokio-stream/src/stream_ext/take_while.rs (+26/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio-stream/src/stream_ext/then.rs
+  description: 'modified: tokio-stream/src/stream_ext/then.rs (+26/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio-stream/tests/stream_accessors.rs
+  description: 'added: tokio-stream/tests/stream_accessors.rs (+152/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 10
+notes: 'Mined from tokio-rs/tokio PR #8272. Trigger heuristic applied. Needs review.'

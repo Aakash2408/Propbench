@@ -1,0 +1,41 @@
+id: oss-deno-36443
+title: 'fix(node/crypto): preserve binary key export passphrases'
+family: bugfix
+date: '2026-08-13'
+author: nathanwhit
+source: github-api-mined
+source_repo: denoland/deno
+source_url: https://github.com/denoland/deno/pull/36443
+source_pr: 36443
+difficulty: medium
+trigger:
+  package: denoland/deno
+  files:
+  - ext/node_crypto/keys.rs
+  intent: 'fix(node/crypto): preserve binary key export passphrases'
+  diff_summary: 'Primary: ext/node_crypto/keys.rs (+7/-17)'
+consequences:
+- package: denoland/deno
+  files:
+  - ext/node/polyfills/internal/crypto/keys.ts
+  description: 'modified: ext/node/polyfills/internal/crypto/keys.ts (+14/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/unit_node/crypto/crypto_key_test.ts
+  description: 'modified: tests/unit_node/crypto/crypto_key_test.ts (+149/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from denoland/deno PR #36443. Trigger heuristic applied. Needs review.'

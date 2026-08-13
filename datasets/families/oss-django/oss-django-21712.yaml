@@ -1,0 +1,41 @@
+id: oss-django-21712
+title: 'Fixed #37242 -- Fixed reading null time fields in LayerMapping.'
+family: bugfix
+date: '2026-08-02'
+author: jacobtylerwalls
+source: github-api-mined
+source_repo: django/django
+source_url: https://github.com/django/django/pull/21712
+source_pr: 21712
+difficulty: medium
+trigger:
+  package: django/django
+  files:
+  - django/contrib/gis/gdal/field.py
+  intent: 'Fixed #37242 -- Fixed reading null time fields in LayerMapping.'
+  diff_summary: 'Primary: django/contrib/gis/gdal/field.py (+1/-1)'
+consequences:
+- package: django/django
+  files:
+  - tests/gis_tests/data/has_nulls/has_nulls.geojson
+  description: 'modified: tests/gis_tests/data/has_nulls/has_nulls.geojson (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - tests/gis_tests/gdal_tests/test_ds.py
+  description: 'modified: tests/gis_tests/gdal_tests/test_ds.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from django/django PR #21712. Trigger heuristic applied. Needs review.'

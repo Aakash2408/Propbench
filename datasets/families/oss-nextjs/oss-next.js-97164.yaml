@@ -1,0 +1,79 @@
+id: oss-next.js-97164
+title: Fix unset crossOrigin in Turbopack manifests
+family: bugfix
+date: '2026-08-12'
+author: timneutkens
+source: github-api-mined
+source_repo: vercel/next.js
+source_url: https://github.com/vercel/next.js/pull/97164
+source_pr: 97164
+difficulty: medium
+trigger:
+  package: vercel/next.js
+  files:
+  - test/e2e/app-dir/app-config-crossorigin/default/server.mjs
+  intent: Fix unset crossOrigin in Turbopack manifests
+  diff_summary: 'Primary: test/e2e/app-dir/app-config-crossorigin/default/server.mjs
+    (+30/-0)'
+consequences:
+- package: vercel/next.js
+  files:
+  - crates/next-core/src/next_manifests/client_reference_manifest.rs
+  description: 'modified: crates/next-core/src/next_manifests/client_reference_manifest.rs
+    (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - test/e2e/app-dir/app-config-crossorigin/default/app/dynamic/page.js
+  description: 'added: test/e2e/app-dir/app-config-crossorigin/default/app/dynamic/page.js
+    (+18/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - test/e2e/app-dir/app-config-crossorigin/default/app/layout.js
+  description: 'added: test/e2e/app-dir/app-config-crossorigin/default/app/layout.js
+    (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - test/e2e/app-dir/app-config-crossorigin/default/app/page.js
+  description: 'added: test/e2e/app-dir/app-config-crossorigin/default/app/page.js
+    (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - test/e2e/app-dir/app-config-crossorigin/default/next.config.js
+  description: 'added: test/e2e/app-dir/app-config-crossorigin/default/next.config.js
+    (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - test/e2e/app-dir/app-config-crossorigin/index.test.ts
+  description: 'modified: test/e2e/app-dir/app-config-crossorigin/index.test.ts (+94/-31)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from vercel/next.js PR #97164. Trigger heuristic applied. Needs review.'

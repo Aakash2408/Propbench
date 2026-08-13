@@ -1,0 +1,66 @@
+id: oss-typeorm-12629
+title: 'fix(query-builder): reject empty where criteria on update and delete operations'
+family: bugfix
+date: '2026-07-08'
+author: naorpeled
+source: github-api-mined
+source_repo: typeorm/typeorm
+source_url: https://github.com/typeorm/typeorm/pull/12629
+source_pr: 12629
+difficulty: medium
+trigger:
+  package: typeorm/typeorm
+  files:
+  - src/entity-manager/EntityManager.ts
+  intent: 'fix(query-builder): reject empty where criteria on update and delete operations'
+  diff_summary: 'Primary: src/entity-manager/EntityManager.ts (+96/-111)'
+consequences:
+- package: typeorm/typeorm
+  files:
+  - docs/docs/data-source/5-null-and-undefined-handling.md
+  description: 'modified: docs/docs/data-source/5-null-and-undefined-handling.md (+23/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - src/query-builder/QueryBuilder.ts
+  description: 'modified: src/query-builder/QueryBuilder.ts (+23/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - src/util/OrmUtils.ts
+  description: 'modified: src/util/OrmUtils.ts (+23/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - test/functional/null-undefined-handling/query-builders.test.ts
+  description: 'modified: test/functional/null-undefined-handling/query-builders.test.ts
+    (+233/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - test/unit/util/orm-utils.test.ts
+  description: 'modified: test/unit/util/orm-utils.test.ts (+118/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from typeorm/typeorm PR #12629. Trigger heuristic applied. Needs review.'

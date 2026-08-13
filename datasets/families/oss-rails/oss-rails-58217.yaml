@@ -1,0 +1,78 @@
+id: oss-rails-58217
+title: Remove unused Active Record internals
+family: refactor
+date: '2026-08-08'
+author: '55728'
+source: github-api-mined
+source_repo: rails/rails
+source_url: https://github.com/rails/rails/pull/58217
+source_pr: 58217
+difficulty: medium
+trigger:
+  package: rails/rails
+  files:
+  - activerecord/lib/active_record/connection_adapters/abstract_adapter.rb
+  intent: Remove unused Active Record internals
+  diff_summary: 'Primary: activerecord/lib/active_record/connection_adapters/abstract_adapter.rb
+    (+0/-8)'
+consequences:
+- package: rails/rails
+  files:
+  - activerecord/lib/active_record/associations/singular_association.rb
+  description: 'modified: activerecord/lib/active_record/associations/singular_association.rb
+    (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb
+  description: 'modified: activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb
+    (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/lib/active_record/connection_adapters/pool_config.rb
+  description: 'modified: activerecord/lib/active_record/connection_adapters/pool_config.rb
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/lib/active_record/reflection.rb
+  description: 'modified: activerecord/lib/active_record/reflection.rb (+0/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/lib/active_record/relation/from_clause.rb
+  description: 'modified: activerecord/lib/active_record/relation/from_clause.rb (+0/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/lib/active_record/type/hash_lookup_type_map.rb
+  description: 'modified: activerecord/lib/active_record/type/hash_lookup_type_map.rb
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from rails/rails PR #58217. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,41 @@
+id: oss-rails-57352
+title: Properly reset fixtures cache after non-transactional tests
+family: bugfix
+date: '2026-05-12'
+author: byroot
+source: github-api-mined
+source_repo: rails/rails
+source_url: https://github.com/rails/rails/pull/57352
+source_pr: 57352
+difficulty: medium
+trigger:
+  package: rails/rails
+  files:
+  - activerecord/lib/active_record/test_fixtures.rb
+  intent: Properly reset fixtures cache after non-transactional tests
+  diff_summary: 'Primary: activerecord/lib/active_record/test_fixtures.rb (+3/-4)'
+consequences:
+- package: rails/rails
+  files:
+  - activerecord/test/cases/fixtures_test.rb
+  description: 'modified: activerecord/test/cases/fixtures_test.rb (+6/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - tools/support/leak_checker.rb
+  description: 'modified: tools/support/leak_checker.rb (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from rails/rails PR #57352. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,137 @@
+id: oss-tokio-8282
+title: 'runtime: expose schedule latency in TaskMeta / Task Hooks'
+family: uncategorized
+date: '2026-08-09'
+author: rcoh
+source: github-api-mined
+source_repo: tokio-rs/tokio
+source_url: https://github.com/tokio-rs/tokio/pull/8282
+source_pr: 8282
+difficulty: medium
+trigger:
+  package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/metrics/batch.rs
+  intent: 'runtime: expose schedule latency in TaskMeta / Task Hooks'
+  diff_summary: 'Primary: tokio/src/runtime/metrics/batch.rs (+77/-14)'
+consequences:
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/builder.rs
+  description: 'modified: tokio/src/runtime/builder.rs (+58/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/config.rs
+  description: 'modified: tokio/src/runtime/config.rs (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/metrics/mod.rs
+  description: 'modified: tokio/src/runtime/metrics/mod.rs (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/metrics/schedule_latency.rs
+  description: 'modified: tokio/src/runtime/metrics/schedule_latency.rs (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/metrics/schedule_latency_mock.rs
+  description: 'modified: tokio/src/runtime/metrics/schedule_latency_mock.rs (+0/-9)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/scheduler/current_thread/mod.rs
+  description: 'modified: tokio/src/runtime/scheduler/current_thread/mod.rs (+17/-19)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/scheduler/multi_thread/handle.rs
+  description: 'modified: tokio/src/runtime/scheduler/multi_thread/handle.rs (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/scheduler/multi_thread/stats.rs
+  description: 'modified: tokio/src/runtime/scheduler/multi_thread/stats.rs (+13/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/scheduler/multi_thread/worker.rs
+  description: 'modified: tokio/src/runtime/scheduler/multi_thread/worker.rs (+29/-26)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/task/harness.rs
+  description: 'modified: tokio/src/runtime/task/harness.rs (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/task/mod.rs
+  description: 'modified: tokio/src/runtime/task/mod.rs (+13/-9)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/task_hooks.rs
+  description: 'modified: tokio/src/runtime/task_hooks.rs (+31/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/tests/rt_unstable_metrics.rs
+  description: 'modified: tokio/tests/rt_unstable_metrics.rs (+51/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/tests/task_hooks.rs
+  description: 'modified: tokio/tests/task_hooks.rs (+172/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 15
+notes: 'Mined from tokio-rs/tokio PR #8282. Trigger heuristic applied. Needs review.'

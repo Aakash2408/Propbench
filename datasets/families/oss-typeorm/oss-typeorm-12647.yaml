@@ -1,0 +1,73 @@
+id: oss-typeorm-12647
+title: 'fix: remove require() calls that break bundlers'
+family: bugfix
+date: '2026-07-06'
+author: alumni
+source: github-api-mined
+source_repo: typeorm/typeorm
+source_url: https://github.com/typeorm/typeorm/pull/12647
+source_pr: 12647
+difficulty: medium
+trigger:
+  package: typeorm/typeorm
+  files:
+  - src/platform/PlatformTools.ts
+  intent: 'fix: remove require() calls that break bundlers'
+  diff_summary: 'Primary: src/platform/PlatformTools.ts (+43/-91)'
+consequences:
+- package: typeorm/typeorm
+  files:
+  - src/driver/expo/ExpoDriver.ts
+  description: 'modified: src/driver/expo/ExpoDriver.ts (+13/-62)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - src/driver/react-native/ReactNativeDriver.ts
+  description: 'modified: src/driver/react-native/ReactNativeDriver.ts (+6/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - src/driver/sap/SapDriver.ts
+  description: 'modified: src/driver/sap/SapDriver.ts (+1/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - src/driver/spanner/SpannerDriver.ts
+  description: 'modified: src/driver/spanner/SpannerDriver.ts (+7/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - src/platform/BrowserPlatformTools.template
+  description: 'modified: src/platform/BrowserPlatformTools.template (+17/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - test/unit/driver/expo-driver.test.ts
+  description: 'removed: test/unit/driver/expo-driver.test.ts (+0/-127)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from typeorm/typeorm PR #12647. Trigger heuristic applied. Needs review.'

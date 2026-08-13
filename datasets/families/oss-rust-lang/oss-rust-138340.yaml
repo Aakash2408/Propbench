@@ -1,0 +1,50 @@
+id: oss-rust-138340
+title: Remove some unsized tuple impls now that we don't support unsizing tuples anymore
+family: interface-evolution
+date: '2025-07-03'
+author: oli-obk
+source: github-api-mined
+source_repo: rust-lang/rust
+source_url: https://github.com/rust-lang/rust/pull/138340
+source_pr: 138340
+difficulty: medium
+trigger:
+  package: rust-lang/rust
+  files:
+  - library/core/src/tuple.rs
+  intent: Remove some unsized tuple impls now that we don't support unsizing tuples
+    anymore
+  diff_summary: 'Primary: library/core/src/tuple.rs (+2/-16)'
+consequences:
+- package: rust-lang/rust
+  files:
+  - library/core/src/fmt/mod.rs
+  description: 'modified: library/core/src/fmt/mod.rs (+1/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - library/core/src/hash/mod.rs
+  description: 'modified: library/core/src/hash/mod.rs (+1/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - library/core/src/ops/range.rs
+  description: 'modified: library/core/src/ops/range.rs (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from rust-lang/rust PR #138340. Trigger heuristic applied. Needs review.'

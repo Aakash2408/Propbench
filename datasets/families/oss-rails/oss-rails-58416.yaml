@@ -1,0 +1,70 @@
+id: oss-rails-58416
+title: Use `ActiveRecord::Key.for` in remaining `Array(reflection.*_key)` sites
+family: uncategorized
+date: '2026-08-08'
+author: kamipo
+source: github-api-mined
+source_repo: rails/rails
+source_url: https://github.com/rails/rails/pull/58416
+source_pr: 58416
+difficulty: medium
+trigger:
+  package: rails/rails
+  files:
+  - activerecord/lib/active_record/autosave_association.rb
+  intent: Use `ActiveRecord::Key.for` in remaining `Array(reflection.*_key)` sites
+  diff_summary: 'Primary: activerecord/lib/active_record/autosave_association.rb (+7/-7)'
+consequences:
+- package: rails/rails
+  files:
+  - activerecord/lib/active_record/associations/association.rb
+  description: 'modified: activerecord/lib/active_record/associations/association.rb
+    (+4/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/lib/active_record/associations/association_scope.rb
+  description: 'modified: activerecord/lib/active_record/associations/association_scope.rb
+    (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/lib/active_record/associations/foreign_association.rb
+  description: 'modified: activerecord/lib/active_record/associations/foreign_association.rb
+    (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/lib/active_record/associations/has_one_association.rb
+  description: 'modified: activerecord/lib/active_record/associations/has_one_association.rb
+    (+3/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/lib/active_record/relation/query_methods.rb
+  description: 'modified: activerecord/lib/active_record/relation/query_methods.rb
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from rails/rails PR #58416. Trigger heuristic applied. Needs review.'

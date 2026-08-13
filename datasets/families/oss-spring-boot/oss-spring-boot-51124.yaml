@@ -1,0 +1,45 @@
+id: oss-spring-boot-51124
+title: Document alternatives to HttpMessageConverters
+family: uncategorized
+date: '2026-07-26'
+author: MacAlsandair
+source: github-api-mined
+source_repo: spring-projects/spring-boot
+source_url: https://github.com/spring-projects/spring-boot/pull/51124
+source_pr: 51124
+difficulty: medium
+trigger:
+  package: spring-projects/spring-boot
+  files:
+  - documentation/spring-boot-docs/src/docs/antora/modules/how-to/pages/spring-mvc.adoc
+  intent: Document alternatives to HttpMessageConverters
+  diff_summary: 'Primary: documentation/spring-boot-docs/src/docs/antora/modules/how-to/pages/spring-mvc.adoc
+    (+4/-5)'
+consequences:
+- package: spring-projects/spring-boot
+  files:
+  - documentation/spring-boot-docs/src/docs/antora/modules/reference/pages/io/rest-client.adoc
+  description: 'modified: documentation/spring-boot-docs/src/docs/antora/modules/reference/pages/io/rest-client.adoc
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: spring-projects/spring-boot
+  files:
+  - documentation/spring-boot-docs/src/docs/antora/modules/reference/pages/web/servlet.adoc
+  description: 'modified: documentation/spring-boot-docs/src/docs/antora/modules/reference/pages/web/servlet.adoc
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from spring-projects/spring-boot PR #51124. Trigger heuristic applied.
+  Needs review.'

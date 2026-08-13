@@ -1,0 +1,66 @@
+id: oss-deno-36415
+title: 'fix(ext/fetch): only retry transport errors on pooled connections'
+family: bugfix
+date: '2026-08-12'
+author: bartlomieju
+source: github-api-mined
+source_repo: denoland/deno
+source_url: https://github.com/denoland/deno/pull/36415
+source_pr: 36415
+difficulty: medium
+trigger:
+  package: denoland/deno
+  files:
+  - ext/fetch/lib.rs
+  intent: 'fix(ext/fetch): only retry transport errors on pooled connections'
+  diff_summary: 'Primary: ext/fetch/lib.rs (+337/-7)'
+consequences:
+- package: denoland/deno
+  files:
+  - ext/fetch/tests.rs
+  description: 'modified: ext/fetch/tests.rs (+55/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/specs/run/fetch_no_retry_fresh_connection/__test__.jsonc
+  description: 'added: tests/specs/run/fetch_no_retry_fresh_connection/__test__.jsonc
+    (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/specs/run/fetch_no_retry_fresh_connection/main.out
+  description: 'added: tests/specs/run/fetch_no_retry_fresh_connection/main.out (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/specs/run/fetch_no_retry_fresh_connection/main.ts
+  description: 'added: tests/specs/run/fetch_no_retry_fresh_connection/main.ts (+28/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/unit/fetch_test.ts
+  description: 'modified: tests/unit/fetch_test.ts (+20/-27)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from denoland/deno PR #36415. Trigger heuristic applied. Needs review.'

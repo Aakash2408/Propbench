@@ -1,0 +1,41 @@
+id: oss-tokio-8252
+title: 'time: fix alt timer leaking cancelled entries into the wheel'
+family: bugfix
+date: '2026-07-20'
+author: chatman-media
+source: github-api-mined
+source_repo: tokio-rs/tokio
+source_url: https://github.com/tokio-rs/tokio/pull/8252
+source_pr: 8252
+difficulty: medium
+trigger:
+  package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/time_alt/tests.rs
+  intent: 'time: fix alt timer leaking cancelled entries into the wheel'
+  diff_summary: 'Primary: tokio/src/runtime/time_alt/tests.rs (+98/-3)'
+consequences:
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/time_alt/entry.rs
+  description: 'modified: tokio/src/runtime/time_alt/entry.rs (+5/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/time_alt/wheel/mod.rs
+  description: 'modified: tokio/src/runtime/time_alt/wheel/mod.rs (+5/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from tokio-rs/tokio PR #8252. Trigger heuristic applied. Needs review.'

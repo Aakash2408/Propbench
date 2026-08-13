@@ -1,0 +1,41 @@
+id: oss-rails-58467
+title: Make ActiveSupport::LogSubscriber ractor safe
+family: interface-evolution
+date: '2026-08-13'
+author: gmcgibbon
+source: github-api-mined
+source_repo: rails/rails
+source_url: https://github.com/rails/rails/pull/58467
+source_pr: 58467
+difficulty: medium
+trigger:
+  package: rails/rails
+  files:
+  - activesupport/lib/active_support/log_subscriber.rb
+  intent: Make ActiveSupport::LogSubscriber ractor safe
+  diff_summary: 'Primary: activesupport/lib/active_support/log_subscriber.rb (+2/-7)'
+consequences:
+- package: rails/rails
+  files:
+  - activesupport/lib/active_support/railtie.rb
+  description: 'modified: activesupport/lib/active_support/railtie.rb (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activesupport/test/log_subscriber_test.rb
+  description: 'modified: activesupport/test/log_subscriber_test.rb (+17/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from rails/rails PR #58467. Trigger heuristic applied. Needs review.'

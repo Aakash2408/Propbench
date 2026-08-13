@@ -1,0 +1,57 @@
+id: oss-django-21673
+title: 'Fixed #37230 -- Fixed a crash for second-degree relations in ModelAdmin.list_display.'
+family: bugfix
+date: '2026-07-28'
+author: zubairhassan652
+source: github-api-mined
+source_repo: django/django
+source_url: https://github.com/django/django/pull/21673
+source_pr: 21673
+difficulty: medium
+trigger:
+  package: django/django
+  files:
+  - django/contrib/admin/templatetags/admin_list.py
+  intent: 'Fixed #37230 -- Fixed a crash for second-degree relations in ModelAdmin.list_display.'
+  diff_summary: 'Primary: django/contrib/admin/templatetags/admin_list.py (+7/-1)'
+consequences:
+- package: django/django
+  files:
+  - AUTHORS
+  description: 'modified: AUTHORS (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - django/contrib/admin/utils.py
+  description: 'modified: django/contrib/admin/utils.py (+0/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - tests/admin_utils/models.py
+  description: 'modified: tests/admin_utils/models.py (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - tests/admin_utils/tests.py
+  description: 'modified: tests/admin_utils/tests.py (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from django/django PR #21673. Trigger heuristic applied. Needs review.'

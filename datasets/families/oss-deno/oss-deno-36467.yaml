@@ -1,0 +1,137 @@
+id: oss-deno-36467
+title: 'fix(bundle): isolate esbuild downloads from workspace registries'
+family: bugfix
+date: '2026-08-12'
+author: nathanwhit
+source: github-api-mined
+source_repo: denoland/deno
+source_url: https://github.com/denoland/deno/pull/36467
+source_pr: 36467
+difficulty: medium
+trigger:
+  package: denoland/deno
+  files:
+  - libs/npm_installer/factory.rs
+  intent: 'fix(bundle): isolate esbuild downloads from workspace registries'
+  diff_summary: 'Primary: libs/npm_installer/factory.rs (+117/-6)'
+consequences:
+- package: denoland/deno
+  files:
+  - Cargo.lock
+  description: 'modified: Cargo.lock (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - cli/factory.rs
+  description: 'modified: cli/factory.rs (+37/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - cli/npm.rs
+  description: 'modified: cli/npm.rs (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - cli/tools/bundle/esbuild.rs
+  description: 'modified: cli/tools/bundle/esbuild.rs (+7/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - cli/tools/bundle/mod.rs
+  description: 'modified: cli/tools/bundle/mod.rs (+17/-10)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - libs/npm_installer/Cargo.toml
+  description: 'modified: libs/npm_installer/Cargo.toml (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - libs/npm_installer/lib.rs
+  description: 'modified: libs/npm_installer/lib.rs (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - libs/resolver/npmrc.rs
+  description: 'modified: libs/resolver/npmrc.rs (+53/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/specs/bundle/workspace_registry/.npmrc
+  description: 'added: tests/specs/bundle/workspace_registry/.npmrc (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/specs/bundle/workspace_registry/__test__.jsonc
+  description: 'added: tests/specs/bundle/workspace_registry/__test__.jsonc (+27/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/specs/bundle/workspace_registry/bundle.out
+  description: 'added: tests/specs/bundle/workspace_registry/bundle.out (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/specs/bundle/workspace_registry/project/.npmrc
+  description: 'added: tests/specs/bundle/workspace_registry/project/.npmrc (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/specs/bundle/workspace_registry/project/deno.json
+  description: 'added: tests/specs/bundle/workspace_registry/project/deno.json (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/specs/bundle/workspace_registry/project/main.ts
+  description: 'added: tests/specs/bundle/workspace_registry/project/main.ts (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 15
+notes: 'Mined from denoland/deno PR #36467. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,65 @@
+id: oss-rust-160998
+title: 'rustfmt: restrict `cfg_select!` formatting to the `nightly` release channel'
+family: uncategorized
+date: '2026-08-13'
+author: ytmimi
+source: github-api-mined
+source_repo: rust-lang/rust
+source_url: https://github.com/rust-lang/rust/pull/160998
+source_pr: 160998
+difficulty: medium
+trigger:
+  package: rust-lang/rust
+  files:
+  - src/tools/rustfmt/src/macros.rs
+  intent: 'rustfmt: restrict `cfg_select!` formatting to the `nightly` release channel'
+  diff_summary: 'Primary: src/tools/rustfmt/src/macros.rs (+2/-1)'
+consequences:
+- package: rust-lang/rust
+  files:
+  - src/tools/rustfmt/src/test/mod.rs
+  description: 'modified: src/tools/rustfmt/src/test/mod.rs (+10/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - src/tools/rustfmt/tests/source/cfg_select.rs
+  description: 'modified: src/tools/rustfmt/tests/source/cfg_select.rs (+1/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - src/tools/rustfmt/tests/source/cfg_select_stable.rs
+  description: 'added: src/tools/rustfmt/tests/source/cfg_select_stable.rs (+10/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - src/tools/rustfmt/tests/target/cfg_select.rs
+  description: 'modified: src/tools/rustfmt/tests/target/cfg_select.rs (+1/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - src/tools/rustfmt/tests/target/cfg_select_stable.rs
+  description: 'added: src/tools/rustfmt/tests/target/cfg_select_stable.rs (+10/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from rust-lang/rust PR #160998. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,176 @@
+id: oss-typeorm-12590
+title: 'fix(tree-entity): tree entity schema propagation in internal TreeRepository
+  methods'
+family: interface-evolution
+date: '2026-06-24'
+author: xEverth
+source: github-api-mined
+source_repo: typeorm/typeorm
+source_url: https://github.com/typeorm/typeorm/pull/12590
+source_pr: 12590
+difficulty: medium
+trigger:
+  package: typeorm/typeorm
+  files:
+  - test/functional/metadata-builder/closure-junction-entity-metadata/entity/CategoryWithLevel.ts
+  intent: 'fix(tree-entity): tree entity schema propagation in internal TreeRepository
+    methods'
+  diff_summary: 'Primary: test/functional/metadata-builder/closure-junction-entity-metadata/entity/CategoryWithLevel.ts
+    (+27/-0)'
+consequences:
+- package: typeorm/typeorm
+  files:
+  - docs/docs/entity/4-tree-entities.md
+  description: 'modified: docs/docs/entity/4-tree-entities.md (+3/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - src/metadata-builder/ClosureJunctionEntityMetadataBuilder.ts
+  description: 'modified: src/metadata-builder/ClosureJunctionEntityMetadataBuilder.ts
+    (+13/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - src/metadata/types/ClosureTreeOptions.ts
+  description: 'modified: src/metadata/types/ClosureTreeOptions.ts (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - src/repository/TreeRepository.ts
+  description: 'modified: src/repository/TreeRepository.ts (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - test/functional/metadata-builder/closure-junction-entity-metadata/closure-junction-metadata.test.ts
+  description: 'added: test/functional/metadata-builder/closure-junction-entity-metadata/closure-junction-metadata.test.ts
+    (+309/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - test/functional/metadata-builder/closure-junction-entity-metadata/entity/Category.interface.ts
+  description: 'added: test/functional/metadata-builder/closure-junction-entity-metadata/entity/Category.interface.ts
+    (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - test/functional/metadata-builder/closure-junction-entity-metadata/entity/Category.ts
+  description: 'added: test/functional/metadata-builder/closure-junction-entity-metadata/entity/Category.ts
+    (+23/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - test/functional/metadata-builder/closure-junction-entity-metadata/entity/CategoryWithSchema.ts
+  description: 'added: test/functional/metadata-builder/closure-junction-entity-metadata/entity/CategoryWithSchema.ts
+    (+25/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - test/functional/metadata-builder/closure-junction-entity-metadata/entity/CategoryWithSchemaInClosure.ts
+  description: 'added: test/functional/metadata-builder/closure-junction-entity-metadata/entity/CategoryWithSchemaInClosure.ts
+    (+25/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - test/functional/tree-tables/closure-table/schema-handling/entity/Category.interface.ts
+  description: 'added: test/functional/tree-tables/closure-table/schema-handling/entity/Category.interface.ts
+    (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - test/functional/tree-tables/closure-table/schema-handling/entity/Category.ts
+  description: 'added: test/functional/tree-tables/closure-table/schema-handling/entity/Category.ts
+    (+23/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - test/functional/tree-tables/closure-table/schema-handling/entity/CategoryWithDifferentSchemaForClosure.ts
+  description: 'added: test/functional/tree-tables/closure-table/schema-handling/entity/CategoryWithDifferentSchemaForClosure.ts
+    (+25/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - test/functional/tree-tables/closure-table/schema-handling/entity/CategoryWithSchema.ts
+  description: 'added: test/functional/tree-tables/closure-table/schema-handling/entity/CategoryWithSchema.ts
+    (+23/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - test/functional/tree-tables/closure-table/schema-handling/entity/CategoryWithSchemaInClosure.ts
+  description: 'added: test/functional/tree-tables/closure-table/schema-handling/entity/CategoryWithSchemaInClosure.ts
+    (+25/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - test/functional/tree-tables/closure-table/schema-handling/schema-handling.test.ts
+  description: 'added: test/functional/tree-tables/closure-table/schema-handling/schema-handling.test.ts
+    (+282/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - test/github-issues/10263/entity/Space.ts
+  description: 'removed: test/github-issues/10263/entity/Space.ts (+0/-22)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - test/github-issues/10263/issue-10263.test.ts
+  description: 'removed: test/github-issues/10263/issue-10263.test.ts (+0/-37)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 18
+notes: 'Mined from typeorm/typeorm PR #12590. Trigger heuristic applied. Needs review.'

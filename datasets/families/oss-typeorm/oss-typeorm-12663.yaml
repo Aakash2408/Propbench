@@ -1,0 +1,52 @@
+id: oss-typeorm-12663
+title: 'fix(schema): default many-to-many inverse foreign key to CASCADE'
+family: bugfix
+date: '2026-07-20'
+author: kyungseopk1m
+source: github-api-mined
+source_repo: typeorm/typeorm
+source_url: https://github.com/typeorm/typeorm/pull/12663
+source_pr: 12663
+difficulty: medium
+trigger:
+  package: typeorm/typeorm
+  files:
+  - test/functional/relations/many-to-many/junction-cascade-default/entity/Post.ts
+  intent: 'fix(schema): default many-to-many inverse foreign key to CASCADE'
+  diff_summary: 'Primary: test/functional/relations/many-to-many/junction-cascade-default/entity/Post.ts
+    (+15/-0)'
+consequences:
+- package: typeorm/typeorm
+  files:
+  - src/metadata-builder/JunctionEntityMetadataBuilder.ts
+  description: 'modified: src/metadata-builder/JunctionEntityMetadataBuilder.ts (+4/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - test/functional/relations/many-to-many/junction-cascade-default/entity/Category.ts
+  description: 'added: test/functional/relations/many-to-many/junction-cascade-default/entity/Category.ts
+    (+13/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: typeorm/typeorm
+  files:
+  - test/functional/relations/many-to-many/junction-cascade-default/junction-cascade-default.test.ts
+  description: 'added: test/functional/relations/many-to-many/junction-cascade-default/junction-cascade-default.test.ts
+    (+54/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from typeorm/typeorm PR #12663. Trigger heuristic applied. Needs review.'

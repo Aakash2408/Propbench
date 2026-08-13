@@ -1,0 +1,50 @@
+id: oss-django-20568
+title: 'Fixed #35875 -- Added dark mode support to technical 404 and 500 error views.'
+family: interface-evolution
+date: '2026-07-17'
+author: harveybellini
+source: github-api-mined
+source_repo: django/django
+source_url: https://github.com/django/django/pull/20568
+source_pr: 20568
+difficulty: medium
+trigger:
+  package: django/django
+  files:
+  - django/views/templates/technical_500.html
+  intent: 'Fixed #35875 -- Added dark mode support to technical 404 and 500 error
+    views.'
+  diff_summary: 'Primary: django/views/templates/technical_500.html (+33/-29)'
+consequences:
+- package: django/django
+  files:
+  - AUTHORS
+  description: 'modified: AUTHORS (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - django/views/templates/csrf_403.html
+  description: 'modified: django/views/templates/csrf_403.html (+7/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: django/django
+  files:
+  - django/views/templates/technical_404.html
+  description: 'modified: django/views/templates/technical_404.html (+10/-9)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from django/django PR #20568. Trigger heuristic applied. Needs review.'

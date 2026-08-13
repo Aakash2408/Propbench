@@ -1,0 +1,152 @@
+id: oss-next.js-97215
+title: Fix shared Turbopack runtime initialization race
+family: bugfix
+date: '2026-08-12'
+author: gnoff
+source: github-api-mined
+source_repo: vercel/next.js
+source_url: https://github.com/vercel/next.js/pull/97215
+source_pr: 97215
+difficulty: medium
+trigger:
+  package: vercel/next.js
+  files:
+  - turbopack/crates/turbopack-ecmascript-runtime/src/browser_runtime.rs
+  intent: Fix shared Turbopack runtime initialization race
+  diff_summary: 'Primary: turbopack/crates/turbopack-ecmascript-runtime/src/browser_runtime.rs
+    (+7/-2)'
+consequences:
+- package: vercel/next.js
+  files:
+  - turbopack/crates/turbopack-tests/tests/snapshot/debug-ids/browser/output/1do3_crates_turbopack-tests_tests_snapshot_debug-ids_browser_input_index_19boa0e.js.map
+  description: 'modified: turbopack/crates/turbopack-tests/tests/snapshot/debug-ids/browser/output/1do3_crates_turbopack-tests_tests_snapshot_debug-ids_browser_input_index_19boa0e.js.map
+    (+8/-8)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - turbopack/crates/turbopack-tests/tests/snapshot/debug-ids/browser/output/1i9t_crates_turbopack-tests_tests_snapshot_debug-ids_browser_input_index_19boa0e.js
+  description: 'modified: turbopack/crates/turbopack-tests/tests/snapshot/debug-ids/browser/output/1i9t_crates_turbopack-tests_tests_snapshot_debug-ids_browser_input_index_19boa0e.js
+    (+6/-4)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - turbopack/crates/turbopack-tests/tests/snapshot/runtime/default_dev_runtime/output/0_9x_turbopack-tests_tests_snapshot_runtime_default_dev_runtime_input_index_17smy-b.js.map
+  description: 'modified: turbopack/crates/turbopack-tests/tests/snapshot/runtime/default_dev_runtime/output/0_9x_turbopack-tests_tests_snapshot_runtime_default_dev_runtime_input_index_17smy-b.js.map
+    (+7/-7)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - turbopack/crates/turbopack-tests/tests/snapshot/runtime/default_dev_runtime/output/0rv8_turbopack-tests_tests_snapshot_runtime_default_dev_runtime_input_index_17smy-b.js
+  description: 'modified: turbopack/crates/turbopack-tests/tests/snapshot/runtime/default_dev_runtime/output/0rv8_turbopack-tests_tests_snapshot_runtime_default_dev_runtime_input_index_17smy-b.js
+    (+5/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - turbopack/crates/turbopack-tests/tests/snapshot/swc_transforms/preset_env/output/0_9x_turbopack-tests_tests_snapshot_swc_transforms_preset_env_input_index_04jskxh.js.map
+  description: 'modified: turbopack/crates/turbopack-tests/tests/snapshot/swc_transforms/preset_env/output/0_9x_turbopack-tests_tests_snapshot_swc_transforms_preset_env_input_index_04jskxh.js.map
+    (+4/-4)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - turbopack/crates/turbopack-tests/tests/snapshot/swc_transforms/preset_env/output/0rv8_turbopack-tests_tests_snapshot_swc_transforms_preset_env_input_index_04jskxh.js
+  description: 'modified: turbopack/crates/turbopack-tests/tests/snapshot/swc_transforms/preset_env/output/0rv8_turbopack-tests_tests_snapshot_swc_transforms_preset_env_input_index_04jskxh.js
+    (+4/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - turbopack/crates/turbopack-tests/tests/snapshot/workers/basic/output/1do3_crates_turbopack-tests_tests_snapshot_workers_basic_input_index_0ba9cj3.js.map
+  description: 'modified: turbopack/crates/turbopack-tests/tests/snapshot/workers/basic/output/1do3_crates_turbopack-tests_tests_snapshot_workers_basic_input_index_0ba9cj3.js.map
+    (+7/-7)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - turbopack/crates/turbopack-tests/tests/snapshot/workers/basic/output/1do3_crates_turbopack-tests_tests_snapshot_workers_basic_input_worker_0yr5fg0.js.map
+  description: 'modified: turbopack/crates/turbopack-tests/tests/snapshot/workers/basic/output/1do3_crates_turbopack-tests_tests_snapshot_workers_basic_input_worker_0yr5fg0.js.map
+    (+7/-7)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - turbopack/crates/turbopack-tests/tests/snapshot/workers/basic/output/1i9t_crates_turbopack-tests_tests_snapshot_workers_basic_input_index_0ba9cj3.js
+  description: 'modified: turbopack/crates/turbopack-tests/tests/snapshot/workers/basic/output/1i9t_crates_turbopack-tests_tests_snapshot_workers_basic_input_index_0ba9cj3.js
+    (+4/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - turbopack/crates/turbopack-tests/tests/snapshot/workers/basic/output/1i9t_crates_turbopack-tests_tests_snapshot_workers_basic_input_worker_0yr5fg0.js
+  description: 'modified: turbopack/crates/turbopack-tests/tests/snapshot/workers/basic/output/1i9t_crates_turbopack-tests_tests_snapshot_workers_basic_input_worker_0yr5fg0.js
+    (+4/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - turbopack/crates/turbopack-tests/tests/snapshot/workers/shared/output/1do3_crates_turbopack-tests_tests_snapshot_workers_shared_input_index_1dpfh5i.js.map
+  description: 'modified: turbopack/crates/turbopack-tests/tests/snapshot/workers/shared/output/1do3_crates_turbopack-tests_tests_snapshot_workers_shared_input_index_1dpfh5i.js.map
+    (+7/-7)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - turbopack/crates/turbopack-tests/tests/snapshot/workers/shared/output/1do3_crates_turbopack-tests_tests_snapshot_workers_shared_input_worker_1xw116u.js.map
+  description: 'modified: turbopack/crates/turbopack-tests/tests/snapshot/workers/shared/output/1do3_crates_turbopack-tests_tests_snapshot_workers_shared_input_worker_1xw116u.js.map
+    (+7/-7)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - turbopack/crates/turbopack-tests/tests/snapshot/workers/shared/output/1i9t_crates_turbopack-tests_tests_snapshot_workers_shared_input_index_1dpfh5i.js
+  description: 'modified: turbopack/crates/turbopack-tests/tests/snapshot/workers/shared/output/1i9t_crates_turbopack-tests_tests_snapshot_workers_shared_input_index_1dpfh5i.js
+    (+4/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/next.js
+  files:
+  - turbopack/crates/turbopack-tests/tests/snapshot/workers/shared/output/1i9t_crates_turbopack-tests_tests_snapshot_workers_shared_input_worker_1xw116u.js
+  description: 'modified: turbopack/crates/turbopack-tests/tests/snapshot/workers/shared/output/1i9t_crates_turbopack-tests_tests_snapshot_workers_shared_input_worker_1xw116u.js
+    (+4/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 15
+notes: 'Mined from vercel/next.js PR #97215. Trigger heuristic applied. Needs review.'

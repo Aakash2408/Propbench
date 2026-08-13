@@ -1,0 +1,42 @@
+id: oss-terraform-provider-aws-49341
+title: 'make: auto-detect PKG from T for the `t` target'
+family: uncategorized
+date: '2026-08-07'
+author: YakDriver
+source: github-api-mined
+source_repo: hashicorp/terraform-provider-aws
+source_url: https://github.com/hashicorp/terraform-provider-aws/pull/49341
+source_pr: 49341
+difficulty: medium
+trigger:
+  package: hashicorp/terraform-provider-aws
+  files:
+  - GNUmakefile
+  intent: 'make: auto-detect PKG from T for the `t` target'
+  diff_summary: 'Primary: GNUmakefile (+35/-0)'
+consequences:
+- package: hashicorp/terraform-provider-aws
+  files:
+  - docs/continuous-integration.md
+  description: 'modified: docs/continuous-integration.md (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - docs/makefile-cheat-sheet.md
+  description: 'modified: docs/makefile-cheat-sheet.md (+7/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from hashicorp/terraform-provider-aws PR #49341. Trigger heuristic applied.
+  Needs review.'

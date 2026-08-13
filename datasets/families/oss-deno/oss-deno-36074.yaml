@@ -1,0 +1,105 @@
+id: oss-deno-36074
+title: 'fix(os): serialize process environment updates'
+family: bugfix
+date: '2026-08-10'
+author: nathanwhit
+source: github-api-mined
+source_repo: denoland/deno
+source_url: https://github.com/denoland/deno/pull/36074
+source_pr: 36074
+difficulty: medium
+trigger:
+  package: denoland/deno
+  files:
+  - ext/os/lib.rs
+  intent: 'fix(os): serialize process environment updates'
+  diff_summary: 'Primary: ext/os/lib.rs (+161/-30)'
+consequences:
+- package: denoland/deno
+  files:
+  - Cargo.lock
+  description: 'modified: Cargo.lock (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - cli/Cargo.toml
+  description: 'modified: cli/Cargo.toml (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - cli/util/env.rs
+  description: 'modified: cli/util/env.rs (+31/-23)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - ext/node/Cargo.toml
+  description: 'modified: ext/node/Cargo.toml (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - ext/node/lib.rs
+  description: 'modified: ext/node/lib.rs (+7/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/specs/run/process_env_load/__test__.jsonc
+  description: 'modified: tests/specs/run/process_env_load/__test__.jsonc (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/specs/run/process_env_load/timezone.env
+  description: 'added: tests/specs/run/process_env_load/timezone.env (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/specs/run/process_env_load/timezone.out
+  description: 'added: tests/specs/run/process_env_load/timezone.out (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/specs/run/process_env_load/timezone.ts
+  description: 'added: tests/specs/run/process_env_load/timezone.ts (+14/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/specs/run/tz_env/main.ts
+  description: 'modified: tests/specs/run/tz_env/main.ts (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 11
+notes: 'Mined from denoland/deno PR #36074. Trigger heuristic applied. Needs review.'

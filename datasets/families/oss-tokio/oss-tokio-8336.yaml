@@ -1,0 +1,153 @@
+id: oss-tokio-8336
+title: 'tokio: simplify `Option` handling with idiomatic combinators'
+family: uncategorized
+date: '2026-08-07'
+author: vilgotf
+source: github-api-mined
+source_repo: tokio-rs/tokio
+source_url: https://github.com/tokio-rs/tokio/pull/8336
+source_pr: 8336
+difficulty: medium
+trigger:
+  package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/metrics/runtime.rs
+  intent: 'tokio: simplify `Option` handling with idiomatic combinators'
+  diff_summary: 'Primary: tokio/src/runtime/metrics/runtime.rs (+7/-14)'
+consequences:
+- package: tokio-rs/tokio
+  files:
+  - benches/remote_spawn.rs
+  description: 'modified: benches/remote_spawn.rs (+1/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - benches/spawn_blocking.rs
+  description: 'modified: benches/spawn_blocking.rs (+1/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - examples/tinyhttp.rs
+  description: 'modified: examples/tinyhttp.rs (+1/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio-macros/src/entry.rs
+  description: 'modified: tokio-macros/src/entry.rs (+5/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio-util/src/codec/length_delimited.rs
+  description: 'modified: tokio-util/src/codec/length_delimited.rs (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio-util/src/time/delay_queue.rs
+  description: 'modified: tokio-util/src/time/delay_queue.rs (+1/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio-util/src/time/wheel/mod.rs
+  description: 'modified: tokio-util/src/time/wheel/mod.rs (+1/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/fs/file.rs
+  description: 'modified: tokio/src/fs/file.rs (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/io/stdio_common.rs
+  description: 'modified: tokio/src/io/stdio_common.rs (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/context.rs
+  description: 'modified: tokio/src/runtime/context.rs (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/scheduler/mod.rs
+  description: 'modified: tokio/src/runtime/scheduler/mod.rs (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/task/trace/mod.rs
+  description: 'modified: tokio/src/runtime/task/trace/mod.rs (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/time/mod.rs
+  description: 'modified: tokio/src/runtime/time/mod.rs (+1/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/time/wheel/mod.rs
+  description: 'modified: tokio/src/runtime/time/wheel/mod.rs (+1/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/runtime/time_alt/wheel/mod.rs
+  description: 'modified: tokio/src/runtime/time_alt/wheel/mod.rs (+1/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/tokio
+  files:
+  - tokio/src/task/local.rs
+  description: 'modified: tokio/src/task/local.rs (+1/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 17
+notes: 'Mined from tokio-rs/tokio PR #8336. Trigger heuristic applied. Needs review.'

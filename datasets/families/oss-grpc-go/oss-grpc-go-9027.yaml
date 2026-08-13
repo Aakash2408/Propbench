@@ -1,0 +1,126 @@
+id: oss-grpc-go-9027
+title: 'Cherry-pick #8997 to v1.80.x'
+family: uncategorized
+date: '2026-03-31'
+author: easwars
+source: github-api-mined
+source_repo: grpc/grpc-go
+source_url: https://github.com/grpc/grpc-go/pull/9027
+source_pr: 9027
+difficulty: medium
+trigger:
+  package: grpc/grpc-go
+  files:
+  - internal/balancergroup/balancergroup.go
+  intent: 'Cherry-pick #8997 to v1.80.x'
+  diff_summary: 'Primary: internal/balancergroup/balancergroup.go (+43/-25)'
+consequences:
+- package: grpc/grpc-go
+  files:
+  - balancer/weightedtarget/weightedtarget_test.go
+  description: 'modified: balancer/weightedtarget/weightedtarget_test.go (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/balancergroup/balancergroup_ext_test.go
+  description: 'added: internal/balancergroup/balancergroup_ext_test.go (+124/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/envconfig/envconfig.go
+  description: 'modified: internal/envconfig/envconfig.go (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/xds/balancer/cdsbalancer/configbuilder_childname.go
+  description: 'modified: internal/xds/balancer/cdsbalancer/configbuilder_childname.go
+    (+42/-19)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/xds/balancer/cdsbalancer/configbuilder_childname_test.go
+  description: 'modified: internal/xds/balancer/cdsbalancer/configbuilder_childname_test.go
+    (+247/-47)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/xds/balancer/cdsbalancer/e2e_test/aggregate_cluster_test.go
+  description: 'modified: internal/xds/balancer/cdsbalancer/e2e_test/aggregate_cluster_test.go
+    (+50/-14)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/xds/balancer/cdsbalancer/e2e_test/eds_impl_test.go
+  description: 'modified: internal/xds/balancer/cdsbalancer/e2e_test/eds_impl_test.go
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/xds/balancer/clustermanager/clustermanager_test.go
+  description: 'modified: internal/xds/balancer/clustermanager/clustermanager_test.go
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/xds/balancer/priority/balancer.go
+  description: 'modified: internal/xds/balancer/priority/balancer.go (+4/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/xds/balancer/priority/balancer_child.go
+  description: 'modified: internal/xds/balancer/priority/balancer_child.go (+6/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/xds/balancer/priority/balancer_priority.go
+  description: 'modified: internal/xds/balancer/priority/balancer_priority.go (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: grpc/grpc-go
+  files:
+  - internal/xds/balancer/priority/balancer_test.go
+  description: 'modified: internal/xds/balancer/priority/balancer_test.go (+286/-123)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 13
+notes: 'Mined from grpc/grpc-go PR #9027. Trigger heuristic applied. Needs review.'
