@@ -1,34 +1,34 @@
 # PropBench v1.0 — Frozen Dataset
 
-**Frozen**: 2026-08-13 10:28 UTC
-**Entries**: 268
+**Frozen**: 2026-08-13 11:08 UTC
+**Entries**: 481
 **Families**: 18
 **Seed**: 42
-**Split**: 80/19 train/test
+**Split**: 80/20 train/test
 **CV**: 5-fold
 
 ## Files
 
 | File | Description |
 |------|-------------|
-| `v1.0.yaml` | All 268 entries in one flat list |
-| `split_train.yaml` | Training split (214 entries) |
-| `split_test.yaml` | Test split (54 entries) |
+| `v1.0.yaml` | All 481 entries in one flat list |
+| `split_train.yaml` | Training split (384 entries) |
+| `split_test.yaml` | Test split (97 entries) |
 | `cv_folds.yaml` | 5-fold CV indices |
 
 ## Per-Family Breakdown
 
 | Family | Count |
 |--------|-------|
+| uncategorized | 147 |
 | configuration-evolution | 79 |
-| uncategorized | 73 |
+| interface-evolution | 71 |
+| bugfix | 63 |
 | test-evolution | 36 |
-| refactor | 18 |
-| interface-evolution | 16 |
+| refactor | 34 |
+| dependency-evolution | 18 |
 | infrastructure-evolution | 11 |
-| bugfix | 10 |
 | aas-onboarding | 3 |
-| dependency-evolution | 3 |
 | oss-fastapi | 3 |
 | cdk-infrastructure | 2 |
 | config-changes | 2 |

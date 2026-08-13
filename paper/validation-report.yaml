@@ -1,6 +1,6 @@
-total_entries: 268
-good: 259
-suspect: 9
+total_entries: 481
+good: 461
+suspect: 20
 bad: 0
 duplicates: 0
 per_family:
@@ -40,35 +40,35 @@ per_family:
     bad: 0
     total: 2
   dependency-evolution:
-    good: 3
+    good: 18
     suspect: 0
     bad: 0
-    total: 3
+    total: 18
   uncategorized:
-    good: 71
-    suspect: 2
+    good: 141
+    suspect: 6
     bad: 0
-    total: 73
+    total: 147
   test-evolution:
     good: 36
     suspect: 0
     bad: 0
     total: 36
   interface-evolution:
-    good: 13
-    suspect: 3
+    good: 62
+    suspect: 9
     bad: 0
-    total: 16
+    total: 71
   refactor:
-    good: 18
-    suspect: 0
+    good: 33
+    suspect: 1
     bad: 0
-    total: 18
+    total: 34
   bugfix:
-    good: 10
+    good: 63
     suspect: 0
     bad: 0
-    total: 10
+    total: 63
   oss-fastapi:
     good: 3
     suspect: 0
