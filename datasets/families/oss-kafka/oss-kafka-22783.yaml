@@ -1,0 +1,125 @@
+id: oss-kafka-22783
+title: 'KAFKA-20719: "Streams" group sticky assignor not sticky at startup'
+family: uncategorized
+date: '2026-08-12'
+author: gabriellefu
+source: github-api-mined
+source_repo: apache/kafka
+source_url: https://github.com/apache/kafka/pull/22783
+source_pr: 22783
+difficulty: medium
+trigger:
+  package: apache/kafka
+  files:
+  - group-coordinator/src/main/java/org/apache/kafka/coordinator/group/streams/assignor/StickyTaskAssignor.java
+  intent: 'KAFKA-20719: "Streams" group sticky assignor not sticky at startup'
+  diff_summary: 'Primary: group-coordinator/src/main/java/org/apache/kafka/coordinator/group/streams/assignor/StickyTaskAssignor.java
+    (+80/-13)'
+consequences:
+- package: apache/kafka
+  files:
+  - group-coordinator/src/test/java/org/apache/kafka/coordinator/group/streams/assignor/StickyTaskAssignorTest.java
+  description: 'modified: group-coordinator/src/test/java/org/apache/kafka/coordinator/group/streams/assignor/StickyTaskAssignorTest.java
+    (+169/-11)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - jmh-benchmarks/src/main/java/org/apache/kafka/jmh/assignor/StreamsAssignorBenchmarkUtils.java
+  description: 'modified: jmh-benchmarks/src/main/java/org/apache/kafka/jmh/assignor/StreamsAssignorBenchmarkUtils.java
+    (+50/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - jmh-benchmarks/src/main/java/org/apache/kafka/jmh/assignor/StreamsStickyAssignorBenchmark.java
+  description: 'modified: jmh-benchmarks/src/main/java/org/apache/kafka/jmh/assignor/StreamsStickyAssignorBenchmark.java
+    (+33/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - streams/integration-tests/src/test/java/org/apache/kafka/streams/integration/ColdStartStickinessIntegrationTest.java
+  description: 'modified: streams/integration-tests/src/test/java/org/apache/kafka/streams/integration/ColdStartStickinessIntegrationTest.java
+    (+0/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - streams/src/main/java/org/apache/kafka/streams/StreamsConfig.java
+  description: 'modified: streams/src/main/java/org/apache/kafka/streams/StreamsConfig.java
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - streams/src/main/java/org/apache/kafka/streams/internals/StreamsConfigUtils.java
+  description: 'modified: streams/src/main/java/org/apache/kafka/streams/internals/StreamsConfigUtils.java
+    (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - streams/src/main/java/org/apache/kafka/streams/processor/internals/StreamThread.java
+  description: 'modified: streams/src/main/java/org/apache/kafka/streams/processor/internals/StreamThread.java
+    (+8/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - streams/src/main/java/org/apache/kafka/streams/processor/internals/TaskManager.java
+  description: 'modified: streams/src/main/java/org/apache/kafka/streams/processor/internals/TaskManager.java
+    (+9/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - streams/src/main/java/org/apache/kafka/streams/processor/internals/TopologyMetadata.java
+  description: 'modified: streams/src/main/java/org/apache/kafka/streams/processor/internals/TopologyMetadata.java
+    (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - streams/src/test/java/org/apache/kafka/streams/processor/internals/TaskManagerTest.java
+  description: 'modified: streams/src/test/java/org/apache/kafka/streams/processor/internals/TaskManagerTest.java
+    (+23/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - streams/src/test/java/org/apache/kafka/streams/processor/internals/testutil/DummyStreamsConfig.java
+  description: 'modified: streams/src/test/java/org/apache/kafka/streams/processor/internals/testutil/DummyStreamsConfig.java
+    (+11/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 12
+notes: 'Mined from apache/kafka PR #22783. Trigger heuristic applied. Needs review.'

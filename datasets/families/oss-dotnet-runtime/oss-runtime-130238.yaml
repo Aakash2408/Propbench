@@ -1,0 +1,53 @@
+id: oss-runtime-130238
+title: Fix marshaller signature parameter index handling
+family: bugfix
+date: '2026-07-13'
+author: Copilot
+source: github-api-mined
+source_repo: dotnet/runtime
+source_url: https://github.com/dotnet/runtime/pull/130238
+source_pr: 130238
+difficulty: medium
+trigger:
+  package: dotnet/runtime
+  files:
+  - src/coreclr/tools/Common/TypeSystem/IL/Stubs/PInvokeILEmitter.cs
+  intent: Fix marshaller signature parameter index handling
+  diff_summary: 'Primary: src/coreclr/tools/Common/TypeSystem/IL/Stubs/PInvokeILEmitter.cs
+    (+1/-1)'
+consequences:
+- package: dotnet/runtime
+  files:
+  - src/coreclr/tools/Common/TypeSystem/Interop/IL/Marshaller.cs
+  description: 'modified: src/coreclr/tools/Common/TypeSystem/Interop/IL/Marshaller.cs
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/tests/Interop/PInvoke/Miscellaneous/CopyCtor/CopyCtorTest.cs
+  description: 'modified: src/tests/Interop/PInvoke/Miscellaneous/CopyCtor/CopyCtorTest.cs
+    (+58/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/tests/Interop/PInvoke/Miscellaneous/CopyCtor/CopyCtorUtil.il
+  description: 'modified: src/tests/Interop/PInvoke/Miscellaneous/CopyCtor/CopyCtorUtil.il
+    (+45/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from dotnet/runtime PR #130238. Trigger heuristic applied. Needs review.'

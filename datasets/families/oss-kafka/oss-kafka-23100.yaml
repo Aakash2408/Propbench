@@ -1,0 +1,44 @@
+id: oss-kafka-23100
+title: 'KAFKA-20891: Mark unused "streams" protocol configs internal'
+family: uncategorized
+date: '2026-08-12'
+author: suzhiking
+source: github-api-mined
+source_repo: apache/kafka
+source_url: https://github.com/apache/kafka/pull/23100
+source_pr: 23100
+difficulty: medium
+trigger:
+  package: apache/kafka
+  files:
+  - group-coordinator/src/main/java/org/apache/kafka/coordinator/group/GroupCoordinatorConfig.java
+  intent: 'KAFKA-20891: Mark unused "streams" protocol configs internal'
+  diff_summary: 'Primary: group-coordinator/src/main/java/org/apache/kafka/coordinator/group/GroupCoordinatorConfig.java
+    (+5/-5)'
+consequences:
+- package: apache/kafka
+  files:
+  - group-coordinator/src/main/java/org/apache/kafka/coordinator/group/GroupConfig.java
+  description: 'modified: group-coordinator/src/main/java/org/apache/kafka/coordinator/group/GroupConfig.java
+    (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - tools/src/test/java/org/apache/kafka/tools/ConfigCommandIntegrationTest.java
+  description: 'modified: tools/src/test/java/org/apache/kafka/tools/ConfigCommandIntegrationTest.java
+    (+6/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from apache/kafka PR #23100. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,103 @@
+id: oss-aspnetcore-67993
+title: Add MEV analyzers
+family: interface-evolution
+date: '2026-08-12'
+author: Youssef1313
+source: github-api-mined
+source_repo: dotnet/aspnetcore
+source_url: https://github.com/dotnet/aspnetcore/pull/67993
+source_pr: 67993
+difficulty: medium
+trigger:
+  package: dotnet/aspnetcore
+  files:
+  - src/Validation/gen/Analyzers/ValidationsDiagnosticAnalyzer.cs
+  intent: Add MEV analyzers
+  diff_summary: 'Primary: src/Validation/gen/Analyzers/ValidationsDiagnosticAnalyzer.cs
+    (+356/-0)'
+consequences:
+- package: dotnet/aspnetcore
+  files:
+  - docs/list-of-diagnostics.md
+  description: 'modified: docs/list-of-diagnostics.md (+7/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Validation/gen/AnalyzerReleases.Shipped.md
+  description: 'added: src/Validation/gen/AnalyzerReleases.Shipped.md (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Validation/gen/AnalyzerReleases.Unshipped.md
+  description: 'added: src/Validation/gen/AnalyzerReleases.Unshipped.md (+13/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Validation/gen/Analyzers/ValidatableTypeInGeneratedCodeDiagnosticAnalyzer.cs
+  description: 'added: src/Validation/gen/Analyzers/ValidatableTypeInGeneratedCodeDiagnosticAnalyzer.cs
+    (+64/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Validation/gen/Extensions/ITypeSymbolExtensions.cs
+  description: 'modified: src/Validation/gen/Extensions/ITypeSymbolExtensions.cs (+55/-9)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Validation/gen/Microsoft.Extensions.Validation.ValidationsGenerator.csproj
+  description: 'modified: src/Validation/gen/Microsoft.Extensions.Validation.ValidationsGenerator.csproj
+    (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Validation/gen/Parsers/ValidationsGenerator.TypesParser.cs
+  description: 'modified: src/Validation/gen/Parsers/ValidationsGenerator.TypesParser.cs
+    (+43/-26)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Validation/test/Microsoft.Extensions.Validation.GeneratorTests/ValidationsGenerator.Analyzer.cs
+  description: 'added: src/Validation/test/Microsoft.Extensions.Validation.GeneratorTests/ValidationsGenerator.Analyzer.cs
+    (+649/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Validation/test/Microsoft.Extensions.Validation.GeneratorTests/ValidationsGeneratorTestBase.cs
+  description: 'modified: src/Validation/test/Microsoft.Extensions.Validation.GeneratorTests/ValidationsGeneratorTestBase.cs
+    (+70/-30)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 10
+notes: 'Mined from dotnet/aspnetcore PR #67993. Trigger heuristic applied. Needs review.'

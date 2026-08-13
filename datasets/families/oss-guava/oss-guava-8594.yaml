@@ -1,0 +1,71 @@
+id: oss-guava-8594
+title: Tiny Javadoc improvements.
+family: uncategorized
+date: '2026-08-05'
+author: copybara-service[bot]
+source: github-api-mined
+source_repo: google/guava
+source_url: https://github.com/google/guava/pull/8594
+source_pr: 8594
+difficulty: medium
+trigger:
+  package: google/guava
+  files:
+  - android/guava/src/com/google/common/util/concurrent/JdkFutureAdapters.java
+  intent: Tiny Javadoc improvements.
+  diff_summary: 'Primary: android/guava/src/com/google/common/util/concurrent/JdkFutureAdapters.java
+    (+2/-2)'
+consequences:
+- package: google/guava
+  files:
+  - android/guava/src/com/google/common/collect/ImmutableSortedSet.java
+  description: 'modified: android/guava/src/com/google/common/collect/ImmutableSortedSet.java
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - android/guava/src/com/google/common/util/concurrent/ListenerCallQueue.java
+  description: 'modified: android/guava/src/com/google/common/util/concurrent/ListenerCallQueue.java
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava/src/com/google/common/collect/ImmutableSortedSet.java
+  description: 'modified: guava/src/com/google/common/collect/ImmutableSortedSet.java
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava/src/com/google/common/util/concurrent/JdkFutureAdapters.java
+  description: 'modified: guava/src/com/google/common/util/concurrent/JdkFutureAdapters.java
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava/src/com/google/common/util/concurrent/ListenerCallQueue.java
+  description: 'modified: guava/src/com/google/common/util/concurrent/ListenerCallQueue.java
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from google/guava PR #8594. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,125 @@
+id: oss-runtime-130563
+title: Improve integer CopySign with branchless bit-twiddling
+family: uncategorized
+date: '2026-07-13'
+author: tannergooding
+source: github-api-mined
+source_repo: dotnet/runtime
+source_url: https://github.com/dotnet/runtime/pull/130563
+source_pr: 130563
+difficulty: medium
+trigger:
+  package: dotnet/runtime
+  files:
+  - src/libraries/System.Private.CoreLib/src/System/Int128.cs
+  intent: Improve integer CopySign with branchless bit-twiddling
+  diff_summary: 'Primary: src/libraries/System.Private.CoreLib/src/System/Int128.cs
+    (+9/-12)'
+consequences:
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Private.CoreLib/src/System/Int16.cs
+  description: 'modified: src/libraries/System.Private.CoreLib/src/System/Int16.cs
+    (+7/-14)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Private.CoreLib/src/System/Int32.cs
+  description: 'modified: src/libraries/System.Private.CoreLib/src/System/Int32.cs
+    (+7/-14)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Private.CoreLib/src/System/Int64.cs
+  description: 'modified: src/libraries/System.Private.CoreLib/src/System/Int64.cs
+    (+7/-14)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Private.CoreLib/src/System/IntPtr.cs
+  description: 'modified: src/libraries/System.Private.CoreLib/src/System/IntPtr.cs
+    (+7/-14)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Private.CoreLib/src/System/SByte.cs
+  description: 'modified: src/libraries/System.Private.CoreLib/src/System/SByte.cs
+    (+7/-14)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Runtime/tests/System.Runtime.Tests/System/Int128Tests.GenericMath.cs
+  description: 'modified: src/libraries/System.Runtime/tests/System.Runtime.Tests/System/Int128Tests.GenericMath.cs
+    (+18/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Runtime/tests/System.Runtime.Tests/System/Int16Tests.GenericMath.cs
+  description: 'modified: src/libraries/System.Runtime/tests/System.Runtime.Tests/System/Int16Tests.GenericMath.cs
+    (+18/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Runtime/tests/System.Runtime.Tests/System/Int32Tests.GenericMath.cs
+  description: 'modified: src/libraries/System.Runtime/tests/System.Runtime.Tests/System/Int32Tests.GenericMath.cs
+    (+18/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Runtime/tests/System.Runtime.Tests/System/Int64Tests.GenericMath.cs
+  description: 'modified: src/libraries/System.Runtime/tests/System.Runtime.Tests/System/Int64Tests.GenericMath.cs
+    (+18/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Runtime/tests/System.Runtime.Tests/System/IntPtrTests.GenericMath.cs
+  description: 'modified: src/libraries/System.Runtime/tests/System.Runtime.Tests/System/IntPtrTests.GenericMath.cs
+    (+37/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Runtime/tests/System.Runtime.Tests/System/SByteTests.GenericMath.cs
+  description: 'modified: src/libraries/System.Runtime/tests/System.Runtime.Tests/System/SByteTests.GenericMath.cs
+    (+18/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 12
+notes: 'Mined from dotnet/runtime PR #130563. Trigger heuristic applied. Needs review.'

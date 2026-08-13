@@ -1,0 +1,42 @@
+id: oss-alamofire-3990
+title: Update test target deployment targets
+family: dependency-evolution
+date: '2025-11-10'
+author: jshier
+source: github-api-mined
+source_repo: Alamofire/Alamofire
+source_url: https://github.com/Alamofire/Alamofire/pull/3990
+source_pr: 3990
+difficulty: medium
+trigger:
+  package: Alamofire/Alamofire
+  files:
+  - Tests/OfflineRetrierTests.swift
+  intent: Update test target deployment targets
+  diff_summary: 'Primary: Tests/OfflineRetrierTests.swift (+1/-8)'
+consequences:
+- package: Alamofire/Alamofire
+  files:
+  - Alamofire.xcodeproj/project.pbxproj
+  description: 'modified: Alamofire.xcodeproj/project.pbxproj (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Source/Features/OfflineRetrier.swift
+  description: 'modified: Source/Features/OfflineRetrier.swift (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from Alamofire/Alamofire PR #3990. Trigger heuristic applied. Needs
+  review.'

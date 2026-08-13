@@ -1,0 +1,61 @@
+id: oss-symfony-64603
+title: '[Messenger][Routing] add `RequestContext::runWith()` to temporarily generate
+  URLs for another contex'
+family: interface-evolution
+date: '2026-08-12'
+author: Jean-Beru
+source: github-api-mined
+source_repo: symfony/symfony
+source_url: https://github.com/symfony/symfony/pull/64603
+source_pr: 64603
+difficulty: medium
+trigger:
+  package: symfony/symfony
+  files:
+  - src/Symfony/Component/Messenger/Middleware/RouterContextMiddleware.php
+  intent: '[Messenger][Routing] add `RequestContext::runWith()` to temporarily generate
+    URLs for another context'
+  diff_summary: 'Primary: src/Symfony/Component/Messenger/Middleware/RouterContextMiddleware.php
+    (+11/-34)'
+consequences:
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Messenger/composer.json
+  description: 'modified: src/Symfony/Component/Messenger/composer.json (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Routing/RequestContext.php
+  description: 'modified: src/Symfony/Component/Routing/RequestContext.php (+42/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Routing/Tests/RequestContextTest.php
+  description: 'modified: src/Symfony/Component/Routing/Tests/RequestContextTest.php
+    (+103/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Routing/Tests/RouterTest.php
+  description: 'modified: src/Symfony/Component/Routing/Tests/RouterTest.php (+25/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from symfony/symfony PR #64603. Trigger heuristic applied. Needs review.'

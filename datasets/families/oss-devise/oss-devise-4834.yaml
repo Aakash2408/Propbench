@@ -1,0 +1,65 @@
+id: oss-devise-4834
+title: Downcase authentication keys and humanize error message
+family: uncategorized
+date: '2019-01-02'
+author: grantzau
+source: github-api-mined
+source_repo: heartcombo/devise
+source_url: https://github.com/heartcombo/devise/pull/4834
+source_pr: 4834
+difficulty: medium
+trigger:
+  package: heartcombo/devise
+  files:
+  - lib/devise/failure_app.rb
+  intent: Downcase authentication keys and humanize error message
+  diff_summary: 'Primary: lib/devise/failure_app.rb (+5/-2)'
+consequences:
+- package: heartcombo/devise
+  files:
+  - test/failure_app_test.rb
+  description: 'modified: test/failure_app_test.rb (+15/-5)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - test/integration/authenticatable_test.rb
+  description: 'modified: test/integration/authenticatable_test.rb (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - test/integration/confirmable_test.rb
+  description: 'modified: test/integration/confirmable_test.rb (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - test/integration/database_authenticatable_test.rb
+  description: 'modified: test/integration/database_authenticatable_test.rb (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - test/integration/http_authenticatable_test.rb
+  description: 'modified: test/integration/http_authenticatable_test.rb (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from heartcombo/devise PR #4834. Trigger heuristic applied. Needs review.'

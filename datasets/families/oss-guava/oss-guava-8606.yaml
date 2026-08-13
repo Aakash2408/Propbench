@@ -1,0 +1,88 @@
+id: oss-guava-8606
+title: Prepare for when `FilterInputStream.in` will be treated as `@Nullable`.
+family: uncategorized
+date: '2026-08-12'
+author: copybara-service[bot]
+source: github-api-mined
+source_repo: google/guava
+source_url: https://github.com/google/guava/pull/8606
+source_pr: 8606
+difficulty: medium
+trigger:
+  package: google/guava
+  files:
+  - android/guava/src/com/google/common/io/ByteStreams.java
+  intent: Prepare for when `FilterInputStream.in` will be treated as `@Nullable`.
+  diff_summary: 'Primary: android/guava/src/com/google/common/io/ByteStreams.java
+    (+12/-8)'
+consequences:
+- package: google/guava
+  files:
+  - android/guava/src/com/google/common/hash/HashingInputStream.java
+  description: 'modified: android/guava/src/com/google/common/hash/HashingInputStream.java
+    (+7/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - android/guava/src/com/google/common/io/CountingInputStream.java
+  description: 'modified: android/guava/src/com/google/common/io/CountingInputStream.java
+    (+11/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - android/guava/src/com/google/common/io/LittleEndianDataInputStream.java
+  description: 'modified: android/guava/src/com/google/common/io/LittleEndianDataInputStream.java
+    (+10/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava/src/com/google/common/hash/HashingInputStream.java
+  description: 'modified: guava/src/com/google/common/hash/HashingInputStream.java
+    (+7/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava/src/com/google/common/io/ByteStreams.java
+  description: 'modified: guava/src/com/google/common/io/ByteStreams.java (+12/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava/src/com/google/common/io/CountingInputStream.java
+  description: 'modified: guava/src/com/google/common/io/CountingInputStream.java
+    (+11/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava/src/com/google/common/io/LittleEndianDataInputStream.java
+  description: 'modified: guava/src/com/google/common/io/LittleEndianDataInputStream.java
+    (+10/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 8
+notes: 'Mined from google/guava PR #8606. Trigger heuristic applied. Needs review.'

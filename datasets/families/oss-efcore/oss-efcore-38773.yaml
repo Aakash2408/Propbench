@@ -1,0 +1,115 @@
+id: oss-efcore-38773
+title: '[release/9.0] Update dependencies from dotnet/arcade'
+family: dependency-evolution
+date: '2026-08-10'
+author: dotnet-maestro[bot]
+source: github-api-mined
+source_repo: dotnet/efcore
+source_url: https://github.com/dotnet/efcore/pull/38773
+source_pr: 38773
+difficulty: medium
+trigger:
+  package: dotnet/efcore
+  files:
+  - eng/common/Get-GitHubAppToken.ps1
+  intent: '[release/9.0] Update dependencies from dotnet/arcade'
+  diff_summary: 'Primary: eng/common/Get-GitHubAppToken.ps1 (+154/-0)'
+consequences:
+- package: dotnet/efcore
+  files:
+  - eng/Version.Details.xml
+  description: 'modified: eng/Version.Details.xml (+6/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - eng/Versions.props
+  description: 'modified: eng/Versions.props (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - eng/common/core-templates/job/onelocbuild.yml
+  description: 'modified: eng/common/core-templates/job/onelocbuild.yml (+27/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - eng/common/core-templates/job/publish-build-assets.yml
+  description: 'modified: eng/common/core-templates/job/publish-build-assets.yml (+0/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - eng/common/core-templates/jobs/codeql-build.yml
+  description: 'modified: eng/common/core-templates/jobs/codeql-build.yml (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - eng/common/core-templates/post-build/common-variables.yml
+  description: 'modified: eng/common/core-templates/post-build/common-variables.yml
+    (+0/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - eng/common/core-templates/steps/get-github-app-token.yml
+  description: 'added: eng/common/core-templates/steps/get-github-app-token.yml (+79/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - eng/common/core-templates/steps/publish-logs.yml
+  description: 'modified: eng/common/core-templates/steps/publish-logs.yml (+0/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - eng/common/templates-official/steps/get-github-app-token.yml
+  description: 'added: eng/common/templates-official/steps/get-github-app-token.yml
+    (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - eng/common/templates/steps/get-github-app-token.yml
+  description: 'added: eng/common/templates/steps/get-github-app-token.yml (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - global.json
+  description: 'modified: global.json (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 12
+notes: 'Mined from dotnet/efcore PR #38773. Trigger heuristic applied. Needs review.'

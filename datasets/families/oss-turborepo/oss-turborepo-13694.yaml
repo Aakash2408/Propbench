@@ -1,0 +1,92 @@
+id: oss-turborepo-13694
+title: 'fix: Prune Bun wildcard workspace dev dependencies'
+family: dependency-evolution
+date: '2026-08-07'
+author: anthonyshew
+source: github-api-mined
+source_repo: vercel/turborepo
+source_url: https://github.com/vercel/turborepo/pull/13694
+source_pr: 13694
+difficulty: medium
+trigger:
+  package: vercel/turborepo
+  files:
+  - lockfile-tests/fixtures/bun-v1-issue-13693/bun.lock
+  intent: 'fix: Prune Bun wildcard workspace dev dependencies'
+  diff_summary: 'Primary: lockfile-tests/fixtures/bun-v1-issue-13693/bun.lock (+34/-0)'
+consequences:
+- package: vercel/turborepo
+  files:
+  - crates/turborepo-lib/src/commands/prune_js.rs
+  description: 'modified: crates/turborepo-lib/src/commands/prune_js.rs (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - crates/turborepo-lockfiles/src/bun/subgraph.rs
+  description: 'modified: crates/turborepo-lockfiles/src/bun/subgraph.rs (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - lockfile-tests/fixtures/bun-v1-issue-13693/meta.json
+  description: 'added: lockfile-tests/fixtures/bun-v1-issue-13693/meta.json (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - lockfile-tests/fixtures/bun-v1-issue-13693/package.json
+  description: 'added: lockfile-tests/fixtures/bun-v1-issue-13693/package.json (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - lockfile-tests/fixtures/bun-v1-issue-13693/packages/backend/package.json
+  description: 'added: lockfile-tests/fixtures/bun-v1-issue-13693/packages/backend/package.json
+    (+11/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - lockfile-tests/fixtures/bun-v1-issue-13693/packages/test-recordings/package.json
+  description: 'added: lockfile-tests/fixtures/bun-v1-issue-13693/packages/test-recordings/package.json
+    (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - lockfile-tests/fixtures/bun-v1-issue-13693/packages/utils/package.json
+  description: 'added: lockfile-tests/fixtures/bun-v1-issue-13693/packages/utils/package.json
+    (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - lockfile-tests/fixtures/bun-v1-issue-13693/turbo.json
+  description: 'added: lockfile-tests/fixtures/bun-v1-issue-13693/turbo.json (+9/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 9
+notes: 'Mined from vercel/turborepo PR #13694. Trigger heuristic applied. Needs review.'

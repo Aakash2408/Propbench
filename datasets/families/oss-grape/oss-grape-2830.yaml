@@ -1,0 +1,59 @@
+id: oss-grape-2830
+title: Remove Grape::Util::InheritableValues, resolving inheritable settings by walking
+  parent
+family: refactor
+date: '2026-07-27'
+author: ericproulx
+source: github-api-mined
+source_repo: ruby-grape/grape
+source_url: https://github.com/ruby-grape/grape/pull/2830
+source_pr: 2830
+difficulty: medium
+trigger:
+  package: ruby-grape/grape
+  files:
+  - lib/grape/util/inheritable_setting.rb
+  intent: Remove Grape::Util::InheritableValues, resolving inheritable settings by
+    walking parent
+  diff_summary: 'Primary: lib/grape/util/inheritable_setting.rb (+102/-56)'
+consequences:
+- package: ruby-grape/grape
+  files:
+  - .rubocop.yml
+  description: 'modified: .rubocop.yml (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - lib/grape/util/inheritable_values.rb
+  description: 'removed: lib/grape/util/inheritable_values.rb (+0/-90)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - spec/grape/util/inheritable_setting_spec.rb
+  description: 'modified: spec/grape/util/inheritable_setting_spec.rb (+42/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - spec/grape/util/inheritable_values_spec.rb
+  description: 'removed: spec/grape/util/inheritable_values_spec.rb (+0/-108)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from ruby-grape/grape PR #2830. Trigger heuristic applied. Needs review.'

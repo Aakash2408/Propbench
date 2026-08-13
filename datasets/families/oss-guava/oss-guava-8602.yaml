@@ -1,0 +1,99 @@
+id: oss-guava-8602
+title: Address remaining https://errorprone.info/bugpattern/AssignmentExpression warnings.
+family: interface-evolution
+date: '2026-08-10'
+author: copybara-service[bot]
+source: github-api-mined
+source_repo: google/guava
+source_url: https://github.com/google/guava/pull/8602
+source_pr: 8602
+difficulty: medium
+trigger:
+  package: google/guava
+  files:
+  - android/guava-tests/benchmark/com/google/common/math/ApacheBenchmark.java
+  intent: Address remaining https://errorprone.info/bugpattern/AssignmentExpression
+    warnings.
+  diff_summary: 'Primary: android/guava-tests/benchmark/com/google/common/math/ApacheBenchmark.java
+    (+2/-1)'
+consequences:
+- package: google/guava
+  files:
+  - android/guava-tests/test/com/google/common/base/FinalizableReferenceQueueTest.java
+  description: 'modified: android/guava-tests/test/com/google/common/base/FinalizableReferenceQueueTest.java
+    (+2/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - android/guava/src/com/google/common/cache/LongAdder.java
+  description: 'modified: android/guava/src/com/google/common/cache/LongAdder.java
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - android/guava/src/com/google/common/cache/Striped64.java
+  description: 'modified: android/guava/src/com/google/common/cache/Striped64.java
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - android/guava/src/com/google/common/collect/ObjectCountHashMap.java
+  description: 'modified: android/guava/src/com/google/common/collect/ObjectCountHashMap.java
+    (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - android/guava/src/com/google/common/hash/LongAdder.java
+  description: 'modified: android/guava/src/com/google/common/hash/LongAdder.java
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - android/guava/src/com/google/common/hash/Striped64.java
+  description: 'modified: android/guava/src/com/google/common/hash/Striped64.java
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava-tests/benchmark/com/google/common/math/ApacheBenchmark.java
+  description: 'modified: guava-tests/benchmark/com/google/common/math/ApacheBenchmark.java
+    (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava-tests/test/com/google/common/base/FinalizableReferenceQueueTest.java
+  description: 'modified: guava-tests/test/com/google/common/base/FinalizableReferenceQueueTest.java
+    (+2/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 9
+notes: 'Mined from google/guava PR #8602. Trigger heuristic applied. Needs review.'

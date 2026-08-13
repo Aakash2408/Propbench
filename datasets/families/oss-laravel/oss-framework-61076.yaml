@@ -1,0 +1,57 @@
+id: oss-framework-61076
+title: '[14.x] Adjust Queue pause methods'
+family: uncategorized
+date: '2026-08-06'
+author: jackbayliss
+source: github-api-mined
+source_repo: laravel/framework
+source_url: https://github.com/laravel/framework/pull/61076
+source_pr: 61076
+difficulty: medium
+trigger:
+  package: laravel/framework
+  files:
+  - src/Illuminate/Queue/QueueManager.php
+  intent: '[14.x] Adjust Queue pause methods'
+  diff_summary: 'Primary: src/Illuminate/Queue/QueueManager.php (+23/-13)'
+consequences:
+- package: laravel/framework
+  files:
+  - src/Illuminate/Queue/Console/PauseCommand.php
+  description: 'modified: src/Illuminate/Queue/Console/PauseCommand.php (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - src/Illuminate/Queue/Console/ResumeCommand.php
+  description: 'modified: src/Illuminate/Queue/Console/ResumeCommand.php (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - src/Illuminate/Queue/Worker.php
+  description: 'modified: src/Illuminate/Queue/Worker.php (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - tests/Queue/QueuePauseResumeTest.php
+  description: 'modified: tests/Queue/QueuePauseResumeTest.php (+40/-32)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from laravel/framework PR #61076. Trigger heuristic applied. Needs review.'

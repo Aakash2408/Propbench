@@ -1,0 +1,68 @@
+id: oss-rails-58060
+title: Ractor compatible Active Support Notifications
+family: interface-evolution
+date: '2026-08-07'
+author: Edouard-chin
+source: github-api-mined
+source_repo: rails/rails
+source_url: https://github.com/rails/rails/pull/58060
+source_pr: 58060
+difficulty: medium
+trigger:
+  package: rails/rails
+  files:
+  - activesupport/lib/active_support/notifications.rb
+  intent: Ractor compatible Active Support Notifications
+  diff_summary: 'Primary: activesupport/lib/active_support/notifications.rb (+44/-4)'
+consequences:
+- package: rails/rails
+  files:
+  - activerecord/test/cases/scoping/default_scoping_test.rb
+  description: 'modified: activerecord/test/cases/scoping/default_scoping_test.rb
+    (+15/-12)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activesupport/lib/active_support/notifications/fanout.rb
+  description: 'modified: activesupport/lib/active_support/notifications/fanout.rb
+    (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activesupport/lib/active_support/ractors.rb
+  description: 'modified: activesupport/lib/active_support/ractors.rb (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activesupport/test/notifications_test.rb
+  description: 'modified: activesupport/test/notifications_test.rb (+55/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - railties/test/application/initializers/frameworks_test.rb
+  description: 'modified: railties/test/application/initializers/frameworks_test.rb
+    (+49/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from rails/rails PR #58060. Trigger heuristic applied. Needs review.'

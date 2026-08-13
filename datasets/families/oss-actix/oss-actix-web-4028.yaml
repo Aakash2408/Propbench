@@ -1,0 +1,146 @@
+id: oss-actix-web-4028
+title: 'test(multipart,derive): move trybuild tests'
+family: refactor
+date: '2026-06-21'
+author: JohnTitor
+source: github-api-mined
+source_repo: actix/actix-web
+source_url: https://github.com/actix/actix-web/pull/4028
+source_pr: 4028
+difficulty: medium
+trigger:
+  package: actix/actix-web
+  files:
+  - actix-multipart-derive/src/lib.rs
+  intent: 'test(multipart,derive): move trybuild tests'
+  diff_summary: 'Primary: actix-multipart-derive/src/lib.rs (+5/-97)'
+consequences:
+- package: actix/actix-web
+  files:
+  - Cargo.lock
+  description: 'modified: Cargo.lock (+2/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: actix/actix-web
+  files:
+  - actix-multipart-derive/Cargo.toml
+  description: 'modified: actix-multipart-derive/Cargo.toml (+0/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: actix/actix-web
+  files:
+  - actix-multipart/Cargo.toml
+  description: 'modified: actix-multipart/Cargo.toml (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: actix/actix-web
+  files:
+  - actix-multipart/src/form/mod.rs
+  description: 'modified: actix-multipart/src/form/mod.rs (+101/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: actix/actix-web
+  files:
+  - actix-multipart/tests/trybuild.rs
+  description: 'renamed: actix-multipart/tests/trybuild.rs (+0/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: actix/actix-web
+  files:
+  - actix-multipart/tests/trybuild/all-required.rs
+  description: 'renamed: actix-multipart/tests/trybuild/all-required.rs (+0/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: actix/actix-web
+  files:
+  - actix-multipart/tests/trybuild/deny-duplicates.rs
+  description: 'renamed: actix-multipart/tests/trybuild/deny-duplicates.rs (+0/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: actix/actix-web
+  files:
+  - actix-multipart/tests/trybuild/deny-parse-fail.rs
+  description: 'renamed: actix-multipart/tests/trybuild/deny-parse-fail.rs (+0/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: actix/actix-web
+  files:
+  - actix-multipart/tests/trybuild/deny-parse-fail.stderr
+  description: 'renamed: actix-multipart/tests/trybuild/deny-parse-fail.stderr (+0/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: actix/actix-web
+  files:
+  - actix-multipart/tests/trybuild/deny-unknown.rs
+  description: 'renamed: actix-multipart/tests/trybuild/deny-unknown.rs (+0/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: actix/actix-web
+  files:
+  - actix-multipart/tests/trybuild/optional-and-list.rs
+  description: 'renamed: actix-multipart/tests/trybuild/optional-and-list.rs (+0/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: actix/actix-web
+  files:
+  - actix-multipart/tests/trybuild/rename.rs
+  description: 'renamed: actix-multipart/tests/trybuild/rename.rs (+0/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: actix/actix-web
+  files:
+  - actix-multipart/tests/trybuild/size-limit-parse-fail.rs
+  description: 'renamed: actix-multipart/tests/trybuild/size-limit-parse-fail.rs (+0/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: actix/actix-web
+  files:
+  - actix-multipart/tests/trybuild/size-limit-parse-fail.stderr
+  description: 'renamed: actix-multipart/tests/trybuild/size-limit-parse-fail.stderr
+    (+0/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: actix/actix-web
+  files:
+  - actix-multipart/tests/trybuild/size-limits.rs
+  description: 'renamed: actix-multipart/tests/trybuild/size-limits.rs (+0/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 16
+notes: 'Mined from actix/actix-web PR #4028. Trigger heuristic applied. Needs review.'

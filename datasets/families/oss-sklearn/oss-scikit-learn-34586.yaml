@@ -1,0 +1,43 @@
+id: oss-scikit-learn-34586
+title: PERF Faster random forest training, by removing redundant memoryview creation
+family: uncategorized
+date: '2026-08-04'
+author: itamarst
+source: github-api-mined
+source_repo: scikit-learn/scikit-learn
+source_url: https://github.com/scikit-learn/scikit-learn/pull/34586
+source_pr: 34586
+difficulty: medium
+trigger:
+  package: scikit-learn/scikit-learn
+  files:
+  - sklearn/tree/_partitioner.pyx
+  intent: PERF Faster random forest training, by removing redundant memoryview creation
+  diff_summary: 'Primary: sklearn/tree/_partitioner.pyx (+28/-41)'
+consequences:
+- package: scikit-learn/scikit-learn
+  files:
+  - doc/whats_new/upcoming_changes/sklearn.ensemble/34586.efficiency.rst
+  description: 'added: doc/whats_new/upcoming_changes/sklearn.ensemble/34586.efficiency.rst
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - meson.build
+  description: 'modified: meson.build (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from scikit-learn/scikit-learn PR #34586. Trigger heuristic applied.
+  Needs review.'

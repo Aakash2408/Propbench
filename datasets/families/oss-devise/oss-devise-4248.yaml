@@ -1,0 +1,49 @@
+id: oss-devise-4248
+title: Added translations according to unlock strategy
+family: interface-evolution
+date: '2018-03-29'
+author: sivagollapalli
+source: github-api-mined
+source_repo: heartcombo/devise
+source_url: https://github.com/heartcombo/devise/pull/4248
+source_pr: 4248
+difficulty: medium
+trigger:
+  package: heartcombo/devise
+  files:
+  - lib/devise/models/lockable.rb
+  intent: Added translations according to unlock strategy
+  diff_summary: 'Primary: lib/devise/models/lockable.rb (+9/-1)'
+consequences:
+- package: heartcombo/devise
+  files:
+  - config/locales/en.yml
+  description: 'modified: config/locales/en.yml (+5/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - test/integration/lockable_test.rb
+  description: 'modified: test/integration/lockable_test.rb (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - test/models/lockable_test.rb
+  description: 'modified: test/models/lockable_test.rb (+18/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from heartcombo/devise PR #4248. Trigger heuristic applied. Needs review.'

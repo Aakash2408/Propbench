@@ -1,0 +1,74 @@
+id: oss-hugo-15175
+title: Add Data.Artifacts to css.Build and js.Build
+family: interface-evolution
+date: '2026-08-08'
+author: bep
+source: github-api-mined
+source_repo: gohugoio/hugo
+source_url: https://github.com/gohugoio/hugo/pull/15175
+source_pr: 15175
+difficulty: medium
+trigger:
+  package: gohugoio/hugo
+  files:
+  - resources/artifact.go
+  intent: Add Data.Artifacts to css.Build and js.Build
+  diff_summary: 'Primary: resources/artifact.go (+50/-0)'
+consequences:
+- package: gohugoio/hugo
+  files:
+  - media/builtin.go
+  description: 'modified: media/builtin.go (+11/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - media/config_test.go
+  description: 'modified: media/config_test.go (+4/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - resources/resource_transformers/js/build.go
+  description: 'modified: resources/resource_transformers/js/build.go (+26/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - resources/resource_transformers/js/js_integration_test.go
+  description: 'modified: resources/resource_transformers/js/js_integration_test.go
+    (+36/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - resources/transform.go
+  description: 'modified: resources/transform.go (+4/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - tpl/css/build_integration_test.go
+  description: 'modified: tpl/css/build_integration_test.go (+51/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from gohugoio/hugo PR #15175. Trigger heuristic applied. Needs review.'

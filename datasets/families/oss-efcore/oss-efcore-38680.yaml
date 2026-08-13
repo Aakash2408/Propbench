@@ -1,0 +1,79 @@
+id: oss-efcore-38680
+title: '[automated] Merge branch ''release/10.0'' => ''main'''
+family: uncategorized
+date: '2026-07-30'
+author: github-actions[bot]
+source: github-api-mined
+source_repo: dotnet/efcore
+source_url: https://github.com/dotnet/efcore/pull/38680
+source_pr: 38680
+difficulty: medium
+trigger:
+  package: dotnet/efcore
+  files:
+  - test/EFCore.Relational.Specification.Tests/Query/AdHocJsonQueryRelationalTestBase.cs
+  intent: '[automated] Merge branch ''release/10.0'' => ''main'''
+  diff_summary: 'Primary: test/EFCore.Relational.Specification.Tests/Query/AdHocJsonQueryRelationalTestBase.cs
+    (+92/-0)'
+consequences:
+- package: dotnet/efcore
+  files:
+  - eng/common/core-templates/job/onelocbuild.yml
+  description: 'modified: eng/common/core-templates/job/onelocbuild.yml (+19/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - src/EFCore.SqlServer/Query/Internal/SqlServerQuerySqlGenerator.cs
+  description: 'modified: src/EFCore.SqlServer/Query/Internal/SqlServerQuerySqlGenerator.cs
+    (+16/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - test/EFCore.SqlServer.FunctionalTests/Query/AdHocJsonQuerySqlServerTestBase.cs
+  description: 'modified: test/EFCore.SqlServer.FunctionalTests/Query/AdHocJsonQuerySqlServerTestBase.cs
+    (+38/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - test/EFCore.SqlServer.FunctionalTests/Query/JsonQueryJsonTypeSqlServerFixture.cs
+  description: 'modified: test/EFCore.SqlServer.FunctionalTests/Query/JsonQueryJsonTypeSqlServerFixture.cs
+    (+9/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - test/EFCore.SqlServer.FunctionalTests/Query/JsonQueryJsonTypeSqlServerTest.cs
+  description: 'modified: test/EFCore.SqlServer.FunctionalTests/Query/JsonQueryJsonTypeSqlServerTest.cs
+    (+214/-40)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - test/EFCore.Sqlite.FunctionalTests/Query/AdHocJsonQuerySqliteTest.cs
+  description: 'modified: test/EFCore.Sqlite.FunctionalTests/Query/AdHocJsonQuerySqliteTest.cs
+    (+4/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from dotnet/efcore PR #38680. Trigger heuristic applied. Needs review.'

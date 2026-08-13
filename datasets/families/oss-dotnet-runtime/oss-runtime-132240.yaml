@@ -1,0 +1,134 @@
+id: oss-runtime-132240
+title: Fix CoreLib extern modifier ordering
+family: bugfix
+date: '2026-08-13'
+author: Copilot
+source: github-api-mined
+source_repo: dotnet/runtime
+source_url: https://github.com/dotnet/runtime/pull/132240
+source_pr: 132240
+difficulty: medium
+trigger:
+  package: dotnet/runtime
+  files:
+  - src/tools/illink/src/ILLink.CodeFix/UnsafeModifierCodeFixHelpers.cs
+  intent: Fix CoreLib extern modifier ordering
+  diff_summary: 'Primary: src/tools/illink/src/ILLink.CodeFix/UnsafeModifierCodeFixHelpers.cs
+    (+36/-12)'
+consequences:
+- package: dotnet/runtime
+  files:
+  - src/coreclr/System.Private.CoreLib/src/System/Environment.CoreCLR.cs
+  description: 'modified: src/coreclr/System.Private.CoreLib/src/System/Environment.CoreCLR.cs
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/System.Private.CoreLib/src/System/GC.CoreCLR.cs
+  description: 'modified: src/coreclr/System.Private.CoreLib/src/System/GC.CoreCLR.cs
+    (+11/-11)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/System.Private.CoreLib/src/System/Math.CoreCLR.cs
+  description: 'modified: src/coreclr/System.Private.CoreLib/src/System/Math.CoreCLR.cs
+    (+23/-23)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/System.Private.CoreLib/src/System/MathF.CoreCLR.cs
+  description: 'modified: src/coreclr/System.Private.CoreLib/src/System/MathF.CoreCLR.cs
+    (+23/-23)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/System.Private.CoreLib/src/System/Runtime/CompilerServices/RuntimeHelpers.CoreCLR.cs
+  description: 'modified: src/coreclr/System.Private.CoreLib/src/System/Runtime/CompilerServices/RuntimeHelpers.CoreCLR.cs
+    (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/System.Private.CoreLib/src/System/Runtime/GCSettings.CoreCLR.cs
+  description: 'modified: src/coreclr/System.Private.CoreLib/src/System/Runtime/GCSettings.CoreCLR.cs
+    (+5/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/System.Private.CoreLib/src/System/Runtime/InteropServices/Marshal.CoreCLR.cs
+  description: 'modified: src/coreclr/System.Private.CoreLib/src/System/Runtime/InteropServices/Marshal.CoreCLR.cs
+    (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/System.Private.CoreLib/src/System/Runtime/JitInfo.CoreCLR.cs
+  description: 'modified: src/coreclr/System.Private.CoreLib/src/System/Runtime/JitInfo.CoreCLR.cs
+    (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/System.Private.CoreLib/src/System/StubHelpers.cs
+  description: 'modified: src/coreclr/System.Private.CoreLib/src/System/StubHelpers.cs
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Private.CoreLib/src/System/String.cs
+  description: 'modified: src/libraries/System.Private.CoreLib/src/System/String.cs
+    (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/tools/illink/src/ILLink.CodeFix/AddUnsafeToExternCodeFixProvider.cs
+  description: 'modified: src/tools/illink/src/ILLink.CodeFix/AddUnsafeToExternCodeFixProvider.cs
+    (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/tools/illink/test/ILLink.RoslynAnalyzer.Tests/AddUnsafeToExternCodeFixTests.cs
+  description: 'modified: src/tools/illink/test/ILLink.RoslynAnalyzer.Tests/AddUnsafeToExternCodeFixTests.cs
+    (+27/-11)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 13
+notes: 'Mined from dotnet/runtime PR #132240. Trigger heuristic applied. Needs review.'

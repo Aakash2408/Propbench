@@ -1,0 +1,52 @@
+id: oss-angular-69724
+title: 'fix(docs-infra): avoid search dialog empty-state flicker while re-que…'
+family: bugfix
+date: '2026-07-10'
+author: erkamyaman
+source: github-api-mined
+source_repo: angular/angular
+source_url: https://github.com/angular/angular/pull/69724
+source_pr: 69724
+difficulty: medium
+trigger:
+  package: angular/angular
+  files:
+  - adev/shared-docs/services/search.service.ts
+  intent: 'fix(docs-infra): avoid search dialog empty-state flicker while re-que…'
+  diff_summary: 'Primary: adev/shared-docs/services/search.service.ts (+14/-0)'
+consequences:
+- package: angular/angular
+  files:
+  - adev/shared-docs/components/search-dialog/search-dialog.component.html
+  description: 'modified: adev/shared-docs/components/search-dialog/search-dialog.component.html
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - adev/shared-docs/components/search-dialog/search-dialog.component.spec.ts
+  description: 'modified: adev/shared-docs/components/search-dialog/search-dialog.component.spec.ts
+    (+29/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - adev/shared-docs/components/search-dialog/search-dialog.component.ts
+  description: 'modified: adev/shared-docs/components/search-dialog/search-dialog.component.ts
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from angular/angular PR #69724. Trigger heuristic applied. Needs review.'

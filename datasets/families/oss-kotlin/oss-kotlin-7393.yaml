@@ -1,0 +1,170 @@
+id: oss-kotlin-7393
+title: Fix closeable resources use
+family: bugfix
+date: '2026-08-12'
+author: ligee
+source: github-api-mined
+source_repo: JetBrains/kotlin
+source_url: https://github.com/JetBrains/kotlin/pull/7393
+source_pr: 7393
+difficulty: medium
+trigger:
+  package: JetBrains/kotlin
+  files:
+  - compiler/util-io/src/org/jetbrains/kotlin/io/ZipFileSystemUtils.kt
+  intent: Fix closeable resources use
+  diff_summary: 'Primary: compiler/util-io/src/org/jetbrains/kotlin/io/ZipFileSystemUtils.kt
+    (+25/-23)'
+consequences:
+- package: JetBrains/kotlin
+  files:
+  - analysis/analysis-api-standalone/analysis-api-standalone-native/tests/org/jetbrains/kotlin/analysis/api/standalone/konan/fir/test/cases/session/builder/testUtils.kt
+  description: 'modified: analysis/analysis-api-standalone/analysis-api-standalone-native/tests/org/jetbrains/kotlin/analysis/api/standalone/konan/fir/test/cases/session/builder/testUtils.kt
+    (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - analysis/analysis-api-standalone/testFixtures/org/jetbrains/kotlin/analysis/api/standalone/fir/test/cases/session/builder/sessionBuilderTestUtils.kt
+  description: 'modified: analysis/analysis-api-standalone/testFixtures/org/jetbrains/kotlin/analysis/api/standalone/fir/test/cases/session/builder/sessionBuilderTestUtils.kt
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/incremental-compilation-impl/src/org/jetbrains/kotlin/incremental/AbiSnapshot.kt
+  description: 'modified: compiler/incremental-compilation-impl/src/org/jetbrains/kotlin/incremental/AbiSnapshot.kt
+    (+8/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/incremental-compilation-impl/src/org/jetbrains/kotlin/incremental/BuildDiffsStorage.kt
+  description: 'modified: compiler/incremental-compilation-impl/src/org/jetbrains/kotlin/incremental/BuildDiffsStorage.kt
+    (+22/-18)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/incremental-compilation-impl/src/org/jetbrains/kotlin/incremental/BuildInfo.kt
+  description: 'modified: compiler/incremental-compilation-impl/src/org/jetbrains/kotlin/incremental/BuildInfo.kt
+    (+8/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/ir/backend.js/src/org/jetbrains/kotlin/ir/backend/js/ic/CacheUpdater.kt
+  description: 'modified: compiler/ir/backend.js/src/org/jetbrains/kotlin/ir/backend/js/ic/CacheUpdater.kt
+    (+5/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/ir/backend.js/src/org/jetbrains/kotlin/ir/backend/js/transformers/irToJs/CompilationOutputs.kt
+  description: 'modified: compiler/ir/backend.js/src/org/jetbrains/kotlin/ir/backend/js/transformers/irToJs/CompilationOutputs.kt
+    (+6/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/util/src/org/jetbrains/kotlin/utils/LibraryUtils.kt
+  description: 'modified: compiler/util/src/org/jetbrains/kotlin/utils/LibraryUtils.kt
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - libraries/scripting/jvm-host-test/test/kotlin/script/experimental/jvmhost/test/CachingTest.kt
+  description: 'modified: libraries/scripting/jvm-host-test/test/kotlin/script/experimental/jvmhost/test/CachingTest.kt
+    (+26/-24)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - libraries/scripting/jvm-host-test/test/kotlin/script/experimental/jvmhost/test/ClassPathTest.kt
+  description: 'modified: libraries/scripting/jvm-host-test/test/kotlin/script/experimental/jvmhost/test/ClassPathTest.kt
+    (+9/-8)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - libraries/scripting/jvm-host-test/test/kotlin/script/experimental/jvmhost/test/ScriptingHostTest.kt
+  description: 'modified: libraries/scripting/jvm-host-test/test/kotlin/script/experimental/jvmhost/test/ScriptingHostTest.kt
+    (+22/-19)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - libraries/scripting/jvm/src/kotlin/script/experimental/jvm/impl/KJvmCompiledScript.kt
+  description: 'modified: libraries/scripting/jvm/src/kotlin/script/experimental/jvm/impl/KJvmCompiledScript.kt
+    (+4/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - libraries/scripting/jvm/src/kotlin/script/experimental/jvm/util/jvmClassLoaderUtil.kt
+  description: 'modified: libraries/scripting/jvm/src/kotlin/script/experimental/jvm/util/jvmClassLoaderUtil.kt
+    (+6/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - libraries/scripting/jvm/test/kotlin/script/experimental/jvm/test/utilsTest.kt
+  description: 'modified: libraries/scripting/jvm/test/kotlin/script/experimental/jvm/test/utilsTest.kt
+    (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - plugins/kapt/kapt-base/src/org/jetbrains/kotlin/kapt/base/ProcessorLoader.kt
+  description: 'modified: plugins/kapt/kapt-base/src/org/jetbrains/kotlin/kapt/base/ProcessorLoader.kt
+    (+4/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - plugins/scripting/scripting-compiler-impl/src/org/jetbrains/kotlin/scripting/definitions/ScriptiDefinitionsFromClasspathDiscoverySource.kt
+  description: 'modified: plugins/scripting/scripting-compiler-impl/src/org/jetbrains/kotlin/scripting/definitions/ScriptiDefinitionsFromClasspathDiscoverySource.kt
+    (+11/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 17
+notes: 'Mined from JetBrains/kotlin PR #7393. Trigger heuristic applied. Needs review.'

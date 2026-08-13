@@ -1,0 +1,49 @@
+id: oss-celery-10280
+title: 'fix(events): stop leaking exceptions and cancel stale Heart timers'
+family: bugfix
+date: '2026-04-23'
+author: Song-Junho97
+source: github-api-mined
+source_repo: celery/celery
+source_url: https://github.com/celery/celery/pull/10280
+source_pr: 10280
+difficulty: medium
+trigger:
+  package: celery/celery
+  files:
+  - t/unit/events/test_events.py
+  intent: 'fix(events): stop leaking exceptions and cancel stale Heart timers'
+  diff_summary: 'Primary: t/unit/events/test_events.py (+45/-0)'
+consequences:
+- package: celery/celery
+  files:
+  - celery/events/dispatcher.py
+  description: 'modified: celery/events/dispatcher.py (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: celery/celery
+  files:
+  - celery/worker/consumer/events.py
+  description: 'modified: celery/worker/consumer/events.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: celery/celery
+  files:
+  - t/unit/worker/test_worker.py
+  description: 'modified: t/unit/worker/test_worker.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from celery/celery PR #10280. Trigger heuristic applied. Needs review.'

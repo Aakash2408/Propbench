@@ -1,0 +1,153 @@
+id: oss-kotlin-7408
+title: '[KMP parser] Fix "string literal content is remapped to IDENTIFIER if it matches
+  a soft keyword"'
+family: bugfix
+date: '2026-08-12'
+author: KvanTTT
+source: github-api-mined
+source_repo: JetBrains/kotlin
+source_url: https://github.com/JetBrains/kotlin/pull/7408
+source_pr: 7408
+difficulty: medium
+trigger:
+  package: JetBrains/kotlin
+  files:
+  - compiler/psi/psi-impl/testData/psi/SoftKeywordRemapOnRollback.txt
+  intent: '[KMP parser] Fix "string literal content is remapped to IDENTIFIER if it
+    matches a soft keyword"'
+  diff_summary: 'Primary: compiler/psi/psi-impl/testData/psi/SoftKeywordRemapOnRollback.txt
+    (+57/-0)'
+consequences:
+- package: JetBrains/kotlin
+  files:
+  - analysis/stubs/tests-gen/org/jetbrains/kotlin/analysis/stubs/SourceStubsTestGenerated.java
+  description: 'modified: analysis/stubs/tests-gen/org/jetbrains/kotlin/analysis/stubs/SourceStubsTestGenerated.java
+    (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - analysis/stubs/tests-gen/org/jetbrains/kotlin/analysis/stubs/common/CompiledCommonStubsTestGenerated.java
+  description: 'modified: analysis/stubs/tests-gen/org/jetbrains/kotlin/analysis/stubs/common/CompiledCommonStubsTestGenerated.java
+    (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - analysis/stubs/tests-gen/org/jetbrains/kotlin/analysis/stubs/js/CompiledJsStubsTestGenerated.java
+  description: 'modified: analysis/stubs/tests-gen/org/jetbrains/kotlin/analysis/stubs/js/CompiledJsStubsTestGenerated.java
+    (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - analysis/stubs/tests-gen/org/jetbrains/kotlin/analysis/stubs/jvm/CompiledJvmStubsTestGenerated.java
+  description: 'modified: analysis/stubs/tests-gen/org/jetbrains/kotlin/analysis/stubs/jvm/CompiledJvmStubsTestGenerated.java
+    (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/multiplatform-parsing/build.gradle.kts
+  description: 'modified: compiler/multiplatform-parsing/build.gradle.kts (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/multiplatform-parsing/common/src/org/jetbrains/kotlin/kmp/lexer/KtTokens.kt
+  description: 'modified: compiler/multiplatform-parsing/common/src/org/jetbrains/kotlin/kmp/lexer/KtTokens.kt
+    (+3/-9)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/multiplatform-parsing/common/src/org/jetbrains/kotlin/kmp/parser/utils/AbstractKotlinParsing.kt
+  description: 'modified: compiler/multiplatform-parsing/common/src/org/jetbrains/kotlin/kmp/parser/utils/AbstractKotlinParsing.kt
+    (+7/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/multiplatform-parsing/jvm/test/org/jetbrains/kotlin/kmp/AbstractRecognizerTests.kt
+  description: 'modified: compiler/multiplatform-parsing/jvm/test/org/jetbrains/kotlin/kmp/AbstractRecognizerTests.kt
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/psi/psi-impl/testData/psi/SoftKeywordRemapOnRollback.compiled.stubs.txt
+  description: 'added: compiler/psi/psi-impl/testData/psi/SoftKeywordRemapOnRollback.compiled.stubs.txt
+    (+14/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/psi/psi-impl/testData/psi/SoftKeywordRemapOnRollback.decompiledText.txt
+  description: 'added: compiler/psi/psi-impl/testData/psi/SoftKeywordRemapOnRollback.decompiledText.txt
+    (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/psi/psi-impl/testData/psi/SoftKeywordRemapOnRollback.knm.compiled.stubs.txt
+  description: 'added: compiler/psi/psi-impl/testData/psi/SoftKeywordRemapOnRollback.knm.compiled.stubs.txt
+    (+11/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/psi/psi-impl/testData/psi/SoftKeywordRemapOnRollback.kt
+  description: 'added: compiler/psi/psi-impl/testData/psi/SoftKeywordRemapOnRollback.kt
+    (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/psi/psi-impl/testData/psi/SoftKeywordRemapOnRollback.stubs.txt
+  description: 'added: compiler/psi/psi-impl/testData/psi/SoftKeywordRemapOnRollback.stubs.txt
+    (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/psi/psi-impl/tests-gen/org/jetbrains/kotlin/psi/parsing/PsiParsingTestGenerated.java
+  description: 'modified: compiler/psi/psi-impl/tests-gen/org/jetbrains/kotlin/psi/parsing/PsiParsingTestGenerated.java
+    (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 15
+notes: 'Mined from JetBrains/kotlin PR #7408. Trigger heuristic applied. Needs review.'

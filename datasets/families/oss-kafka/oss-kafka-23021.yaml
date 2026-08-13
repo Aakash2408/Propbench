@@ -1,0 +1,71 @@
+id: oss-kafka-23021
+title: 'KAFKA-20837: Batch the produce in Connect integration tests'
+family: uncategorized
+date: '2026-08-11'
+author: mingyen066
+source: github-api-mined
+source_repo: apache/kafka
+source_url: https://github.com/apache/kafka/pull/23021
+source_pr: 23021
+difficulty: medium
+trigger:
+  package: apache/kafka
+  files:
+  - connect/runtime/src/testFixtures/java/org/apache/kafka/connect/util/clusters/EmbeddedKafkaCluster.java
+  intent: 'KAFKA-20837: Batch the produce in Connect integration tests'
+  diff_summary: 'Primary: connect/runtime/src/testFixtures/java/org/apache/kafka/connect/util/clusters/EmbeddedKafkaCluster.java
+    (+14/-5)'
+consequences:
+- package: apache/kafka
+  files:
+  - connect/mirror/src/test/java/org/apache/kafka/connect/mirror/integration/MirrorConnectorsIntegrationBaseTest.java
+  description: 'modified: connect/mirror/src/test/java/org/apache/kafka/connect/mirror/integration/MirrorConnectorsIntegrationBaseTest.java
+    (+11/-13)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - connect/runtime/src/test/java/org/apache/kafka/connect/integration/ErrorHandlingIntegrationTest.java
+  description: 'modified: connect/runtime/src/test/java/org/apache/kafka/connect/integration/ErrorHandlingIntegrationTest.java
+    (+8/-6)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - connect/runtime/src/test/java/org/apache/kafka/connect/integration/ExampleConnectIntegrationTest.java
+  description: 'modified: connect/runtime/src/test/java/org/apache/kafka/connect/integration/ExampleConnectIntegrationTest.java
+    (+5/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - connect/runtime/src/test/java/org/apache/kafka/connect/integration/MonitorableSinkIntegrationTest.java
+  description: 'modified: connect/runtime/src/test/java/org/apache/kafka/connect/integration/MonitorableSinkIntegrationTest.java
+    (+5/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - connect/runtime/src/test/java/org/apache/kafka/connect/integration/TransformationIntegrationTest.java
+  description: 'modified: connect/runtime/src/test/java/org/apache/kafka/connect/integration/TransformationIntegrationTest.java
+    (+11/-9)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from apache/kafka PR #23021. Trigger heuristic applied. Needs review.'

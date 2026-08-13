@@ -1,0 +1,116 @@
+id: oss-kotlin-7328
+title: '[BTA] Pass PluginsLoader to IC runners'
+family: uncategorized
+date: '2026-08-11'
+author: wojtek-kalicinski
+source: github-api-mined
+source_repo: JetBrains/kotlin
+source_url: https://github.com/JetBrains/kotlin/pull/7328
+source_pr: 7328
+difficulty: medium
+trigger:
+  package: JetBrains/kotlin
+  files:
+  - compiler/build-tools/kotlin-build-tools-impl/src/main/kotlin/org/jetbrains/kotlin/buildtools/internal/jvm/operations/JvmCompilationOperationImpl.kt
+  intent: '[BTA] Pass PluginsLoader to IC runners'
+  diff_summary: 'Primary: compiler/build-tools/kotlin-build-tools-impl/src/main/kotlin/org/jetbrains/kotlin/buildtools/internal/jvm/operations/JvmCompilationOperationImpl.kt
+    (+4/-1)'
+consequences:
+- package: JetBrains/kotlin
+  files:
+  - compiler/build-tools/kotlin-build-tools-api-tests/src/testCompilerPlugins/kotlin/ClassLoadersCachingTest.kt
+  description: 'modified: compiler/build-tools/kotlin-build-tools-api-tests/src/testCompilerPlugins/kotlin/ClassLoadersCachingTest.kt
+    (+34/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/build-tools/kotlin-build-tools-api/src/main/kotlin/org/jetbrains/kotlin/buildtools/api/KotlinToolchains.kt
+  description: 'modified: compiler/build-tools/kotlin-build-tools-api/src/main/kotlin/org/jetbrains/kotlin/buildtools/api/KotlinToolchains.kt
+    (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/build-tools/kotlin-build-tools-impl/src/main/kotlin/org/jetbrains/kotlin/buildtools/internal/BaseCompilationOperationImpl.kt
+  description: 'modified: compiler/build-tools/kotlin-build-tools-impl/src/main/kotlin/org/jetbrains/kotlin/buildtools/internal/BaseCompilationOperationImpl.kt
+    (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/build-tools/kotlin-build-tools-impl/src/main/kotlin/org/jetbrains/kotlin/buildtools/internal/CompilationServiceImpl.kt
+  description: 'modified: compiler/build-tools/kotlin-build-tools-impl/src/main/kotlin/org/jetbrains/kotlin/buildtools/internal/CompilationServiceImpl.kt
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/build-tools/kotlin-build-tools-impl/src/main/kotlin/org/jetbrains/kotlin/buildtools/internal/js/operations/JsKlibCompilationOperationImpl.kt
+  description: 'modified: compiler/build-tools/kotlin-build-tools-impl/src/main/kotlin/org/jetbrains/kotlin/buildtools/internal/js/operations/JsKlibCompilationOperationImpl.kt
+    (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/build-tools/kotlin-build-tools-impl/src/main/kotlin/org/jetbrains/kotlin/buildtools/internal/wasm/operations/WasmKlibCompilationOperationImpl.kt
+  description: 'modified: compiler/build-tools/kotlin-build-tools-impl/src/main/kotlin/org/jetbrains/kotlin/buildtools/internal/wasm/operations/WasmKlibCompilationOperationImpl.kt
+    (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/incremental-compilation-impl/src/org/jetbrains/kotlin/incremental/IncrementalCompilerRunner.kt
+  description: 'modified: compiler/incremental-compilation-impl/src/org/jetbrains/kotlin/incremental/IncrementalCompilerRunner.kt
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/incremental-compilation-impl/src/org/jetbrains/kotlin/incremental/IncrementalJsCompilerRunner.kt
+  description: 'modified: compiler/incremental-compilation-impl/src/org/jetbrains/kotlin/incremental/IncrementalJsCompilerRunner.kt
+    (+4/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/incremental-compilation-impl/src/org/jetbrains/kotlin/incremental/IncrementalJvmCompilerRunner.kt
+  description: 'modified: compiler/incremental-compilation-impl/src/org/jetbrains/kotlin/incremental/IncrementalJvmCompilerRunner.kt
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/incremental-compilation-impl/src/org/jetbrains/kotlin/incremental/IncrementalJvmCompilerRunnerBase.kt
+  description: 'modified: compiler/incremental-compilation-impl/src/org/jetbrains/kotlin/incremental/IncrementalJvmCompilerRunnerBase.kt
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 11
+notes: 'Mined from JetBrains/kotlin PR #7328. Trigger heuristic applied. Needs review.'

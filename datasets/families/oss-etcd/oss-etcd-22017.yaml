@@ -1,0 +1,91 @@
+id: oss-etcd-22017
+title: Add math/rand[/v2] wrappers in tests/antithesis and replace the rand references
+  with the wrappers
+family: interface-evolution
+date: '2026-07-27'
+author: nwnt
+source: github-api-mined
+source_repo: etcd-io/etcd
+source_url: https://github.com/etcd-io/etcd/pull/22017
+source_pr: 22017
+difficulty: medium
+trigger:
+  package: etcd-io/etcd
+  files:
+  - tests/antithesis/pkg/LICENSE
+  intent: Add math/rand[/v2] wrappers in tests/antithesis and replace the rand references
+    with the wrappers
+  diff_summary: 'Primary: tests/antithesis/pkg/LICENSE (+202/-0)'
+consequences:
+- package: etcd-io/etcd
+  files:
+  - bill-of-materials.json
+  description: 'modified: bill-of-materials.json (+9/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: etcd-io/etcd
+  files:
+  - go.work
+  description: 'modified: go.work (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: etcd-io/etcd
+  files:
+  - tests/antithesis/Makefile
+  description: 'modified: tests/antithesis/Makefile (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: etcd-io/etcd
+  files:
+  - tests/antithesis/pkg/go.mod
+  description: 'added: tests/antithesis/pkg/go.mod (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: etcd-io/etcd
+  files:
+  - tests/antithesis/pkg/go.sum
+  description: 'added: tests/antithesis/pkg/go.sum (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: etcd-io/etcd
+  files:
+  - tests/antithesis/pkg/rand/rand.go
+  description: 'added: tests/antithesis/pkg/rand/rand.go (+89/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: etcd-io/etcd
+  files:
+  - tests/antithesis/pkg/rand/v2/randv2.go
+  description: 'added: tests/antithesis/pkg/rand/v2/randv2.go (+63/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: etcd-io/etcd
+  files:
+  - tests/antithesis/server/Dockerfile
+  description: 'modified: tests/antithesis/server/Dockerfile (+10/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 9
+notes: 'Mined from etcd-io/etcd PR #22017. Trigger heuristic applied. Needs review.'

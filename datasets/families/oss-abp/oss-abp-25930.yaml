@@ -1,0 +1,84 @@
+id: oss-abp-25930
+title: Upgrade jQuery to 4.0.0 and add jQuery Migrate
+family: dependency-evolution
+date: '2026-08-10'
+author: maliming
+source: github-api-mined
+source_repo: abpframework/abp
+source_url: https://github.com/abpframework/abp/pull/25930
+source_pr: 25930
+difficulty: medium
+trigger:
+  package: abpframework/abp
+  files:
+  - npm/packs/bootstrap-daterangepicker/src/daterangepicker.js
+  intent: Upgrade jQuery to 4.0.0 and add jQuery Migrate
+  diff_summary: 'Primary: npm/packs/bootstrap-daterangepicker/src/daterangepicker.js
+    (+18/-18)'
+consequences:
+- package: abpframework/abp
+  files:
+  - framework/src/Volo.Abp.AspNetCore.Mvc.UI.Packages/Volo/Abp/AspNetCore/Mvc/UI/Packages/JQuery/JQueryScriptContributor.cs
+  description: 'modified: framework/src/Volo.Abp.AspNetCore.Mvc.UI.Packages/Volo/Abp/AspNetCore/Mvc/UI/Packages/JQuery/JQueryScriptContributor.cs
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - framework/src/Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared/wwwroot/libs/abp/aspnetcore-mvc-ui-theme-shared/sweetalert2/abp-sweetalert2.js
+  description: 'modified: framework/src/Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared/wwwroot/libs/abp/aspnetcore-mvc-ui-theme-shared/sweetalert2/abp-sweetalert2.js
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - npm/packs/jquery-validation/package.json
+  description: 'modified: npm/packs/jquery-validation/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - npm/packs/jquery/abp.resourcemapping.js
+  description: 'modified: npm/packs/jquery/abp.resourcemapping.js (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - npm/packs/jquery/package.json
+  description: 'modified: npm/packs/jquery/package.json (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - npm/packs/jquery/src/abp.jquery.js
+  description: 'modified: npm/packs/jquery/src/abp.jquery.js (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - npm/packs/jquery/yarn.lock
+  description: 'modified: npm/packs/jquery/yarn.lock (+28/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 8
+notes: 'Mined from abpframework/abp PR #25930. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,52 @@
+id: oss-prometheus-19388
+title: 'perf(remote): pool OTLP converter scratch state'
+family: uncategorized
+date: '2026-08-12'
+author: perfloop-agent
+source: github-api-mined
+source_repo: prometheus/prometheus
+source_url: https://github.com/prometheus/prometheus/pull/19388
+source_pr: 19388
+difficulty: medium
+trigger:
+  package: prometheus/prometheus
+  files:
+  - storage/remote/otlptranslator/prometheusremotewrite/metrics_to_prw.go
+  intent: 'perf(remote): pool OTLP converter scratch state'
+  diff_summary: 'Primary: storage/remote/otlptranslator/prometheusremotewrite/metrics_to_prw.go
+    (+33/-4)'
+consequences:
+- package: prometheus/prometheus
+  files:
+  - storage/remote/otlptranslator/prometheusremotewrite/metrics_to_prw_test.go
+  description: 'modified: storage/remote/otlptranslator/prometheusremotewrite/metrics_to_prw_test.go
+    (+92/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prometheus/prometheus
+  files:
+  - storage/remote/write_otlp_handler.go
+  description: 'modified: storage/remote/write_otlp_handler.go (+13/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prometheus/prometheus
+  files:
+  - storage/remote/write_otlp_handler_test.go
+  description: 'modified: storage/remote/write_otlp_handler_test.go (+102/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from prometheus/prometheus PR #19388. Trigger heuristic applied. Needs
+  review.'

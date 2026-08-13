@@ -1,0 +1,65 @@
+id: oss-devise-4987
+title: Update trackable fields only in a database sign in
+family: uncategorized
+date: '2019-01-29'
+author: waiting-for-dev
+source: github-api-mined
+source_repo: heartcombo/devise
+source_url: https://github.com/heartcombo/devise/pull/4987
+source_pr: 4987
+difficulty: medium
+trigger:
+  package: heartcombo/devise
+  files:
+  - lib/devise/hooks/trackable.rb
+  intent: Update trackable fields only in a database sign in
+  diff_summary: 'Primary: lib/devise/hooks/trackable.rb (+0/-11)'
+consequences:
+- package: heartcombo/devise
+  files:
+  - lib/devise/controllers/sign_in_out.rb
+  description: 'modified: lib/devise/controllers/sign_in_out.rb (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - lib/devise/models/trackable.rb
+  description: 'modified: lib/devise/models/trackable.rb (+7/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - lib/devise/strategies/database_authenticatable.rb
+  description: 'modified: lib/devise/strategies/database_authenticatable.rb (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - test/integration/trackable_test.rb
+  description: 'modified: test/integration/trackable_test.rb (+0/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - test/models/trackable_test.rb
+  description: 'modified: test/models/trackable_test.rb (+33/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from heartcombo/devise PR #4987. Trigger heuristic applied. Needs review.'

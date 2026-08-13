@@ -1,0 +1,158 @@
+id: oss-terraform-provider-aws-48804
+title: 'r/aws_bedrockagentcore_gateway_rule: New resource'
+family: interface-evolution
+date: '2026-08-07'
+author: aidandaly24
+source: github-api-mined
+source_repo: hashicorp/terraform-provider-aws
+source_url: https://github.com/hashicorp/terraform-provider-aws/pull/48804
+source_pr: 48804
+difficulty: medium
+trigger:
+  package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/bedrockagentcore/gateway_rule.go
+  intent: 'r/aws_bedrockagentcore_gateway_rule: New resource'
+  diff_summary: 'Primary: internal/service/bedrockagentcore/gateway_rule.go (+1227/-0)'
+consequences:
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/bedrockagentcore/exports_test.go
+  description: 'modified: internal/service/bedrockagentcore/exports_test.go (+2/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/bedrockagentcore/gateway_rule_identity_test.go
+  description: 'added: internal/service/bedrockagentcore/gateway_rule_identity_test.go
+    (+224/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/bedrockagentcore/gateway_rule_list.go
+  description: 'added: internal/service/bedrockagentcore/gateway_rule_list.go (+124/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/bedrockagentcore/gateway_rule_list_test.go
+  description: 'added: internal/service/bedrockagentcore/gateway_rule_list_test.go
+    (+140/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/bedrockagentcore/gateway_rule_test.go
+  description: 'added: internal/service/bedrockagentcore/gateway_rule_test.go (+823/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/bedrockagentcore/service_package_gen.go
+  description: 'modified: internal/service/bedrockagentcore/service_package_gen.go
+    (+24/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/bedrockagentcore/testdata/GatewayRule/basic/main_gen.tf
+  description: 'added: internal/service/bedrockagentcore/testdata/GatewayRule/basic/main_gen.tf
+    (+130/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/bedrockagentcore/testdata/GatewayRule/list_basic/main.tf
+  description: 'added: internal/service/bedrockagentcore/testdata/GatewayRule/list_basic/main.tf
+    (+138/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/bedrockagentcore/testdata/GatewayRule/list_basic/query.tfquery.hcl
+  description: 'added: internal/service/bedrockagentcore/testdata/GatewayRule/list_basic/query.tfquery.hcl
+    (+10/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/bedrockagentcore/testdata/GatewayRule/list_include_resource/main.tf
+  description: 'added: internal/service/bedrockagentcore/testdata/GatewayRule/list_include_resource/main.tf
+    (+138/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/bedrockagentcore/testdata/GatewayRule/list_include_resource/query.tfquery.hcl
+  description: 'added: internal/service/bedrockagentcore/testdata/GatewayRule/list_include_resource/query.tfquery.hcl
+    (+12/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/bedrockagentcore/testdata/GatewayRule/region_override/main_gen.tf
+  description: 'added: internal/service/bedrockagentcore/testdata/GatewayRule/region_override/main_gen.tf
+    (+142/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/bedrockagentcore/testdata/tmpl/gateway_rule_basic.gtpl
+  description: 'added: internal/service/bedrockagentcore/testdata/tmpl/gateway_rule_basic.gtpl
+    (+113/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - website/docs/list-resources/bedrockagentcore_gateway_rule.html.markdown
+  description: 'added: website/docs/list-resources/bedrockagentcore_gateway_rule.html.markdown
+    (+30/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - website/docs/r/bedrockagentcore_gateway_rule.html.markdown
+  description: 'added: website/docs/r/bedrockagentcore_gateway_rule.html.markdown
+    (+252/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 16
+notes: 'Mined from hashicorp/terraform-provider-aws PR #48804. Trigger heuristic applied.
+  Needs review.'

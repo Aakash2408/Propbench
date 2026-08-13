@@ -1,0 +1,73 @@
+id: oss-angular-69720
+title: Update WebMCP tool registration to be asynchronous
+family: uncategorized
+date: '2026-07-10'
+author: dgp1130
+source: github-api-mined
+source_repo: angular/angular
+source_url: https://github.com/angular/angular/pull/69720
+source_pr: 69720
+difficulty: medium
+trigger:
+  package: angular/angular
+  files:
+  - packages/forms/signals/src/webmcp/registration.ts
+  intent: Update WebMCP tool registration to be asynchronous
+  diff_summary: 'Primary: packages/forms/signals/src/webmcp/registration.ts (+8/-6)'
+consequences:
+- package: angular/angular
+  files:
+  - goldens/public-api/core/index.api.md
+  description: 'modified: goldens/public-api/core/index.api.md (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - packages/core/src/webmcp/declare_tool.ts
+  description: 'modified: packages/core/src/webmcp/declare_tool.ts (+5/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - packages/core/src/webmcp/types.ts
+  description: 'modified: packages/core/src/webmcp/types.ts (+1/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - packages/core/test/webmcp/declare_tool_spec.ts
+  description: 'modified: packages/core/test/webmcp/declare_tool_spec.ts (+19/-17)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - packages/forms/signals/src/webmcp/tokens.ts
+  description: 'modified: packages/forms/signals/src/webmcp/tokens.ts (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - packages/forms/signals/test/web/webmcp.spec.ts
+  description: 'modified: packages/forms/signals/test/web/webmcp.spec.ts (+27/-28)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from angular/angular PR #69720. Trigger heuristic applied. Needs review.'

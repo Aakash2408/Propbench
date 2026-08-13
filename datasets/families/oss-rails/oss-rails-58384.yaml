@@ -1,0 +1,68 @@
+id: oss-rails-58384
+title: Allow `config.active_storage.variant_processor` to be set to a class
+family: uncategorized
+date: '2026-08-07'
+author: flavorjones
+source: github-api-mined
+source_repo: rails/rails
+source_url: https://github.com/rails/rails/pull/58384
+source_pr: 58384
+difficulty: medium
+trigger:
+  package: rails/rails
+  files:
+  - activestorage/app/models/active_storage/variant.rb
+  intent: Allow `config.active_storage.variant_processor` to be set to a class
+  diff_summary: 'Primary: activestorage/app/models/active_storage/variant.rb (+19/-7)'
+consequences:
+- package: rails/rails
+  files:
+  - activestorage/lib/active_storage/engine.rb
+  description: 'modified: activestorage/lib/active_storage/engine.rb (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activestorage/lib/active_storage/transformers/transformer.rb
+  description: 'modified: activestorage/lib/active_storage/transformers/transformer.rb
+    (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - guides/source/configuring.md
+  description: 'modified: guides/source/configuring.md (+13/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - railties/test/application/active_storage/custom_processors_integration_test.rb
+  description: 'added: railties/test/application/active_storage/custom_processors_integration_test.rb
+    (+68/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - railties/test/application/active_storage/engine_integration_test.rb
+  description: 'modified: railties/test/application/active_storage/engine_integration_test.rb
+    (+24/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from rails/rails PR #58384. Trigger heuristic applied. Needs review.'

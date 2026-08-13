@@ -1,0 +1,114 @@
+id: oss-runtime-130508
+title: Implement Decimal32/64/128 arithmetic and comparison operators
+family: interface-evolution
+date: '2026-07-13'
+author: tannergooding
+source: github-api-mined
+source_repo: dotnet/runtime
+source_url: https://github.com/dotnet/runtime/pull/130508
+source_pr: 130508
+difficulty: medium
+trigger:
+  package: dotnet/runtime
+  files:
+  - src/libraries/System.Private.CoreLib/src/System/Number.DecimalIeee754.cs
+  intent: Implement Decimal32/64/128 arithmetic and comparison operators
+  diff_summary: 'Primary: src/libraries/System.Private.CoreLib/src/System/Number.DecimalIeee754.cs
+    (+907/-4)'
+consequences:
+- package: dotnet/runtime
+  files:
+  - THIRD-PARTY-NOTICES.TXT
+  description: 'modified: THIRD-PARTY-NOTICES.TXT (+33/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Private.CoreLib/src/System/Numerics/Decimal128.cs
+  description: 'modified: src/libraries/System.Private.CoreLib/src/System/Numerics/Decimal128.cs
+    (+124/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Private.CoreLib/src/System/Numerics/Decimal32.cs
+  description: 'modified: src/libraries/System.Private.CoreLib/src/System/Numerics/Decimal32.cs
+    (+118/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Private.CoreLib/src/System/Numerics/Decimal64.cs
+  description: 'modified: src/libraries/System.Private.CoreLib/src/System/Numerics/Decimal64.cs
+    (+118/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Runtime/ref/System.Runtime.cs
+  description: 'modified: src/libraries/System.Runtime/ref/System.Runtime.cs (+135/-114)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Runtime/tests/System.Runtime.Tests/System.Runtime.Tests.csproj
+  description: 'modified: src/libraries/System.Runtime/tests/System.Runtime.Tests/System.Runtime.Tests.csproj
+    (+1/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Runtime/tests/System.Runtime.Tests/System/Decimal128Tests.cs
+  description: 'modified: src/libraries/System.Runtime/tests/System.Runtime.Tests/System/Decimal128Tests.cs
+    (+996/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Runtime/tests/System.Runtime.Tests/System/Decimal32Tests.cs
+  description: 'modified: src/libraries/System.Runtime/tests/System.Runtime.Tests/System/Decimal32Tests.cs
+    (+1000/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Runtime/tests/System.Runtime.Tests/System/Decimal64Tests.cs
+  description: 'modified: src/libraries/System.Runtime/tests/System.Runtime.Tests/System/Decimal64Tests.cs
+    (+1000/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Runtime/tests/System.Runtime.Tests/System/DecimalIeee754IntelTestData.cs
+  description: 'added: src/libraries/System.Runtime/tests/System.Runtime.Tests/System/DecimalIeee754IntelTestData.cs
+    (+221/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 11
+notes: 'Mined from dotnet/runtime PR #130508. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,97 @@
+id: oss-deno-36491
+title: 'refactor(cli): replace single-method flag ext traits with free functions'
+family: refactor
+date: '2026-08-07'
+author: bartlomieju
+source: github-api-mined
+source_repo: denoland/deno
+source_url: https://github.com/denoland/deno/pull/36491
+source_pr: 36491
+difficulty: medium
+trigger:
+  package: denoland/deno
+  files:
+  - cli/args/flags.rs
+  intent: 'refactor(cli): replace single-method flag ext traits with free functions'
+  diff_summary: 'Primary: cli/args/flags.rs (+89/-105)'
+consequences:
+- package: denoland/deno
+  files:
+  - cli/args/mod.rs
+  description: 'modified: cli/args/mod.rs (+6/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - cli/factory.rs
+  description: 'modified: cli/factory.rs (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - cli/graph_util.rs
+  description: 'modified: cli/graph_util.rs (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - cli/standalone/binary.rs
+  description: 'modified: cli/standalone/binary.rs (+6/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - cli/tools/bench/mod.rs
+  description: 'modified: cli/tools/bench/mod.rs (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - cli/tools/check.rs
+  description: 'modified: cli/tools/check.rs (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - cli/tools/pack/mod.rs
+  description: 'modified: cli/tools/pack/mod.rs (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - cli/tools/pm/approve_scripts.rs
+  description: 'modified: cli/tools/pm/approve_scripts.rs (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - cli/tools/test/mod.rs
+  description: 'modified: cli/tools/test/mod.rs (+3/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 10
+notes: 'Mined from denoland/deno PR #36491. Trigger heuristic applied. Needs review.'

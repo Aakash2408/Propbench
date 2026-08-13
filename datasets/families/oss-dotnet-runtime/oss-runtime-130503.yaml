@@ -1,0 +1,53 @@
+id: oss-runtime-130503
+title: Select STJ member accessor based on IsDynamicCodeCompiled
+family: uncategorized
+date: '2026-07-13'
+author: eiriktsarpalis
+source: github-api-mined
+source_repo: dotnet/runtime
+source_url: https://github.com/dotnet/runtime/pull/130503
+source_pr: 130503
+difficulty: medium
+trigger:
+  package: dotnet/runtime
+  files:
+  - src/libraries/System.Text.Json/src/System/ReflectionExtensions.cs
+  intent: Select STJ member accessor based on IsDynamicCodeCompiled
+  diff_summary: 'Primary: src/libraries/System.Text.Json/src/System/ReflectionExtensions.cs
+    (+46/-4)'
+consequences:
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Metadata/MemberAccessor.cs
+  description: 'modified: src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Metadata/MemberAccessor.cs
+    (+7/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Metadata/ReflectionMemberAccessor.cs
+  description: 'modified: src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Metadata/ReflectionMemberAccessor.cs
+    (+12/-25)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Text.Json/tests/System.Text.Json.Tests/Serialization/ExceptionTests.cs
+  description: 'modified: src/libraries/System.Text.Json/tests/System.Text.Json.Tests/Serialization/ExceptionTests.cs
+    (+67/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from dotnet/runtime PR #130503. Trigger heuristic applied. Needs review.'

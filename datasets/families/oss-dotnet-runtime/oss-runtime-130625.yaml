@@ -1,0 +1,70 @@
+id: oss-runtime-130625
+title: '[cDAC] Remove GetClassPointer from the public IRuntimeTypeSystem surface'
+family: refactor
+date: '2026-07-13'
+author: max-charlamb
+source: github-api-mined
+source_repo: dotnet/runtime
+source_url: https://github.com/dotnet/runtime/pull/130625
+source_pr: 130625
+difficulty: medium
+trigger:
+  package: dotnet/runtime
+  files:
+  - src/native/managed/cdac/Microsoft.Diagnostics.DataContractReader.Contracts/Contracts/CallingConvention/CdacTypeHandle.cs
+  intent: '[cDAC] Remove GetClassPointer from the public IRuntimeTypeSystem surface'
+  diff_summary: 'Primary: src/native/managed/cdac/Microsoft.Diagnostics.DataContractReader.Contracts/Contracts/CallingConvention/CdacTypeHandle.cs
+    (+25/-28)'
+consequences:
+- package: dotnet/runtime
+  files:
+  - docs/design/datacontracts/RuntimeTypeSystem.md
+  description: 'modified: docs/design/datacontracts/RuntimeTypeSystem.md (+37/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/native/managed/cdac/Microsoft.Diagnostics.DataContractReader.Abstractions/Contracts/IRuntimeTypeSystem.cs
+  description: 'modified: src/native/managed/cdac/Microsoft.Diagnostics.DataContractReader.Abstractions/Contracts/IRuntimeTypeSystem.cs
+    (+35/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/native/managed/cdac/Microsoft.Diagnostics.DataContractReader.Contracts/Contracts/RuntimeTypeSystem_1.cs
+  description: 'modified: src/native/managed/cdac/Microsoft.Diagnostics.DataContractReader.Contracts/Contracts/RuntimeTypeSystem_1.cs
+    (+32/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/native/managed/cdac/Microsoft.Diagnostics.DataContractReader.Legacy/Dbi/DacDbiImpl.cs
+  description: 'modified: src/native/managed/cdac/Microsoft.Diagnostics.DataContractReader.Legacy/Dbi/DacDbiImpl.cs
+    (+5/-14)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/native/managed/cdac/tests/UnitTests/MethodTableTests.cs
+  description: 'modified: src/native/managed/cdac/tests/UnitTests/MethodTableTests.cs
+    (+0/-6)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from dotnet/runtime PR #130625. Trigger heuristic applied. Needs review.'

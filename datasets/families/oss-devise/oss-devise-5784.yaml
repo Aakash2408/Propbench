@@ -1,0 +1,43 @@
+id: oss-devise-5784
+title: Fix race condition vulnerability, by ensuring the `unconfirmed_email` is always
+  saved
+family: bugfix
+date: '2026-03-16'
+author: grantcox
+source: github-api-mined
+source_repo: heartcombo/devise
+source_url: https://github.com/heartcombo/devise/pull/5784
+source_pr: 5784
+difficulty: medium
+trigger:
+  package: heartcombo/devise
+  files:
+  - lib/devise/orm.rb
+  intent: Fix race condition vulnerability, by ensuring the `unconfirmed_email` is
+    always saved
+  diff_summary: 'Primary: lib/devise/orm.rb (+11/-0)'
+consequences:
+- package: heartcombo/devise
+  files:
+  - lib/devise/models/confirmable.rb
+  description: 'modified: lib/devise/models/confirmable.rb (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - test/integration/confirmable_test.rb
+  description: 'modified: test/integration/confirmable_test.rb (+28/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from heartcombo/devise PR #5784. Trigger heuristic applied. Needs review.'

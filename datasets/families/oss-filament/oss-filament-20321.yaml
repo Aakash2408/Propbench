@@ -1,0 +1,79 @@
+id: oss-filament-20321
+title: 'i18n: add missing Arabic translation files in notifications and support packages'
+family: interface-evolution
+date: '2026-08-04'
+author: hamdyelbatal122
+source: github-api-mined
+source_repo: filamentphp/filament
+source_url: https://github.com/filamentphp/filament/pull/20321
+source_pr: 20321
+difficulty: medium
+trigger:
+  package: filamentphp/filament
+  files:
+  - packages/support/resources/lang/ar/components/section.php
+  intent: 'i18n: add missing Arabic translation files in notifications and support
+    packages'
+  diff_summary: 'Primary: packages/support/resources/lang/ar/components/section.php
+    (+17/-0)'
+consequences:
+- package: filamentphp/filament
+  files:
+  - packages/notifications/resources/lang/ar/notification.php
+  description: 'added: packages/notifications/resources/lang/ar/notification.php (+13/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: filamentphp/filament
+  files:
+  - packages/support/resources/lang/ar/components/badge.php
+  description: 'added: packages/support/resources/lang/ar/components/badge.php (+13/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: filamentphp/filament
+  files:
+  - packages/support/resources/lang/ar/components/breadcrumbs.php
+  description: 'added: packages/support/resources/lang/ar/components/breadcrumbs.php
+    (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: filamentphp/filament
+  files:
+  - packages/support/resources/lang/ar/components/input/one-time-code.php
+  description: 'added: packages/support/resources/lang/ar/components/input/one-time-code.php
+    (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: filamentphp/filament
+  files:
+  - packages/support/resources/lang/ar/components/loading-section.php
+  description: 'added: packages/support/resources/lang/ar/components/loading-section.php
+    (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: filamentphp/filament
+  files:
+  - packages/support/resources/lang/ar/components/tabs.php
+  description: 'added: packages/support/resources/lang/ar/components/tabs.php (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from filamentphp/filament PR #20321. Trigger heuristic applied. Needs
+  review.'

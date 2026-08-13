@@ -1,0 +1,55 @@
+id: oss-kotlin-7270
+title: 'KT-67711, KT-88342: Substitute annotation calls for constructors in JVM to
+  fix KMP issues'
+family: bugfix
+date: '2026-08-12'
+author: dimonchik0036
+source: github-api-mined
+source_repo: JetBrains/kotlin
+source_url: https://github.com/JetBrains/kotlin/pull/7270
+source_pr: 7270
+difficulty: medium
+trigger:
+  package: JetBrains/kotlin
+  files:
+  - analysis/analysis-api-fir/src/org/jetbrains/kotlin/analysis/api/fir/FirUtils.kt
+  intent: 'KT-67711, KT-88342: Substitute annotation calls for constructors in JVM
+    to fix KMP issues'
+  diff_summary: 'Primary: analysis/analysis-api-fir/src/org/jetbrains/kotlin/analysis/api/fir/FirUtils.kt
+    (+18/-16)'
+consequences:
+- package: JetBrains/kotlin
+  files:
+  - analysis/analysis-api-fir/src/org/jetbrains/kotlin/analysis/api/fir/evaluate/FirAnnotationValueConverter.kt
+  description: 'modified: analysis/analysis-api-fir/src/org/jetbrains/kotlin/analysis/api/fir/evaluate/FirAnnotationValueConverter.kt
+    (+11/-18)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - analysis/analysis-api-fir/testData/surface/substitutedAnnotation.kt
+  description: 'added: analysis/analysis-api-fir/testData/surface/substitutedAnnotation.kt
+    (+19/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - analysis/analysis-api-fir/tests/org/jetbrains/kotlin/analysis/api/fir/test/AnalysisApiSurfaceTest.kt
+  description: 'modified: analysis/analysis-api-fir/tests/org/jetbrains/kotlin/analysis/api/fir/test/AnalysisApiSurfaceTest.kt
+    (+44/-4)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from JetBrains/kotlin PR #7270. Trigger heuristic applied. Needs review.'

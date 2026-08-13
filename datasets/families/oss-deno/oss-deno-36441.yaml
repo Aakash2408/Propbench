@@ -1,0 +1,49 @@
+id: oss-deno-36441
+title: 'fix(ext/crypto): preserve RSA-OAEP label bytes'
+family: bugfix
+date: '2026-08-07'
+author: nathanwhit
+source: github-api-mined
+source_repo: denoland/deno
+source_url: https://github.com/denoland/deno/pull/36441
+source_pr: 36441
+difficulty: medium
+trigger:
+  package: denoland/deno
+  files:
+  - ext/crypto/decrypt.rs
+  intent: 'fix(ext/crypto): preserve RSA-OAEP label bytes'
+  diff_summary: 'Primary: ext/crypto/decrypt.rs (+1/-46)'
+consequences:
+- package: denoland/deno
+  files:
+  - ext/crypto/encrypt.rs
+  description: 'modified: ext/crypto/encrypt.rs (+1/-46)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - ext/crypto/shared.rs
+  description: 'modified: ext/crypto/shared.rs (+36/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/unit/webcrypto_test.ts
+  description: 'modified: tests/unit/webcrypto_test.ts (+56/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from denoland/deno PR #36441. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,216 @@
+id: oss-elasticsearch-156394
+title: 'ES|QL: Add TO_DOUBLE_RANGE conversion function'
+family: interface-evolution
+date: '2026-08-13'
+author: JonasKunz
+source: github-api-mined
+source_repo: elastic/elasticsearch
+source_url: https://github.com/elastic/elasticsearch/pull/156394
+source_pr: 156394
+difficulty: medium
+trigger:
+  package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql/qa/testFixtures/src/main/resources/double_range.csv-spec
+  intent: 'ES|QL: Add TO_DOUBLE_RANGE conversion function'
+  diff_summary: 'Primary: x-pack/plugin/esql/qa/testFixtures/src/main/resources/double_range.csv-spec
+    (+184/-0)'
+consequences:
+- package: elastic/elasticsearch
+  files:
+  - docs/reference/query-languages/esql/_snippets/generated/x-pack-esql/functions/briefSummary/to_double_range.md
+  description: 'added: docs/reference/query-languages/esql/_snippets/generated/x-pack-esql/functions/briefSummary/to_double_range.md
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - docs/reference/query-languages/esql/_snippets/generated/x-pack-esql/functions/description/to_double_range.md
+  description: 'added: docs/reference/query-languages/esql/_snippets/generated/x-pack-esql/functions/description/to_double_range.md
+    (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - docs/reference/query-languages/esql/_snippets/generated/x-pack-esql/functions/examples/to_double_range.md
+  description: 'added: docs/reference/query-languages/esql/_snippets/generated/x-pack-esql/functions/examples/to_double_range.md
+    (+14/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - docs/reference/query-languages/esql/_snippets/generated/x-pack-esql/functions/layout/to_double_range.md
+  description: 'added: docs/reference/query-languages/esql/_snippets/generated/x-pack-esql/functions/layout/to_double_range.md
+    (+27/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - docs/reference/query-languages/esql/_snippets/generated/x-pack-esql/functions/parameters/to_double_range.md
+  description: 'added: docs/reference/query-languages/esql/_snippets/generated/x-pack-esql/functions/parameters/to_double_range.md
+    (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - docs/reference/query-languages/esql/images/generated/x-pack-esql/functions/to_double_range.svg
+  description: 'added: docs/reference/query-languages/esql/images/generated/x-pack-esql/functions/to_double_range.svg
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - docs/reference/query-languages/esql/kibana/generated/x-pack-esql/definition/functions/to_double_range.json
+  description: 'added: docs/reference/query-languages/esql/kibana/generated/x-pack-esql/definition/functions/to_double_range.json
+    (+12/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - docs/reference/query-languages/esql/kibana/generated/x-pack-esql/docs/functions/to_double_range.md
+  description: 'added: docs/reference/query-languages/esql/kibana/generated/x-pack-esql/docs/functions/to_double_range.md
+    (+10/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql/qa/testFixtures/src/main/java/org/elasticsearch/xpack/esql/CsvAssert.java
+  description: 'modified: x-pack/plugin/esql/qa/testFixtures/src/main/java/org/elasticsearch/xpack/esql/CsvAssert.java
+    (+21/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql/qa/testFixtures/src/main/java/org/elasticsearch/xpack/esql/expression/function/TestCaseSupplier.java
+  description: 'modified: x-pack/plugin/esql/qa/testFixtures/src/main/java/org/elasticsearch/xpack/esql/expression/function/TestCaseSupplier.java
+    (+19/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql/src/main/generated/org/elasticsearch/xpack/esql/expression/function/scalar/convert/ToDoubleRangeFromStringEvaluator.java
+  description: 'added: x-pack/plugin/esql/src/main/generated/org/elasticsearch/xpack/esql/expression/function/scalar/convert/ToDoubleRangeFromStringEvaluator.java
+    (+153/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql/src/main/java/org/elasticsearch/xpack/esql/expression/ExpressionWritables.java
+  description: 'modified: x-pack/plugin/esql/src/main/java/org/elasticsearch/xpack/esql/expression/ExpressionWritables.java
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql/src/main/java/org/elasticsearch/xpack/esql/expression/function/EsqlFunctionRegistry.java
+  description: 'modified: x-pack/plugin/esql/src/main/java/org/elasticsearch/xpack/esql/expression/function/EsqlFunctionRegistry.java
+    (+4/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql/src/main/java/org/elasticsearch/xpack/esql/expression/function/scalar/convert/ToDoubleRange.java
+  description: 'added: x-pack/plugin/esql/src/main/java/org/elasticsearch/xpack/esql/expression/function/scalar/convert/ToDoubleRange.java
+    (+106/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql/src/main/java/org/elasticsearch/xpack/esql/expression/function/scalar/date/RangeIntersects.java
+  description: 'modified: x-pack/plugin/esql/src/main/java/org/elasticsearch/xpack/esql/expression/function/scalar/date/RangeIntersects.java
+    (+5/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql/src/main/java/org/elasticsearch/xpack/esql/expression/function/scalar/date/RangeWithin.java
+  description: 'modified: x-pack/plugin/esql/src/main/java/org/elasticsearch/xpack/esql/expression/function/scalar/date/RangeWithin.java
+    (+17/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql/src/test/java/org/elasticsearch/xpack/esql/expression/function/scalar/convert/ToDoubleRangeErrorTests.java
+  description: 'added: x-pack/plugin/esql/src/test/java/org/elasticsearch/xpack/esql/expression/function/scalar/convert/ToDoubleRangeErrorTests.java
+    (+37/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql/src/test/java/org/elasticsearch/xpack/esql/expression/function/scalar/convert/ToDoubleRangeSerializationTests.java
+  description: 'added: x-pack/plugin/esql/src/test/java/org/elasticsearch/xpack/esql/expression/function/scalar/convert/ToDoubleRangeSerializationTests.java
+    (+19/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql/src/test/java/org/elasticsearch/xpack/esql/expression/function/scalar/convert/ToDoubleRangeTests.java
+  description: 'added: x-pack/plugin/esql/src/test/java/org/elasticsearch/xpack/esql/expression/function/scalar/convert/ToDoubleRangeTests.java
+    (+178/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql/src/test/java/org/elasticsearch/xpack/esql/expression/function/scalar/date/RangeIntersectsPushdownTests.java
+  description: 'modified: x-pack/plugin/esql/src/test/java/org/elasticsearch/xpack/esql/expression/function/scalar/date/RangeIntersectsPushdownTests.java
+    (+15/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql/src/test/java/org/elasticsearch/xpack/esql/expression/function/scalar/date/RangeWithinPushdownTests.java
+  description: 'modified: x-pack/plugin/esql/src/test/java/org/elasticsearch/xpack/esql/expression/function/scalar/date/RangeWithinPushdownTests.java
+    (+22/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 22
+notes: 'Mined from elastic/elasticsearch PR #156394. Trigger heuristic applied. Needs
+  review.'

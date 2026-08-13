@@ -1,0 +1,80 @@
+id: oss-runtime-131783
+title: Replace SHA-1/RSA-1024 test data with SHA-256/RSA-2048 equivalents
+family: uncategorized
+date: '2026-08-13'
+author: joshuajyue
+source: github-api-mined
+source_repo: dotnet/runtime
+source_url: https://github.com/dotnet/runtime/pull/131783
+source_pr: 131783
+difficulty: medium
+trigger:
+  package: dotnet/runtime
+  files:
+  - src/libraries/System.Security.Cryptography.Pkcs/tests/SignedCms/SignedDocuments.cs
+  intent: Replace SHA-1/RSA-1024 test data with SHA-256/RSA-2048 equivalents
+  diff_summary: 'Primary: src/libraries/System.Security.Cryptography.Pkcs/tests/SignedCms/SignedDocuments.cs
+    (+451/-88)'
+consequences:
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Security.Cryptography.Pkcs/tests/Certificates.cs
+  description: 'modified: src/libraries/System.Security.Cryptography.Pkcs/tests/Certificates.cs
+    (+53/-49)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Security.Cryptography.Pkcs/tests/SignatureSupport.cs
+  description: 'modified: src/libraries/System.Security.Cryptography.Pkcs/tests/SignatureSupport.cs
+    (+3/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Security.Cryptography.Pkcs/tests/SignedCms/SignedCmsTests.cs
+  description: 'modified: src/libraries/System.Security.Cryptography.Pkcs/tests/SignedCms/SignedCmsTests.cs
+    (+43/-14)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Security.Cryptography.Pkcs/tests/SignedCms/SignedCmsTests.netcoreapp.cs
+  description: 'modified: src/libraries/System.Security.Cryptography.Pkcs/tests/SignedCms/SignedCmsTests.netcoreapp.cs
+    (+6/-6)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Security.Cryptography.Pkcs/tests/SignedCms/SignedCmsWholeDocumentTests.cs
+  description: 'modified: src/libraries/System.Security.Cryptography.Pkcs/tests/SignedCms/SignedCmsWholeDocumentTests.cs
+    (+82/-58)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Security.Cryptography.Pkcs/tests/SignedCms/SignerInfoTests.cs
+  description: 'modified: src/libraries/System.Security.Cryptography.Pkcs/tests/SignedCms/SignerInfoTests.cs
+    (+39/-42)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from dotnet/runtime PR #131783. Trigger heuristic applied. Needs review.'

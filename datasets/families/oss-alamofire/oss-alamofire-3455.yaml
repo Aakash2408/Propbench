@@ -1,0 +1,170 @@
+id: oss-alamofire-3455
+title: Add WebSocketRequest Under @_spi(WebSocket)
+family: interface-evolution
+date: '2023-11-19'
+author: jshier
+source: github-api-mined
+source_repo: Alamofire/Alamofire
+source_url: https://github.com/Alamofire/Alamofire/pull/3455
+source_pr: 3455
+difficulty: medium
+trigger:
+  package: Alamofire/Alamofire
+  files:
+  - Tests/WebSocketTests.swift
+  intent: Add WebSocketRequest Under @_spi(WebSocket)
+  diff_summary: 'Primary: Tests/WebSocketTests.swift (+740/-0)'
+consequences:
+- package: Alamofire/Alamofire
+  files:
+  - Alamofire.xcodeproj/project.pbxproj
+  description: 'modified: Alamofire.xcodeproj/project.pbxproj (+12/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Source/Concurrency.swift
+  description: 'modified: Source/Concurrency.swift (+134/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Source/EventMonitor.swift
+  description: 'modified: Source/EventMonitor.swift (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Source/HTTPHeaders.swift
+  description: 'modified: Source/HTTPHeaders.swift (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Source/Request.swift
+  description: 'modified: Source/Request.swift (+537/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Source/RequestTaskMap.swift
+  description: 'modified: Source/RequestTaskMap.swift (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Source/Session.swift
+  description: 'modified: Source/Session.swift (+87/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Source/SessionDelegate.swift
+  description: 'modified: Source/SessionDelegate.swift (+33/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Tests/BaseTestCase.swift
+  description: 'modified: Tests/BaseTestCase.swift (+36/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Tests/ConcurrencyTests.swift
+  description: 'modified: Tests/ConcurrencyTests.swift (+47/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Tests/MultipartFormDataTests.swift
+  description: 'modified: Tests/MultipartFormDataTests.swift (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Tests/Test Plans/iOS-NoTS.xctestplan
+  description: 'modified: Tests/Test Plans/iOS-NoTS.xctestplan (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Tests/Test Plans/iOS-Old.xctestplan
+  description: 'modified: Tests/Test Plans/iOS-Old.xctestplan (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Tests/Test Plans/macOS-NoTS.xctestplan
+  description: 'modified: Tests/Test Plans/macOS-NoTS.xctestplan (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Tests/Test Plans/tvOS-NoTS.xctestplan
+  description: 'modified: Tests/Test Plans/tvOS-NoTS.xctestplan (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Tests/Test Plans/tvOS-Old.xctestplan
+  description: 'modified: Tests/Test Plans/tvOS-Old.xctestplan (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Tests/Test Plans/watchOS-NoTS.xctestplan
+  description: 'modified: Tests/Test Plans/watchOS-NoTS.xctestplan (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Tests/TestHelpers.swift
+  description: 'modified: Tests/TestHelpers.swift (+69/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 19
+notes: 'Mined from Alamofire/Alamofire PR #3455. Trigger heuristic applied. Needs
+  review.'

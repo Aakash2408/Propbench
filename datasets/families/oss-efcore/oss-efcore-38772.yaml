@@ -1,0 +1,131 @@
+id: oss-efcore-38772
+title: '[main] Source code updates from dotnet/dotnet'
+family: uncategorized
+date: '2026-08-11'
+author: dotnet-maestro[bot]
+source: github-api-mined
+source_repo: dotnet/efcore
+source_url: https://github.com/dotnet/efcore/pull/38772
+source_pr: 38772
+difficulty: medium
+trigger:
+  package: dotnet/efcore
+  files:
+  - eng/common/Get-GitHubAppToken.ps1
+  intent: '[main] Source code updates from dotnet/dotnet'
+  diff_summary: 'Primary: eng/common/Get-GitHubAppToken.ps1 (+154/-0)'
+consequences:
+- package: dotnet/efcore
+  files:
+  - eng/Version.Details.props
+  description: 'modified: eng/Version.Details.props (+17/-17)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - eng/Version.Details.xml
+  description: 'modified: eng/Version.Details.xml (+35/-35)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - eng/common/core-templates/job/helix-job-monitor.yml
+  description: 'modified: eng/common/core-templates/job/helix-job-monitor.yml (+23/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - eng/common/core-templates/job/onelocbuild.yml
+  description: 'modified: eng/common/core-templates/job/onelocbuild.yml (+27/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - eng/common/core-templates/job/publish-build-assets.yml
+  description: 'modified: eng/common/core-templates/job/publish-build-assets.yml (+0/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - eng/common/core-templates/post-build/common-variables.yml
+  description: 'modified: eng/common/core-templates/post-build/common-variables.yml
+    (+0/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - eng/common/core-templates/stages/renovate.yml
+  description: 'modified: eng/common/core-templates/stages/renovate.yml (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - eng/common/core-templates/steps/get-github-app-token.yml
+  description: 'added: eng/common/core-templates/steps/get-github-app-token.yml (+79/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - eng/common/core-templates/steps/publish-logs.yml
+  description: 'modified: eng/common/core-templates/steps/publish-logs.yml (+0/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - eng/common/cross/build-rootfs.sh
+  description: 'modified: eng/common/cross/build-rootfs.sh (+24/-14)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - eng/common/templates-official/steps/get-github-app-token.yml
+  description: 'added: eng/common/templates-official/steps/get-github-app-token.yml
+    (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - eng/common/templates/steps/get-github-app-token.yml
+  description: 'added: eng/common/templates/steps/get-github-app-token.yml (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - global.json
+  description: 'modified: global.json (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 14
+notes: 'Mined from dotnet/efcore PR #38772. Trigger heuristic applied. Needs review.'

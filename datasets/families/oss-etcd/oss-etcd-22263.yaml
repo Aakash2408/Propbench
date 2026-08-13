@@ -1,0 +1,89 @@
+id: oss-etcd-22263
+title: Stop generating v2 snapshot files, nor loading v2 snapshot files
+family: uncategorized
+date: '2026-08-12'
+author: ahrtr
+source: github-api-mined
+source_repo: etcd-io/etcd
+source_url: https://github.com/etcd-io/etcd/pull/22263
+source_pr: 22263
+difficulty: medium
+trigger:
+  package: etcd-io/etcd
+  files:
+  - etcdutl/snapshot/v3_snapshot.go
+  intent: Stop generating v2 snapshot files, nor loading v2 snapshot files
+  diff_summary: 'Primary: etcdutl/snapshot/v3_snapshot.go (+0/-14)'
+consequences:
+- package: etcd-io/etcd
+  files:
+  - etcdutl/etcdutl/common_test.go
+  description: 'modified: etcdutl/etcdutl/common_test.go (+0/-22)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: etcd-io/etcd
+  files:
+  - server/etcdserver/bootstrap_test.go
+  description: 'modified: server/etcdserver/bootstrap_test.go (+0/-14)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: etcd-io/etcd
+  files:
+  - server/etcdserver/cluster_util.go
+  description: 'modified: server/etcdserver/cluster_util.go (+0/-11)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: etcd-io/etcd
+  files:
+  - server/etcdserver/server.go
+  description: 'modified: server/etcdserver/server.go (+2/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: etcd-io/etcd
+  files:
+  - server/etcdserver/snapshot_merge.go
+  description: 'modified: server/etcdserver/snapshot_merge.go (+0/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: etcd-io/etcd
+  files:
+  - server/storage/storage.go
+  description: 'modified: server/storage/storage.go (+1/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: etcd-io/etcd
+  files:
+  - tests/e2e/cluster_downgrade_test.go
+  description: 'modified: tests/e2e/cluster_downgrade_test.go (+8/-13)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: etcd-io/etcd
+  files:
+  - tests/e2e/v2store_deprecation_test.go
+  description: 'modified: tests/e2e/v2store_deprecation_test.go (+0/-131)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 9
+notes: 'Mined from etcd-io/etcd PR #22263. Trigger heuristic applied. Needs review.'

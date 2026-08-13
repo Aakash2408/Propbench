@@ -1,0 +1,41 @@
+id: oss-serde-2936
+title: Remove some ? from generated code
+family: refactor
+date: '2025-09-28'
+author: Mingun
+source: github-api-mined
+source_repo: serde-rs/serde
+source_url: https://github.com/serde-rs/serde/pull/2936
+source_pr: 2936
+difficulty: medium
+trigger:
+  package: serde-rs/serde
+  files:
+  - serde_derive/src/de/enum_adjacently.rs
+  intent: Remove some ? from generated code
+  diff_summary: 'Primary: serde_derive/src/de/enum_adjacently.rs (+8/-6)'
+consequences:
+- package: serde-rs/serde
+  files:
+  - serde_derive/src/de.rs
+  description: 'modified: serde_derive/src/de.rs (+6/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: serde-rs/serde
+  files:
+  - serde_derive/src/de/enum_externally.rs
+  description: 'modified: serde_derive/src/de/enum_externally.rs (+3/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from serde-rs/serde PR #2936. Trigger heuristic applied. Needs review.'

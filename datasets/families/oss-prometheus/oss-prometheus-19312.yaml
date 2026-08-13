@@ -1,0 +1,42 @@
+id: oss-prometheus-19312
+title: 'histogram: fix Compact corrupting buckets on multiple span merges'
+family: bugfix
+date: '2026-08-11'
+author: winklemad
+source: github-api-mined
+source_repo: prometheus/prometheus
+source_url: https://github.com/prometheus/prometheus/pull/19312
+source_pr: 19312
+difficulty: medium
+trigger:
+  package: prometheus/prometheus
+  files:
+  - model/histogram/generic.go
+  intent: 'histogram: fix Compact corrupting buckets on multiple span merges'
+  diff_summary: 'Primary: model/histogram/generic.go (+13/-1)'
+consequences:
+- package: prometheus/prometheus
+  files:
+  - model/histogram/float_histogram_test.go
+  description: 'modified: model/histogram/float_histogram_test.go (+36/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prometheus/prometheus
+  files:
+  - model/histogram/histogram_test.go
+  description: 'modified: model/histogram/histogram_test.go (+22/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from prometheus/prometheus PR #19312. Trigger heuristic applied. Needs
+  review.'

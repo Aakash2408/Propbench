@@ -1,0 +1,41 @@
+id: oss-sidekiq-7014
+title: Fix 500 on the Busy page when count is negative
+family: bugfix
+date: '2026-05-29'
+author: hammadxcm
+source: github-api-mined
+source_repo: sidekiq/sidekiq
+source_url: https://github.com/sidekiq/sidekiq/pull/7014
+source_pr: 7014
+difficulty: medium
+trigger:
+  package: sidekiq/sidekiq
+  files:
+  - lib/sidekiq/paginator.rb
+  intent: Fix 500 on the Busy page when count is negative
+  diff_summary: 'Primary: lib/sidekiq/paginator.rb (+3/-0)'
+consequences:
+- package: sidekiq/sidekiq
+  files:
+  - test/paginator_test.rb
+  description: 'modified: test/paginator_test.rb (+5/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sidekiq/sidekiq
+  files:
+  - test/web_test.rb
+  description: 'modified: test/web_test.rb (+5/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from sidekiq/sidekiq PR #7014. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,97 @@
+id: oss-actix-web-4169
+title: Drain HTTP/1 connections during graceful shutdown
+family: uncategorized
+date: '2026-08-08'
+author: robjtede
+source: github-api-mined
+source_repo: actix/actix-web
+source_url: https://github.com/actix/actix-web/pull/4169
+source_pr: 4169
+difficulty: medium
+trigger:
+  package: actix/actix-web
+  files:
+  - actix-http/src/h1/dispatcher.rs
+  intent: Drain HTTP/1 connections during graceful shutdown
+  diff_summary: 'Primary: actix-http/src/h1/dispatcher.rs (+77/-11)'
+consequences:
+- package: actix/actix-web
+  files:
+  - Cargo.lock
+  description: 'modified: Cargo.lock (+3/-13)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: actix/actix-web
+  files:
+  - actix-http/CHANGES.md
+  description: 'modified: actix-http/CHANGES.md (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: actix/actix-web
+  files:
+  - actix-http/src/builder.rs
+  description: 'modified: actix-http/src/builder.rs (+21/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: actix/actix-web
+  files:
+  - actix-http/src/config.rs
+  description: 'modified: actix-http/src/config.rs (+47/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: actix/actix-web
+  files:
+  - actix-http/src/h1/dispatcher_tests.rs
+  description: 'modified: actix-http/src/h1/dispatcher_tests.rs (+41/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: actix/actix-web
+  files:
+  - actix-web/CHANGES.md
+  description: 'modified: actix-web/CHANGES.md (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: actix/actix-web
+  files:
+  - actix-web/Cargo.toml
+  description: 'modified: actix-web/Cargo.toml (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: actix/actix-web
+  files:
+  - actix-web/src/server.rs
+  description: 'modified: actix-web/src/server.rs (+61/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: actix/actix-web
+  files:
+  - actix-web/tests/test_httpserver.rs
+  description: 'modified: actix-web/tests/test_httpserver.rs (+215/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 10
+notes: 'Mined from actix/actix-web PR #4169. Trigger heuristic applied. Needs review.'

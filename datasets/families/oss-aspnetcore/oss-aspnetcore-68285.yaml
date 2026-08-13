@@ -1,0 +1,114 @@
+id: oss-aspnetcore-68285
+title: '[main] Source code updates from dotnet/dotnet'
+family: uncategorized
+date: '2026-08-13'
+author: dotnet-maestro[bot]
+source: github-api-mined
+source_repo: dotnet/aspnetcore
+source_url: https://github.com/dotnet/aspnetcore/pull/68285
+source_pr: 68285
+difficulty: medium
+trigger:
+  package: dotnet/aspnetcore
+  files:
+  - eng/Version.Details.xml
+  intent: '[main] Source code updates from dotnet/dotnet'
+  diff_summary: 'Primary: eng/Version.Details.xml (+191/-187)'
+consequences:
+- package: dotnet/aspnetcore
+  files:
+  - .config/dotnet-tools.json
+  description: 'modified: .config/dotnet-tools.json (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - eng/Dependencies.props
+  description: 'modified: eng/Dependencies.props (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - eng/Version.Details.props
+  description: 'modified: eng/Version.Details.props (+95/-93)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - eng/common/Get-GitHubAppToken.ps1
+  description: 'modified: eng/common/Get-GitHubAppToken.ps1 (+27/-12)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - eng/common/core-templates/job/helix-job-monitor.yml
+  description: 'modified: eng/common/core-templates/job/helix-job-monitor.yml (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - eng/common/core-templates/job/onelocbuild.yml
+  description: 'modified: eng/common/core-templates/job/onelocbuild.yml (+4/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - eng/common/core-templates/job/publish-build-assets.yml
+  description: 'modified: eng/common/core-templates/job/publish-build-assets.yml (+0/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - eng/common/core-templates/post-build/common-variables.yml
+  description: 'modified: eng/common/core-templates/post-build/common-variables.yml
+    (+0/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - eng/common/core-templates/steps/publish-logs.yml
+  description: 'modified: eng/common/core-templates/steps/publish-logs.yml (+0/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - global.json
+  description: 'modified: global.json (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Tools/dotnet-user-jwts/src/dotnet-user-jwts.csproj
+  description: 'modified: src/Tools/dotnet-user-jwts/src/dotnet-user-jwts.csproj (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 12
+notes: 'Mined from dotnet/aspnetcore PR #68285. Trigger heuristic applied. Needs review.'

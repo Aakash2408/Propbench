@@ -1,0 +1,42 @@
+id: oss-hugo-15180
+title: Remove tailwindcss from the default security.exec.allow list (note)
+family: refactor
+date: '2026-08-10'
+author: bep
+source: github-api-mined
+source_repo: gohugoio/hugo
+source_url: https://github.com/gohugoio/hugo/pull/15180
+source_pr: 15180
+difficulty: medium
+trigger:
+  package: gohugoio/hugo
+  files:
+  - config/security/securityConfig.go
+  intent: Remove tailwindcss from the default security.exec.allow list (note)
+  diff_summary: 'Primary: config/security/securityConfig.go (+4/-5)'
+consequences:
+- package: gohugoio/hugo
+  files:
+  - config/security/securityConfig_test.go
+  description: 'modified: config/security/securityConfig_test.go (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - resources/resource_transformers/cssjs/tailwindcss_integration_test.go
+  description: 'modified: resources/resource_transformers/cssjs/tailwindcss_integration_test.go
+    (+4/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from gohugoio/hugo PR #15180. Trigger heuristic applied. Needs review.'

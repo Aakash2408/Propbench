@@ -1,0 +1,88 @@
+id: oss-deno-36526
+title: 'fix(npm): use cached abbreviated metadata under --cached-only'
+family: bugfix
+date: '2026-08-10'
+author: magurotuna
+source: github-api-mined
+source_repo: denoland/deno
+source_url: https://github.com/denoland/deno/pull/36526
+source_pr: 36526
+difficulty: medium
+trigger:
+  package: denoland/deno
+  files:
+  - tests/specs/npm/cached_only_old_abbreviated_metadata/__test__.jsonc
+  intent: 'fix(npm): use cached abbreviated metadata under --cached-only'
+  diff_summary: 'Primary: tests/specs/npm/cached_only_old_abbreviated_metadata/__test__.jsonc
+    (+20/-0)'
+consequences:
+- package: denoland/deno
+  files:
+  - libs/npm_cache/registry_info.rs
+  description: 'modified: libs/npm_cache/registry_info.rs (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/specs/npm/cached_only_old_abbreviated_metadata/deno_dir/npm/localhost_4260/@denotest/esm-basic/1.0.0/main.d.mts
+  description: 'added: tests/specs/npm/cached_only_old_abbreviated_metadata/deno_dir/npm/localhost_4260/@denotest/esm-basic/1.0.0/main.d.mts
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/specs/npm/cached_only_old_abbreviated_metadata/deno_dir/npm/localhost_4260/@denotest/esm-basic/1.0.0/main.mjs
+  description: 'added: tests/specs/npm/cached_only_old_abbreviated_metadata/deno_dir/npm/localhost_4260/@denotest/esm-basic/1.0.0/main.mjs
+    (+11/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/specs/npm/cached_only_old_abbreviated_metadata/deno_dir/npm/localhost_4260/@denotest/esm-basic/1.0.0/other.mjs
+  description: 'added: tests/specs/npm/cached_only_old_abbreviated_metadata/deno_dir/npm/localhost_4260/@denotest/esm-basic/1.0.0/other.mjs
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/specs/npm/cached_only_old_abbreviated_metadata/deno_dir/npm/localhost_4260/@denotest/esm-basic/1.0.0/package.json
+  description: 'added: tests/specs/npm/cached_only_old_abbreviated_metadata/deno_dir/npm/localhost_4260/@denotest/esm-basic/1.0.0/package.json
+    (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/specs/npm/cached_only_old_abbreviated_metadata/deno_dir/npm/localhost_4260/@denotest/esm-basic/registry.json
+  description: 'added: tests/specs/npm/cached_only_old_abbreviated_metadata/deno_dir/npm/localhost_4260/@denotest/esm-basic/registry.json
+    (+15/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/specs/npm/cached_only_old_abbreviated_metadata/main.ts
+  description: 'added: tests/specs/npm/cached_only_old_abbreviated_metadata/main.ts
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 8
+notes: 'Mined from denoland/deno PR #36526. Trigger heuristic applied. Needs review.'

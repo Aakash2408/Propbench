@@ -1,0 +1,129 @@
+id: oss-vapor-3509
+title: Foundation Fixes
+family: bugfix
+date: '2026-08-12'
+author: 0xTim
+source: github-api-mined
+source_repo: vapor/vapor
+source_url: https://github.com/vapor/vapor/pull/3509
+source_pr: 3509
+difficulty: medium
+trigger:
+  package: vapor/vapor
+  files:
+  - Package.swift
+  intent: Foundation Fixes
+  diff_summary: 'Primary: Package.swift (+7/-5)'
+consequences:
+- package: vapor/vapor
+  files:
+  - Sources/Development/entrypoint.swift
+  description: 'modified: Sources/Development/entrypoint.swift (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/Vapor/Concurrency/WebSocket+Concurrency.swift
+  description: 'modified: Sources/Vapor/Concurrency/WebSocket+Concurrency.swift (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/Vapor/Content/JSONCoders+Content.swift
+  description: 'modified: Sources/Vapor/Content/JSONCoders+Content.swift (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/Vapor/Response/Response+Body.swift
+  description: 'modified: Sources/Vapor/Response/Response+Body.swift (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/Vapor/Response/Response.swift
+  description: 'modified: Sources/Vapor/Response/Response.swift (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/Vapor/Routing/Request+WebSocket.swift
+  description: 'modified: Sources/Vapor/Routing/Request+WebSocket.swift (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/Vapor/Routing/RoutesBuilder+WebSocket.swift
+  description: 'modified: Sources/Vapor/Routing/RoutesBuilder+WebSocket.swift (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/Vapor/Utilities/File.swift
+  description: 'modified: Sources/Vapor/Utilities/File.swift (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Tests/VaporTests/ClientTests.swift
+  description: 'modified: Tests/VaporTests/ClientTests.swift (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Tests/VaporTests/RequestTests.swift
+  description: 'modified: Tests/VaporTests/RequestTests.swift (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Tests/VaporTests/ServerTests.swift
+  description: 'modified: Tests/VaporTests/ServerTests.swift (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Tests/VaporTests/Utilities/TestLogging.swift
+  description: 'modified: Tests/VaporTests/Utilities/TestLogging.swift (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Tests/VaporTests/WebSocketTests.swift
+  description: 'modified: Tests/VaporTests/WebSocketTests.swift (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 14
+notes: 'Mined from vapor/vapor PR #3509. Trigger heuristic applied. Needs review.'

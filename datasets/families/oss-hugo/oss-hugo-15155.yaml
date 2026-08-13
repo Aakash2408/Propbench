@@ -1,0 +1,65 @@
+id: oss-hugo-15155
+title: Remove some old deprecations
+family: dependency-evolution
+date: '2026-07-29'
+author: bep
+source: github-api-mined
+source_repo: gohugoio/hugo
+source_url: https://github.com/gohugoio/hugo/pull/15155
+source_pr: 15155
+difficulty: medium
+trigger:
+  package: gohugoio/hugo
+  files:
+  - config/allconfig/allconfig.go
+  intent: Remove some old deprecations
+  diff_summary: 'Primary: config/allconfig/allconfig.go (+0/-30)'
+consequences:
+- package: gohugoio/hugo
+  files:
+  - common/hugo/hugo_test.go
+  description: 'modified: common/hugo/hugo_test.go (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - config/privacy/privacyConfig.go
+  description: 'modified: config/privacy/privacyConfig.go (+0/-14)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - config/services/servicesConfig.go
+  description: 'modified: config/services/servicesConfig.go (+0/-10)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - hugolib/page__meta.go
+  description: 'modified: hugolib/page__meta.go (+0/-11)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - resources/page/hugoinfo.go
+  description: 'modified: resources/page/hugoinfo.go (+0/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from gohugoio/hugo PR #15155. Trigger heuristic applied. Needs review.'

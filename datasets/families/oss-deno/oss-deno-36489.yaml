@@ -1,0 +1,161 @@
+id: oss-deno-36489
+title: 'refactor: remove clap from the tree'
+family: refactor
+date: '2026-08-07'
+author: bartlomieju
+source: github-api-mined
+source_repo: denoland/deno
+source_url: https://github.com/denoland/deno/pull/36489
+source_pr: 36489
+difficulty: medium
+trigger:
+  package: denoland/deno
+  files:
+  - cli/args/flags.rs
+  intent: 'refactor: remove clap from the tree'
+  diff_summary: 'Primary: cli/args/flags.rs (+350/-17829)'
+consequences:
+- package: denoland/deno
+  files:
+  - Cargo.lock
+  description: 'modified: Cargo.lock (+0/-37)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - Cargo.toml
+  description: 'modified: Cargo.toml (+0/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - cli/Cargo.toml
+  description: 'modified: cli/Cargo.toml (+0/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - cli/args/flags_net.rs
+  description: 'modified: cli/args/flags_net.rs (+4/-24)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - cli/args/mod.rs
+  description: 'modified: cli/args/mod.rs (+0/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - cli/benches/flags.rs
+  description: 'modified: cli/benches/flags.rs (+5/-20)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - cli/clippy.toml
+  description: 'modified: cli/clippy.toml (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - cli/lib.rs
+  description: 'modified: cli/lib.rs (+39/-37)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - cli/util/extract.rs
+  description: 'modified: cli/util/extract.rs (+1/-9)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - libs/cli_parser/src/convert.rs
+  description: 'modified: libs/cli_parser/src/convert.rs (+158/-65)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - libs/cli_parser/src/error.rs
+  description: 'modified: libs/cli_parser/src/error.rs (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - libs/cli_parser/src/lib.rs
+  description: 'modified: libs/cli_parser/src/lib.rs (+0/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - libs/cli_parser/src/tests_full.rs
+  description: 'modified: libs/cli_parser/src/tests_full.rs (+77/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - libs/dcore/Cargo.toml
+  description: 'modified: libs/dcore/Cargo.toml (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - libs/dcore/src/main.rs
+  description: 'modified: libs/dcore/src/main.rs (+139/-104)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - libs/node_shim/lib.rs
+  description: 'modified: libs/node_shim/lib.rs (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tools/lint.js
+  description: 'modified: tools/lint.js (+6/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 18
+notes: 'Mined from denoland/deno PR #36489. Trigger heuristic applied. Needs review.'

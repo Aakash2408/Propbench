@@ -1,0 +1,53 @@
+id: oss-symfony-65273
+title: '[Notifier][Sevenio] Fix successful sends being reported as failures'
+family: bugfix
+date: '2026-08-11'
+author: lazerg
+source: github-api-mined
+source_repo: symfony/symfony
+source_url: https://github.com/symfony/symfony/pull/65273
+source_pr: 65273
+difficulty: medium
+trigger:
+  package: symfony/symfony
+  files:
+  - src/Symfony/Component/Notifier/Bridge/Sevenio/SevenIoTransport.php
+  intent: '[Notifier][Sevenio] Fix successful sends being reported as failures'
+  diff_summary: 'Primary: src/Symfony/Component/Notifier/Bridge/Sevenio/SevenIoTransport.php
+    (+1/-1)'
+consequences:
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Notifier/Bridge/Sevenio/Tests/SevenIoTransportTest.php
+  description: 'modified: src/Symfony/Component/Notifier/Bridge/Sevenio/Tests/SevenIoTransportTest.php
+    (+27/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Notifier/Bridge/Sms77/Sms77Transport.php
+  description: 'modified: src/Symfony/Component/Notifier/Bridge/Sms77/Sms77Transport.php
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Notifier/Bridge/Sms77/Tests/Sms77TransportTest.php
+  description: 'modified: src/Symfony/Component/Notifier/Bridge/Sms77/Tests/Sms77TransportTest.php
+    (+27/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from symfony/symfony PR #65273. Trigger heuristic applied. Needs review.'

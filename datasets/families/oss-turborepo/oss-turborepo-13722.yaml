@@ -1,0 +1,49 @@
+id: oss-turborepo-13722
+title: 'feat: Notify Slack when agents open PRs'
+family: uncategorized
+date: '2026-08-12'
+author: anthonyshew
+source: github-api-mined
+source_repo: vercel/turborepo
+source_url: https://github.com/vercel/turborepo/pull/13722
+source_pr: 13722
+difficulty: medium
+trigger:
+  package: vercel/turborepo
+  files:
+  - apps/agents/agent/tools/create_pull_request.ts
+  intent: 'feat: Notify Slack when agents open PRs'
+  diff_summary: 'Primary: apps/agents/agent/tools/create_pull_request.ts (+115/-13)'
+consequences:
+- package: vercel/turborepo
+  files:
+  - apps/agents/agent/channels/slack.ts
+  description: 'modified: apps/agents/agent/channels/slack.ts (+3/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - apps/agents/agent/lib/slack.ts
+  description: 'added: apps/agents/agent/lib/slack.ts (+22/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - apps/agents/turbo.json
+  description: 'modified: apps/agents/turbo.json (+7/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from vercel/turborepo PR #13722. Trigger heuristic applied. Needs review.'

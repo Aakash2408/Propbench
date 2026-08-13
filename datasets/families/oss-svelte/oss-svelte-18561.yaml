@@ -1,0 +1,52 @@
+id: oss-svelte-18561
+title: 'fix: preserve select selection with spread attributes'
+family: bugfix
+date: '2026-07-22'
+author: floze-the-genius
+source: github-api-mined
+source_repo: sveltejs/svelte
+source_url: https://github.com/sveltejs/svelte/pull/18561
+source_pr: 18561
+difficulty: medium
+trigger:
+  package: sveltejs/svelte
+  files:
+  - packages/svelte/src/internal/client/dom/elements/bindings/select.js
+  intent: 'fix: preserve select selection with spread attributes'
+  diff_summary: 'Primary: packages/svelte/src/internal/client/dom/elements/bindings/select.js
+    (+4/-2)'
+consequences:
+- package: sveltejs/svelte
+  files:
+  - .changeset/tidy-select-spreads.md
+  description: 'added: .changeset/tidy-select-spreads.md (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/tests/runtime-legacy/samples/select-spread-preserve-selection/_config.js
+  description: 'added: packages/svelte/tests/runtime-legacy/samples/select-spread-preserve-selection/_config.js
+    (+25/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/tests/runtime-legacy/samples/select-spread-preserve-selection/main.svelte
+  description: 'added: packages/svelte/tests/runtime-legacy/samples/select-spread-preserve-selection/main.svelte
+    (+16/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from sveltejs/svelte PR #18561. Trigger heuristic applied. Needs review.'

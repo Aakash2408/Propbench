@@ -1,0 +1,191 @@
+id: oss-aspnetcore-67855
+title: API review changes for Blazor SSR client-side validation
+family: uncategorized
+date: '2026-07-16'
+author: oroztocil
+source: github-api-mined
+source_repo: dotnet/aspnetcore
+source_url: https://github.com/dotnet/aspnetcore/pull/67855
+source_pr: 67855
+difficulty: medium
+trigger:
+  package: dotnet/aspnetcore
+  files:
+  - src/Components/Endpoints/src/Forms/DataAnnotationsClientValidationProvider.cs
+  intent: API review changes for Blazor SSR client-side validation
+  diff_summary: 'Primary: src/Components/Endpoints/src/Forms/DataAnnotationsClientValidationProvider.cs
+    (+13/-4)'
+consequences:
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Endpoints/src/DependencyInjection/RazorComponentsServiceCollectionExtensions.cs
+  description: 'modified: src/Components/Endpoints/src/DependencyInjection/RazorComponentsServiceCollectionExtensions.cs
+    (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Endpoints/src/DependencyInjection/RazorComponentsServiceOptions.cs
+  description: 'modified: src/Components/Endpoints/src/DependencyInjection/RazorComponentsServiceOptions.cs
+    (+10/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Endpoints/src/Forms/ClientValidationRule.cs
+  description: 'modified: src/Components/Endpoints/src/Forms/ClientValidationRule.cs
+    (+9/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Endpoints/src/Forms/IClientValidationRuleProvider.cs
+  description: 'renamed: src/Components/Endpoints/src/Forms/IClientValidationRuleProvider.cs
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Endpoints/src/PublicAPI.Unshipped.txt
+  description: 'modified: src/Components/Endpoints/src/PublicAPI.Unshipped.txt (+5/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Endpoints/test/FormValidation/ClientValidationProviderTests.cs
+  description: 'modified: src/Components/Endpoints/test/FormValidation/ClientValidationProviderTests.cs
+    (+26/-7)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Forms/src/DataAnnotationsValidator.cs
+  description: 'modified: src/Components/Forms/src/DataAnnotationsValidator.cs (+5/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Forms/src/Microsoft.AspNetCore.Components.Forms.WarningSuppressions.xml
+  description: 'modified: src/Components/Forms/src/Microsoft.AspNetCore.Components.Forms.WarningSuppressions.xml
+    (+0/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Forms/src/PublicAPI.Unshipped.txt
+  description: 'modified: src/Components/Forms/src/PublicAPI.Unshipped.txt (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Web/src/Forms/ClientValidation/ClientValidationData.cs
+  description: 'modified: src/Components/Web/src/Forms/ClientValidation/ClientValidationData.cs
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Web/src/Forms/ClientValidation/ClientValidationProvider.cs
+  description: 'modified: src/Components/Web/src/Forms/ClientValidation/ClientValidationProvider.cs
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Web/src/Forms/ClientValidation/RenderedFieldRegistry.cs
+  description: 'modified: src/Components/Web/src/Forms/ClientValidation/RenderedFieldRegistry.cs
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Web/src/Forms/EditForm.cs
+  description: 'modified: src/Components/Web/src/Forms/EditForm.cs (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Web/src/Forms/InputBase.cs
+  description: 'modified: src/Components/Web/src/Forms/InputBase.cs (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Web/src/PublicAPI.Unshipped.txt
+  description: 'modified: src/Components/Web/src/PublicAPI.Unshipped.txt (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/test/E2ETest/ServerRenderingTests/ClientValidation/ClientValidationTest.cs
+  description: 'modified: src/Components/test/E2ETest/ServerRenderingTests/ClientValidation/ClientValidationTest.cs
+    (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/test/testassets/Components.TestServer/RazorComponents/Pages/Forms/ClientValidation/BasicValidation.razor
+  description: 'modified: src/Components/test/testassets/Components.TestServer/RazorComponents/Pages/Forms/ClientValidation/BasicValidation.razor
+    (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/test/testassets/Components.TestServer/RazorComponents/Pages/Forms/ClientValidation/CustomValidator.razor
+  description: 'modified: src/Components/test/testassets/Components.TestServer/RazorComponents/Pages/Forms/ClientValidation/CustomValidator.razor
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/test/testassets/Components.TestServer/RazorComponents/Pages/Forms/DefaultFormBoundParameterAnnotations.razor
+  description: 'modified: src/Components/test/testassets/Components.TestServer/RazorComponents/Pages/Forms/DefaultFormBoundParameterAnnotations.razor
+    (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 20
+notes: 'Mined from dotnet/aspnetcore PR #67855. Trigger heuristic applied. Needs review.'

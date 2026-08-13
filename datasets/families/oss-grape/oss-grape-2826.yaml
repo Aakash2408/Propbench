@@ -1,0 +1,41 @@
+id: oss-grape-2826
+title: Set api.version when the version is the only path segment
+family: uncategorized
+date: '2026-07-29'
+author: ericproulx
+source: github-api-mined
+source_repo: ruby-grape/grape
+source_url: https://github.com/ruby-grape/grape/pull/2826
+source_pr: 2826
+difficulty: medium
+trigger:
+  package: ruby-grape/grape
+  files:
+  - lib/grape/middleware/versioner/path.rb
+  intent: Set api.version when the version is the only path segment
+  diff_summary: 'Primary: lib/grape/middleware/versioner/path.rb (+22/-1)'
+consequences:
+- package: ruby-grape/grape
+  files:
+  - spec/grape/middleware/versioner/path_spec.rb
+  description: 'modified: spec/grape/middleware/versioner/path_spec.rb (+35/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - spec/shared/versioning_examples.rb
+  description: 'modified: spec/shared/versioning_examples.rb (+10/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from ruby-grape/grape PR #2826. Trigger heuristic applied. Needs review.'

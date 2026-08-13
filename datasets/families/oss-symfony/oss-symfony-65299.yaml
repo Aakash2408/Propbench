@@ -1,0 +1,44 @@
+id: oss-symfony-65299
+title: '[DependencyInjection] Speed up ResolveInstanceofConditionalsPass'
+family: dependency-evolution
+date: '2026-08-13'
+author: javiereguiluz
+source: github-api-mined
+source_repo: symfony/symfony
+source_url: https://github.com/symfony/symfony/pull/65299
+source_pr: 65299
+difficulty: medium
+trigger:
+  package: symfony/symfony
+  files:
+  - src/Symfony/Component/DependencyInjection/Compiler/ResolveInstanceofConditionalsPass.php
+  intent: '[DependencyInjection] Speed up ResolveInstanceofConditionalsPass'
+  diff_summary: 'Primary: src/Symfony/Component/DependencyInjection/Compiler/ResolveInstanceofConditionalsPass.php
+    (+76/-11)'
+consequences:
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/DependencyInjection/Tests/Compiler/ResolveInstanceofConditionalsPassTest.php
+  description: 'modified: src/Symfony/Component/DependencyInjection/Tests/Compiler/ResolveInstanceofConditionalsPassTest.php
+    (+114/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/DependencyInjection/Tests/Fixtures/InstanceofLateAlias/LateAliasedService.php
+  description: 'added: src/Symfony/Component/DependencyInjection/Tests/Fixtures/InstanceofLateAlias/LateAliasedService.php
+    (+25/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from symfony/symfony PR #65299. Trigger heuristic applied. Needs review.'

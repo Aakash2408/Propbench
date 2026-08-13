@@ -1,0 +1,44 @@
+id: oss-transformers-47903
+title: '[CohereCompass] Minor docs fixes'
+family: bugfix
+date: '2026-08-11'
+author: calpt
+source: github-api-mined
+source_repo: huggingface/transformers
+source_url: https://github.com/huggingface/transformers/pull/47903
+source_pr: 47903
+difficulty: medium
+trigger:
+  package: huggingface/transformers
+  files:
+  - src/transformers/models/cohere_compass/modular_cohere_compass.py
+  intent: '[CohereCompass] Minor docs fixes'
+  diff_summary: 'Primary: src/transformers/models/cohere_compass/modular_cohere_compass.py
+    (+16/-0)'
+consequences:
+- package: huggingface/transformers
+  files:
+  - docs/source/en/model_doc/cohere_compass.md
+  description: 'modified: docs/source/en/model_doc/cohere_compass.md (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/cohere_compass/configuration_cohere_compass.py
+  description: 'modified: src/transformers/models/cohere_compass/configuration_cohere_compass.py
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from huggingface/transformers PR #47903. Trigger heuristic applied.
+  Needs review.'

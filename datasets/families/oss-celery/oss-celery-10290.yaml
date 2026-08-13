@@ -1,0 +1,57 @@
+id: oss-celery-10290
+title: 'fix(defaults,rpc): RabbitMQ 4.3.0 compatibility'
+family: bugfix
+date: '2026-04-26'
+author: Nusnus
+source: github-api-mined
+source_repo: celery/celery
+source_url: https://github.com/celery/celery/pull/10290
+source_pr: 10290
+difficulty: medium
+trigger:
+  package: celery/celery
+  files:
+  - docs/userguide/configuration.rst
+  intent: 'fix(defaults,rpc): RabbitMQ 4.3.0 compatibility'
+  diff_summary: 'Primary: docs/userguide/configuration.rst (+15/-3)'
+consequences:
+- package: celery/celery
+  files:
+  - celery/app/defaults.py
+  description: 'modified: celery/app/defaults.py (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: celery/celery
+  files:
+  - celery/backends/rpc.py
+  description: 'modified: celery/backends/rpc.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: celery/celery
+  files:
+  - docs/userguide/monitoring.rst
+  description: 'modified: docs/userguide/monitoring.rst (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: celery/celery
+  files:
+  - t/unit/backends/test_rpc.py
+  description: 'modified: t/unit/backends/test_rpc.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from celery/celery PR #10290. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,44 @@
+id: oss-reactor-core-4302
+title: Upgrade NullAway 0.13.5 -> 0.13.7 and refine nullability at 2 sites
+family: dependency-evolution
+date: '2026-06-29'
+author: chemicL
+source: github-api-mined
+source_repo: reactor/reactor-core
+source_url: https://github.com/reactor/reactor-core/pull/4302
+source_pr: 4302
+difficulty: medium
+trigger:
+  package: reactor/reactor-core
+  files:
+  - reactor-core/src/main/java/reactor/core/publisher/ContextPropagation.java
+  intent: Upgrade NullAway 0.13.5 -> 0.13.7 and refine nullability at 2 sites
+  diff_summary: 'Primary: reactor-core/src/main/java/reactor/core/publisher/ContextPropagation.java
+    (+2/-2)'
+consequences:
+- package: reactor/reactor-core
+  files:
+  - gradle/libs.versions.toml
+  description: 'modified: gradle/libs.versions.toml (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: reactor/reactor-core
+  files:
+  - reactor-core/src/main/java/reactor/core/publisher/FluxBufferPredicate.java
+  description: 'modified: reactor-core/src/main/java/reactor/core/publisher/FluxBufferPredicate.java
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from reactor/reactor-core PR #4302. Trigger heuristic applied. Needs
+  review.'

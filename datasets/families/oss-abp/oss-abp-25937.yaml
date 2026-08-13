@@ -1,0 +1,97 @@
+id: oss-abp-25937
+title: Update the aggregate root only when the principal has a navigation
+family: uncategorized
+date: '2026-08-07'
+author: maliming
+source: github-api-mined
+source_repo: abpframework/abp
+source_url: https://github.com/abpframework/abp/pull/25937
+source_pr: 25937
+difficulty: medium
+trigger:
+  package: abpframework/abp
+  files:
+  - framework/src/Volo.Abp.Ddd.Domain/Volo/Abp/Domain/Entities/Events/EntityChangeUnitOfWorkExtensions.cs
+  intent: Update the aggregate root only when the principal has a navigation
+  diff_summary: 'Primary: framework/src/Volo.Abp.Ddd.Domain/Volo/Abp/Domain/Entities/Events/EntityChangeUnitOfWorkExtensions.cs
+    (+74/-0)'
+consequences:
+- package: abpframework/abp
+  files:
+  - docs/en/release-info/migration-guides/abp-10-7.md
+  description: 'modified: docs/en/release-info/migration-guides/abp-10-7.md (+18/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - framework/src/Volo.Abp.EntityFrameworkCore/Volo/Abp/EntityFrameworkCore/AbpDbContext.cs
+  description: 'modified: framework/src/Volo.Abp.EntityFrameworkCore/Volo/Abp/EntityFrameworkCore/AbpDbContext.cs
+    (+9/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - framework/src/Volo.Abp.EntityFrameworkCore/Volo/Abp/EntityFrameworkCore/ChangeTrackers/AbpEfCoreNavigationHelper.cs
+  description: 'modified: framework/src/Volo.Abp.EntityFrameworkCore/Volo/Abp/EntityFrameworkCore/ChangeTrackers/AbpEfCoreNavigationHelper.cs
+    (+3/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - framework/test/Volo.Abp.EntityFrameworkCore.Tests/Volo/Abp/EntityFrameworkCore/DomainEvents/DomainEvents_Tests.cs
+  description: 'modified: framework/test/Volo.Abp.EntityFrameworkCore.Tests/Volo/Abp/EntityFrameworkCore/DomainEvents/DomainEvents_Tests.cs
+    (+5/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - framework/test/Volo.Abp.EntityFrameworkCore.Tests/Volo/Abp/EntityFrameworkCore/DomainEvents/UpdateAggregateRootWhenNavigationChanges_Tests.cs
+  description: 'added: framework/test/Volo.Abp.EntityFrameworkCore.Tests/Volo/Abp/EntityFrameworkCore/DomainEvents/UpdateAggregateRootWhenNavigationChanges_Tests.cs
+    (+394/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - framework/test/Volo.Abp.EntityFrameworkCore.Tests/Volo/Abp/EntityFrameworkCore/TestMigrationsDbContext.cs
+  description: 'modified: framework/test/Volo.Abp.EntityFrameworkCore.Tests/Volo/Abp/EntityFrameworkCore/TestMigrationsDbContext.cs
+    (+33/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - framework/test/Volo.Abp.EntityFrameworkCore.Tests/Volo/Abp/TestApp/EntityFrameworkCore/TestAppDbContext.cs
+  description: 'modified: framework/test/Volo.Abp.EntityFrameworkCore.Tests/Volo/Abp/TestApp/EntityFrameworkCore/TestAppDbContext.cs
+    (+33/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - framework/test/Volo.Abp.TestApp/Volo/Abp/TestApp/Domain/AppEntityWithNavigations.cs
+  description: 'modified: framework/test/Volo.Abp.TestApp/Volo/Abp/TestApp/Domain/AppEntityWithNavigations.cs
+    (+83/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 9
+notes: 'Mined from abpframework/abp PR #25937. Trigger heuristic applied. Needs review.'

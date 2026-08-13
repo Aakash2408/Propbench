@@ -1,0 +1,69 @@
+id: oss-svelte-18638
+title: 'fix: better whitespace handling inside printer'
+family: bugfix
+date: '2026-08-12'
+author: dummdidumm
+source: github-api-mined
+source_repo: sveltejs/svelte
+source_url: https://github.com/sveltejs/svelte/pull/18638
+source_pr: 18638
+difficulty: medium
+trigger:
+  package: sveltejs/svelte
+  files:
+  - packages/svelte/src/compiler/print/index.js
+  intent: 'fix: better whitespace handling inside printer'
+  diff_summary: 'Primary: packages/svelte/src/compiler/print/index.js (+75/-29)'
+consequences:
+- package: sveltejs/svelte
+  files:
+  - .changeset/metal-cougars-chew.md
+  description: 'added: .changeset/metal-cougars-chew.md (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/tests/print/samples/element-content-wrapping/input.svelte
+  description: 'added: packages/svelte/tests/print/samples/element-content-wrapping/input.svelte
+    (+5/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/tests/print/samples/element-content-wrapping/output.svelte
+  description: 'added: packages/svelte/tests/print/samples/element-content-wrapping/output.svelte
+    (+5/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/tests/print/samples/preserve-whitespace-elements/input.svelte
+  description: 'added: packages/svelte/tests/print/samples/preserve-whitespace-elements/input.svelte
+    (+19/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/tests/print/samples/preserve-whitespace-elements/output.svelte
+  description: 'added: packages/svelte/tests/print/samples/preserve-whitespace-elements/output.svelte
+    (+21/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from sveltejs/svelte PR #18638. Trigger heuristic applied. Needs review.'

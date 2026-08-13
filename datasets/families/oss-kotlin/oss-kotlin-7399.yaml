@@ -1,0 +1,89 @@
+id: oss-kotlin-7399
+title: '[Swift Export] Make auxiliary protocol typealiases public'
+family: uncategorized
+date: '2026-08-11'
+author: rickclephas
+source: github-api-mined
+source_repo: JetBrains/kotlin
+source_url: https://github.com/JetBrains/kotlin/pull/7399
+source_pr: 7399
+difficulty: medium
+trigger:
+  package: JetBrains/kotlin
+  files:
+  - native/swift/swift-export-standalone-integration-tests/simple/testData/generation/protocols/golden_result/main/main.swift
+  intent: '[Swift Export] Make auxiliary protocol typealiases public'
+  diff_summary: 'Primary: native/swift/swift-export-standalone-integration-tests/simple/testData/generation/protocols/golden_result/main/main.swift
+    (+14/-14)'
+consequences:
+- package: JetBrains/kotlin
+  files:
+  - native/swift/sir-light-classes/src/org/jetbrains/sir/lightclasses/nodes/SirProtocolFromKtSymbol.kt
+  description: 'modified: native/swift/sir-light-classes/src/org/jetbrains/sir/lightclasses/nodes/SirProtocolFromKtSymbol.kt
+    (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - native/swift/swift-export-standalone-integration-tests/coroutines/testData/generation/coroutines/golden_result/flow_overrides/flow_overrides.swift
+  description: 'modified: native/swift/swift-export-standalone-integration-tests/coroutines/testData/generation/coroutines/golden_result/flow_overrides/flow_overrides.swift
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - native/swift/swift-export-standalone-integration-tests/external/testData/generation/kotlinx-serialization-core/golden_result/KotlinSerialization/KotlinSerialization.swift
+  description: 'modified: native/swift/swift-export-standalone-integration-tests/external/testData/generation/kotlinx-serialization-core/golden_result/KotlinSerialization/KotlinSerialization.swift
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - native/swift/swift-export-standalone-integration-tests/simple/testData/generation/dependency_inner_classifiers/golden_result/dependency/dependency.swift
+  description: 'modified: native/swift/swift-export-standalone-integration-tests/simple/testData/generation/dependency_inner_classifiers/golden_result/dependency/dependency.swift
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - native/swift/swift-export-standalone-integration-tests/simple/testData/generation/protocols/golden_result/edge_cases/edge_cases.swift
+  description: 'modified: native/swift/swift-export-standalone-integration-tests/simple/testData/generation/protocols/golden_result/edge_cases/edge_cases.swift
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - native/swift/swift-export-standalone-integration-tests/simple/testData/generation/sealedTypes/golden_result/common/common.swift
+  description: 'modified: native/swift/swift-export-standalone-integration-tests/simple/testData/generation/sealedTypes/golden_result/common/common.swift
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - native/swift/swift-export-standalone-integration-tests/simple/testData/generation/vararg_in_interface/golden_result/main/main.swift
+  description: 'modified: native/swift/swift-export-standalone-integration-tests/simple/testData/generation/vararg_in_interface/golden_result/main/main.swift
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 8
+notes: 'Mined from JetBrains/kotlin PR #7399. Trigger heuristic applied. Needs review.'

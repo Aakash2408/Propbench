@@ -1,0 +1,163 @@
+id: oss-runtime-129118
+title: Validate invalid base type declarations in ILVerify
+family: uncategorized
+date: '2026-08-12'
+author: pkuyo
+source: github-api-mined
+source_repo: dotnet/runtime
+source_url: https://github.com/dotnet/runtime/pull/129118
+source_pr: 129118
+difficulty: medium
+trigger:
+  package: dotnet/runtime
+  files:
+  - src/coreclr/tools/ILVerification.Tests/ILTests/BaseTypeTests.il
+  intent: Validate invalid base type declarations in ILVerify
+  diff_summary: 'Primary: src/coreclr/tools/ILVerification.Tests/ILTests/BaseTypeTests.il
+    (+78/-0)'
+consequences:
+- package: dotnet/runtime
+  files:
+  - docs/design/specs/Ecma-335-Augments.md
+  description: 'modified: docs/design/specs/Ecma-335-Augments.md (+11/-34)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/tools/Common/TypeSystem/Ecma/EcmaModule.cs
+  description: 'modified: src/coreclr/tools/Common/TypeSystem/Ecma/EcmaModule.cs (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/tools/Common/TypeSystem/Ecma/EcmaSignatureParser.cs
+  description: 'modified: src/coreclr/tools/Common/TypeSystem/Ecma/EcmaSignatureParser.cs
+    (+39/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/tools/ILVerification.Tests/ILTests/AccessTests.il
+  description: 'modified: src/coreclr/tools/ILVerification.Tests/ILTests/AccessTests.il
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/tools/ILVerification.Tests/ILTests/BaseTypeTests.ilproj
+  description: 'added: src/coreclr/tools/ILVerification.Tests/ILTests/BaseTypeTests.ilproj
+    (+9/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/tools/ILVerification.Tests/ILTests/CastingTests.il
+  description: 'modified: src/coreclr/tools/ILVerification.Tests/ILTests/CastingTests.il
+    (+4/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/tools/ILVerification.Tests/ILTests/LoadStoreIndirectTests.il
+  description: 'modified: src/coreclr/tools/ILVerification.Tests/ILTests/LoadStoreIndirectTests.il
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/tools/ILVerification.Tests/ILTests/MalformedTypeSpecTests.il
+  description: 'added: src/coreclr/tools/ILVerification.Tests/ILTests/MalformedTypeSpecTests.il
+    (+30/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/tools/ILVerification.Tests/ILTests/MalformedTypeSpecTests.ilproj
+  description: 'added: src/coreclr/tools/ILVerification.Tests/ILTests/MalformedTypeSpecTests.ilproj
+    (+9/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/tools/ILVerification/EcmaSignatureParser.ILVerify.cs
+  description: 'added: src/coreclr/tools/ILVerification/EcmaSignatureParser.ILVerify.cs
+    (+26/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/tools/ILVerification/ILImporter.Verify.cs
+  description: 'modified: src/coreclr/tools/ILVerification/ILImporter.Verify.cs (+10/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/tools/ILVerification/ILVerification.projitems
+  description: 'modified: src/coreclr/tools/ILVerification/ILVerification.projitems
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/tools/ILVerification/Strings.resx
+  description: 'modified: src/coreclr/tools/ILVerification/Strings.resx (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/tools/ILVerification/TypeVerifier.cs
+  description: 'modified: src/coreclr/tools/ILVerification/TypeVerifier.cs (+58/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/tools/ILVerification/Verifier.cs
+  description: 'modified: src/coreclr/tools/ILVerification/Verifier.cs (+15/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/tools/ILVerification/VerifierError.cs
+  description: 'modified: src/coreclr/tools/ILVerification/VerifierError.cs (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 17
+notes: 'Mined from dotnet/runtime PR #129118. Trigger heuristic applied. Needs review.'

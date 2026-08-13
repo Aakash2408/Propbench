@@ -1,0 +1,52 @@
+id: oss-scikit-learn-33626
+title: FIX Inconsistencies between solvers in `LinearDiscriminantAnalysis` and `QuadraticDiscriminantAnalys
+family: bugfix
+date: '2026-07-29'
+author: dherrera1911
+source: github-api-mined
+source_repo: scikit-learn/scikit-learn
+source_url: https://github.com/scikit-learn/scikit-learn/pull/33626
+source_pr: 33626
+difficulty: medium
+trigger:
+  package: scikit-learn/scikit-learn
+  files:
+  - sklearn/discriminant_analysis.py
+  intent: FIX Inconsistencies between solvers in `LinearDiscriminantAnalysis` and
+    `QuadraticDiscriminantAnalysis`
+  diff_summary: 'Primary: sklearn/discriminant_analysis.py (+7/-8)'
+consequences:
+- package: scikit-learn/scikit-learn
+  files:
+  - doc/modules/lda_qda.rst
+  description: 'modified: doc/modules/lda_qda.rst (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - doc/whats_new/upcoming_changes/sklearn.discriminant_analysis/33626.fix.rst
+  description: 'added: doc/whats_new/upcoming_changes/sklearn.discriminant_analysis/33626.fix.rst
+    (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - sklearn/tests/test_discriminant_analysis.py
+  description: 'modified: sklearn/tests/test_discriminant_analysis.py (+72/-29)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from scikit-learn/scikit-learn PR #33626. Trigger heuristic applied.
+  Needs review.'

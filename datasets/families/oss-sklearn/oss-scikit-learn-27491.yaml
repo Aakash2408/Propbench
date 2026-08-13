@@ -1,0 +1,130 @@
+id: oss-scikit-learn-27491
+title: ENH new svd_solver='covariance_eigh' for PCA
+family: interface-evolution
+date: '2024-04-11'
+author: ogrisel
+source: github-api-mined
+source_repo: scikit-learn/scikit-learn
+source_url: https://github.com/scikit-learn/scikit-learn/pull/27491
+source_pr: 27491
+difficulty: medium
+trigger:
+  package: scikit-learn/scikit-learn
+  files:
+  - sklearn/decomposition/_pca.py
+  intent: ENH new svd_solver='covariance_eigh' for PCA
+  diff_summary: 'Primary: sklearn/decomposition/_pca.py (+186/-72)'
+consequences:
+- package: scikit-learn/scikit-learn
+  files:
+  - .gitignore
+  description: 'modified: .gitignore (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - benchmarks/bench_pca_solvers.py
+  description: 'added: benchmarks/bench_pca_solvers.py (+165/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - doc/modules/compose.rst
+  description: 'modified: doc/modules/compose.rst (+8/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - doc/whats_new/v1.5.rst
+  description: 'modified: doc/whats_new/v1.5.rst (+30/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - sklearn/decomposition/_base.py
+  description: 'modified: sklearn/decomposition/_base.py (+20/-10)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - sklearn/decomposition/_kernel_pca.py
+  description: 'modified: sklearn/decomposition/_kernel_pca.py (+1/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - sklearn/decomposition/_sparse_pca.py
+  description: 'modified: sklearn/decomposition/_sparse_pca.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - sklearn/decomposition/_truncated_svd.py
+  description: 'modified: sklearn/decomposition/_truncated_svd.py (+4/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - sklearn/decomposition/tests/test_incremental_pca.py
+  description: 'modified: sklearn/decomposition/tests/test_incremental_pca.py (+22/-9)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - sklearn/decomposition/tests/test_pca.py
+  description: 'modified: sklearn/decomposition/tests/test_pca.py (+177/-42)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - sklearn/decomposition/tests/test_sparse_pca.py
+  description: 'modified: sklearn/decomposition/tests/test_sparse_pca.py (+5/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - sklearn/pipeline.py
+  description: 'modified: sklearn/pipeline.py (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - sklearn/utils/extmath.py
+  description: 'modified: sklearn/utils/extmath.py (+10/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 14
+notes: 'Mined from scikit-learn/scikit-learn PR #27491. Trigger heuristic applied.
+  Needs review.'

@@ -1,0 +1,97 @@
+id: oss-grape-2836
+title: 'Define #hash alongside the eql?/== pairs that lacked one'
+family: uncategorized
+date: '2026-07-29'
+author: ericproulx
+source: github-api-mined
+source_repo: ruby-grape/grape
+source_url: https://github.com/ruby-grape/grape/pull/2836
+source_pr: 2836
+difficulty: medium
+trigger:
+  package: ruby-grape/grape
+  files:
+  - lib/grape/util/inheritable_setting.rb
+  intent: 'Define #hash alongside the eql?/== pairs that lacked one'
+  diff_summary: 'Primary: lib/grape/util/inheritable_setting.rb (+10/-0)'
+consequences:
+- package: ruby-grape/grape
+  files:
+  - lib/grape/endpoint.rb
+  description: 'modified: lib/grape/endpoint.rb (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - lib/grape/middleware/stack.rb
+  description: 'modified: lib/grape/middleware/stack.rb (+9/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - lib/grape/serve_stream/file_body.rb
+  description: 'modified: lib/grape/serve_stream/file_body.rb (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - lib/grape/serve_stream/stream_response.rb
+  description: 'modified: lib/grape/serve_stream/stream_response.rb (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - spec/grape/endpoint_spec.rb
+  description: 'modified: spec/grape/endpoint_spec.rb (+24/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - spec/grape/middleware/stack/middleware_spec.rb
+  description: 'added: spec/grape/middleware/stack/middleware_spec.rb (+18/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - spec/grape/serve_stream/file_body_spec.rb
+  description: 'added: spec/grape/serve_stream/file_body_spec.rb (+13/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - spec/grape/serve_stream/stream_response_spec.rb
+  description: 'added: spec/grape/serve_stream/stream_response_spec.rb (+17/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - spec/grape/util/inheritable_setting_spec.rb
+  description: 'modified: spec/grape/util/inheritable_setting_spec.rb (+22/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 10
+notes: 'Mined from ruby-grape/grape PR #2836. Trigger heuristic applied. Needs review.'

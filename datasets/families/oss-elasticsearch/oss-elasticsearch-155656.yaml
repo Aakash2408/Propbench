@@ -1,0 +1,72 @@
+id: oss-elasticsearch-155656
+title: Add shard-level write thread pool utilization tracking
+family: interface-evolution
+date: '2026-08-12'
+author: DiannaHohensee
+source: github-api-mined
+source_repo: elastic/elasticsearch
+source_url: https://github.com/elastic/elasticsearch/pull/155656
+source_pr: 155656
+difficulty: medium
+trigger:
+  package: elastic/elasticsearch
+  files:
+  - server/src/main/java/org/elasticsearch/common/util/ThreadUtilizationTracker.java
+  intent: Add shard-level write thread pool utilization tracking
+  diff_summary: 'Primary: server/src/main/java/org/elasticsearch/common/util/ThreadUtilizationTracker.java
+    (+79/-0)'
+consequences:
+- package: elastic/elasticsearch
+  files:
+  - server/src/main/java/org/elasticsearch/common/util/concurrent/TaskExecutionTimeTrackingEsThreadPoolExecutor.java
+  description: 'modified: server/src/main/java/org/elasticsearch/common/util/concurrent/TaskExecutionTimeTrackingEsThreadPoolExecutor.java
+    (+5/-29)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - server/src/main/java/org/elasticsearch/index/shard/IndexShard.java
+  description: 'modified: server/src/main/java/org/elasticsearch/index/shard/IndexShard.java
+    (+10/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - server/src/main/java/org/elasticsearch/index/shard/InternalIndexingStats.java
+  description: 'modified: server/src/main/java/org/elasticsearch/index/shard/InternalIndexingStats.java
+    (+26/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - server/src/test/java/org/elasticsearch/common/util/ThreadUtilizationTrackerTests.java
+  description: 'added: server/src/test/java/org/elasticsearch/common/util/ThreadUtilizationTrackerTests.java
+    (+71/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - server/src/test/java/org/elasticsearch/index/shard/InternalIndexingStatsTests.java
+  description: 'added: server/src/test/java/org/elasticsearch/index/shard/InternalIndexingStatsTests.java
+    (+59/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from elastic/elasticsearch PR #155656. Trigger heuristic applied. Needs
+  review.'

@@ -1,0 +1,127 @@
+id: oss-guava-8556
+title: 'Rename remaining "`...Tests`" classes to "`...Test`." This lets them be automatically
+  recognized by '
+family: refactor
+date: '2026-07-15'
+author: copybara-service[bot]
+source: github-api-mined
+source_repo: google/guava
+source_url: https://github.com/google/guava/pull/8556
+source_pr: 8556
+difficulty: medium
+trigger:
+  package: google/guava
+  files:
+  - android/guava-testlib/test/com/google/common/collect/testing/OpenJdk6Test.java
+  intent: Rename remaining "`...Tests`" classes to "`...Test`." This lets them be
+    automatically recognized by more testing systems.
+  diff_summary: 'Primary: android/guava-testlib/test/com/google/common/collect/testing/OpenJdk6Test.java
+    (+5/-5)'
+consequences:
+- package: google/guava
+  files:
+  - android/guava-testlib/test/com/google/common/collect/testing/MapTestSuiteBuilderTest.java
+  description: 'renamed: android/guava-testlib/test/com/google/common/collect/testing/MapTestSuiteBuilderTest.java
+    (+3/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - android/guava-testlib/test/com/google/common/collect/testing/OpenJdk6ListTest.java
+  description: 'renamed: android/guava-testlib/test/com/google/common/collect/testing/OpenJdk6ListTest.java
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - android/guava-testlib/test/com/google/common/collect/testing/OpenJdk6MapTest.java
+  description: 'renamed: android/guava-testlib/test/com/google/common/collect/testing/OpenJdk6MapTest.java
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - android/guava-testlib/test/com/google/common/collect/testing/OpenJdk6QueueTest.java
+  description: 'renamed: android/guava-testlib/test/com/google/common/collect/testing/OpenJdk6QueueTest.java
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - android/guava-testlib/test/com/google/common/collect/testing/OpenJdk6SetTest.java
+  description: 'renamed: android/guava-testlib/test/com/google/common/collect/testing/OpenJdk6SetTest.java
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava-testlib/test/com/google/common/collect/testing/MapTestSuiteBuilderTest.java
+  description: 'renamed: guava-testlib/test/com/google/common/collect/testing/MapTestSuiteBuilderTest.java
+    (+3/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava-testlib/test/com/google/common/collect/testing/OpenJdk6ListTest.java
+  description: 'renamed: guava-testlib/test/com/google/common/collect/testing/OpenJdk6ListTest.java
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava-testlib/test/com/google/common/collect/testing/OpenJdk6MapTest.java
+  description: 'renamed: guava-testlib/test/com/google/common/collect/testing/OpenJdk6MapTest.java
+    (+8/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava-testlib/test/com/google/common/collect/testing/OpenJdk6QueueTest.java
+  description: 'renamed: guava-testlib/test/com/google/common/collect/testing/OpenJdk6QueueTest.java
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava-testlib/test/com/google/common/collect/testing/OpenJdk6SetTest.java
+  description: 'renamed: guava-testlib/test/com/google/common/collect/testing/OpenJdk6SetTest.java
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava-testlib/test/com/google/common/collect/testing/OpenJdk6Test.java
+  description: 'renamed: guava-testlib/test/com/google/common/collect/testing/OpenJdk6Test.java
+    (+5/-5)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 12
+notes: 'Mined from google/guava PR #8556. Trigger heuristic applied. Needs review.'

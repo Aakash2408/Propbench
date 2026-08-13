@@ -1,0 +1,44 @@
+id: oss-kafka-22778
+title: 'KAFKA-20782: Fix lost IQ metadata in "streams" protocol'
+family: bugfix
+date: '2026-08-03'
+author: UladzislauBlok
+source: github-api-mined
+source_repo: apache/kafka
+source_url: https://github.com/apache/kafka/pull/22778
+source_pr: 22778
+difficulty: medium
+trigger:
+  package: apache/kafka
+  files:
+  - clients/src/main/java/org/apache/kafka/clients/consumer/internals/StreamsGroupHeartbeatRequestManager.java
+  intent: 'KAFKA-20782: Fix lost IQ metadata in "streams" protocol'
+  diff_summary: 'Primary: clients/src/main/java/org/apache/kafka/clients/consumer/internals/StreamsGroupHeartbeatRequestManager.java
+    (+12/-2)'
+consequences:
+- package: apache/kafka
+  files:
+  - clients/src/test/java/org/apache/kafka/clients/consumer/internals/StreamsGroupHeartbeatRequestManagerTest.java
+  description: 'modified: clients/src/test/java/org/apache/kafka/clients/consumer/internals/StreamsGroupHeartbeatRequestManagerTest.java
+    (+61/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - streams/integration-tests/src/test/java/org/apache/kafka/streams/integration/IQv2EndpointToPartitionsIntegrationTest.java
+  description: 'modified: streams/integration-tests/src/test/java/org/apache/kafka/streams/integration/IQv2EndpointToPartitionsIntegrationTest.java
+    (+88/-76)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from apache/kafka PR #22778. Trigger heuristic applied. Needs review.'

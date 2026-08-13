@@ -1,0 +1,57 @@
+id: oss-rails-56873
+title: Escape markdown metacharacters in text nodes and attachment captions
+family: uncategorized
+date: '2026-02-25'
+author: flavorjones
+source: github-api-mined
+source_repo: rails/rails
+source_url: https://github.com/rails/rails/pull/56873
+source_pr: 56873
+difficulty: medium
+trigger:
+  package: rails/rails
+  files:
+  - actiontext/lib/action_text/markdown_conversion.rb
+  intent: Escape markdown metacharacters in text nodes and attachment captions
+  diff_summary: 'Primary: actiontext/lib/action_text/markdown_conversion.rb (+50/-7)'
+consequences:
+- package: rails/rails
+  files:
+  - actiontext/lib/action_text/attachment.rb
+  description: 'modified: actiontext/lib/action_text/attachment.rb (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - actiontext/lib/action_text/content.rb
+  description: 'modified: actiontext/lib/action_text/content.rb (+5/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - actiontext/lib/action_text/engine.rb
+  description: 'modified: actiontext/lib/action_text/engine.rb (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - actiontext/test/unit/markdown_conversion_test.rb
+  description: 'modified: actiontext/test/unit/markdown_conversion_test.rb (+217/-36)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from rails/rails PR #56873. Trigger heuristic applied. Needs review.'

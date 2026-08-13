@@ -1,0 +1,58 @@
+id: oss-scikit-learn-34741
+title: DOC Fix parameter names in private function docstrings
+family: bugfix
+date: '2026-08-13'
+author: karpovantonme
+source: github-api-mined
+source_repo: scikit-learn/scikit-learn
+source_url: https://github.com/scikit-learn/scikit-learn/pull/34741
+source_pr: 34741
+difficulty: medium
+trigger:
+  package: scikit-learn/scikit-learn
+  files:
+  - sklearn/mixture/_bayesian_mixture.py
+  intent: DOC Fix parameter names in private function docstrings
+  diff_summary: 'Primary: sklearn/mixture/_bayesian_mixture.py (+0/-10)'
+consequences:
+- package: scikit-learn/scikit-learn
+  files:
+  - sklearn/cluster/_kmeans.py
+  description: 'modified: sklearn/cluster/_kmeans.py (+0/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - sklearn/datasets/_arff_parser.py
+  description: 'modified: sklearn/datasets/_arff_parser.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - sklearn/mixture/_gaussian_mixture.py
+  description: 'modified: sklearn/mixture/_gaussian_mixture.py (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - sklearn/utils/_set_output.py
+  description: 'modified: sklearn/utils/_set_output.py (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from scikit-learn/scikit-learn PR #34741. Trigger heuristic applied.
+  Needs review.'

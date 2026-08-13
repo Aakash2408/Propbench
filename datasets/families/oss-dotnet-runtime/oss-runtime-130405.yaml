@@ -1,0 +1,116 @@
+id: oss-runtime-130405
+title: Speed up virtual method resolution in the compiler
+family: uncategorized
+date: '2026-07-14'
+author: MichalStrehovsky
+source: github-api-mined
+source_repo: dotnet/runtime
+source_url: https://github.com/dotnet/runtime/pull/130405
+source_pr: 130405
+difficulty: medium
+trigger:
+  package: dotnet/runtime
+  files:
+  - src/coreclr/tools/Common/Compiler/CachingVirtualMethodAlgorithm.cs
+  intent: Speed up virtual method resolution in the compiler
+  diff_summary: 'Primary: src/coreclr/tools/Common/Compiler/CachingVirtualMethodAlgorithm.cs
+    (+86/-0)'
+consequences:
+- package: dotnet/runtime
+  files:
+  - src/coreclr/tools/Common/Compiler/CompilerTypeSystemContext.Async.cs
+  description: 'modified: src/coreclr/tools/Common/Compiler/CompilerTypeSystemContext.Async.cs
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/tools/Common/Compiler/DependencyAnalysis/GVMDependenciesNode.cs
+  description: 'modified: src/coreclr/tools/Common/Compiler/DependencyAnalysis/GVMDependenciesNode.cs
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/tools/Common/Compiler/GenericCycleDetection/GraphBuilder.cs
+  description: 'modified: src/coreclr/tools/Common/Compiler/GenericCycleDetection/GraphBuilder.cs
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/tools/Common/TypeSystem/Common/MetadataVirtualMethodAlgorithm.cs
+  description: 'modified: src/coreclr/tools/Common/TypeSystem/Common/MetadataVirtualMethodAlgorithm.cs
+    (+4/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/tools/aot/ILCompiler.Compiler/Compiler/Compilation.cs
+  description: 'modified: src/coreclr/tools/aot/ILCompiler.Compiler/Compiler/Compilation.cs
+    (+7/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/tools/aot/ILCompiler.Compiler/Compiler/DependencyAnalysis/ReflectionVirtualInvokeMapNode.cs
+  description: 'modified: src/coreclr/tools/aot/ILCompiler.Compiler/Compiler/DependencyAnalysis/ReflectionVirtualInvokeMapNode.cs
+    (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/tools/aot/ILCompiler.Compiler/Compiler/UsageBasedMetadataManager.cs
+  description: 'modified: src/coreclr/tools/aot/ILCompiler.Compiler/Compiler/UsageBasedMetadataManager.cs
+    (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/tools/aot/ILCompiler.Compiler/ILCompiler.Compiler.csproj
+  description: 'modified: src/coreclr/tools/aot/ILCompiler.Compiler/ILCompiler.Compiler.csproj
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/tools/aot/ILCompiler.ReadyToRun/Compiler/DependencyAnalysis/ReadyToRunCodegenNodeFactory.cs
+  description: 'modified: src/coreclr/tools/aot/ILCompiler.ReadyToRun/Compiler/DependencyAnalysis/ReadyToRunCodegenNodeFactory.cs
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/tools/aot/ILCompiler.ReadyToRun/ILCompiler.ReadyToRun.csproj
+  description: 'modified: src/coreclr/tools/aot/ILCompiler.ReadyToRun/ILCompiler.ReadyToRun.csproj
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 11
+notes: 'Mined from dotnet/runtime PR #130405. Trigger heuristic applied. Needs review.'

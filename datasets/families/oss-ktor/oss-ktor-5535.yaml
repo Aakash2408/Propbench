@@ -1,0 +1,88 @@
+id: oss-ktor-5535
+title: Add clear API to HttpCache for clearing all cached data
+family: interface-evolution
+date: '2026-07-22'
+author: fru1tworld
+source: github-api-mined
+source_repo: ktorio/ktor
+source_url: https://github.com/ktorio/ktor/pull/5535
+source_pr: 5535
+difficulty: medium
+trigger:
+  package: ktorio/ktor
+  files:
+  - ktor-client/ktor-client-core/jvm/src/io/ktor/client/plugins/cache/storage/FileCacheStorage.kt
+  intent: Add clear API to HttpCache for clearing all cached data
+  diff_summary: 'Primary: ktor-client/ktor-client-core/jvm/src/io/ktor/client/plugins/cache/storage/FileCacheStorage.kt
+    (+69/-19)'
+consequences:
+- package: ktorio/ktor
+  files:
+  - ktor-client/ktor-client-core/api/ktor-client-core.api
+  description: 'modified: ktor-client/ktor-client-core/api/ktor-client-core.api (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-client/ktor-client-core/api/ktor-client-core.klib.api
+  description: 'modified: ktor-client/ktor-client-core/api/ktor-client-core.klib.api
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-client/ktor-client-core/common/src/io/ktor/client/plugins/cache/HttpCache.kt
+  description: 'modified: ktor-client/ktor-client-core/common/src/io/ktor/client/plugins/cache/HttpCache.kt
+    (+32/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-client/ktor-client-core/common/src/io/ktor/client/plugins/cache/storage/HttpCacheStorage.kt
+  description: 'modified: ktor-client/ktor-client-core/common/src/io/ktor/client/plugins/cache/storage/HttpCacheStorage.kt
+    (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-client/ktor-client-core/common/src/io/ktor/client/plugins/cache/storage/UnlimitedCacheStorage.kt
+  description: 'modified: ktor-client/ktor-client-core/common/src/io/ktor/client/plugins/cache/storage/UnlimitedCacheStorage.kt
+    (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-client/ktor-client-core/jvm/test/CachingCacheStorageTest.kt
+  description: 'modified: ktor-client/ktor-client-core/jvm/test/CachingCacheStorageTest.kt
+    (+25/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-client/ktor-client-core/jvm/test/FileStorageTest.kt
+  description: 'modified: ktor-client/ktor-client-core/jvm/test/FileStorageTest.kt
+    (+16/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 8
+notes: 'Mined from ktorio/ktor PR #5535. Trigger heuristic applied. Needs review.'

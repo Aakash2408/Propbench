@@ -1,0 +1,65 @@
+id: oss-framework-61100
+title: '[13.x] Run `artisan dev` through `@laravel/multiplex`'
+family: uncategorized
+date: '2026-08-09'
+author: joetannenbaum
+source: github-api-mined
+source_repo: laravel/framework
+source_url: https://github.com/laravel/framework/pull/61100
+source_pr: 61100
+difficulty: medium
+trigger:
+  package: laravel/framework
+  files:
+  - src/Illuminate/Foundation/DevCommands.php
+  intent: '[13.x] Run `artisan dev` through `@laravel/multiplex`'
+  diff_summary: 'Primary: src/Illuminate/Foundation/DevCommands.php (+171/-1)'
+consequences:
+- package: laravel/framework
+  files:
+  - src/Illuminate/Foundation/Console/DevCommand.php
+  description: 'modified: src/Illuminate/Foundation/Console/DevCommand.php (+145/-18)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - src/Illuminate/Foundation/DevCommandMode.php
+  description: 'added: src/Illuminate/Foundation/DevCommandMode.php (+10/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - tests/Console/Fixtures/command_signatures.php
+  description: 'modified: tests/Console/Fixtures/command_signatures.php (+90/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - tests/Foundation/Console/DevCommandTest.php
+  description: 'added: tests/Foundation/Console/DevCommandTest.php (+219/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - tests/Foundation/FoundationDevCommandsTest.php
+  description: 'modified: tests/Foundation/FoundationDevCommandsTest.php (+13/-4)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from laravel/framework PR #61100. Trigger heuristic applied. Needs review.'

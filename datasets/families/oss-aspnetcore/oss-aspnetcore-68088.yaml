@@ -1,0 +1,44 @@
+id: oss-aspnetcore-68088
+title: Fix persisted state being dropped on enhanced navigation
+family: bugfix
+date: '2026-08-10'
+author: javiercn
+source: github-api-mined
+source_repo: dotnet/aspnetcore
+source_url: https://github.com/dotnet/aspnetcore/pull/68088
+source_pr: 68088
+difficulty: medium
+trigger:
+  package: dotnet/aspnetcore
+  files:
+  - src/Components/Web.JS/src/Services/WebRootComponentManager.ts
+  intent: Fix persisted state being dropped on enhanced navigation
+  diff_summary: 'Primary: src/Components/Web.JS/src/Services/WebRootComponentManager.ts
+    (+7/-3)'
+consequences:
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/test/E2ETest/Tests/StatePersistenceTest.cs
+  description: 'modified: src/Components/test/E2ETest/Tests/StatePersistenceTest.cs
+    (+81/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/test/testassets/Components.TestServer/RazorComponents/App.razor
+  description: 'modified: src/Components/test/testassets/Components.TestServer/RazorComponents/App.razor
+    (+5/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from dotnet/aspnetcore PR #68088. Trigger heuristic applied. Needs review.'

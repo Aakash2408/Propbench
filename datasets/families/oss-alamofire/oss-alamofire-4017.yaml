@@ -1,0 +1,106 @@
+id: oss-alamofire-4017
+title: Update Infrastructure
+family: uncategorized
+date: '2026-04-05'
+author: jshier
+source: github-api-mined
+source_repo: Alamofire/Alamofire
+source_url: https://github.com/Alamofire/Alamofire/pull/4017
+source_pr: 4017
+difficulty: medium
+trigger:
+  package: Alamofire/Alamofire
+  files:
+  - Package@swift-6.2.swift
+  intent: Update Infrastructure
+  diff_summary: 'Primary: Package@swift-6.2.swift (+52/-0)'
+consequences:
+- package: Alamofire/Alamofire
+  files:
+  - .ruby-version
+  description: 'modified: .ruby-version (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - .swiftformat
+  description: 'modified: .swiftformat (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Gemfile.lock
+  description: 'modified: Gemfile.lock (+14/-11)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Package.swift
+  description: 'modified: Package.swift (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Source/Core/Request.swift
+  description: 'modified: Source/Core/Request.swift (+7/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Source/Core/RequestTaskMap.swift
+  description: 'modified: Source/Core/RequestTaskMap.swift (+5/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Source/Core/SessionDelegate.swift
+  description: 'modified: Source/Core/SessionDelegate.swift (+5/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Source/Features/Concurrency.swift
+  description: 'modified: Source/Features/Concurrency.swift (+12/-10)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Tests/OfflineRetrierTests.swift
+  description: 'modified: Tests/OfflineRetrierTests.swift (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Tests/UploadTests.swift
+  description: 'modified: Tests/UploadTests.swift (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 11
+notes: 'Mined from Alamofire/Alamofire PR #4017. Trigger heuristic applied. Needs
+  review.'

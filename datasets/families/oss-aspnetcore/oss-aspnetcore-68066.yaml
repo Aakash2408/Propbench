@@ -1,0 +1,94 @@
+id: oss-aspnetcore-68066
+title: Add serving of .well-known/passkey-endpoints to Identity
+family: interface-evolution
+date: '2026-08-11'
+author: rolandVi
+source: github-api-mined
+source_repo: dotnet/aspnetcore
+source_url: https://github.com/dotnet/aspnetcore/pull/68066
+source_pr: 68066
+difficulty: medium
+trigger:
+  package: dotnet/aspnetcore
+  files:
+  - src/Identity/Core/src/PasskeyEndpointsEndpointRouteBuilderExtensions.cs
+  intent: Add serving of .well-known/passkey-endpoints to Identity
+  diff_summary: 'Primary: src/Identity/Core/src/PasskeyEndpointsEndpointRouteBuilderExtensions.cs
+    (+273/-0)'
+consequences:
+- package: dotnet/aspnetcore
+  files:
+  - docs/list-of-diagnostics.md
+  description: 'modified: docs/list-of-diagnostics.md (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Identity/Core/src/Data/IdentityEndpointsJsonSerializerContext.cs
+  description: 'modified: src/Identity/Core/src/Data/IdentityEndpointsJsonSerializerContext.cs
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Identity/Core/src/Data/PasskeyEndpointsResponse.cs
+  description: 'added: src/Identity/Core/src/Data/PasskeyEndpointsResponse.cs (+29/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Identity/Core/src/PasskeyEndpointsOptions.cs
+  description: 'added: src/Identity/Core/src/PasskeyEndpointsOptions.cs (+118/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Identity/Core/src/PasskeyEndpointsServiceCollectionExtensions.cs
+  description: 'added: src/Identity/Core/src/PasskeyEndpointsServiceCollectionExtensions.cs
+    (+67/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Identity/Core/src/PublicAPI.Unshipped.txt
+  description: 'modified: src/Identity/Core/src/PublicAPI.Unshipped.txt (+12/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Identity/samples/IdentitySample.PasskeyUI/Program.cs
+  description: 'modified: src/Identity/samples/IdentitySample.PasskeyUI/Program.cs
+    (+9/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Identity/test/Identity.FunctionalTests/AddPasskeyEndpointsTests.cs
+  description: 'added: src/Identity/test/Identity.FunctionalTests/AddPasskeyEndpointsTests.cs
+    (+798/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 9
+notes: 'Mined from dotnet/aspnetcore PR #68066. Trigger heuristic applied. Needs review.'

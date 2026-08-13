@@ -1,0 +1,41 @@
+id: oss-rails-58397
+title: Extract duplicated UPDATE self-join preparation into Arel::Visitors::…
+family: uncategorized
+date: '2026-08-07'
+author: seuros
+source: github-api-mined
+source_repo: rails/rails
+source_url: https://github.com/rails/rails/pull/58397
+source_pr: 58397
+difficulty: medium
+trigger:
+  package: rails/rails
+  files:
+  - activerecord/lib/arel/visitors/to_sql.rb
+  intent: Extract duplicated UPDATE self-join preparation into Arel::Visitors::…
+  diff_summary: 'Primary: activerecord/lib/arel/visitors/to_sql.rb (+15/-0)'
+consequences:
+- package: rails/rails
+  files:
+  - activerecord/lib/arel/visitors/postgresql.rb
+  description: 'modified: activerecord/lib/arel/visitors/postgresql.rb (+1/-11)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/lib/arel/visitors/sqlite.rb
+  description: 'modified: activerecord/lib/arel/visitors/sqlite.rb (+1/-11)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from rails/rails PR #58397. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,89 @@
+id: oss-serde-2879
+title: add `#[allow(deprecated)]` to derive implementations
+family: dependency-evolution
+date: '2025-09-16'
+author: rcrisanti
+source: github-api-mined
+source_repo: serde-rs/serde
+source_url: https://github.com/serde-rs/serde/pull/2879
+source_pr: 2879
+difficulty: medium
+trigger:
+  package: serde-rs/serde
+  files:
+  - serde_derive/src/internals/deprecated.rs
+  intent: add `#[allow(deprecated)]` to derive implementations
+  diff_summary: 'Primary: serde_derive/src/internals/deprecated.rs (+58/-0)'
+consequences:
+- package: serde-rs/serde
+  files:
+  - serde_derive/src/de.rs
+  description: 'modified: serde_derive/src/de.rs (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: serde-rs/serde
+  files:
+  - serde_derive/src/internals/mod.rs
+  description: 'modified: serde_derive/src/internals/mod.rs (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: serde-rs/serde
+  files:
+  - serde_derive/src/ser.rs
+  description: 'modified: serde_derive/src/ser.rs (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: serde-rs/serde
+  files:
+  - test_suite/tests/deprecated.rs
+  description: 'added: test_suite/tests/deprecated.rs (+34/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: serde-rs/serde
+  files:
+  - test_suite/tests/ui/deprecated/deprecated_de_with.rs
+  description: 'added: test_suite/tests/ui/deprecated/deprecated_de_with.rs (+20/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: serde-rs/serde
+  files:
+  - test_suite/tests/ui/deprecated/deprecated_de_with.stderr
+  description: 'added: test_suite/tests/ui/deprecated/deprecated_de_with.stderr (+11/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: serde-rs/serde
+  files:
+  - test_suite/tests/ui/deprecated/deprecated_ser_with.rs
+  description: 'added: test_suite/tests/ui/deprecated/deprecated_ser_with.rs (+20/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: serde-rs/serde
+  files:
+  - test_suite/tests/ui/deprecated/deprecated_ser_with.stderr
+  description: 'added: test_suite/tests/ui/deprecated/deprecated_ser_with.stderr (+11/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 9
+notes: 'Mined from serde-rs/serde PR #2879. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,71 @@
+id: oss-ktor-5767
+title: Warn KTOR-9705 OpenAPI UI does not support OpenAPI spec 3.1.
+family: interface-evolution
+date: '2026-07-29'
+author: zibet27
+source: github-api-mined
+source_repo: ktorio/ktor
+source_url: https://github.com/ktorio/ktor/pull/5767
+source_pr: 5767
+difficulty: medium
+trigger:
+  package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-plugins/ktor-server-swagger/jvm/src/io/ktor/server/plugins/swagger/Swagger.kt
+  intent: Warn KTOR-9705 OpenAPI UI does not support OpenAPI spec 3.1.
+  diff_summary: 'Primary: ktor-server/ktor-server-plugins/ktor-server-swagger/jvm/src/io/ktor/server/plugins/swagger/Swagger.kt
+    (+45/-4)'
+consequences:
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-plugins/ktor-server-openapi/jvm/src/io/ktor/server/plugins/openapi/OpenAPI.kt
+  description: 'modified: ktor-server/ktor-server-plugins/ktor-server-openapi/jvm/src/io/ktor/server/plugins/openapi/OpenAPI.kt
+    (+22/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-plugins/ktor-server-openapi/jvm/src/io/ktor/server/plugins/openapi/OpenAPIConfig.kt
+  description: 'modified: ktor-server/ktor-server-plugins/ktor-server-openapi/jvm/src/io/ktor/server/plugins/openapi/OpenAPIConfig.kt
+    (+5/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-plugins/ktor-server-openapi/jvm/test/io/ktor/server/plugins/openapi/OpenAPITest.kt
+  description: 'modified: ktor-server/ktor-server-plugins/ktor-server-openapi/jvm/test/io/ktor/server/plugins/openapi/OpenAPITest.kt
+    (+78/-8)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-plugins/ktor-server-swagger/jvm/src/io/ktor/server/plugins/swagger/SwaggerConfig.kt
+  description: 'modified: ktor-server/ktor-server-plugins/ktor-server-swagger/jvm/src/io/ktor/server/plugins/swagger/SwaggerConfig.kt
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-plugins/ktor-server-swagger/jvm/test/io/ktor/server/plugins/swagger/SwaggerTest.kt
+  description: 'modified: ktor-server/ktor-server-plugins/ktor-server-swagger/jvm/test/io/ktor/server/plugins/swagger/SwaggerTest.kt
+    (+105/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from ktorio/ktor PR #5767. Trigger heuristic applied. Needs review.'

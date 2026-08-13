@@ -1,0 +1,53 @@
+id: oss-filament-20304
+title: 'fix: append `px` to unitless image dimensions in rich editor `style`'
+family: bugfix
+date: '2026-07-30'
+author: people-sea
+source: github-api-mined
+source_repo: filamentphp/filament
+source_url: https://github.com/filamentphp/filament/pull/20304
+source_pr: 20304
+difficulty: medium
+trigger:
+  package: filamentphp/filament
+  files:
+  - packages/forms/dist/components/rich-editor.js
+  intent: 'fix: append `px` to unitless image dimensions in rich editor `style`'
+  diff_summary: 'Primary: packages/forms/dist/components/rich-editor.js (+38/-38)'
+consequences:
+- package: filamentphp/filament
+  files:
+  - packages/forms/resources/js/components/rich-editor/extension-image.js
+  description: 'modified: packages/forms/resources/js/components/rich-editor/extension-image.js
+    (+5/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: filamentphp/filament
+  files:
+  - packages/forms/src/Components/RichEditor/TipTapExtensions/ImageExtension.php
+  description: 'modified: packages/forms/src/Components/RichEditor/TipTapExtensions/ImageExtension.php
+    (+9/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: filamentphp/filament
+  files:
+  - tests/src/Forms/Components/RichEditor/RichContentRendererTest.php
+  description: 'modified: tests/src/Forms/Components/RichEditor/RichContentRendererTest.php
+    (+22/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from filamentphp/filament PR #20304. Trigger heuristic applied. Needs
+  review.'

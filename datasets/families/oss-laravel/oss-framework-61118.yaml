@@ -1,0 +1,113 @@
+id: oss-framework-61118
+title: Revert "[13.x] Bump minimum versions"
+family: dependency-evolution
+date: '2026-08-10'
+author: GrahamCampbell
+source: github-api-mined
+source_repo: laravel/framework
+source_url: https://github.com/laravel/framework/pull/61118
+source_pr: 61118
+difficulty: medium
+trigger:
+  package: laravel/framework
+  files:
+  - composer.json
+  intent: Revert "[13.x] Bump minimum versions"
+  diff_summary: 'Primary: composer.json (+11/-15)'
+consequences:
+- package: laravel/framework
+  files:
+  - src/Illuminate/Cache/composer.json
+  description: 'modified: src/Illuminate/Cache/composer.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - src/Illuminate/Console/composer.json
+  description: 'modified: src/Illuminate/Console/composer.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - src/Illuminate/Cookie/composer.json
+  description: 'modified: src/Illuminate/Cookie/composer.json (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - src/Illuminate/Filesystem/composer.json
+  description: 'modified: src/Illuminate/Filesystem/composer.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - src/Illuminate/Http/composer.json
+  description: 'modified: src/Illuminate/Http/composer.json (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - src/Illuminate/Mail/composer.json
+  description: 'modified: src/Illuminate/Mail/composer.json (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - src/Illuminate/Queue/composer.json
+  description: 'modified: src/Illuminate/Queue/composer.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - src/Illuminate/Routing/composer.json
+  description: 'modified: src/Illuminate/Routing/composer.json (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - src/Illuminate/Session/composer.json
+  description: 'modified: src/Illuminate/Session/composer.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - src/Illuminate/Support/composer.json
+  description: 'modified: src/Illuminate/Support/composer.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - src/Illuminate/Validation/composer.json
+  description: 'modified: src/Illuminate/Validation/composer.json (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 12
+notes: 'Mined from laravel/framework PR #61118. Trigger heuristic applied. Needs review.'

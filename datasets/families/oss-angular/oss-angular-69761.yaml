@@ -1,0 +1,52 @@
+id: oss-angular-69761
+title: 'feat(docs-infra): show Angie in the error snack bar'
+family: uncategorized
+date: '2026-07-13'
+author: erkamyaman
+source: github-api-mined
+source_repo: angular/angular
+source_url: https://github.com/angular/angular/pull/69761
+source_pr: 69761
+difficulty: medium
+trigger:
+  package: angular/angular
+  files:
+  - adev/src/app/core/services/errors-handling/error-snack-bar.ts
+  intent: 'feat(docs-infra): show Angie in the error snack bar'
+  diff_summary: 'Primary: adev/src/app/core/services/errors-handling/error-snack-bar.ts
+    (+23/-1)'
+consequences:
+- package: angular/angular
+  files:
+  - adev/src/app/core/services/errors-handling/error-handler.ts
+  description: 'modified: adev/src/app/core/services/errors-handling/error-handler.ts
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - adev/src/app/core/services/errors-handling/error-snack-bar.spec.ts
+  description: 'added: adev/src/app/core/services/errors-handling/error-snack-bar.spec.ts
+    (+84/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - adev/src/app/editor/alert-manager.service.ts
+  description: 'modified: adev/src/app/editor/alert-manager.service.ts (+9/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from angular/angular PR #69761. Trigger heuristic applied. Needs review.'

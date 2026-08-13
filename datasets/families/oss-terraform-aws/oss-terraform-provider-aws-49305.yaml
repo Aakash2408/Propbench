@@ -1,0 +1,138 @@
+id: oss-terraform-provider-aws-49305
+title: PR review skill
+family: interface-evolution
+date: '2026-08-06'
+author: YakDriver
+source: github-api-mined
+source_repo: hashicorp/terraform-provider-aws
+source_url: https://github.com/hashicorp/terraform-provider-aws/pull/49305
+source_pr: 49305
+difficulty: medium
+trigger:
+  package: hashicorp/terraform-provider-aws
+  files:
+  - .agents/skills/review-docs/SKILL.md
+  intent: PR review skill
+  diff_summary: 'Primary: .agents/skills/review-docs/SKILL.md (+105/-0)'
+consequences:
+- package: hashicorp/terraform-provider-aws
+  files:
+  - .agents/skills/review-docs/references/import-section.md
+  description: 'added: .agents/skills/review-docs/references/import-section.md (+48/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - .agents/skills/review-generated/SKILL.md
+  description: 'added: .agents/skills/review-generated/SKILL.md (+23/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - .agents/skills/review-helpers/SKILL.md
+  description: 'added: .agents/skills/review-helpers/SKILL.md (+61/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - .agents/skills/review-identity/SKILL.md
+  description: 'added: .agents/skills/review-identity/SKILL.md (+52/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - .agents/skills/review-lifecycle/SKILL.md
+  description: 'added: .agents/skills/review-lifecycle/SKILL.md (+69/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - .agents/skills/review-pr/SKILL.md
+  description: 'added: .agents/skills/review-pr/SKILL.md (+64/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - .agents/skills/review-schema/SKILL.md
+  description: 'added: .agents/skills/review-schema/SKILL.md (+76/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - .agents/skills/review-tags/SKILL.md
+  description: 'added: .agents/skills/review-tags/SKILL.md (+42/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - .agents/skills/review-tests-helpers/SKILL.md
+  description: 'added: .agents/skills/review-tests-helpers/SKILL.md (+88/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - .agents/skills/review-tests/SKILL.md
+  description: 'added: .agents/skills/review-tests/SKILL.md (+78/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - .agents/skills/reviewdocs/SKILL.md
+  description: 'removed: .agents/skills/reviewdocs/SKILL.md (+0/-36)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - GNUmakefile
+  description: 'modified: GNUmakefile (+8/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - docs/continuous-integration.md
+  description: 'modified: docs/continuous-integration.md (+10/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - docs/makefile-cheat-sheet.md
+  description: 'modified: docs/makefile-cheat-sheet.md (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 15
+notes: 'Mined from hashicorp/terraform-provider-aws PR #49305. Trigger heuristic applied.
+  Needs review.'

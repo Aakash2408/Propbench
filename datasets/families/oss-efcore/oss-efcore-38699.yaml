@@ -1,0 +1,113 @@
+id: oss-efcore-38699
+title: '[release/10.0] Source code updates from dotnet/dotnet'
+family: uncategorized
+date: '2026-07-27'
+author: dotnet-maestro[bot]
+source: github-api-mined
+source_repo: dotnet/efcore
+source_url: https://github.com/dotnet/efcore/pull/38699
+source_pr: 38699
+difficulty: medium
+trigger:
+  package: dotnet/efcore
+  files:
+  - eng/Version.Details.xml
+  intent: '[release/10.0] Source code updates from dotnet/dotnet'
+  diff_summary: 'Primary: eng/Version.Details.xml (+37/-37)'
+consequences:
+- package: dotnet/efcore
+  files:
+  - NuGet.config
+  description: 'modified: NuGet.config (+5/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - eng/Version.Details.props
+  description: 'modified: eng/Version.Details.props (+18/-18)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - eng/Versions.props
+  description: 'modified: eng/Versions.props (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - eng/common/build.ps1
+  description: 'modified: eng/common/build.ps1 (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - eng/common/build.sh
+  description: 'modified: eng/common/build.sh (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - eng/common/core-templates/job/onelocbuild.yml
+  description: 'modified: eng/common/core-templates/job/onelocbuild.yml (+19/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - eng/common/core-templates/job/publish-build-assets.yml
+  description: 'modified: eng/common/core-templates/job/publish-build-assets.yml (+0/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - eng/common/core-templates/post-build/post-build.yml
+  description: 'modified: eng/common/core-templates/post-build/post-build.yml (+0/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - eng/common/tools.ps1
+  description: 'modified: eng/common/tools.ps1 (+9/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - eng/common/tools.sh
+  description: 'modified: eng/common/tools.sh (+10/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - global.json
+  description: 'modified: global.json (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 12
+notes: 'Mined from dotnet/efcore PR #38699. Trigger heuristic applied. Needs review.'

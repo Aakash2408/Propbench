@@ -1,0 +1,52 @@
+id: oss-svelte-18530
+title: 'fix: $state.eager() is sometimes incorrect in SSR'
+family: bugfix
+date: '2026-07-14'
+author: adiguba
+source: github-api-mined
+source_repo: sveltejs/svelte
+source_url: https://github.com/sveltejs/svelte/pull/18530
+source_pr: 18530
+difficulty: medium
+trigger:
+  package: sveltejs/svelte
+  files:
+  - .changeset/long-buttons-hunt.md
+  intent: 'fix: $state.eager() is sometimes incorrect in SSR'
+  diff_summary: 'Primary: .changeset/long-buttons-hunt.md (+5/-0)'
+consequences:
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/src/compiler/phases/3-transform/server/visitors/CallExpression.js
+  description: 'modified: packages/svelte/src/compiler/phases/3-transform/server/visitors/CallExpression.js
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/tests/server-side-rendering/samples/state-eager/_expected.html
+  description: 'added: packages/svelte/tests/server-side-rendering/samples/state-eager/_expected.html
+    (+2/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/tests/server-side-rendering/samples/state-eager/main.svelte
+  description: 'added: packages/svelte/tests/server-side-rendering/samples/state-eager/main.svelte
+    (+7/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from sveltejs/svelte PR #18530. Trigger heuristic applied. Needs review.'

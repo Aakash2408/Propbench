@@ -1,0 +1,44 @@
+id: oss-transformers-47861
+title: Revert "Fix CodeLlama tokenizer dropping leading whitespace on decode (#47488)"
+family: bugfix
+date: '2026-08-10'
+author: ArthurZucker
+source: github-api-mined
+source_repo: huggingface/transformers
+source_url: https://github.com/huggingface/transformers/pull/47861
+source_pr: 47861
+difficulty: medium
+trigger:
+  package: huggingface/transformers
+  files:
+  - tests/models/code_llama/test_tokenization_code_llama.py
+  intent: Revert "Fix CodeLlama tokenizer dropping leading whitespace on decode (#47488)"
+  diff_summary: 'Primary: tests/models/code_llama/test_tokenization_code_llama.py
+    (+18/-56)'
+consequences:
+- package: huggingface/transformers
+  files:
+  - docs/source/en/model_doc/code_llama.md
+  description: 'modified: docs/source/en/model_doc/code_llama.md (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/code_llama/tokenization_code_llama.py
+  description: 'modified: src/transformers/models/code_llama/tokenization_code_llama.py
+    (+14/-16)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from huggingface/transformers PR #47861. Trigger heuristic applied.
+  Needs review.'

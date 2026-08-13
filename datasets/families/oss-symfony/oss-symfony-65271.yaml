@@ -1,0 +1,62 @@
+id: oss-symfony-65271
+title: '[DependencyInjection] Fix circular references through expressions'
+family: dependency-evolution
+date: '2026-08-11'
+author: eissasoubhi
+source: github-api-mined
+source_repo: symfony/symfony
+source_url: https://github.com/symfony/symfony/pull/65271
+source_pr: 65271
+difficulty: medium
+trigger:
+  package: symfony/symfony
+  files:
+  - src/Symfony/Component/DependencyInjection/Compiler/ServiceReferenceGraphEdge.php
+  intent: '[DependencyInjection] Fix circular references through expressions'
+  diff_summary: 'Primary: src/Symfony/Component/DependencyInjection/Compiler/ServiceReferenceGraphEdge.php
+    (+11/-1)'
+consequences:
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/DependencyInjection/Compiler/AnalyzeServiceReferencesPass.php
+  description: 'modified: src/Symfony/Component/DependencyInjection/Compiler/AnalyzeServiceReferencesPass.php
+    (+4/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/DependencyInjection/Compiler/ServiceReferenceGraph.php
+  description: 'modified: src/Symfony/Component/DependencyInjection/Compiler/ServiceReferenceGraph.php
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/DependencyInjection/Dumper/PhpDumper.php
+  description: 'modified: src/Symfony/Component/DependencyInjection/Dumper/PhpDumper.php
+    (+7/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/DependencyInjection/Tests/Dumper/PhpDumperTest.php
+  description: 'modified: src/Symfony/Component/DependencyInjection/Tests/Dumper/PhpDumperTest.php
+    (+72/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from symfony/symfony PR #65271. Trigger heuristic applied. Needs review.'

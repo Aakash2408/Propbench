@@ -1,0 +1,73 @@
+id: oss-turborepo-13733
+title: 'fix: Expose Slack delivery diagnostics'
+family: bugfix
+date: '2026-08-12'
+author: anthonyshew
+source: github-api-mined
+source_repo: vercel/turborepo
+source_url: https://github.com/vercel/turborepo/pull/13733
+source_pr: 13733
+difficulty: medium
+trigger:
+  package: vercel/turborepo
+  files:
+  - apps/agents/agent/lib/slack.ts
+  intent: 'fix: Expose Slack delivery diagnostics'
+  diff_summary: 'Primary: apps/agents/agent/lib/slack.ts (+172/-2)'
+consequences:
+- package: vercel/turborepo
+  files:
+  - apps/agents/agent/channels/operator.ts
+  description: 'modified: apps/agents/agent/channels/operator.ts (+31/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - apps/agents/agent/channels/slack.ts
+  description: 'modified: apps/agents/agent/channels/slack.ts (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - apps/agents/agent/tools/create_pull_request.ts
+  description: 'modified: apps/agents/agent/tools/create_pull_request.ts (+10/-40)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - apps/agents/app/globals.css
+  description: 'modified: apps/agents/app/globals.css (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - apps/agents/app/run-maintenance.tsx
+  description: 'modified: apps/agents/app/run-maintenance.tsx (+129/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - apps/agents/tests/slack.test.mjs
+  description: 'added: apps/agents/tests/slack.test.mjs (+159/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from vercel/turborepo PR #13733. Trigger heuristic applied. Needs review.'

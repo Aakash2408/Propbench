@@ -1,0 +1,65 @@
+id: oss-hugo-15117
+title: 'common/hugo: Include non-go dependencies in go env output'
+family: dependency-evolution
+date: '2026-07-13'
+author: jmooring
+source: github-api-mined
+source_repo: gohugoio/hugo
+source_url: https://github.com/gohugoio/hugo/pull/15117
+source_pr: 15117
+difficulty: medium
+trigger:
+  package: gohugoio/hugo
+  files:
+  - internal/warpc/warpc.go
+  intent: 'common/hugo: Include non-go dependencies in go env output'
+  diff_summary: 'Primary: internal/warpc/warpc.go (+17/-3)'
+consequences:
+- package: gohugoio/hugo
+  files:
+  - common/hugo/hugo.go
+  description: 'modified: common/hugo/hugo.go (+7/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - internal/warpc/avif.go
+  description: 'modified: internal/warpc/avif.go (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - internal/warpc/katex.go
+  description: 'modified: internal/warpc/katex.go (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - internal/warpc/webp.go
+  description: 'modified: internal/warpc/webp.go (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - testscripts/commands/env.txt
+  description: 'modified: testscripts/commands/env.txt (+8/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from gohugoio/hugo PR #15117. Trigger heuristic applied. Needs review.'

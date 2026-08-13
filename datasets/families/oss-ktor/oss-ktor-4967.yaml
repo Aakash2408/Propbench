@@ -1,0 +1,44 @@
+id: oss-ktor-4967
+title: 'KTOR-8450: add content negotiation suffix support'
+family: interface-evolution
+date: '2026-07-22'
+author: anton-erofeev
+source: github-api-mined
+source_repo: ktorio/ktor
+source_url: https://github.com/ktorio/ktor/pull/4967
+source_pr: 4967
+difficulty: medium
+trigger:
+  package: ktorio/ktor
+  files:
+  - ktor-client/ktor-client-plugins/ktor-client-content-negotiation/common/src/io/ktor/client/plugins/contentnegotiation/ContentNegotiation.kt
+  intent: 'KTOR-8450: add content negotiation suffix support'
+  diff_summary: 'Primary: ktor-client/ktor-client-plugins/ktor-client-content-negotiation/common/src/io/ktor/client/plugins/contentnegotiation/ContentNegotiation.kt
+    (+30/-6)'
+consequences:
+- package: ktorio/ktor
+  files:
+  - ktor-client/ktor-client-plugins/ktor-client-content-negotiation/common/test/io/ktor/client/plugins/ContentNegotiationTests.kt
+  description: 'modified: ktor-client/ktor-client-plugins/ktor-client-content-negotiation/common/test/io/ktor/client/plugins/ContentNegotiationTests.kt
+    (+146/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-client/ktor-client-plugins/ktor-client-content-negotiation/ktor-client-content-negotiation-tests/jvm/src/io/ktor/client/plugins/contentnegotiation/tests/JsonContentNegotiationTest.kt
+  description: 'modified: ktor-client/ktor-client-plugins/ktor-client-content-negotiation/ktor-client-content-negotiation-tests/jvm/src/io/ktor/client/plugins/contentnegotiation/tests/JsonContentNegotiationTest.kt
+    (+18/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from ktorio/ktor PR #4967. Trigger heuristic applied. Needs review.'

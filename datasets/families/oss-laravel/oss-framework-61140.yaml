@@ -1,0 +1,50 @@
+id: oss-framework-61140
+title: Read-through filesystem
+family: uncategorized
+date: '2026-08-12'
+author: taylorotwell
+source: github-api-mined
+source_repo: laravel/framework
+source_url: https://github.com/laravel/framework/pull/61140
+source_pr: 61140
+difficulty: medium
+trigger:
+  package: laravel/framework
+  files:
+  - src/Illuminate/Filesystem/ReadThroughFilesystemAdapter.php
+  intent: Read-through filesystem
+  diff_summary: 'Primary: src/Illuminate/Filesystem/ReadThroughFilesystemAdapter.php
+    (+229/-0)'
+consequences:
+- package: laravel/framework
+  files:
+  - src/Illuminate/Filesystem/FilesystemManager.php
+  description: 'modified: src/Illuminate/Filesystem/FilesystemManager.php (+44/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - src/Illuminate/Filesystem/ReadThroughFilesystem.php
+  description: 'added: src/Illuminate/Filesystem/ReadThroughFilesystem.php (+76/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - tests/Filesystem/FilesystemManagerTest.php
+  description: 'modified: tests/Filesystem/FilesystemManagerTest.php (+160/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from laravel/framework PR #61140. Trigger heuristic applied. Needs review.'

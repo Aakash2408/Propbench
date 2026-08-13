@@ -1,0 +1,153 @@
+id: oss-elasticsearch-156611
+title: Score nested kNN inner_hits like the query phase (#156332)
+family: uncategorized
+date: '2026-08-12'
+author: mayya-sharipova
+source: github-api-mined
+source_repo: elastic/elasticsearch
+source_url: https://github.com/elastic/elasticsearch/pull/156611
+source_pr: 156611
+difficulty: medium
+trigger:
+  package: elastic/elasticsearch
+  files:
+  - server/src/main/java/org/elasticsearch/index/mapper/vectors/DenseVectorFieldMapper.java
+  intent: Score nested kNN inner_hits like the query phase (#156332)
+  diff_summary: 'Primary: server/src/main/java/org/elasticsearch/index/mapper/vectors/DenseVectorFieldMapper.java
+    (+39/-9)'
+consequences:
+- package: elastic/elasticsearch
+  files:
+  - rest-api-spec/src/yamlRestTest/resources/rest-api-spec/test/search.vectors/131_knn_query_nested_inner_hits_score.yml
+  description: 'added: rest-api-spec/src/yamlRestTest/resources/rest-api-spec/test/search.vectors/131_knn_query_nested_inner_hits_score.yml
+    (+131/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - server/src/main/java/org/elasticsearch/action/search/SearchDfsQueryThenFetchAsyncAction.java
+  description: 'modified: server/src/main/java/org/elasticsearch/action/search/SearchDfsQueryThenFetchAsyncAction.java
+    (+4/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - server/src/main/java/org/elasticsearch/search/SearchFeatures.java
+  description: 'modified: server/src/main/java/org/elasticsearch/search/SearchFeatures.java
+    (+10/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - server/src/main/java/org/elasticsearch/search/retriever/KnnRetrieverBuilder.java
+  description: 'modified: server/src/main/java/org/elasticsearch/search/retriever/KnnRetrieverBuilder.java
+    (+8/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - server/src/main/java/org/elasticsearch/search/vectors/DenseVectorQuery.java
+  description: 'modified: server/src/main/java/org/elasticsearch/search/vectors/DenseVectorQuery.java
+    (+16/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - server/src/main/java/org/elasticsearch/search/vectors/ExactKnnQueryBuilder.java
+  description: 'modified: server/src/main/java/org/elasticsearch/search/vectors/ExactKnnQueryBuilder.java
+    (+35/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - server/src/main/java/org/elasticsearch/search/vectors/KnnScoreDocQueryBuilder.java
+  description: 'modified: server/src/main/java/org/elasticsearch/search/vectors/KnnScoreDocQueryBuilder.java
+    (+30/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - server/src/main/java/org/elasticsearch/search/vectors/KnnVectorQueryBuilder.java
+  description: 'modified: server/src/main/java/org/elasticsearch/search/vectors/KnnVectorQueryBuilder.java
+    (+8/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - server/src/main/resources/transport/definitions/referable/exact_knn_oversample.csv
+  description: 'added: server/src/main/resources/transport/definitions/referable/exact_knn_oversample.csv
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - server/src/main/resources/transport/upper_bounds/8.19.csv
+  description: 'modified: server/src/main/resources/transport/upper_bounds/8.19.csv
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - server/src/main/resources/transport/upper_bounds/9.5.csv
+  description: 'modified: server/src/main/resources/transport/upper_bounds/9.5.csv
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - server/src/main/resources/transport/upper_bounds/9.6.csv
+  description: 'modified: server/src/main/resources/transport/upper_bounds/9.6.csv
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - server/src/test/java/org/elasticsearch/index/mapper/vectors/DenseVectorFieldTypeTests.java
+  description: 'modified: server/src/test/java/org/elasticsearch/index/mapper/vectors/DenseVectorFieldTypeTests.java
+    (+64/-4)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/inference/src/main/java/org/elasticsearch/xpack/inference/common/chunks/SemanticTextChunkUtils.java
+  description: 'modified: x-pack/plugin/inference/src/main/java/org/elasticsearch/xpack/inference/common/chunks/SemanticTextChunkUtils.java
+    (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 15
+notes: 'Mined from elastic/elasticsearch PR #156611. Trigger heuristic applied. Needs
+  review.'

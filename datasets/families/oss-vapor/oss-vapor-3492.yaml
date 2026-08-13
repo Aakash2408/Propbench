@@ -1,0 +1,66 @@
+id: oss-vapor-3492
+title: Make Route a Struct
+family: uncategorized
+date: '2026-07-30'
+author: 0xTim
+source: github-api-mined
+source_repo: vapor/vapor
+source_url: https://github.com/vapor/vapor/pull/3492
+source_pr: 3492
+difficulty: medium
+trigger:
+  package: vapor/vapor
+  files:
+  - Sources/Vapor/Routing/Route.swift
+  intent: Make Route a Struct
+  diff_summary: 'Primary: Sources/Vapor/Routing/Route.swift (+18/-84)'
+consequences:
+- package: vapor/vapor
+  files:
+  - Sources/Development/routes.swift
+  description: 'modified: Sources/Development/routes.swift (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/Vapor/Routing/Application+routesASCIITable.swift
+  description: 'modified: Sources/Vapor/Routing/Application+routesASCIITable.swift
+    (+2/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/Vapor/Routing/RoutesBuilder+Group.swift
+  description: 'modified: Sources/Vapor/Routing/RoutesBuilder+Group.swift (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/Vapor/Routing/RoutesBuilder+Method.swift
+  description: 'modified: Sources/Vapor/Routing/RoutesBuilder+Method.swift (+25/-12)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/Vapor/Routing/RoutesBuilder+Middleware.swift
+  description: 'modified: Sources/Vapor/Routing/RoutesBuilder+Middleware.swift (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from vapor/vapor PR #3492. Trigger heuristic applied. Needs review.'

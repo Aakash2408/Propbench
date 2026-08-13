@@ -1,0 +1,42 @@
+id: oss-ktor-5778
+title: KTOR-9743 Fix readLine byte-limit behavior and documentation
+family: bugfix
+date: '2026-07-30'
+author: osipxd
+source: github-api-mined
+source_repo: ktorio/ktor
+source_url: https://github.com/ktorio/ktor/pull/5778
+source_pr: 5778
+difficulty: medium
+trigger:
+  package: ktorio/ktor
+  files:
+  - ktor-io/common/src/io/ktor/utils/io/ByteReadChannelOperations.kt
+  intent: KTOR-9743 Fix readLine byte-limit behavior and documentation
+  diff_summary: 'Primary: ktor-io/common/src/io/ktor/utils/io/ByteReadChannelOperations.kt
+    (+145/-137)'
+consequences:
+- package: ktorio/ktor
+  files:
+  - ktor-io/common/test/ReadLineTest.kt
+  description: 'modified: ktor-io/common/test/ReadLineTest.kt (+34/-5)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-io/common/test/ReadUtf8LineTest.kt
+  description: 'modified: ktor-io/common/test/ReadUtf8LineTest.kt (+8/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from ktorio/ktor PR #5778. Trigger heuristic applied. Needs review.'

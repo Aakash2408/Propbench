@@ -1,0 +1,98 @@
+id: oss-aspnetcore-68317
+title: Use TLS channel binding in Negotiate authentication
+family: uncategorized
+date: '2026-08-13'
+author: DeagleGross
+source: github-api-mined
+source_repo: dotnet/aspnetcore
+source_url: https://github.com/dotnet/aspnetcore/pull/68317
+source_pr: 68317
+difficulty: medium
+trigger:
+  package: dotnet/aspnetcore
+  files:
+  - src/Security/Authentication/Negotiate/src/Internal/NegotiateState.cs
+  intent: Use TLS channel binding in Negotiate authentication
+  diff_summary: 'Primary: src/Security/Authentication/Negotiate/src/Internal/NegotiateState.cs
+    (+26/-3)'
+consequences:
+- package: dotnet/aspnetcore
+  files:
+  - src/Security/Authentication/Negotiate/src/Internal/INegotiateStateFactory.cs
+  description: 'modified: src/Security/Authentication/Negotiate/src/Internal/INegotiateStateFactory.cs
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Security/Authentication/Negotiate/src/Internal/NegotiateChannelBinding.cs
+  description: 'added: src/Security/Authentication/Negotiate/src/Internal/NegotiateChannelBinding.cs
+    (+28/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Security/Authentication/Negotiate/src/Internal/NegotiateStateFactory.cs
+  description: 'modified: src/Security/Authentication/Negotiate/src/Internal/NegotiateStateFactory.cs
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Security/Authentication/Negotiate/src/Microsoft.AspNetCore.Authentication.Negotiate.csproj
+  description: 'modified: src/Security/Authentication/Negotiate/src/Microsoft.AspNetCore.Authentication.Negotiate.csproj
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Security/Authentication/Negotiate/src/NegotiateHandler.cs
+  description: 'modified: src/Security/Authentication/Negotiate/src/NegotiateHandler.cs
+    (+15/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Security/Authentication/Negotiate/test/Negotiate.Test/EventTests.cs
+  description: 'modified: src/Security/Authentication/Negotiate/test/Negotiate.Test/EventTests.cs
+    (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Security/Authentication/Negotiate/test/Negotiate.Test/NegotiateChannelBindingTests.cs
+  description: 'added: src/Security/Authentication/Negotiate/test/Negotiate.Test/NegotiateChannelBindingTests.cs
+    (+22/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Security/Authentication/Negotiate/test/Negotiate.Test/NegotiateHandlerTests.cs
+  description: 'modified: src/Security/Authentication/Negotiate/test/Negotiate.Test/NegotiateHandlerTests.cs
+    (+110/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 9
+notes: 'Mined from dotnet/aspnetcore PR #68317. Trigger heuristic applied. Needs review.'

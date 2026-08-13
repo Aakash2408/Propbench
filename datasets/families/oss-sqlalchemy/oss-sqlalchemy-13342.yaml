@@ -1,0 +1,42 @@
+id: oss-sqlalchemy-13342
+title: Document quoted_name use with PostgreSQL INHERITS
+family: uncategorized
+date: '2026-06-11'
+author: bubaizhanshen
+source: github-api-mined
+source_repo: sqlalchemy/sqlalchemy
+source_url: https://github.com/sqlalchemy/sqlalchemy/pull/13342
+source_pr: 13342
+difficulty: medium
+trigger:
+  package: sqlalchemy/sqlalchemy
+  files:
+  - test/dialect/postgresql/test_compiler.py
+  intent: Document quoted_name use with PostgreSQL INHERITS
+  diff_summary: 'Primary: test/dialect/postgresql/test_compiler.py (+17/-0)'
+consequences:
+- package: sqlalchemy/sqlalchemy
+  files:
+  - lib/sqlalchemy/dialects/postgresql/base.py
+  description: 'modified: lib/sqlalchemy/dialects/postgresql/base.py (+15/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sqlalchemy/sqlalchemy
+  files:
+  - lib/sqlalchemy/sql/elements.py
+  description: 'modified: lib/sqlalchemy/sql/elements.py (+7/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from sqlalchemy/sqlalchemy PR #13342. Trigger heuristic applied. Needs
+  review.'

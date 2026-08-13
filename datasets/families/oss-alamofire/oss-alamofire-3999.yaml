@@ -1,0 +1,162 @@
+id: oss-alamofire-3999
+title: Prevent Duplicate Serializer Completion Calls
+family: uncategorized
+date: '2026-01-31'
+author: jshier
+source: github-api-mined
+source_repo: Alamofire/Alamofire
+source_url: https://github.com/Alamofire/Alamofire/pull/3999
+source_pr: 3999
+difficulty: medium
+trigger:
+  package: Alamofire/Alamofire
+  files:
+  - Tests/MultipartFormDataTests.swift
+  intent: Prevent Duplicate Serializer Completion Calls
+  diff_summary: 'Primary: Tests/MultipartFormDataTests.swift (+37/-57)'
+consequences:
+- package: Alamofire/Alamofire
+  files:
+  - .swiftformat
+  description: 'modified: .swiftformat (+7/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Source/Core/DownloadRequest.swift
+  description: 'modified: Source/Core/DownloadRequest.swift (+1/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Source/Core/Request.swift
+  description: 'modified: Source/Core/Request.swift (+13/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Source/Features/AuthenticationInterceptor.swift
+  description: 'modified: Source/Features/AuthenticationInterceptor.swift (+1/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Source/Features/URLEncodedFormEncoder.swift
+  description: 'modified: Source/Features/URLEncodedFormEncoder.swift (+15/-25)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Tests/CacheTests.swift
+  description: 'modified: Tests/CacheTests.swift (+1/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Tests/ConcurrencyTests.swift
+  description: 'modified: Tests/ConcurrencyTests.swift (+32/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Tests/InspectorEventMonitor.swift
+  description: 'modified: Tests/InspectorEventMonitor.swift (+1/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Tests/OfflineRetrierTests.swift
+  description: 'modified: Tests/OfflineRetrierTests.swift (+8/-9)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Tests/ProtectedTests.swift
+  description: 'modified: Tests/ProtectedTests.swift (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Tests/RequestInterceptorTests.swift
+  description: 'modified: Tests/RequestInterceptorTests.swift (+13/-14)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Tests/RequestTests.swift
+  description: 'modified: Tests/RequestTests.swift (+3/-9)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Tests/ServerTrustEvaluatorTests.swift
+  description: 'modified: Tests/ServerTrustEvaluatorTests.swift (+6/-10)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Tests/SessionTests.swift
+  description: 'modified: Tests/SessionTests.swift (+3/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Tests/TLSEvaluationTests.swift
+  description: 'modified: Tests/TLSEvaluationTests.swift (+1/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Tests/URLProtocolTests.swift
+  description: 'modified: Tests/URLProtocolTests.swift (+1/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Tests/UploadTests.swift
+  description: 'modified: Tests/UploadTests.swift (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 18
+notes: 'Mined from Alamofire/Alamofire PR #3999. Trigger heuristic applied. Needs
+  review.'

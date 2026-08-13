@@ -1,0 +1,95 @@
+id: oss-ktor-5782
+title: Cherry-pick patch fixes to release/3.x
+family: bugfix
+date: '2026-07-30'
+author: osipxd
+source: github-api-mined
+source_repo: ktorio/ktor
+source_url: https://github.com/ktorio/ktor/pull/5782
+source_pr: 5782
+difficulty: medium
+trigger:
+  package: ktorio/ktor
+  files:
+  - ktor-network/ktor-network-tls/jvm/src/io/ktor/network/tls/TLSConfigBuilder.kt
+  intent: Cherry-pick patch fixes to release/3.x
+  diff_summary: 'Primary: ktor-network/ktor-network-tls/jvm/src/io/ktor/network/tls/TLSConfigBuilder.kt
+    (+9/-0)'
+consequences:
+- package: ktorio/ktor
+  files:
+  - ktor-client/ktor-client-plugins/ktor-client-json/jvm/src/io/ktor/client/plugins/json/DefaultJvm.kt
+  description: 'modified: ktor-client/ktor-client-plugins/ktor-client-json/jvm/src/io/ktor/client/plugins/json/DefaultJvm.kt
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-io/common/src/io/ktor/utils/io/core/Strings.kt
+  description: 'modified: ktor-io/common/src/io/ktor/utils/io/core/Strings.kt (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-io/common/test/StringsToByteArrayTest.kt
+  description: 'added: ktor-io/common/test/StringsToByteArrayTest.kt (+45/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-io/jvm/test/StringsToByteArrayJvmTest.kt
+  description: 'added: ktor-io/jvm/test/StringsToByteArrayJvmTest.kt (+24/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-network/common/src/io/ktor/network/sockets/SocketOptions.kt
+  description: 'modified: ktor-network/common/src/io/ktor/network/sockets/SocketOptions.kt
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-network/ktor-network-tls/jvm/src/io/ktor/network/tls/TLS.kt
+  description: 'modified: ktor-network/ktor-network-tls/jvm/src/io/ktor/network/tls/TLS.kt
+    (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-core/common/src/io/ktor/server/application/ApplicationPlugin.kt
+  description: 'modified: ktor-server/ktor-server-core/common/src/io/ktor/server/application/ApplicationPlugin.kt
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-core/jvm/src/io/ktor/server/engine/ClassLoaders.kt
+  description: 'modified: ktor-server/ktor-server-core/jvm/src/io/ktor/server/engine/ClassLoaders.kt
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 9
+notes: 'Mined from ktorio/ktor PR #5782. Trigger heuristic applied. Needs review.'

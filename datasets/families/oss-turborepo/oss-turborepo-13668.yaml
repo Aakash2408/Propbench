@@ -1,0 +1,81 @@
+id: oss-turborepo-13668
+title: 'fix: Respect aggregate task overrides'
+family: bugfix
+date: '2026-08-05'
+author: anthonyshew
+source: github-api-mined
+source_repo: vercel/turborepo
+source_url: https://github.com/vercel/turborepo/pull/13668
+source_pr: 13668
+difficulty: medium
+trigger:
+  package: vercel/turborepo
+  files:
+  - crates/turborepo-engine/src/builder/definitions.rs
+  intent: 'fix: Respect aggregate task overrides'
+  diff_summary: 'Primary: crates/turborepo-engine/src/builder/definitions.rs (+60/-21)'
+consequences:
+- package: vercel/turborepo
+  files:
+  - crates/turborepo-engine/src/builder/test/core.rs
+  description: 'modified: crates/turborepo-engine/src/builder/test/core.rs (+129/-9)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - crates/turborepo-lib/src/devtools.rs
+  description: 'modified: crates/turborepo-lib/src/devtools.rs (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - crates/turborepo-lib/src/engine/mod.rs
+  description: 'modified: crates/turborepo-lib/src/engine/mod.rs (+23/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - crates/turborepo-lib/src/package_changes_watcher.rs
+  description: 'modified: crates/turborepo-lib/src/package_changes_watcher.rs (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - crates/turborepo-lib/src/run/builder.rs
+  description: 'modified: crates/turborepo-lib/src/run/builder.rs (+9/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - crates/turborepo-lib/src/run/mod.rs
+  description: 'modified: crates/turborepo-lib/src/run/mod.rs (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - crates/turborepo-run-summary/src/task_factory.rs
+  description: 'modified: crates/turborepo-run-summary/src/task_factory.rs (+9/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 8
+notes: 'Mined from vercel/turborepo PR #13668. Trigger heuristic applied. Needs review.'

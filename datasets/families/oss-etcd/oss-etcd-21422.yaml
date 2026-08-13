@@ -1,0 +1,41 @@
+id: oss-etcd-21422
+title: 'etcdctl: fix lease ID parsing in txn comparison'
+family: bugfix
+date: '2026-07-28'
+author: huajianxiaowanzi
+source: github-api-mined
+source_repo: etcd-io/etcd
+source_url: https://github.com/etcd-io/etcd/pull/21422
+source_pr: 21422
+difficulty: medium
+trigger:
+  package: etcd-io/etcd
+  files:
+  - client/v3/compare.go
+  intent: 'etcdctl: fix lease ID parsing in txn comparison'
+  diff_summary: 'Primary: client/v3/compare.go (+3/-1)'
+consequences:
+- package: etcd-io/etcd
+  files:
+  - etcdctl/ctlv3/command/txn_command.go
+  description: 'modified: etcdctl/ctlv3/command/txn_command.go (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: etcd-io/etcd
+  files:
+  - etcdctl/ctlv3/command/txn_command_test.go
+  description: 'added: etcdctl/ctlv3/command/txn_command_test.go (+94/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from etcd-io/etcd PR #21422. Trigger heuristic applied. Needs review.'

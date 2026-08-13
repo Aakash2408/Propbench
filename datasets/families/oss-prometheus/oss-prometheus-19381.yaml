@@ -1,0 +1,42 @@
+id: oss-prometheus-19381
+title: 'web/api: add native histogram examples to OpenAPI spec'
+family: interface-evolution
+date: '2026-08-12'
+author: vishnukothakapu
+source: github-api-mined
+source_repo: prometheus/prometheus
+source_url: https://github.com/prometheus/prometheus/pull/19381
+source_pr: 19381
+difficulty: medium
+trigger:
+  package: prometheus/prometheus
+  files:
+  - web/api/v1/openapi_examples.go
+  intent: 'web/api: add native histogram examples to OpenAPI spec'
+  diff_summary: 'Primary: web/api/v1/openapi_examples.go (+44/-2)'
+consequences:
+- package: prometheus/prometheus
+  files:
+  - web/api/v1/testdata/openapi_3.1_golden.yaml
+  description: 'modified: web/api/v1/testdata/openapi_3.1_golden.yaml (+12/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prometheus/prometheus
+  files:
+  - web/api/v1/testdata/openapi_3.2_golden.yaml
+  description: 'modified: web/api/v1/testdata/openapi_3.2_golden.yaml (+12/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from prometheus/prometheus PR #19381. Trigger heuristic applied. Needs
+  review.'

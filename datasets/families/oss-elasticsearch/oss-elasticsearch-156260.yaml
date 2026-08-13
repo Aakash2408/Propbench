@@ -1,0 +1,64 @@
+id: oss-elasticsearch-156260
+title: 'ES|QL: run csv-spec tests with old node as coordinator in mixed-cluster BWC
+  suite--Option A Implemen'
+family: interface-evolution
+date: '2026-08-13'
+author: hawkhuang-collab
+source: github-api-mined
+source_repo: elastic/elasticsearch
+source_url: https://github.com/elastic/elasticsearch/pull/156260
+source_pr: 156260
+difficulty: medium
+trigger:
+  package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql/qa/server/mixed-cluster/src/csvSpecTest/java/org/elasticsearch/xpack/esql/qa/mixed/AbstractMixedClusterEsqlSpecIT.java
+  intent: 'ES|QL: run csv-spec tests with old node as coordinator in mixed-cluster
+    BWC suite--Option A Implementation'
+  diff_summary: 'Primary: x-pack/plugin/esql/qa/server/mixed-cluster/src/csvSpecTest/java/org/elasticsearch/xpack/esql/qa/mixed/AbstractMixedClusterEsqlSpecIT.java
+    (+80/-42)'
+consequences:
+- package: elastic/elasticsearch
+  files:
+  - muted-tests.yml
+  description: 'modified: muted-tests.yml (+74/-17)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql/qa/server/mixed-cluster/build.gradle
+  description: 'modified: x-pack/plugin/esql/qa/server/mixed-cluster/build.gradle
+    (+19/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql/qa/server/mixed-cluster/src/csvSpecTest/java/org/elasticsearch/xpack/esql/qa/mixed/AbstractMixedClusterEsqlCurrCoordSpecIT.java
+  description: 'added: x-pack/plugin/esql/qa/server/mixed-cluster/src/csvSpecTest/java/org/elasticsearch/xpack/esql/qa/mixed/AbstractMixedClusterEsqlCurrCoordSpecIT.java
+    (+38/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql/qa/server/mixed-cluster/src/csvSpecTest/java/org/elasticsearch/xpack/esql/qa/mixed/AbstractMixedClusterEsqlOldCoordSpecIT.java
+  description: 'added: x-pack/plugin/esql/qa/server/mixed-cluster/src/csvSpecTest/java/org/elasticsearch/xpack/esql/qa/mixed/AbstractMixedClusterEsqlOldCoordSpecIT.java
+    (+39/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from elastic/elasticsearch PR #156260. Trigger heuristic applied. Needs
+  review.'

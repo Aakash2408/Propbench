@@ -1,0 +1,72 @@
+id: oss-runtime-130468
+title: '[clr-ios] Disable R2R IL-body stripping for more library tests that need IL
+  at run time'
+family: uncategorized
+date: '2026-07-13'
+author: kotlarmilos
+source: github-api-mined
+source_repo: dotnet/runtime
+source_url: https://github.com/dotnet/runtime/pull/130468
+source_pr: 130468
+difficulty: medium
+trigger:
+  package: dotnet/runtime
+  files:
+  - src/coreclr/tools/aot/ILCompiler.ReadyToRun.Tests/TestCases/RuntimeAsync/StripILBodies.cs
+  intent: '[clr-ios] Disable R2R IL-body stripping for more library tests that need
+    IL at run time'
+  diff_summary: 'Primary: src/coreclr/tools/aot/ILCompiler.ReadyToRun.Tests/TestCases/RuntimeAsync/StripILBodies.cs
+    (+17/-0)'
+consequences:
+- package: dotnet/runtime
+  files:
+  - src/coreclr/tools/aot/ILCompiler.ReadyToRun.Tests/TestCases/R2RTestSuites.cs
+  description: 'modified: src/coreclr/tools/aot/ILCompiler.ReadyToRun.Tests/TestCases/R2RTestSuites.cs
+    (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/tools/aot/ILCompiler.ReadyToRun/Compiler/DependencyAnalysis/ReadyToRun/CopiedMethodILNode.cs
+  description: 'modified: src/coreclr/tools/aot/ILCompiler.ReadyToRun/Compiler/DependencyAnalysis/ReadyToRun/CopiedMethodILNode.cs
+    (+9/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.IO.Hashing/tests/System.IO.Hashing.Tests.csproj
+  description: 'modified: src/libraries/System.IO.Hashing/tests/System.IO.Hashing.Tests.csproj
+    (+1/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Runtime/tests/System.Runtime.Extensions.Tests/System.Runtime.Extensions.Tests.csproj
+  description: 'modified: src/libraries/System.Runtime/tests/System.Runtime.Extensions.Tests/System.Runtime.Extensions.Tests.csproj
+    (+1/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/tests/JIT/Regression/Regression_o_2.csproj
+  description: 'modified: src/tests/JIT/Regression/Regression_o_2.csproj (+1/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from dotnet/runtime PR #130468. Trigger heuristic applied. Needs review.'

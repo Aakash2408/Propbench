@@ -1,0 +1,49 @@
+id: oss-flask-6096
+title: Fix `.partition(":")` usage on potential IPv6 addresses
+family: interface-evolution
+date: '2026-08-11'
+author: lkk7
+source: github-api-mined
+source_repo: pallets/flask
+source_url: https://github.com/pallets/flask/pull/6096
+source_pr: 6096
+difficulty: medium
+trigger:
+  package: pallets/flask
+  files:
+  - tests/test_testing.py
+  intent: Fix `.partition(":")` usage on potential IPv6 addresses
+  diff_summary: 'Primary: tests/test_testing.py (+14/-0)'
+consequences:
+- package: pallets/flask
+  files:
+  - src/flask/app.py
+  description: 'modified: src/flask/app.py (+7/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: pallets/flask
+  files:
+  - src/flask/testing.py
+  description: 'modified: src/flask/testing.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: pallets/flask
+  files:
+  - tests/test_basic.py
+  description: 'modified: tests/test_basic.py (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from pallets/flask PR #6096. Trigger heuristic applied. Needs review.'

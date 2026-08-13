@@ -1,0 +1,53 @@
+id: oss-terraform-provider-aws-42680
+title: F datasource vpclattice service network service associations
+family: uncategorized
+date: '2026-08-07'
+author: yfauser
+source: github-api-mined
+source_repo: hashicorp/terraform-provider-aws
+source_url: https://github.com/hashicorp/terraform-provider-aws/pull/42680
+source_pr: 42680
+difficulty: medium
+trigger:
+  package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/vpclattice/service_network_service_associations_data_source.go
+  intent: F datasource vpclattice service network service associations
+  diff_summary: 'Primary: internal/service/vpclattice/service_network_service_associations_data_source.go
+    (+138/-0)'
+consequences:
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/vpclattice/service_network_service_associations_data_source_test.go
+  description: 'added: internal/service/vpclattice/service_network_service_associations_data_source_test.go
+    (+167/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/vpclattice/service_package_gen.go
+  description: 'modified: internal/service/vpclattice/service_package_gen.go (+8/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - website/docs/d/vpclattice_service_network_service_associations.html.markdown
+  description: 'added: website/docs/d/vpclattice_service_network_service_associations.html.markdown
+    (+58/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from hashicorp/terraform-provider-aws PR #42680. Trigger heuristic applied.
+  Needs review.'

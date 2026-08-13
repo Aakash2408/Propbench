@@ -1,0 +1,135 @@
+id: oss-ktor-4940
+title: Migrate FileCacheStorage to common using kotlinx.io
+family: uncategorized
+date: '2026-07-27'
+author: bishiboosh
+source: github-api-mined
+source_repo: ktorio/ktor
+source_url: https://github.com/ktorio/ktor/pull/4940
+source_pr: 4940
+difficulty: medium
+trigger:
+  package: ktorio/ktor
+  files:
+  - ktor-client/ktor-client-core/jvm/src/io/ktor/client/plugins/cache/storage/FileCacheStorage.kt
+  intent: Migrate FileCacheStorage to common using kotlinx.io
+  diff_summary: 'Primary: ktor-client/ktor-client-core/jvm/src/io/ktor/client/plugins/cache/storage/FileCacheStorage.kt
+    (+11/-294)'
+consequences:
+- package: ktorio/ktor
+  files:
+  - ktor-client/ktor-client-core/api/ktor-client-core.api
+  description: 'modified: ktor-client/ktor-client-core/api/ktor-client-core.api (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-client/ktor-client-core/api/ktor-client-core.klib.api
+  description: 'modified: ktor-client/ktor-client-core/api/ktor-client-core.klib.api
+    (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-client/ktor-client-core/common/src/io/ktor/client/plugins/cache/storage/CachingCacheStorage.kt
+  description: 'added: ktor-client/ktor-client-core/common/src/io/ktor/client/plugins/cache/storage/CachingCacheStorage.kt
+    (+52/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-client/ktor-client-core/jvmAndPosix/src/io/ktor/client/plugins/cache/storage/FileStorage.kt
+  description: 'added: ktor-client/ktor-client-core/jvmAndPosix/src/io/ktor/client/plugins/cache/storage/FileStorage.kt
+    (+253/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-client/ktor-client-core/jvmAndPosix/test/FileStorageTest.kt
+  description: 'renamed: ktor-client/ktor-client-core/jvmAndPosix/test/FileStorageTest.kt
+    (+49/-17)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-client/ktor-client-tests/jvmAndPosix/test/io/ktor/client/tests/FileCacheTest.kt
+  description: 'renamed: ktor-client/ktor-client-tests/jvmAndPosix/test/io/ktor/client/tests/FileCacheTest.kt
+    (+36/-12)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-utils/api/ktor-utils.api
+  description: 'modified: ktor-utils/api/ktor-utils.api (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-utils/api/ktor-utils.klib.api
+  description: 'modified: ktor-utils/api/ktor-utils.klib.api (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-utils/common/src/io/ktor/util/Crypto.kt
+  description: 'modified: ktor-utils/common/src/io/ktor/util/Crypto.kt (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-utils/common/src/io/ktor/util/HashFunction.kt
+  description: 'modified: ktor-utils/common/src/io/ktor/util/HashFunction.kt (+237/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-utils/jvm/src/io/ktor/util/CryptoJvm.kt
+  description: 'modified: ktor-utils/jvm/src/io/ktor/util/CryptoJvm.kt (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-utils/posix/src/io/ktor/util/CryptoNative.kt
+  description: 'modified: ktor-utils/posix/src/io/ktor/util/CryptoNative.kt (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-utils/web/src/io/ktor/util/Crypto.web.kt
+  description: 'modified: ktor-utils/web/src/io/ktor/util/Crypto.web.kt (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 14
+notes: 'Mined from ktorio/ktor PR #4940. Trigger heuristic applied. Needs review.'

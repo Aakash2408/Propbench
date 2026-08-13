@@ -1,0 +1,81 @@
+id: oss-deno-36422
+title: 'perf(ext/web): apply the base64url op design to standard base64'
+family: uncategorized
+date: '2026-08-10'
+author: tomas-zijdemans
+source: github-api-mined
+source_repo: denoland/deno
+source_url: https://github.com/denoland/deno/pull/36422
+source_pr: 36422
+difficulty: medium
+trigger:
+  package: denoland/deno
+  files:
+  - ext/web/lib.rs
+  intent: 'perf(ext/web): apply the base64url op design to standard base64'
+  diff_summary: 'Primary: ext/web/lib.rs (+293/-304)'
+consequences:
+- package: denoland/deno
+  files:
+  - cli/js/40_jupyter.js
+  description: 'modified: cli/js/40_jupyter.js (+8/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - ext/node/polyfills/internal/buffer.mjs
+  description: 'modified: ext/node/polyfills/internal/buffer.mjs (+14/-14)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - ext/node/polyfills/internal_binding/_utils.ts
+  description: 'modified: ext/node/polyfills/internal_binding/_utils.ts (+17/-9)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - ext/web/00_infra.js
+  description: 'modified: ext/web/00_infra.js (+6/-14)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - ext/web/README.md
+  description: 'modified: ext/web/README.md (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - runtime/js/99_main.js
+  description: 'modified: runtime/js/99_main.js (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: denoland/deno
+  files:
+  - tests/unit_node/buffer_test.ts
+  description: 'modified: tests/unit_node/buffer_test.ts (+73/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 8
+notes: 'Mined from denoland/deno PR #36422. Trigger heuristic applied. Needs review.'

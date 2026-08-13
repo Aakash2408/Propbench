@@ -1,0 +1,62 @@
+id: oss-kotlin-7403
+title: '[Swift Export] Make sure sealedType leaf functions have a default impl'
+family: uncategorized
+date: '2026-08-11'
+author: rickclephas
+source: github-api-mined
+source_repo: JetBrains/kotlin
+source_url: https://github.com/JetBrains/kotlin/pull/7403
+source_pr: 7403
+difficulty: medium
+trigger:
+  package: JetBrains/kotlin
+  files:
+  - native/swift/sir-light-classes/src/org/jetbrains/sir/lightclasses/nodes/SirProtocolFromKtSymbol.kt
+  intent: '[Swift Export] Make sure sealedType leaf functions have a default impl'
+  diff_summary: 'Primary: native/swift/sir-light-classes/src/org/jetbrains/sir/lightclasses/nodes/SirProtocolFromKtSymbol.kt
+    (+10/-2)'
+consequences:
+- package: JetBrains/kotlin
+  files:
+  - native/swift/sir-light-classes/src/org/jetbrains/sir/lightclasses/nodes/SirSealedType.kt
+  description: 'modified: native/swift/sir-light-classes/src/org/jetbrains/sir/lightclasses/nodes/SirSealedType.kt
+    (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - native/swift/swift-export-standalone-integration-tests/coroutines/testData/generation/coroutines/golden_result/flow_overrides/flow_overrides.swift
+  description: 'modified: native/swift/swift-export-standalone-integration-tests/coroutines/testData/generation/coroutines/golden_result/flow_overrides/flow_overrides.swift
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - native/swift/swift-export-standalone-integration-tests/simple/testData/generation/protocols/golden_result/main/main.swift
+  description: 'modified: native/swift/swift-export-standalone-integration-tests/simple/testData/generation/protocols/golden_result/main/main.swift
+    (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - native/swift/swift-export-standalone-integration-tests/simple/testData/generation/sealedTypes/golden_result/common/common.swift
+  description: 'modified: native/swift/swift-export-standalone-integration-tests/simple/testData/generation/sealedTypes/golden_result/common/common.swift
+    (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from JetBrains/kotlin PR #7403. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,57 @@
+id: oss-axum-3776
+title: 'fix(axum-extra): escape multipart Content-Disposition params'
+family: bugfix
+date: '2026-06-29'
+author: fallintoplace
+source: github-api-mined
+source_repo: tokio-rs/axum
+source_url: https://github.com/tokio-rs/axum/pull/3776
+source_pr: 3776
+difficulty: medium
+trigger:
+  package: tokio-rs/axum
+  files:
+  - axum-extra/src/response/multiple.rs
+  intent: 'fix(axum-extra): escape multipart Content-Disposition params'
+  diff_summary: 'Primary: axum-extra/src/response/multiple.rs (+63/-6)'
+consequences:
+- package: tokio-rs/axum
+  files:
+  - axum-extra/src/response/attachment.rs
+  description: 'modified: axum-extra/src/response/attachment.rs (+5/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/axum
+  files:
+  - axum-extra/src/response/content_disposition.rs
+  description: 'modified: axum-extra/src/response/content_disposition.rs (+17/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/axum
+  files:
+  - axum-extra/src/response/file_stream.rs
+  description: 'modified: axum-extra/src/response/file_stream.rs (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/axum
+  files:
+  - axum-extra/src/response/mod.rs
+  description: 'modified: axum-extra/src/response/mod.rs (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from tokio-rs/axum PR #3776. Trigger heuristic applied. Needs review.'

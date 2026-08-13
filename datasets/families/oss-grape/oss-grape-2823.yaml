@@ -1,0 +1,65 @@
+id: oss-grape-2823
+title: Move stackable settings storage onto InheritableSetting
+family: refactor
+date: '2026-07-26'
+author: ericproulx
+source: github-api-mined
+source_repo: ruby-grape/grape
+source_url: https://github.com/ruby-grape/grape/pull/2823
+source_pr: 2823
+difficulty: medium
+trigger:
+  package: ruby-grape/grape
+  files:
+  - lib/grape/util/inheritable_setting.rb
+  intent: Move stackable settings storage onto InheritableSetting
+  diff_summary: 'Primary: lib/grape/util/inheritable_setting.rb (+94/-40)'
+consequences:
+- package: ruby-grape/grape
+  files:
+  - .rubocop.yml
+  description: 'modified: .rubocop.yml (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - lib/grape/util/base_inheritable.rb
+  description: 'removed: lib/grape/util/base_inheritable.rb (+0/-43)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - lib/grape/util/inheritable_values.rb
+  description: 'modified: lib/grape/util/inheritable_values.rb (+33/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - lib/grape/util/stackable_values.rb
+  description: 'modified: lib/grape/util/stackable_values.rb (+32/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - spec/grape/util/stackable_values_spec.rb
+  description: 'modified: spec/grape/util/stackable_values_spec.rb (+59/-76)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from ruby-grape/grape PR #2823. Trigger heuristic applied. Needs review.'

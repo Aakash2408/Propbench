@@ -1,0 +1,144 @@
+id: oss-elasticsearch-155912
+title: Typed MetadataWriter/MetadataReader for BlockTransform
+family: uncategorized
+date: '2026-08-12'
+author: jordan-powers
+source: github-api-mined
+source_repo: elastic/elasticsearch
+source_url: https://github.com/elastic/elasticsearch/pull/155912
+source_pr: 155912
+difficulty: medium
+trigger:
+  package: elastic/elasticsearch
+  files:
+  - libs/columnar/src/main/java/org/elasticsearch/columnar/numeric/MetadataBuffer.java
+  intent: Typed MetadataWriter/MetadataReader for BlockTransform
+  diff_summary: 'Primary: libs/columnar/src/main/java/org/elasticsearch/columnar/numeric/MetadataBuffer.java
+    (+108/-0)'
+consequences:
+- package: elastic/elasticsearch
+  files:
+  - libs/columnar/src/main/java/org/elasticsearch/columnar/numeric/AlpDoubleTransform.java
+  description: 'modified: libs/columnar/src/main/java/org/elasticsearch/columnar/numeric/AlpDoubleTransform.java
+    (+4/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - libs/columnar/src/main/java/org/elasticsearch/columnar/numeric/BlockTransform.java
+  description: 'modified: libs/columnar/src/main/java/org/elasticsearch/columnar/numeric/BlockTransform.java
+    (+2/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - libs/columnar/src/main/java/org/elasticsearch/columnar/numeric/DataInputMetadataReader.java
+  description: 'added: libs/columnar/src/main/java/org/elasticsearch/columnar/numeric/DataInputMetadataReader.java
+    (+72/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - libs/columnar/src/main/java/org/elasticsearch/columnar/numeric/DeltaTransform.java
+  description: 'modified: libs/columnar/src/main/java/org/elasticsearch/columnar/numeric/DeltaTransform.java
+    (+2/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - libs/columnar/src/main/java/org/elasticsearch/columnar/numeric/GcdTransform.java
+  description: 'modified: libs/columnar/src/main/java/org/elasticsearch/columnar/numeric/GcdTransform.java
+    (+2/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - libs/columnar/src/main/java/org/elasticsearch/columnar/numeric/MetadataReader.java
+  description: 'added: libs/columnar/src/main/java/org/elasticsearch/columnar/numeric/MetadataReader.java
+    (+44/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - libs/columnar/src/main/java/org/elasticsearch/columnar/numeric/MetadataWriter.java
+  description: 'added: libs/columnar/src/main/java/org/elasticsearch/columnar/numeric/MetadataWriter.java
+    (+57/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - libs/columnar/src/main/java/org/elasticsearch/columnar/numeric/NumericBlockEncoder.java
+  description: 'modified: libs/columnar/src/main/java/org/elasticsearch/columnar/numeric/NumericBlockEncoder.java
+    (+8/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - libs/columnar/src/main/java/org/elasticsearch/columnar/numeric/OffsetTransform.java
+  description: 'modified: libs/columnar/src/main/java/org/elasticsearch/columnar/numeric/OffsetTransform.java
+    (+2/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - libs/columnar/src/main/java/org/elasticsearch/columnar/numeric/SplitDeltaTransform.java
+  description: 'modified: libs/columnar/src/main/java/org/elasticsearch/columnar/numeric/SplitDeltaTransform.java
+    (+2/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - libs/columnar/src/test/java/org/elasticsearch/columnar/numeric/AlpDoubleTransformTests.java
+  description: 'modified: libs/columnar/src/test/java/org/elasticsearch/columnar/numeric/AlpDoubleTransformTests.java
+    (+7/-9)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - libs/columnar/src/test/java/org/elasticsearch/columnar/numeric/BlockTransformTests.java
+  description: 'modified: libs/columnar/src/test/java/org/elasticsearch/columnar/numeric/BlockTransformTests.java
+    (+2/-4)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - libs/columnar/src/test/java/org/elasticsearch/columnar/numeric/SplitDeltaTransformTests.java
+  description: 'modified: libs/columnar/src/test/java/org/elasticsearch/columnar/numeric/SplitDeltaTransformTests.java
+    (+6/-8)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 14
+notes: 'Mined from elastic/elasticsearch PR #155912. Trigger heuristic applied. Needs
+  review.'

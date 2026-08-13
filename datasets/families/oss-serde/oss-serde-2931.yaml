@@ -1,0 +1,41 @@
+id: oss-serde-2931
+title: Unify access to the serde namespace
+family: uncategorized
+date: '2025-09-15'
+author: Mingun
+source: github-api-mined
+source_repo: serde-rs/serde
+source_url: https://github.com/serde-rs/serde/pull/2931
+source_pr: 2931
+difficulty: medium
+trigger:
+  package: serde-rs/serde
+  files:
+  - serde_derive/src/de.rs
+  intent: Unify access to the serde namespace
+  diff_summary: 'Primary: serde_derive/src/de.rs (+5/-6)'
+consequences:
+- package: serde-rs/serde
+  files:
+  - serde_derive/src/internals/attr.rs
+  description: 'modified: serde_derive/src/internals/attr.rs (+1/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: serde-rs/serde
+  files:
+  - serde_derive/src/ser.rs
+  description: 'modified: serde_derive/src/ser.rs (+5/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from serde-rs/serde PR #2931. Trigger heuristic applied. Needs review.'

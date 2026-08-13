@@ -1,0 +1,41 @@
+id: oss-celery-10459
+title: RPC result backend recirculates final results on every state poll
+family: uncategorized
+date: '2026-08-08'
+author: goingforstudying-ctrl
+source: github-api-mined
+source_repo: celery/celery
+source_url: https://github.com/celery/celery/pull/10459
+source_pr: 10459
+difficulty: medium
+trigger:
+  package: celery/celery
+  files:
+  - t/unit/backends/test_rpc.py
+  intent: RPC result backend recirculates final results on every state poll
+  diff_summary: 'Primary: t/unit/backends/test_rpc.py (+173/-0)'
+consequences:
+- package: celery/celery
+  files:
+  - celery/backends/rpc.py
+  description: 'modified: celery/backends/rpc.py (+57/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: celery/celery
+  files:
+  - t/smoke/tests/test_rpc_backend.py
+  description: 'added: t/smoke/tests/test_rpc_backend.py (+162/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from celery/celery PR #10459. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,109 @@
+id: oss-filament-20290
+title: Complete pt_BR translations
+family: interface-evolution
+date: '2026-07-28'
+author: jeffersongoncalves
+source: github-api-mined
+source_repo: filamentphp/filament
+source_url: https://github.com/filamentphp/filament/pull/20290
+source_pr: 20290
+difficulty: medium
+trigger:
+  package: filamentphp/filament
+  files:
+  - packages/forms/resources/lang/pt_BR/components.php
+  intent: Complete pt_BR translations
+  diff_summary: 'Primary: packages/forms/resources/lang/pt_BR/components.php (+129/-0)'
+consequences:
+- package: filamentphp/filament
+  files:
+  - packages/actions/resources/lang/pt_BR/export.php
+  description: 'modified: packages/actions/resources/lang/pt_BR/export.php (+17/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: filamentphp/filament
+  files:
+  - packages/forms/resources/lang/pt_BR/validation.php
+  description: 'modified: packages/forms/resources/lang/pt_BR/validation.php (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: filamentphp/filament
+  files:
+  - packages/infolists/resources/lang/pt_BR/components.php
+  description: 'modified: packages/infolists/resources/lang/pt_BR/components.php (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: filamentphp/filament
+  files:
+  - packages/notifications/resources/lang/pt_BR/database.php
+  description: 'modified: packages/notifications/resources/lang/pt_BR/database.php
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: filamentphp/filament
+  files:
+  - packages/notifications/resources/lang/pt_BR/notification.php
+  description: 'added: packages/notifications/resources/lang/pt_BR/notification.php
+    (+13/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: filamentphp/filament
+  files:
+  - packages/panels/resources/lang/pt_BR/layout.php
+  description: 'modified: packages/panels/resources/lang/pt_BR/layout.php (+15/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: filamentphp/filament
+  files:
+  - packages/query-builder/resources/lang/pt_BR/query-builder.php
+  description: 'modified: packages/query-builder/resources/lang/pt_BR/query-builder.php
+    (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: filamentphp/filament
+  files:
+  - packages/schemas/resources/lang/pt_BR/components.php
+  description: 'modified: packages/schemas/resources/lang/pt_BR/components.php (+40/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: filamentphp/filament
+  files:
+  - packages/tables/resources/lang/pt_BR/table.php
+  description: 'modified: packages/tables/resources/lang/pt_BR/table.php (+27/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: filamentphp/filament
+  files:
+  - packages/widgets/resources/lang/pt_BR/chart.php
+  description: 'modified: packages/widgets/resources/lang/pt_BR/chart.php (+24/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 11
+notes: 'Mined from filamentphp/filament PR #20290. Trigger heuristic applied. Needs
+  review.'

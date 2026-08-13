@@ -1,0 +1,62 @@
+id: oss-ktor-5620
+title: Fix SSE (CIO) GET content length handling (KTOR-9588)
+family: bugfix
+date: '2026-07-29'
+author: paksv
+source: github-api-mined
+source_repo: ktorio/ktor
+source_url: https://github.com/ktorio/ktor/pull/5620
+source_pr: 5620
+difficulty: medium
+trigger:
+  package: ktorio/ktor
+  files:
+  - ktor-client/ktor-client-cio/common/src/io/ktor/client/engine/cio/utils.kt
+  intent: Fix SSE (CIO) GET content length handling (KTOR-9588)
+  diff_summary: 'Primary: ktor-client/ktor-client-cio/common/src/io/ktor/client/engine/cio/utils.kt
+    (+5/-4)'
+consequences:
+- package: ktorio/ktor
+  files:
+  - ktor-client/ktor-client-apache5/jvm/src/io/ktor/client/engine/apache5/ApacheRequestProducer.kt
+  description: 'modified: ktor-client/ktor-client-apache5/jvm/src/io/ktor/client/engine/apache5/ApacheRequestProducer.kt
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-client/ktor-client-java/jvm/src/io/ktor/client/engine/java/JavaHttpRequest.kt
+  description: 'modified: ktor-client/ktor-client-java/jvm/src/io/ktor/client/engine/java/JavaHttpRequest.kt
+    (+5/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-client/ktor-client-tests/common/test/io/ktor/client/tests/plugins/ServerSentEventsTest.kt
+  description: 'modified: ktor-client/ktor-client-tests/common/test/io/ktor/client/tests/plugins/ServerSentEventsTest.kt
+    (+32/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-test-server/src/main/kotlin/test/server/tests/ServerSentEvents.kt
+  description: 'modified: ktor-test-server/src/main/kotlin/test/server/tests/ServerSentEvents.kt
+    (+9/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from ktorio/ktor PR #5620. Trigger heuristic applied. Needs review.'

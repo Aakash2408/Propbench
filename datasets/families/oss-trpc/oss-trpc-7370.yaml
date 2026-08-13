@@ -1,0 +1,44 @@
+id: oss-trpc-7370
+title: 'fix(tanstack-react-query): add prefix support for mutation options'
+family: interface-evolution
+date: '2026-05-26'
+author: tmkx
+source: github-api-mined
+source_repo: trpc/trpc
+source_url: https://github.com/trpc/trpc/pull/7370
+source_pr: 7370
+difficulty: medium
+trigger:
+  package: trpc/trpc
+  files:
+  - packages/tanstack-react-query/src/internals/mutationOptions.ts
+  intent: 'fix(tanstack-react-query): add prefix support for mutation options'
+  diff_summary: 'Primary: packages/tanstack-react-query/src/internals/mutationOptions.ts
+    (+3/-2)'
+consequences:
+- package: trpc/trpc
+  files:
+  - packages/tanstack-react-query/src/internals/createOptionsProxy.ts
+  description: 'modified: packages/tanstack-react-query/src/internals/createOptionsProxy.ts
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: trpc/trpc
+  files:
+  - packages/tanstack-react-query/test/mutationOptions.test.tsx
+  description: 'modified: packages/tanstack-react-query/test/mutationOptions.test.tsx
+    (+48/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from trpc/trpc PR #7370. Trigger heuristic applied. Needs review.'

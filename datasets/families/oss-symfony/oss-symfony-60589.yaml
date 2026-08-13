@@ -1,0 +1,154 @@
+id: oss-symfony-60589
+title: '[DependencyInjection] add `factory` argument in the `#[Autoconfigure]` attribute
+  and also enabled th'
+family: dependency-evolution
+date: '2026-08-12'
+author: santysisi
+source: github-api-mined
+source_repo: symfony/symfony
+source_url: https://github.com/symfony/symfony/pull/60589
+source_pr: 60589
+difficulty: medium
+trigger:
+  package: symfony/symfony
+  files:
+  - src/Symfony/Component/DependencyInjection/Tests/Fixtures/AutoconfigureWithStaticSelfFactory.php
+  intent: '[DependencyInjection] add `factory` argument in the `#[Autoconfigure]`
+    attribute and also enabled the use of `factory` within `instanceof` conditionals'
+  diff_summary: 'Primary: src/Symfony/Component/DependencyInjection/Tests/Fixtures/AutoconfigureWithStaticSelfFactory.php
+    (+27/-0)'
+consequences:
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/DependencyInjection/Attribute/Autoconfigure.php
+  description: 'modified: src/Symfony/Component/DependencyInjection/Attribute/Autoconfigure.php
+    (+13/-11)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/DependencyInjection/Loader/Configurator/AppReference.php
+  description: 'modified: src/Symfony/Component/DependencyInjection/Loader/Configurator/AppReference.php
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/DependencyInjection/Loader/ContentLoaderTrait.php
+  description: 'modified: src/Symfony/Component/DependencyInjection/Loader/ContentLoaderTrait.php
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/DependencyInjection/Loader/schema/services.schema.json
+  description: 'modified: src/Symfony/Component/DependencyInjection/Loader/schema/services.schema.json
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/DependencyInjection/Tests/Compiler/RegisterAutoconfigureAttributesPassTest.php
+  description: 'modified: src/Symfony/Component/DependencyInjection/Tests/Compiler/RegisterAutoconfigureAttributesPassTest.php
+    (+88/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/DependencyInjection/Tests/Fixtures/AutoconfigureWithExpressionFactory.php
+  description: 'added: src/Symfony/Component/DependencyInjection/Tests/Fixtures/AutoconfigureWithExpressionFactory.php
+    (+22/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/DependencyInjection/Tests/Fixtures/AutoconfigureWithInstanceExternalFactory.php
+  description: 'added: src/Symfony/Component/DependencyInjection/Tests/Fixtures/AutoconfigureWithInstanceExternalFactory.php
+    (+22/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/DependencyInjection/Tests/Fixtures/AutoconfigureWithInvokableFactory.php
+  description: 'added: src/Symfony/Component/DependencyInjection/Tests/Fixtures/AutoconfigureWithInvokableFactory.php
+    (+22/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/DependencyInjection/Tests/Fixtures/AutoconfigureWithStaticExternalFactory.php
+  description: 'added: src/Symfony/Component/DependencyInjection/Tests/Fixtures/AutoconfigureWithStaticExternalFactory.php
+    (+22/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/DependencyInjection/Tests/Fixtures/config/instanceof_factory.expected.yml
+  description: 'added: src/Symfony/Component/DependencyInjection/Tests/Fixtures/config/instanceof_factory.expected.yml
+    (+16/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/DependencyInjection/Tests/Fixtures/config/instanceof_factory.php
+  description: 'added: src/Symfony/Component/DependencyInjection/Tests/Fixtures/config/instanceof_factory.php
+    (+25/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/DependencyInjection/Tests/Fixtures/yaml/service_instanceof_factory2.yml
+  description: 'added: src/Symfony/Component/DependencyInjection/Tests/Fixtures/yaml/service_instanceof_factory2.yml
+    (+12/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/DependencyInjection/Tests/Loader/PhpFileLoaderTest.php
+  description: 'modified: src/Symfony/Component/DependencyInjection/Tests/Loader/PhpFileLoaderTest.php
+    (+1/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/DependencyInjection/Tests/Loader/YamlFileLoaderTest.php
+  description: 'modified: src/Symfony/Component/DependencyInjection/Tests/Loader/YamlFileLoaderTest.php
+    (+11/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 15
+notes: 'Mined from symfony/symfony PR #60589. Trigger heuristic applied. Needs review.'

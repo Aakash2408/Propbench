@@ -1,0 +1,41 @@
+id: oss-celery-10263
+title: Deferred ack synloop bug
+family: bugfix
+date: '2026-04-23'
+author: jberclaz
+source: github-api-mined
+source_repo: celery/celery
+source_url: https://github.com/celery/celery/pull/10263
+source_pr: 10263
+difficulty: medium
+trigger:
+  package: celery/celery
+  files:
+  - t/unit/worker/test_consumer.py
+  intent: Deferred ack synloop bug
+  diff_summary: 'Primary: t/unit/worker/test_consumer.py (+60/-2)'
+consequences:
+- package: celery/celery
+  files:
+  - celery/worker/consumer/consumer.py
+  description: 'modified: celery/worker/consumer/consumer.py (+27/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: celery/celery
+  files:
+  - t/unit/worker/test_loops.py
+  description: 'modified: t/unit/worker/test_loops.py (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from celery/celery PR #10263. Trigger heuristic applied. Needs review.'

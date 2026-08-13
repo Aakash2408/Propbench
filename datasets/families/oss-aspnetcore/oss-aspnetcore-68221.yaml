@@ -1,0 +1,69 @@
+id: oss-aspnetcore-68221
+title: '[Blazor] Propagate SignalR authentication refresh to server circuits'
+family: uncategorized
+date: '2026-08-12'
+author: kotlarmilos
+source: github-api-mined
+source_repo: dotnet/aspnetcore
+source_url: https://github.com/dotnet/aspnetcore/pull/68221
+source_pr: 68221
+difficulty: medium
+trigger:
+  package: dotnet/aspnetcore
+  files:
+  - src/Components/Server/src/ComponentHub.cs
+  intent: '[Blazor] Propagate SignalR authentication refresh to server circuits'
+  diff_summary: 'Primary: src/Components/Server/src/ComponentHub.cs (+8/-0)'
+consequences:
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Server/test/Circuits/ComponentHubTest.cs
+  description: 'modified: src/Components/Server/test/Circuits/ComponentHubTest.cs
+    (+36/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/test/E2ETest/ServerExecutionTests/ServerAuthTest.cs
+  description: 'modified: src/Components/test/E2ETest/ServerExecutionTests/ServerAuthTest.cs
+    (+28/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/test/E2ETest/Tests/AuthTest.cs
+  description: 'modified: src/Components/test/E2ETest/Tests/AuthTest.cs (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/test/testassets/Components.TestServer/AuthenticationStartup.cs
+  description: 'modified: src/Components/test/testassets/Components.TestServer/AuthenticationStartup.cs
+    (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/test/testassets/Components.TestServer/Pages/_ServerHost.cshtml
+  description: 'modified: src/Components/test/testassets/Components.TestServer/Pages/_ServerHost.cshtml
+    (+10/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from dotnet/aspnetcore PR #68221. Trigger heuristic applied. Needs review.'

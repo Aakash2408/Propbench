@@ -1,0 +1,161 @@
+id: oss-kafka-23009
+title: 'KAFKA-20877: Fix incorrect restore-rate and update-rate metrics'
+family: interface-evolution
+date: '2026-08-12'
+author: mjsax
+source: github-api-mined
+source_repo: apache/kafka
+source_url: https://github.com/apache/kafka/pull/23009
+source_pr: 23009
+difficulty: medium
+trigger:
+  package: apache/kafka
+  files:
+  - streams/src/main/java/org/apache/kafka/streams/processor/internals/metrics/TaskMetrics.java
+  intent: 'KAFKA-20877: Fix incorrect restore-rate and update-rate metrics'
+  diff_summary: 'Primary: streams/src/main/java/org/apache/kafka/streams/processor/internals/metrics/TaskMetrics.java
+    (+15/-14)'
+consequences:
+- package: apache/kafka
+  files:
+  - streams/src/main/java/org/apache/kafka/streams/processor/internals/StreamThread.java
+  description: 'modified: streams/src/main/java/org/apache/kafka/streams/processor/internals/StreamThread.java
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - streams/src/main/java/org/apache/kafka/streams/state/internals/AbstractDualSchemaRocksDBSegmentedBytesStore.java
+  description: 'modified: streams/src/main/java/org/apache/kafka/streams/state/internals/AbstractDualSchemaRocksDBSegmentedBytesStore.java
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - streams/src/main/java/org/apache/kafka/streams/state/internals/AbstractRocksDBSegmentedBytesStore.java
+  description: 'modified: streams/src/main/java/org/apache/kafka/streams/state/internals/AbstractRocksDBSegmentedBytesStore.java
+    (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - streams/src/main/java/org/apache/kafka/streams/state/internals/InMemorySessionStore.java
+  description: 'modified: streams/src/main/java/org/apache/kafka/streams/state/internals/InMemorySessionStore.java
+    (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - streams/src/main/java/org/apache/kafka/streams/state/internals/InMemoryWindowStore.java
+  description: 'modified: streams/src/main/java/org/apache/kafka/streams/state/internals/InMemoryWindowStore.java
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - streams/src/main/java/org/apache/kafka/streams/state/internals/RocksDBVersionedStore.java
+  description: 'modified: streams/src/main/java/org/apache/kafka/streams/state/internals/RocksDBVersionedStore.java
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - streams/src/test/java/org/apache/kafka/streams/processor/internals/StandbyTaskTest.java
+  description: 'modified: streams/src/test/java/org/apache/kafka/streams/processor/internals/StandbyTaskTest.java
+    (+16/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - streams/src/test/java/org/apache/kafka/streams/processor/internals/StreamTaskTest.java
+  description: 'modified: streams/src/test/java/org/apache/kafka/streams/processor/internals/StreamTaskTest.java
+    (+16/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - streams/src/test/java/org/apache/kafka/streams/processor/internals/metrics/TaskMetricsTest.java
+  description: 'modified: streams/src/test/java/org/apache/kafka/streams/processor/internals/metrics/TaskMetricsTest.java
+    (+2/-11)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - streams/src/test/java/org/apache/kafka/streams/state/internals/AbstractDualSchemaRocksDBSegmentedBytesStoreTest.java
+  description: 'modified: streams/src/test/java/org/apache/kafka/streams/state/internals/AbstractDualSchemaRocksDBSegmentedBytesStoreTest.java
+    (+10/-4)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - streams/src/test/java/org/apache/kafka/streams/state/internals/AbstractRocksDBSegmentedBytesStoreTest.java
+  description: 'modified: streams/src/test/java/org/apache/kafka/streams/state/internals/AbstractRocksDBSegmentedBytesStoreTest.java
+    (+10/-4)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - streams/src/test/java/org/apache/kafka/streams/state/internals/AbstractSessionBytesStoreTest.java
+  description: 'modified: streams/src/test/java/org/apache/kafka/streams/state/internals/AbstractSessionBytesStoreTest.java
+    (+10/-4)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - streams/src/test/java/org/apache/kafka/streams/state/internals/AbstractWindowBytesStoreTest.java
+  description: 'modified: streams/src/test/java/org/apache/kafka/streams/state/internals/AbstractWindowBytesStoreTest.java
+    (+10/-5)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - streams/src/test/java/org/apache/kafka/streams/state/internals/InMemorySessionStoreTest.java
+  description: 'modified: streams/src/test/java/org/apache/kafka/streams/state/internals/InMemorySessionStoreTest.java
+    (+44/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - streams/src/test/java/org/apache/kafka/streams/state/internals/InMemoryWindowStoreTest.java
+  description: 'modified: streams/src/test/java/org/apache/kafka/streams/state/internals/InMemoryWindowStoreTest.java
+    (+39/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 16
+notes: 'Mined from apache/kafka PR #23009. Trigger heuristic applied. Needs review.'

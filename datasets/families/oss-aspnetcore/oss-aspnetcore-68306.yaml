@@ -1,0 +1,91 @@
+id: oss-aspnetcore-68306
+title: Improve HTTP header parser recovery performance
+family: uncategorized
+date: '2026-08-11'
+author: javiercn
+source: github-api-mined
+source_repo: dotnet/aspnetcore
+source_url: https://github.com/dotnet/aspnetcore/pull/68306
+source_pr: 68306
+difficulty: medium
+trigger:
+  package: dotnet/aspnetcore
+  files:
+  - src/Http/Http/perf/Microbenchmarks/HeaderParserListBenchmarks.cs
+  intent: Improve HTTP header parser recovery performance
+  diff_summary: 'Primary: src/Http/Http/perf/Microbenchmarks/HeaderParserListBenchmarks.cs
+    (+59/-0)'
+consequences:
+- package: dotnet/aspnetcore
+  files:
+  - src/Http/Headers/src/BaseHeaderParser.cs
+  description: 'modified: src/Http/Headers/src/BaseHeaderParser.cs (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Http/Headers/src/MediaTypeHeaderValue.cs
+  description: 'modified: src/Http/Headers/src/MediaTypeHeaderValue.cs (+7/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Http/Headers/src/SetCookieHeaderValue.cs
+  description: 'modified: src/Http/Headers/src/SetCookieHeaderValue.cs (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Http/Headers/src/StringWithQualityHeaderValue.cs
+  description: 'modified: src/Http/Headers/src/StringWithQualityHeaderValue.cs (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Http/Headers/test/EntityTagHeaderValueTest.cs
+  description: 'modified: src/Http/Headers/test/EntityTagHeaderValueTest.cs (+15/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Http/Headers/test/MediaTypeHeaderValueTest.cs
+  description: 'modified: src/Http/Headers/test/MediaTypeHeaderValueTest.cs (+26/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Http/Headers/test/SetCookieHeaderValueTest.cs
+  description: 'modified: src/Http/Headers/test/SetCookieHeaderValueTest.cs (+13/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Http/Headers/test/StringWithQualityHeaderValueTest.cs
+  description: 'modified: src/Http/Headers/test/StringWithQualityHeaderValueTest.cs
+    (+13/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 9
+notes: 'Mined from dotnet/aspnetcore PR #68306. Trigger heuristic applied. Needs review.'

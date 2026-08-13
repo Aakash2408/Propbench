@@ -1,0 +1,87 @@
+id: oss-svelte-18400
+title: 'fix: abort deriveds own AbortSignal when it disconnects'
+family: bugfix
+date: '2026-07-14'
+author: gyzerok
+source: github-api-mined
+source_repo: sveltejs/svelte
+source_url: https://github.com/sveltejs/svelte/pull/18400
+source_pr: 18400
+difficulty: medium
+trigger:
+  package: sveltejs/svelte
+  files:
+  - packages/svelte/src/internal/client/reactivity/deriveds.js
+  intent: 'fix: abort deriveds own AbortSignal when it disconnects'
+  diff_summary: 'Primary: packages/svelte/src/internal/client/reactivity/deriveds.js
+    (+7/-2)'
+consequences:
+- package: sveltejs/svelte
+  files:
+  - .changeset/early-crabs-rest.md
+  description: 'added: .changeset/early-crabs-rest.md (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/src/internal/client/runtime.js
+  description: 'modified: packages/svelte/src/internal/client/runtime.js (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/tests/runtime-runes/samples/abort-signal-derived-destroy/Child.svelte
+  description: 'added: packages/svelte/tests/runtime-runes/samples/abort-signal-derived-destroy/Child.svelte
+    (+20/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/tests/runtime-runes/samples/abort-signal-derived-destroy/_config.js
+  description: 'added: packages/svelte/tests/runtime-runes/samples/abort-signal-derived-destroy/_config.js
+    (+14/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/tests/runtime-runes/samples/abort-signal-derived-destroy/main.svelte
+  description: 'added: packages/svelte/tests/runtime-runes/samples/abort-signal-derived-destroy/main.svelte
+    (+14/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/tests/runtime-runes/samples/abort-signal-derived-set-state/_config.js
+  description: 'modified: packages/svelte/tests/runtime-runes/samples/abort-signal-derived-set-state/_config.js
+    (+2/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/tests/runtime-runes/samples/abort-signal-derived-set-state/main.svelte
+  description: 'modified: packages/svelte/tests/runtime-runes/samples/abort-signal-derived-set-state/main.svelte
+    (+4/-4)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 8
+notes: 'Mined from sveltejs/svelte PR #18400. Trigger heuristic applied. Needs review.'

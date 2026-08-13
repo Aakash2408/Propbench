@@ -1,0 +1,121 @@
+id: oss-terraform-provider-aws-49284
+title: 'AutoFlex: Allow ignoring unhandled custom Flatteners'
+family: uncategorized
+date: '2026-08-05'
+author: gdavison
+source: github-api-mined
+source_repo: hashicorp/terraform-provider-aws
+source_url: https://github.com/hashicorp/terraform-provider-aws/pull/49284
+source_pr: 49284
+difficulty: medium
+trigger:
+  package: hashicorp/terraform-provider-aws
+  files:
+  - internal/framework/flex/testdata/autoflex/dispatch/flatten_interface/single_unmapped_interface_source_and_list_target.golden
+  intent: 'AutoFlex: Allow ignoring unhandled custom Flatteners'
+  diff_summary: 'Primary: internal/framework/flex/testdata/autoflex/dispatch/flatten_interface/single_unmapped_interface_source_and_list_target.golden
+    (+65/-0)'
+consequences:
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/framework/flex/autoflex_dispatch_test.go
+  description: 'modified: internal/framework/flex/autoflex_dispatch_test.go (+268/-60)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/framework/flex/autoflex_flatten.go
+  description: 'modified: internal/framework/flex/autoflex_flatten.go (+54/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/framework/flex/autoflex_special_types_test.go
+  description: 'modified: internal/framework/flex/autoflex_special_types_test.go (+3/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/framework/flex/autoflex_test.go
+  description: 'modified: internal/framework/flex/autoflex_test.go (+9/-9)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/framework/flex/testdata/autoflex/dispatch/flatten_interface/nil_interface_source_and_list_target.golden
+  description: 'modified: internal/framework/flex/testdata/autoflex/dispatch/flatten_interface/nil_interface_source_and_list_target.golden
+    (+9/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/framework/flex/testdata/autoflex/dispatch/flatten_interface/nil_interface_source_and_nested_object_target.golden
+  description: 'modified: internal/framework/flex/testdata/autoflex/dispatch/flatten_interface/nil_interface_source_and_nested_object_target.golden
+    (+9/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/framework/flex/testdata/autoflex/dispatch/flatten_interface/nil_interface_source_and_nonflattener_list_target.golden
+  description: 'modified: internal/framework/flex/testdata/autoflex/dispatch/flatten_interface/nil_interface_source_and_nonflattener_list_target.golden
+    (+9/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/framework/flex/testdata/autoflex/dispatch/flatten_interface/nil_interface_source_and_set_target.golden
+  description: 'modified: internal/framework/flex/testdata/autoflex/dispatch/flatten_interface/nil_interface_source_and_set_target.golden
+    (+9/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/framework/flex/testdata/autoflex/dispatch/flatten_interface/single_interface_source_and_nonflattener_list_target.golden
+  description: 'modified: internal/framework/flex/testdata/autoflex/dispatch/flatten_interface/single_interface_source_and_nonflattener_list_target.golden
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/framework/flex/testdata/autoflex/dispatch/flatten_interface/single_unmapped_interface_source_and_set_target.golden
+  description: 'added: internal/framework/flex/testdata/autoflex/dispatch/flatten_interface/single_unmapped_interface_source_and_set_target.golden
+    (+65/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/framework/types/list_nested_objectof.go
+  description: 'modified: internal/framework/types/list_nested_objectof.go (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 12
+notes: 'Mined from hashicorp/terraform-provider-aws PR #49284. Trigger heuristic applied.
+  Needs review.'

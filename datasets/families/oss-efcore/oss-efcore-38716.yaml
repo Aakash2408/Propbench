@@ -1,0 +1,60 @@
+id: oss-efcore-38716
+title: Update SQLitePCLRaw and SQLite3MC
+family: uncategorized
+date: '2026-07-30'
+author: Copilot
+source: github-api-mined
+source_repo: dotnet/efcore
+source_url: https://github.com/dotnet/efcore/pull/38716
+source_pr: 38716
+difficulty: medium
+trigger:
+  package: dotnet/efcore
+  files:
+  - eng/Versions.props
+  intent: Update SQLitePCLRaw and SQLite3MC
+  diff_summary: 'Primary: eng/Versions.props (+2/-2)'
+consequences:
+- package: dotnet/efcore
+  files:
+  - test/Directory.Packages.props
+  description: 'modified: test/Directory.Packages.props (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - test/Microsoft.Data.Sqlite.Tests/Microsoft.Data.Sqlite.Tests.csproj
+  description: 'modified: test/Microsoft.Data.Sqlite.Tests/Microsoft.Data.Sqlite.Tests.csproj
+    (+0/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - test/Microsoft.Data.Sqlite.Tests/Microsoft.Data.Sqlite.sqlite3mc.Tests.csproj
+  description: 'modified: test/Microsoft.Data.Sqlite.Tests/Microsoft.Data.Sqlite.sqlite3mc.Tests.csproj
+    (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - test/Microsoft.Data.Sqlite.Tests/Microsoft.Data.Sqlite.winsqlite3.Tests.csproj
+  description: 'modified: test/Microsoft.Data.Sqlite.Tests/Microsoft.Data.Sqlite.winsqlite3.Tests.csproj
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from dotnet/efcore PR #38716. Trigger heuristic applied. Needs review.'

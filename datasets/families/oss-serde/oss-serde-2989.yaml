@@ -1,0 +1,97 @@
+id: oss-serde-2989
+title: PR 2987 followup
+family: uncategorized
+date: '2025-09-25'
+author: dtolnay
+source: github-api-mined
+source_repo: serde-rs/serde
+source_url: https://github.com/serde-rs/serde/pull/2989
+source_pr: 2989
+difficulty: medium
+trigger:
+  package: serde-rs/serde
+  files:
+  - serde_derive/src/de.rs
+  intent: PR 2987 followup
+  diff_summary: 'Primary: serde_derive/src/de.rs (+14/-13)'
+consequences:
+- package: serde-rs/serde
+  files:
+  - serde_derive/src/de/enum_.rs
+  description: 'modified: serde_derive/src/de/enum_.rs (+8/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: serde-rs/serde
+  files:
+  - serde_derive/src/de/enum_adjacently.rs
+  description: 'modified: serde_derive/src/de/enum_adjacently.rs (+5/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: serde-rs/serde
+  files:
+  - serde_derive/src/de/enum_externally.rs
+  description: 'modified: serde_derive/src/de/enum_externally.rs (+6/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: serde-rs/serde
+  files:
+  - serde_derive/src/de/enum_internally.rs
+  description: 'modified: serde_derive/src/de/enum_internally.rs (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: serde-rs/serde
+  files:
+  - serde_derive/src/de/enum_untagged.rs
+  description: 'modified: serde_derive/src/de/enum_untagged.rs (+8/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: serde-rs/serde
+  files:
+  - serde_derive/src/de/identifier.rs
+  description: 'modified: serde_derive/src/de/identifier.rs (+6/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: serde-rs/serde
+  files:
+  - serde_derive/src/de/struct_.rs
+  description: 'modified: serde_derive/src/de/struct_.rs (+8/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: serde-rs/serde
+  files:
+  - serde_derive/src/de/tuple.rs
+  description: 'modified: serde_derive/src/de/tuple.rs (+6/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: serde-rs/serde
+  files:
+  - serde_derive/src/de/unit.rs
+  description: 'modified: serde_derive/src/de/unit.rs (+3/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 10
+notes: 'Mined from serde-rs/serde PR #2989. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,139 @@
+id: oss-framework-61080
+title: '[13.x] Move Testbench-based tests to tests/Integration'
+family: refactor
+date: '2026-08-07'
+author: lucasmichot
+source: github-api-mined
+source_repo: laravel/framework
+source_url: https://github.com/laravel/framework/pull/61080
+source_pr: 61080
+difficulty: medium
+trigger:
+  package: laravel/framework
+  files:
+  - tests/Integration/Log/ContextTest.php
+  intent: '[13.x] Move Testbench-based tests to tests/Integration'
+  diff_summary: 'Primary: tests/Integration/Log/ContextTest.php (+3/-3)'
+consequences:
+- package: laravel/framework
+  files:
+  - tests/Integration/Log/JsonFormatterTest.php
+  description: 'renamed: tests/Integration/Log/JsonFormatterTest.php (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - tests/Integration/Log/LogManagerTest.php
+  description: 'renamed: tests/Integration/Log/LogManagerTest.php (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - tests/Integration/Mail/MailFailoverTransportTest.php
+  description: 'renamed: tests/Integration/Mail/MailFailoverTransportTest.php (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - tests/Integration/Mail/MailLogTransportTest.php
+  description: 'renamed: tests/Integration/Mail/MailLogTransportTest.php (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - tests/Integration/Mail/MailManagerTest.php
+  description: 'renamed: tests/Integration/Mail/MailManagerTest.php (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - tests/Integration/Mail/MailRoundRobinTransportTest.php
+  description: 'renamed: tests/Integration/Mail/MailRoundRobinTransportTest.php (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - tests/Integration/Pipeline/PipelineTransactionTest.php
+  description: 'renamed: tests/Integration/Pipeline/PipelineTransactionTest.php (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - tests/Integration/Queue/FailOnExceptionMiddlewareTest.php
+  description: 'renamed: tests/Integration/Queue/FailOnExceptionMiddlewareTest.php
+    (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - tests/Integration/Queue/QueueDelayTest.php
+  description: 'renamed: tests/Integration/Queue/QueueDelayTest.php (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - tests/Integration/Queue/QueueSizeTest.php
+  description: 'renamed: tests/Integration/Queue/QueueSizeTest.php (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - tests/Integration/Support/StorageFacadeTest.php
+  description: 'renamed: tests/Integration/Support/StorageFacadeTest.php (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - tests/Integration/Support/SupportMailTest.php
+  description: 'renamed: tests/Integration/Support/SupportMailTest.php (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - tests/Integration/Support/SupportMaintenanceModeTest.php
+  description: 'renamed: tests/Integration/Support/SupportMaintenanceModeTest.php
+    (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - tests/Integration/View/ClearCommandTest.php
+  description: 'renamed: tests/Integration/View/ClearCommandTest.php (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 15
+notes: 'Mined from laravel/framework PR #61080. Trigger heuristic applied. Needs review.'

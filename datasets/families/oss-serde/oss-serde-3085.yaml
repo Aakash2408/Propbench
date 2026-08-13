@@ -1,0 +1,49 @@
+id: oss-serde-3085
+title: Update to syn 3
+family: uncategorized
+date: '2026-07-18'
+author: dtolnay
+source: github-api-mined
+source_repo: serde-rs/serde
+source_url: https://github.com/serde-rs/serde/pull/3085
+source_pr: 3085
+difficulty: medium
+trigger:
+  package: serde-rs/serde
+  files:
+  - serde_derive/src/bound.rs
+  intent: Update to syn 3
+  diff_summary: 'Primary: serde_derive/src/bound.rs (+11/-5)'
+consequences:
+- package: serde-rs/serde
+  files:
+  - Cargo.toml
+  description: 'modified: Cargo.toml (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: serde-rs/serde
+  files:
+  - serde_derive/src/internals/attr.rs
+  description: 'modified: serde_derive/src/internals/attr.rs (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: serde-rs/serde
+  files:
+  - serde_derive/src/internals/receiver.rs
+  description: 'modified: serde_derive/src/internals/receiver.rs (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from serde-rs/serde PR #3085. Trigger heuristic applied. Needs review.'

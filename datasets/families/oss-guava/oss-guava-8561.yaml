@@ -1,0 +1,54 @@
+id: oss-guava-8561
+title: Add safe bounded `toBigInteger()` and `toBigIntegerExact()` conversion helpers
+  in `BigDecimalMath`.
+family: interface-evolution
+date: '2026-07-17'
+author: copybara-service[bot]
+source: github-api-mined
+source_repo: google/guava
+source_url: https://github.com/google/guava/pull/8561
+source_pr: 8561
+difficulty: medium
+trigger:
+  package: google/guava
+  files:
+  - android/guava/src/com/google/common/math/BigDecimalMath.java
+  intent: Add safe bounded `toBigInteger()` and `toBigIntegerExact()` conversion helpers
+    in `BigDecimalMath`.
+  diff_summary: 'Primary: android/guava/src/com/google/common/math/BigDecimalMath.java
+    (+86/-0)'
+consequences:
+- package: google/guava
+  files:
+  - android/guava-tests/test/com/google/common/math/BigDecimalMathTest.java
+  description: 'modified: android/guava-tests/test/com/google/common/math/BigDecimalMathTest.java
+    (+96/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava-tests/test/com/google/common/math/BigDecimalMathTest.java
+  description: 'modified: guava-tests/test/com/google/common/math/BigDecimalMathTest.java
+    (+96/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava/src/com/google/common/math/BigDecimalMath.java
+  description: 'modified: guava/src/com/google/common/math/BigDecimalMath.java (+86/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from google/guava PR #8561. Trigger heuristic applied. Needs review.'

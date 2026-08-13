@@ -1,0 +1,135 @@
+id: oss-kafka-22777
+title: 'KAFKA-20748: Keep StoredDescriptionTopologyEpoch consistent with the topology
+  description plugin'
+family: uncategorized
+date: '2026-07-14'
+author: aliehsaeedii
+source: github-api-mined
+source_repo: apache/kafka
+source_url: https://github.com/apache/kafka/pull/22777
+source_pr: 22777
+difficulty: medium
+trigger:
+  package: apache/kafka
+  files:
+  - group-coordinator/src/main/java/org/apache/kafka/coordinator/group/GroupCoordinatorService.java
+  intent: 'KAFKA-20748: Keep StoredDescriptionTopologyEpoch consistent with the topology
+    description plugin'
+  diff_summary: 'Primary: group-coordinator/src/main/java/org/apache/kafka/coordinator/group/GroupCoordinatorService.java
+    (+288/-91)'
+consequences:
+- package: apache/kafka
+  files:
+  - checkstyle/suppressions.xml
+  description: 'modified: checkstyle/suppressions.xml (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - group-coordinator/src/main/java/org/apache/kafka/coordinator/group/GroupCoordinatorShard.java
+  description: 'modified: group-coordinator/src/main/java/org/apache/kafka/coordinator/group/GroupCoordinatorShard.java
+    (+42/-40)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - group-coordinator/src/main/java/org/apache/kafka/coordinator/group/GroupMetadataManager.java
+  description: 'modified: group-coordinator/src/main/java/org/apache/kafka/coordinator/group/GroupMetadataManager.java
+    (+171/-25)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - group-coordinator/src/main/java/org/apache/kafka/coordinator/group/streams/StreamsGroup.java
+  description: 'modified: group-coordinator/src/main/java/org/apache/kafka/coordinator/group/streams/StreamsGroup.java
+    (+33/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - group-coordinator/src/main/java/org/apache/kafka/coordinator/group/streams/StreamsGroupTopologyDescriptionManager.java
+  description: 'modified: group-coordinator/src/main/java/org/apache/kafka/coordinator/group/streams/StreamsGroupTopologyDescriptionManager.java
+    (+26/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - group-coordinator/src/main/resources/common/message/StreamsGroupMetadataValue.json
+  description: 'modified: group-coordinator/src/main/resources/common/message/StreamsGroupMetadataValue.json
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - group-coordinator/src/test/java/org/apache/kafka/coordinator/group/GroupCoordinatorServiceTest.java
+  description: 'modified: group-coordinator/src/test/java/org/apache/kafka/coordinator/group/GroupCoordinatorServiceTest.java
+    (+1/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - group-coordinator/src/test/java/org/apache/kafka/coordinator/group/GroupCoordinatorServiceTopologyDescriptionTest.java
+  description: 'modified: group-coordinator/src/test/java/org/apache/kafka/coordinator/group/GroupCoordinatorServiceTopologyDescriptionTest.java
+    (+621/-46)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - group-coordinator/src/test/java/org/apache/kafka/coordinator/group/GroupCoordinatorShardTest.java
+  description: 'modified: group-coordinator/src/test/java/org/apache/kafka/coordinator/group/GroupCoordinatorShardTest.java
+    (+55/-45)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - group-coordinator/src/test/java/org/apache/kafka/coordinator/group/GroupMetadataManagerTest.java
+  description: 'modified: group-coordinator/src/test/java/org/apache/kafka/coordinator/group/GroupMetadataManagerTest.java
+    (+386/-29)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - group-coordinator/src/test/java/org/apache/kafka/coordinator/group/GroupMetadataManagerTestContext.java
+  description: 'modified: group-coordinator/src/test/java/org/apache/kafka/coordinator/group/GroupMetadataManagerTestContext.java
+    (+16/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - group-coordinator/src/test/java/org/apache/kafka/coordinator/group/streams/StreamsGroupTest.java
+  description: 'modified: group-coordinator/src/test/java/org/apache/kafka/coordinator/group/streams/StreamsGroupTest.java
+    (+12/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 13
+notes: 'Mined from apache/kafka PR #22777. Trigger heuristic applied. Needs review.'

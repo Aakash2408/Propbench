@@ -1,0 +1,114 @@
+id: oss-framework-61093
+title: '[13.x] Prefer consitent assertions'
+family: interface-evolution
+date: '2026-08-07'
+author: lucasmichot
+source: github-api-mined
+source_repo: laravel/framework
+source_url: https://github.com/laravel/framework/pull/61093
+source_pr: 61093
+difficulty: medium
+trigger:
+  package: laravel/framework
+  files:
+  - tests/Integration/Migration/MigratorTest.php
+  intent: '[13.x] Prefer consitent assertions'
+  diff_summary: 'Primary: tests/Integration/Migration/MigratorTest.php (+4/-4)'
+consequences:
+- package: laravel/framework
+  files:
+  - tests/Cache/CacheDynamoDbStoreTest.php
+  description: 'modified: tests/Cache/CacheDynamoDbStoreTest.php (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - tests/Database/DatabaseConcernsHasAttributesTest.php
+  description: 'modified: tests/Database/DatabaseConcernsHasAttributesTest.php (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - tests/Database/DatabaseEloquentModelTest.php
+  description: 'modified: tests/Database/DatabaseEloquentModelTest.php (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - tests/Http/HttpRequestTest.php
+  description: 'modified: tests/Http/HttpRequestTest.php (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - tests/Http/JsonResourceTest.php
+  description: 'modified: tests/Http/JsonResourceTest.php (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - tests/Image/ImageManagerTest.php
+  description: 'modified: tests/Image/ImageManagerTest.php (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - tests/Integration/Database/EloquentUniqueStringPrimaryKeysTest.php
+  description: 'modified: tests/Integration/Database/EloquentUniqueStringPrimaryKeysTest.php
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - tests/Integration/Database/SchemaBuilderTest.php
+  description: 'modified: tests/Integration/Database/SchemaBuilderTest.php (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - tests/Integration/Queue/DebouncedJobTest.php
+  description: 'modified: tests/Integration/Queue/DebouncedJobTest.php (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - tests/Process/ProcessTest.php
+  description: 'modified: tests/Process/ProcessTest.php (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - tests/Support/SupportStrTest.php
+  description: 'modified: tests/Support/SupportStrTest.php (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 12
+notes: 'Mined from laravel/framework PR #61093. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,74 @@
+id: oss-prometheus-19357
+title: 'fix(deps): update module github.com/moby/moby/client to v0.5.1'
+family: dependency-evolution
+date: '2026-08-10'
+author: renovate[bot]
+source: github-api-mined
+source_repo: prometheus/prometheus
+source_url: https://github.com/prometheus/prometheus/pull/19357
+source_pr: 19357
+difficulty: medium
+trigger:
+  package: prometheus/prometheus
+  files:
+  - go.mod
+  intent: 'fix(deps): update module github.com/moby/moby/client to v0.5.1'
+  diff_summary: 'Primary: go.mod (+2/-2)'
+consequences:
+- package: prometheus/prometheus
+  files:
+  - compliance/go.mod
+  description: 'modified: compliance/go.mod (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prometheus/prometheus
+  files:
+  - documentation/examples/remote_storage/go.mod
+  description: 'modified: documentation/examples/remote_storage/go.mod (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prometheus/prometheus
+  files:
+  - go.sum
+  description: 'modified: go.sum (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prometheus/prometheus
+  files:
+  - go.work
+  description: 'modified: go.work (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prometheus/prometheus
+  files:
+  - internal/tools/go.mod
+  description: 'modified: internal/tools/go.mod (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prometheus/prometheus
+  files:
+  - web/ui/mantine-ui/src/promql/tools/go.mod
+  description: 'modified: web/ui/mantine-ui/src/promql/tools/go.mod (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from prometheus/prometheus PR #19357. Trigger heuristic applied. Needs
+  review.'

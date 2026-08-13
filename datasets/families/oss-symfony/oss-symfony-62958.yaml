@@ -1,0 +1,158 @@
+id: oss-symfony-62958
+title: '[Webhook] Add timestamp header and Standard Webhooks signature support'
+family: interface-evolution
+date: '2026-08-11'
+author: qdequippe
+source: github-api-mined
+source_repo: symfony/symfony
+source_url: https://github.com/symfony/symfony/pull/62958
+source_pr: 62958
+difficulty: medium
+trigger:
+  package: symfony/symfony
+  files:
+  - src/Symfony/Component/Webhook/Client/RequestParser.php
+  intent: '[Webhook] Add timestamp header and Standard Webhooks signature support'
+  diff_summary: 'Primary: src/Symfony/Component/Webhook/Client/RequestParser.php (+73/-10)'
+consequences:
+- package: symfony/symfony
+  files:
+  - src/Symfony/Bundle/FrameworkBundle/DependencyInjection/Configuration.php
+  description: 'modified: src/Symfony/Bundle/FrameworkBundle/DependencyInjection/Configuration.php
+    (+11/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Bundle/FrameworkBundle/DependencyInjection/FrameworkExtension.php
+  description: 'modified: src/Symfony/Bundle/FrameworkBundle/DependencyInjection/FrameworkExtension.php
+    (+22/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Bundle/FrameworkBundle/Resources/config/webhook.php
+  description: 'modified: src/Symfony/Bundle/FrameworkBundle/Resources/config/webhook.php
+    (+10/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Bundle/FrameworkBundle/Tests/DependencyInjection/ConfigurationTest.php
+  description: 'modified: src/Symfony/Bundle/FrameworkBundle/Tests/DependencyInjection/ConfigurationTest.php
+    (+3/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Bundle/FrameworkBundle/Tests/DependencyInjection/FrameworkExtensionTestCase.php
+  description: 'modified: src/Symfony/Bundle/FrameworkBundle/Tests/DependencyInjection/FrameworkExtensionTestCase.php
+    (+57/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Webhook/Server/HeaderSignatureConfigurator.php
+  description: 'modified: src/Symfony/Component/Webhook/Server/HeaderSignatureConfigurator.php
+    (+18/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Webhook/Server/HeadersConfigurator.php
+  description: 'modified: src/Symfony/Component/Webhook/Server/HeadersConfigurator.php
+    (+15/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Webhook/Server/JsonBodyConfigurator.php
+  description: 'modified: src/Symfony/Component/Webhook/Server/JsonBodyConfigurator.php
+    (+14/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Webhook/Server/SignatureFormat.php
+  description: 'added: src/Symfony/Component/Webhook/Server/SignatureFormat.php (+43/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Webhook/StandardWebhooksSignature.php
+  description: 'added: src/Symfony/Component/Webhook/StandardWebhooksSignature.php
+    (+41/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Webhook/Tests/Client/RequestParserTest.php
+  description: 'modified: src/Symfony/Component/Webhook/Tests/Client/RequestParserTest.php
+    (+264/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Webhook/Tests/Server/HeaderSignatureConfiguratorTest.php
+  description: 'added: src/Symfony/Component/Webhook/Tests/Server/HeaderSignatureConfiguratorTest.php
+    (+99/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Webhook/Tests/Server/HeadersConfiguratorTest.php
+  description: 'added: src/Symfony/Component/Webhook/Tests/Server/HeadersConfiguratorTest.php
+    (+66/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Webhook/Tests/SignatureRoundTripTest.php
+  description: 'added: src/Symfony/Component/Webhook/Tests/SignatureRoundTripTest.php
+    (+125/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Webhook/composer.json
+  description: 'modified: src/Symfony/Component/Webhook/composer.json (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 16
+notes: 'Mined from symfony/symfony PR #62958. Trigger heuristic applied. Needs review.'

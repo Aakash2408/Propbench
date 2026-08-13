@@ -1,0 +1,41 @@
+id: oss-devise-5822
+title: Only downcase first letter of each auth key, not the entire string
+family: uncategorized
+date: '2026-02-13'
+author: carlosantoniodasilva
+source: github-api-mined
+source_repo: heartcombo/devise
+source_url: https://github.com/heartcombo/devise/pull/5822
+source_pr: 5822
+difficulty: medium
+trigger:
+  package: heartcombo/devise
+  files:
+  - test/support/locale/de.yml
+  intent: Only downcase first letter of each auth key, not the entire string
+  diff_summary: 'Primary: test/support/locale/de.yml (+12/-0)'
+consequences:
+- package: heartcombo/devise
+  files:
+  - lib/devise/failure_app.rb
+  description: 'modified: lib/devise/failure_app.rb (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - test/failure_app_test.rb
+  description: 'modified: test/failure_app_test.rb (+5/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from heartcombo/devise PR #5822. Trigger heuristic applied. Needs review.'

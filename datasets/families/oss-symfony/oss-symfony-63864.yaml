@@ -1,0 +1,152 @@
+id: oss-symfony-63864
+title: '[PropertyInfo][Serializer] Enable using `#[WithAccessors]` with the serializer'
+family: uncategorized
+date: '2026-08-11'
+author: HypeMC
+source: github-api-mined
+source_repo: symfony/symfony
+source_url: https://github.com/symfony/symfony/pull/63864
+source_pr: 63864
+difficulty: medium
+trigger:
+  package: symfony/symfony
+  files:
+  - src/Symfony/Component/PropertyInfo/Extractor/ReflectionExtractor.php
+  intent: '[PropertyInfo][Serializer] Enable using `#[WithAccessors]` with the serializer'
+  diff_summary: 'Primary: src/Symfony/Component/PropertyInfo/Extractor/ReflectionExtractor.php
+    (+47/-16)'
+consequences:
+- package: symfony/symfony
+  files:
+  - src/Symfony/Bundle/FrameworkBundle/DependencyInjection/Compiler/UnusedTagsPass.php
+  description: 'modified: src/Symfony/Bundle/FrameworkBundle/DependencyInjection/Compiler/UnusedTagsPass.php
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Bundle/FrameworkBundle/Resources/config/property_info.php
+  description: 'modified: src/Symfony/Bundle/FrameworkBundle/Resources/config/property_info.php
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/PropertyInfo/DependencyInjection/PropertyInfoPass.php
+  description: 'modified: src/Symfony/Component/PropertyInfo/DependencyInjection/PropertyInfoPass.php
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/PropertyInfo/PropertyInfoCacheExtractor.php
+  description: 'modified: src/Symfony/Component/PropertyInfo/PropertyInfoCacheExtractor.php
+    (+6/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/PropertyInfo/PropertyInfoExtractor.php
+  description: 'modified: src/Symfony/Component/PropertyInfo/PropertyInfoExtractor.php
+    (+8/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/PropertyInfo/PropertyNameExtractorInterface.php
+  description: 'added: src/Symfony/Component/PropertyInfo/PropertyNameExtractorInterface.php
+    (+20/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/PropertyInfo/Tests/AbstractPropertyInfoExtractorTest.php
+  description: 'modified: src/Symfony/Component/PropertyInfo/Tests/AbstractPropertyInfoExtractorTest.php
+    (+8/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/PropertyInfo/Tests/Extractor/ReflectionExtractorTest.php
+  description: 'modified: src/Symfony/Component/PropertyInfo/Tests/Extractor/ReflectionExtractorTest.php
+    (+62/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/PropertyInfo/Tests/Fixtures/DummyExtractor.php
+  description: 'modified: src/Symfony/Component/PropertyInfo/Tests/Fixtures/DummyExtractor.php
+    (+7/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/PropertyInfo/Tests/Fixtures/FalseAccessorDummy.php
+  description: 'added: src/Symfony/Component/PropertyInfo/Tests/Fixtures/FalseAccessorDummy.php
+    (+49/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/PropertyInfo/Tests/Fixtures/NullExtractor.php
+  description: 'modified: src/Symfony/Component/PropertyInfo/Tests/Fixtures/NullExtractor.php
+    (+7/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Serializer/Normalizer/ObjectNormalizer.php
+  description: 'modified: src/Symfony/Component/Serializer/Normalizer/ObjectNormalizer.php
+    (+6/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Serializer/Tests/Fixtures/ContainingWithAccessorsDummy.php
+  description: 'added: src/Symfony/Component/Serializer/Tests/Fixtures/ContainingWithAccessorsDummy.php
+    (+58/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Serializer/Tests/Normalizer/ObjectNormalizerTest.php
+  description: 'modified: src/Symfony/Component/Serializer/Tests/Normalizer/ObjectNormalizerTest.php
+    (+76/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 15
+notes: 'Mined from symfony/symfony PR #63864. Trigger heuristic applied. Needs review.'

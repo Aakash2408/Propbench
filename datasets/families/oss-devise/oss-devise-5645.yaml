@@ -1,0 +1,49 @@
+id: oss-devise-5645
+title: Removed now obsolete SecretKeyFinder
+family: refactor
+date: '2024-10-22'
+author: BroiSatse
+source: github-api-mined
+source_repo: heartcombo/devise
+source_url: https://github.com/heartcombo/devise/pull/5645
+source_pr: 5645
+difficulty: medium
+trigger:
+  package: heartcombo/devise
+  files:
+  - lib/devise/secret_key_finder.rb
+  intent: Removed now obsolete SecretKeyFinder
+  diff_summary: 'Primary: lib/devise/secret_key_finder.rb (+0/-27)'
+consequences:
+- package: heartcombo/devise
+  files:
+  - lib/devise.rb
+  description: 'modified: lib/devise.rb (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - lib/devise/rails.rb
+  description: 'modified: lib/devise/rails.rb (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - test/secret_key_finder_test.rb
+  description: 'removed: test/secret_key_finder_test.rb (+0/-121)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from heartcombo/devise PR #5645. Trigger heuristic applied. Needs review.'

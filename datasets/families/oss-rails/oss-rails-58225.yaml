@@ -1,0 +1,49 @@
+id: oss-rails-58225
+title: Make lazy route loading thread-safe
+family: uncategorized
+date: '2026-07-24'
+author: grk
+source: github-api-mined
+source_repo: rails/rails
+source_url: https://github.com/rails/rails/pull/58225
+source_pr: 58225
+difficulty: medium
+trigger:
+  package: rails/rails
+  files:
+  - railties/lib/rails/application/routes_reloader.rb
+  intent: Make lazy route loading thread-safe
+  diff_summary: 'Primary: railties/lib/rails/application/routes_reloader.rb (+31/-11)'
+consequences:
+- package: rails/rails
+  files:
+  - railties/lib/rails/application.rb
+  description: 'modified: railties/lib/rails/application.rb (+1/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - railties/test/application/routes_reloader_test.rb
+  description: 'added: railties/test/application/routes_reloader_test.rb (+41/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - railties/test/engine/lazy_route_set_test.rb
+  description: 'modified: railties/test/engine/lazy_route_set_test.rb (+80/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from rails/rails PR #58225. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,59 @@
+id: oss-trpc-7303
+title: 'feat: Add subscription inferrence helpers'
+family: interface-evolution
+date: '2026-03-29'
+author: Nick-Lucas
+source: github-api-mined
+source_repo: trpc/trpc
+source_url: https://github.com/trpc/trpc/pull/7303
+source_pr: 7303
+difficulty: medium
+trigger:
+  package: trpc/trpc
+  files:
+  - www/docs/client/vanilla/infer-types.md
+  intent: 'feat: Add subscription inferrence helpers'
+  diff_summary: 'Primary: www/docs/client/vanilla/infer-types.md (+54/-0)'
+consequences:
+- package: trpc/trpc
+  files:
+  - packages/server/src/@trpc/server/index.ts
+  description: 'modified: packages/server/src/@trpc/server/index.ts (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: trpc/trpc
+  files:
+  - packages/server/src/unstable-core-do-not-import/clientish/inference.ts
+  description: 'modified: packages/server/src/unstable-core-do-not-import/clientish/inference.ts
+    (+1/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: trpc/trpc
+  files:
+  - packages/server/src/unstable-core-do-not-import/procedure.ts
+  description: 'modified: packages/server/src/unstable-core-do-not-import/procedure.ts
+    (+12/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: trpc/trpc
+  files:
+  - packages/tests/server/inferenceHelpers.test.ts
+  description: 'modified: packages/tests/server/inferenceHelpers.test.ts (+94/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from trpc/trpc PR #7303. Trigger heuristic applied. Needs review.'

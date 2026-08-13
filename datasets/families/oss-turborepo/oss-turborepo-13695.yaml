@@ -1,0 +1,57 @@
+id: oss-turborepo-13695
+title: 'fix: Prevent Windows process cleanup PID reuse'
+family: bugfix
+date: '2026-08-07'
+author: anthonyshew
+source: github-api-mined
+source_repo: vercel/turborepo
+source_url: https://github.com/vercel/turborepo/pull/13695
+source_pr: 13695
+difficulty: medium
+trigger:
+  package: vercel/turborepo
+  files:
+  - crates/turborepo-process/src/job_object.rs
+  intent: 'fix: Prevent Windows process cleanup PID reuse'
+  diff_summary: 'Primary: crates/turborepo-process/src/job_object.rs (+173/-29)'
+consequences:
+- package: vercel/turborepo
+  files:
+  - crates/turborepo-process/src/child.rs
+  description: 'modified: crates/turborepo-process/src/child.rs (+12/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - crates/turborepo-process/src/child/handle.rs
+  description: 'modified: crates/turborepo-process/src/child/handle.rs (+44/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - crates/turborepo-process/src/lib.rs
+  description: 'modified: crates/turborepo-process/src/lib.rs (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - crates/turborepo-process/src/process_tree.rs
+  description: 'added: crates/turborepo-process/src/process_tree.rs (+191/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from vercel/turborepo PR #13695. Trigger heuristic applied. Needs review.'

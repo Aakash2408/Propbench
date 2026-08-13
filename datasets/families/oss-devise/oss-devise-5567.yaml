@@ -1,0 +1,89 @@
+id: oss-devise-5567
+title: Respect locale set by controller in the failure app
+family: uncategorized
+date: '2023-10-13'
+author: carlosantoniodasilva
+source: github-api-mined
+source_repo: heartcombo/devise
+source_url: https://github.com/heartcombo/devise/pull/5567
+source_pr: 5567
+difficulty: medium
+trigger:
+  package: heartcombo/devise
+  files:
+  - lib/devise/failure_app.rb
+  intent: Respect locale set by controller in the failure app
+  diff_summary: 'Primary: lib/devise/failure_app.rb (+10/-1)'
+consequences:
+- package: heartcombo/devise
+  files:
+  - app/controllers/devise/sessions_controller.rb
+  description: 'modified: app/controllers/devise/sessions_controller.rb (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - lib/devise/controllers/helpers.rb
+  description: 'modified: lib/devise/controllers/helpers.rb (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - test/controllers/helpers_test.rb
+  description: 'modified: test/controllers/helpers_test.rb (+5/-5)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - test/failure_app_test.rb
+  description: 'modified: test/failure_app_test.rb (+26/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - test/integration/authenticatable_test.rb
+  description: 'modified: test/integration/authenticatable_test.rb (+9/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - test/rails_app/app/controllers/admins_controller.rb
+  description: 'modified: test/rails_app/app/controllers/admins_controller.rb (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - test/support/locale/pt-BR.yml
+  description: 'added: test/support/locale/pt-BR.yml (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - test/test_helper.rb
+  description: 'modified: test/test_helper.rb (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 9
+notes: 'Mined from heartcombo/devise PR #5567. Trigger heuristic applied. Needs review.'

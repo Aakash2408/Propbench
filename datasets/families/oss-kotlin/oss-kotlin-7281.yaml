@@ -1,0 +1,179 @@
+id: oss-kotlin-7281
+title: '[Tests][PL] Add PL tests for references with context parameters'
+family: interface-evolution
+date: '2026-08-12'
+author: mpiekutowski
+source: github-api-mined
+source_repo: JetBrains/kotlin
+source_url: https://github.com/JetBrains/kotlin/pull/7281
+source_pr: 7281
+difficulty: medium
+trigger:
+  package: JetBrains/kotlin
+  files:
+  - compiler/testData/klib/partial-linkage/referenceOperationsContextParameters/main/m.kt
+  intent: '[Tests][PL] Add PL tests for references with context parameters'
+  diff_summary: 'Primary: compiler/testData/klib/partial-linkage/referenceOperationsContextParameters/main/m.kt
+    (+109/-0)'
+consequences:
+- package: JetBrains/kotlin
+  files:
+  - compiler/testData/klib/partial-linkage/referenceOperations/main/m.kt
+  description: 'modified: compiler/testData/klib/partial-linkage/referenceOperations/main/m.kt
+    (+37/-12)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/testData/klib/partial-linkage/referenceOperations/project.info
+  description: 'modified: compiler/testData/klib/partial-linkage/referenceOperations/project.info
+    (+0/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/testData/klib/partial-linkage/referenceOperationsContextParameters/lib1/l1.kt
+  description: 'added: compiler/testData/klib/partial-linkage/referenceOperationsContextParameters/lib1/l1.kt
+    (+69/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/testData/klib/partial-linkage/referenceOperationsContextParameters/lib1/l1.kt.1
+  description: 'added: compiler/testData/klib/partial-linkage/referenceOperationsContextParameters/lib1/l1.kt.1
+    (+70/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/testData/klib/partial-linkage/referenceOperationsContextParameters/lib1/module.info
+  description: 'added: compiler/testData/klib/partial-linkage/referenceOperationsContextParameters/lib1/module.info
+    (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/testData/klib/partial-linkage/referenceOperationsContextParameters/lib2/l2.kt
+  description: 'added: compiler/testData/klib/partial-linkage/referenceOperationsContextParameters/lib2/l2.kt
+    (+95/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/testData/klib/partial-linkage/referenceOperationsContextParameters/lib2/module.info
+  description: 'added: compiler/testData/klib/partial-linkage/referenceOperationsContextParameters/lib2/module.info
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/testData/klib/partial-linkage/referenceOperationsContextParameters/main/module.info
+  description: 'added: compiler/testData/klib/partial-linkage/referenceOperationsContextParameters/main/module.info
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/testData/klib/partial-linkage/referenceOperationsContextParameters/project.info
+  description: 'added: compiler/testData/klib/partial-linkage/referenceOperationsContextParameters/project.info
+    (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/testData/klib/partial-linkage/referenceOperationsContextParametersNative/lib1/l1.kt
+  description: 'added: compiler/testData/klib/partial-linkage/referenceOperationsContextParametersNative/lib1/l1.kt
+    (+16/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/testData/klib/partial-linkage/referenceOperationsContextParametersNative/lib1/l1.kt.1
+  description: 'added: compiler/testData/klib/partial-linkage/referenceOperationsContextParametersNative/lib1/l1.kt.1
+    (+16/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/testData/klib/partial-linkage/referenceOperationsContextParametersNative/lib1/module.info
+  description: 'added: compiler/testData/klib/partial-linkage/referenceOperationsContextParametersNative/lib1/module.info
+    (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/testData/klib/partial-linkage/referenceOperationsContextParametersNative/lib2/l2.kt
+  description: 'added: compiler/testData/klib/partial-linkage/referenceOperationsContextParametersNative/lib2/l2.kt
+    (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/testData/klib/partial-linkage/referenceOperationsContextParametersNative/lib2/module.info
+  description: 'added: compiler/testData/klib/partial-linkage/referenceOperationsContextParametersNative/lib2/module.info
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/testData/klib/partial-linkage/referenceOperationsContextParametersNative/main/m.kt
+  description: 'added: compiler/testData/klib/partial-linkage/referenceOperationsContextParametersNative/main/m.kt
+    (+9/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/testData/klib/partial-linkage/referenceOperationsContextParametersNative/main/module.info
+  description: 'added: compiler/testData/klib/partial-linkage/referenceOperationsContextParametersNative/main/module.info
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/testData/klib/partial-linkage/referenceOperationsContextParametersNative/project.info
+  description: 'added: compiler/testData/klib/partial-linkage/referenceOperationsContextParametersNative/project.info
+    (+9/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 18
+notes: 'Mined from JetBrains/kotlin PR #7281. Trigger heuristic applied. Needs review.'

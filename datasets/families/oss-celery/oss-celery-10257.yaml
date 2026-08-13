@@ -1,0 +1,41 @@
+id: oss-celery-10257
+title: Preserve exception cause when re-raising in a few spots
+family: uncategorized
+date: '2026-07-09'
+author: tejas-ae
+source: github-api-mined
+source_repo: celery/celery
+source_url: https://github.com/celery/celery/pull/10257
+source_pr: 10257
+difficulty: medium
+trigger:
+  package: celery/celery
+  files:
+  - celery/backends/mongodb.py
+  intent: Preserve exception cause when re-raising in a few spots
+  diff_summary: 'Primary: celery/backends/mongodb.py (+1/-1)'
+consequences:
+- package: celery/celery
+  files:
+  - celery/bootsteps.py
+  description: 'modified: celery/bootsteps.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: celery/celery
+  files:
+  - celery/loaders/base.py
+  description: 'modified: celery/loaders/base.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from celery/celery PR #10257. Trigger heuristic applied. Needs review.'

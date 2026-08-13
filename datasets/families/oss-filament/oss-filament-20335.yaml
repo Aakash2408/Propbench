@@ -1,0 +1,54 @@
+id: oss-filament-20335
+title: 'fix: Cache used MFA codes using hash of secret rather than secret and code'
+family: bugfix
+date: '2026-08-05'
+author: danharrin
+source: github-api-mined
+source_repo: filamentphp/filament
+source_url: https://github.com/filamentphp/filament/pull/20335
+source_pr: 20335
+difficulty: medium
+trigger:
+  package: filamentphp/filament
+  files:
+  - packages/panels/src/Auth/MultiFactor/App/AppAuthentication.php
+  intent: 'fix: Cache used MFA codes using hash of secret rather than secret and code'
+  diff_summary: 'Primary: packages/panels/src/Auth/MultiFactor/App/AppAuthentication.php
+    (+21/-5)'
+consequences:
+- package: filamentphp/filament
+  files:
+  - packages/panels/src/Auth/MultiFactor/App/Actions/DisableAppAuthenticationAction.php
+  description: 'modified: packages/panels/src/Auth/MultiFactor/App/Actions/DisableAppAuthenticationAction.php
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: filamentphp/filament
+  files:
+  - packages/panels/src/Auth/MultiFactor/App/Actions/RegenerateAppAuthenticationRecoveryCodesAction.php
+  description: 'modified: packages/panels/src/Auth/MultiFactor/App/Actions/RegenerateAppAuthenticationRecoveryCodesAction.php
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: filamentphp/filament
+  files:
+  - tests/src/Panels/Auth/MultiFactor/App/AppAuthenticationChallengeTest.php
+  description: 'modified: tests/src/Panels/Auth/MultiFactor/App/AppAuthenticationChallengeTest.php
+    (+127/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from filamentphp/filament PR #20335. Trigger heuristic applied. Needs
+  review.'

@@ -1,0 +1,94 @@
+id: oss-aspnetcore-68250
+title: Support nullable array element types in parameter schemas
+family: interface-evolution
+date: '2026-08-10'
+author: snemeckayova
+source: github-api-mined
+source_repo: dotnet/aspnetcore
+source_url: https://github.com/dotnet/aspnetcore/pull/68250
+source_pr: 68250
+difficulty: medium
+trigger:
+  package: dotnet/aspnetcore
+  files:
+  - src/OpenApi/src/Extensions/OpenApiSchemaExtensions.cs
+  intent: Support nullable array element types in parameter schemas
+  diff_summary: 'Primary: src/OpenApi/src/Extensions/OpenApiSchemaExtensions.cs (+17/-0)'
+consequences:
+- package: dotnet/aspnetcore
+  files:
+  - src/OpenApi/sample/Endpoints/MapSchemasEndpoints.cs
+  description: 'modified: src/OpenApi/sample/Endpoints/MapSchemasEndpoints.cs (+13/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/OpenApi/src/Extensions/TypeExtensions.cs
+  description: 'modified: src/OpenApi/src/Extensions/TypeExtensions.cs (+13/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/OpenApi/src/Services/OpenApiDocumentService.cs
+  description: 'modified: src/OpenApi/src/Services/OpenApiDocumentService.cs (+14/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/OpenApi/test/Microsoft.AspNetCore.OpenApi.Tests/Integration/snapshots/OpenApi3_0/OpenApiDocumentIntegrationTests.VerifyOpenApiDocument_documentName=schemas-by-ref.verified.txt
+  description: 'modified: src/OpenApi/test/Microsoft.AspNetCore.OpenApi.Tests/Integration/snapshots/OpenApi3_0/OpenApiDocumentIntegrationTests.VerifyOpenApiDocument_documentName=schemas-by-ref.verified.txt
+    (+84/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/OpenApi/test/Microsoft.AspNetCore.OpenApi.Tests/Integration/snapshots/OpenApi3_1/OpenApiDocumentIntegrationTests.VerifyOpenApiDocument_documentName=schemas-by-ref.verified.txt
+  description: 'modified: src/OpenApi/test/Microsoft.AspNetCore.OpenApi.Tests/Integration/snapshots/OpenApi3_1/OpenApiDocumentIntegrationTests.VerifyOpenApiDocument_documentName=schemas-by-ref.verified.txt
+    (+82/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/OpenApi/test/Microsoft.AspNetCore.OpenApi.Tests/Integration/snapshots/OpenApi3_2/OpenApiDocumentIntegrationTests.VerifyOpenApiDocument_documentName=schemas-by-ref.verified.txt
+  description: 'modified: src/OpenApi/test/Microsoft.AspNetCore.OpenApi.Tests/Integration/snapshots/OpenApi3_2/OpenApiDocumentIntegrationTests.VerifyOpenApiDocument_documentName=schemas-by-ref.verified.txt
+    (+82/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/OpenApi/test/Microsoft.AspNetCore.OpenApi.Tests/Integration/snapshots/OpenApiDocumentLocalizationTests.VerifyOpenApiDocumentIsInvariant.verified.txt
+  description: 'modified: src/OpenApi/test/Microsoft.AspNetCore.OpenApi.Tests/Integration/snapshots/OpenApiDocumentLocalizationTests.VerifyOpenApiDocumentIsInvariant.verified.txt
+    (+82/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/OpenApi/test/Microsoft.AspNetCore.OpenApi.Tests/Services/OpenApiSchemaService/OpenApiSchemaService.ParameterSchemas.cs
+  description: 'modified: src/OpenApi/test/Microsoft.AspNetCore.OpenApi.Tests/Services/OpenApiSchemaService/OpenApiSchemaService.ParameterSchemas.cs
+    (+1/-4)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 9
+notes: 'Mined from dotnet/aspnetcore PR #68250. Trigger heuristic applied. Needs review.'

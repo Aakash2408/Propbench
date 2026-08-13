@@ -1,0 +1,63 @@
+id: oss-elasticsearch-156576
+title: More keyhole ASH optimizations
+family: uncategorized
+date: '2026-08-13'
+author: thecoop
+source: github-api-mined
+source_repo: elastic/elasticsearch
+source_url: https://github.com/elastic/elasticsearch/pull/156576
+source_pr: 156576
+difficulty: medium
+trigger:
+  package: elastic/elasticsearch
+  files:
+  - server/src/main/java/org/elasticsearch/index/codec/vectors/ash/SvdUtil.java
+  intent: More keyhole ASH optimizations
+  diff_summary: 'Primary: server/src/main/java/org/elasticsearch/index/codec/vectors/ash/SvdUtil.java
+    (+58/-47)'
+consequences:
+- package: elastic/elasticsearch
+  files:
+  - server/src/main/java/org/elasticsearch/index/codec/vectors/ash/AshSphericalScalarQuantizer.java
+  description: 'modified: server/src/main/java/org/elasticsearch/index/codec/vectors/ash/AshSphericalScalarQuantizer.java
+    (+16/-25)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - server/src/main/java/org/elasticsearch/index/codec/vectors/ash/AsymmetricHashingQuantizer.java
+  description: 'modified: server/src/main/java/org/elasticsearch/index/codec/vectors/ash/AsymmetricHashingQuantizer.java
+    (+16/-42)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - server/src/test/java/org/elasticsearch/index/codec/vectors/ash/AshSphericalScalarQuantizerTests.java
+  description: 'modified: server/src/test/java/org/elasticsearch/index/codec/vectors/ash/AshSphericalScalarQuantizerTests.java
+    (+5/-11)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - server/src/test/java/org/elasticsearch/index/codec/vectors/ash/AsymmetricHashingQuantizerTests.java
+  description: 'modified: server/src/test/java/org/elasticsearch/index/codec/vectors/ash/AsymmetricHashingQuantizerTests.java
+    (+29/-70)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from elastic/elasticsearch PR #156576. Trigger heuristic applied. Needs
+  review.'

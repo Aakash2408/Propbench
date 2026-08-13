@@ -1,0 +1,49 @@
+id: oss-svelte-18572
+title: Version Packages
+family: uncategorized
+date: '2026-07-24'
+author: github-actions[bot]
+source: github-api-mined
+source_repo: sveltejs/svelte
+source_url: https://github.com/sveltejs/svelte/pull/18572
+source_pr: 18572
+difficulty: medium
+trigger:
+  package: sveltejs/svelte
+  files:
+  - .changeset/hydrated-boundary-reset.md
+  intent: Version Packages
+  diff_summary: 'Primary: .changeset/hydrated-boundary-reset.md (+0/-5)'
+consequences:
+- package: sveltejs/svelte
+  files:
+  - .changeset/tidy-select-spreads.md
+  description: 'removed: .changeset/tidy-select-spreads.md (+0/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/package.json
+  description: 'modified: packages/svelte/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/src/version.js
+  description: 'modified: packages/svelte/src/version.js (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from sveltejs/svelte PR #18572. Trigger heuristic applied. Needs review.'

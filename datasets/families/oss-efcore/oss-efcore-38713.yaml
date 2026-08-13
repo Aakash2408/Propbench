@@ -1,0 +1,41 @@
+id: oss-efcore-38713
+title: '[release/11.0-preview7] Source code updates from dotnet/dotnet'
+family: uncategorized
+date: '2026-07-30'
+author: dotnet-maestro[bot]
+source: github-api-mined
+source_repo: dotnet/efcore
+source_url: https://github.com/dotnet/efcore/pull/38713
+source_pr: 38713
+difficulty: medium
+trigger:
+  package: dotnet/efcore
+  files:
+  - eng/Version.Details.xml
+  intent: '[release/11.0-preview7] Source code updates from dotnet/dotnet'
+  diff_summary: 'Primary: eng/Version.Details.xml (+35/-35)'
+consequences:
+- package: dotnet/efcore
+  files:
+  - eng/Version.Details.props
+  description: 'modified: eng/Version.Details.props (+17/-17)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - global.json
+  description: 'modified: global.json (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from dotnet/efcore PR #38713. Trigger heuristic applied. Needs review.'

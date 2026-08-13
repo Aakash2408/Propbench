@@ -1,0 +1,73 @@
+id: oss-axum-3801
+title: 'feat: add QUERY method routing'
+family: interface-evolution
+date: '2026-08-03'
+author: yunz-dev
+source: github-api-mined
+source_repo: tokio-rs/axum
+source_url: https://github.com/tokio-rs/axum/pull/3801
+source_pr: 3801
+difficulty: medium
+trigger:
+  package: tokio-rs/axum
+  files:
+  - axum/src/routing/method_routing.rs
+  intent: 'feat: add QUERY method routing'
+  diff_summary: 'Primary: axum/src/routing/method_routing.rs (+28/-1)'
+consequences:
+- package: tokio-rs/axum
+  files:
+  - Cargo.lock
+  description: 'modified: Cargo.lock (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/axum
+  files:
+  - axum-extra/src/routing/mod.rs
+  description: 'modified: axum-extra/src/routing/mod.rs (+23/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/axum
+  files:
+  - axum/Cargo.toml
+  description: 'modified: axum/Cargo.toml (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/axum
+  files:
+  - axum/src/routing/method_filter.rs
+  description: 'modified: axum/src/routing/method_filter.rs (+17/-9)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/axum
+  files:
+  - axum/src/routing/mod.rs
+  description: 'modified: axum/src/routing/mod.rs (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/axum
+  files:
+  - examples/Cargo.lock
+  description: 'modified: examples/Cargo.lock (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from tokio-rs/axum PR #3801. Trigger heuristic applied. Needs review.'

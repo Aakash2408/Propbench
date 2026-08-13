@@ -1,0 +1,152 @@
+id: oss-abp-25945
+title: Remove all related data when deleting a user
+family: refactor
+date: '2026-08-11'
+author: maliming
+source: github-api-mined
+source_repo: abpframework/abp
+source_url: https://github.com/abpframework/abp/pull/25945
+source_pr: 25945
+difficulty: medium
+trigger:
+  package: abpframework/abp
+  files:
+  - modules/identity/src/Volo.Abp.Identity.Domain/Volo/Abp/Identity/OrganizationUnitManager.cs
+  intent: Remove all related data when deleting a user
+  diff_summary: 'Primary: modules/identity/src/Volo.Abp.Identity.Domain/Volo/Abp/Identity/OrganizationUnitManager.cs
+    (+55/-4)'
+consequences:
+- package: abpframework/abp
+  files:
+  - framework/src/Volo.Abp.Gdpr.Abstractions/Volo.Abp.Gdpr.Abstractions.csproj
+  description: 'modified: framework/src/Volo.Abp.Gdpr.Abstractions/Volo.Abp.Gdpr.Abstractions.csproj
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - framework/src/Volo.Abp.Gdpr.Abstractions/Volo/Abp/Gdpr/AbpGdprAbstractionsModule.cs
+  description: 'modified: framework/src/Volo.Abp.Gdpr.Abstractions/Volo/Abp/Gdpr/AbpGdprAbstractionsModule.cs
+    (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - framework/src/Volo.Abp.Gdpr.Abstractions/Volo/Abp/Gdpr/GdprUserDataDeletionRequestedEto.cs
+  description: 'modified: framework/src/Volo.Abp.Gdpr.Abstractions/Volo/Abp/Gdpr/GdprUserDataDeletionRequestedEto.cs
+    (+11/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - framework/src/Volo.Abp.Gdpr.Abstractions/Volo/Abp/Gdpr/GdprUserDataPreparedEto.cs
+  description: 'modified: framework/src/Volo.Abp.Gdpr.Abstractions/Volo/Abp/Gdpr/GdprUserDataPreparedEto.cs
+    (+11/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - framework/src/Volo.Abp.Gdpr.Abstractions/Volo/Abp/Gdpr/GdprUserDataRequestedEto.cs
+  description: 'modified: framework/src/Volo.Abp.Gdpr.Abstractions/Volo/Abp/Gdpr/GdprUserDataRequestedEto.cs
+    (+11/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - modules/identity/src/Volo.Abp.Identity.Domain/Volo/Abp/Identity/IdentityUserManager.cs
+  description: 'modified: modules/identity/src/Volo.Abp.Identity.Domain/Volo/Abp/Identity/IdentityUserManager.cs
+    (+21/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - modules/identity/src/Volo.Abp.Identity.Domain/Volo/Abp/Identity/UserDeletedEventHandler.cs
+  description: 'added: modules/identity/src/Volo.Abp.Identity.Domain/Volo/Abp/Identity/UserDeletedEventHandler.cs
+    (+52/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - modules/identity/test/Volo.Abp.Identity.Domain.Tests/Volo/Abp/Identity/IdentityUserManager_Delete_Tests.cs
+  description: 'added: modules/identity/test/Volo.Abp.Identity.Domain.Tests/Volo/Abp/Identity/IdentityUserManager_Delete_Tests.cs
+    (+5/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - modules/identity/test/Volo.Abp.Identity.Domain.Tests/Volo/Abp/Identity/OrganizationUnitManager_CreateMany_Tests.cs
+  description: 'added: modules/identity/test/Volo.Abp.Identity.Domain.Tests/Volo/Abp/Identity/OrganizationUnitManager_CreateMany_Tests.cs
+    (+5/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - modules/identity/test/Volo.Abp.Identity.Domain.Tests/Volo/Abp/Identity/OrganizationUnitManager_Tests.cs
+  description: 'modified: modules/identity/test/Volo.Abp.Identity.Domain.Tests/Volo/Abp/Identity/OrganizationUnitManager_Tests.cs
+    (+139/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - modules/identity/test/Volo.Abp.Identity.MongoDB.Tests/Volo/Abp/Identity/MongoDB/IdentityUserManager_Delete_Tests.cs
+  description: 'added: modules/identity/test/Volo.Abp.Identity.MongoDB.Tests/Volo/Abp/Identity/MongoDB/IdentityUserManager_Delete_Tests.cs
+    (+8/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - modules/identity/test/Volo.Abp.Identity.MongoDB.Tests/Volo/Abp/Identity/MongoDB/OrganizationUnitManager_CreateMany_Tests.cs
+  description: 'added: modules/identity/test/Volo.Abp.Identity.MongoDB.Tests/Volo/Abp/Identity/MongoDB/OrganizationUnitManager_CreateMany_Tests.cs
+    (+8/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - modules/identity/test/Volo.Abp.Identity.TestBase/Volo/Abp/Identity/IdentityUserManager_Delete_Tests.cs
+  description: 'added: modules/identity/test/Volo.Abp.Identity.TestBase/Volo/Abp/Identity/IdentityUserManager_Delete_Tests.cs
+    (+477/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - modules/identity/test/Volo.Abp.Identity.TestBase/Volo/Abp/Identity/OrganizationUnitManager_CreateMany_Tests.cs
+  description: 'added: modules/identity/test/Volo.Abp.Identity.TestBase/Volo/Abp/Identity/OrganizationUnitManager_CreateMany_Tests.cs
+    (+54/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 15
+notes: 'Mined from abpframework/abp PR #25945. Trigger heuristic applied. Needs review.'

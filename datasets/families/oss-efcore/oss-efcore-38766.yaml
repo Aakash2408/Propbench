@@ -1,0 +1,80 @@
+id: oss-efcore-38766
+title: Rename test methods hidden by same-name overloads so they can be run
+family: refactor
+date: '2026-08-11'
+author: Copilot
+source: github-api-mined
+source_repo: dotnet/efcore
+source_url: https://github.com/dotnet/efcore/pull/38766
+source_pr: 38766
+difficulty: medium
+trigger:
+  package: dotnet/efcore
+  files:
+  - test/EFCore.Specification.Tests/Query/Translations/StringTranslationsTestBase.cs
+  intent: Rename test methods hidden by same-name overloads so they can be run
+  diff_summary: 'Primary: test/EFCore.Specification.Tests/Query/Translations/StringTranslationsTestBase.cs
+    (+1/-1)'
+consequences:
+- package: dotnet/efcore
+  files:
+  - test/EFCore.Cosmos.FunctionalTests/ModelBuilding/CosmosModelBuilderGenericTest.cs
+  description: 'modified: test/EFCore.Cosmos.FunctionalTests/ModelBuilding/CosmosModelBuilderGenericTest.cs
+    (+6/-6)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - test/EFCore.Cosmos.FunctionalTests/Query/Translations/StringTranslationsCosmosTest.cs
+  description: 'modified: test/EFCore.Cosmos.FunctionalTests/Query/Translations/StringTranslationsCosmosTest.cs
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - test/EFCore.Specification.Tests/ModelBuilding/ModelBuilderTest.ComplexType.cs
+  description: 'modified: test/EFCore.Specification.Tests/ModelBuilding/ModelBuilderTest.ComplexType.cs
+    (+6/-6)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - test/EFCore.Specification.Tests/ModelBuilding/ModelBuilderTest.NonRelationship.cs
+  description: 'modified: test/EFCore.Specification.Tests/ModelBuilding/ModelBuilderTest.NonRelationship.cs
+    (+6/-6)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - test/EFCore.SqlServer.FunctionalTests/Query/Translations/StringTranslationsSqlServerTest.cs
+  description: 'modified: test/EFCore.SqlServer.FunctionalTests/Query/Translations/StringTranslationsSqlServerTest.cs
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - test/EFCore.Sqlite.FunctionalTests/Query/Translations/StringTranslationsSqliteTest.cs
+  description: 'modified: test/EFCore.Sqlite.FunctionalTests/Query/Translations/StringTranslationsSqliteTest.cs
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from dotnet/efcore PR #38766. Trigger heuristic applied. Needs review.'

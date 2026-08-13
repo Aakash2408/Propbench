@@ -1,0 +1,57 @@
+id: oss-grape-2828
+title: Compare InheritableSetting without serializing both chains
+family: uncategorized
+date: '2026-07-27'
+author: ericproulx
+source: github-api-mined
+source_repo: ruby-grape/grape
+source_url: https://github.com/ruby-grape/grape/pull/2828
+source_pr: 2828
+difficulty: medium
+trigger:
+  package: ruby-grape/grape
+  files:
+  - lib/grape/util/inheritable_setting.rb
+  intent: Compare InheritableSetting without serializing both chains
+  diff_summary: 'Primary: lib/grape/util/inheritable_setting.rb (+30/-1)'
+consequences:
+- package: ruby-grape/grape
+  files:
+  - .rubocop.yml
+  description: 'modified: .rubocop.yml (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - lib/grape/util/inheritable_values.rb
+  description: 'modified: lib/grape/util/inheritable_values.rb (+25/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - spec/grape/util/inheritable_setting_spec.rb
+  description: 'modified: spec/grape/util/inheritable_setting_spec.rb (+40/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - spec/grape/util/inheritable_values_spec.rb
+  description: 'modified: spec/grape/util/inheritable_values_spec.rb (+33/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from ruby-grape/grape PR #2828. Trigger heuristic applied. Needs review.'

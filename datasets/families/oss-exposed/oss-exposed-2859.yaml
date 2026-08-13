@@ -1,0 +1,44 @@
+id: oss-exposed-2859
+title: 'fix: Prevent NoSuchElementException when removing the only batch from BatchInsertStatement'
+family: bugfix
+date: '2026-07-21'
+author: cfcromn
+source: github-api-mined
+source_repo: JetBrains/Exposed
+source_url: https://github.com/JetBrains/Exposed/pull/2859
+source_pr: 2859
+difficulty: medium
+trigger:
+  package: JetBrains/Exposed
+  files:
+  - exposed-core/src/main/kotlin/org/jetbrains/exposed/v1/core/statements/BatchInsertStatement.kt
+  intent: 'fix: Prevent NoSuchElementException when removing the only batch from BatchInsertStatement'
+  diff_summary: 'Primary: exposed-core/src/main/kotlin/org/jetbrains/exposed/v1/core/statements/BatchInsertStatement.kt
+    (+1/-1)'
+consequences:
+- package: JetBrains/Exposed
+  files:
+  - exposed-r2dbc-tests/src/test/kotlin/org/jetbrains/exposed/v1/r2dbc/sql/tests/shared/dml/InsertTests.kt
+  description: 'modified: exposed-r2dbc-tests/src/test/kotlin/org/jetbrains/exposed/v1/r2dbc/sql/tests/shared/dml/InsertTests.kt
+    (+12/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/Exposed
+  files:
+  - exposed-tests/src/test/kotlin/org/jetbrains/exposed/v1/tests/shared/dml/InsertTests.kt
+  description: 'modified: exposed-tests/src/test/kotlin/org/jetbrains/exposed/v1/tests/shared/dml/InsertTests.kt
+    (+12/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from JetBrains/Exposed PR #2859. Trigger heuristic applied. Needs review.'

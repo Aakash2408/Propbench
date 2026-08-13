@@ -1,0 +1,79 @@
+id: oss-turborepo-13675
+title: 'test: Cover Python quality task graph'
+family: uncategorized
+date: '2026-08-05'
+author: anthonyshew
+source: github-api-mined
+source_repo: vercel/turborepo
+source_url: https://github.com/vercel/turborepo/pull/13675
+source_pr: 13675
+difficulty: medium
+trigger:
+  package: vercel/turborepo
+  files:
+  - turborepo-tests/integration/fixtures/uv_native_tools/uv.lock
+  intent: 'test: Cover Python quality task graph'
+  diff_summary: 'Primary: turborepo-tests/integration/fixtures/uv_native_tools/uv.lock
+    (+25/-0)'
+consequences:
+- package: vercel/turborepo
+  files:
+  - crates/turborepo/tests/uv_workspace_test.rs
+  description: 'modified: crates/turborepo/tests/uv_workspace_test.rs (+238/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - turborepo-tests/integration/fixtures/uv_native_tools/.gitignore
+  description: 'added: turborepo-tests/integration/fixtures/uv_native_tools/.gitignore
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - turborepo-tests/integration/fixtures/uv_native_tools/packages/py-app/pyproject.toml
+  description: 'added: turborepo-tests/integration/fixtures/uv_native_tools/packages/py-app/pyproject.toml
+    (+11/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - turborepo-tests/integration/fixtures/uv_native_tools/packages/py-lib/pyproject.toml
+  description: 'added: turborepo-tests/integration/fixtures/uv_native_tools/packages/py-lib/pyproject.toml
+    (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - turborepo-tests/integration/fixtures/uv_native_tools/pyproject.toml
+  description: 'added: turborepo-tests/integration/fixtures/uv_native_tools/pyproject.toml
+    (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - turborepo-tests/integration/fixtures/uv_native_tools/turbo.json
+  description: 'added: turborepo-tests/integration/fixtures/uv_native_tools/turbo.json
+    (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from vercel/turborepo PR #13675. Trigger heuristic applied. Needs review.'

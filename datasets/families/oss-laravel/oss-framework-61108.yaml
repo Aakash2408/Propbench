@@ -1,0 +1,41 @@
+id: oss-framework-61108
+title: '[13.x] Add JobReleased event to Worker'
+family: interface-evolution
+date: '2026-08-11'
+author: jackbayliss
+source: github-api-mined
+source_repo: laravel/framework
+source_url: https://github.com/laravel/framework/pull/61108
+source_pr: 61108
+difficulty: medium
+trigger:
+  package: laravel/framework
+  files:
+  - src/Illuminate/Queue/Events/JobReleased.php
+  intent: '[13.x] Add JobReleased event to Worker'
+  diff_summary: 'Primary: src/Illuminate/Queue/Events/JobReleased.php (+18/-0)'
+consequences:
+- package: laravel/framework
+  files:
+  - src/Illuminate/Queue/Worker.php
+  description: 'modified: src/Illuminate/Queue/Worker.php (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - tests/Queue/QueueWorkerTest.php
+  description: 'modified: tests/Queue/QueueWorkerTest.php (+15/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from laravel/framework PR #61108. Trigger heuristic applied. Needs review.'

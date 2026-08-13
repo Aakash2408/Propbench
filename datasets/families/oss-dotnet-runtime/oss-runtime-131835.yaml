@@ -1,0 +1,49 @@
+id: oss-runtime-131835
+title: Rename INS_FLGAS in consistent style for xarch emitter.
+family: refactor
+date: '2026-08-12'
+author: Ruihan-Yin
+source: github-api-mined
+source_repo: dotnet/runtime
+source_url: https://github.com/dotnet/runtime/pull/131835
+source_pr: 131835
+difficulty: medium
+trigger:
+  package: dotnet/runtime
+  files:
+  - src/coreclr/jit/instrsxarch.h
+  intent: Rename INS_FLGAS in consistent style for xarch emitter.
+  diff_summary: 'Primary: src/coreclr/jit/instrsxarch.h (+592/-592)'
+consequences:
+- package: dotnet/runtime
+  files:
+  - src/coreclr/jit/emitxarch.cpp
+  description: 'modified: src/coreclr/jit/emitxarch.cpp (+12/-12)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/jit/instr.cpp
+  description: 'modified: src/coreclr/jit/instr.cpp (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/jit/instr.h
+  description: 'modified: src/coreclr/jit/instr.h (+16/-13)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from dotnet/runtime PR #131835. Trigger heuristic applied. Needs review.'

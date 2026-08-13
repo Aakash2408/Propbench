@@ -1,0 +1,44 @@
+id: oss-prometheus-19406
+title: 'promql/parser: reject offset expressions and @ start()/end() before range
+  selectors'
+family: uncategorized
+date: '2026-08-13'
+author: aamoghS
+source: github-api-mined
+source_repo: prometheus/prometheus
+source_url: https://github.com/prometheus/prometheus/pull/19406
+source_pr: 19406
+difficulty: medium
+trigger:
+  package: prometheus/prometheus
+  files:
+  - promql/parser/generated_parser.y
+  intent: 'promql/parser: reject offset expressions and @ start()/end() before range
+    selectors'
+  diff_summary: 'Primary: promql/parser/generated_parser.y (+2/-2)'
+consequences:
+- package: prometheus/prometheus
+  files:
+  - promql/parser/generated_parser.y.go
+  description: 'modified: promql/parser/generated_parser.y.go (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prometheus/prometheus
+  files:
+  - promql/parser/parse_test.go
+  description: 'modified: promql/parser/parse_test.go (+33/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from prometheus/prometheus PR #19406. Trigger heuristic applied. Needs
+  review.'

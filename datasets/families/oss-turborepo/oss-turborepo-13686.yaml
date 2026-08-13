@@ -1,0 +1,124 @@
+id: oss-turborepo-13686
+title: 'test: Stabilize watch task inputs regression test'
+family: uncategorized
+date: '2026-08-05'
+author: anthonyshew
+source: github-api-mined
+source_repo: vercel/turborepo
+source_url: https://github.com/vercel/turborepo/pull/13686
+source_pr: 13686
+difficulty: medium
+trigger:
+  package: vercel/turborepo
+  files:
+  - turborepo-tests/integration/fixtures/watch_task_inputs_dependency_test/packages/app/observe.js
+  intent: 'test: Stabilize watch task inputs regression test'
+  diff_summary: 'Primary: turborepo-tests/integration/fixtures/watch_task_inputs_dependency_test/packages/app/observe.js
+    (+9/-0)'
+consequences:
+- package: vercel/turborepo
+  files:
+  - crates/turborepo/tests/watch_test.rs
+  description: 'modified: crates/turborepo/tests/watch_test.rs (+99/-15)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - turborepo-tests/integration/fixtures/watch_task_inputs_dependency_test/package-lock.json
+  description: 'modified: turborepo-tests/integration/fixtures/watch_task_inputs_dependency_test/package-lock.json
+    (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - turborepo-tests/integration/fixtures/watch_task_inputs_dependency_test/packages/app/dev.js
+  description: 'modified: turborepo-tests/integration/fixtures/watch_task_inputs_dependency_test/packages/app/dev.js
+    (+4/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - turborepo-tests/integration/fixtures/watch_task_inputs_dependency_test/packages/app/package.json
+  description: 'modified: turborepo-tests/integration/fixtures/watch_task_inputs_dependency_test/packages/app/package.json
+    (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - turborepo-tests/integration/fixtures/watch_task_inputs_dependency_test/packages/observer/README.md
+  description: 'added: turborepo-tests/integration/fixtures/watch_task_inputs_dependency_test/packages/observer/README.md
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - turborepo-tests/integration/fixtures/watch_task_inputs_dependency_test/packages/observer/observe.js
+  description: 'added: turborepo-tests/integration/fixtures/watch_task_inputs_dependency_test/packages/observer/observe.js
+    (+9/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - turborepo-tests/integration/fixtures/watch_task_inputs_dependency_test/packages/observer/package.json
+  description: 'added: turborepo-tests/integration/fixtures/watch_task_inputs_dependency_test/packages/observer/package.json
+    (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - turborepo-tests/integration/fixtures/watch_task_inputs_dependency_test/packages/pkg/dev.js
+  description: 'modified: turborepo-tests/integration/fixtures/watch_task_inputs_dependency_test/packages/pkg/dev.js
+    (+4/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - turborepo-tests/integration/fixtures/watch_task_inputs_dependency_test/packages/pkg/observe.js
+  description: 'added: turborepo-tests/integration/fixtures/watch_task_inputs_dependency_test/packages/pkg/observe.js
+    (+9/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - turborepo-tests/integration/fixtures/watch_task_inputs_dependency_test/packages/pkg/package.json
+  description: 'modified: turborepo-tests/integration/fixtures/watch_task_inputs_dependency_test/packages/pkg/package.json
+    (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - turborepo-tests/integration/fixtures/watch_task_inputs_dependency_test/turbo.json
+  description: 'modified: turborepo-tests/integration/fixtures/watch_task_inputs_dependency_test/turbo.json
+    (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 12
+notes: 'Mined from vercel/turborepo PR #13686. Trigger heuristic applied. Needs review.'

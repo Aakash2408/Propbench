@@ -1,0 +1,83 @@
+id: oss-terraform-provider-aws-49285
+title: 'resource/aws_bedrockagentcore_harness: Handles `memory.managed_memory_configuration`'
+family: uncategorized
+date: '2026-08-05'
+author: gdavison
+source: github-api-mined
+source_repo: hashicorp/terraform-provider-aws
+source_url: https://github.com/hashicorp/terraform-provider-aws/pull/49285
+source_pr: 49285
+difficulty: medium
+trigger:
+  package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/bedrockagentcore/harness.go
+  intent: 'resource/aws_bedrockagentcore_harness: Handles `memory.managed_memory_configuration`'
+  diff_summary: 'Primary: internal/service/bedrockagentcore/harness.go (+174/-19)'
+consequences:
+- package: hashicorp/terraform-provider-aws
+  files:
+  - .ci/semgrep/smarterr/enforce.yml
+  description: 'modified: .ci/semgrep/smarterr/enforce.yml (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/bedrockagentcore/harness_identity_gen_test.go
+  description: 'modified: internal/service/bedrockagentcore/harness_identity_gen_test.go
+    (+14/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/bedrockagentcore/harness_list.go
+  description: 'modified: internal/service/bedrockagentcore/harness_list.go (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/bedrockagentcore/harness_list_test.go
+  description: 'modified: internal/service/bedrockagentcore/harness_list_test.go (+28/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/bedrockagentcore/harness_test.go
+  description: 'modified: internal/service/bedrockagentcore/harness_test.go (+419/-10)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/bedrockagentcore/memory.go
+  description: 'modified: internal/service/bedrockagentcore/memory.go (+12/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - website/docs/r/bedrockagentcore_harness.html.markdown
+  description: 'modified: website/docs/r/bedrockagentcore_harness.html.markdown (+82/-43)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 8
+notes: 'Mined from hashicorp/terraform-provider-aws PR #49285. Trigger heuristic applied.
+  Needs review.'

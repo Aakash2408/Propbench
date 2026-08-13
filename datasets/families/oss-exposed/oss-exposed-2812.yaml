@@ -1,0 +1,53 @@
+id: oss-exposed-2812
+title: 'fix: EXPOSED-1028 Return defensive copy from ExposedSpringTransactionAttributeSource'
+family: bugfix
+date: '2026-07-22'
+author: yurano
+source: github-api-mined
+source_repo: JetBrains/Exposed
+source_url: https://github.com/JetBrains/Exposed/pull/2812
+source_pr: 2812
+difficulty: medium
+trigger:
+  package: JetBrains/Exposed
+  files:
+  - spring-transaction/src/main/kotlin/org/jetbrains/exposed/v1/spring/transaction/ExposedSpringTransactionAttributeSource.kt
+  intent: 'fix: EXPOSED-1028 Return defensive copy from ExposedSpringTransactionAttributeSource'
+  diff_summary: 'Primary: spring-transaction/src/main/kotlin/org/jetbrains/exposed/v1/spring/transaction/ExposedSpringTransactionAttributeSource.kt
+    (+19/-12)'
+consequences:
+- package: JetBrains/Exposed
+  files:
+  - spring-transaction/src/test/kotlin/org/jetbrains/exposed/v1/spring/transaction/SpringTransactionAttributeSourceConcurrencyTest.kt
+  description: 'added: spring-transaction/src/test/kotlin/org/jetbrains/exposed/v1/spring/transaction/SpringTransactionAttributeSourceConcurrencyTest.kt
+    (+94/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/Exposed
+  files:
+  - spring7-transaction/src/main/kotlin/org/jetbrains/exposed/v1/spring7/transaction/ExposedSpringTransactionAttributeSource.kt
+  description: 'modified: spring7-transaction/src/main/kotlin/org/jetbrains/exposed/v1/spring7/transaction/ExposedSpringTransactionAttributeSource.kt
+    (+19/-12)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/Exposed
+  files:
+  - spring7-transaction/src/test/kotlin/org/jetbrains/exposed/v1/spring7/transaction/SpringTransactionAttributeSourceConcurrencyTest.kt
+  description: 'added: spring7-transaction/src/test/kotlin/org/jetbrains/exposed/v1/spring7/transaction/SpringTransactionAttributeSourceConcurrencyTest.kt
+    (+94/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from JetBrains/Exposed PR #2812. Trigger heuristic applied. Needs review.'

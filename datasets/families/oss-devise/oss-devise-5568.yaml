@@ -1,0 +1,97 @@
+id: oss-devise-5568
+title: Bring back Mongoid official support
+family: interface-evolution
+date: '2025-10-31'
+author: carlosantoniodasilva
+source: github-api-mined
+source_repo: heartcombo/devise
+source_url: https://github.com/heartcombo/devise/pull/5568
+source_pr: 5568
+difficulty: medium
+trigger:
+  package: heartcombo/devise
+  files:
+  - lib/devise/orm.rb
+  intent: Bring back Mongoid official support
+  diff_summary: 'Primary: lib/devise/orm.rb (+32/-2)'
+consequences:
+- package: heartcombo/devise
+  files:
+  - Gemfile
+  description: 'modified: Gemfile (+4/-11)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - Gemfile.lock
+  description: 'modified: Gemfile.lock (+17/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - gemfiles/Gemfile-rails-7-0
+  description: 'modified: gemfiles/Gemfile-rails-7-0 (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - gemfiles/Gemfile-rails-7-1
+  description: 'modified: gemfiles/Gemfile-rails-7-1 (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - gemfiles/Gemfile-rails-7-2
+  description: 'modified: gemfiles/Gemfile-rails-7-2 (+5/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - gemfiles/Gemfile-rails-8-0
+  description: 'modified: gemfiles/Gemfile-rails-8-0 (+5/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - gemfiles/Gemfile-rails-main
+  description: 'modified: gemfiles/Gemfile-rails-main (+5/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - test/orm/mongoid.rb
+  description: 'modified: test/orm/mongoid.rb (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - test/rails_app/config/application.rb
+  description: 'modified: test/rails_app/config/application.rb (+4/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 10
+notes: 'Mined from heartcombo/devise PR #5568. Trigger heuristic applied. Needs review.'

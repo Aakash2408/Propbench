@@ -1,0 +1,81 @@
+id: oss-turborepo-13699
+title: 'feat: Support nub.lock files'
+family: interface-evolution
+date: '2026-08-10'
+author: akshat-OwO
+source: github-api-mined
+source_repo: vercel/turborepo
+source_url: https://github.com/vercel/turborepo/pull/13699
+source_pr: 13699
+difficulty: medium
+trigger:
+  package: vercel/turborepo
+  files:
+  - crates/turborepo-repository/src/package_manager/nub.rs
+  intent: 'feat: Support nub.lock files'
+  diff_summary: 'Primary: crates/turborepo-repository/src/package_manager/nub.rs (+52/-14)'
+consequences:
+- package: vercel/turborepo
+  files:
+  - crates/turborepo-devtools/src/watcher.rs
+  description: 'modified: crates/turborepo-devtools/src/watcher.rs (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - crates/turborepo-filewatch/src/package_watcher.rs
+  description: 'modified: crates/turborepo-filewatch/src/package_watcher.rs (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - crates/turborepo-repository/src/package_manager/mod.rs
+  description: 'modified: crates/turborepo-repository/src/package_manager/mod.rs (+46/-17)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - packages/turbo-workspaces/__tests__/aube.test.ts
+  description: 'modified: packages/turbo-workspaces/__tests__/aube.test.ts (+13/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - packages/turbo-workspaces/__tests__/nub.test.ts
+  description: 'modified: packages/turbo-workspaces/__tests__/nub.test.ts (+39/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - packages/turbo-workspaces/src/managers/nub.ts
+  description: 'modified: packages/turbo-workspaces/src/managers/nub.ts (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - packages/turbo-workspaces/src/utils.ts
+  description: 'modified: packages/turbo-workspaces/src/utils.ts (+40/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 8
+notes: 'Mined from vercel/turborepo PR #13699. Trigger heuristic applied. Needs review.'

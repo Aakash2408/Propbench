@@ -1,0 +1,209 @@
+id: oss-angular-70162
+title: 'build: update pnpm to v11.21.0 (main)'
+family: interface-evolution
+date: '2026-08-12'
+author: angular-robot
+source: github-api-mined
+source_repo: angular/angular
+source_url: https://github.com/angular/angular/pull/70162
+source_pr: 70162
+difficulty: medium
+trigger:
+  package: angular/angular
+  files:
+  - MODULE.bazel
+  intent: 'build: update pnpm to v11.21.0 (main)'
+  diff_summary: 'Primary: MODULE.bazel (+2/-2)'
+consequences:
+- package: angular/angular
+  files:
+  - integration/animations/package.json
+  description: 'modified: integration/animations/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - integration/cli-hello-world-ivy-i18n/package.json
+  description: 'modified: integration/cli-hello-world-ivy-i18n/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - integration/cli-hello-world-lazy/package.json
+  description: 'modified: integration/cli-hello-world-lazy/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - integration/cli-hello-world/package.json
+  description: 'modified: integration/cli-hello-world/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - integration/cli-signal-inputs/package.json
+  description: 'modified: integration/cli-signal-inputs/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - integration/defer/package.json
+  description: 'modified: integration/defer/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - integration/legacy-animations-async/package.json
+  description: 'modified: integration/legacy-animations-async/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - integration/legacy-animations/package.json
+  description: 'modified: integration/legacy-animations/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - integration/ng-add-localize/package.json
+  description: 'modified: integration/ng-add-localize/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - integration/ng_elements/package.json
+  description: 'modified: integration/ng_elements/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - integration/ng_update/package.json
+  description: 'modified: integration/ng_update/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - integration/no_ts_linker/package.json
+  description: 'modified: integration/no_ts_linker/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - integration/nodenext_resolution/package.json
+  description: 'modified: integration/nodenext_resolution/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - integration/platform-server-hydration/package.json
+  description: 'modified: integration/platform-server-hydration/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - integration/platform-server-zoneless/package.json
+  description: 'modified: integration/platform-server-zoneless/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - integration/platform-server/package.json
+  description: 'modified: integration/platform-server/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - integration/service-worker-schema/package.json
+  description: 'modified: integration/service-worker-schema/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - integration/standalone-bootstrap/package.json
+  description: 'modified: integration/standalone-bootstrap/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - integration/terser/package.json
+  description: 'modified: integration/terser/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - integration/trusted-types/package.json
+  description: 'modified: integration/trusted-types/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - integration/typings_test_rxjs7/package.json
+  description: 'modified: integration/typings_test_rxjs7/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - integration/typings_test_ts60/package.json
+  description: 'modified: integration/typings_test_ts60/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - package.json
+  description: 'modified: package.json (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 24
+notes: 'Mined from angular/angular PR #70162. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,73 @@
+id: oss-trpc-7411
+title: 'feat(openapi): Add server url support'
+family: interface-evolution
+date: '2026-06-14'
+author: Nick-Lucas
+source: github-api-mined
+source_repo: trpc/trpc
+source_url: https://github.com/trpc/trpc/pull/7411
+source_pr: 7411
+difficulty: medium
+trigger:
+  package: trpc/trpc
+  files:
+  - www/docs/client/openapi.md
+  intent: 'feat(openapi): Add server url support'
+  diff_summary: 'Primary: www/docs/client/openapi.md (+10/-8)'
+consequences:
+- package: trpc/trpc
+  files:
+  - packages/openapi/README.md
+  description: 'modified: packages/openapi/README.md (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: trpc/trpc
+  files:
+  - packages/openapi/src/cli.ts
+  description: 'modified: packages/openapi/src/cli.ts (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: trpc/trpc
+  files:
+  - packages/openapi/src/generate.ts
+  description: 'modified: packages/openapi/src/generate.ts (+9/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: trpc/trpc
+  files:
+  - packages/openapi/src/types.ts
+  description: 'modified: packages/openapi/src/types.ts (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: trpc/trpc
+  files:
+  - packages/openapi/test/cli.test.ts
+  description: 'modified: packages/openapi/test/cli.test.ts (+26/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: trpc/trpc
+  files:
+  - packages/openapi/test/generate.test.ts
+  description: 'modified: packages/openapi/test/generate.test.ts (+38/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from trpc/trpc PR #7411. Trigger heuristic applied. Needs review.'

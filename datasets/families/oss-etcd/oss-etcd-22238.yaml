@@ -1,0 +1,121 @@
+id: oss-etcd-22238
+title: Cleanup the legacy raftexample
+family: refactor
+date: '2026-07-31'
+author: ahrtr
+source: github-api-mined
+source_repo: etcd-io/etcd
+source_url: https://github.com/etcd-io/etcd/pull/22238
+source_pr: 22238
+difficulty: medium
+trigger:
+  package: etcd-io/etcd
+  files:
+  - contrib/raftexample/raft.go
+  intent: Cleanup the legacy raftexample
+  diff_summary: 'Primary: contrib/raftexample/raft.go (+0/-535)'
+consequences:
+- package: etcd-io/etcd
+  files:
+  - contrib/README.md
+  description: 'modified: contrib/README.md (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: etcd-io/etcd
+  files:
+  - contrib/raftexample/Procfile
+  description: 'removed: contrib/raftexample/Procfile (+0/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: etcd-io/etcd
+  files:
+  - contrib/raftexample/README.md
+  description: 'removed: contrib/raftexample/README.md (+0/-125)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: etcd-io/etcd
+  files:
+  - contrib/raftexample/doc.go
+  description: 'removed: contrib/raftexample/doc.go (+0/-16)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: etcd-io/etcd
+  files:
+  - contrib/raftexample/httpapi.go
+  description: 'removed: contrib/raftexample/httpapi.go (+0/-122)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: etcd-io/etcd
+  files:
+  - contrib/raftexample/kvstore.go
+  description: 'removed: contrib/raftexample/kvstore.go (+0/-135)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: etcd-io/etcd
+  files:
+  - contrib/raftexample/kvstore_test.go
+  description: 'removed: contrib/raftexample/kvstore_test.go (+0/-40)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: etcd-io/etcd
+  files:
+  - contrib/raftexample/listener.go
+  description: 'removed: contrib/raftexample/listener.go (+0/-59)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: etcd-io/etcd
+  files:
+  - contrib/raftexample/main.go
+  description: 'removed: contrib/raftexample/main.go (+0/-45)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: etcd-io/etcd
+  files:
+  - contrib/raftexample/raft_test.go
+  description: 'removed: contrib/raftexample/raft_test.go (+0/-131)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: etcd-io/etcd
+  files:
+  - contrib/raftexample/raftexample_test.go
+  description: 'removed: contrib/raftexample/raftexample_test.go (+0/-284)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: etcd-io/etcd
+  files:
+  - go.mod
+  description: 'modified: go.mod (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 13
+notes: 'Mined from etcd-io/etcd PR #22238. Trigger heuristic applied. Needs review.'

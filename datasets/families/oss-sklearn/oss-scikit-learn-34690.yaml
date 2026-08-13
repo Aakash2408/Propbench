@@ -1,0 +1,123 @@
+id: oss-scikit-learn-34690
+title: ':lock: :robot: CI Update lock files for main CI build(s) :lock: :robot:'
+family: uncategorized
+date: '2026-08-10'
+author: scikit-learn-bot
+source: github-api-mined
+source_repo: scikit-learn/scikit-learn
+source_url: https://github.com/scikit-learn/scikit-learn/pull/34690
+source_pr: 34690
+difficulty: medium
+trigger:
+  package: scikit-learn/scikit-learn
+  files:
+  - build_tools/github/pylatest_conda_forge_mkl_linux-64_conda.lock
+  intent: ':lock: :robot: CI Update lock files for main CI build(s) :lock: :robot:'
+  diff_summary: 'Primary: build_tools/github/pylatest_conda_forge_mkl_linux-64_conda.lock
+    (+54/-55)'
+consequences:
+- package: scikit-learn/scikit-learn
+  files:
+  - build_tools/circle/doc_linux-64_conda.lock
+  description: 'modified: build_tools/circle/doc_linux-64_conda.lock (+39/-40)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - build_tools/circle/doc_min_dependencies_linux-64_conda.lock
+  description: 'modified: build_tools/circle/doc_min_dependencies_linux-64_conda.lock
+    (+37/-38)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - build_tools/github/debian_32bit_lock.txt
+  description: 'modified: build_tools/github/debian_32bit_lock.txt (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - build_tools/github/pylatest_conda_forge_mkl_no_openmp_osx-64_conda.lock
+  description: 'modified: build_tools/github/pylatest_conda_forge_mkl_no_openmp_osx-64_conda.lock
+    (+17/-17)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - build_tools/github/pylatest_conda_forge_osx-arm64_conda.lock
+  description: 'modified: build_tools/github/pylatest_conda_forge_osx-arm64_conda.lock
+    (+31/-31)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - build_tools/github/pylatest_pip_openblas_pandas_linux-64_conda.lock
+  description: 'modified: build_tools/github/pylatest_pip_openblas_pandas_linux-64_conda.lock
+    (+7/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - build_tools/github/pymin_conda_forge_arm_linux-aarch64_conda.lock
+  description: 'modified: build_tools/github/pymin_conda_forge_arm_linux-aarch64_conda.lock
+    (+32/-32)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - build_tools/github/pymin_conda_forge_openblas_min_dependencies_linux-64_conda.lock
+  description: 'modified: build_tools/github/pymin_conda_forge_openblas_min_dependencies_linux-64_conda.lock
+    (+33/-33)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - build_tools/github/pymin_conda_forge_openblas_ubuntu_2204_linux-64_conda.lock
+  description: 'modified: build_tools/github/pymin_conda_forge_openblas_ubuntu_2204_linux-64_conda.lock
+    (+20/-21)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - build_tools/github/pymin_conda_forge_openblas_win-64_conda.lock
+  description: 'modified: build_tools/github/pymin_conda_forge_openblas_win-64_conda.lock
+    (+27/-26)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - build_tools/github/ubuntu_atlas_lock.txt
+  description: 'modified: build_tools/github/ubuntu_atlas_lock.txt (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 12
+notes: 'Mined from scikit-learn/scikit-learn PR #34690. Trigger heuristic applied.
+  Needs review.'

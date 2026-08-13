@@ -1,0 +1,97 @@
+id: oss-sidekiq-7038
+title: 'refactor: dedupe TUI rendering helpers'
+family: refactor
+date: '2026-06-12'
+author: seuros
+source: github-api-mined
+source_repo: sidekiq/sidekiq
+source_url: https://github.com/sidekiq/sidekiq/pull/7038
+source_pr: 7038
+difficulty: medium
+trigger:
+  package: sidekiq/sidekiq
+  files:
+  - lib/sidekiq/tui.rb
+  intent: 'refactor: dedupe TUI rendering helpers'
+  diff_summary: 'Primary: lib/sidekiq/tui.rb (+26/-46)'
+consequences:
+- package: sidekiq/sidekiq
+  files:
+  - lib/sidekiq/tui/tabs/base_tab.rb
+  description: 'modified: lib/sidekiq/tui/tabs/base_tab.rb (+41/-15)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sidekiq/sidekiq
+  files:
+  - lib/sidekiq/tui/tabs/busy.rb
+  description: 'modified: lib/sidekiq/tui/tabs/busy.rb (+2/-16)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sidekiq/sidekiq
+  files:
+  - lib/sidekiq/tui/tabs/dead.rb
+  description: 'modified: lib/sidekiq/tui/tabs/dead.rb (+0/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sidekiq/sidekiq
+  files:
+  - lib/sidekiq/tui/tabs/home.rb
+  description: 'modified: lib/sidekiq/tui/tabs/home.rb (+11/-40)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sidekiq/sidekiq
+  files:
+  - lib/sidekiq/tui/tabs/metrics.rb
+  description: 'modified: lib/sidekiq/tui/tabs/metrics.rb (+2/-19)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sidekiq/sidekiq
+  files:
+  - lib/sidekiq/tui/tabs/queues.rb
+  description: 'modified: lib/sidekiq/tui/tabs/queues.rb (+2/-14)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sidekiq/sidekiq
+  files:
+  - lib/sidekiq/tui/tabs/retries.rb
+  description: 'modified: lib/sidekiq/tui/tabs/retries.rb (+0/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sidekiq/sidekiq
+  files:
+  - lib/sidekiq/tui/tabs/scheduled.rb
+  description: 'modified: lib/sidekiq/tui/tabs/scheduled.rb (+0/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sidekiq/sidekiq
+  files:
+  - lib/sidekiq/tui/tabs/set_tab.rb
+  description: 'modified: lib/sidekiq/tui/tabs/set_tab.rb (+15/-20)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 10
+notes: 'Mined from sidekiq/sidekiq PR #7038. Trigger heuristic applied. Needs review.'

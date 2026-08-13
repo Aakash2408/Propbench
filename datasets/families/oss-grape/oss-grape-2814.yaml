@@ -1,0 +1,52 @@
+id: oss-grape-2814
+title: 'Fix type: [A, B] + values: [...] raising IncompatibleOptionValues at definition
+  time'
+family: bugfix
+date: '2026-07-26'
+author: ericproulx
+source: github-api-mined
+source_repo: ruby-grape/grape
+source_url: https://github.com/ruby-grape/grape/pull/2814
+source_pr: 2814
+difficulty: medium
+trigger:
+  package: ruby-grape/grape
+  files:
+  - lib/grape/validations/types/variant_collection_coercer.rb
+  intent: 'Fix type: [A, B] + values: [...] raising IncompatibleOptionValues at definition
+    time'
+  diff_summary: 'Primary: lib/grape/validations/types/variant_collection_coercer.rb
+    (+3/-0)'
+consequences:
+- package: ruby-grape/grape
+  files:
+  - lib/grape/validations/validations_spec.rb
+  description: 'modified: lib/grape/validations/validations_spec.rb (+11/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - spec/grape/validations/params_scope_spec.rb
+  description: 'modified: spec/grape/validations/params_scope_spec.rb (+44/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - spec/grape/validations/validations_spec_spec.rb
+  description: 'modified: spec/grape/validations/validations_spec_spec.rb (+12/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from ruby-grape/grape PR #2814. Trigger heuristic applied. Needs review.'

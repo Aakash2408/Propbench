@@ -1,0 +1,57 @@
+id: oss-efcore-38786
+title: '[release/10.0] Source code updates from dotnet/dotnet'
+family: uncategorized
+date: '2026-08-11'
+author: dotnet-maestro[bot]
+source: github-api-mined
+source_repo: dotnet/efcore
+source_url: https://github.com/dotnet/efcore/pull/38786
+source_pr: 38786
+difficulty: medium
+trigger:
+  package: dotnet/efcore
+  files:
+  - eng/Version.Details.xml
+  intent: '[release/10.0] Source code updates from dotnet/dotnet'
+  diff_summary: 'Primary: eng/Version.Details.xml (+24/-24)'
+consequences:
+- package: dotnet/efcore
+  files:
+  - NuGet.config
+  description: 'modified: NuGet.config (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - eng/Version.Details.props
+  description: 'modified: eng/Version.Details.props (+5/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - eng/common/core-templates/steps/publish-logs.yml
+  description: 'modified: eng/common/core-templates/steps/publish-logs.yml (+0/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/efcore
+  files:
+  - global.json
+  description: 'modified: global.json (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from dotnet/efcore PR #38786. Trigger heuristic applied. Needs review.'

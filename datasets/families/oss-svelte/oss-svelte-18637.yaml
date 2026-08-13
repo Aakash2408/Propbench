@@ -1,0 +1,181 @@
+id: oss-svelte-18637
+title: 'fix: preserve CSS comments in the AST printer'
+family: bugfix
+date: '2026-08-12'
+author: dummdidumm
+source: github-api-mined
+source_repo: sveltejs/svelte
+source_url: https://github.com/sveltejs/svelte/pull/18637
+source_pr: 18637
+difficulty: medium
+trigger:
+  package: sveltejs/svelte
+  files:
+  - packages/svelte/src/compiler/print/index.js
+  intent: 'fix: preserve CSS comments in the AST printer'
+  diff_summary: 'Primary: packages/svelte/src/compiler/print/index.js (+219/-142)'
+consequences:
+- package: sveltejs/svelte
+  files:
+  - .changeset/soft-cats-comment.md
+  description: 'added: .changeset/soft-cats-comment.md (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/src/compiler/index.js
+  description: 'modified: packages/svelte/src/compiler/index.js (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/src/compiler/phases/1-parse/index.js
+  description: 'modified: packages/svelte/src/compiler/phases/1-parse/index.js (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/src/compiler/phases/1-parse/read/style.js
+  description: 'modified: packages/svelte/src/compiler/phases/1-parse/read/style.js
+    (+59/-23)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/src/compiler/phases/2-analyze/css/css-analyze.js
+  description: 'modified: packages/svelte/src/compiler/phases/2-analyze/css/css-analyze.js
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/src/compiler/phases/2-analyze/css/css-warn.js
+  description: 'modified: packages/svelte/src/compiler/phases/2-analyze/css/css-warn.js
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/src/compiler/phases/3-transform/css/index.js
+  description: 'modified: packages/svelte/src/compiler/phases/3-transform/css/index.js
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/src/compiler/types/css.d.ts
+  description: 'modified: packages/svelte/src/compiler/types/css.d.ts (+10/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/tests/css-parse.test.ts
+  description: 'modified: packages/svelte/tests/css-parse.test.ts (+13/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/tests/parser-legacy/samples/css/output.json
+  description: 'modified: packages/svelte/tests/parser-legacy/samples/css/output.json
+    (+1/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/tests/parser-legacy/samples/whitespace-after-style-tag/output.json
+  description: 'modified: packages/svelte/tests/parser-legacy/samples/whitespace-after-style-tag/output.json
+    (+1/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/tests/parser-modern/samples/css-nth-syntax/output.json
+  description: 'modified: packages/svelte/tests/parser-modern/samples/css-nth-syntax/output.json
+    (+10/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/tests/parser-modern/samples/css-pseudo-classes/output.json
+  description: 'modified: packages/svelte/tests/parser-modern/samples/css-pseudo-classes/output.json
+    (+167/-6)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/tests/parser-modern/samples/script-style-no-markup/output.json
+  description: 'modified: packages/svelte/tests/parser-modern/samples/script-style-no-markup/output.json
+    (+19/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/tests/parser-modern/samples/semicolon-inside-quotes/output.json
+  description: 'modified: packages/svelte/tests/parser-modern/samples/semicolon-inside-quotes/output.json
+    (+3/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/tests/print/samples/style-comments/input.svelte
+  description: 'added: packages/svelte/tests/print/samples/style-comments/input.svelte
+    (+26/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/tests/print/samples/style-comments/output.svelte
+  description: 'added: packages/svelte/tests/print/samples/style-comments/output.svelte
+    (+28/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/types/index.d.ts
+  description: 'modified: packages/svelte/types/index.d.ts (+10/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 19
+notes: 'Mined from sveltejs/svelte PR #18637. Trigger heuristic applied. Needs review.'

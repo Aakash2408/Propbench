@@ -1,0 +1,146 @@
+id: oss-runtime-129866
+title: Use no-op MD Importer for DIA-backed stacktraces
+family: uncategorized
+date: '2026-07-13'
+author: hoyosjs
+source: github-api-mined
+source_repo: dotnet/runtime
+source_url: https://github.com/dotnet/runtime/pull/129866
+source_pr: 129866
+difficulty: medium
+trigger:
+  package: dotnet/runtime
+  files:
+  - src/coreclr/md/runtime/noopmetadataimport.cpp
+  intent: Use no-op MD Importer for DIA-backed stacktraces
+  diff_summary: 'Primary: src/coreclr/md/runtime/noopmetadataimport.cpp (+158/-0)'
+consequences:
+- package: dotnet/runtime
+  files:
+  - src/coreclr/inc/corpriv.h
+  description: 'modified: src/coreclr/inc/corpriv.h (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/md/runtime/CMakeLists.txt
+  description: 'modified: src/coreclr/md/runtime/CMakeLists.txt (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/vm/ceeload.cpp
+  description: 'modified: src/coreclr/vm/ceeload.cpp (+16/-12)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/tests/Common/helixpublishwitharcade.proj
+  description: 'modified: src/tests/Common/helixpublishwitharcade.proj (+18/-4)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/tests/Common/test_dependencies/test_dependencies.csproj
+  description: 'modified: src/tests/Common/test_dependencies/test_dependencies.csproj
+    (+15/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/tests/Directory.Build.targets
+  description: 'modified: src/tests/Directory.Build.targets (+8/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/tests/Interop/IJW/FixupCallsHostWhenLoaded/FixupCallsHostWhenLoaded.cs
+  description: 'modified: src/tests/Interop/IJW/FixupCallsHostWhenLoaded/FixupCallsHostWhenLoaded.cs
+    (+1/-5)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/tests/Interop/IJW/IjwNativeCallingManagedDll/IjwNativeCallingManagedDll.cpp
+  description: 'modified: src/tests/Interop/IJW/IjwNativeCallingManagedDll/IjwNativeCallingManagedDll.cpp
+    (+9/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/tests/Interop/IJW/ManagedCallingNative/ManagedCallingNative.cs
+  description: 'modified: src/tests/Interop/IJW/ManagedCallingNative/ManagedCallingNative.cs
+    (+1/-5)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/tests/Interop/IJW/NativeCallingManaged/NativeCallingManaged.cs
+  description: 'modified: src/tests/Interop/IJW/NativeCallingManaged/NativeCallingManaged.cs
+    (+40/-6)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/tests/Interop/IJW/NativeCallingManaged/NativeCallingManaged.csproj
+  description: 'modified: src/tests/Interop/IJW/NativeCallingManaged/NativeCallingManaged.csproj
+    (+5/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/tests/Interop/IJW/NativeVarargs/NativeVarargsTest.cs
+  description: 'modified: src/tests/Interop/IJW/NativeVarargs/NativeVarargsTest.cs
+    (+1/-5)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/tests/baseservices/exceptions/fullpdbstacktrace/FullPdbThrower.cs
+  description: 'added: src/tests/baseservices/exceptions/fullpdbstacktrace/FullPdbThrower.cs
+    (+37/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/tests/baseservices/exceptions/fullpdbstacktrace/FullPdbThrower.csproj
+  description: 'added: src/tests/baseservices/exceptions/fullpdbstacktrace/FullPdbThrower.csproj
+    (+19/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 15
+notes: 'Mined from dotnet/runtime PR #129866. Trigger heuristic applied. Needs review.'

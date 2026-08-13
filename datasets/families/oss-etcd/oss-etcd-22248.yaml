@@ -1,0 +1,57 @@
+id: oss-etcd-22248
+title: Expose all Go runtime metrics on /metrics
+family: uncategorized
+date: '2026-08-13'
+author: Jefftree
+source: github-api-mined
+source_repo: etcd-io/etcd
+source_url: https://github.com/etcd-io/etcd/pull/22248
+source_pr: 22248
+difficulty: medium
+trigger:
+  package: etcd-io/etcd
+  files:
+  - server/etcdserver/metrics.go
+  intent: Expose all Go runtime metrics on /metrics
+  diff_summary: 'Primary: server/etcdserver/metrics.go (+21/-0)'
+consequences:
+- package: etcd-io/etcd
+  files:
+  - server/embed/config.go
+  description: 'modified: server/embed/config.go (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: etcd-io/etcd
+  files:
+  - server/embed/etcd.go
+  description: 'modified: server/embed/etcd.go (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: etcd-io/etcd
+  files:
+  - server/etcdmain/help.go
+  description: 'modified: server/etcdmain/help.go (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: etcd-io/etcd
+  files:
+  - tests/e2e/metrics_test.go
+  description: 'modified: tests/e2e/metrics_test.go (+66/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from etcd-io/etcd PR #22248. Trigger heuristic applied. Needs review.'

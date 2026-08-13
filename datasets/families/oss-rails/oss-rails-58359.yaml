@@ -1,0 +1,58 @@
+id: oss-rails-58359
+title: Allow to configure ERB options through `ActionView::Base`
+family: uncategorized
+date: '2026-08-07'
+author: Edouard-chin
+source: github-api-mined
+source_repo: rails/rails
+source_url: https://github.com/rails/rails/pull/58359
+source_pr: 58359
+difficulty: medium
+trigger:
+  package: rails/rails
+  files:
+  - actionview/lib/action_view/base.rb
+  intent: Allow to configure ERB options through `ActionView::Base`
+  diff_summary: 'Primary: actionview/lib/action_view/base.rb (+21/-1)'
+consequences:
+- package: rails/rails
+  files:
+  - actionview/lib/action_view/railtie.rb
+  description: 'modified: actionview/lib/action_view/railtie.rb (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - actionview/test/actionpack/abstract/abstract_controller_test.rb
+  description: 'modified: actionview/test/actionpack/abstract/abstract_controller_test.rb
+    (+56/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - guides/source/configuring.md
+  description: 'modified: guides/source/configuring.md (+12/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - railties/test/application/configuration_test.rb
+  description: 'modified: railties/test/application/configuration_test.rb (+9/-7)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from rails/rails PR #58359. Trigger heuristic applied. Needs review.'

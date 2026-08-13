@@ -1,0 +1,171 @@
+id: oss-rust-145108
+title: 'Resolver: Batched Import Resolution'
+family: bugfix
+date: '2026-06-08'
+author: LorrensP-2158466
+source: github-api-mined
+source_repo: rust-lang/rust
+source_url: https://github.com/rust-lang/rust/pull/145108
+source_pr: 145108
+difficulty: medium
+trigger:
+  package: rust-lang/rust
+  files:
+  - compiler/rustc_resolve/src/imports.rs
+  intent: 'Resolver: Batched Import Resolution'
+  diff_summary: 'Primary: compiler/rustc_resolve/src/imports.rs (+231/-124)'
+consequences:
+- package: rust-lang/rust
+  files:
+  - compiler/rustc_resolve/src/lib.rs
+  description: 'modified: compiler/rustc_resolve/src/lib.rs (+21/-14)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - compiler/rustc_span/src/symbol.rs
+  description: 'modified: compiler/rustc_span/src/symbol.rs (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - library/stdarch/crates/core_arch/src/aarch64/sve/generated.rs
+  description: 'modified: library/stdarch/crates/core_arch/src/aarch64/sve/generated.rs
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - library/stdarch/crates/stdarch-gen-arm/src/main.rs
+  description: 'modified: library/stdarch/crates/stdarch-gen-arm/src/main.rs (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - src/tools/rust-analyzer/crates/hir-ty/src/mir/lower/as_place.rs
+  description: 'modified: src/tools/rust-analyzer/crates/hir-ty/src/mir/lower/as_place.rs
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/imports/ambiguous-14.rs
+  description: 'modified: tests/ui/imports/ambiguous-14.rs (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/imports/ambiguous-14.stderr
+  description: 'modified: tests/ui/imports/ambiguous-14.stderr (+5/-31)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/imports/ambiguous-9.rs
+  description: 'modified: tests/ui/imports/ambiguous-9.rs (+4/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/imports/ambiguous-9.stderr
+  description: 'modified: tests/ui/imports/ambiguous-9.stderr (+12/-40)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/imports/duplicate.rs
+  description: 'modified: tests/ui/imports/duplicate.rs (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/imports/duplicate.stderr
+  description: 'modified: tests/ui/imports/duplicate.stderr (+22/-49)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/imports/import-loop-2.rs
+  description: 'modified: tests/ui/imports/import-loop-2.rs (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/imports/import-loop-2.stderr
+  description: 'modified: tests/ui/imports/import-loop-2.stderr (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/imports/import4.rs
+  description: 'modified: tests/ui/imports/import4.rs (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/imports/import4.stderr
+  description: 'modified: tests/ui/imports/import4.stderr (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/imports/same-res-ambigious.fail.stderr
+  description: 'removed: tests/ui/imports/same-res-ambigious.fail.stderr (+0/-20)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/imports/same-res-ambigious.rs
+  description: 'modified: tests/ui/imports/same-res-ambigious.rs (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/privacy/privacy1.stderr
+  description: 'modified: tests/ui/privacy/privacy1.stderr (+12/-12)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 19
+notes: 'Mined from rust-lang/rust PR #145108. Trigger heuristic applied. Needs review.'

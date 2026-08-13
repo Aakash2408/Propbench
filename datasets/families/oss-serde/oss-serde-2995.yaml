@@ -1,0 +1,41 @@
+id: oss-serde-2995
+title: Workaround for RUSTDOCFLAGS='--cfg=docsrs'
+family: uncategorized
+date: '2025-09-27'
+author: dtolnay
+source: github-api-mined
+source_repo: serde-rs/serde
+source_url: https://github.com/serde-rs/serde/pull/2995
+source_pr: 2995
+difficulty: medium
+trigger:
+  package: serde-rs/serde
+  files:
+  - serde_core/src/crate_root.rs
+  intent: Workaround for RUSTDOCFLAGS='--cfg=docsrs'
+  diff_summary: 'Primary: serde_core/src/crate_root.rs (+8/-5)'
+consequences:
+- package: serde-rs/serde
+  files:
+  - serde/build.rs
+  description: 'modified: serde/build.rs (+2/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: serde-rs/serde
+  files:
+  - serde_core/build.rs
+  description: 'modified: serde_core/build.rs (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from serde-rs/serde PR #2995. Trigger heuristic applied. Needs review.'

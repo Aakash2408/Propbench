@@ -1,0 +1,106 @@
+id: oss-ktor-5754
+title: KTOR-9585 Fix schema title trimming
+family: interface-evolution
+date: '2026-07-29'
+author: bjhham
+source: github-api-mined
+source_repo: ktorio/ktor
+source_url: https://github.com/ktorio/ktor/pull/5754
+source_pr: 5754
+difficulty: medium
+trigger:
+  package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-plugins/ktor-server-routing-openapi/jvm/test-resources/expected/openapi.json
+  intent: KTOR-9585 Fix schema title trimming
+  diff_summary: 'Primary: ktor-server/ktor-server-plugins/ktor-server-routing-openapi/jvm/test-resources/expected/openapi.json
+    (+8/-8)'
+consequences:
+- package: ktorio/ktor
+  files:
+  - ktor-compiler-plugin/build.gradle.kts
+  description: 'modified: ktor-compiler-plugin/build.gradle.kts (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-compiler-plugin/testData/openapi/KDocOptions.expected.json
+  description: 'modified: ktor-compiler-plugin/testData/openapi/KDocOptions.expected.json
+    (+6/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-compiler-plugin/testData/openapi/MarkdownOptions.expected.json
+  description: 'modified: ktor-compiler-plugin/testData/openapi/MarkdownOptions.expected.json
+    (+6/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-compiler-plugin/testData/openapi/NullableValueClasses.expected.json
+  description: 'modified: ktor-compiler-plugin/testData/openapi/NullableValueClasses.expected.json
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-compiler-plugin/testData/openapi/Resources.expected.json
+  description: 'modified: ktor-compiler-plugin/testData/openapi/Resources.expected.json
+    (+6/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-plugins/ktor-server-routing-openapi/common/src/io/ktor/server/routing/openapi/DescribeRoute.kt
+  description: 'modified: ktor-server/ktor-server-plugins/ktor-server-routing-openapi/common/src/io/ktor/server/routing/openapi/DescribeRoute.kt
+    (+0/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-plugins/ktor-server-routing-openapi/common/src/io/ktor/server/routing/openapi/OpenApiRoutes.kt
+  description: 'modified: ktor-server/ktor-server-plugins/ktor-server-routing-openapi/common/src/io/ktor/server/routing/openapi/OpenApiRoutes.kt
+    (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-plugins/ktor-server-routing-openapi/jvm/test-resources/expected/openapi.yaml
+  description: 'modified: ktor-server/ktor-server-plugins/ktor-server-routing-openapi/jvm/test-resources/expected/openapi.yaml
+    (+8/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-plugins/ktor-server-routing-openapi/jvm/test/io/ktor/server/routing/openapi/DescribeRouteTest.kt
+  description: 'modified: ktor-server/ktor-server-plugins/ktor-server-routing-openapi/jvm/test/io/ktor/server/routing/openapi/DescribeRouteTest.kt
+    (+54/-5)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 10
+notes: 'Mined from ktorio/ktor PR #5754. Trigger heuristic applied. Needs review.'

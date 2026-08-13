@@ -1,0 +1,54 @@
+id: oss-elasticsearch-156568
+title: 'ES|QL: Update command docs for histogram metrics'
+family: uncategorized
+date: '2026-08-13'
+author: JonasKunz
+source: github-api-mined
+source_repo: elastic/elasticsearch
+source_url: https://github.com/elastic/elasticsearch/pull/156568
+source_pr: 156568
+difficulty: medium
+trigger:
+  package: elastic/elasticsearch
+  files:
+  - docs/reference/query-languages/esql/_snippets/commands/layout/ts.md
+  intent: 'ES|QL: Update command docs for histogram metrics'
+  diff_summary: 'Primary: docs/reference/query-languages/esql/_snippets/commands/layout/ts.md
+    (+40/-3)'
+consequences:
+- package: elastic/elasticsearch
+  files:
+  - docs/reference/query-languages/esql/_snippets/commands/layout/metrics-info.md
+  description: 'modified: docs/reference/query-languages/esql/_snippets/commands/layout/metrics-info.md
+    (+4/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - docs/reference/query-languages/esql/_snippets/commands/layout/ts-info.md
+  description: 'modified: docs/reference/query-languages/esql/_snippets/commands/layout/ts-info.md
+    (+4/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - docs/reference/query-languages/esql/functions-operators/time-series-aggregation-functions.md
+  description: 'modified: docs/reference/query-languages/esql/functions-operators/time-series-aggregation-functions.md
+    (+8/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from elastic/elasticsearch PR #156568. Trigger heuristic applied. Needs
+  review.'

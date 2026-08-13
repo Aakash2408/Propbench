@@ -1,0 +1,81 @@
+id: oss-elasticsearch-156592
+title: 'ES|QL: Add internal histogram_fraction function'
+family: interface-evolution
+date: '2026-08-13'
+author: JonasKunz
+source: github-api-mined
+source_repo: elastic/elasticsearch
+source_url: https://github.com/elastic/elasticsearch/pull/156592
+source_pr: 156592
+difficulty: medium
+trigger:
+  package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql/src/main/java/org/elasticsearch/xpack/esql/expression/function/scalar/histogram/HistogramFraction.java
+  intent: 'ES|QL: Add internal histogram_fraction function'
+  diff_summary: 'Primary: x-pack/plugin/esql/src/main/java/org/elasticsearch/xpack/esql/expression/function/scalar/histogram/HistogramFraction.java
+    (+228/-0)'
+consequences:
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql/src/main/generated/org/elasticsearch/xpack/esql/expression/function/scalar/histogram/HistogramFractionExponentialHistogramEvaluator.java
+  description: 'added: x-pack/plugin/esql/src/main/generated/org/elasticsearch/xpack/esql/expression/function/scalar/histogram/HistogramFractionExponentialHistogramEvaluator.java
+    (+152/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql/src/main/generated/org/elasticsearch/xpack/esql/expression/function/scalar/histogram/HistogramFractionTDigestEvaluator.java
+  description: 'added: x-pack/plugin/esql/src/main/generated/org/elasticsearch/xpack/esql/expression/function/scalar/histogram/HistogramFractionTDigestEvaluator.java
+    (+160/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql/src/main/java/org/elasticsearch/xpack/esql/expression/function/scalar/ScalarFunctionWritables.java
+  description: 'modified: x-pack/plugin/esql/src/main/java/org/elasticsearch/xpack/esql/expression/function/scalar/ScalarFunctionWritables.java
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql/src/test/java/org/elasticsearch/xpack/esql/expression/function/scalar/histogram/HistogramFractionErrorTests.java
+  description: 'added: x-pack/plugin/esql/src/test/java/org/elasticsearch/xpack/esql/expression/function/scalar/histogram/HistogramFractionErrorTests.java
+    (+49/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql/src/test/java/org/elasticsearch/xpack/esql/expression/function/scalar/histogram/HistogramFractionSerializationTests.java
+  description: 'added: x-pack/plugin/esql/src/test/java/org/elasticsearch/xpack/esql/expression/function/scalar/histogram/HistogramFractionSerializationTests.java
+    (+39/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql/src/test/java/org/elasticsearch/xpack/esql/expression/function/scalar/histogram/HistogramFractionTests.java
+  description: 'added: x-pack/plugin/esql/src/test/java/org/elasticsearch/xpack/esql/expression/function/scalar/histogram/HistogramFractionTests.java
+    (+273/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from elastic/elasticsearch PR #156592. Trigger heuristic applied. Needs
+  review.'

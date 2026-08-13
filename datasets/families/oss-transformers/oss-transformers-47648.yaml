@@ -1,0 +1,59 @@
+id: oss-transformers-47648
+title: Transform paths and repeat joining for response parsing
+family: uncategorized
+date: '2026-08-11'
+author: Rocketknight1
+source: github-api-mined
+source_repo: huggingface/transformers
+source_url: https://github.com/huggingface/transformers/pull/47648
+source_pr: 47648
+difficulty: medium
+trigger:
+  package: huggingface/transformers
+  files:
+  - tests/utils/test_chat_parsing.py
+  intent: Transform paths and repeat joining for response parsing
+  diff_summary: 'Primary: tests/utils/test_chat_parsing.py (+171/-0)'
+consequences:
+- package: huggingface/transformers
+  files:
+  - docs/source/en/chat_response_parsing.md
+  description: 'modified: docs/source/en/chat_response_parsing.md (+32/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/utils/chat_parsing/content_parsers.py
+  description: 'modified: src/transformers/utils/chat_parsing/content_parsers.py (+15/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/utils/chat_parsing/response_parser.py
+  description: 'modified: src/transformers/utils/chat_parsing/response_parser.py (+9/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/utils/chat_parsing/response_templates.py
+  description: 'modified: src/transformers/utils/chat_parsing/response_templates.py
+    (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from huggingface/transformers PR #47648. Trigger heuristic applied.
+  Needs review.'

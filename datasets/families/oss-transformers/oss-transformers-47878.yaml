@@ -1,0 +1,155 @@
+id: oss-transformers-47878
+title: Add CohereCompass modeling
+family: interface-evolution
+date: '2026-08-10'
+author: calpt
+source: github-api-mined
+source_repo: huggingface/transformers
+source_url: https://github.com/huggingface/transformers/pull/47878
+source_pr: 47878
+difficulty: medium
+trigger:
+  package: huggingface/transformers
+  files:
+  - src/transformers/models/cohere_compass/modeling_cohere_compass.py
+  intent: Add CohereCompass modeling
+  diff_summary: 'Primary: src/transformers/models/cohere_compass/modeling_cohere_compass.py
+    (+1783/-0)'
+consequences:
+- package: huggingface/transformers
+  files:
+  - docs/source/en/_toctree.yml
+  description: 'modified: docs/source/en/_toctree.yml (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - docs/source/en/model_doc/cohere_compass.md
+  description: 'added: docs/source/en/model_doc/cohere_compass.md (+138/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/__init__.py
+  description: 'modified: src/transformers/models/__init__.py (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/auto/auto_mappings.py
+  description: 'modified: src/transformers/models/auto/auto_mappings.py (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/auto/modeling_auto.py
+  description: 'modified: src/transformers/models/auto/modeling_auto.py (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/cohere_compass/__init__.py
+  description: 'added: src/transformers/models/cohere_compass/__init__.py (+28/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/cohere_compass/configuration_cohere_compass.py
+  description: 'added: src/transformers/models/cohere_compass/configuration_cohere_compass.py
+    (+183/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/cohere_compass/image_processing_cohere_compass.py
+  description: 'added: src/transformers/models/cohere_compass/image_processing_cohere_compass.py
+    (+282/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/cohere_compass/image_processing_pil_cohere_compass.py
+  description: 'added: src/transformers/models/cohere_compass/image_processing_pil_cohere_compass.py
+    (+275/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/cohere_compass/modular_cohere_compass.py
+  description: 'added: src/transformers/models/cohere_compass/modular_cohere_compass.py
+    (+611/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/cohere_compass/processing_cohere_compass.py
+  description: 'added: src/transformers/models/cohere_compass/processing_cohere_compass.py
+    (+187/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/cohere_compass/video_processing_cohere_compass.py
+  description: 'added: src/transformers/models/cohere_compass/video_processing_cohere_compass.py
+    (+303/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - tests/models/cohere_compass/__init__.py
+  description: 'added: tests/models/cohere_compass/__init__.py (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - tests/models/cohere_compass/test_modeling_cohere_compass.py
+  description: 'added: tests/models/cohere_compass/test_modeling_cohere_compass.py
+    (+391/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - tests/models/cohere_compass/test_processing_cohere_compass.py
+  description: 'added: tests/models/cohere_compass/test_processing_cohere_compass.py
+    (+145/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 16
+notes: 'Mined from huggingface/transformers PR #47878. Trigger heuristic applied.
+  Needs review.'

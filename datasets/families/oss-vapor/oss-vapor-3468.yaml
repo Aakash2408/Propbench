@@ -1,0 +1,178 @@
+id: oss-vapor-3468
+title: Remove unused HTTP server target
+family: refactor
+date: '2026-06-15'
+author: ptoffy
+source: github-api-mined
+source_repo: vapor/vapor
+source_url: https://github.com/vapor/vapor/pull/3468
+source_pr: 3468
+difficulty: medium
+trigger:
+  package: vapor/vapor
+  files:
+  - Sources/HTTPServerNew/Utils/Parser.swift
+  intent: Remove unused HTTP server target
+  diff_summary: 'Primary: Sources/HTTPServerNew/Utils/Parser.swift (+0/-629)'
+consequences:
+- package: vapor/vapor
+  files:
+  - Package.swift
+  description: 'modified: Package.swift (+0/-20)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/HTTPServerNew/AnyAsyncSequence.swift
+  description: 'removed: Sources/HTTPServerNew/AnyAsyncSequence.swift (+0/-55)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/HTTPServerNew/AvailableConnectionsHandler.swift
+  description: 'removed: Sources/HTTPServerNew/AvailableConnectionsHandler.swift (+0/-111)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/HTTPServerNew/BindAddress.swift
+  description: 'removed: Sources/HTTPServerNew/BindAddress.swift (+0/-43)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/HTTPServerNew/HTTP1Channel.swift
+  description: 'removed: Sources/HTTPServerNew/HTTP1Channel.swift (+0/-115)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/HTTPServerNew/HTTPChannelHandler.swift
+  description: 'removed: Sources/HTTPServerNew/HTTPChannelHandler.swift (+0/-94)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/HTTPServerNew/HTTPUserEventHandler.swift
+  description: 'removed: Sources/HTTPServerNew/HTTPUserEventHandler.swift (+0/-85)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/HTTPServerNew/Request.swift
+  description: 'removed: Sources/HTTPServerNew/Request.swift (+0/-97)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/HTTPServerNew/RequestBody.swift
+  description: 'removed: Sources/HTTPServerNew/RequestBody.swift (+0/-375)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/HTTPServerNew/ResponseBodyWriter.swift
+  description: 'removed: Sources/HTTPServerNew/ResponseBodyWriter.swift (+0/-81)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/HTTPServerNew/ResponseWriter.swift
+  description: 'removed: Sources/HTTPServerNew/ResponseWriter.swift (+0/-92)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/HTTPServerNew/Server.swift
+  description: 'removed: Sources/HTTPServerNew/Server.swift (+0/-375)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/HTTPServerNew/ServerChildChannel.swift
+  description: 'removed: Sources/HTTPServerNew/ServerChildChannel.swift (+0/-66)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/HTTPServerNew/ServerConfiguration.swift
+  description: 'removed: Sources/HTTPServerNew/ServerConfiguration.swift (+0/-92)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/HTTPServerNew/TSTLSOptions.swift
+  description: 'removed: Sources/HTTPServerNew/TSTLSOptions.swift (+0/-178)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/HTTPServerNew/Utils/FlatDictionary.swift
+  description: 'removed: Sources/HTTPServerNew/Utils/FlatDictionary.swift (+0/-129)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/HTTPServerNew/Utils/String+rercentEncoding.swift
+  description: 'removed: Sources/HTTPServerNew/Utils/String+rercentEncoding.swift
+    (+0/-122)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/HTTPServerNew/Utils/URI.swift
+  description: 'removed: Sources/HTTPServerNew/Utils/URI.swift (+0/-157)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/HTTPServerNew/Utils/UnsafeTransfer.swift
+  description: 'removed: Sources/HTTPServerNew/Utils/UnsafeTransfer.swift (+0/-32)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 20
+notes: 'Mined from vapor/vapor PR #3468. Trigger heuristic applied. Needs review.'

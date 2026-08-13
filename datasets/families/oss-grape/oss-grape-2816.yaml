@@ -1,0 +1,69 @@
+id: oss-grape-2816
+title: Guard length, same_as and oneof validators against non-hash params (500 → 400)
+family: uncategorized
+date: '2026-07-26'
+author: ericproulx
+source: github-api-mined
+source_repo: ruby-grape/grape
+source_url: https://github.com/ruby-grape/grape/pull/2816
+source_pr: 2816
+difficulty: medium
+trigger:
+  package: ruby-grape/grape
+  files:
+  - lib/grape/validations/validators/length_validator.rb
+  intent: Guard length, same_as and oneof validators against non-hash params (500
+    → 400)
+  diff_summary: 'Primary: lib/grape/validations/validators/length_validator.rb (+2/-0)'
+consequences:
+- package: ruby-grape/grape
+  files:
+  - lib/grape/validations/validators/oneof_validator.rb
+  description: 'modified: lib/grape/validations/validators/oneof_validator.rb (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - lib/grape/validations/validators/same_as_validator.rb
+  description: 'modified: lib/grape/validations/validators/same_as_validator.rb (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - spec/grape/validations/validators/length_validator_spec.rb
+  description: 'modified: spec/grape/validations/validators/length_validator_spec.rb
+    (+20/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - spec/grape/validations/validators/oneof_validator_spec.rb
+  description: 'modified: spec/grape/validations/validators/oneof_validator_spec.rb
+    (+20/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - spec/grape/validations/validators/same_as_validator_spec.rb
+  description: 'modified: spec/grape/validations/validators/same_as_validator_spec.rb
+    (+20/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from ruby-grape/grape PR #2816. Trigger heuristic applied. Needs review.'

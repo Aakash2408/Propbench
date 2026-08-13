@@ -1,0 +1,129 @@
+id: oss-devise-4829
+title: Make secure_compare handle empty strings comparison correctly
+family: uncategorized
+date: '2018-05-09'
+author: shrirambalakrishnan
+source: github-api-mined
+source_repo: heartcombo/devise
+source_url: https://github.com/heartcombo/devise/pull/4829
+source_pr: 4829
+difficulty: medium
+trigger:
+  package: heartcombo/devise
+  files:
+  - lib/devise/models/authenticatable.rb
+  intent: Make secure_compare handle empty strings comparison correctly
+  diff_summary: 'Primary: lib/devise/models/authenticatable.rb (+31/-24)'
+consequences:
+- package: heartcombo/devise
+  files:
+  - guides/bug_report_templates/integration_test.rb
+  description: 'modified: guides/bug_report_templates/integration_test.rb (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - lib/devise.rb
+  description: 'modified: lib/devise.rb (+2/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - lib/devise/failure_app.rb
+  description: 'modified: lib/devise/failure_app.rb (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - lib/devise/models/database_authenticatable.rb
+  description: 'modified: lib/devise/models/database_authenticatable.rb (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - lib/generators/templates/devise.rb
+  description: 'modified: lib/generators/templates/devise.rb (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - test/devise_test.rb
+  description: 'modified: test/devise_test.rb (+4/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - test/failure_app_test.rb
+  description: 'modified: test/failure_app_test.rb (+6/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - test/integration/confirmable_test.rb
+  description: 'modified: test/integration/confirmable_test.rb (+5/-5)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - test/mailers/email_changed_test.rb
+  description: 'modified: test/mailers/email_changed_test.rb (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - test/models/confirmable_test.rb
+  description: 'modified: test/models/confirmable_test.rb (+14/-14)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - test/models/database_authenticatable_test.rb
+  description: 'modified: test/models/database_authenticatable_test.rb (+3/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - test/rails_app/config/initializers/devise.rb
+  description: 'modified: test/rails_app/config/initializers/devise.rb (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - test/rails_app/lib/lazy_load_test_module.rb
+  description: 'added: test/rails_app/lib/lazy_load_test_module.rb (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 14
+notes: 'Mined from heartcombo/devise PR #4829. Trigger heuristic applied. Needs review.'

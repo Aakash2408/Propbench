@@ -1,0 +1,49 @@
+id: oss-aspnetcore-68472
+title: Bump the JobMonitor
+family: dependency-evolution
+date: '2026-08-13'
+author: premun
+source: github-api-mined
+source_repo: dotnet/aspnetcore
+source_url: https://github.com/dotnet/aspnetcore/pull/68472
+source_pr: 68472
+difficulty: medium
+trigger:
+  package: dotnet/aspnetcore
+  files:
+  - eng/common/core-templates/job/helix-job-monitor.yml
+  intent: Bump the JobMonitor
+  diff_summary: 'Primary: eng/common/core-templates/job/helix-job-monitor.yml (+13/-0)'
+consequences:
+- package: dotnet/aspnetcore
+  files:
+  - .config/dotnet-tools.json
+  description: 'modified: .config/dotnet-tools.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - eng/Version.Details.props
+  description: 'modified: eng/Version.Details.props (+4/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - eng/Version.Details.xml
+  description: 'modified: eng/Version.Details.xml (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from dotnet/aspnetcore PR #68472. Trigger heuristic applied. Needs review.'

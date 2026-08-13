@@ -1,0 +1,50 @@
+id: oss-alamofire-4029
+title: Add FreeBSD compilation support
+family: interface-evolution
+date: '2026-04-14'
+author: hoanga
+source: github-api-mined
+source_repo: Alamofire/Alamofire
+source_url: https://github.com/Alamofire/Alamofire/pull/4029
+source_pr: 4029
+difficulty: medium
+trigger:
+  package: Alamofire/Alamofire
+  files:
+  - Source/Features/Combine.swift
+  intent: Add FreeBSD compilation support
+  diff_summary: 'Primary: Source/Features/Combine.swift (+1/-1)'
+consequences:
+- package: Alamofire/Alamofire
+  files:
+  - Source/Features/MultipartFormData.swift
+  description: 'modified: Source/Features/MultipartFormData.swift (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Tests/ResponseSerializationTests.swift
+  description: 'modified: Tests/ResponseSerializationTests.swift (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Tests/SessionTests.swift
+  description: 'modified: Tests/SessionTests.swift (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from Alamofire/Alamofire PR #4029. Trigger heuristic applied. Needs
+  review.'

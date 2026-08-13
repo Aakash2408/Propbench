@@ -1,0 +1,85 @@
+id: oss-abp-25864
+title: Document existing-solution Low-Code integration
+family: uncategorized
+date: '2026-08-05'
+author: salihozkara
+source: github-api-mined
+source_repo: abpframework/abp
+source_url: https://github.com/abpframework/abp/pull/25864
+source_pr: 25864
+difficulty: medium
+trigger:
+  package: abpframework/abp
+  files:
+  - docs/en/low-code/non-react-ui-integration.md
+  intent: Document existing-solution Low-Code integration
+  diff_summary: 'Primary: docs/en/low-code/non-react-ui-integration.md (+1133/-0)'
+consequences:
+- package: abpframework/abp
+  files:
+  - docs/en/docs-nav.json
+  description: 'modified: docs/en/docs-nav.json (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - docs/en/low-code/add-to-existing-solution.md
+  description: 'added: docs/en/low-code/add-to-existing-solution.md (+620/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - docs/en/low-code/images/existing-solution-import-module.png
+  description: 'added: docs/en/low-code/images/existing-solution-import-module.png
+    (+0/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - docs/en/low-code/images/existing-solution-install-module.png
+  description: 'added: docs/en/low-code/images/existing-solution-install-module.png
+    (+0/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - docs/en/low-code/images/existing-solution-package-selection.png
+  description: 'added: docs/en/low-code/images/existing-solution-package-selection.png
+    (+0/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - docs/en/low-code/images/existing-solution-select-lowcode.png
+  description: 'added: docs/en/low-code/images/existing-solution-select-lowcode.png
+    (+0/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - docs/en/low-code/index.md
+  description: 'modified: docs/en/low-code/index.md (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 8
+notes: 'Mined from abpframework/abp PR #25864. Trigger heuristic applied. Needs review.'

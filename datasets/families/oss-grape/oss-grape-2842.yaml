@@ -1,0 +1,41 @@
+id: oss-grape-2842
+title: Warn when a rescue_from handler can never run
+family: uncategorized
+date: '2026-08-02'
+author: ericproulx
+source: github-api-mined
+source_repo: ruby-grape/grape
+source_url: https://github.com/ruby-grape/grape/pull/2842
+source_pr: 2842
+difficulty: medium
+trigger:
+  package: ruby-grape/grape
+  files:
+  - lib/grape/util/shadowed_rescue_handlers.rb
+  intent: Warn when a rescue_from handler can never run
+  diff_summary: 'Primary: lib/grape/util/shadowed_rescue_handlers.rb (+49/-0)'
+consequences:
+- package: ruby-grape/grape
+  files:
+  - lib/grape/util/inheritable_setting.rb
+  description: 'modified: lib/grape/util/inheritable_setting.rb (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - spec/grape/util/inheritable_setting_spec.rb
+  description: 'modified: spec/grape/util/inheritable_setting_spec.rb (+56/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from ruby-grape/grape PR #2842. Trigger heuristic applied. Needs review.'

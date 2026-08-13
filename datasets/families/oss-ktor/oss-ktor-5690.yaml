@@ -1,0 +1,169 @@
+id: oss-ktor-5690
+title: Memory allocations improvements in routing
+family: uncategorized
+date: '2026-08-12'
+author: bjhham
+source: github-api-mined
+source_repo: ktorio/ktor
+source_url: https://github.com/ktorio/ktor/pull/5690
+source_pr: 5690
+difficulty: medium
+trigger:
+  package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-core/common/src/io/ktor/server/routing/RoutingPathTree.kt
+  intent: Memory allocations improvements in routing
+  diff_summary: 'Primary: ktor-server/ktor-server-core/common/src/io/ktor/server/routing/RoutingPathTree.kt
+    (+331/-0)'
+consequences:
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-core/api/ktor-server-core.api
+  description: 'modified: ktor-server/ktor-server-core/api/ktor-server-core.api (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-core/api/ktor-server-core.klib.api
+  description: 'modified: ktor-server/ktor-server-core/api/ktor-server-core.klib.api
+    (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-core/common/src/io/ktor/server/routing/HostsRoutingBuilder.kt
+  description: 'modified: ktor-server/ktor-server-core/common/src/io/ktor/server/routing/HostsRoutingBuilder.kt
+    (+4/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-core/common/src/io/ktor/server/routing/LocalPortRoutingBuilder.kt
+  description: 'modified: ktor-server/ktor-server-core/common/src/io/ktor/server/routing/LocalPortRoutingBuilder.kt
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-core/common/src/io/ktor/server/routing/RegexRouting.kt
+  description: 'modified: ktor-server/ktor-server-core/common/src/io/ktor/server/routing/RegexRouting.kt
+    (+5/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-core/common/src/io/ktor/server/routing/RouteSelector.kt
+  description: 'modified: ktor-server/ktor-server-core/common/src/io/ktor/server/routing/RouteSelector.kt
+    (+135/-20)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-core/common/src/io/ktor/server/routing/RoutingResolveContext.kt
+  description: 'modified: ktor-server/ktor-server-core/common/src/io/ktor/server/routing/RoutingResolveContext.kt
+    (+122/-40)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-core/common/src/io/ktor/server/routing/RoutingRoot.kt
+  description: 'modified: ktor-server/ktor-server-core/common/src/io/ktor/server/routing/RoutingRoot.kt
+    (+21/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-core/common/src/io/ktor/server/routing/SegmentedPath.kt
+  description: 'added: ktor-server/ktor-server-core/common/src/io/ktor/server/routing/SegmentedPath.kt
+    (+162/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-core/jvm/src/io/ktor/server/http/content/StaticContent.kt
+  description: 'modified: ktor-server/ktor-server-core/jvm/src/io/ktor/server/http/content/StaticContent.kt
+    (+5/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-netty/jvm/test/io/ktor/tests/server/netty/NettySpecificTest.kt
+  description: 'modified: ktor-server/ktor-server-netty/jvm/test/io/ktor/tests/server/netty/NettySpecificTest.kt
+    (+2/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-plugins/ktor-server-auth/api/ktor-server-auth.api
+  description: 'modified: ktor-server/ktor-server-plugins/ktor-server-auth/api/ktor-server-auth.api
+    (+1/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-plugins/ktor-server-auth/api/ktor-server-auth.klib.api
+  description: 'modified: ktor-server/ktor-server-plugins/ktor-server-auth/api/ktor-server-auth.klib.api
+    (+1/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-plugins/ktor-server-auth/common/src/io/ktor/server/auth/AuthenticationInterceptors.kt
+  description: 'modified: ktor-server/ktor-server-plugins/ktor-server-auth/common/src/io/ktor/server/auth/AuthenticationInterceptors.kt
+    (+2/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-tests/common/test/io/ktor/tests/server/routing/RoutingFastPathTest.kt
+  description: 'added: ktor-server/ktor-server-tests/common/test/io/ktor/tests/server/routing/RoutingFastPathTest.kt
+    (+375/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-tests/jvm/test/io/ktor/tests/server/routing/RoutingFastPathJvmTest.kt
+  description: 'added: ktor-server/ktor-server-tests/jvm/test/io/ktor/tests/server/routing/RoutingFastPathJvmTest.kt
+    (+30/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 17
+notes: 'Mined from ktorio/ktor PR #5690. Trigger heuristic applied. Needs review.'

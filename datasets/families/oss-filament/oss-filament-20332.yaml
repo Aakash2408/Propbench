@@ -1,0 +1,68 @@
+id: oss-filament-20332
+title: 'i18n: improve Arabic pluralization and add missing keys in actions, panels,
+  notifications, and widge'
+family: interface-evolution
+date: '2026-08-07'
+author: hamdyelbatal122
+source: github-api-mined
+source_repo: filamentphp/filament
+source_url: https://github.com/filamentphp/filament/pull/20332
+source_pr: 20332
+difficulty: medium
+trigger:
+  package: filamentphp/filament
+  files:
+  - packages/panels/resources/lang/ar/layout.php
+  intent: 'i18n: improve Arabic pluralization and add missing keys in actions, panels,
+    notifications, and widgets'
+  diff_summary: 'Primary: packages/panels/resources/lang/ar/layout.php (+15/-6)'
+consequences:
+- package: filamentphp/filament
+  files:
+  - packages/actions/resources/lang/ar/delete.php
+  description: 'modified: packages/actions/resources/lang/ar/delete.php (+5/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: filamentphp/filament
+  files:
+  - packages/actions/resources/lang/ar/force-delete.php
+  description: 'modified: packages/actions/resources/lang/ar/force-delete.php (+5/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: filamentphp/filament
+  files:
+  - packages/actions/resources/lang/ar/restore.php
+  description: 'modified: packages/actions/resources/lang/ar/restore.php (+5/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: filamentphp/filament
+  files:
+  - packages/notifications/resources/lang/ar/database.php
+  description: 'modified: packages/notifications/resources/lang/ar/database.php (+2/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: filamentphp/filament
+  files:
+  - packages/widgets/resources/lang/ar/chart.php
+  description: 'modified: packages/widgets/resources/lang/ar/chart.php (+5/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from filamentphp/filament PR #20332. Trigger heuristic applied. Needs
+  review.'

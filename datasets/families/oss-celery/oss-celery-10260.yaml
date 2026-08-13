@@ -1,0 +1,97 @@
+id: oss-celery-10260
+title: Add missing stacklevel=2 to 12 warnings.warn() calls
+family: interface-evolution
+date: '2026-04-23'
+author: stef41
+source: github-api-mined
+source_repo: celery/celery
+source_url: https://github.com/celery/celery/pull/10260
+source_pr: 10260
+difficulty: medium
+trigger:
+  package: celery/celery
+  files:
+  - celery/platforms.py
+  intent: Add missing stacklevel=2 to 12 warnings.warn() calls
+  diff_summary: 'Primary: celery/platforms.py (+4/-2)'
+consequences:
+- package: celery/celery
+  files:
+  - celery/app/control.py
+  description: 'modified: celery/app/control.py (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: celery/celery
+  files:
+  - celery/backends/base.py
+  description: 'modified: celery/backends/base.py (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: celery/celery
+  files:
+  - celery/canvas.py
+  description: 'modified: celery/canvas.py (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: celery/celery
+  files:
+  - celery/concurrency/eventlet.py
+  description: 'modified: celery/concurrency/eventlet.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: celery/celery
+  files:
+  - celery/fixups/django.py
+  description: 'modified: celery/fixups/django.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: celery/celery
+  files:
+  - celery/loaders/default.py
+  description: 'modified: celery/loaders/default.py (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: celery/celery
+  files:
+  - celery/utils/imports.py
+  description: 'modified: celery/utils/imports.py (+1/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: celery/celery
+  files:
+  - celery/worker/components.py
+  description: 'modified: celery/worker/components.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: celery/celery
+  files:
+  - celery/worker/consumer/consumer.py
+  description: 'modified: celery/worker/consumer/consumer.py (+3/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 10
+notes: 'Mined from celery/celery PR #10260. Trigger heuristic applied. Needs review.'

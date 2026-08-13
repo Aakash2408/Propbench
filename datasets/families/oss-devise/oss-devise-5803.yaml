@@ -1,0 +1,65 @@
+id: oss-devise-5803
+title: Remove deprecated stuff
+family: dependency-evolution
+date: '2025-10-31'
+author: carlosantoniodasilva
+source: github-api-mined
+source_repo: heartcombo/devise
+source_url: https://github.com/heartcombo/devise/pull/5803
+source_pr: 5803
+difficulty: medium
+trigger:
+  package: heartcombo/devise
+  files:
+  - app/helpers/devise_helper.rb
+  intent: Remove deprecated stuff
+  diff_summary: 'Primary: app/helpers/devise_helper.rb (+1/-26)'
+consequences:
+- package: heartcombo/devise
+  files:
+  - lib/devise.rb
+  description: 'modified: lib/devise.rb (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - lib/devise/controllers/sign_in_out.rb
+  description: 'modified: lib/devise/controllers/sign_in_out.rb (+1/-10)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - lib/devise/test/controller_helpers.rb
+  description: 'modified: lib/devise/test/controller_helpers.rb (+1/-11)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - lib/devise/test_helpers.rb
+  description: 'removed: lib/devise/test_helpers.rb (+0/-15)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - test/controllers/custom_strategy_test.rb
+  description: 'modified: test/controllers/custom_strategy_test.rb (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from heartcombo/devise PR #5803. Trigger heuristic applied. Needs review.'

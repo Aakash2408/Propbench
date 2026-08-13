@@ -1,0 +1,68 @@
+id: oss-trpc-7191
+title: 'feat(server): max batch size'
+family: uncategorized
+date: '2026-03-23'
+author: Nick-Lucas
+source: github-api-mined
+source_repo: trpc/trpc
+source_url: https://github.com/trpc/trpc/pull/7191
+source_pr: 7191
+difficulty: medium
+trigger:
+  package: trpc/trpc
+  files:
+  - www/docs/client/links/httpBatchLink.md
+  intent: 'feat(server): max batch size'
+  diff_summary: 'Primary: www/docs/client/links/httpBatchLink.md (+41/-0)'
+consequences:
+- package: trpc/trpc
+  files:
+  - packages/server/src/unstable-core-do-not-import/http/contentType.ts
+  description: 'modified: packages/server/src/unstable-core-do-not-import/http/contentType.ts
+    (+13/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: trpc/trpc
+  files:
+  - packages/server/src/unstable-core-do-not-import/http/resolveResponse.ts
+  description: 'modified: packages/server/src/unstable-core-do-not-import/http/resolveResponse.ts
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: trpc/trpc
+  files:
+  - packages/server/src/unstable-core-do-not-import/http/types.ts
+  description: 'modified: packages/server/src/unstable-core-do-not-import/http/types.ts
+    (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: trpc/trpc
+  files:
+  - packages/tests/server/adapters/standalone.test.ts
+  description: 'modified: packages/tests/server/adapters/standalone.test.ts (+24/-16)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: trpc/trpc
+  files:
+  - www/docs/server/context.md
+  description: 'modified: www/docs/server/context.md (+0/-24)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from trpc/trpc PR #7191. Trigger heuristic applied. Needs review.'

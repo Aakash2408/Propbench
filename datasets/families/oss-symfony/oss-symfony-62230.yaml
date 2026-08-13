@@ -1,0 +1,116 @@
+id: oss-symfony-62230
+title: '[Messenger] Support signing messages per handler'
+family: interface-evolution
+date: '2025-11-01'
+author: nicolas-grekas
+source: github-api-mined
+source_repo: symfony/symfony
+source_url: https://github.com/symfony/symfony/pull/62230
+source_pr: 62230
+difficulty: medium
+trigger:
+  package: symfony/symfony
+  files:
+  - src/Symfony/Component/Messenger/Transport/Serialization/SigningSerializer.php
+  intent: '[Messenger] Support signing messages per handler'
+  diff_summary: 'Primary: src/Symfony/Component/Messenger/Transport/Serialization/SigningSerializer.php
+    (+86/-0)'
+consequences:
+- package: symfony/symfony
+  files:
+  - src/Symfony/Bundle/FrameworkBundle/DependencyInjection/FrameworkExtension.php
+  description: 'modified: src/Symfony/Bundle/FrameworkBundle/DependencyInjection/FrameworkExtension.php
+    (+20/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Bundle/FrameworkBundle/Resources/config/console.php
+  description: 'modified: src/Symfony/Bundle/FrameworkBundle/Resources/config/console.php
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Bundle/FrameworkBundle/Resources/config/messenger.php
+  description: 'modified: src/Symfony/Bundle/FrameworkBundle/Resources/config/messenger.php
+    (+19/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Bundle/FrameworkBundle/Resources/config/process.php
+  description: 'modified: src/Symfony/Bundle/FrameworkBundle/Resources/config/process.php
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Bundle/FrameworkBundle/Tests/DependencyInjection/PhpFrameworkExtensionTest.php
+  description: 'modified: src/Symfony/Bundle/FrameworkBundle/Tests/DependencyInjection/PhpFrameworkExtensionTest.php
+    (+35/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Messenger/Attribute/AsMessageHandler.php
+  description: 'modified: src/Symfony/Component/Messenger/Attribute/AsMessageHandler.php
+    (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Messenger/DependencyInjection/MessengerPass.php
+  description: 'modified: src/Symfony/Component/Messenger/DependencyInjection/MessengerPass.php
+    (+26/-9)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Messenger/Exception/InvalidMessageSignatureException.php
+  description: 'added: src/Symfony/Component/Messenger/Exception/InvalidMessageSignatureException.php
+    (+16/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Messenger/Tests/DependencyInjection/MessengerPassTest.php
+  description: 'modified: src/Symfony/Component/Messenger/Tests/DependencyInjection/MessengerPassTest.php
+    (+104/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Messenger/Tests/Transport/Serialization/SigningSerializerTest.php
+  description: 'added: src/Symfony/Component/Messenger/Tests/Transport/Serialization/SigningSerializerTest.php
+    (+114/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 11
+notes: 'Mined from symfony/symfony PR #62230. Trigger heuristic applied. Needs review.'

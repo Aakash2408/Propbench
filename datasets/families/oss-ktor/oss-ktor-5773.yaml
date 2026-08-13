@@ -1,0 +1,80 @@
+id: oss-ktor-5773
+title: KTOR-9302 Keep OpenAPI operation tags as strings
+family: interface-evolution
+date: '2026-07-24'
+author: osipxd
+source: github-api-mined
+source_repo: ktorio/ktor
+source_url: https://github.com/ktorio/ktor/pull/5773
+source_pr: 5773
+difficulty: medium
+trigger:
+  package: ktorio/ktor
+  files:
+  - ktor-shared/ktor-openapi-schema/api/ktor-openapi-schema.klib.api
+  intent: KTOR-9302 Keep OpenAPI operation tags as strings
+  diff_summary: 'Primary: ktor-shared/ktor-openapi-schema/api/ktor-openapi-schema.klib.api
+    (+6/-6)'
+consequences:
+- package: ktorio/ktor
+  files:
+  - ktor-compiler-plugin/testData/openapi/KDocOptions.expected.json
+  description: 'modified: ktor-compiler-plugin/testData/openapi/KDocOptions.expected.json
+    (+10/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-compiler-plugin/testData/openapi/MarkdownOptions.expected.json
+  description: 'modified: ktor-compiler-plugin/testData/openapi/MarkdownOptions.expected.json
+    (+10/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-compiler-plugin/testData/tests/OpenApiTestRunner.kt
+  description: 'modified: ktor-compiler-plugin/testData/tests/OpenApiTestRunner.kt
+    (+19/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-shared/ktor-openapi-schema/api/ktor-openapi-schema.api
+  description: 'modified: ktor-shared/ktor-openapi-schema/api/ktor-openapi-schema.api
+    (+1/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-shared/ktor-openapi-schema/common/src/io/ktor/openapi/Operation.kt
+  description: 'modified: ktor-shared/ktor-openapi-schema/common/src/io/ktor/openapi/Operation.kt
+    (+6/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-shared/ktor-openapi-schema/jvm/test/io/ktor/openapi/OperationSerializationTests.kt
+  description: 'modified: ktor-shared/ktor-openapi-schema/jvm/test/io/ktor/openapi/OperationSerializationTests.kt
+    (+24/-6)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from ktorio/ktor PR #5773. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,58 @@
+id: oss-alamofire-3920
+title: Fix Validator Sendability
+family: bugfix
+date: '2024-11-24'
+author: jshier
+source: github-api-mined
+source_repo: Alamofire/Alamofire
+source_url: https://github.com/Alamofire/Alamofire/pull/3920
+source_pr: 3920
+difficulty: medium
+trigger:
+  package: Alamofire/Alamofire
+  files:
+  - Source/Features/Validation.swift
+  intent: Fix Validator Sendability
+  diff_summary: 'Primary: Source/Features/Validation.swift (+21/-15)'
+consequences:
+- package: Alamofire/Alamofire
+  files:
+  - Source/Core/DataRequest.swift
+  description: 'modified: Source/Core/DataRequest.swift (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Source/Core/DataStreamRequest.swift
+  description: 'modified: Source/Core/DataStreamRequest.swift (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Source/Core/DownloadRequest.swift
+  description: 'modified: Source/Core/DownloadRequest.swift (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Source/Core/Request.swift
+  description: 'modified: Source/Core/Request.swift (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from Alamofire/Alamofire PR #3920. Trigger heuristic applied. Needs
+  review.'

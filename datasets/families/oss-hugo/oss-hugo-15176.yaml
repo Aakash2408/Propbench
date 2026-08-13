@@ -1,0 +1,66 @@
+id: oss-hugo-15176
+title: Misc /static server fixes
+family: bugfix
+date: '2026-08-08'
+author: bep
+source: github-api-mined
+source_repo: gohugoio/hugo
+source_url: https://github.com/gohugoio/hugo/pull/15176
+source_pr: 15176
+difficulty: medium
+trigger:
+  package: gohugoio/hugo
+  files:
+  - testscripts/server/server__delete_static_file_mount.txt
+  intent: Misc /static server fixes
+  diff_summary: 'Primary: testscripts/server/server__delete_static_file_mount.txt
+    (+32/-0)'
+consequences:
+- package: gohugoio/hugo
+  files:
+  - commands/server.go
+  description: 'modified: commands/server.go (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - hugolib/filesystems/basefs.go
+  description: 'modified: hugolib/filesystems/basefs.go (+3/-9)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - hugolib/hugo_sites_build.go
+  description: 'modified: hugolib/hugo_sites_build.go (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - testscripts/server/server__delete_static_file_publish.txt
+  description: 'added: testscripts/server/server__delete_static_file_publish.txt (+26/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - testscripts/server/server__delete_static_mount_dir.txt
+  description: 'added: testscripts/server/server__delete_static_mount_dir.txt (+32/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from gohugoio/hugo PR #15176. Trigger heuristic applied. Needs review.'

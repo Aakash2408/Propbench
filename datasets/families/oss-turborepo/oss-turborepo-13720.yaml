@@ -1,0 +1,65 @@
+id: oss-turborepo-13720
+title: 'feat: Add pytest task discovery'
+family: interface-evolution
+date: '2026-08-12'
+author: anthonyshew
+source: github-api-mined
+source_repo: vercel/turborepo
+source_url: https://github.com/vercel/turborepo/pull/13720
+source_pr: 13720
+difficulty: medium
+trigger:
+  package: vercel/turborepo
+  files:
+  - crates/turborepo-repository/src/uv.rs
+  intent: 'feat: Add pytest task discovery'
+  diff_summary: 'Primary: crates/turborepo-repository/src/uv.rs (+286/-43)'
+consequences:
+- package: vercel/turborepo
+  files:
+  - apps/docs/content/docs/guides/tools/python.mdx
+  description: 'modified: apps/docs/content/docs/guides/tools/python.mdx (+22/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - crates/turborepo-schema-gen/src/main.rs
+  description: 'modified: crates/turborepo-schema-gen/src/main.rs (+4/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - crates/turborepo/ARCHITECTURE.md
+  description: 'modified: crates/turborepo/ARCHITECTURE.md (+20/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - crates/turborepo/tests/uv_workspace_test.rs
+  description: 'modified: crates/turborepo/tests/uv_workspace_test.rs (+106/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - packages/turbo-types/src/types/config-v2.ts
+  description: 'modified: packages/turbo-types/src/types/config-v2.ts (+4/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from vercel/turborepo PR #13720. Trigger heuristic applied. Needs review.'

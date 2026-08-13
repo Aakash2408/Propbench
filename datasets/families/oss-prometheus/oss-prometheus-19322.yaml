@@ -1,0 +1,58 @@
+id: oss-prometheus-19322
+title: Prepare 3.14.0-rc.0
+family: uncategorized
+date: '2026-08-10'
+author: machine424
+source: github-api-mined
+source_repo: prometheus/prometheus
+source_url: https://github.com/prometheus/prometheus/pull/19322
+source_pr: 19322
+difficulty: medium
+trigger:
+  package: prometheus/prometheus
+  files:
+  - VERSION
+  intent: Prepare 3.14.0-rc.0
+  diff_summary: 'Primary: VERSION (+1/-1)'
+consequences:
+- package: prometheus/prometheus
+  files:
+  - web/ui/mantine-ui/package.json
+  description: 'modified: web/ui/mantine-ui/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prometheus/prometheus
+  files:
+  - web/ui/module/codemirror-promql/package.json
+  description: 'modified: web/ui/module/codemirror-promql/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prometheus/prometheus
+  files:
+  - web/ui/module/lezer-promql/package.json
+  description: 'modified: web/ui/module/lezer-promql/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prometheus/prometheus
+  files:
+  - web/ui/package.json
+  description: 'modified: web/ui/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from prometheus/prometheus PR #19322. Trigger heuristic applied. Needs
+  review.'

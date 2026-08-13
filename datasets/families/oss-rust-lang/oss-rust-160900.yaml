@@ -1,0 +1,93 @@
+id: oss-rust-160900
+title: Ensure that restriction paths are ancestors
+family: uncategorized
+date: '2026-08-12'
+author: CoCo-Japan-pan
+source: github-api-mined
+source_repo: rust-lang/rust
+source_url: https://github.com/rust-lang/rust/pull/160900
+source_pr: 160900
+difficulty: medium
+trigger:
+  package: rust-lang/rust
+  files:
+  - tests/ui/impl-restriction/restriction_resolution_errors.stderr
+  intent: Ensure that restriction paths are ancestors
+  diff_summary: 'Primary: tests/ui/impl-restriction/restriction_resolution_errors.stderr
+    (+60/-60)'
+consequences:
+- package: rust-lang/rust
+  files:
+  - compiler/rustc_ast_lowering/src/diagnostics.rs
+  description: 'modified: compiler/rustc_ast_lowering/src/diagnostics.rs (+31/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - compiler/rustc_ast_lowering/src/item.rs
+  description: 'modified: compiler/rustc_ast_lowering/src/item.rs (+43/-21)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - compiler/rustc_hir/src/hir.rs
+  description: 'modified: compiler/rustc_hir/src/hir.rs (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - compiler/rustc_resolve/src/diagnostics/mod.rs
+  description: 'modified: compiler/rustc_resolve/src/diagnostics/mod.rs (+1/-14)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - compiler/rustc_resolve/src/late.rs
+  description: 'modified: compiler/rustc_resolve/src/late.rs (+3/-43)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/mut-restriction/restriction-resolution-errors.stderr
+  description: 'modified: tests/ui/mut-restriction/restriction-resolution-errors.stderr
+    (+42/-42)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/mut-restriction/stricter-of-non-ancestor-160873.rs
+  description: 'added: tests/ui/mut-restriction/stricter-of-non-ancestor-160873.rs
+    (+17/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rust-lang/rust
+  files:
+  - tests/ui/mut-restriction/stricter-of-non-ancestor-160873.stderr
+  description: 'added: tests/ui/mut-restriction/stricter-of-non-ancestor-160873.stderr
+    (+17/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 9
+notes: 'Mined from rust-lang/rust PR #160900. Trigger heuristic applied. Needs review.'

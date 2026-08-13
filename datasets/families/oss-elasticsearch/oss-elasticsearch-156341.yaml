@@ -1,0 +1,74 @@
+id: oss-elasticsearch-156341
+title: Fixed a bug where FLS-enabled logsdb indices did not filter out the offsets
+  companion field
+family: bugfix
+date: '2026-08-12'
+author: Kubik42
+source: github-api-mined
+source_repo: elastic/elasticsearch
+source_url: https://github.com/elastic/elasticsearch/pull/156341
+source_pr: 156341
+difficulty: medium
+trigger:
+  package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/logsdb/src/javaRestTest/java/org/elasticsearch/xpack/logsdb/qa/StandardVersusLogsdbFieldLevelSecurityChallengeRestIT.java
+  intent: Fixed a bug where FLS-enabled logsdb indices did not filter out the offsets
+    companion field
+  diff_summary: 'Primary: x-pack/plugin/logsdb/src/javaRestTest/java/org/elasticsearch/xpack/logsdb/qa/StandardVersusLogsdbFieldLevelSecurityChallengeRestIT.java
+    (+139/-0)'
+consequences:
+- package: elastic/elasticsearch
+  files:
+  - server/src/main/java/org/elasticsearch/index/mapper/FieldArrayContext.java
+  description: 'modified: server/src/main/java/org/elasticsearch/index/mapper/FieldArrayContext.java
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/core/src/main/java/org/elasticsearch/xpack/core/security/authz/accesscontrol/FieldSubsetReader.java
+  description: 'modified: x-pack/plugin/core/src/main/java/org/elasticsearch/xpack/core/security/authz/accesscontrol/FieldSubsetReader.java
+    (+19/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/core/src/test/java/org/elasticsearch/xpack/core/security/authz/accesscontrol/FieldSubsetReaderTests.java
+  description: 'modified: x-pack/plugin/core/src/test/java/org/elasticsearch/xpack/core/security/authz/accesscontrol/FieldSubsetReaderTests.java
+    (+46/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/src/yamlRestTest/resources/rest-api-spec/test/security/authz_api_keys/30_field_level_security_synthetic_source.yml
+  description: 'modified: x-pack/plugin/src/yamlRestTest/resources/rest-api-spec/test/security/authz_api_keys/30_field_level_security_synthetic_source.yml
+    (+167/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/src/yamlRestTest/resources/rest-api-spec/test/security/authz_api_keys/40_document_level_security_synthetic_source.yml
+  description: 'modified: x-pack/plugin/src/yamlRestTest/resources/rest-api-spec/test/security/authz_api_keys/40_document_level_security_synthetic_source.yml
+    (+161/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from elastic/elasticsearch PR #156341. Trigger heuristic applied. Needs
+  review.'

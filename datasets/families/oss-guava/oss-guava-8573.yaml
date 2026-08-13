@@ -1,0 +1,51 @@
+id: oss-guava-8573
+title: Bump docs and compatibility checking for API Level 24.
+family: dependency-evolution
+date: '2026-07-24'
+author: copybara-service[bot]
+source: github-api-mined
+source_repo: google/guava
+source_url: https://github.com/google/guava/pull/8573
+source_pr: 8573
+difficulty: medium
+trigger:
+  package: google/guava
+  files:
+  - android/pom.xml
+  intent: Bump docs and compatibility checking for API Level 24.
+  diff_summary: 'Primary: android/pom.xml (+3/-3)'
+consequences:
+- package: google/guava
+  files:
+  - android/guava/src/com/google/common/util/concurrent/Runnables.java
+  description: 'modified: android/guava/src/com/google/common/util/concurrent/Runnables.java
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava/src/com/google/common/util/concurrent/Runnables.java
+  description: 'modified: guava/src/com/google/common/util/concurrent/Runnables.java
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - pom.xml
+  description: 'modified: pom.xml (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from google/guava PR #8573. Trigger heuristic applied. Needs review.'

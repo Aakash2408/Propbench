@@ -1,0 +1,41 @@
+id: oss-etcd-22171
+title: Update MinimalEtcdVersion to read latest snapshot entry from WAL
+family: uncategorized
+date: '2026-07-27'
+author: ahrtr
+source: github-api-mined
+source_repo: etcd-io/etcd
+source_url: https://github.com/etcd-io/etcd/pull/22171
+source_pr: 22171
+difficulty: medium
+trigger:
+  package: etcd-io/etcd
+  files:
+  - server/storage/wal/wal.go
+  intent: Update MinimalEtcdVersion to read latest snapshot entry from WAL
+  diff_summary: 'Primary: server/storage/wal/wal.go (+38/-1)'
+consequences:
+- package: etcd-io/etcd
+  files:
+  - server/storage/storage.go
+  description: 'modified: server/storage/storage.go (+3/-10)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: etcd-io/etcd
+  files:
+  - server/storage/wal/wal_test.go
+  description: 'modified: server/storage/wal/wal_test.go (+48/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from etcd-io/etcd PR #22171. Trigger heuristic applied. Needs review.'

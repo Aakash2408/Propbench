@@ -1,0 +1,81 @@
+id: oss-elasticsearch-156546
+title: Use linearCombination and dotProduct where applicable
+family: uncategorized
+date: '2026-08-13'
+author: thecoop
+source: github-api-mined
+source_repo: elastic/elasticsearch
+source_url: https://github.com/elastic/elasticsearch/pull/156546
+source_pr: 156546
+difficulty: medium
+trigger:
+  package: elastic/elasticsearch
+  files:
+  - libs/simdvec/src/main/java/org/elasticsearch/simdvec/ESVectorUtil.java
+  intent: Use linearCombination and dotProduct where applicable
+  diff_summary: 'Primary: libs/simdvec/src/main/java/org/elasticsearch/simdvec/ESVectorUtil.java
+    (+44/-2)'
+consequences:
+- package: elastic/elasticsearch
+  files:
+  - libs/simdvec/src/main/java/org/elasticsearch/simdvec/internal/vectorization/DefaultESVectorUtilSupport.java
+  description: 'modified: libs/simdvec/src/main/java/org/elasticsearch/simdvec/internal/vectorization/DefaultESVectorUtilSupport.java
+    (+14/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - libs/simdvec/src/main/java/org/elasticsearch/simdvec/internal/vectorization/ESVectorUtilSupport.java
+  description: 'modified: libs/simdvec/src/main/java/org/elasticsearch/simdvec/internal/vectorization/ESVectorUtilSupport.java
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - libs/simdvec/src/main/java/org/elasticsearch/simdvec/internal/vectorization/PanamaESVectorUtilSupport.java
+  description: 'modified: libs/simdvec/src/main/java/org/elasticsearch/simdvec/internal/vectorization/PanamaESVectorUtilSupport.java
+    (+22/-18)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - libs/simdvec/src/test/java/org/elasticsearch/simdvec/ESVectorUtilTests.java
+  description: 'modified: libs/simdvec/src/test/java/org/elasticsearch/simdvec/ESVectorUtilTests.java
+    (+20/-21)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - server/src/main/java/org/elasticsearch/index/codec/vectors/ash/AsymmetricHashingQuantizer.java
+  description: 'modified: server/src/main/java/org/elasticsearch/index/codec/vectors/ash/AsymmetricHashingQuantizer.java
+    (+6/-17)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - server/src/main/java/org/elasticsearch/index/codec/vectors/ash/SvdUtil.java
+  description: 'modified: server/src/main/java/org/elasticsearch/index/codec/vectors/ash/SvdUtil.java
+    (+14/-32)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from elastic/elasticsearch PR #156546. Trigger heuristic applied. Needs
+  review.'

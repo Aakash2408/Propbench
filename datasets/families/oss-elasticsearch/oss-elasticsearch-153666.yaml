@@ -1,0 +1,90 @@
+id: oss-elasticsearch-153666
+title: ES|QL:Fix external source IT fixture startup order
+family: bugfix
+date: '2026-07-14'
+author: hawkhuang-collab
+source: github-api-mined
+source_repo: elastic/elasticsearch
+source_url: https://github.com/elastic/elasticsearch/pull/153666
+source_pr: 153666
+difficulty: medium
+trigger:
+  package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql/qa/server/src/main/java/org/elasticsearch/xpack/esql/qa/rest/AbstractExternalSourceSpecTestCase.java
+  intent: ES|QL:Fix external source IT fixture startup order
+  diff_summary: 'Primary: x-pack/plugin/esql/qa/server/src/main/java/org/elasticsearch/xpack/esql/qa/rest/AbstractExternalSourceSpecTestCase.java
+    (+20/-3)'
+consequences:
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql-datasource-csv/qa/src/csvSpecTest/java/org/elasticsearch/xpack/esql/qa/csv/AbstractCsvExternalSpecTestCase.java
+  description: 'modified: x-pack/plugin/esql-datasource-csv/qa/src/csvSpecTest/java/org/elasticsearch/xpack/esql/qa/csv/AbstractCsvExternalSpecTestCase.java
+    (+4/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql-datasource-iceberg/qa/src/javaRestTest/java/org/elasticsearch/xpack/esql/qa/iceberg/IcebergSpecIT.java
+  description: 'modified: x-pack/plugin/esql-datasource-iceberg/qa/src/javaRestTest/java/org/elasticsearch/xpack/esql/qa/iceberg/IcebergSpecIT.java
+    (+4/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql-datasource-ndjson/qa/src/csvSpecTest/java/org/elasticsearch/xpack/esql/qa/ndjson/AbstractNdJsonExternalSpecTestCase.java
+  description: 'modified: x-pack/plugin/esql-datasource-ndjson/qa/src/csvSpecTest/java/org/elasticsearch/xpack/esql/qa/ndjson/AbstractNdJsonExternalSpecTestCase.java
+    (+4/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql-datasource-orc/qa/src/csvSpecTest/java/org/elasticsearch/xpack/esql/qa/orc/OrcFormatSpecIT.java
+  description: 'modified: x-pack/plugin/esql-datasource-orc/qa/src/csvSpecTest/java/org/elasticsearch/xpack/esql/qa/orc/OrcFormatSpecIT.java
+    (+4/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql-datasource-parquet-rs/qa/src/csvSpecTest/java/org/elasticsearch/xpack/esql/qa/parquet/ParquetRsFormatSpecIT.java
+  description: 'modified: x-pack/plugin/esql-datasource-parquet-rs/qa/src/csvSpecTest/java/org/elasticsearch/xpack/esql/qa/parquet/ParquetRsFormatSpecIT.java
+    (+4/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql-datasource-parquet/qa/src/csvSpecTest/java/org/elasticsearch/xpack/esql/qa/parquet/AbstractParquetExternalSpecTestCase.java
+  description: 'modified: x-pack/plugin/esql-datasource-parquet/qa/src/csvSpecTest/java/org/elasticsearch/xpack/esql/qa/parquet/AbstractParquetExternalSpecTestCase.java
+    (+4/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/esql/qa/server/multi-node/src/javaRestTest/java/org/elasticsearch/xpack/esql/qa/multi_node/ExternalDistributedSpecIT.java
+  description: 'modified: x-pack/plugin/esql/qa/server/multi-node/src/javaRestTest/java/org/elasticsearch/xpack/esql/qa/multi_node/ExternalDistributedSpecIT.java
+    (+10/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 8
+notes: 'Mined from elastic/elasticsearch PR #153666. Trigger heuristic applied. Needs
+  review.'

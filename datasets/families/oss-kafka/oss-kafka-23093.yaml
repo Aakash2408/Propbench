@@ -1,0 +1,71 @@
+id: oss-kafka-23093
+title: 'KAFKA-20721: Removed timeout on task removal from state updater.'
+family: refactor
+date: '2026-08-12'
+author: Nikita-Shupletsov
+source: github-api-mined
+source_repo: apache/kafka
+source_url: https://github.com/apache/kafka/pull/23093
+source_pr: 23093
+difficulty: medium
+trigger:
+  package: apache/kafka
+  files:
+  - streams/src/main/java/org/apache/kafka/streams/processor/internals/DefaultStateUpdater.java
+  intent: 'KAFKA-20721: Removed timeout on task removal from state updater.'
+  diff_summary: 'Primary: streams/src/main/java/org/apache/kafka/streams/processor/internals/DefaultStateUpdater.java
+    (+106/-31)'
+consequences:
+- package: apache/kafka
+  files:
+  - streams/integration-tests/src/test/java/org/apache/kafka/streams/integration/StateUpdaterFailureIntegrationTest.java
+  description: 'modified: streams/integration-tests/src/test/java/org/apache/kafka/streams/integration/StateUpdaterFailureIntegrationTest.java
+    (+69/-17)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - streams/src/main/java/org/apache/kafka/streams/processor/internals/StateUpdater.java
+  description: 'modified: streams/src/main/java/org/apache/kafka/streams/processor/internals/StateUpdater.java
+    (+17/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - streams/src/main/java/org/apache/kafka/streams/processor/internals/TaskManager.java
+  description: 'modified: streams/src/main/java/org/apache/kafka/streams/processor/internals/TaskManager.java
+    (+24/-10)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - streams/src/test/java/org/apache/kafka/streams/processor/internals/DefaultStateUpdaterTest.java
+  description: 'modified: streams/src/test/java/org/apache/kafka/streams/processor/internals/DefaultStateUpdaterTest.java
+    (+138/-8)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - streams/src/test/java/org/apache/kafka/streams/processor/internals/TaskManagerTest.java
+  description: 'modified: streams/src/test/java/org/apache/kafka/streams/processor/internals/TaskManagerTest.java
+    (+43/-4)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from apache/kafka PR #23093. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,143 @@
+id: oss-kafka-22805
+title: KAFKA-16517; Do not decode metadata records in the internal kraft partition
+  listener
+family: uncategorized
+date: '2026-08-12'
+author: 0xffff-zhiyan
+source: github-api-mined
+source_repo: apache/kafka
+source_url: https://github.com/apache/kafka/pull/22805
+source_pr: 22805
+difficulty: medium
+trigger:
+  package: apache/kafka
+  files:
+  - raft/src/main/java/org/apache/kafka/raft/internals/RecordsDecodingStrategy.java
+  intent: KAFKA-16517; Do not decode metadata records in the internal kraft partition
+    listener
+  diff_summary: 'Primary: raft/src/main/java/org/apache/kafka/raft/internals/RecordsDecodingStrategy.java
+    (+272/-0)'
+consequences:
+- package: apache/kafka
+  files:
+  - checkstyle/suppressions.xml
+  description: 'modified: checkstyle/suppressions.xml (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - raft/src/main/java/org/apache/kafka/raft/Batch.java
+  description: 'modified: raft/src/main/java/org/apache/kafka/raft/Batch.java (+38/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - raft/src/main/java/org/apache/kafka/raft/KafkaRaftClient.java
+  description: 'modified: raft/src/main/java/org/apache/kafka/raft/KafkaRaftClient.java
+    (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - raft/src/main/java/org/apache/kafka/raft/internals/IdentitySerde.java
+  description: 'removed: raft/src/main/java/org/apache/kafka/raft/internals/IdentitySerde.java
+    (+0/-43)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - raft/src/main/java/org/apache/kafka/raft/internals/KRaftControlRecordStateMachine.java
+  description: 'modified: raft/src/main/java/org/apache/kafka/raft/internals/KRaftControlRecordStateMachine.java
+    (+2/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - raft/src/main/java/org/apache/kafka/raft/internals/RecordsBatchReader.java
+  description: 'modified: raft/src/main/java/org/apache/kafka/raft/internals/RecordsBatchReader.java
+    (+8/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - raft/src/main/java/org/apache/kafka/raft/internals/RecordsIterator.java
+  description: 'modified: raft/src/main/java/org/apache/kafka/raft/internals/RecordsIterator.java
+    (+5/-168)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - raft/src/main/java/org/apache/kafka/snapshot/RecordsSnapshotReader.java
+  description: 'modified: raft/src/main/java/org/apache/kafka/snapshot/RecordsSnapshotReader.java
+    (+50/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - raft/src/main/java/org/apache/kafka/snapshot/Snapshots.java
+  description: 'modified: raft/src/main/java/org/apache/kafka/snapshot/Snapshots.java
+    (+1/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - raft/src/test/java/org/apache/kafka/raft/internals/KRaftControlRecordStateMachineTest.java
+  description: 'modified: raft/src/test/java/org/apache/kafka/raft/internals/KRaftControlRecordStateMachineTest.java
+    (+0/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - raft/src/test/java/org/apache/kafka/raft/internals/RecordsDecodingStrategyTest.java
+  description: 'added: raft/src/test/java/org/apache/kafka/raft/internals/RecordsDecodingStrategyTest.java
+    (+108/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - raft/src/test/java/org/apache/kafka/raft/internals/RecordsIteratorTest.java
+  description: 'modified: raft/src/test/java/org/apache/kafka/raft/internals/RecordsIteratorTest.java
+    (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - raft/src/test/java/org/apache/kafka/snapshot/SnapshotWriterReaderTest.java
+  description: 'modified: raft/src/test/java/org/apache/kafka/snapshot/SnapshotWriterReaderTest.java
+    (+35/-9)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 14
+notes: 'Mined from apache/kafka PR #22805. Trigger heuristic applied. Needs review.'

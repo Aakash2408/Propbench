@@ -1,0 +1,51 @@
+id: oss-svelte-18625
+title: 'fix: skip controlled each fast path while another batch is pending'
+family: bugfix
+date: '2026-08-07'
+author: sankalpsthakur
+source: github-api-mined
+source_repo: sveltejs/svelte
+source_url: https://github.com/sveltejs/svelte/pull/18625
+source_pr: 18625
+difficulty: medium
+trigger:
+  package: sveltejs/svelte
+  files:
+  - packages/svelte/src/internal/client/dom/blocks/each.js
+  intent: 'fix: skip controlled each fast path while another batch is pending'
+  diff_summary: 'Primary: packages/svelte/src/internal/client/dom/blocks/each.js (+6/-2)'
+consequences:
+- package: sveltejs/svelte
+  files:
+  - .changeset/async-each-controlled-pending.md
+  description: 'added: .changeset/async-each-controlled-pending.md (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/tests/runtime-runes/samples/async-each-controlled-empty-pending/_config.js
+  description: 'added: packages/svelte/tests/runtime-runes/samples/async-each-controlled-empty-pending/_config.js
+    (+50/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/tests/runtime-runes/samples/async-each-controlled-empty-pending/main.svelte
+  description: 'added: packages/svelte/tests/runtime-runes/samples/async-each-controlled-empty-pending/main.svelte
+    (+54/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from sveltejs/svelte PR #18625. Trigger heuristic applied. Needs review.'

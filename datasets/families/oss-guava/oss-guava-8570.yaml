@@ -1,0 +1,187 @@
+id: oss-guava-8570
+title: Eliminate caching of many collection views in many `ImmutableMap` implementations.
+family: interface-evolution
+date: '2026-07-28'
+author: copybara-service[bot]
+source: github-api-mined
+source_repo: google/guava
+source_url: https://github.com/google/guava/pull/8570
+source_pr: 8570
+difficulty: medium
+trigger:
+  package: google/guava
+  files:
+  - guava/src/com/google/common/collect/ImmutableSortedMap.java
+  intent: Eliminate caching of many collection views in many `ImmutableMap` implementations.
+  diff_summary: 'Primary: guava/src/com/google/common/collect/ImmutableSortedMap.java
+    (+52/-66)'
+consequences:
+- package: google/guava
+  files:
+  - android/guava-testlib/src/com/google/common/collect/testing/google/BiMapInverseTester.java
+  description: 'modified: android/guava-testlib/src/com/google/common/collect/testing/google/BiMapInverseTester.java
+    (+34/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - android/guava-tests/test/com/google/common/collect/ImmutableBiMapTest.java
+  description: 'modified: android/guava-tests/test/com/google/common/collect/ImmutableBiMapTest.java
+    (+3/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - android/guava-tests/test/com/google/common/collect/ImmutableMapTest.java
+  description: 'modified: android/guava-tests/test/com/google/common/collect/ImmutableMapTest.java
+    (+0/-8)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - android/guava/src/com/google/common/collect/ImmutableBiMap.java
+  description: 'modified: android/guava/src/com/google/common/collect/ImmutableBiMap.java
+    (+0/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - android/guava/src/com/google/common/collect/ImmutableMap.java
+  description: 'modified: android/guava/src/com/google/common/collect/ImmutableMap.java
+    (+49/-39)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - android/guava/src/com/google/common/collect/ImmutableSortedMap.java
+  description: 'modified: android/guava/src/com/google/common/collect/ImmutableSortedMap.java
+    (+43/-57)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - android/guava/src/com/google/common/collect/RegularImmutableBiMap.java
+  description: 'modified: android/guava/src/com/google/common/collect/RegularImmutableBiMap.java
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - android/guava/src/com/google/common/collect/RegularImmutableMap.java
+  description: 'modified: android/guava/src/com/google/common/collect/RegularImmutableMap.java
+    (+18/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava-testlib/src/com/google/common/collect/testing/google/BiMapInverseTester.java
+  description: 'modified: guava-testlib/src/com/google/common/collect/testing/google/BiMapInverseTester.java
+    (+34/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava-tests/test/com/google/common/collect/ImmutableBiMapTest.java
+  description: 'modified: guava-tests/test/com/google/common/collect/ImmutableBiMapTest.java
+    (+4/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava-tests/test/com/google/common/collect/ImmutableMapTest.java
+  description: 'modified: guava-tests/test/com/google/common/collect/ImmutableMapTest.java
+    (+0/-8)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava/src/com/google/common/collect/ImmutableBiMap.java
+  description: 'modified: guava/src/com/google/common/collect/ImmutableBiMap.java
+    (+0/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava/src/com/google/common/collect/ImmutableMap.java
+  description: 'modified: guava/src/com/google/common/collect/ImmutableMap.java (+49/-39)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava/src/com/google/common/collect/JdkBackedImmutableBiMap.java
+  description: 'modified: guava/src/com/google/common/collect/JdkBackedImmutableBiMap.java
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava/src/com/google/common/collect/JdkBackedImmutableMap.java
+  description: 'modified: guava/src/com/google/common/collect/JdkBackedImmutableMap.java
+    (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava/src/com/google/common/collect/RegularImmutableBiMap.java
+  description: 'modified: guava/src/com/google/common/collect/RegularImmutableBiMap.java
+    (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava/src/com/google/common/collect/RegularImmutableMap.java
+  description: 'modified: guava/src/com/google/common/collect/RegularImmutableMap.java
+    (+14/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava/src/com/google/common/collect/SingletonImmutableBiMap.java
+  description: 'modified: guava/src/com/google/common/collect/SingletonImmutableBiMap.java
+    (+6/-21)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 19
+notes: 'Mined from google/guava PR #8570. Trigger heuristic applied. Needs review.'

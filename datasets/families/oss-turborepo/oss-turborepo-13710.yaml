@@ -1,0 +1,129 @@
+id: oss-turborepo-13710
+title: 'feat: Add Eve operator dashboard'
+family: interface-evolution
+date: '2026-08-11'
+author: anthonyshew
+source: github-api-mined
+source_repo: vercel/turborepo
+source_url: https://github.com/vercel/turborepo/pull/13710
+source_pr: 13710
+difficulty: medium
+trigger:
+  package: vercel/turborepo
+  files:
+  - apps/agents/app/globals.css
+  intent: 'feat: Add Eve operator dashboard'
+  diff_summary: 'Primary: apps/agents/app/globals.css (+337/-0)'
+consequences:
+- package: vercel/turborepo
+  files:
+  - apps/agents/agent/channels/operator.ts
+  description: 'added: apps/agents/agent/channels/operator.ts (+93/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - apps/agents/agent/lib/weekly-examples-maintenance.ts
+  description: 'added: apps/agents/agent/lib/weekly-examples-maintenance.ts (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - apps/agents/agent/schedules/weekly_examples_audit.md
+  description: 'removed: apps/agents/agent/schedules/weekly_examples_audit.md (+0/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - apps/agents/agent/schedules/weekly_examples_audit.ts
+  description: 'added: apps/agents/agent/schedules/weekly_examples_audit.ts (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - apps/agents/app/layout.tsx
+  description: 'added: apps/agents/app/layout.tsx (+21/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - apps/agents/app/page.tsx
+  description: 'added: apps/agents/app/page.tsx (+61/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - apps/agents/app/run-maintenance.tsx
+  description: 'added: apps/agents/app/run-maintenance.tsx (+121/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - apps/agents/next-env.d.ts
+  description: 'added: apps/agents/next-env.d.ts (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - apps/agents/next.config.ts
+  description: 'added: apps/agents/next.config.ts (+16/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - apps/agents/package.json
+  description: 'modified: apps/agents/package.json (+11/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - apps/agents/tsconfig.json
+  description: 'modified: apps/agents/tsconfig.json (+25/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - apps/agents/turbo.json
+  description: 'modified: apps/agents/turbo.json (+9/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - pnpm-lock.yaml
+  description: 'modified: pnpm-lock.yaml (+18/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 14
+notes: 'Mined from vercel/turborepo PR #13710. Trigger heuristic applied. Needs review.'

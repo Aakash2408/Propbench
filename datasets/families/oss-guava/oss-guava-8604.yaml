@@ -1,0 +1,53 @@
+id: oss-guava-8604
+title: 'Tidy up `ExecutionSequencerTest`:'
+family: uncategorized
+date: '2026-08-11'
+author: copybara-service[bot]
+source: github-api-mined
+source_repo: google/guava
+source_url: https://github.com/google/guava/pull/8604
+source_pr: 8604
+difficulty: medium
+trigger:
+  package: google/guava
+  files:
+  - android/guava/src/com/google/common/util/concurrent/ExecutionSequencer.java
+  intent: 'Tidy up `ExecutionSequencerTest`:'
+  diff_summary: 'Primary: android/guava/src/com/google/common/util/concurrent/ExecutionSequencer.java
+    (+4/-1)'
+consequences:
+- package: google/guava
+  files:
+  - android/guava-tests/test/com/google/common/util/concurrent/ExecutionSequencerTest.java
+  description: 'modified: android/guava-tests/test/com/google/common/util/concurrent/ExecutionSequencerTest.java
+    (+191/-102)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava-tests/test/com/google/common/util/concurrent/ExecutionSequencerTest.java
+  description: 'modified: guava-tests/test/com/google/common/util/concurrent/ExecutionSequencerTest.java
+    (+191/-102)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava/src/com/google/common/util/concurrent/ExecutionSequencer.java
+  description: 'modified: guava/src/com/google/common/util/concurrent/ExecutionSequencer.java
+    (+4/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from google/guava PR #8604. Trigger heuristic applied. Needs review.'

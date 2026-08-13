@@ -1,0 +1,67 @@
+id: oss-vapor-3440
+title: Support macro route registration outside of @Controller
+family: interface-evolution
+date: '2026-03-31'
+author: kylebrowning
+source: github-api-mined
+source_repo: vapor/vapor
+source_url: https://github.com/vapor/vapor/pull/3440
+source_pr: 3440
+difficulty: medium
+trigger:
+  package: vapor/vapor
+  files:
+  - Tests/VaporMacroTests/HTTPMethodMacroTests.swift
+  intent: Support macro route registration outside of @Controller
+  diff_summary: 'Primary: Tests/VaporMacroTests/HTTPMethodMacroTests.swift (+93/-14)'
+consequences:
+- package: vapor/vapor
+  files:
+  - Sources/Development/configure.swift
+  description: 'modified: Sources/Development/configure.swift (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/Development/entrypoint.swift
+  description: 'modified: Sources/Development/entrypoint.swift (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/Development/routes.swift
+  description: 'modified: Sources/Development/routes.swift (+8/-17)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/VaporMacrosPlugin/HTTPMethods/HTTPMethodMacro.swift
+  description: 'modified: Sources/VaporMacrosPlugin/HTTPMethods/HTTPMethodMacro.swift
+    (+10/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/VaporMacrosPlugin/HTTPMethods/HTTPMethodMacroUtilities.swift
+  description: 'modified: Sources/VaporMacrosPlugin/HTTPMethods/HTTPMethodMacroUtilities.swift
+    (+60/-13)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from vapor/vapor PR #3440. Trigger heuristic applied. Needs review.'

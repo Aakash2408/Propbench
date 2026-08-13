@@ -1,0 +1,116 @@
+id: oss-abp-25949
+title: Focus the first input of MudBlazor dialogs opened from action menus
+family: uncategorized
+date: '2026-08-11'
+author: maliming
+source: github-api-mined
+source_repo: abpframework/abp
+source_url: https://github.com/abpframework/abp/pull/25949
+source_pr: 25949
+difficulty: medium
+trigger:
+  package: abpframework/abp
+  files:
+  - framework/src/Volo.Abp.MudBlazorUI/Components/AbpMudActionMenu.razor.cs
+  intent: Focus the first input of MudBlazor dialogs opened from action menus
+  diff_summary: 'Primary: framework/src/Volo.Abp.MudBlazorUI/Components/AbpMudActionMenu.razor.cs
+    (+136/-0)'
+consequences:
+- package: abpframework/abp
+  files:
+  - framework/src/Volo.Abp.MudBlazorUI/Components/AbpMudActionMenu.razor
+  description: 'added: framework/src/Volo.Abp.MudBlazorUI/Components/AbpMudActionMenu.razor
+    (+37/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - framework/src/Volo.Abp.MudBlazorUI/Components/AbpMudActionMenuItem.razor
+  description: 'added: framework/src/Volo.Abp.MudBlazorUI/Components/AbpMudActionMenuItem.razor
+    (+15/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - framework/src/Volo.Abp.MudBlazorUI/Components/AbpMudActionMenuItem.razor.cs
+  description: 'added: framework/src/Volo.Abp.MudBlazorUI/Components/AbpMudActionMenuItem.razor.cs
+    (+75/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - framework/src/Volo.Abp.MudBlazorUI/Components/MudEntityAction.razor
+  description: 'modified: framework/src/Volo.Abp.MudBlazorUI/Components/MudEntityAction.razor
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - framework/src/Volo.Abp.MudBlazorUI/Components/MudEntityActions.razor
+  description: 'modified: framework/src/Volo.Abp.MudBlazorUI/Components/MudEntityActions.razor
+    (+7/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - modules/feature-management/src/Volo.Abp.FeatureManagement.Blazor.MudBlazor/Components/FeatureManagementModal.razor
+  description: 'modified: modules/feature-management/src/Volo.Abp.FeatureManagement.Blazor.MudBlazor/Components/FeatureManagementModal.razor
+    (+23/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - modules/feature-management/src/Volo.Abp.FeatureManagement.Blazor.MudBlazor/Components/FeatureManagementModal.razor.cs
+  description: 'modified: modules/feature-management/src/Volo.Abp.FeatureManagement.Blazor.MudBlazor/Components/FeatureManagementModal.razor.cs
+    (+56/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - modules/permission-management/src/Volo.Abp.PermissionManagement.Blazor.MudBlazor/Components/PermissionManagementModal.razor
+  description: 'modified: modules/permission-management/src/Volo.Abp.PermissionManagement.Blazor.MudBlazor/Components/PermissionManagementModal.razor
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - modules/permission-management/src/Volo.Abp.PermissionManagement.Blazor.MudBlazor/Components/ResourcePermissionManagementModal.razor
+  description: 'modified: modules/permission-management/src/Volo.Abp.PermissionManagement.Blazor.MudBlazor/Components/ResourcePermissionManagementModal.razor
+    (+6/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - modules/permission-management/src/Volo.Abp.PermissionManagement.Blazor.MudBlazor/_Imports.razor
+  description: 'modified: modules/permission-management/src/Volo.Abp.PermissionManagement.Blazor.MudBlazor/_Imports.razor
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 11
+notes: 'Mined from abpframework/abp PR #25949. Trigger heuristic applied. Needs review.'

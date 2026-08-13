@@ -1,0 +1,50 @@
+id: oss-aspnetcore-68347
+title: Cache display names per UI culture
+family: uncategorized
+date: '2026-08-12'
+author: oroztocil
+source: github-api-mined
+source_repo: dotnet/aspnetcore
+source_url: https://github.com/dotnet/aspnetcore/pull/68347
+source_pr: 68347
+difficulty: medium
+trigger:
+  package: dotnet/aspnetcore
+  files:
+  - src/Components/Web/src/Forms/ExpressionMemberAccessor.cs
+  intent: Cache display names per UI culture
+  diff_summary: 'Primary: src/Components/Web/src/Forms/ExpressionMemberAccessor.cs
+    (+6/-5)'
+consequences:
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Web/src/Forms/DisplayName.cs
+  description: 'modified: src/Components/Web/src/Forms/DisplayName.cs (+5/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Web/src/Forms/Label.cs
+  description: 'modified: src/Components/Web/src/Forms/Label.cs (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Web/test/Forms/DisplayNameTest.cs
+  description: 'modified: src/Components/Web/test/Forms/DisplayNameTest.cs (+41/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from dotnet/aspnetcore PR #68347. Trigger heuristic applied. Needs review.'

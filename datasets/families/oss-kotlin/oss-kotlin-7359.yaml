@@ -1,0 +1,228 @@
+id: oss-kotlin-7359
+title: '[Test Federation] Extract more domains from the _Compiler_ domain'
+family: uncategorized
+date: '2026-08-12'
+author: demiurg906
+source: github-api-mined
+source_repo: JetBrains/kotlin
+source_url: https://github.com/JetBrains/kotlin/pull/7359
+source_pr: 7359
+difficulty: medium
+trigger:
+  package: JetBrains/kotlin
+  files:
+  - repo/testLifecycleTask.dump.txt
+  intent: '[Test Federation] Extract more domains from the _Compiler_ domain'
+  diff_summary: 'Primary: repo/testLifecycleTask.dump.txt (+87/-87)'
+consequences:
+- package: JetBrains/kotlin
+  files:
+  - compiler/build.gradle.kts
+  description: 'modified: compiler/build.gradle.kts (+10/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/fir/fir2ir/build.gradle.kts
+  description: 'modified: compiler/fir/fir2ir/build.gradle.kts (+8/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/tests-common-new/testFixtures/org/jetbrains/kotlin/test/klib/AbstractSymbolsValidationTest.kt
+  description: 'modified: compiler/tests-common-new/testFixtures/org/jetbrains/kotlin/test/klib/AbstractSymbolsValidationTest.kt
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/tests-common-new/testFixtures/org/jetbrains/kotlin/test/runners/AbstractKotlinCompilerWithTargetBackendTest.kt
+  description: 'modified: compiler/tests-common-new/testFixtures/org/jetbrains/kotlin/test/runners/AbstractKotlinCompilerWithTargetBackendTest.kt
+    (+3/-6)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/tests-common-new/testFixtures/org/jetbrains/kotlin/test/runners/codegen/AbstractJvmBlackBoxCodegenTestBase.kt
+  description: 'modified: compiler/tests-common-new/testFixtures/org/jetbrains/kotlin/test/runners/codegen/AbstractJvmBlackBoxCodegenTestBase.kt
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/tests-common-new/testFixtures/org/jetbrains/kotlin/test/runners/ir/AbstractNonJvmIrTextTest.kt
+  description: 'modified: compiler/tests-common-new/testFixtures/org/jetbrains/kotlin/test/runners/ir/AbstractNonJvmIrTextTest.kt
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - js/js.tests/testFixtures/org/jetbrains/kotlin/js/test/runners/AbstractJsDiagnosticTest.kt
+  description: 'modified: js/js.tests/testFixtures/org/jetbrains/kotlin/js/test/runners/AbstractJsDiagnosticTest.kt
+    (+4/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - libraries/tools/kotlin-gradle-plugin-integration-tests/src/test/kotlin/org/jetbrains/kotlin/gradle/IncrementalCompilationBaseIT.kt
+  description: 'modified: libraries/tools/kotlin-gradle-plugin-integration-tests/src/test/kotlin/org/jetbrains/kotlin/gradle/IncrementalCompilationBaseIT.kt
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - libraries/tools/kotlin-gradle-plugin-integration-tests/src/test/kotlin/org/jetbrains/kotlin/gradle/ScriptingIT.kt
+  description: 'modified: libraries/tools/kotlin-gradle-plugin-integration-tests/src/test/kotlin/org/jetbrains/kotlin/gradle/ScriptingIT.kt
+    (+4/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - libraries/tools/kotlin-gradle-plugin-integration-tests/src/test/kotlin/org/jetbrains/kotlin/gradle/mpp/CommonCodeWithPlatformSymbolsIT.kt
+  description: 'modified: libraries/tools/kotlin-gradle-plugin-integration-tests/src/test/kotlin/org/jetbrains/kotlin/gradle/mpp/CommonCodeWithPlatformSymbolsIT.kt
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - libraries/tools/kotlin-gradle-plugin-integration-tests/src/test/kotlin/org/jetbrains/kotlin/gradle/mpp/KmpIncrementalCompilationMiscIT.kt
+  description: 'modified: libraries/tools/kotlin-gradle-plugin-integration-tests/src/test/kotlin/org/jetbrains/kotlin/gradle/mpp/KmpIncrementalCompilationMiscIT.kt
+    (+3/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - libraries/tools/kotlin-gradle-plugin-integration-tests/src/test/kotlin/org/jetbrains/kotlin/gradle/mpp/KmpIncrementalITBase.kt
+  description: 'modified: libraries/tools/kotlin-gradle-plugin-integration-tests/src/test/kotlin/org/jetbrains/kotlin/gradle/mpp/KmpIncrementalITBase.kt
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - libraries/tools/kotlin-gradle-plugin-integration-tests/src/test/kotlin/org/jetbrains/kotlin/gradle/mpp/PerTargetUnsafeOptimizationsIT.kt
+  description: 'modified: libraries/tools/kotlin-gradle-plugin-integration-tests/src/test/kotlin/org/jetbrains/kotlin/gradle/mpp/PerTargetUnsafeOptimizationsIT.kt
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - libraries/tools/kotlin-gradle-plugin-integration-tests/src/test/kotlin/org/jetbrains/kotlin/gradle/mpp/smoke/AbstractExpectActualIncrementalCompilationIT.kt
+  description: 'modified: libraries/tools/kotlin-gradle-plugin-integration-tests/src/test/kotlin/org/jetbrains/kotlin/gradle/mpp/smoke/AbstractExpectActualIncrementalCompilationIT.kt
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - native/native.tests/klib-ir-inliner/testFixtures/org/jetbrains/kotlin/konan/test/abi/AbstractNativeLibraryAbiReaderTest.kt
+  description: 'modified: native/native.tests/klib-ir-inliner/testFixtures/org/jetbrains/kotlin/konan/test/abi/AbstractNativeLibraryAbiReaderTest.kt
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - repo/domains.dump.txt
+  description: 'modified: repo/domains.dump.txt (+65/-48)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - repo/domains.yaml
+  description: 'modified: repo/domains.yaml (+112/-28)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - repo/gradle-build-conventions/test-federation-convention/src/main/generated/domains.kt
+  description: 'modified: repo/gradle-build-conventions/test-federation-convention/src/main/generated/domains.kt
+    (+41/-14)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - repo/gradle-build-conventions/test-federation-convention/src/test/kotlin/org/jetbrains/kotlin/testFederation/AffectsCommandTest.kt
+  description: 'modified: repo/gradle-build-conventions/test-federation-convention/src/test/kotlin/org/jetbrains/kotlin/testFederation/AffectsCommandTest.kt
+    (+4/-4)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - repo/gradle-build-conventions/test-federation-convention/src/test/kotlin/org/jetbrains/kotlin/testFederation/DomainNotationTest.kt
+  description: 'modified: repo/gradle-build-conventions/test-federation-convention/src/test/kotlin/org/jetbrains/kotlin/testFederation/DomainNotationTest.kt
+    (+3/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - repo/gradle-build-conventions/test-federation-convention/src/test/kotlin/org/jetbrains/kotlin/testFederation/TestFederationFunctionalTest.kt
+  description: 'modified: repo/gradle-build-conventions/test-federation-convention/src/test/kotlin/org/jetbrains/kotlin/testFederation/TestFederationFunctionalTest.kt
+    (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - repo/test-federation-runtime/src/main/generated/annotations.kt
+  description: 'modified: repo/test-federation-runtime/src/main/generated/annotations.kt
+    (+29/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - repo/test-federation-runtime/src/main/generated/domains.kt
+  description: 'modified: repo/test-federation-runtime/src/main/generated/domains.kt
+    (+4/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 24
+notes: 'Mined from JetBrains/kotlin PR #7359. Trigger heuristic applied. Needs review.'

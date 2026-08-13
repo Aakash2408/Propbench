@@ -1,0 +1,42 @@
+id: oss-aspnetcore-68321
+title: Validate QPack static table index in QPackDecoder
+family: uncategorized
+date: '2026-08-12'
+author: DeagleGross
+source: github-api-mined
+source_repo: dotnet/aspnetcore
+source_url: https://github.com/dotnet/aspnetcore/pull/68321
+source_pr: 68321
+difficulty: medium
+trigger:
+  package: dotnet/aspnetcore
+  files:
+  - src/Shared/runtime/Http3/QPack/QPackDecoder.cs
+  intent: Validate QPack static table index in QPackDecoder
+  diff_summary: 'Primary: src/Shared/runtime/Http3/QPack/QPackDecoder.cs (+12/-0)'
+consequences:
+- package: dotnet/aspnetcore
+  files:
+  - src/Shared/runtime/SR.resx
+  description: 'modified: src/Shared/runtime/SR.resx (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Shared/test/Shared.Tests/runtime/Http3/QPackDecoderTest.cs
+  description: 'modified: src/Shared/test/Shared.Tests/runtime/Http3/QPackDecoderTest.cs
+    (+14/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from dotnet/aspnetcore PR #68321. Trigger heuristic applied. Needs review.'

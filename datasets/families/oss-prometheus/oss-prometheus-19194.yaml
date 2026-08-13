@@ -1,0 +1,42 @@
+id: oss-prometheus-19194
+title: 'discovery/aws: fix MSK panic on clusters without provisioned config'
+family: bugfix
+date: '2026-08-08'
+author: RajeshRajendiran
+source: github-api-mined
+source_repo: prometheus/prometheus
+source_url: https://github.com/prometheus/prometheus/pull/19194
+source_pr: 19194
+difficulty: medium
+trigger:
+  package: prometheus/prometheus
+  files:
+  - discovery/aws/msk.go
+  intent: 'discovery/aws: fix MSK panic on clusters without provisioned config'
+  diff_summary: 'Primary: discovery/aws/msk.go (+18/-3)'
+consequences:
+- package: prometheus/prometheus
+  files:
+  - discovery/aws/msk_test.go
+  description: 'modified: discovery/aws/msk_test.go (+156/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prometheus/prometheus
+  files:
+  - docs/configuration/configuration.md
+  description: 'modified: docs/configuration/configuration.md (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from prometheus/prometheus PR #19194. Trigger heuristic applied. Needs
+  review.'

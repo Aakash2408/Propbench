@@ -1,0 +1,41 @@
+id: oss-hugo-15168
+title: 'css: Add classDark and classLight options to css.ChromaStyles and gen chromastyles'
+family: interface-evolution
+date: '2026-08-05'
+author: bep
+source: github-api-mined
+source_repo: gohugoio/hugo
+source_url: https://github.com/gohugoio/hugo/pull/15168
+source_pr: 15168
+difficulty: medium
+trigger:
+  package: gohugoio/hugo
+  files:
+  - markup/highlight/chromastyles.go
+  intent: 'css: Add classDark and classLight options to css.ChromaStyles and gen chromastyles'
+  diff_summary: 'Primary: markup/highlight/chromastyles.go (+15/-2)'
+consequences:
+- package: gohugoio/hugo
+  files:
+  - commands/gen.go
+  description: 'modified: commands/gen.go (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - tpl/css/chromastyles_integration_test.go
+  description: 'modified: tpl/css/chromastyles_integration_test.go (+19/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from gohugoio/hugo PR #15168. Trigger heuristic applied. Needs review.'

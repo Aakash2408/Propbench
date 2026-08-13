@@ -1,0 +1,91 @@
+id: oss-symfony-65279
+title: '[Security][SecurityBundle] Support decorating custom authentication result
+  handlers'
+family: interface-evolution
+date: '2026-08-12'
+author: nicolas-grekas
+source: github-api-mined
+source_repo: symfony/symfony
+source_url: https://github.com/symfony/symfony/pull/65279
+source_pr: 65279
+difficulty: medium
+trigger:
+  package: symfony/symfony
+  files:
+  - src/Symfony/Bundle/SecurityBundle/Tests/Fixtures/DecoratingAuthenticationSuccessHandler.php
+  intent: '[Security][SecurityBundle] Support decorating custom authentication result
+    handlers'
+  diff_summary: 'Primary: src/Symfony/Bundle/SecurityBundle/Tests/Fixtures/DecoratingAuthenticationSuccessHandler.php
+    (+50/-0)'
+consequences:
+- package: symfony/symfony
+  files:
+  - src/Symfony/Bundle/SecurityBundle/DependencyInjection/Security/Factory/AbstractFactory.php
+  description: 'modified: src/Symfony/Bundle/SecurityBundle/DependencyInjection/Security/Factory/AbstractFactory.php
+    (+3/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Bundle/SecurityBundle/Tests/DependencyInjection/Security/Factory/AbstractFactoryTest.php
+  description: 'modified: src/Symfony/Bundle/SecurityBundle/Tests/DependencyInjection/Security/Factory/AbstractFactoryTest.php
+    (+5/-4)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Bundle/SecurityBundle/Tests/Fixtures/DecoratingAuthenticationFailureHandler.php
+  description: 'added: src/Symfony/Bundle/SecurityBundle/Tests/Fixtures/DecoratingAuthenticationFailureHandler.php
+    (+42/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Bundle/SecurityBundle/Tests/Functional/AuthenticatorTest.php
+  description: 'modified: src/Symfony/Bundle/SecurityBundle/Tests/Functional/AuthenticatorTest.php
+    (+14/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Bundle/SecurityBundle/Tests/Functional/app/Authenticator/custom_handlers.yml
+  description: 'modified: src/Symfony/Bundle/SecurityBundle/Tests/Functional/app/Authenticator/custom_handlers.yml
+    (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Security/Http/Authentication/CustomAuthenticationFailureHandler.php
+  description: 'modified: src/Symfony/Component/Security/Http/Authentication/CustomAuthenticationFailureHandler.php
+    (+5/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Security/Http/Authentication/CustomAuthenticationSuccessHandler.php
+  description: 'modified: src/Symfony/Component/Security/Http/Authentication/CustomAuthenticationSuccessHandler.php
+    (+10/-9)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 8
+notes: 'Mined from symfony/symfony PR #65279. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,42 @@
+id: oss-reactor-core-4087
+title: '[build] Include LICENSE file in published jar and zip archives'
+family: uncategorized
+date: '2025-09-08'
+author: chemicL
+source: github-api-mined
+source_repo: reactor/reactor-core
+source_url: https://github.com/reactor/reactor-core/pull/4087
+source_pr: 4087
+difficulty: medium
+trigger:
+  package: reactor/reactor-core
+  files:
+  - docs/src/docs/dist/LICENSE
+  intent: '[build] Include LICENSE file in published jar and zip archives'
+  diff_summary: 'Primary: docs/src/docs/dist/LICENSE (+202/-0)'
+consequences:
+- package: reactor/reactor-core
+  files:
+  - docs/build.gradle
+  description: 'modified: docs/build.gradle (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: reactor/reactor-core
+  files:
+  - gradle/setup.gradle
+  description: 'modified: gradle/setup.gradle (+12/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from reactor/reactor-core PR #4087. Trigger heuristic applied. Needs
+  review.'

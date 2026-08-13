@@ -1,0 +1,41 @@
+id: oss-celery-10453
+title: Warn when routing options are set as task attributes
+family: uncategorized
+date: '2026-08-04'
+author: phanky1
+source: github-api-mined
+source_repo: celery/celery
+source_url: https://github.com/celery/celery/pull/10453
+source_pr: 10453
+difficulty: medium
+trigger:
+  package: celery/celery
+  files:
+  - docs/internals/deprecation.rst
+  intent: Warn when routing options are set as task attributes
+  diff_summary: 'Primary: docs/internals/deprecation.rst (+19/-15)'
+consequences:
+- package: celery/celery
+  files:
+  - celery/app/task.py
+  description: 'modified: celery/app/task.py (+12/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: celery/celery
+  files:
+  - t/unit/tasks/test_tasks.py
+  description: 'modified: t/unit/tasks/test_tasks.py (+14/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from celery/celery PR #10453. Trigger heuristic applied. Needs review.'

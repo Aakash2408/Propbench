@@ -1,0 +1,50 @@
+id: oss-vapor-3498
+title: Wire up TLS support for the server
+family: interface-evolution
+date: '2026-08-10'
+author: mob-connection
+source: github-api-mined
+source_repo: vapor/vapor
+source_url: https://github.com/vapor/vapor/pull/3498
+source_pr: 3498
+difficulty: medium
+trigger:
+  package: vapor/vapor
+  files:
+  - Tests/VaporTests/ServerTLSTests.swift
+  intent: Wire up TLS support for the server
+  diff_summary: 'Primary: Tests/VaporTests/ServerTLSTests.swift (+313/-0)'
+consequences:
+- package: vapor/vapor
+  files:
+  - Sources/Vapor/HTTP/Server/HTTPServerConfiguration+TLSConfiguration.swift
+  description: 'added: Sources/Vapor/HTTP/Server/HTTPServerConfiguration+TLSConfiguration.swift
+    (+23/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/Vapor/HTTPNewNew/NIOHTTPServerAdapter.swift
+  description: 'modified: Sources/Vapor/HTTPNewNew/NIOHTTPServerAdapter.swift (+15/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/Vapor/Server/ServerConfiguration.swift
+  description: 'modified: Sources/Vapor/Server/ServerConfiguration.swift (+14/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from vapor/vapor PR #3498. Trigger heuristic applied. Needs review.'

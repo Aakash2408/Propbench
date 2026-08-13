@@ -1,0 +1,49 @@
+id: oss-angular-70141
+title: 'feat(router): allow throwing RedirectCommand to trigger redirects'
+family: uncategorized
+date: '2026-08-11'
+author: atscott
+source: github-api-mined
+source_repo: angular/angular
+source_url: https://github.com/angular/angular/pull/70141
+source_pr: 70141
+difficulty: medium
+trigger:
+  package: angular/angular
+  files:
+  - packages/router/src/models.ts
+  intent: 'feat(router): allow throwing RedirectCommand to trigger redirects'
+  diff_summary: 'Primary: packages/router/src/models.ts (+5/-2)'
+consequences:
+- package: angular/angular
+  files:
+  - goldens/public-api/router/index.api.md
+  description: 'modified: goldens/public-api/router/index.api.md (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - packages/router/src/navigation_transition.ts
+  description: 'modified: packages/router/src/navigation_transition.ts (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - packages/router/test/integration/guards.spec.ts
+  description: 'modified: packages/router/test/integration/guards.spec.ts (+56/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from angular/angular PR #70141. Trigger heuristic applied. Needs review.'

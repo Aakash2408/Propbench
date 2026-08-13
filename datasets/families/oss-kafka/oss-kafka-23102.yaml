@@ -1,0 +1,107 @@
+id: oss-kafka-23102
+title: 'KAFKA-20684 [1/N]: Remove test SubscriptionState subscribe overload'
+family: refactor
+date: '2026-08-11'
+author: adikou
+source: github-api-mined
+source_repo: apache/kafka
+source_url: https://github.com/apache/kafka/pull/23102
+source_pr: 23102
+difficulty: medium
+trigger:
+  package: apache/kafka
+  files:
+  - clients/src/main/java/org/apache/kafka/clients/consumer/internals/SubscriptionState.java
+  intent: 'KAFKA-20684 [1/N]: Remove test SubscriptionState subscribe overload'
+  diff_summary: 'Primary: clients/src/main/java/org/apache/kafka/clients/consumer/internals/SubscriptionState.java
+    (+0/-31)'
+consequences:
+- package: apache/kafka
+  files:
+  - clients/src/test/java/org/apache/kafka/clients/consumer/KafkaConsumerTest.java
+  description: 'modified: clients/src/test/java/org/apache/kafka/clients/consumer/KafkaConsumerTest.java
+    (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - clients/src/test/java/org/apache/kafka/clients/consumer/internals/ConsumerHeartbeatRequestManagerTest.java
+  description: 'modified: clients/src/test/java/org/apache/kafka/clients/consumer/internals/ConsumerHeartbeatRequestManagerTest.java
+    (+3/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - clients/src/test/java/org/apache/kafka/clients/consumer/internals/ConsumerMetadataTest.java
+  description: 'modified: clients/src/test/java/org/apache/kafka/clients/consumer/internals/ConsumerMetadataTest.java
+    (+6/-6)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - clients/src/test/java/org/apache/kafka/clients/consumer/internals/FetchRequestManagerTest.java
+  description: 'modified: clients/src/test/java/org/apache/kafka/clients/consumer/internals/FetchRequestManagerTest.java
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - clients/src/test/java/org/apache/kafka/clients/consumer/internals/FetcherTest.java
+  description: 'modified: clients/src/test/java/org/apache/kafka/clients/consumer/internals/FetcherTest.java
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - clients/src/test/java/org/apache/kafka/clients/consumer/internals/ShareFetchCollectorTest.java
+  description: 'modified: clients/src/test/java/org/apache/kafka/clients/consumer/internals/ShareFetchCollectorTest.java
+    (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - clients/src/test/java/org/apache/kafka/clients/consumer/internals/ShareHeartbeatRequestManagerTest.java
+  description: 'modified: clients/src/test/java/org/apache/kafka/clients/consumer/internals/ShareHeartbeatRequestManagerTest.java
+    (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - clients/src/test/java/org/apache/kafka/clients/consumer/internals/SubscriptionStateTest.java
+  description: 'modified: clients/src/test/java/org/apache/kafka/clients/consumer/internals/SubscriptionStateTest.java
+    (+36/-58)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: apache/kafka
+  files:
+  - clients/src/test/java/org/apache/kafka/clients/consumer/internals/metrics/ConsumerRebalanceMetricsManagerTest.java
+  description: 'modified: clients/src/test/java/org/apache/kafka/clients/consumer/internals/metrics/ConsumerRebalanceMetricsManagerTest.java
+    (+1/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 10
+notes: 'Mined from apache/kafka PR #23102. Trigger heuristic applied. Needs review.'

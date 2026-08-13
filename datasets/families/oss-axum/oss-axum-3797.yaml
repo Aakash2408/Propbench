@@ -1,0 +1,78 @@
+id: oss-axum-3797
+title: 'feat(macros): add compile-time validations to TypedPath macro'
+family: interface-evolution
+date: '2026-07-14'
+author: patelshudhanshu1999-maker
+source: github-api-mined
+source_repo: tokio-rs/axum
+source_url: https://github.com/tokio-rs/axum/pull/3797
+source_pr: 3797
+difficulty: medium
+trigger:
+  package: tokio-rs/axum
+  files:
+  - axum-macros/src/typed_path.rs
+  intent: 'feat(macros): add compile-time validations to TypedPath macro'
+  diff_summary: 'Primary: axum-macros/src/typed_path.rs (+42/-0)'
+consequences:
+- package: tokio-rs/axum
+  files:
+  - axum-macros/tests/typed_path/fail/catch_all_not_at_end.rs
+  description: 'added: axum-macros/tests/typed_path/fail/catch_all_not_at_end.rs (+10/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/axum
+  files:
+  - axum-macros/tests/typed_path/fail/catch_all_not_at_end.stderr
+  description: 'added: axum-macros/tests/typed_path/fail/catch_all_not_at_end.stderr
+    (+5/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/axum
+  files:
+  - axum-macros/tests/typed_path/fail/catch_all_not_whole_segment.rs
+  description: 'added: axum-macros/tests/typed_path/fail/catch_all_not_whole_segment.rs
+    (+10/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/axum
+  files:
+  - axum-macros/tests/typed_path/fail/catch_all_not_whole_segment.stderr
+  description: 'added: axum-macros/tests/typed_path/fail/catch_all_not_whole_segment.stderr
+    (+5/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/axum
+  files:
+  - axum-macros/tests/typed_path/fail/multiple_params_in_segment.rs
+  description: 'added: axum-macros/tests/typed_path/fail/multiple_params_in_segment.rs
+    (+11/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: tokio-rs/axum
+  files:
+  - axum-macros/tests/typed_path/fail/multiple_params_in_segment.stderr
+  description: 'added: axum-macros/tests/typed_path/fail/multiple_params_in_segment.stderr
+    (+5/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from tokio-rs/axum PR #3797. Trigger heuristic applied. Needs review.'

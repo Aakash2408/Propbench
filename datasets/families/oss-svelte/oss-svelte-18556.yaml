@@ -1,0 +1,90 @@
+id: oss-svelte-18556
+title: 'fix: call `onerror` and provide a working `reset` when hydrating a failed
+  boundary'
+family: bugfix
+date: '2026-07-23'
+author: Nic-Polumeyv
+source: github-api-mined
+source_repo: sveltejs/svelte
+source_url: https://github.com/sveltejs/svelte/pull/18556
+source_pr: 18556
+difficulty: medium
+trigger:
+  package: sveltejs/svelte
+  files:
+  - packages/svelte/src/internal/client/dom/blocks/boundary.js
+  intent: 'fix: call `onerror` and provide a working `reset` when hydrating a failed
+    boundary'
+  diff_summary: 'Primary: packages/svelte/src/internal/client/dom/blocks/boundary.js
+    (+55/-34)'
+consequences:
+- package: sveltejs/svelte
+  files:
+  - .changeset/hydrated-boundary-reset.md
+  description: 'added: .changeset/hydrated-boundary-reset.md (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/tests/runtime-runes/samples/error-boundary-hydrate-1/_config.js
+  description: 'added: packages/svelte/tests/runtime-runes/samples/error-boundary-hydrate-1/_config.js
+    (+19/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/tests/runtime-runes/samples/error-boundary-hydrate-1/child.svelte
+  description: 'added: packages/svelte/tests/runtime-runes/samples/error-boundary-hydrate-1/child.svelte
+    (+3/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/tests/runtime-runes/samples/error-boundary-hydrate-1/main.svelte
+  description: 'added: packages/svelte/tests/runtime-runes/samples/error-boundary-hydrate-1/main.svelte
+    (+29/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/tests/runtime-runes/samples/error-boundary-hydrate-2/_config.js
+  description: 'added: packages/svelte/tests/runtime-runes/samples/error-boundary-hydrate-2/_config.js
+    (+16/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/tests/runtime-runes/samples/error-boundary-hydrate-2/child.svelte
+  description: 'added: packages/svelte/tests/runtime-runes/samples/error-boundary-hydrate-2/child.svelte
+    (+3/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/tests/runtime-runes/samples/error-boundary-hydrate-2/main.svelte
+  description: 'added: packages/svelte/tests/runtime-runes/samples/error-boundary-hydrate-2/main.svelte
+    (+22/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 8
+notes: 'Mined from sveltejs/svelte PR #18556. Trigger heuristic applied. Needs review.'

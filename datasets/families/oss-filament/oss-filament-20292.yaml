@@ -1,0 +1,43 @@
+id: oss-filament-20292
+title: 'fix: Actions mounted from query parameters without modals'
+family: bugfix
+date: '2026-07-28'
+author: danharrin
+source: github-api-mined
+source_repo: filamentphp/filament
+source_url: https://github.com/filamentphp/filament/pull/20292
+source_pr: 20292
+difficulty: medium
+trigger:
+  package: filamentphp/filament
+  files:
+  - packages/actions/src/Concerns/InteractsWithActions.php
+  intent: 'fix: Actions mounted from query parameters without modals'
+  diff_summary: 'Primary: packages/actions/src/Concerns/InteractsWithActions.php (+35/-0)'
+consequences:
+- package: filamentphp/filament
+  files:
+  - packages/panels/resources/views/components/page/index.blade.php
+  description: 'modified: packages/panels/resources/views/components/page/index.blade.php
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: filamentphp/filament
+  files:
+  - tests/src/Actions/ActionTest.php
+  description: 'modified: tests/src/Actions/ActionTest.php (+49/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from filamentphp/filament PR #20292. Trigger heuristic applied. Needs
+  review.'

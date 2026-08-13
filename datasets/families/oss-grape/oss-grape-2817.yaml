@@ -1,0 +1,172 @@
+id: oss-grape-2817
+title: Remove request-time mutable state from Array and custom-type coercers
+family: refactor
+date: '2026-07-26'
+author: ericproulx
+source: github-api-mined
+source_repo: ruby-grape/grape
+source_url: https://github.com/ruby-grape/grape/pull/2817
+source_pr: 2817
+difficulty: medium
+trigger:
+  package: ruby-grape/grape
+  files:
+  - lib/grape/util/cache.rb
+  intent: Remove request-time mutable state from Array and custom-type coercers
+  diff_summary: 'Primary: lib/grape/util/cache.rb (+21/-2)'
+consequences:
+- package: ruby-grape/grape
+  files:
+  - lib/grape.rb
+  description: 'modified: lib/grape.rb (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - lib/grape/router/base_route.rb
+  description: 'modified: lib/grape/router/base_route.rb (+5/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - lib/grape/util/deep_freeze.rb
+  description: 'modified: lib/grape/util/deep_freeze.rb (+1/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - lib/grape/util/freeze_on_new.rb
+  description: 'added: lib/grape/util/freeze_on_new.rb (+20/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - lib/grape/validations/types/array_coercer.rb
+  description: 'modified: lib/grape/validations/types/array_coercer.rb (+4/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - lib/grape/validations/types/custom_type_coercer.rb
+  description: 'modified: lib/grape/validations/types/custom_type_coercer.rb (+7/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - lib/grape/validations/types/dry_type_coercer.rb
+  description: 'modified: lib/grape/validations/types/dry_type_coercer.rb (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - lib/grape/validations/types/multiple_type_coercer.rb
+  description: 'modified: lib/grape/validations/types/multiple_type_coercer.rb (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - lib/grape/validations/types/variant_collection_coercer.rb
+  description: 'modified: lib/grape/validations/types/variant_collection_coercer.rb
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - lib/grape/validations/validators/base.rb
+  description: 'modified: lib/grape/validations/validators/base.rb (+1/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - lib/grape/validations/validators/contract_scope_validator.rb
+  description: 'modified: lib/grape/validations/validators/contract_scope_validator.rb
+    (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - spec/grape/router/route_spec.rb
+  description: 'modified: spec/grape/router/route_spec.rb (+14/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - spec/grape/util/cache_spec.rb
+  description: 'added: spec/grape/util/cache_spec.rb (+87/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - spec/grape/util/freeze_on_new_spec.rb
+  description: 'added: spec/grape/util/freeze_on_new_spec.rb (+39/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - spec/grape/validations/frozen_validation_graph_spec.rb
+  description: 'added: spec/grape/validations/frozen_validation_graph_spec.rb (+173/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - spec/grape/validations/types/array_coercer_spec.rb
+  description: 'modified: spec/grape/validations/types/array_coercer_spec.rb (+12/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - spec/grape/validations/types/custom_type_coercer_spec.rb
+  description: 'modified: spec/grape/validations/types/custom_type_coercer_spec.rb
+    (+11/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ruby-grape/grape
+  files:
+  - spec/grape/validations/types_spec.rb
+  description: 'modified: spec/grape/validations/types_spec.rb (+41/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 19
+notes: 'Mined from ruby-grape/grape PR #2817. Trigger heuristic applied. Needs review.'

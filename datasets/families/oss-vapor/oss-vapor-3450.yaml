@@ -1,0 +1,41 @@
+id: oss-vapor-3450
+title: Add stored contentType to File
+family: interface-evolution
+date: '2026-04-13'
+author: ptoffy
+source: github-api-mined
+source_repo: vapor/vapor
+source_url: https://github.com/vapor/vapor/pull/3450
+source_pr: 3450
+difficulty: medium
+trigger:
+  package: vapor/vapor
+  files:
+  - Tests/VaporTests/ContentTests.swift
+  intent: Add stored contentType to File
+  diff_summary: 'Primary: Tests/VaporTests/ContentTests.swift (+33/-0)'
+consequences:
+- package: vapor/vapor
+  files:
+  - Sources/Vapor/Multipart/File+Multipart.swift
+  description: 'modified: Sources/Vapor/Multipart/File+Multipart.swift (+3/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/Vapor/Utilities/File.swift
+  description: 'modified: Sources/Vapor/Utilities/File.swift (+10/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from vapor/vapor PR #3450. Trigger heuristic applied. Needs review.'

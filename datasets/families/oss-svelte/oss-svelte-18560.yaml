@@ -1,0 +1,41 @@
+id: oss-svelte-18560
+title: Version Packages
+family: uncategorized
+date: '2026-07-20'
+author: github-actions[bot]
+source: github-api-mined
+source_repo: sveltejs/svelte
+source_url: https://github.com/sveltejs/svelte/pull/18560
+source_pr: 18560
+difficulty: medium
+trigger:
+  package: sveltejs/svelte
+  files:
+  - .changeset/short-otters-find.md
+  intent: Version Packages
+  diff_summary: 'Primary: .changeset/short-otters-find.md (+0/-5)'
+consequences:
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/package.json
+  description: 'modified: packages/svelte/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: sveltejs/svelte
+  files:
+  - packages/svelte/src/version.js
+  description: 'modified: packages/svelte/src/version.js (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from sveltejs/svelte PR #18560. Trigger heuristic applied. Needs review.'

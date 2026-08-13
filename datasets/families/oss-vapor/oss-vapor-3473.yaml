@@ -1,0 +1,41 @@
+id: oss-vapor-3473
+title: 'HTTPServer: add idle-connection timeout option'
+family: interface-evolution
+date: '2026-07-01'
+author: hassang2
+source: github-api-mined
+source_repo: vapor/vapor
+source_url: https://github.com/vapor/vapor/pull/3473
+source_pr: 3473
+difficulty: medium
+trigger:
+  package: vapor/vapor
+  files:
+  - Tests/VaporTests/ServerTests.swift
+  intent: 'HTTPServer: add idle-connection timeout option'
+  diff_summary: 'Primary: Tests/VaporTests/ServerTests.swift (+75/-1)'
+consequences:
+- package: vapor/vapor
+  files:
+  - Sources/Vapor/HTTP/Server/CloseOnIdleHandler.swift
+  description: 'added: Sources/Vapor/HTTP/Server/CloseOnIdleHandler.swift (+24/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/Vapor/HTTP/Server/HTTPServer.swift
+  description: 'modified: Sources/Vapor/HTTP/Server/HTTPServer.swift (+36/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from vapor/vapor PR #3473. Trigger heuristic applied. Needs review.'

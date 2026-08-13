@@ -1,0 +1,99 @@
+id: oss-runtime-130444
+title: 'JIT: Remove transparent scalar/vector conversion HWINTRINSIC nodes during
+  lowering'
+family: refactor
+date: '2026-07-14'
+author: tannergooding
+source: github-api-mined
+source_repo: dotnet/runtime
+source_url: https://github.com/dotnet/runtime/pull/130444
+source_pr: 130444
+difficulty: medium
+trigger:
+  package: dotnet/runtime
+  files:
+  - src/coreclr/jit/lowerxarch.cpp
+  intent: 'JIT: Remove transparent scalar/vector conversion HWINTRINSIC nodes during
+    lowering'
+  diff_summary: 'Primary: src/coreclr/jit/lowerxarch.cpp (+172/-65)'
+consequences:
+- package: dotnet/runtime
+  files:
+  - src/coreclr/jit/gentree.cpp
+  description: 'modified: src/coreclr/jit/gentree.cpp (+59/-34)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/jit/hwintrinsiccodegenarm64.cpp
+  description: 'modified: src/coreclr/jit/hwintrinsiccodegenarm64.cpp (+7/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/jit/hwintrinsiccodegenxarch.cpp
+  description: 'modified: src/coreclr/jit/hwintrinsiccodegenxarch.cpp (+3/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/jit/instr.cpp
+  description: 'modified: src/coreclr/jit/instr.cpp (+5/-22)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/jit/lower.cpp
+  description: 'modified: src/coreclr/jit/lower.cpp (+24/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/jit/lower.h
+  description: 'modified: src/coreclr/jit/lower.h (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/jit/lowerarmarch.cpp
+  description: 'modified: src/coreclr/jit/lowerarmarch.cpp (+82/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/jit/lowerwasm.cpp
+  description: 'modified: src/coreclr/jit/lowerwasm.cpp (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/jit/lsraxarch.cpp
+  description: 'modified: src/coreclr/jit/lsraxarch.cpp (+6/-51)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 10
+notes: 'Mined from dotnet/runtime PR #130444. Trigger heuristic applied. Needs review.'

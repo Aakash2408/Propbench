@@ -1,0 +1,71 @@
+id: oss-guava-8558
+title: Resolve some accidental diffs between mainline and backport testers.
+family: bugfix
+date: '2026-07-15'
+author: copybara-service[bot]
+source: github-api-mined
+source_repo: google/guava
+source_url: https://github.com/google/guava/pull/8558
+source_pr: 8558
+difficulty: medium
+trigger:
+  package: google/guava
+  files:
+  - android/guava-testlib/src/com/google/common/collect/testing/testers/MapForEachTester.java
+  intent: Resolve some accidental diffs between mainline and backport testers.
+  diff_summary: 'Primary: android/guava-testlib/src/com/google/common/collect/testing/testers/MapForEachTester.java
+    (+4/-4)'
+consequences:
+- package: google/guava
+  files:
+  - android/guava-testlib/src/com/google/common/collect/testing/testers/CollectionForEachTester.java
+  description: 'modified: android/guava-testlib/src/com/google/common/collect/testing/testers/CollectionForEachTester.java
+    (+4/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - android/guava-testlib/src/com/google/common/collect/testing/testers/CollectionSpliteratorTester.java
+  description: 'modified: android/guava-testlib/src/com/google/common/collect/testing/testers/CollectionSpliteratorTester.java
+    (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - android/guava-testlib/src/com/google/common/collect/testing/testers/CollectionStreamTester.java
+  description: 'modified: android/guava-testlib/src/com/google/common/collect/testing/testers/CollectionStreamTester.java
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - android/guava-testlib/src/com/google/common/collect/testing/testers/MapMergeTester.java
+  description: 'modified: android/guava-testlib/src/com/google/common/collect/testing/testers/MapMergeTester.java
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - android/guava-testlib/src/com/google/common/collect/testing/testers/MapReplaceAllTester.java
+  description: 'modified: android/guava-testlib/src/com/google/common/collect/testing/testers/MapReplaceAllTester.java
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from google/guava PR #8558. Trigger heuristic applied. Needs review.'

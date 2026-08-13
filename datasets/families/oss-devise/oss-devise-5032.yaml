@@ -1,0 +1,41 @@
+id: oss-devise-5032
+title: Use warden’s `authenticated?` for query methods to avoid side effects
+family: uncategorized
+date: '2019-09-19'
+author: JanBussieck
+source: github-api-mined
+source_repo: heartcombo/devise
+source_url: https://github.com/heartcombo/devise/pull/5032
+source_pr: 5032
+difficulty: medium
+trigger:
+  package: heartcombo/devise
+  files:
+  - lib/devise/controllers/helpers.rb
+  intent: Use warden’s `authenticated?` for query methods to avoid side effects
+  diff_summary: 'Primary: lib/devise/controllers/helpers.rb (+2/-2)'
+consequences:
+- package: heartcombo/devise
+  files:
+  - lib/devise/controllers/sign_in_out.rb
+  description: 'modified: lib/devise/controllers/sign_in_out.rb (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - test/controllers/helpers_test.rb
+  description: 'modified: test/controllers/helpers_test.rb (+13/-13)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from heartcombo/devise PR #5032. Trigger heuristic applied. Needs review.'

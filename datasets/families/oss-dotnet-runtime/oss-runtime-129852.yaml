@@ -1,0 +1,97 @@
+id: oss-runtime-129852
+title: Remove 128-bit limit on Vector<T> size for ARM64
+family: refactor
+date: '2026-07-13'
+author: snickolls-arm
+source: github-api-mined
+source_repo: dotnet/runtime
+source_url: https://github.com/dotnet/runtime/pull/129852
+source_pr: 129852
+difficulty: medium
+trigger:
+  package: dotnet/runtime
+  files:
+  - src/coreclr/jit/compiler.h
+  intent: Remove 128-bit limit on Vector<T> size for ARM64
+  diff_summary: 'Primary: src/coreclr/jit/compiler.h (+28/-4)'
+consequences:
+- package: dotnet/runtime
+  files:
+  - src/coreclr/jit/compiler.cpp
+  description: 'modified: src/coreclr/jit/compiler.cpp (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/jit/importer.cpp
+  description: 'modified: src/coreclr/jit/importer.cpp (+11/-19)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/jit/lclvars.cpp
+  description: 'modified: src/coreclr/jit/lclvars.cpp (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/jit/morph.cpp
+  description: 'modified: src/coreclr/jit/morph.cpp (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/jit/simd.cpp
+  description: 'modified: src/coreclr/jit/simd.cpp (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/jit/targetarm64.h
+  description: 'modified: src/coreclr/jit/targetarm64.h (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/jit/valuenum.cpp
+  description: 'modified: src/coreclr/jit/valuenum.cpp (+1/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/vm/codeman.cpp
+  description: 'modified: src/coreclr/vm/codeman.cpp (+6/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/vm/methodtablebuilder.cpp
+  description: 'modified: src/coreclr/vm/methodtablebuilder.cpp (+13/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 10
+notes: 'Mined from dotnet/runtime PR #129852. Trigger heuristic applied. Needs review.'

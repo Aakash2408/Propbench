@@ -1,0 +1,49 @@
+id: oss-celery-10425
+title: Fix inconsistencies in systemd service examples
+family: bugfix
+date: '2026-07-23'
+author: phanky1
+source: github-api-mined
+source_repo: celery/celery
+source_url: https://github.com/celery/celery/pull/10425
+source_pr: 10425
+difficulty: medium
+trigger:
+  package: celery/celery
+  files:
+  - docs/userguide/daemonizing.rst
+  intent: Fix inconsistencies in systemd service examples
+  diff_summary: 'Primary: docs/userguide/daemonizing.rst (+6/-10)'
+consequences:
+- package: celery/celery
+  files:
+  - extra/systemd/celery.conf
+  description: 'modified: extra/systemd/celery.conf (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: celery/celery
+  files:
+  - extra/systemd/celery.tmpfiles
+  description: 'modified: extra/systemd/celery.tmpfiles (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: celery/celery
+  files:
+  - extra/systemd/celerybeat.service
+  description: 'modified: extra/systemd/celerybeat.service (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from celery/celery PR #10425. Trigger heuristic applied. Needs review.'

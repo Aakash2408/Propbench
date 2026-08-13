@@ -1,0 +1,58 @@
+id: oss-aspnetcore-68234
+title: Add asset path metadata attributes
+family: interface-evolution
+date: '2026-08-10'
+author: javiercn
+source: github-api-mined
+source_repo: dotnet/aspnetcore
+source_url: https://github.com/dotnet/aspnetcore/pull/68234
+source_pr: 68234
+difficulty: medium
+trigger:
+  package: dotnet/aspnetcore
+  files:
+  - src/Components/Components/src/AcceptsAssetPathAttribute.cs
+  intent: Add asset path metadata attributes
+  diff_summary: 'Primary: src/Components/Components/src/AcceptsAssetPathAttribute.cs
+    (+46/-0)'
+consequences:
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Components/src/AssetPathAttribute.cs
+  description: 'added: src/Components/Components/src/AssetPathAttribute.cs (+22/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Components/src/PublicAPI.Unshipped.txt
+  description: 'modified: src/Components/Components/src/PublicAPI.Unshipped.txt (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Web/src/PublicAPI.Unshipped.txt
+  description: 'modified: src/Components/Web/src/PublicAPI.Unshipped.txt (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Web/src/Web/AssetPathAttributes.cs
+  description: 'added: src/Components/Web/src/Web/AssetPathAttributes.cs (+24/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from dotnet/aspnetcore PR #68234. Trigger heuristic applied. Needs review.'

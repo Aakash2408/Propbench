@@ -1,0 +1,71 @@
+id: oss-symfony-65274
+title: '[Mailer][Notifier] Avoid retaining messages without the profiler'
+family: uncategorized
+date: '2026-08-11'
+author: eissasoubhi
+source: github-api-mined
+source_repo: symfony/symfony
+source_url: https://github.com/symfony/symfony/pull/65274
+source_pr: 65274
+difficulty: medium
+trigger:
+  package: symfony/symfony
+  files:
+  - src/Symfony/Bundle/FrameworkBundle/Tests/DependencyInjection/FrameworkExtensionTestCase.php
+  intent: '[Mailer][Notifier] Avoid retaining messages without the profiler'
+  diff_summary: 'Primary: src/Symfony/Bundle/FrameworkBundle/Tests/DependencyInjection/FrameworkExtensionTestCase.php
+    (+52/-0)'
+consequences:
+- package: symfony/symfony
+  files:
+  - src/Symfony/Bundle/FrameworkBundle/DependencyInjection/FrameworkExtension.php
+  description: 'modified: src/Symfony/Bundle/FrameworkBundle/DependencyInjection/FrameworkExtension.php
+    (+25/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Mailer/EventListener/MessageLoggerListener.php
+  description: 'modified: src/Symfony/Component/Mailer/EventListener/MessageLoggerListener.php
+    (+7/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Mailer/Tests/EventListener/MessageLoggerListenerTest.php
+  description: 'added: src/Symfony/Component/Mailer/Tests/EventListener/MessageLoggerListenerTest.php
+    (+66/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Notifier/EventListener/NotificationLoggerListener.php
+  description: 'modified: src/Symfony/Component/Notifier/EventListener/NotificationLoggerListener.php
+    (+7/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Notifier/Tests/EventListener/NotificationLoggerListenerTest.php
+  description: 'added: src/Symfony/Component/Notifier/Tests/EventListener/NotificationLoggerListenerTest.php
+    (+62/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from symfony/symfony PR #65274. Trigger heuristic applied. Needs review.'

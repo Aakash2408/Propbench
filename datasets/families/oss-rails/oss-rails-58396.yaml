@@ -1,0 +1,81 @@
+id: oss-rails-58396
+title: Eager load templates
+family: uncategorized
+date: '2026-08-08'
+author: etiennebarrie
+source: github-api-mined
+source_repo: rails/rails
+source_url: https://github.com/rails/rails/pull/58396
+source_pr: 58396
+difficulty: medium
+trigger:
+  package: rails/rails
+  files:
+  - actionview/lib/action_view/unbound_template.rb
+  intent: Eager load templates
+  diff_summary: 'Primary: actionview/lib/action_view/unbound_template.rb (+28/-12)'
+consequences:
+- package: rails/rails
+  files:
+  - actionview/lib/action_view/template.rb
+  description: 'modified: actionview/lib/action_view/template.rb (+27/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - actionview/lib/action_view/template/resolver.rb
+  description: 'modified: actionview/lib/action_view/template/resolver.rb (+31/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - actionview/lib/action_view/template/sources.rb
+  description: 'modified: actionview/lib/action_view/template/sources.rb (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - actionview/test/template/file_system_resolver_test.rb
+  description: 'modified: actionview/test/template/file_system_resolver_test.rb (+98/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - actionview/test/template/template_test.rb
+  description: 'modified: actionview/test/template/template_test.rb (+12/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - railties/lib/rails/application.rb
+  description: 'modified: railties/lib/rails/application.rb (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - railties/test/application/ractors_test.rb
+  description: 'modified: railties/test/application/ractors_test.rb (+9/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 8
+notes: 'Mined from rails/rails PR #58396. Trigger heuristic applied. Needs review.'

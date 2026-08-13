@@ -1,0 +1,188 @@
+id: oss-transformers-47902
+title: 'fix: correct checkpoints, config annotations, and create_dummy_models improvements'
+family: bugfix
+date: '2026-08-11'
+author: ydshieh
+source: github-api-mined
+source_repo: huggingface/transformers
+source_url: https://github.com/huggingface/transformers/pull/47902
+source_pr: 47902
+difficulty: medium
+trigger:
+  package: huggingface/transformers
+  files:
+  - utils/create_dummy_models.py
+  intent: 'fix: correct checkpoints, config annotations, and create_dummy_models improvements'
+  diff_summary: 'Primary: utils/create_dummy_models.py (+184/-7)'
+consequences:
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/cosmos3_edge/configuration_cosmos3_edge.py
+  description: 'modified: src/transformers/models/cosmos3_edge/configuration_cosmos3_edge.py
+    (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/cosmos3_edge/modular_cosmos3_edge.py
+  description: 'modified: src/transformers/models/cosmos3_edge/modular_cosmos3_edge.py
+    (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/gemma4/modeling_gemma4.py
+  description: 'modified: src/transformers/models/gemma4/modeling_gemma4.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/gemma4/modular_gemma4.py
+  description: 'modified: src/transformers/models/gemma4/modular_gemma4.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/gpt_bigcode/configuration_gpt_bigcode.py
+  description: 'modified: src/transformers/models/gpt_bigcode/configuration_gpt_bigcode.py
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/inkling/configuration_inkling.py
+  description: 'modified: src/transformers/models/inkling/configuration_inkling.py
+    (+12/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/inkling/modular_inkling.py
+  description: 'modified: src/transformers/models/inkling/modular_inkling.py (+12/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/minimax_m3_vl/configuration_minimax_m3_vl.py
+  description: 'modified: src/transformers/models/minimax_m3_vl/configuration_minimax_m3_vl.py
+    (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/minimax_m3_vl/modular_minimax_m3_vl.py
+  description: 'modified: src/transformers/models/minimax_m3_vl/modular_minimax_m3_vl.py
+    (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/olmo2/configuration_olmo2.py
+  description: 'modified: src/transformers/models/olmo2/configuration_olmo2.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/olmo2/modular_olmo2.py
+  description: 'modified: src/transformers/models/olmo2/modular_olmo2.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/pp_formulanet/configuration_pp_formulanet.py
+  description: 'modified: src/transformers/models/pp_formulanet/configuration_pp_formulanet.py
+    (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/pp_formulanet/modular_pp_formulanet.py
+  description: 'modified: src/transformers/models/pp_formulanet/modular_pp_formulanet.py
+    (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/uvdoc/modeling_uvdoc.py
+  description: 'modified: src/transformers/models/uvdoc/modeling_uvdoc.py (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/uvdoc/modular_uvdoc.py
+  description: 'modified: src/transformers/models/uvdoc/modular_uvdoc.py (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/wav2vec2_bert/configuration_wav2vec2_bert.py
+  description: 'modified: src/transformers/models/wav2vec2_bert/configuration_wav2vec2_bert.py
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/xlm_roberta_xl/configuration_xlm_roberta_xl.py
+  description: 'modified: src/transformers/models/xlm_roberta_xl/configuration_xlm_roberta_xl.py
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - tests/models/glm_image/test_modeling_glm_image.py
+  description: 'modified: tests/models/glm_image/test_modeling_glm_image.py (+5/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - utils/check_config_docstrings.py
+  description: 'modified: utils/check_config_docstrings.py (+19/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 20
+notes: 'Mined from huggingface/transformers PR #47902. Trigger heuristic applied.
+  Needs review.'

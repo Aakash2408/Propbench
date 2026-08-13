@@ -1,0 +1,144 @@
+id: oss-abp-25931
+title: abp#1519 — Angular 22.0.0 → 22.1.0 — abp
+family: interface-evolution
+date: '2026-08-07'
+author: taskever[bot]
+source: github-api-mined
+source_repo: abpframework/abp
+source_url: https://github.com/abpframework/abp/pull/25931
+source_pr: 25931
+difficulty: medium
+trigger:
+  package: abpframework/abp
+  files:
+  - npm/ng-packs/package.json
+  intent: abp#1519 — Angular 22.0.0 → 22.1.0 — abp
+  diff_summary: 'Primary: npm/ng-packs/package.json (+25/-25)'
+consequences:
+- package: abpframework/abp
+  files:
+  - npm/ng-packs/packages/core/src/lib/directives/permission.directive.ts
+  description: 'modified: npm/ng-packs/packages/core/src/lib/directives/permission.directive.ts
+    (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - npm/ng-packs/packages/feature-management/package.json
+  description: 'modified: npm/ng-packs/packages/feature-management/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - npm/ng-packs/packages/permission-management/package.json
+  description: 'modified: npm/ng-packs/packages/permission-management/package.json
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - npm/ng-packs/packages/schematics/package.json
+  description: 'modified: npm/ng-packs/packages/schematics/package.json (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - npm/ng-packs/packages/setting-management/package.json
+  description: 'modified: npm/ng-packs/packages/setting-management/package.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - npm/ng-packs/packages/theme-shared/src/lib/components/breadcrumb/breadcrumb.component.html
+  description: 'modified: npm/ng-packs/packages/theme-shared/src/lib/components/breadcrumb/breadcrumb.component.html
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - npm/ng-packs/packages/theme-shared/src/lib/components/breadcrumb/breadcrumb.component.ts
+  description: 'modified: npm/ng-packs/packages/theme-shared/src/lib/components/breadcrumb/breadcrumb.component.ts
+    (+6/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - npm/ng-packs/packages/theme-shared/src/lib/services/toaster.service.ts
+  description: 'modified: npm/ng-packs/packages/theme-shared/src/lib/services/toaster.service.ts
+    (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - npm/ng-packs/packages/theme-shared/src/lib/tests/breadcrumb.component.spec.ts
+  description: 'modified: npm/ng-packs/packages/theme-shared/src/lib/tests/breadcrumb.component.spec.ts
+    (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - templates/app-nolayers/angular/package.json
+  description: 'modified: templates/app-nolayers/angular/package.json (+19/-19)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - templates/app/angular/package.json
+  description: 'modified: templates/app/angular/package.json (+19/-19)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - templates/module/angular/package.json
+  description: 'modified: templates/module/angular/package.json (+21/-21)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - templates/module/angular/projects/my-project-name/package.json
+  description: 'modified: templates/module/angular/projects/my-project-name/package.json
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - templates/module/angular/tsconfig.prod.json
+  description: 'modified: templates/module/angular/tsconfig.prod.json (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 15
+notes: 'Mined from abpframework/abp PR #25931. Trigger heuristic applied. Needs review.'

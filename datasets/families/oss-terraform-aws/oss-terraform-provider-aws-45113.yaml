@@ -1,0 +1,44 @@
+id: oss-terraform-provider-aws-45113
+title: 'r/`aws_dlm_lifecycle_policy`: Add `policy_details.parameters.exclude_data_volume_tags`
+  argument'
+family: interface-evolution
+date: '2026-08-07'
+author: srufer92
+source: github-api-mined
+source_repo: hashicorp/terraform-provider-aws
+source_url: https://github.com/hashicorp/terraform-provider-aws/pull/45113
+source_pr: 45113
+difficulty: medium
+trigger:
+  package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/dlm/lifecycle_policy.go
+  intent: 'r/`aws_dlm_lifecycle_policy`: Add `policy_details.parameters.exclude_data_volume_tags`
+    argument'
+  diff_summary: 'Primary: internal/service/dlm/lifecycle_policy.go (+12/-0)'
+consequences:
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/dlm/lifecycle_policy_test.go
+  description: 'modified: internal/service/dlm/lifecycle_policy_test.go (+4/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - website/docs/r/dlm_lifecycle_policy.html.markdown
+  description: 'modified: website/docs/r/dlm_lifecycle_policy.html.markdown (+2/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from hashicorp/terraform-provider-aws PR #45113. Trigger heuristic applied.
+  Needs review.'

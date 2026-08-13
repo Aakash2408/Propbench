@@ -1,0 +1,83 @@
+id: oss-symfony-65277
+title: '[Workflow] Add default generic types to Workflow Events'
+family: interface-evolution
+date: '2026-08-11'
+author: alexander-schranz
+source: github-api-mined
+source_repo: symfony/symfony
+source_url: https://github.com/symfony/symfony/pull/65277
+source_pr: 65277
+difficulty: medium
+trigger:
+  package: symfony/symfony
+  files:
+  - src/Symfony/Component/Workflow/Event/AnnounceEvent.php
+  intent: '[Workflow] Add default generic types to Workflow Events'
+  diff_summary: 'Primary: src/Symfony/Component/Workflow/Event/AnnounceEvent.php (+1/-1)'
+consequences:
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Workflow/Event/CompletedEvent.php
+  description: 'modified: src/Symfony/Component/Workflow/Event/CompletedEvent.php
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Workflow/Event/EnterEvent.php
+  description: 'modified: src/Symfony/Component/Workflow/Event/EnterEvent.php (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Workflow/Event/EnteredEvent.php
+  description: 'modified: src/Symfony/Component/Workflow/Event/EnteredEvent.php (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Workflow/Event/Event.php
+  description: 'modified: src/Symfony/Component/Workflow/Event/Event.php (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Workflow/Event/GuardEvent.php
+  description: 'modified: src/Symfony/Component/Workflow/Event/GuardEvent.php (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Workflow/Event/LeaveEvent.php
+  description: 'modified: src/Symfony/Component/Workflow/Event/LeaveEvent.php (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Workflow/Event/TransitionEvent.php
+  description: 'modified: src/Symfony/Component/Workflow/Event/TransitionEvent.php
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 8
+notes: 'Mined from symfony/symfony PR #65277. Trigger heuristic applied. Needs review.'

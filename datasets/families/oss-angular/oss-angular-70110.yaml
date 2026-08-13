@@ -1,0 +1,49 @@
+id: oss-angular-70110
+title: 'refactor(core): distinguish animations that share a name'
+family: refactor
+date: '2026-08-12'
+author: SkyZeroZx
+source: github-api-mined
+source_repo: angular/angular
+source_url: https://github.com/angular/angular/pull/70110
+source_pr: 70110
+difficulty: medium
+trigger:
+  package: angular/angular
+  files:
+  - packages/core/src/animation/utils.ts
+  intent: 'refactor(core): distinguish animations that share a name'
+  diff_summary: 'Primary: packages/core/src/animation/utils.ts (+38/-8)'
+consequences:
+- package: angular/angular
+  files:
+  - packages/core/src/animation/longest_animation.ts
+  description: 'modified: packages/core/src/animation/longest_animation.ts (+19/-9)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - packages/core/test/acceptance/animation_spec.ts
+  description: 'modified: packages/core/test/acceptance/animation_spec.ts (+63/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - packages/core/test/animation/longest_animation_spec.ts
+  description: 'modified: packages/core/test/animation/longest_animation_spec.ts (+28/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from angular/angular PR #70110. Trigger heuristic applied. Needs review.'

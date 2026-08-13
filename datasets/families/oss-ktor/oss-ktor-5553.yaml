@@ -1,0 +1,106 @@
+id: oss-ktor-5553
+title: Improve static content handling
+family: uncategorized
+date: '2026-07-28'
+author: solonovamax
+source: github-api-mined
+source_repo: ktorio/ktor
+source_url: https://github.com/ktorio/ktor/pull/5553
+source_pr: 5553
+difficulty: medium
+trigger:
+  package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-core/jvm/src/io/ktor/server/http/content/StaticContent.kt
+  intent: Improve static content handling
+  diff_summary: 'Primary: ktor-server/ktor-server-core/jvm/src/io/ktor/server/http/content/StaticContent.kt
+    (+665/-170)'
+consequences:
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-core/api/ktor-server-core.api
+  description: 'modified: ktor-server/ktor-server-core/api/ktor-server-core.api (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-core/jvm/src/io/ktor/server/http/content/PreCompressed.kt
+  description: 'modified: ktor-server/ktor-server-core/jvm/src/io/ktor/server/http/content/PreCompressed.kt
+    (+302/-131)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-core/jvm/src/io/ktor/server/http/content/StaticContentResolution.kt
+  description: 'modified: ktor-server/ktor-server-core/jvm/src/io/ktor/server/http/content/StaticContentResolution.kt
+    (+35/-19)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-tests/jvm/test-resources/public/has-fallback.secret.txt
+  description: 'added: ktor-server/ktor-server-tests/jvm/test-resources/public/has-fallback.secret.txt
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-tests/jvm/test-resources/public/has-fallback.txt
+  description: 'added: ktor-server/ktor-server-tests/jvm/test-resources/public/has-fallback.txt
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-tests/jvm/test-resources/public/ignored/index.txt
+  description: 'added: ktor-server/ktor-server-tests/jvm/test-resources/public/ignored/index.txt
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-tests/jvm/test-resources/public/index.html.br
+  description: 'added: ktor-server/ktor-server-tests/jvm/test-resources/public/index.html.br
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-tests/jvm/test/io/ktor/server/http/spa/SinglePageApplicationTest.kt
+  description: 'modified: ktor-server/ktor-server-tests/jvm/test/io/ktor/server/http/spa/SinglePageApplicationTest.kt
+    (+0/-51)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-tests/jvm/test/io/ktor/server/plugins/StaticContentTest.kt
+  description: 'modified: ktor-server/ktor-server-tests/jvm/test/io/ktor/server/plugins/StaticContentTest.kt
+    (+438/-471)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 10
+notes: 'Mined from ktorio/ktor PR #5553. Trigger heuristic applied. Needs review.'

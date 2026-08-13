@@ -1,0 +1,42 @@
+id: oss-transformers-47810
+title: Hotfix axk2 indexer norm
+family: bugfix
+date: '2026-08-06'
+author: kmswin1
+source: github-api-mined
+source_repo: huggingface/transformers
+source_url: https://github.com/huggingface/transformers/pull/47810
+source_pr: 47810
+difficulty: medium
+trigger:
+  package: huggingface/transformers
+  files:
+  - src/transformers/models/axk2/modeling_axk2.py
+  intent: Hotfix axk2 indexer norm
+  diff_summary: 'Primary: src/transformers/models/axk2/modeling_axk2.py (+3/-3)'
+consequences:
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/axk2/modular_axk2.py
+  description: 'modified: src/transformers/models/axk2/modular_axk2.py (+2/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - tests/models/axk2/test_modeling_axk2.py
+  description: 'modified: tests/models/axk2/test_modeling_axk2.py (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from huggingface/transformers PR #47810. Trigger heuristic applied.
+  Needs review.'

@@ -1,0 +1,118 @@
+id: oss-ktor-5762
+title: 'KTOR-9688 RateLimit: No access to principal when wrapped with authentication
+  since 3.5.1'
+family: uncategorized
+date: '2026-07-20'
+author: zibet27
+source: github-api-mined
+source_repo: ktorio/ktor
+source_url: https://github.com/ktorio/ktor/pull/5762
+source_pr: 5762
+difficulty: medium
+trigger:
+  package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-plugins/ktor-server-rate-limit/common/src/io/ktor/server/plugins/ratelimit/RateLimitInterceptors.kt
+  intent: 'KTOR-9688 RateLimit: No access to principal when wrapped with authentication
+    since 3.5.1'
+  diff_summary: 'Primary: ktor-server/ktor-server-plugins/ktor-server-rate-limit/common/src/io/ktor/server/plugins/ratelimit/RateLimitInterceptors.kt
+    (+20/-7)'
+consequences:
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-core/common/src/io/ktor/server/application/ApplicationCallPipeline.kt
+  description: 'modified: ktor-server/ktor-server-core/common/src/io/ktor/server/application/ApplicationCallPipeline.kt
+    (+10/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-core/common/src/io/ktor/server/application/PluginBuilder.kt
+  description: 'modified: ktor-server/ktor-server-core/common/src/io/ktor/server/application/PluginBuilder.kt
+    (+24/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-core/common/src/io/ktor/server/application/debug/DebugPhaseNames.kt
+  description: 'modified: ktor-server/ktor-server-core/common/src/io/ktor/server/application/debug/DebugPhaseNames.kt
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-plugins/ktor-server-auth/common/src/io/ktor/server/auth/AuthenticationInterceptors.kt
+  description: 'modified: ktor-server/ktor-server-plugins/ktor-server-auth/common/src/io/ktor/server/auth/AuthenticationInterceptors.kt
+    (+10/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-plugins/ktor-server-body-limit/common/src/io/ktor/server/plugins/bodylimit/RequestBodyLimit.kt
+  description: 'modified: ktor-server/ktor-server-plugins/ktor-server-body-limit/common/src/io/ktor/server/plugins/bodylimit/RequestBodyLimit.kt
+    (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-plugins/ktor-server-cors/common/src/io/ktor/server/plugins/cors/CORS.kt
+  description: 'modified: ktor-server/ktor-server-plugins/ktor-server-cors/common/src/io/ktor/server/plugins/cors/CORS.kt
+    (+9/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-plugins/ktor-server-cors/common/src/io/ktor/server/plugins/cors/routing/CORS.kt
+  description: 'modified: ktor-server/ktor-server-plugins/ktor-server-cors/common/src/io/ktor/server/plugins/cors/routing/CORS.kt
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-plugins/ktor-server-rate-limit/build.gradle.kts
+  description: 'modified: ktor-server/ktor-server-plugins/ktor-server-rate-limit/build.gradle.kts
+    (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-plugins/ktor-server-rate-limit/common/src/io/ktor/server/plugins/ratelimit/Routing.kt
+  description: 'modified: ktor-server/ktor-server-plugins/ktor-server-rate-limit/common/src/io/ktor/server/plugins/ratelimit/Routing.kt
+    (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-plugins/ktor-server-rate-limit/common/test/io/ktor/server/plugins/ratelimit/RateLimitIntegrationTest.kt
+  description: 'modified: ktor-server/ktor-server-plugins/ktor-server-rate-limit/common/test/io/ktor/server/plugins/ratelimit/RateLimitIntegrationTest.kt
+    (+71/-29)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 11
+notes: 'Mined from ktorio/ktor PR #5762. Trigger heuristic applied. Needs review.'

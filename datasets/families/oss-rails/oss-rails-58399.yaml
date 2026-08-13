@@ -1,0 +1,91 @@
+id: oss-rails-58399
+title: Active Record ivar ractor safety
+family: interface-evolution
+date: '2026-08-07'
+author: gmcgibbon
+source: github-api-mined
+source_repo: rails/rails
+source_url: https://github.com/rails/rails/pull/58399
+source_pr: 58399
+difficulty: medium
+trigger:
+  package: rails/rails
+  files:
+  - activerecord/lib/active_record/model_schema.rb
+  intent: Active Record ivar ractor safety
+  diff_summary: 'Primary: activerecord/lib/active_record/model_schema.rb (+22/-16)'
+consequences:
+- package: rails/rails
+  files:
+  - activerecord/lib/active_record/persistence.rb
+  description: 'modified: activerecord/lib/active_record/persistence.rb (+4/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/lib/active_record/relation/predicate_builder.rb
+  description: 'modified: activerecord/lib/active_record/relation/predicate_builder.rb
+    (+11/-5)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/lib/arel/table.rb
+  description: 'modified: activerecord/lib/arel/table.rb (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/test/cases/arel/helper.rb
+  description: 'modified: activerecord/test/cases/arel/helper.rb (+2/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/test/cases/arel/table_test.rb
+  description: 'modified: activerecord/test/cases/arel/table_test.rb (+4/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/test/cases/base_test.rb
+  description: 'modified: activerecord/test/cases/base_test.rb (+4/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/test/cases/primary_keys_test.rb
+  description: 'modified: activerecord/test/cases/primary_keys_test.rb (+13/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: rails/rails
+  files:
+  - activerecord/test/cases/relation/predicate_builder_test.rb
+  description: 'modified: activerecord/test/cases/relation/predicate_builder_test.rb
+    (+20/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 9
+notes: 'Mined from rails/rails PR #58399. Trigger heuristic applied. Needs review.'

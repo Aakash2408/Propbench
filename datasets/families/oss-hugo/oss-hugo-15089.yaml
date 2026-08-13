@@ -1,0 +1,178 @@
+id: oss-hugo-15089
+title: 'all: Rewrite deprecated constructs in tests'
+family: dependency-evolution
+date: '2026-07-04'
+author: bep
+source: github-api-mined
+source_repo: gohugoio/hugo
+source_url: https://github.com/gohugoio/hugo/pull/15089
+source_pr: 15089
+difficulty: medium
+trigger:
+  package: gohugoio/hugo
+  files:
+  - hugolib/language_content_dir_test.go
+  intent: 'all: Rewrite deprecated constructs in tests'
+  diff_summary: 'Primary: hugolib/language_content_dir_test.go (+22/-13)'
+consequences:
+- package: gohugoio/hugo
+  files:
+  - config/allconfig/allconfig_integration_test.go
+  description: 'modified: config/allconfig/allconfig_integration_test.go (+4/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - config/allconfig/load_test.go
+  description: 'modified: config/allconfig/load_test.go (+8/-4)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - create/content_test.go
+  description: 'modified: create/content_test.go (+6/-6)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - hugolib/config_test.go
+  description: 'modified: hugolib/config_test.go (+8/-25)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - hugolib/hugo_modules_test.go
+  description: 'modified: hugolib/hugo_modules_test.go (+5/-5)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - hugolib/hugo_sites_build_test.go
+  description: 'modified: hugolib/hugo_sites_build_test.go (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - hugolib/hugo_sites_multihost_test.go
+  description: 'modified: hugolib/hugo_sites_multihost_test.go (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - hugolib/hugo_smoke_test.go
+  description: 'modified: hugolib/hugo_smoke_test.go (+16/-8)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - hugolib/page_test.go
+  description: 'modified: hugolib/page_test.go (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - hugolib/pagecollections_test.go
+  description: 'modified: hugolib/pagecollections_test.go (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - hugolib/site_stats_test.go
+  description: 'modified: hugolib/site_stats_test.go (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - hugolib/site_test.go
+  description: 'modified: hugolib/site_test.go (+2/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - hugolib/sitemap_test.go
+  description: 'modified: hugolib/sitemap_test.go (+3/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - hugolib/sitesmatrix/sitematrix_integration_test.go
+  description: 'modified: hugolib/sitesmatrix/sitematrix_integration_test.go (+3/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - langs/i18n/i18n_integration_test.go
+  description: 'modified: langs/i18n/i18n_integration_test.go (+5/-5)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - resources/page/site_integration_test.go
+  description: 'modified: resources/page/site_integration_test.go (+3/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - resources/page/testhelpers_test.go
+  description: 'modified: resources/page/testhelpers_test.go (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - resources/resource_transformers/templates/templates_integration_test.go
+  description: 'modified: resources/resource_transformers/templates/templates_integration_test.go
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - tpl/collections/collections_integration_test.go
+  description: 'modified: tpl/collections/collections_integration_test.go (+4/-4)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 20
+notes: 'Mined from gohugoio/hugo PR #15089. Trigger heuristic applied. Needs review.'

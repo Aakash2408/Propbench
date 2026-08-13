@@ -1,0 +1,42 @@
+id: oss-prometheus-19266
+title: 'promql: honour @ modifier when evaluating info series'
+family: uncategorized
+date: '2026-08-10'
+author: zenador
+source: github-api-mined
+source_repo: prometheus/prometheus
+source_url: https://github.com/prometheus/prometheus/pull/19266
+source_pr: 19266
+difficulty: medium
+trigger:
+  package: prometheus/prometheus
+  files:
+  - promql/info.go
+  intent: 'promql: honour @ modifier when evaluating info series'
+  diff_summary: 'Primary: promql/info.go (+46/-19)'
+consequences:
+- package: prometheus/prometheus
+  files:
+  - promql/engine.go
+  description: 'modified: promql/engine.go (+9/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: prometheus/prometheus
+  files:
+  - promql/promqltest/testdata/info.test
+  description: 'modified: promql/promqltest/testdata/info.test (+61/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from prometheus/prometheus PR #19266. Trigger heuristic applied. Needs
+  review.'

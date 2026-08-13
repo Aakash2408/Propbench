@@ -1,0 +1,169 @@
+id: oss-abp-25974
+title: Render the `lang` and the `dir` of the current culture in email templates
+family: uncategorized
+date: '2026-08-12'
+author: maliming
+source: github-api-mined
+source_repo: abpframework/abp
+source_url: https://github.com/abpframework/abp/pull/25974
+source_pr: 25974
+difficulty: medium
+trigger:
+  package: abpframework/abp
+  files:
+  - framework/src/Volo.Abp.TextTemplating.Core/Volo/Abp/TextTemplating/TemplateRenderingEngineBase.cs
+  intent: Render the `lang` and the `dir` of the current culture in email templates
+  diff_summary: 'Primary: framework/src/Volo.Abp.TextTemplating.Core/Volo/Abp/TextTemplating/TemplateRenderingEngineBase.cs
+    (+34/-1)'
+consequences:
+- package: abpframework/abp
+  files:
+  - docs/en/framework/infrastructure/emailing.md
+  description: 'modified: docs/en/framework/infrastructure/emailing.md (+4/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - docs/en/framework/infrastructure/text-templating/razor.md
+  description: 'modified: docs/en/framework/infrastructure/text-templating/razor.md
+    (+17/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - docs/en/framework/infrastructure/text-templating/scriban.md
+  description: 'modified: docs/en/framework/infrastructure/text-templating/scriban.md
+    (+17/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - framework/src/Volo.Abp.Emailing/Volo/Abp/Emailing/Templates/Layout.tpl
+  description: 'modified: framework/src/Volo.Abp.Emailing/Volo/Abp/Emailing/Templates/Layout.tpl
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - framework/src/Volo.Abp.TextTemplating.Razor/Volo/Abp/TextTemplating/Razor/RazorTemplateRenderingEngine.cs
+  description: 'modified: framework/src/Volo.Abp.TextTemplating.Razor/Volo/Abp/TextTemplating/Razor/RazorTemplateRenderingEngine.cs
+    (+9/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - framework/src/Volo.Abp.TextTemplating.Scriban/Volo/Abp/TextTemplating/Scriban/ScribanTemplateRenderingEngine.cs
+  description: 'modified: framework/src/Volo.Abp.TextTemplating.Scriban/Volo/Abp/TextTemplating/Scriban/ScribanTemplateRenderingEngine.cs
+    (+9/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - framework/test/Volo.Abp.Emailing.Tests/Volo.Abp.Emailing.Tests.csproj
+  description: 'modified: framework/test/Volo.Abp.Emailing.Tests/Volo.Abp.Emailing.Tests.csproj
+    (+1/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - framework/test/Volo.Abp.Emailing.Tests/Volo/Abp/Emailing/AbpEmailingTestModule.cs
+  description: 'modified: framework/test/Volo.Abp.Emailing.Tests/Volo/Abp/Emailing/AbpEmailingTestModule.cs
+    (+2/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - framework/test/Volo.Abp.Emailing.Tests/Volo/Abp/Emailing/Templates/StandardEmailTemplates_Tests.cs
+  description: 'added: framework/test/Volo.Abp.Emailing.Tests/Volo/Abp/Emailing/Templates/StandardEmailTemplates_Tests.cs
+    (+44/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - framework/test/Volo.Abp.TextTemplating.Razor.Tests/Volo/Abp/TextTemplating/Razor/RazorTemplateRenderingEngine_CultureContext_Tests.cs
+  description: 'added: framework/test/Volo.Abp.TextTemplating.Razor.Tests/Volo/Abp/TextTemplating/Razor/RazorTemplateRenderingEngine_CultureContext_Tests.cs
+    (+65/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - framework/test/Volo.Abp.TextTemplating.Razor.Tests/Volo/Abp/TextTemplating/Razor/RazorTestTemplateDefinitionProvider.cs
+  description: 'modified: framework/test/Volo.Abp.TextTemplating.Razor.Tests/Volo/Abp/TextTemplating/Razor/RazorTestTemplateDefinitionProvider.cs
+    (+4/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - framework/test/Volo.Abp.TextTemplating.Razor.Tests/Volo/Abp/TextTemplating/Razor/SampleTemplates/CultureContext.cshtml
+  description: 'added: framework/test/Volo.Abp.TextTemplating.Razor.Tests/Volo/Abp/TextTemplating/Razor/SampleTemplates/CultureContext.cshtml
+    (+2/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - framework/test/Volo.Abp.TextTemplating.Razor.Tests/Volo/Abp/TextTemplating/Razor/SampleTemplates/RazorTestTemplates.cs
+  description: 'modified: framework/test/Volo.Abp.TextTemplating.Razor.Tests/Volo/Abp/TextTemplating/Razor/SampleTemplates/RazorTestTemplates.cs
+    (+1/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - framework/test/Volo.Abp.TextTemplating.Scriban.Tests/Volo/Abp/TextTemplating/Scriban/SampleTemplates/CultureContext.tpl
+  description: 'added: framework/test/Volo.Abp.TextTemplating.Scriban.Tests/Volo/Abp/TextTemplating/Scriban/SampleTemplates/CultureContext.tpl
+    (+1/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - framework/test/Volo.Abp.TextTemplating.Scriban.Tests/Volo/Abp/TextTemplating/Scriban/ScribanTemplateRenderingEngine_CultureContext_Tests.cs
+  description: 'added: framework/test/Volo.Abp.TextTemplating.Scriban.Tests/Volo/Abp/TextTemplating/Scriban/ScribanTemplateRenderingEngine_CultureContext_Tests.cs
+    (+107/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - framework/test/Volo.Abp.TextTemplating.Scriban.Tests/Volo/Abp/TextTemplating/Scriban/ScribanTestTemplateDefinitionProvider.cs
+  description: 'modified: framework/test/Volo.Abp.TextTemplating.Scriban.Tests/Volo/Abp/TextTemplating/Scriban/ScribanTestTemplateDefinitionProvider.cs
+    (+5/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 17
+notes: 'Mined from abpframework/abp PR #25974. Trigger heuristic applied. Needs review.'

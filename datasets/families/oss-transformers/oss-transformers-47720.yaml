@@ -1,0 +1,76 @@
+id: oss-transformers-47720
+title: 🚨 [cache] Cropping can only be done with negative values
+family: uncategorized
+date: '2026-08-05'
+author: Cyrilvallez
+source: github-api-mined
+source_repo: huggingface/transformers
+source_url: https://github.com/huggingface/transformers/pull/47720
+source_pr: 47720
+difficulty: medium
+trigger:
+  package: huggingface/transformers
+  files:
+  - tests/utils/test_cache_utils.py
+  intent: 🚨 [cache] Cropping can only be done with negative values
+  diff_summary: 'Primary: tests/utils/test_cache_utils.py (+231/-2)'
+consequences:
+- package: huggingface/transformers
+  files:
+  - src/transformers/cache_utils.py
+  description: 'modified: src/transformers/cache_utils.py (+77/-39)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/generation/utils.py
+  description: 'modified: src/transformers/generation/utils.py (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/minimax/modeling_minimax.py
+  description: 'modified: src/transformers/models/minimax/modeling_minimax.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/minimax/modular_minimax.py
+  description: 'modified: src/transformers/models/minimax/modular_minimax.py (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/minimax_m3_vl/modeling_minimax_m3_vl.py
+  description: 'modified: src/transformers/models/minimax_m3_vl/modeling_minimax_m3_vl.py
+    (+11/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/minimax_m3_vl/modular_minimax_m3_vl.py
+  description: 'modified: src/transformers/models/minimax_m3_vl/modular_minimax_m3_vl.py
+    (+11/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from huggingface/transformers PR #47720. Trigger heuristic applied.
+  Needs review.'

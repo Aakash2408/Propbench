@@ -1,0 +1,61 @@
+id: oss-symfony-61677
+title: '[Console] Allow callables for the description and help of `#[AsCommand]`,
+  `#[Argument]` and `#[Optio'
+family: uncategorized
+date: '2026-08-12'
+author: MacDada
+source: github-api-mined
+source_repo: symfony/symfony
+source_url: https://github.com/symfony/symfony/pull/61677
+source_pr: 61677
+difficulty: medium
+trigger:
+  package: symfony/symfony
+  files:
+  - src/Symfony/Component/Console/Attribute/AsCommand.php
+  intent: '[Console] Allow callables for the description and help of `#[AsCommand]`,
+    `#[Argument]` and `#[Option]`'
+  diff_summary: 'Primary: src/Symfony/Component/Console/Attribute/AsCommand.php (+10/-4)'
+consequences:
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Console/Attribute/Argument.php
+  description: 'modified: src/Symfony/Component/Console/Attribute/Argument.php (+4/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Console/Attribute/Option.php
+  description: 'modified: src/Symfony/Component/Console/Attribute/Option.php (+4/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Console/Tests/Command/CommandTest.php
+  description: 'modified: src/Symfony/Component/Console/Tests/Command/CommandTest.php
+    (+35/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Console/Tests/Command/InvokableCommandTest.php
+  description: 'modified: src/Symfony/Component/Console/Tests/Command/InvokableCommandTest.php
+    (+34/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from symfony/symfony PR #61677. Trigger heuristic applied. Needs review.'

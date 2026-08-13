@@ -1,0 +1,53 @@
+id: oss-reactor-core-4267
+title: Avoid relying on line numbers in tests
+family: uncategorized
+date: '2026-06-08'
+author: chemicL
+source: github-api-mined
+source_repo: reactor/reactor-core
+source_url: https://github.com/reactor/reactor-core/pull/4267
+source_pr: 4267
+difficulty: medium
+trigger:
+  package: reactor/reactor-core
+  files:
+  - reactor-core/src/test/java/reactor/core/ScannableTest.java
+  intent: Avoid relying on line numbers in tests
+  diff_summary: 'Primary: reactor-core/src/test/java/reactor/core/ScannableTest.java
+    (+6/-7)'
+consequences:
+- package: reactor/reactor-core
+  files:
+  - reactor-core/src/test/java/reactor/HooksTraceTest.java
+  description: 'modified: reactor-core/src/test/java/reactor/HooksTraceTest.java (+5/-5)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: reactor/reactor-core
+  files:
+  - reactor-core/src/test/java/reactor/core/publisher/HooksTest.java
+  description: 'modified: reactor-core/src/test/java/reactor/core/publisher/HooksTest.java
+    (+5/-5)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: reactor/reactor-core
+  files:
+  - reactor-core/src/test/java/reactor/guide/GuideTests.java
+  description: 'modified: reactor-core/src/test/java/reactor/guide/GuideTests.java
+    (+3/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from reactor/reactor-core PR #4267. Trigger heuristic applied. Needs
+  review.'

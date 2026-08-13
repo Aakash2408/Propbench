@@ -1,0 +1,80 @@
+id: oss-kotlin-7313
+title: 'KAPT: Do not generate override expose methods as @Override'
+family: uncategorized
+date: '2026-08-11'
+author: ilmirus
+source: github-api-mined
+source_repo: JetBrains/kotlin
+source_url: https://github.com/JetBrains/kotlin/pull/7313
+source_pr: 7313
+difficulty: medium
+trigger:
+  package: JetBrains/kotlin
+  files:
+  - plugins/kapt/kapt-compiler/testData/converter/jvmExposeBoxed/overrideProperty.txt
+  intent: 'KAPT: Do not generate override expose methods as @Override'
+  diff_summary: 'Primary: plugins/kapt/kapt-compiler/testData/converter/jvmExposeBoxed/overrideProperty.txt
+    (+201/-0)'
+consequences:
+- package: JetBrains/kotlin
+  files:
+  - plugins/kapt/kapt-compiler/src/org/jetbrains/kotlin/kapt/stubs/KaptStubConverter.kt
+  description: 'modified: plugins/kapt/kapt-compiler/src/org/jetbrains/kotlin/kapt/stubs/KaptStubConverter.kt
+    (+9/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - plugins/kapt/kapt-compiler/testData/converter/jvmExposeBoxed/overrideFun.kt
+  description: 'added: plugins/kapt/kapt-compiler/testData/converter/jvmExposeBoxed/overrideFun.kt
+    (+35/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - plugins/kapt/kapt-compiler/testData/converter/jvmExposeBoxed/overrideFun.txt
+  description: 'added: plugins/kapt/kapt-compiler/testData/converter/jvmExposeBoxed/overrideFun.txt
+    (+161/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - plugins/kapt/kapt-compiler/testData/converter/jvmExposeBoxed/overrideProperty.kt
+  description: 'added: plugins/kapt/kapt-compiler/testData/converter/jvmExposeBoxed/overrideProperty.kt
+    (+32/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - plugins/kapt/kapt-compiler/tests-gen/org/jetbrains/kotlin/kapt/test/KaptStubConverterDirectTestGenerated.java
+  description: 'modified: plugins/kapt/kapt-compiler/tests-gen/org/jetbrains/kotlin/kapt/test/KaptStubConverterDirectTestGenerated.java
+    (+26/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - plugins/kapt/kapt-compiler/tests-gen/org/jetbrains/kotlin/kapt/test/KaptStubConverterJTreeTestGenerated.java
+  description: 'modified: plugins/kapt/kapt-compiler/tests-gen/org/jetbrains/kotlin/kapt/test/KaptStubConverterJTreeTestGenerated.java
+    (+26/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from JetBrains/kotlin PR #7313. Trigger heuristic applied. Needs review.'

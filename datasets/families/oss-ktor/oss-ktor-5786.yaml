@@ -1,0 +1,71 @@
+id: oss-ktor-5786
+title: 'KTOR-9715 Netty HTTP/3: dispatch application calls via the call event…'
+family: bugfix
+date: '2026-07-31'
+author: bjhham
+source: github-api-mined
+source_repo: ktorio/ktor
+source_url: https://github.com/ktorio/ktor/pull/5786
+source_pr: 5786
+difficulty: medium
+trigger:
+  package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-netty/jvm/src/io/ktor/server/netty/http3/NettyHttp3Handler.kt
+  intent: 'KTOR-9715 Netty HTTP/3: dispatch application calls via the call event…'
+  diff_summary: 'Primary: ktor-server/ktor-server-netty/jvm/src/io/ktor/server/netty/http3/NettyHttp3Handler.kt
+    (+7/-2)'
+consequences:
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-cio/common/src/io/ktor/server/cio/backend/ServerPipeline.kt
+  description: 'modified: ktor-server/ktor-server-cio/common/src/io/ktor/server/cio/backend/ServerPipeline.kt
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-netty/jvm/src/io/ktor/server/netty/NettyApplicationEngine.kt
+  description: 'modified: ktor-server/ktor-server-netty/jvm/src/io/ktor/server/netty/NettyApplicationEngine.kt
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-netty/jvm/src/io/ktor/server/netty/http3/NettyHttp3ChannelInitializer.kt
+  description: 'modified: ktor-server/ktor-server-netty/jvm/src/io/ktor/server/netty/http3/NettyHttp3ChannelInitializer.kt
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-netty/jvm/src/io/ktor/server/netty/http3/NettyHttp3RequestStreamInitializer.kt
+  description: 'modified: ktor-server/ktor-server-netty/jvm/src/io/ktor/server/netty/http3/NettyHttp3RequestStreamInitializer.kt
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-netty/jvm/test/io/ktor/tests/server/netty/NettyHttp3CallExecutorTest.kt
+  description: 'added: ktor-server/ktor-server-netty/jvm/test/io/ktor/tests/server/netty/NettyHttp3CallExecutorTest.kt
+    (+195/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from ktorio/ktor PR #5786. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,106 @@
+id: oss-symfony-65294
+title: '[ObjectMapper] Fix reusing an already mapped object for a different target'
+family: bugfix
+date: '2026-08-13'
+author: ousamabenyounes
+source: github-api-mined
+source_repo: symfony/symfony
+source_url: https://github.com/symfony/symfony/pull/65294
+source_pr: 65294
+difficulty: medium
+trigger:
+  package: symfony/symfony
+  files:
+  - src/Symfony/Component/ObjectMapper/Tests/Fixtures/RecursionCacheMultiTarget/ItemSource.php
+  intent: '[ObjectMapper] Fix reusing an already mapped object for a different target'
+  diff_summary: 'Primary: src/Symfony/Component/ObjectMapper/Tests/Fixtures/RecursionCacheMultiTarget/ItemSource.php
+    (+25/-0)'
+consequences:
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/ObjectMapper/ObjectMapper.php
+  description: 'modified: src/Symfony/Component/ObjectMapper/ObjectMapper.php (+3/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/ObjectMapper/Tests/Fixtures/RecursionCacheMultiTarget/ChildSource.php
+  description: 'added: src/Symfony/Component/ObjectMapper/Tests/Fixtures/RecursionCacheMultiTarget/ChildSource.php
+    (+21/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/ObjectMapper/Tests/Fixtures/RecursionCacheMultiTarget/ChildTarget.php
+  description: 'added: src/Symfony/Component/ObjectMapper/Tests/Fixtures/RecursionCacheMultiTarget/ChildTarget.php
+    (+18/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/ObjectMapper/Tests/Fixtures/RecursionCacheMultiTarget/ItemSummaryTarget.php
+  description: 'added: src/Symfony/Component/ObjectMapper/Tests/Fixtures/RecursionCacheMultiTarget/ItemSummaryTarget.php
+    (+18/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/ObjectMapper/Tests/Fixtures/RecursionCacheMultiTarget/ItemTarget.php
+  description: 'added: src/Symfony/Component/ObjectMapper/Tests/Fixtures/RecursionCacheMultiTarget/ItemTarget.php
+    (+18/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/ObjectMapper/Tests/Fixtures/RecursionCacheMultiTarget/SelfSource.php
+  description: 'added: src/Symfony/Component/ObjectMapper/Tests/Fixtures/RecursionCacheMultiTarget/SelfSource.php
+    (+22/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/ObjectMapper/Tests/Fixtures/RecursionCacheMultiTarget/SelfSummaryTarget.php
+  description: 'added: src/Symfony/Component/ObjectMapper/Tests/Fixtures/RecursionCacheMultiTarget/SelfSummaryTarget.php
+    (+17/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/ObjectMapper/Tests/Fixtures/RecursionCacheMultiTarget/SelfTarget.php
+  description: 'added: src/Symfony/Component/ObjectMapper/Tests/Fixtures/RecursionCacheMultiTarget/SelfTarget.php
+    (+18/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/ObjectMapper/Tests/ObjectMapperTest.php
+  description: 'modified: src/Symfony/Component/ObjectMapper/Tests/ObjectMapperTest.php
+    (+39/-6)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 10
+notes: 'Mined from symfony/symfony PR #65294. Trigger heuristic applied. Needs review.'

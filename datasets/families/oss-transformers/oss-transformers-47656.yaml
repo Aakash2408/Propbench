@@ -1,0 +1,50 @@
+id: oss-transformers-47656
+title: Add check_model_inits.py
+family: interface-evolution
+date: '2026-08-07'
+author: guarin
+source: github-api-mined
+source_repo: huggingface/transformers
+source_url: https://github.com/huggingface/transformers/pull/47656
+source_pr: 47656
+difficulty: medium
+trigger:
+  package: huggingface/transformers
+  files:
+  - utils/check_inits.py
+  intent: Add check_model_inits.py
+  diff_summary: 'Primary: utils/check_inits.py (+90/-307)'
+consequences:
+- package: huggingface/transformers
+  files:
+  - Makefile
+  description: 'modified: Makefile (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - docs/source/en/pr_checks.md
+  description: 'modified: docs/source/en/pr_checks.md (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/__init__.py
+  description: 'modified: src/transformers/models/__init__.py (+20/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from huggingface/transformers PR #47656. Trigger heuristic applied.
+  Needs review.'

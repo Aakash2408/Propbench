@@ -1,0 +1,57 @@
+id: oss-celery-10242
+title: 'fix: prevent graceful shutdown regression in connection recovery (GH-9705)'
+family: bugfix
+date: '2026-04-06'
+author: aurangzaib048
+source: github-api-mined
+source_repo: celery/celery
+source_url: https://github.com/celery/celery/pull/10242
+source_pr: 10242
+difficulty: medium
+trigger:
+  package: celery/celery
+  files:
+  - t/unit/worker/test_consumer.py
+  intent: 'fix: prevent graceful shutdown regression in connection recovery (GH-9705)'
+  diff_summary: 'Primary: t/unit/worker/test_consumer.py (+108/-3)'
+consequences:
+- package: celery/celery
+  files:
+  - celery/worker/consumer/connection.py
+  description: 'modified: celery/worker/consumer/connection.py (+12/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: celery/celery
+  files:
+  - celery/worker/consumer/consumer.py
+  description: 'modified: celery/worker/consumer/consumer.py (+21/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: celery/celery
+  files:
+  - t/integration/test_connection_recovery.py
+  description: 'added: t/integration/test_connection_recovery.py (+45/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: celery/celery
+  files:
+  - t/smoke/tests/test_consumer.py
+  description: 'modified: t/smoke/tests/test_consumer.py (+30/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from celery/celery PR #10242. Trigger heuristic applied. Needs review.'

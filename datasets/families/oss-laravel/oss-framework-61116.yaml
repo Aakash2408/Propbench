@@ -1,0 +1,65 @@
+id: oss-framework-61116
+title: '[13.x] Ensure Queue drivers work for enums matching the Fake'
+family: uncategorized
+date: '2026-08-10'
+author: jackbayliss
+source: github-api-mined
+source_repo: laravel/framework
+source_url: https://github.com/laravel/framework/pull/61116
+source_pr: 61116
+difficulty: medium
+trigger:
+  package: laravel/framework
+  files:
+  - src/Illuminate/Queue/RedisQueue.php
+  intent: '[13.x] Ensure Queue drivers work for enums matching the Fake'
+  diff_summary: 'Primary: src/Illuminate/Queue/RedisQueue.php (+24/-22)'
+consequences:
+- package: laravel/framework
+  files:
+  - src/Illuminate/Queue/BeanstalkdQueue.php
+  description: 'modified: src/Illuminate/Queue/BeanstalkdQueue.php (+18/-16)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - src/Illuminate/Queue/DatabaseQueue.php
+  description: 'modified: src/Illuminate/Queue/DatabaseQueue.php (+19/-17)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - src/Illuminate/Queue/FailoverQueue.php
+  description: 'modified: src/Illuminate/Queue/FailoverQueue.php (+13/-13)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - src/Illuminate/Queue/SqsQueue.php
+  description: 'modified: src/Illuminate/Queue/SqsQueue.php (+21/-19)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - tests/Queue/QueueRedisQueueTest.php
+  description: 'modified: tests/Queue/QueueRedisQueueTest.php (+29/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from laravel/framework PR #61116. Trigger heuristic applied. Needs review.'

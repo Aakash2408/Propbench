@@ -1,0 +1,139 @@
+id: oss-aspnetcore-68368
+title: '[release/10.0] Source code updates from dotnet/dotnet'
+family: uncategorized
+date: '2026-08-12'
+author: dotnet-maestro[bot]
+source: github-api-mined
+source_repo: dotnet/aspnetcore
+source_url: https://github.com/dotnet/aspnetcore/pull/68368
+source_pr: 68368
+difficulty: medium
+trigger:
+  package: dotnet/aspnetcore
+  files:
+  - eng/Version.Details.xml
+  intent: '[release/10.0] Source code updates from dotnet/dotnet'
+  diff_summary: 'Primary: eng/Version.Details.xml (+111/-107)'
+consequences:
+- package: dotnet/aspnetcore
+  files:
+  - NuGet.config
+  description: 'modified: NuGet.config (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - eng/Dependencies.props
+  description: 'modified: eng/Dependencies.props (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - eng/Version.Details.props
+  description: 'modified: eng/Version.Details.props (+16/-14)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - eng/common/Get-GitHubAppToken.ps1
+  description: 'added: eng/common/Get-GitHubAppToken.ps1 (+154/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - eng/common/core-templates/job/onelocbuild.yml
+  description: 'modified: eng/common/core-templates/job/onelocbuild.yml (+27/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - eng/common/core-templates/job/publish-build-assets.yml
+  description: 'modified: eng/common/core-templates/job/publish-build-assets.yml (+0/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - eng/common/core-templates/jobs/codeql-build.yml
+  description: 'modified: eng/common/core-templates/jobs/codeql-build.yml (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - eng/common/core-templates/post-build/common-variables.yml
+  description: 'modified: eng/common/core-templates/post-build/common-variables.yml
+    (+0/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - eng/common/core-templates/steps/get-github-app-token.yml
+  description: 'added: eng/common/core-templates/steps/get-github-app-token.yml (+79/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - eng/common/core-templates/steps/publish-logs.yml
+  description: 'modified: eng/common/core-templates/steps/publish-logs.yml (+0/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - eng/common/templates-official/steps/get-github-app-token.yml
+  description: 'added: eng/common/templates-official/steps/get-github-app-token.yml
+    (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - eng/common/templates/steps/get-github-app-token.yml
+  description: 'added: eng/common/templates/steps/get-github-app-token.yml (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - global.json
+  description: 'modified: global.json (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Tools/dotnet-user-jwts/src/dotnet-user-jwts.csproj
+  description: 'modified: src/Tools/dotnet-user-jwts/src/dotnet-user-jwts.csproj (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 15
+notes: 'Mined from dotnet/aspnetcore PR #68368. Trigger heuristic applied. Needs review.'

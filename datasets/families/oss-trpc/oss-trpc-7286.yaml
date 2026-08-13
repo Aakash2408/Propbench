@@ -1,0 +1,42 @@
+id: oss-trpc-7286
+title: 'fix(server): unwrap error from cause for streaming onError'
+family: bugfix
+date: '2026-03-28'
+author: zirkelc
+source: github-api-mined
+source_repo: trpc/trpc
+source_url: https://github.com/trpc/trpc/pull/7286
+source_pr: 7286
+difficulty: medium
+trigger:
+  package: trpc/trpc
+  files:
+  - packages/server/src/unstable-core-do-not-import/http/resolveResponse.ts
+  intent: 'fix(server): unwrap error from cause for streaming onError'
+  diff_summary: 'Primary: packages/server/src/unstable-core-do-not-import/http/resolveResponse.ts
+    (+1/-1)'
+consequences:
+- package: trpc/trpc
+  files:
+  - packages/tests/server/errors.test.ts
+  description: 'modified: packages/tests/server/errors.test.ts (+37/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: trpc/trpc
+  files:
+  - packages/tests/server/streaming.test.ts
+  description: 'modified: packages/tests/server/streaming.test.ts (+20/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 3
+notes: 'Mined from trpc/trpc PR #7286. Trigger heuristic applied. Needs review.'

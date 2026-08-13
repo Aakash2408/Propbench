@@ -1,0 +1,81 @@
+id: oss-turborepo-13731
+title: 'feat: Trigger daily performance improvements from the dashboard'
+family: uncategorized
+date: '2026-08-12'
+author: anthonyshew
+source: github-api-mined
+source_repo: vercel/turborepo
+source_url: https://github.com/vercel/turborepo/pull/13731
+source_pr: 13731
+difficulty: medium
+trigger:
+  package: vercel/turborepo
+  files:
+  - apps/agents/app/operator-run.tsx
+  intent: 'feat: Trigger daily performance improvements from the dashboard'
+  diff_summary: 'Primary: apps/agents/app/operator-run.tsx (+151/-0)'
+consequences:
+- package: vercel/turborepo
+  files:
+  - apps/agents/agent/channels/operator.ts
+  description: 'modified: apps/agents/agent/channels/operator.ts (+69/-29)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - apps/agents/agent/instructions.md
+  description: 'modified: apps/agents/agent/instructions.md (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - apps/agents/agent/lib/operator-runs.ts
+  description: 'added: apps/agents/agent/lib/operator-runs.ts (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - apps/agents/app/layout.tsx
+  description: 'modified: apps/agents/app/layout.tsx (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - apps/agents/app/page.tsx
+  description: 'modified: apps/agents/app/page.tsx (+42/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - apps/agents/app/run-maintenance.tsx
+  description: 'modified: apps/agents/app/run-maintenance.tsx (+6/-98)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vercel/turborepo
+  files:
+  - apps/agents/app/run-performance.tsx
+  description: 'added: apps/agents/app/run-performance.tsx (+27/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 8
+notes: 'Mined from vercel/turborepo PR #13731. Trigger heuristic applied. Needs review.'

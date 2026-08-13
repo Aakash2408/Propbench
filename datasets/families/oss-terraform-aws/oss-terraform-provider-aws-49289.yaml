@@ -1,0 +1,88 @@
+id: oss-terraform-provider-aws-49289
+title: Adds additional tests for `agentcore_memory_configuration`
+family: interface-evolution
+date: '2026-08-11'
+author: gdavison
+source: github-api-mined
+source_repo: hashicorp/terraform-provider-aws
+source_url: https://github.com/hashicorp/terraform-provider-aws/pull/49289
+source_pr: 49289
+difficulty: medium
+trigger:
+  package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/bedrockagentcore/testdata/Harness/basic/main_gen.tf
+  intent: Adds additional tests for `agentcore_memory_configuration`
+  diff_summary: 'Primary: internal/service/bedrockagentcore/testdata/Harness/basic/main_gen.tf
+    (+2/-0)'
+consequences:
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/bedrockagentcore/harness_test.go
+  description: 'modified: internal/service/bedrockagentcore/harness_test.go (+369/-14)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/bedrockagentcore/testdata/Harness/list_basic/main.tf
+  description: 'modified: internal/service/bedrockagentcore/testdata/Harness/list_basic/main.tf
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/bedrockagentcore/testdata/Harness/list_include_resource/main.tf
+  description: 'modified: internal/service/bedrockagentcore/testdata/Harness/list_include_resource/main.tf
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/bedrockagentcore/testdata/Harness/list_region_override/main.tf
+  description: 'modified: internal/service/bedrockagentcore/testdata/Harness/list_region_override/main.tf
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/bedrockagentcore/testdata/Harness/region_override/main_gen.tf
+  description: 'modified: internal/service/bedrockagentcore/testdata/Harness/region_override/main_gen.tf
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/bedrockagentcore/testdata/tmpl/harness_basic.gtpl
+  description: 'modified: internal/service/bedrockagentcore/testdata/tmpl/harness_basic.gtpl
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - website/docs/r/bedrockagentcore_harness.html.markdown
+  description: 'modified: website/docs/r/bedrockagentcore_harness.html.markdown (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 8
+notes: 'Mined from hashicorp/terraform-provider-aws PR #49289. Trigger heuristic applied.
+  Needs review.'

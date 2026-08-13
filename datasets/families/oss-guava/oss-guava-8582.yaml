@@ -1,0 +1,52 @@
+id: oss-guava-8582
+title: 'Improve some Javadoc links:'
+family: uncategorized
+date: '2026-07-31'
+author: copybara-service[bot]
+source: github-api-mined
+source_repo: google/guava
+source_url: https://github.com/google/guava/pull/8582
+source_pr: 8582
+difficulty: medium
+trigger:
+  package: google/guava
+  files:
+  - android/guava/src/com/google/common/graph/ValueGraph.java
+  intent: 'Improve some Javadoc links:'
+  diff_summary: 'Primary: android/guava/src/com/google/common/graph/ValueGraph.java
+    (+4/-4)'
+consequences:
+- package: google/guava
+  files:
+  - android/guava/src/com/google/common/io/LittleEndianDataOutputStream.java
+  description: 'modified: android/guava/src/com/google/common/io/LittleEndianDataOutputStream.java
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava/src/com/google/common/graph/ValueGraph.java
+  description: 'modified: guava/src/com/google/common/graph/ValueGraph.java (+4/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava/src/com/google/common/io/LittleEndianDataOutputStream.java
+  description: 'modified: guava/src/com/google/common/io/LittleEndianDataOutputStream.java
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from google/guava PR #8582. Trigger heuristic applied. Needs review.'

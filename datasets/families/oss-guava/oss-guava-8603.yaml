@@ -1,0 +1,53 @@
+id: oss-guava-8603
+title: Avoid testing identity equality on `Boolean` instances.
+family: uncategorized
+date: '2026-08-10'
+author: copybara-service[bot]
+source: github-api-mined
+source_repo: google/guava
+source_url: https://github.com/google/guava/pull/8603
+source_pr: 8603
+difficulty: medium
+trigger:
+  package: google/guava
+  files:
+  - android/guava-tests/test/com/google/common/primitives/BooleansTest.java
+  intent: Avoid testing identity equality on `Boolean` instances.
+  diff_summary: 'Primary: android/guava-tests/test/com/google/common/primitives/BooleansTest.java
+    (+0/-16)'
+consequences:
+- package: google/guava
+  files:
+  - android/guava-tests/test/com/google/common/cache/ForwardingLoadingCacheTest.java
+  description: 'modified: android/guava-tests/test/com/google/common/cache/ForwardingLoadingCacheTest.java
+    (+3/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava-tests/test/com/google/common/cache/ForwardingLoadingCacheTest.java
+  description: 'modified: guava-tests/test/com/google/common/cache/ForwardingLoadingCacheTest.java
+    (+3/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: google/guava
+  files:
+  - guava-tests/test/com/google/common/primitives/BooleansTest.java
+  description: 'modified: guava-tests/test/com/google/common/primitives/BooleansTest.java
+    (+0/-16)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from google/guava PR #8603. Trigger heuristic applied. Needs review.'

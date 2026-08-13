@@ -1,0 +1,58 @@
+id: oss-scikit-learn-34452
+title: 'MNT: Simplify unknown handling in encoders/`_encode.py`'
+family: uncategorized
+date: '2026-08-05'
+author: cakedev0
+source: github-api-mined
+source_repo: scikit-learn/scikit-learn
+source_url: https://github.com/scikit-learn/scikit-learn/pull/34452
+source_pr: 34452
+difficulty: medium
+trigger:
+  package: scikit-learn/scikit-learn
+  files:
+  - sklearn/utils/_encode.py
+  intent: 'MNT: Simplify unknown handling in encoders/`_encode.py`'
+  diff_summary: 'Primary: sklearn/utils/_encode.py (+74/-102)'
+consequences:
+- package: scikit-learn/scikit-learn
+  files:
+  - sklearn/metrics/_ranking.py
+  description: 'modified: sklearn/metrics/_ranking.py (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - sklearn/preprocessing/_encoders.py
+  description: 'modified: sklearn/preprocessing/_encoders.py (+9/-30)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - sklearn/preprocessing/_label.py
+  description: 'modified: sklearn/preprocessing/_label.py (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - sklearn/utils/tests/test_encode.py
+  description: 'modified: sklearn/utils/tests/test_encode.py (+46/-109)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from scikit-learn/scikit-learn PR #34452. Trigger heuristic applied.
+  Needs review.'

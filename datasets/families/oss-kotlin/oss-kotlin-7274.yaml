@@ -1,0 +1,71 @@
+id: oss-kotlin-7274
+title: '[IR] Replace `IrDeclaration.module` with `IrDeclaration.moduleFragment`'
+family: uncategorized
+date: '2026-08-12'
+author: mpiekutowski
+source: github-api-mined
+source_repo: JetBrains/kotlin
+source_url: https://github.com/JetBrains/kotlin/pull/7274
+source_pr: 7274
+difficulty: medium
+trigger:
+  package: JetBrains/kotlin
+  files:
+  - compiler/ir/backend.jvm/codegen/src/org/jetbrains/kotlin/backend/jvm/codegen/IrSourceCompilerForInline.kt
+  intent: '[IR] Replace `IrDeclaration.module` with `IrDeclaration.moduleFragment`'
+  diff_summary: 'Primary: compiler/ir/backend.jvm/codegen/src/org/jetbrains/kotlin/backend/jvm/codegen/IrSourceCompilerForInline.kt
+    (+1/-21)'
+consequences:
+- package: JetBrains/kotlin
+  files:
+  - compiler/ir/ir.actualization/src/main/kotlin/org/jetbrains/kotlin/backend/common/actualizer/IrActualizerUtils.kt
+  description: 'modified: compiler/ir/ir.actualization/src/main/kotlin/org/jetbrains/kotlin/backend/common/actualizer/IrActualizerUtils.kt
+    (+6/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/ir/ir.tree/src/org/jetbrains/kotlin/ir/descriptors/IrBasedDescriptors.kt
+  description: 'modified: compiler/ir/ir.tree/src/org/jetbrains/kotlin/ir/descriptors/IrBasedDescriptors.kt
+    (+1/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/ir/ir.tree/src/org/jetbrains/kotlin/ir/util/AdditionalIrUtils.kt
+  description: 'modified: compiler/ir/ir.tree/src/org/jetbrains/kotlin/ir/util/AdditionalIrUtils.kt
+    (+0/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/ir/serialization.common/src/org/jetbrains/kotlin/backend/common/serialization/NonLinkingIrInlineFunctionDeserializer.kt
+  description: 'modified: compiler/ir/serialization.common/src/org/jetbrains/kotlin/backend/common/serialization/NonLinkingIrInlineFunctionDeserializer.kt
+    (+2/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - kotlin-native/backend.native/compiler/ir/backend.native/src/org/jetbrains/kotlin/backend/konan/optimizations/DataFlowIR.kt
+  description: 'modified: kotlin-native/backend.native/compiler/ir/backend.native/src/org/jetbrains/kotlin/backend/konan/optimizations/DataFlowIR.kt
+    (+1/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from JetBrains/kotlin PR #7274. Trigger heuristic applied. Needs review.'

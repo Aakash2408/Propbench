@@ -1,0 +1,80 @@
+id: oss-runtime-130012
+title: Fix NativeAOT assembly name mangling collisions
+family: bugfix
+date: '2026-07-13'
+author: Copilot
+source: github-api-mined
+source_repo: dotnet/runtime
+source_url: https://github.com/dotnet/runtime/pull/130012
+source_pr: 130012
+difficulty: medium
+trigger:
+  package: dotnet/runtime
+  files:
+  - src/coreclr/tools/Common/Compiler/NativeAotNameMangler.cs
+  intent: Fix NativeAOT assembly name mangling collisions
+  diff_summary: 'Primary: src/coreclr/tools/Common/Compiler/NativeAotNameMangler.cs
+    (+80/-9)'
+consequences:
+- package: dotnet/runtime
+  files:
+  - src/tests/nativeaot/Regressions/Runtime112629/AssemblyWithDot/AssemblyWithDot.csproj
+  description: 'added: src/tests/nativeaot/Regressions/Runtime112629/AssemblyWithDot/AssemblyWithDot.csproj
+    (+8/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/tests/nativeaot/Regressions/Runtime112629/AssemblyWithDot/TestType.cs
+  description: 'added: src/tests/nativeaot/Regressions/Runtime112629/AssemblyWithDot/TestType.cs
+    (+9/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/tests/nativeaot/Regressions/Runtime112629/AssemblyWithUnderscore/AssemblyWithUnderscore.csproj
+  description: 'added: src/tests/nativeaot/Regressions/Runtime112629/AssemblyWithUnderscore/AssemblyWithUnderscore.csproj
+    (+8/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/tests/nativeaot/Regressions/Runtime112629/AssemblyWithUnderscore/TestType.cs
+  description: 'added: src/tests/nativeaot/Regressions/Runtime112629/AssemblyWithUnderscore/TestType.cs
+    (+9/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/tests/nativeaot/Regressions/Runtime112629/Runtime112629.cs
+  description: 'added: src/tests/nativeaot/Regressions/Runtime112629/Runtime112629.cs
+    (+17/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/tests/nativeaot/Regressions/Runtime112629/Runtime112629.csproj
+  description: 'added: src/tests/nativeaot/Regressions/Runtime112629/Runtime112629.csproj
+    (+13/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from dotnet/runtime PR #130012. Trigger heuristic applied. Needs review.'

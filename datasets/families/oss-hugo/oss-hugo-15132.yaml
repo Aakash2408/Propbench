@@ -1,0 +1,89 @@
+id: oss-hugo-15132
+title: Fix panic on server atomic save edits on MacOS
+family: bugfix
+date: '2026-07-26'
+author: bep
+source: github-api-mined
+source_repo: gohugoio/hugo
+source_url: https://github.com/gohugoio/hugo/pull/15132
+source_pr: 15132
+difficulty: medium
+trigger:
+  package: gohugoio/hugo
+  files:
+  - hugolib/integrationtest_builder.go
+  intent: Fix panic on server atomic save edits on MacOS
+  diff_summary: 'Primary: hugolib/integrationtest_builder.go (+34/-5)'
+consequences:
+- package: gohugoio/hugo
+  files:
+  - hugolib/content_map_page_assembler.go
+  description: 'modified: hugolib/content_map_page_assembler.go (+7/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - hugolib/content_map_page_contentnode.go
+  description: 'modified: hugolib/content_map_page_contentnode.go (+11/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - hugolib/content_map_page_contentnodeshifter.go
+  description: 'modified: hugolib/content_map_page_contentnodeshifter.go (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - hugolib/page.go
+  description: 'modified: hugolib/page.go (+1/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - hugolib/page__meta.go
+  description: 'modified: hugolib/page__meta.go (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - hugolib/page_test.go
+  description: 'modified: hugolib/page_test.go (+27/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - hugolib/rebuild_test.go
+  description: 'modified: hugolib/rebuild_test.go (+41/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - hugolib/site.go
+  description: 'modified: hugolib/site.go (+6/-12)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 9
+notes: 'Mined from gohugoio/hugo PR #15132. Trigger heuristic applied. Needs review.'

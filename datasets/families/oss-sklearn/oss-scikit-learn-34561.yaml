@@ -1,0 +1,76 @@
+id: oss-scikit-learn-34561
+title: 'ENH Newton-CD part 7: add NewtonCDSolver'
+family: interface-evolution
+date: '2026-08-07'
+author: lorentzenchr
+source: github-api-mined
+source_repo: scikit-learn/scikit-learn
+source_url: https://github.com/scikit-learn/scikit-learn/pull/34561
+source_pr: 34561
+difficulty: medium
+trigger:
+  package: scikit-learn/scikit-learn
+  files:
+  - sklearn/linear_model/_glm/_newton_solver.py
+  intent: 'ENH Newton-CD part 7: add NewtonCDSolver'
+  diff_summary: 'Primary: sklearn/linear_model/_glm/_newton_solver.py (+367/-0)'
+consequences:
+- package: scikit-learn/scikit-learn
+  files:
+  - doc/whats_new/upcoming_changes/sklearn.linear_model/34523.major-feature.rst
+  description: 'removed: doc/whats_new/upcoming_changes/sklearn.linear_model/34523.major-feature.rst
+    (+0/-9)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - doc/whats_new/upcoming_changes/sklearn.linear_model/34561.major-feature.rst
+  description: 'added: doc/whats_new/upcoming_changes/sklearn.linear_model/34561.major-feature.rst
+    (+19/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - sklearn/linear_model/_glm/glm.py
+  description: 'modified: sklearn/linear_model/_glm/glm.py (+51/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - sklearn/linear_model/_glm/tests/test_glm.py
+  description: 'modified: sklearn/linear_model/_glm/tests/test_glm.py (+3/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - sklearn/linear_model/_logistic.py
+  description: 'modified: sklearn/linear_model/_logistic.py (+81/-29)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: scikit-learn/scikit-learn
+  files:
+  - sklearn/linear_model/tests/test_logistic.py
+  description: 'modified: sklearn/linear_model/tests/test_logistic.py (+50/-36)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from scikit-learn/scikit-learn PR #34561. Trigger heuristic applied.
+  Needs review.'

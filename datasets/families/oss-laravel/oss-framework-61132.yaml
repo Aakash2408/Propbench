@@ -1,0 +1,67 @@
+id: oss-framework-61132
+title: '[14.x] Use spl_object_id over spl_object_hash'
+family: uncategorized
+date: '2026-08-11'
+author: jackbayliss
+source: github-api-mined
+source_repo: laravel/framework
+source_url: https://github.com/laravel/framework/pull/61132
+source_pr: 61132
+difficulty: medium
+trigger:
+  package: laravel/framework
+  files:
+  - src/Illuminate/Container/Container.php
+  intent: '[14.x] Use spl_object_id over spl_object_hash'
+  diff_summary: 'Primary: src/Illuminate/Container/Container.php (+1/-1)'
+consequences:
+- package: laravel/framework
+  files:
+  - src/Illuminate/Database/Eloquent/Builder.php
+  description: 'modified: src/Illuminate/Database/Eloquent/Builder.php (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - src/Illuminate/Database/Eloquent/Concerns/HasGlobalScopes.php
+  description: 'modified: src/Illuminate/Database/Eloquent/Concerns/HasGlobalScopes.php
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - src/Illuminate/Support/Onceable.php
+  description: 'modified: src/Illuminate/Support/Onceable.php (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - tests/Integration/Support/MultipleInstanceManagerTest.php
+  description: 'modified: tests/Integration/Support/MultipleInstanceManagerTest.php
+    (+3/-3)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: laravel/framework
+  files:
+  - tests/View/ViewEngineResolverTest.php
+  description: 'modified: tests/View/ViewEngineResolverTest.php (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from laravel/framework PR #61132. Trigger heuristic applied. Needs review.'

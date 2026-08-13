@@ -1,0 +1,147 @@
+id: oss-elasticsearch-155944
+title: '[ES|QL] Reorganize subquery and views documentation'
+family: uncategorized
+date: '2026-08-13'
+author: leemthompo
+source: github-api-mined
+source_repo: elastic/elasticsearch
+source_url: https://github.com/elastic/elasticsearch/pull/155944
+source_pr: 155944
+difficulty: medium
+trigger:
+  package: elastic/elasticsearch
+  files:
+  - docs/reference/query-languages/esql/esql-subquery.md
+  intent: '[ES|QL] Reorganize subquery and views documentation'
+  diff_summary: 'Primary: docs/reference/query-languages/esql/esql-subquery.md (+14/-245)'
+consequences:
+- package: elastic/elasticsearch
+  files:
+  - docs/reference/query-languages/esql/_snippets/commands/layout/fork.md
+  description: 'modified: docs/reference/query-languages/esql/_snippets/commands/layout/fork.md
+    (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - docs/reference/query-languages/esql/_snippets/commands/layout/from.md
+  description: 'modified: docs/reference/query-languages/esql/_snippets/commands/layout/from.md
+    (+4/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - docs/reference/query-languages/esql/_snippets/commands/layout/where.md
+  description: 'modified: docs/reference/query-languages/esql/_snippets/commands/layout/where.md
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - docs/reference/query-languages/esql/_snippets/common/comparing_views_subqueries_fork.md
+  description: 'modified: docs/reference/query-languages/esql/_snippets/common/comparing_views_subqueries_fork.md
+    (+20/-28)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - docs/reference/query-languages/esql/_snippets/common/subquery_limitations.md
+  description: 'modified: docs/reference/query-languages/esql/_snippets/common/subquery_limitations.md
+    (+7/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - docs/reference/query-languages/esql/_snippets/common/view_limitations.md
+  description: 'modified: docs/reference/query-languages/esql/_snippets/common/view_limitations.md
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - docs/reference/query-languages/esql/_snippets/operators/layout/in.md
+  description: 'modified: docs/reference/query-languages/esql/_snippets/operators/layout/in.md
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - docs/reference/query-languages/esql/esql-advanced.md
+  description: 'modified: docs/reference/query-languages/esql/esql-advanced.md (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - docs/reference/query-languages/esql/esql-combine-reuse-queries.md
+  description: 'added: docs/reference/query-languages/esql/esql-combine-reuse-queries.md
+    (+31/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - docs/reference/query-languages/esql/esql-from-subquery.md
+  description: 'added: docs/reference/query-languages/esql/esql-from-subquery.md (+238/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - docs/reference/query-languages/esql/esql-in-subquery.md
+  description: 'modified: docs/reference/query-languages/esql/esql-in-subquery.md
+    (+7/-34)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - docs/reference/query-languages/esql/esql-multi.md
+  description: 'modified: docs/reference/query-languages/esql/esql-multi.md (+3/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - docs/reference/query-languages/esql/esql-views.md
+  description: 'modified: docs/reference/query-languages/esql/esql-views.md (+77/-65)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - docs/reference/query-languages/toc.yml
+  description: 'modified: docs/reference/query-languages/toc.yml (+5/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 15
+notes: 'Mined from elastic/elasticsearch PR #155944. Trigger heuristic applied. Needs
+  review.'

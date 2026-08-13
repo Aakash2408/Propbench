@@ -1,0 +1,53 @@
+id: oss-ktor-4898
+title: 'KTOR-7892 swagger: support OAuth2 authentication flow'
+family: interface-evolution
+date: '2026-07-20'
+author: anton-bogomazov
+source: github-api-mined
+source_repo: ktorio/ktor
+source_url: https://github.com/ktorio/ktor/pull/4898
+source_pr: 4898
+difficulty: medium
+trigger:
+  package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-plugins/ktor-server-swagger/jvm/src/io/ktor/server/plugins/swagger/Swagger.kt
+  intent: 'KTOR-7892 swagger: support OAuth2 authentication flow'
+  diff_summary: 'Primary: ktor-server/ktor-server-plugins/ktor-server-swagger/jvm/src/io/ktor/server/plugins/swagger/Swagger.kt
+    (+11/-0)'
+consequences:
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-plugins/ktor-server-swagger/api/ktor-server-swagger.api
+  description: 'modified: ktor-server/ktor-server-plugins/ktor-server-swagger/api/ktor-server-swagger.api
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-plugins/ktor-server-swagger/jvm/src/io/ktor/server/plugins/swagger/SwaggerConfig.kt
+  description: 'modified: ktor-server/ktor-server-plugins/ktor-server-swagger/jvm/src/io/ktor/server/plugins/swagger/SwaggerConfig.kt
+    (+11/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: ktorio/ktor
+  files:
+  - ktor-server/ktor-server-plugins/ktor-server-swagger/jvm/test/io/ktor/server/plugins/swagger/SwaggerTest.kt
+  description: 'modified: ktor-server/ktor-server-plugins/ktor-server-swagger/jvm/test/io/ktor/server/plugins/swagger/SwaggerTest.kt
+    (+36/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from ktorio/ktor PR #4898. Trigger heuristic applied. Needs review.'

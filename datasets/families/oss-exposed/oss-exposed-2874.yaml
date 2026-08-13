@@ -1,0 +1,75 @@
+id: oss-exposed-2874
+title: 'fix: Fix version catalog docs and versions'
+family: bugfix
+date: '2026-08-04'
+author: e5l
+source: github-api-mined
+source_repo: JetBrains/Exposed
+source_url: https://github.com/JetBrains/Exposed/pull/2874
+source_pr: 2874
+difficulty: medium
+trigger:
+  package: JetBrains/Exposed
+  files:
+  - exposed-version-catalog/README.md
+  intent: 'fix: Fix version catalog docs and versions'
+  diff_summary: 'Primary: exposed-version-catalog/README.md (+11/-11)'
+consequences:
+- package: JetBrains/Exposed
+  files:
+  - documentation-website/Writerside/topics/Adding-dependencies.md
+  description: 'modified: documentation-website/Writerside/topics/Adding-dependencies.md
+    (+9/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/Exposed
+  files:
+  - samples/exposed-gradle-plugin-sample/build.gradle.kts
+  description: 'modified: samples/exposed-gradle-plugin-sample/build.gradle.kts (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/Exposed
+  files:
+  - samples/exposed-gradle-plugin-sample/settings.gradle.kts
+  description: 'modified: samples/exposed-gradle-plugin-sample/settings.gradle.kts
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/Exposed
+  files:
+  - samples/exposed-ktor/settings.gradle.kts
+  description: 'modified: samples/exposed-ktor/settings.gradle.kts (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/Exposed
+  files:
+  - samples/exposed-migration/settings.gradle.kts
+  description: 'modified: samples/exposed-migration/settings.gradle.kts (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/Exposed
+  files:
+  - samples/exposed-spring/settings.gradle.kts
+  description: 'modified: samples/exposed-spring/settings.gradle.kts (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from JetBrains/Exposed PR #2874. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,104 @@
+id: oss-runtime-132161
+title: Merging internal commits for release/9.0
+family: uncategorized
+date: '2026-08-13'
+author: dotnet-bot
+source: github-api-mined
+source_repo: dotnet/runtime
+source_url: https://github.com/dotnet/runtime/pull/132161
+source_pr: 132161
+difficulty: medium
+trigger:
+  package: dotnet/runtime
+  files:
+  - src/native/eventpipe/ds-ipc-pal-socket.c
+  intent: Merging internal commits for release/9.0
+  diff_summary: 'Primary: src/native/eventpipe/ds-ipc-pal-socket.c (+16/-6)'
+consequences:
+- package: dotnet/runtime
+  files:
+  - eng/Versions.props
+  description: 'modified: eng/Versions.props (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/coreclr/vm/eventing/eventpipe/ds-rt-coreclr.h
+  description: 'modified: src/coreclr/vm/eventing/eventpipe/ds-rt-coreclr.h (+4/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Net.HttpListener/src/System/Net/Managed/HttpListenerRequest.Managed.cs
+  description: 'modified: src/libraries/System.Net.HttpListener/src/System/Net/Managed/HttpListenerRequest.Managed.cs
+    (+3/-9)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Net.HttpListener/tests/HttpListenerRequestTests.cs
+  description: 'modified: src/libraries/System.Net.HttpListener/tests/HttpListenerRequestTests.cs
+    (+0/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Net.HttpListener/tests/InvalidClientRequestTests.cs
+  description: 'modified: src/libraries/System.Net.HttpListener/tests/InvalidClientRequestTests.cs
+    (+2/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Net.WebSockets/src/Resources/Strings.resx
+  description: 'modified: src/libraries/System.Net.WebSockets/src/Resources/Strings.resx
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Net.WebSockets/src/System/Net/WebSockets/Compression/WebSocketInflater.cs
+  description: 'modified: src/libraries/System.Net.WebSockets/src/System/Net/WebSockets/Compression/WebSocketInflater.cs
+    (+17/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Net.WebSockets/src/System/Net/WebSockets/ManagedWebSocket.cs
+  description: 'modified: src/libraries/System.Net.WebSockets/src/System/Net/WebSockets/ManagedWebSocket.cs
+    (+0/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/runtime
+  files:
+  - src/libraries/System.Net.WebSockets/tests/WebSocketDeflateTests.cs
+  description: 'modified: src/libraries/System.Net.WebSockets/tests/WebSocketDeflateTests.cs
+    (+59/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 10
+notes: 'Mined from dotnet/runtime PR #132161. Trigger heuristic applied. Needs review.'

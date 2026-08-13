@@ -1,0 +1,88 @@
+id: oss-symfony-64220
+title: '[ObjectMapper] Add MappingAwareTransformCallableInterface'
+family: interface-evolution
+date: '2026-08-12'
+author: ousamabenyounes
+source: github-api-mined
+source_repo: symfony/symfony
+source_url: https://github.com/symfony/symfony/pull/64220
+source_pr: 64220
+difficulty: medium
+trigger:
+  package: symfony/symfony
+  files:
+  - src/Symfony/Component/ObjectMapper/MappingAwareTransformCallableInterface.php
+  intent: '[ObjectMapper] Add MappingAwareTransformCallableInterface'
+  diff_summary: 'Primary: src/Symfony/Component/ObjectMapper/MappingAwareTransformCallableInterface.php
+    (+38/-0)'
+consequences:
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/ObjectMapper/ObjectMapper.php
+  description: 'modified: src/Symfony/Component/ObjectMapper/ObjectMapper.php (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/ObjectMapper/Tests/Fixtures/MappingAware/A.php
+  description: 'added: src/Symfony/Component/ObjectMapper/Tests/Fixtures/MappingAware/A.php
+    (+21/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/ObjectMapper/Tests/Fixtures/MappingAware/B.php
+  description: 'added: src/Symfony/Component/ObjectMapper/Tests/Fixtures/MappingAware/B.php
+    (+17/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/ObjectMapper/Tests/Fixtures/MappingAware/C.php
+  description: 'added: src/Symfony/Component/ObjectMapper/Tests/Fixtures/MappingAware/C.php
+    (+20/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/ObjectMapper/Tests/Fixtures/MappingAware/D.php
+  description: 'added: src/Symfony/Component/ObjectMapper/Tests/Fixtures/MappingAware/D.php
+    (+20/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/ObjectMapper/Tests/Fixtures/MappingAware/MappingAwareTransformer.php
+  description: 'added: src/Symfony/Component/ObjectMapper/Tests/Fixtures/MappingAware/MappingAwareTransformer.php
+    (+30/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/ObjectMapper/Tests/ObjectMapperTest.php
+  description: 'modified: src/Symfony/Component/ObjectMapper/Tests/ObjectMapperTest.php
+    (+33/-6)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 8
+notes: 'Mined from symfony/symfony PR #64220. Trigger heuristic applied. Needs review.'

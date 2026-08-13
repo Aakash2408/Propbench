@@ -1,0 +1,84 @@
+id: oss-abp-25919
+title: Prepare documentation for ABP 10.7 RC release
+family: uncategorized
+date: '2026-08-06'
+author: EngincanV
+source: github-api-mined
+source_repo: abpframework/abp
+source_url: https://github.com/abpframework/abp/pull/25919
+source_pr: 25919
+difficulty: medium
+trigger:
+  package: abpframework/abp
+  files:
+  - docs/en/release-info/migration-guides/abp-10-7.md
+  intent: Prepare documentation for ABP 10.7 RC release
+  diff_summary: 'Primary: docs/en/release-info/migration-guides/abp-10-7.md (+189/-0)'
+consequences:
+- package: abpframework/abp
+  files:
+  - docs/en/Blog-Posts/2026-08-05 v10_7_Preview/POST.md
+  description: 'added: docs/en/Blog-Posts/2026-08-05 v10_7_Preview/POST.md (+137/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - docs/en/Blog-Posts/2026-08-05 v10_7_Preview/cover-image.png
+  description: 'added: docs/en/Blog-Posts/2026-08-05 v10_7_Preview/cover-image.png
+    (+0/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - docs/en/Blog-Posts/2026-08-05 v10_7_Preview/react-crud-page.mp4
+  description: 'added: docs/en/Blog-Posts/2026-08-05 v10_7_Preview/react-crud-page.mp4
+    (+0/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - docs/en/Blog-Posts/2026-08-05 v10_7_Preview/studio-switch-to-preview.png
+  description: 'added: docs/en/Blog-Posts/2026-08-05 v10_7_Preview/studio-switch-to-preview.png
+    (+0/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - docs/en/cli/index.md
+  description: 'modified: docs/en/cli/index.md (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - docs/en/framework/ui/angular/service-proxies.md
+  description: 'modified: docs/en/framework/ui/angular/service-proxies.md (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: abpframework/abp
+  files:
+  - docs/en/release-info/migration-guides/index.md
+  description: 'modified: docs/en/release-info/migration-guides/index.md (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 8
+notes: 'Mined from abpframework/abp PR #25919. Trigger heuristic applied. Needs review.'

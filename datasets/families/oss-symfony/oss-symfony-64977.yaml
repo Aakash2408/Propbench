@@ -1,0 +1,71 @@
+id: oss-symfony-64977
+title: '[Translation] Fix fuzzy translations and message context in PO files'
+family: bugfix
+date: '2026-08-12'
+author: javiereguiluz
+source: github-api-mined
+source_repo: symfony/symfony
+source_url: https://github.com/symfony/symfony/pull/64977
+source_pr: 64977
+difficulty: medium
+trigger:
+  package: symfony/symfony
+  files:
+  - src/Symfony/Component/Translation/Loader/PoFileLoader.php
+  intent: '[Translation] Fix fuzzy translations and message context in PO files'
+  diff_summary: 'Primary: src/Symfony/Component/Translation/Loader/PoFileLoader.php
+    (+34/-1)'
+consequences:
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Translation/Dumper/PoFileDumper.php
+  description: 'modified: src/Symfony/Component/Translation/Dumper/PoFileDumper.php
+    (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Translation/Tests/Dumper/PoFileDumperTest.php
+  description: 'modified: src/Symfony/Component/Translation/Tests/Dumper/PoFileDumperTest.php
+    (+25/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Translation/Tests/Fixtures/contexts-ambiguous.po
+  description: 'added: src/Symfony/Component/Translation/Tests/Fixtures/contexts-ambiguous.po
+    (+7/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Translation/Tests/Fixtures/contexts-with-and-without.po
+  description: 'added: src/Symfony/Component/Translation/Tests/Fixtures/contexts-with-and-without.po
+    (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: symfony/symfony
+  files:
+  - src/Symfony/Component/Translation/Tests/Loader/PoFileLoaderTest.php
+  description: 'modified: src/Symfony/Component/Translation/Tests/Loader/PoFileLoaderTest.php
+    (+28/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 6
+notes: 'Mined from symfony/symfony PR #64977. Trigger heuristic applied. Needs review.'

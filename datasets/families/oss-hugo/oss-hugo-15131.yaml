@@ -1,0 +1,57 @@
+id: oss-hugo-15131
+title: 'cache/filecache: Don''t prune used cache entries with mixed-case dir names'
+family: uncategorized
+date: '2026-07-26'
+author: bep
+source: github-api-mined
+source_repo: gohugoio/hugo
+source_url: https://github.com/gohugoio/hugo/pull/15131
+source_pr: 15131
+difficulty: medium
+trigger:
+  package: gohugoio/hugo
+  files:
+  - cache/filecache/filecache_pruner.go
+  intent: 'cache/filecache: Don''t prune used cache entries with mixed-case dir names'
+  diff_summary: 'Primary: cache/filecache/filecache_pruner.go (+54/-13)'
+consequences:
+- package: gohugoio/hugo
+  files:
+  - cache/filecache/filecache_pruner_test.go
+  description: 'modified: cache/filecache/filecache_pruner_test.go (+61/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - htesting/test_helpers.go
+  description: 'modified: htesting/test_helpers.go (+22/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - main_test.go
+  description: 'modified: main_test.go (+42/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - testscripts/commands/hugo_gc_mixed_case_cache_dir.txt
+  description: 'added: testscripts/commands/hugo_gc_mixed_case_cache_dir.txt (+38/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 5
+notes: 'Mined from gohugoio/hugo PR #15131. Trigger heuristic applied. Needs review.'

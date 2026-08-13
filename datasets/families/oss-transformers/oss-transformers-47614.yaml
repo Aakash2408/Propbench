@@ -1,0 +1,53 @@
+id: oss-transformers-47614
+title: 'feat[vLLM]: Support text replacement offsets in the remaining old-format processors'
+family: interface-evolution
+date: '2026-08-03'
+author: harshaljanjani
+source: github-api-mined
+source_repo: huggingface/transformers
+source_url: https://github.com/huggingface/transformers/pull/47614
+source_pr: 47614
+difficulty: medium
+trigger:
+  package: huggingface/transformers
+  files:
+  - src/transformers/models/gemma3/processing_gemma3.py
+  intent: 'feat[vLLM]: Support text replacement offsets in the remaining old-format
+    processors'
+  diff_summary: 'Primary: src/transformers/models/gemma3/processing_gemma3.py (+59/-60)'
+consequences:
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/granite_speech/processing_granite_speech.py
+  description: 'modified: src/transformers/models/granite_speech/processing_granite_speech.py
+    (+38/-51)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/models/vibevoice_asr/processing_vibevoice_asr.py
+  description: 'modified: src/transformers/models/vibevoice_asr/processing_vibevoice_asr.py
+    (+57/-52)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/processing_utils.py
+  description: 'modified: src/transformers/processing_utils.py (+15/-7)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from huggingface/transformers PR #47614. Trigger heuristic applied.
+  Needs review.'

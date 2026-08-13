@@ -1,0 +1,78 @@
+id: oss-elasticsearch-156570
+title: '[9.4] upgrade bc-fips version (#156296)'
+family: dependency-evolution
+date: '2026-08-13'
+author: richard-dennehy
+source: github-api-mined
+source_repo: elastic/elasticsearch
+source_url: https://github.com/elastic/elasticsearch/pull/156570
+source_pr: 156570
+difficulty: medium
+trigger:
+  package: elastic/elasticsearch
+  files:
+  - gradle/verification-metadata.xml
+  intent: '[9.4] upgrade bc-fips version (#156296)'
+  diff_summary: 'Primary: gradle/verification-metadata.xml (+9/-14)'
+consequences:
+- package: elastic/elasticsearch
+  files:
+  - build-tools-internal/src/main/groovy/elasticsearch.fips.gradle
+  description: 'modified: build-tools-internal/src/main/groovy/elasticsearch.fips.gradle
+    (+3/-9)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - build-tools-internal/src/main/resources/fips_java_bc2_bwc.policy
+  description: 'modified: build-tools-internal/src/main/resources/fips_java_bc2_bwc.policy
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - distribution/docker/build.gradle
+  description: 'modified: distribution/docker/build.gradle (+3/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - test/test-clusters/src/main/resources/fips/fips_java_bwc.policy
+  description: 'modified: test/test-clusters/src/main/resources/fips/fips_java_bwc.policy
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/core/build.gradle
+  description: 'modified: x-pack/plugin/core/build.gradle (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: elastic/elasticsearch
+  files:
+  - x-pack/plugin/security/src/test/java/org/elasticsearch/xpack/security/authc/saml/SamlResponseHandlerTests.java
+  description: 'modified: x-pack/plugin/security/src/test/java/org/elasticsearch/xpack/security/authc/saml/SamlResponseHandlerTests.java
+    (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 7
+notes: 'Mined from elastic/elasticsearch PR #156570. Trigger heuristic applied. Needs
+  review.'

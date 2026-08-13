@@ -1,0 +1,188 @@
+id: oss-angular-69685
+title: 'refactor(devtools): add static nodes for html-only block content in the component
+  tree'
+family: interface-evolution
+date: '2026-07-10'
+author: hawkgs
+source: github-api-mined
+source_repo: angular/angular
+source_url: https://github.com/angular/angular/pull/69685
+source_pr: 69685
+difficulty: medium
+trigger:
+  package: angular/angular
+  files:
+  - devtools/projects/ng-devtools-backend/src/lib/directive-forest/render-tree.ts
+  intent: 'refactor(devtools): add static nodes for html-only block content in the
+    component tree'
+  diff_summary: 'Primary: devtools/projects/ng-devtools-backend/src/lib/directive-forest/render-tree.ts
+    (+20/-4)'
+consequences:
+- package: angular/angular
+  files:
+  - devtools/cypress/cypress.config.js
+  description: 'modified: devtools/cypress/cypress.config.js (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - devtools/projects/ng-devtools-backend/src/lib/client-event-subscribers.ts
+  description: 'modified: devtools/projects/ng-devtools-backend/src/lib/client-event-subscribers.ts
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - devtools/projects/ng-devtools-backend/src/lib/directive-forest/control-flow.ts
+  description: 'modified: devtools/projects/ng-devtools-backend/src/lib/directive-forest/control-flow.ts
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - devtools/projects/ng-devtools-backend/src/lib/directive-forest/identity-tracker.ts
+  description: 'modified: devtools/projects/ng-devtools-backend/src/lib/directive-forest/identity-tracker.ts
+    (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - devtools/projects/ng-devtools-backend/src/lib/directive-forest/ltree.ts
+  description: 'modified: devtools/projects/ng-devtools-backend/src/lib/directive-forest/ltree.ts
+    (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - devtools/projects/ng-devtools-backend/src/lib/directive-forest/render-tree.spec.ts
+  description: 'modified: devtools/projects/ng-devtools-backend/src/lib/directive-forest/render-tree.spec.ts
+    (+46/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - devtools/projects/ng-devtools/src/lib/devtools-tabs/directive-explorer/directive-forest/component-data-source/component-data-source.spec.ts
+  description: 'modified: devtools/projects/ng-devtools/src/lib/devtools-tabs/directive-explorer/directive-forest/component-data-source/component-data-source.spec.ts
+    (+15/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - devtools/projects/ng-devtools/src/lib/devtools-tabs/directive-explorer/directive-forest/component-data-source/index.ts
+  description: 'modified: devtools/projects/ng-devtools/src/lib/devtools-tabs/directive-explorer/directive-forest/component-data-source/index.ts
+    (+4/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - devtools/projects/ng-devtools/src/lib/devtools-tabs/directive-explorer/directive-forest/directive-forest-utils.spec.ts
+  description: 'modified: devtools/projects/ng-devtools/src/lib/devtools-tabs/directive-explorer/directive-forest/directive-forest-utils.spec.ts
+    (+3/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - devtools/projects/ng-devtools/src/lib/devtools-tabs/directive-explorer/directive-forest/directive-forest.component.ts
+  description: 'modified: devtools/projects/ng-devtools/src/lib/devtools-tabs/directive-explorer/directive-forest/directive-forest.component.ts
+    (+17/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - devtools/projects/ng-devtools/src/lib/devtools-tabs/directive-explorer/directive-forest/index-forest/index-forest.spec.ts
+  description: 'modified: devtools/projects/ng-devtools/src/lib/devtools-tabs/directive-explorer/directive-forest/index-forest/index-forest.spec.ts
+    (+12/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - devtools/projects/ng-devtools/src/lib/devtools-tabs/directive-explorer/directive-forest/index-forest/index.ts
+  description: 'modified: devtools/projects/ng-devtools/src/lib/devtools-tabs/directive-explorer/directive-forest/index-forest/index.ts
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - devtools/projects/ng-devtools/src/lib/devtools-tabs/directive-explorer/directive-forest/tree-node/tree-node.component.html
+  description: 'modified: devtools/projects/ng-devtools/src/lib/devtools-tabs/directive-explorer/directive-forest/tree-node/tree-node.component.html
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - devtools/projects/ng-devtools/src/lib/devtools-tabs/directive-explorer/directive-forest/tree-node/tree-node.component.scss
+  description: 'modified: devtools/projects/ng-devtools/src/lib/devtools-tabs/directive-explorer/directive-forest/tree-node/tree-node.component.scss
+    (+10/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - devtools/projects/ng-devtools/src/lib/devtools-tabs/directive-explorer/directive-forest/tree-node/tree-node.component.ts
+  description: 'modified: devtools/projects/ng-devtools/src/lib/devtools-tabs/directive-explorer/directive-forest/tree-node/tree-node.component.ts
+    (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - devtools/projects/ng-devtools/src/lib/devtools-tabs/directive-explorer/property-resolver/element-property-resolver.spec.ts
+  description: 'modified: devtools/projects/ng-devtools/src/lib/devtools-tabs/directive-explorer/property-resolver/element-property-resolver.spec.ts
+    (+1/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - devtools/projects/ng-devtools/src/lib/devtools-tabs/injector-tree/injector-tree-fns.spec.ts
+  description: 'modified: devtools/projects/ng-devtools/src/lib/devtools-tabs/injector-tree/injector-tree-fns.spec.ts
+    (+454/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: angular/angular
+  files:
+  - devtools/projects/protocol/src/lib/messages.ts
+  description: 'modified: devtools/projects/protocol/src/lib/messages.ts (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 19
+notes: 'Mined from angular/angular PR #69685. Trigger heuristic applied. Needs review.'

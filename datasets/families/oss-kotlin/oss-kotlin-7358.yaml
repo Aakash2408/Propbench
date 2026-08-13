@@ -1,0 +1,134 @@
+id: oss-kotlin-7358
+title: '[AA] KT-88449: lookupLocally: fix and test shadowing'
+family: bugfix
+date: '2026-08-12'
+author: dnbln
+source: github-api-mined
+source_repo: JetBrains/kotlin
+source_url: https://github.com/JetBrains/kotlin/pull/7358
+source_pr: 7358
+difficulty: medium
+trigger:
+  package: JetBrains/kotlin
+  files:
+  - analysis/analysis-api/testData/components/resolver/allByPsi/lookupLocallyShadows.candidates.txt
+  intent: '[AA] KT-88449: lookupLocally: fix and test shadowing'
+  diff_summary: 'Primary: analysis/analysis-api/testData/components/resolver/allByPsi/lookupLocallyShadows.candidates.txt
+    (+1313/-0)'
+consequences:
+- package: JetBrains/kotlin
+  files:
+  - analysis/analysis-api-fir/tests-gen/org/jetbrains/kotlin/analysis/api/fir/test/cases/generated/cases/components/resolver/FirIdeNormalAnalysisSourceLikeModuleResolveCallByFileTestGenerated.java
+  description: 'modified: analysis/analysis-api-fir/tests-gen/org/jetbrains/kotlin/analysis/api/fir/test/cases/generated/cases/components/resolver/FirIdeNormalAnalysisSourceLikeModuleResolveCallByFileTestGenerated.java
+    (+6/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - analysis/analysis-api-fir/tests-gen/org/jetbrains/kotlin/analysis/api/fir/test/cases/generated/cases/components/resolver/FirIdeNormalAnalysisSourceLikeModuleResolveCandidatesByFileTestGenerated.java
+  description: 'modified: analysis/analysis-api-fir/tests-gen/org/jetbrains/kotlin/analysis/api/fir/test/cases/generated/cases/components/resolver/FirIdeNormalAnalysisSourceLikeModuleResolveCandidatesByFileTestGenerated.java
+    (+6/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - analysis/analysis-api-fir/tests-gen/org/jetbrains/kotlin/analysis/api/fir/test/cases/generated/cases/components/resolver/FirIdeNormalAnalysisSourceLikeModuleResolveSymbolByFileTestGenerated.java
+  description: 'modified: analysis/analysis-api-fir/tests-gen/org/jetbrains/kotlin/analysis/api/fir/test/cases/generated/cases/components/resolver/FirIdeNormalAnalysisSourceLikeModuleResolveSymbolByFileTestGenerated.java
+    (+6/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - analysis/analysis-api-standalone/tests-gen/org/jetbrains/kotlin/analysis/api/standalone/fir/test/cases/generated/cases/components/resolver/FirStandaloneNormalAnalysisSourceModuleResolveCallByFileTestGenerated.java
+  description: 'modified: analysis/analysis-api-standalone/tests-gen/org/jetbrains/kotlin/analysis/api/standalone/fir/test/cases/generated/cases/components/resolver/FirStandaloneNormalAnalysisSourceModuleResolveCallByFileTestGenerated.java
+    (+6/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - analysis/analysis-api-standalone/tests-gen/org/jetbrains/kotlin/analysis/api/standalone/fir/test/cases/generated/cases/components/resolver/FirStandaloneNormalAnalysisSourceModuleResolveCandidatesByFileTestGenerated.java
+  description: 'modified: analysis/analysis-api-standalone/tests-gen/org/jetbrains/kotlin/analysis/api/standalone/fir/test/cases/generated/cases/components/resolver/FirStandaloneNormalAnalysisSourceModuleResolveCandidatesByFileTestGenerated.java
+    (+6/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - analysis/analysis-api-standalone/tests-gen/org/jetbrains/kotlin/analysis/api/standalone/fir/test/cases/generated/cases/components/resolver/FirStandaloneNormalAnalysisSourceModuleResolveSymbolByFileTestGenerated.java
+  description: 'modified: analysis/analysis-api-standalone/tests-gen/org/jetbrains/kotlin/analysis/api/standalone/fir/test/cases/generated/cases/components/resolver/FirStandaloneNormalAnalysisSourceModuleResolveSymbolByFileTestGenerated.java
+    (+6/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - analysis/analysis-api/testData/components/resolver/allByPsi/localLookupSafeQualifiedExpression.symbol.txt
+  description: 'modified: analysis/analysis-api/testData/components/resolver/allByPsi/localLookupSafeQualifiedExpression.symbol.txt
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - analysis/analysis-api/testData/components/resolver/allByPsi/lookupLocallyShadows.call.txt
+  description: 'added: analysis/analysis-api/testData/components/resolver/allByPsi/lookupLocallyShadows.call.txt
+    (+561/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - analysis/analysis-api/testData/components/resolver/allByPsi/lookupLocallyShadows.kt
+  description: 'added: analysis/analysis-api/testData/components/resolver/allByPsi/lookupLocallyShadows.kt
+    (+17/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - analysis/analysis-api/testData/components/resolver/allByPsi/lookupLocallyShadows.symbol.txt
+  description: 'added: analysis/analysis-api/testData/components/resolver/allByPsi/lookupLocallyShadows.symbol.txt
+    (+307/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - analysis/low-level-api-fir/tests-gen/org/jetbrains/kotlin/analysis/low/level/api/fir/resolve/SourceLikeResolveCandidatesByFileFirTreeConsistencyTestGenerated.java
+  description: 'modified: analysis/low-level-api-fir/tests-gen/org/jetbrains/kotlin/analysis/low/level/api/fir/resolve/SourceLikeResolveCandidatesByFileFirTreeConsistencyTestGenerated.java
+    (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: JetBrains/kotlin
+  files:
+  - compiler/psi/psi-utils/src/org/jetbrains/kotlin/psi/LocalReferenceTargetLookupVisitor.kt
+  description: 'modified: compiler/psi/psi-utils/src/org/jetbrains/kotlin/psi/LocalReferenceTargetLookupVisitor.kt
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 13
+notes: 'Mined from JetBrains/kotlin PR #7358. Trigger heuristic applied. Needs review.'

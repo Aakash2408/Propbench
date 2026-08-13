@@ -1,0 +1,100 @@
+id: oss-vapor-3447
+title: Add @AuthMiddleware macro for type-safe authentication
+family: interface-evolution
+date: '2026-04-20'
+author: kylebrowning
+source: github-api-mined
+source_repo: vapor/vapor
+source_url: https://github.com/vapor/vapor/pull/3447
+source_pr: 3447
+difficulty: medium
+trigger:
+  package: vapor/vapor
+  files:
+  - Tests/VaporMacroTests/AuthMiddlewareMacroTests.swift
+  intent: Add @AuthMiddleware macro for type-safe authentication
+  diff_summary: 'Primary: Tests/VaporMacroTests/AuthMiddlewareMacroTests.swift (+355/-0)'
+consequences:
+- package: vapor/vapor
+  files:
+  - Sources/Development/routes.swift
+  description: 'modified: Sources/Development/routes.swift (+21/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/VaporMacros/MacroInterface.swift
+  description: 'modified: Sources/VaporMacros/MacroInterface.swift (+6/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/VaporMacrosPlugin/AuthMiddleware/AuthMiddlewareMacro.swift
+  description: 'added: Sources/VaporMacrosPlugin/AuthMiddleware/AuthMiddlewareMacro.swift
+    (+14/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/VaporMacrosPlugin/ControllerMacro.swift
+  description: 'modified: Sources/VaporMacrosPlugin/ControllerMacro.swift (+27/-8)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/VaporMacrosPlugin/HTTPMethods/HTTPMethodMacroUtilities.swift
+  description: 'modified: Sources/VaporMacrosPlugin/HTTPMethods/HTTPMethodMacroUtilities.swift
+    (+91/-11)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/VaporMacrosPlugin/VaporMacroError.swift
+  description: 'modified: Sources/VaporMacrosPlugin/VaporMacroError.swift (+3/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/VaporMacrosPlugin/VaporMacros.swift
+  description: 'modified: Sources/VaporMacrosPlugin/VaporMacros.swift (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Tests/VaporMacroIntegrationTests/AuthMiddlewareIntegrationTests.swift
+  description: 'added: Tests/VaporMacroIntegrationTests/AuthMiddlewareIntegrationTests.swift
+    (+164/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Tests/VaporMacroTests/Macros+SwiftTesting.swift
+  description: 'modified: Tests/VaporMacroTests/Macros+SwiftTesting.swift (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 10
+notes: 'Mined from vapor/vapor PR #3447. Trigger heuristic applied. Needs review.'

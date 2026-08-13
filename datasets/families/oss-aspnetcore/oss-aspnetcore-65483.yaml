@@ -1,0 +1,178 @@
+id: oss-aspnetcore-65483
+title: Simplify and unify TempData and SupplyParameterFromSession serialization
+family: uncategorized
+date: '2026-08-12'
+author: dariatiurina
+source: github-api-mined
+source_repo: dotnet/aspnetcore
+source_url: https://github.com/dotnet/aspnetcore/pull/65483
+source_pr: 65483
+difficulty: medium
+trigger:
+  package: dotnet/aspnetcore
+  files:
+  - src/Components/Endpoints/src/Serialization/JsonStoredDataSerializer.cs
+  intent: Simplify and unify TempData and SupplyParameterFromSession serialization
+  diff_summary: 'Primary: src/Components/Endpoints/src/Serialization/JsonStoredDataSerializer.cs
+    (+239/-0)'
+consequences:
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Endpoints/src/Serialization/IStoredDataSerializer.cs
+  description: 'added: src/Components/Endpoints/src/Serialization/IStoredDataSerializer.cs
+    (+21/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Endpoints/src/SessionCascadingValueSupplier.cs
+  description: 'modified: src/Components/Endpoints/src/SessionCascadingValueSupplier.cs
+    (+36/-20)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Endpoints/src/TempData/CookieTempDataProvider.cs
+  description: 'modified: src/Components/Endpoints/src/TempData/CookieTempDataProvider.cs
+    (+2/-10)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Endpoints/src/TempData/ITempDataSerializer.cs
+  description: 'removed: src/Components/Endpoints/src/TempData/ITempDataSerializer.cs
+    (+0/-15)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Endpoints/src/TempData/JsonTempDataSerializer.cs
+  description: 'removed: src/Components/Endpoints/src/TempData/JsonTempDataSerializer.cs
+    (+0/-195)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Endpoints/src/TempData/SessionStorageTempDataProvider.cs
+  description: 'modified: src/Components/Endpoints/src/TempData/SessionStorageTempDataProvider.cs
+    (+2/-9)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Endpoints/src/TempData/TempData.cs
+  description: 'modified: src/Components/Endpoints/src/TempData/TempData.cs (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Endpoints/src/TempData/TempDataProviderServiceCollectionExtensions.cs
+  description: 'modified: src/Components/Endpoints/src/TempData/TempDataProviderServiceCollectionExtensions.cs
+    (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Endpoints/test/Session/SessionCascadingValueSupplierTest.cs
+  description: 'modified: src/Components/Endpoints/test/Session/SessionCascadingValueSupplierTest.cs
+    (+20/-14)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Endpoints/test/Session/SessionSubscriptionTest.cs
+  description: 'modified: src/Components/Endpoints/test/Session/SessionSubscriptionTest.cs
+    (+81/-7)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Endpoints/test/TempData/CookieTempDataProviderTest.cs
+  description: 'modified: src/Components/Endpoints/test/TempData/CookieTempDataProviderTest.cs
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Endpoints/test/TempData/JsonStoredDataSerializerTest.cs
+  description: 'added: src/Components/Endpoints/test/TempData/JsonStoredDataSerializerTest.cs
+    (+613/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Endpoints/test/TempData/JsonTempDataSerializerTest.cs
+  description: 'removed: src/Components/Endpoints/test/TempData/JsonTempDataSerializerTest.cs
+    (+0/-435)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Endpoints/test/TempData/SessionStorageTempDataProviderTest.cs
+  description: 'modified: src/Components/Endpoints/test/TempData/SessionStorageTempDataProviderTest.cs
+    (+1/-1)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/Endpoints/test/TempData/TempDataProviderServiceExtensionsTest.cs
+  description: 'modified: src/Components/Endpoints/test/TempData/TempDataProviderServiceExtensionsTest.cs
+    (+2/-2)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/test/E2ETest/Tests/SupplyParameterFromSessionAttributeTest.cs
+  description: 'modified: src/Components/test/E2ETest/Tests/SupplyParameterFromSessionAttributeTest.cs
+    (+0/-11)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: dotnet/aspnetcore
+  files:
+  - src/Components/test/testassets/Components.TestServer/RazorComponents/Pages/SupplyParameterFromSessionComponent.razor
+  description: 'modified: src/Components/test/testassets/Components.TestServer/RazorComponents/Pages/SupplyParameterFromSessionComponent.razor
+    (+0/-35)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 18
+notes: 'Mined from dotnet/aspnetcore PR #65483. Trigger heuristic applied. Needs review.'

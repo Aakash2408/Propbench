@@ -1,0 +1,82 @@
+id: oss-transformers-47728
+title: 'bench: dtensor vs legacy TP'
+family: uncategorized
+date: '2026-08-05'
+author: 3outeille
+source: github-api-mined
+source_repo: huggingface/transformers
+source_url: https://github.com/huggingface/transformers/pull/47728
+source_pr: 47728
+difficulty: medium
+trigger:
+  package: huggingface/transformers
+  files:
+  - scripts/dispatch_tp_tests.sh
+  intent: 'bench: dtensor vs legacy TP'
+  diff_summary: 'Primary: scripts/dispatch_tp_tests.sh (+1378/-0)'
+consequences:
+- package: huggingface/transformers
+  files:
+  - bench.sh
+  description: 'added: bench.sh (+33/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - bench_dtensor.py
+  description: 'added: bench_dtensor.py (+210/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/core_model_loading.py
+  description: 'modified: src/transformers/core_model_loading.py (+18/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/distributed/mixin.py
+  description: 'modified: src/transformers/distributed/mixin.py (+12/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/distributed/tensor_parallel.py
+  description: 'modified: src/transformers/distributed/tensor_parallel.py (+97/-45)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/integrations/finegrained_fp8.py
+  description: 'modified: src/transformers/integrations/finegrained_fp8.py (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: huggingface/transformers
+  files:
+  - src/transformers/integrations/torchao.py
+  description: 'modified: src/transformers/integrations/torchao.py (+4/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 8
+notes: 'Mined from huggingface/transformers PR #47728. Trigger heuristic applied.
+  Needs review.'

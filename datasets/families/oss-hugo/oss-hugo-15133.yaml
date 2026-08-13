@@ -1,0 +1,49 @@
+id: oss-hugo-15133
+title: Drop symlinks in parent directories
+family: uncategorized
+date: '2026-07-25'
+author: bep
+source: github-api-mined
+source_repo: gohugoio/hugo
+source_url: https://github.com/gohugoio/hugo/pull/15133
+source_pr: 15133
+difficulty: medium
+trigger:
+  package: gohugoio/hugo
+  files:
+  - hugofs/nosymlinks_fs.go
+  intent: Drop symlinks in parent directories
+  diff_summary: 'Primary: hugofs/nosymlinks_fs.go (+34/-0)'
+consequences:
+- package: gohugoio/hugo
+  files:
+  - .gitignore
+  description: 'modified: .gitignore (+2/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - hugofs/rootmapping_fs.go
+  description: 'modified: hugofs/rootmapping_fs.go (+9/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: gohugoio/hugo
+  files:
+  - testscripts/commands/no_symlinks.txt
+  description: 'modified: testscripts/commands/no_symlinks.txt (+15/-3)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from gohugoio/hugo PR #15133. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,49 @@
+id: oss-devise-4837
+title: When password reset token expires, redirect to new password path
+family: interface-evolution
+date: '2019-02-15'
+author: jeremywadsack
+source: github-api-mined
+source_repo: heartcombo/devise
+source_url: https://github.com/heartcombo/devise/pull/4837
+source_pr: 4837
+difficulty: medium
+trigger:
+  package: heartcombo/devise
+  files:
+  - app/controllers/devise/passwords_controller.rb
+  intent: When password reset token expires, redirect to new password path
+  diff_summary: 'Primary: app/controllers/devise/passwords_controller.rb (+11/-1)'
+consequences:
+- package: heartcombo/devise
+  files:
+  - config/locales/en.yml
+  description: 'modified: config/locales/en.yml (+1/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - test/controllers/passwords_controller_test.rb
+  description: 'modified: test/controllers/passwords_controller_test.rb (+6/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: heartcombo/devise
+  files:
+  - test/integration/recoverable_test.rb
+  description: 'modified: test/integration/recoverable_test.rb (+13/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 4
+notes: 'Mined from heartcombo/devise PR #4837. Trigger heuristic applied. Needs review.'

@@ -1,0 +1,170 @@
+id: oss-alamofire-3947
+title: Deprecate `NetworkReachabilityManager`
+family: dependency-evolution
+date: '2025-10-11'
+author: jshier
+source: github-api-mined
+source_repo: Alamofire/Alamofire
+source_url: https://github.com/Alamofire/Alamofire/pull/3947
+source_pr: 3947
+difficulty: medium
+trigger:
+  package: Alamofire/Alamofire
+  files:
+  - Tests/TestHelpers.swift
+  intent: Deprecate `NetworkReachabilityManager`
+  diff_summary: 'Primary: Tests/TestHelpers.swift (+13/-13)'
+consequences:
+- package: Alamofire/Alamofire
+  files:
+  - .gitignore
+  description: 'modified: .gitignore (+2/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Alamofire.xcodeproj/project.pbxproj
+  description: 'modified: Alamofire.xcodeproj/project.pbxproj (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Alamofire.xcodeproj/xcshareddata/xcschemes/Alamofire iOS.xcscheme
+  description: 'modified: Alamofire.xcodeproj/xcshareddata/xcschemes/Alamofire iOS.xcscheme
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Alamofire.xcodeproj/xcshareddata/xcschemes/Alamofire macOS.xcscheme
+  description: 'modified: Alamofire.xcodeproj/xcshareddata/xcschemes/Alamofire macOS.xcscheme
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Alamofire.xcodeproj/xcshareddata/xcschemes/Alamofire tvOS.xcscheme
+  description: 'modified: Alamofire.xcodeproj/xcshareddata/xcschemes/Alamofire tvOS.xcscheme
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Alamofire.xcodeproj/xcshareddata/xcschemes/Alamofire visionOS.xcscheme
+  description: 'modified: Alamofire.xcodeproj/xcshareddata/xcschemes/Alamofire visionOS.xcscheme
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Alamofire.xcodeproj/xcshareddata/xcschemes/Alamofire watchOS.xcscheme
+  description: 'modified: Alamofire.xcodeproj/xcshareddata/xcschemes/Alamofire watchOS.xcscheme
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Example/iOS Example.xcodeproj/xcshareddata/xcschemes/iOS Example.xcscheme
+  description: 'modified: Example/iOS Example.xcodeproj/xcshareddata/xcschemes/iOS
+    Example.xcscheme (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Source/Alamofire.swift
+  description: 'modified: Source/Alamofire.swift (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Source/Core/HTTPHeaders.swift
+  description: 'modified: Source/Core/HTTPHeaders.swift (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Source/Core/Protected.swift
+  description: 'modified: Source/Core/Protected.swift (+1/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Source/Core/WebSocketRequest.swift
+  description: 'modified: Source/Core/WebSocketRequest.swift (+2/-2)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Source/Features/NetworkReachabilityManager.swift
+  description: 'modified: Source/Features/NetworkReachabilityManager.swift (+7/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Source/Features/URLEncodedFormEncoder.swift
+  description: 'modified: Source/Features/URLEncodedFormEncoder.swift (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Tests/NetworkReachabilityManagerTests.swift
+  description: 'modified: Tests/NetworkReachabilityManagerTests.swift (+5/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - Tests/SessionTests.swift
+  description: 'modified: Tests/SessionTests.swift (+3/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: Alamofire/Alamofire
+  files:
+  - watchOS Example/watchOS Example.xcodeproj/xcshareddata/xcschemes/watchOS Example
+    WatchKit App.xcscheme
+  description: 'modified: watchOS Example/watchOS Example.xcodeproj/xcshareddata/xcschemes/watchOS
+    Example WatchKit App.xcscheme (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 18
+notes: 'Mined from Alamofire/Alamofire PR #3947. Trigger heuristic applied. Needs
+  review.'

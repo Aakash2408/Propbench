@@ -1,0 +1,137 @@
+id: oss-terraform-provider-aws-49339
+title: 'resource/aws_ssm_parameter: Fixes `names` with only leading slash'
+family: bugfix
+date: '2026-08-11'
+author: gdavison
+source: github-api-mined
+source_repo: hashicorp/terraform-provider-aws
+source_url: https://github.com/hashicorp/terraform-provider-aws/pull/49339
+source_pr: 49339
+difficulty: medium
+trigger:
+  package: hashicorp/terraform-provider-aws
+  files:
+  - internal/provider/sdkv2/identity_interceptor.go
+  intent: 'resource/aws_ssm_parameter: Fixes `names` with only leading slash'
+  diff_summary: 'Primary: internal/provider/sdkv2/identity_interceptor.go (+16/-14)'
+consequences:
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/provider/sdkv2/identity_interceptor_test.go
+  description: 'modified: internal/provider/sdkv2/identity_interceptor_test.go (+168/-31)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/ssm/parameter.go
+  description: 'modified: internal/service/ssm/parameter.go (+8/-6)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/ssm/parameter_identity_gen_test.go
+  description: 'modified: internal/service/ssm/parameter_identity_gen_test.go (+584/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/ssm/parameter_list.go
+  description: 'modified: internal/service/ssm/parameter_list.go (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/ssm/parameter_test.go
+  description: 'modified: internal/service/ssm/parameter_test.go (+106/-0)'
+  mechanical: true
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/ssm/testdata/Parameter/leadingslash_basic/main_gen.tf
+  description: 'added: internal/service/ssm/testdata/Parameter/leadingslash_basic/main_gen.tf
+    (+14/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/ssm/testdata/Parameter/leadingslash_region_override/main_gen.tf
+  description: 'added: internal/service/ssm/testdata/Parameter/leadingslash_region_override/main_gen.tf
+    (+22/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/ssm/testdata/Parameter/leadingslash_v6.7.0/main_gen.tf
+  description: 'added: internal/service/ssm/testdata/Parameter/leadingslash_v6.7.0/main_gen.tf
+    (+24/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/ssm/testdata/Parameter/path_basic/main_gen.tf
+  description: 'added: internal/service/ssm/testdata/Parameter/path_basic/main_gen.tf
+    (+14/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/ssm/testdata/Parameter/path_region_override/main_gen.tf
+  description: 'added: internal/service/ssm/testdata/Parameter/path_region_override/main_gen.tf
+    (+22/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/ssm/testdata/Parameter/path_v6.7.0/main_gen.tf
+  description: 'added: internal/service/ssm/testdata/Parameter/path_v6.7.0/main_gen.tf
+    (+24/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/ssm/testdata/tmpl/parameter_leadingslash.gtpl
+  description: 'added: internal/service/ssm/testdata/tmpl/parameter_leadingslash.gtpl
+    (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: hashicorp/terraform-provider-aws
+  files:
+  - internal/service/ssm/testdata/tmpl/parameter_path.gtpl
+  description: 'added: internal/service/ssm/testdata/tmpl/parameter_path.gtpl (+8/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 14
+notes: 'Mined from hashicorp/terraform-provider-aws PR #49339. Trigger heuristic applied.
+  Needs review.'

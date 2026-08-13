@@ -1,0 +1,90 @@
+id: oss-vapor-3506
+title: TLS Tidyups
+family: uncategorized
+date: '2026-08-11'
+author: 0xTim
+source: github-api-mined
+source_repo: vapor/vapor
+source_url: https://github.com/vapor/vapor/pull/3506
+source_pr: 3506
+difficulty: medium
+trigger:
+  package: vapor/vapor
+  files:
+  - Tests/VaporTests/ServerTLSTests.swift
+  intent: TLS Tidyups
+  diff_summary: 'Primary: Tests/VaporTests/ServerTLSTests.swift (+192/-211)'
+consequences:
+- package: vapor/vapor
+  files:
+  - .swift-version
+  description: 'modified: .swift-version (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Package.swift
+  description: 'modified: Package.swift (+8/-4)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/Development/configure.swift
+  description: 'modified: Sources/Development/configure.swift (+10/-15)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/Vapor/HTTP/Server/HTTPServerConfiguration+TLSConfiguration.swift
+  description: 'modified: Sources/Vapor/HTTP/Server/HTTPServerConfiguration+TLSConfiguration.swift
+    (+1/-1)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/Vapor/HTTPNewNew/NIOHTTPServerAdapter.swift
+  description: 'modified: Sources/Vapor/HTTPNewNew/NIOHTTPServerAdapter.swift (+50/-11)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Sources/Vapor/Security/ValidatedCertificateChain.swift
+  description: 'removed: Sources/Vapor/Security/ValidatedCertificateChain.swift (+0/-27)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Tests/VaporTests/Utilities/localhost.crt
+  description: 'added: Tests/VaporTests/Utilities/localhost.crt (+17/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+- package: vapor/vapor
+  files:
+  - Tests/VaporTests/Utilities/localhost.key
+  description: 'added: Tests/VaporTests/Utilities/localhost.key (+28/-0)'
+  mechanical: false
+  relationship: co-change
+  confidence_an_expert_would_predict: 0.5
+  reasoning: Auto-mined from GitHub PR (needs human review)
+tags:
+- github-mined
+- needs-review
+- open-source
+propagation_unit: file
+effort:
+  files_changed: 9
+notes: 'Mined from vapor/vapor PR #3506. Trigger heuristic applied. Needs review.'
