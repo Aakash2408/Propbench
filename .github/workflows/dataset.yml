@@ -1,0 +1,81 @@
+name: dataset
+
+# PropBench had no CI. tools/validate_dataset.py existed but checks STRUCTURE
+# only -- required fields, path shapes, duplicates. It never checked whether an
+# entry corresponds to anything real, which is how entries citing pull requests
+# that do not exist shipped in the published dataset:
+#
+#   oss-react-01   -> facebook/react#28270     does not exist
+#   oss-fastapi-01 -> tiangolo/fastapi#11117   does not exist
+#   oss-django-01  -> django/django#16553      exists, titled "Increase coverage"
+#
+# The provenance gate below runs OFFLINE (no network, no token) and would have
+# rejected the class of entry that has no resolvable identifier at all. Online
+# resolution needs a token and is therefore a separate, manual step -- see
+# datasets/PROVENANCE.md for what has actually been checked.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  dataset:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml
+
+      - name: Structural validation
+        run: python tools/validate_dataset.py
+
+      - name: Provenance classification (offline)
+        # Fails the build if an entry cites nothing resolvable AND is not marked
+        # internal. Currently report-only because 21 such entries already exist
+        # in v1.0 -- flipping this to blocking is the v1.1 exit criterion.
+        continue-on-error: true
+        run: python tools/validate_provenance.py
+
+      - name: Manifest is current
+        # The generated manifest must match the dataset. A stale PROVENANCE.md
+        # is worse than none: it states verification counts that no longer hold.
+        run: |
+          python tools/validate_provenance.py --manifest
+          if ! git diff --quiet datasets/PROVENANCE.md datasets/provenance.json; then
+            echo "::error::PROVENANCE.md / provenance.json are stale."
+            echo "Run: python tools/validate_provenance.py --manifest"
+            git diff --stat datasets/PROVENANCE.md datasets/provenance.json
+            exit 1
+          fi
+
+      - name: Seed and symbol extraction is importable
+        # The extractor and classifier are imported by the replay harness, which
+        # cannot itself run in CI (it needs network plus a token, and Ripple
+        # lives in a different repo). Import + a unit check is what IS gateable
+        # here; the behavioural gate lives in Ripple's own suite.
+        run: |
+          python -c "
+          import sys; sys.path.insert(0, 'tools')
+          from extract_seed import extract, candidates, pre_lines, package_vector
+          from classify_misses import classify, acronym, alias_candidates
+          # pre_lines must exclude additions: scoring a symbol the PR INTRODUCED
+          # selected 'ruleChain' on elasticsearch#153666, absent from all 7
+          # label files at base.
+          assert pre_lines('+added\n-removed\n context') == 'removed\ncontext'
+          # Declarations must capture WHOLE identifiers. An earlier pattern
+          # allowed a match to start inside one, yielding 'Policy' from
+          # 'type PodSecurityPolicyProvider'.
+          assert 'PodSecurityPolicyProvider' in candidates('-type PodSecurityPolicyProvider interface {')
+          # Acronyms come from CamelCase in the PR title; a lowercase package
+          # directory name cannot yield one.
+          assert 'PSP' in alias_candidates('podsecuritypolicy', 'Remove PodSecurityPolicy admission plugin')
+          print('extractor self-checks OK')
+          "

@@ -1,1 +1,9 @@
 __pycache__/
+
+# replay/provenance caches -- regenerable, and .content_cache holds third-party
+# file snapshots that do not belong in this repo
+tools/.provenance_cache.json
+tools/.patch_cache.json
+tools/.base_cache.json
+tools/.replay_results.json
+tools/.content_cache/
