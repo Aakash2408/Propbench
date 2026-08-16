@@ -194,6 +194,16 @@ def write_manifest(entries: list[dict], offline_cls: dict, online_cls: dict,
         })
     (out_dir / "provenance.json").write_text(json.dumps(rows, indent=2))
 
+    # Version-control the VERDICTS (not the 589KB patch cache, which stays
+    # gitignored). Without this the manifest could not be regenerated anywhere
+    # the cache is absent -- so CI's "manifest is current" check failed on its
+    # very first run: it rebuilt the resolution column as all-`unresolved` and
+    # diffed against the committed file. The verdicts are also the audit trail
+    # that makes the 631/634 claim checkable by a reader.
+    verdicts = {k: v for k, v in sorted(online_cls.items())}
+    if verdicts:
+        (out_dir / "resolutions.json").write_text(json.dumps(verdicts, indent=2))
+
     counts = collections.Counter(r["provenance"] for r in rows)
     res = collections.Counter(r["resolution"] for r in rows)
     lines = [
@@ -270,8 +280,13 @@ def main() -> int:
 
     # Resolution states from any prior cached run -- so the manifest reflects
     # what has actually been checked, without re-spending API budget.
-    prov = Path(__file__).parent / ".provenance_cache.json"
+    # Committed verdicts first, so CI (no cache, no token) reproduces the
+    # manifest byte-for-byte.
     online_cls: dict = {}
+    committed = Path(args.datasets) / "resolutions.json"
+    if committed.exists():
+        online_cls.update(json.loads(committed.read_text()))
+    prov = Path(__file__).parent / ".provenance_cache.json"
     if prov.exists():
         for k, v in json.loads(prov.read_text()).items():
             online_cls[k] = "verified" if v.get("ok") else "unreachable"
