@@ -1,46 +1,60 @@
 # PropBench v1.1 — changelog
 
-Status: **in progress.** The tooling below is complete and the offline audit has
-run across all 881 entries. Online resolution of 616 entries is outstanding and
-needs a GitHub token; until it completes, v1.0 remains the published dataset and
-v1.1 is not releasable.
+Status: **provenance fully resolved.** All 634 resolvable references have been
+checked against their hosts. 631 verify (99.5%). Three do not.
 
 ## Why v1.1 exists
 
-v1.0 shipped with entries whose cited sources do not exist. Spot-checking five
-hand-curated entries:
+v1.0 shipped without any check that an entry corresponds to a real change.
+`tools/validate_dataset.py` validates *structure* — required fields, path shapes,
+duplicates — and never resolved a citation. Once consequence files are
+**authored** rather than read off a diff, nothing constrains them to be true.
 
-| Entry | Cited source | Reality |
+Full resolution, 634 entries:
+
+| Result | n | Meaning |
 |---|---|---|
-| `oss-react-01` | facebook/react#28270 | does not exist |
-| `oss-fastapi-01` | tiangolo/fastapi#11117 | does not exist |
-| `oss-fastapi-03` | tiangolo/fastapi#9816 | does not exist |
-| `oss-django-01` | django/django#16553 | exists, titled *"Increase coverage"* — unrelated to the entry |
-| `oss-k8s-01` | kubernetes/kubernetes#109798 | **real and matching** |
+| `verified` | **631** (99.5%) | reference resolves and claimed files overlap the real diff |
+| `mismatched` | 2 | reference resolves but claimed files do not intersect it |
+| `unreachable` | 1 | HTTP 404 — does not exist |
 
-`tools/validate_dataset.py` did not catch this because it validates *structure* —
-required fields, path shapes, duplicates — and never checked whether an entry
-corresponds to anything real. Once consequence files are **authored** rather than
-read off a diff, nothing constrains them to be true.
+The three:
 
-This is stated plainly because the alternative is a reviewer finding it. The
-paper's contribution is label integrity; that makes provenance the whole claim.
+| Entry | Cited source | Verdict |
+|---|---|---|
+| `oss-fastapi-01` | tiangolo/fastapi#11117 | **404 — does not exist** |
+| `oss-django-01` | django/django#16553 | exists, titled *"Increase coverage"* — claims 3 files, none in that PR |
+| `oss-react-01` | facebook/react#28270 | exists, but claims 4 files where only 2 are real and they do not intersect |
 
-## What is and is not affected
+### Correction to an earlier draft of this file
 
-The damage is confined to the hand-written entries. The mined corpus is sound:
+An earlier version stated that **three** cited PRs did not exist —
+`react#28270`, `fastapi#11117` and `fastapi#9816`. That was wrong, and wrong for
+an instructive reason: those spot-checks ran against an exhausted unauthenticated
+rate limit, so GitHub returned **HTTP 403** and the validator recorded it as
+`unreachable`. Only `fastapi#11117` is genuinely absent. `react#28270` exists
+(its labels are simply wrong) and `fastapi#9816` **verifies cleanly**.
+
+The validator now separates 404 (definitive) from 403/429/5xx (transient, never
+cached), because caching a transient failure makes a false "does not exist"
+verdict permanent. That defect was found by an adversarial fixture in the
+verification stage — after it had already contaminated this changelog.
+
+So the damage in v1.0 is **3 entries of 881 (0.34%)**, not the ~3.6% first
+estimated. The corpus is in far better shape than the initial curated-entry
+sample suggested.
+
+## What is and is not verifiable
 
 | Source | n | Provenance |
 |---|---|---|
-| `github-api-mined` | 629 | `source_repo` + `source_pr` — resolvable |
+| `github-api-mined` | 629 | `source_repo` + `source_pr` — all resolvable, all verified |
 | `git-mined` | 226 | internal Amazon packages — **not publicly verifiable** |
-| `curated-url` | 11 | 5 resolvable, 6 cite docs pages with no commit |
+| `curated-url` | 11 | 5 resolvable (2 of the 3 problems are here), 6 cite docs pages with no commit |
 | `?` / repo-only | 15 | no identifier at all |
 
-Of 18 mined entries resolved so far, **18 verified** — the PR exists and the
-entry's files overlap the real diff. At n=18 with zero failures the failure rate
-is under roughly 17% with 95% confidence. So roughly 3.6% of the dataset has
-broken provenance, not the bulk of it.
+The `git-mined` entries need local clones or reclassification as a separate
+internal split; a GitHub token does nothing for them.
 
 ## Findings that change how the dataset should be used
 
@@ -91,14 +105,16 @@ generator can derive), `low_confidence`, `symbol_absent_other`.
 | `.github/workflows/dataset.yml` | first CI for this repo |
 
 **No entries were moved or deleted.** The verified/unverified split is a generated
-manifest, not a directory restructure, because 616 entries are still
-`unresolved` — a state deliberately kept distinct from `verified`. Filing them
-under `verified/` now would assert a check that has not been made.
+manifest rather than a directory restructure. With resolution now complete the
+manifest is authoritative: 631 `verified`, 2 `mismatched`, 1 `unreachable`, and
+247 `n/a` (internal or no reference). A restructure is now *possible*; whether it
+is desirable is a separate call, since moving files breaks every existing
+citation of an entry's path.
 
 ## Exit criteria for release
 
-1. Resolve the remaining 616 references (needs a token; the cache makes the run
-   resumable).
+1. ~~Resolve the remaining 616 references.~~ **Done** — 634/634 resolved,
+   631 verified, 3 problems named above.
 2. Regenerate labels from observed diffs for every verified entry.
 3. Decide the disposition of the 226 internal entries — validate from local
    clones or reclassify as a separate internal split.

@@ -143,43 +143,27 @@ class Resolver:
             return json.load(r)
 
     def resolve(self, kind: str, params: tuple) -> dict:
-        key = f"{kind}:{params[0]}:{params[1]}"
-        if key in self.cache:
-            return self.cache[key]
+        """Delegates to gh_cache, so this tool and extract_seed share ONE cached
+        call to /pulls/{n}/files rather than making the same request twice. The
+        404-vs-transient distinction lives in gh_cache now: a transient failure
+        is never cached, because caching it would make a false "does not exist"
+        verdict permanent."""
+        import sys as _sys
+        from pathlib import Path as _Path
+        _sys.path.insert(0, str(_Path(__file__).parent))
+        from gh_cache import pr_files, commit_files, Transient
         repo, ident = params
-        path = (f"/repos/{repo}/pulls/{ident}/files?per_page=100" if kind == "gh_pr"
-                else f"/repos/{repo}/commits/{ident}")
         try:
-            data = self._get(path)
-            if kind == "gh_pr":
-                files = [f["filename"] for f in data] if isinstance(data, list) else []
-                # An empty file list means the PR number resolved to something
-                # without files -- treat as unreachable rather than verified.
-                res = {"ok": bool(files), "files": files}
-            else:
-                files = [f["filename"] for f in (data.get("files") or [])]
-                res = {"ok": True, "files": files}
-        except urllib.error.HTTPError as e:
-            # 404 means the reference DOES NOT EXIST -- a real finding.
-            # 403/429/5xx mean we could not ask: rate limiting, auth, or an
-            # outage. Conflating them is dangerous in both directions: a
-            # rate-limited run would brand good entries as fabricated, and
-            # caching that verdict would poison every later run. Discovered by
-            # the adversarial fixture, which returned 403 for two entries after
-            # the unauthenticated budget ran out and was reported as
-            # "unreachable 2 (100%)" -- the right verdict for the wrong reason.
-            if e.code == 404:
-                res = {"ok": False, "definitive": True, "files": [],
-                       "error": "HTTP 404 (does not exist)"}
-            else:
-                hint = " -- rate limited; set GITHUB_TOKEN" if e.code in (403, 429) else ""
-                return {"ok": False, "definitive": False, "files": [],
-                        "error": f"HTTP {e.code}{hint}"}  # NOT cached
-        except Exception as e:
+            files = (pr_files(repo, ident) if kind == "gh_pr"
+                     else commit_files(repo, ident))
+        except Transient as e:
             return {"ok": False, "definitive": False, "files": [],
-                    "error": f"{type(e).__name__}"}  # NOT cached
-        self.cache[key] = res
-        return res
+                    "error": str(e)}
+        if files is None:
+            return {"ok": False, "definitive": True, "files": [],
+                    "error": "HTTP 404 (does not exist)"}
+        names = [f["filename"] for f in files]
+        return {"ok": bool(names), "definitive": True, "files": names}
 
     def save(self):
         CACHE.write_text(json.dumps(self.cache))
@@ -324,13 +308,20 @@ def main() -> int:
         else:
             cls = "verified_no_overlap_check"
         online[cls] += 1
+        # The manifest previously derived resolutions from .provenance_cache.json
+        # only. After the cache unification, resolutions land in gh_cache's
+        # store, so the manifest silently kept reporting 616 unresolved even
+        # after 631 entries verified. Record per-key here instead.
+        online_cls[f"{ref[0]}:{ref[1][0]}:{ref[1][1]}"] = cls
         if cls in ("unreachable", "mismatched", "unresolved_transient"):
             problems.append((e.get("id"), ref, cls, res.get("error", ""),
                              len(claimed), len(real)))
     r.save()
 
     n = sum(online.values())
-    print(f"  resolved {n} entries in {r.calls} API call(s)\n")
+    from gh_cache import stats as _gh_stats
+    print(f"  resolved {n} entries  (cache now holds "
+          f"{_gh_stats()['pr_files_cached']} PR file records)\n")
     for cls, c in online.most_common():
         print(f"  {cls:26} {c:4}  ({100*c/n:.1f}%)")
 

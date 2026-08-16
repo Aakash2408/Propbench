@@ -65,21 +65,28 @@ def gh_api(path: str, token: str):
 
 
 def base_sha(repo: str, pr: str, token: str, cache: dict) -> str | None:
-    key = f"{repo}#{pr}"
-    if key in cache:
-        return cache[key]
+    """Delegates to gh_cache (shared disk cache, token from environment)."""
+    from gh_cache import pr_base_sha, Transient
     try:
-        data = gh_api(f"/repos/{repo}/pulls/{pr}", token)
-        cache[key] = data["base"]["sha"]
-    except Exception as e:
-        print(f"    base_sha({key}) failed: {type(e).__name__} -- "
-              f"cannot fetch pre-change content without it", file=sys.stderr)
-        cache[key] = None
-    return cache[key]
+        return pr_base_sha(repo, pr)
+    except Transient as e:
+        print(f"    base_sha({repo}#{pr}): {e}", file=sys.stderr)
+        return None
 
 
 def fetch_content(repo: str, sha: str, path: str) -> str | None:
-    """raw.githubusercontent is not rate-limited. Cached on disk regardless."""
+    """raw.githubusercontent is not rate-limited by the API budget. Cached on
+    disk regardless.
+
+    Only a definitive 404 is cached as missing. An earlier version cached ANY
+    exception as `__MISSING__`, so a transient failure became a permanent
+    "file does not exist at base" -- which showed up as 320 files classified
+    `content_unavailable` in the miss pass, for files the replay had fetched
+    successfully minutes earlier. Third instance of this defect today: the
+    provenance validator recorded HTTP 403 as `unreachable`, and gh_cache had to
+    learn the same distinction. A cache that remembers failures it should have
+    retried is worse than no cache.
+    """
     CONTENT_DIR.mkdir(exist_ok=True)
     key = hashlib.sha1(f"{repo}@{sha}:{path}".encode()).hexdigest()
     cf = CONTENT_DIR / key
@@ -90,9 +97,13 @@ def fetch_content(repo: str, sha: str, path: str) -> str | None:
     try:
         with urllib.request.urlopen(url, timeout=30) as r:
             txt = r.read().decode("utf-8", "replace")
+    except urllib.error.HTTPError as e:
+        if e.code == 404:
+            cf.write_text("__MISSING__")   # definitive: absent at this sha
+            return None
+        return None                        # transient: NOT cached
     except Exception:
-        cf.write_text("__MISSING__")
-        return None
+        return None                        # transient: NOT cached
     cf.write_text(txt)
     return txt
 
@@ -132,8 +143,11 @@ def main() -> int:
     per_entry = []
 
     for repo, pr, r in entries:
+        # gh_cache owns .base_cache.json. replay used to ALSO write it from its
+        # own local dict, so the two writers clobbered each other and base SHAs
+        # went missing -- which surfaced as 320 files classified
+        # `content_unavailable` because their sha was absent.
         sha = base_sha(repo, pr, token, bases)
-        BASE_CACHE.write_text(json.dumps(bases))
         if not sha:
             print(f"  {repo}#{pr}: SKIP (no base sha)")
             continue

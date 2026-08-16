@@ -283,24 +283,15 @@ def extract(files: list[dict]) -> dict:
 
 
 def fetch_pr_files(repo: str, num: str, token: str, cache: dict) -> list[dict] | None:
-    key = f"{repo}#{num}"
-    if key in cache:
-        return cache[key]
-    req = urllib.request.Request(
-        f"https://api.github.com/repos/{repo}/pulls/{num}/files?per_page=100")
-    req.add_header("Accept", "application/vnd.github+json")
-    if token:
-        req.add_header("Authorization", f"Bearer {token}")
+    """Delegates to gh_cache so this tool and validate_provenance share ONE
+    cached call to /pulls/{n}/files instead of making the same request twice.
+    `token` and `cache` are retained for signature compatibility; gh_cache owns
+    both now (token from the environment, cache on disk)."""
+    from gh_cache import pr_files, Transient
     try:
-        with urllib.request.urlopen(req, timeout=40) as r:
-            data = json.load(r)
-        out = [{"filename": f["filename"], "patch": f.get("patch"),
-                "additions": f.get("additions", 0), "deletions": f.get("deletions", 0),
-                "status": f.get("status")} for f in data]
-        cache[key] = out
-        return out
-    except Exception:
-        cache[key] = None
+        return pr_files(repo, num)
+    except Transient as e:
+        print(f"    {repo}#{num}: {e}", file=sys.stderr)
         return None
 
 
