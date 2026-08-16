@@ -160,9 +160,24 @@ class Resolver:
                 files = [f["filename"] for f in (data.get("files") or [])]
                 res = {"ok": True, "files": files}
         except urllib.error.HTTPError as e:
-            res = {"ok": False, "files": [], "error": f"HTTP {e.code}"}
+            # 404 means the reference DOES NOT EXIST -- a real finding.
+            # 403/429/5xx mean we could not ask: rate limiting, auth, or an
+            # outage. Conflating them is dangerous in both directions: a
+            # rate-limited run would brand good entries as fabricated, and
+            # caching that verdict would poison every later run. Discovered by
+            # the adversarial fixture, which returned 403 for two entries after
+            # the unauthenticated budget ran out and was reported as
+            # "unreachable 2 (100%)" -- the right verdict for the wrong reason.
+            if e.code == 404:
+                res = {"ok": False, "definitive": True, "files": [],
+                       "error": "HTTP 404 (does not exist)"}
+            else:
+                hint = " -- rate limited; set GITHUB_TOKEN" if e.code in (403, 429) else ""
+                return {"ok": False, "definitive": False, "files": [],
+                        "error": f"HTTP {e.code}{hint}"}  # NOT cached
         except Exception as e:
-            res = {"ok": False, "files": [], "error": f"{type(e).__name__}"}
+            return {"ok": False, "definitive": False, "files": [],
+                    "error": f"{type(e).__name__}"}  # NOT cached
         self.cache[key] = res
         return res
 
@@ -300,7 +315,8 @@ def main() -> int:
         claimed = entry_files(e)
         real = set(res.get("files") or [])
         if not res.get("ok"):
-            cls = "unreachable"
+            # A transient failure is NOT evidence the entry is broken.
+            cls = "unreachable" if res.get("definitive") else "unresolved_transient"
         elif claimed and real and not (claimed & real):
             cls = "mismatched"
         elif claimed and real:
@@ -308,7 +324,7 @@ def main() -> int:
         else:
             cls = "verified_no_overlap_check"
         online[cls] += 1
-        if cls in ("unreachable", "mismatched"):
+        if cls in ("unreachable", "mismatched", "unresolved_transient"):
             problems.append((e.get("id"), ref, cls, res.get("error", ""),
                              len(claimed), len(real)))
     r.save()
