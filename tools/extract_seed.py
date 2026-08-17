@@ -144,13 +144,24 @@ def pre_lines(patch: str) -> str:
 
 
 def candidates(patch: str) -> set[str]:
-    """Declaration-shaped identifiers on removed lines."""
+    """Declaration-shaped identifiers on removed lines.
+
+    Dunders and underscore-wrapped names are stripped before the STOP check.
+    `'__init__'.lower()` is not in STOP (which contains 'init'), so __init__ was
+    accepted as a propagation symbol -- and on tiangolo/fastapi#9816 it was
+    SELECTED, because a dunder present in nearly every Python package trivially
+    "explains" every other changed file. That single entry then produced 58 of
+    the corpus's 448 misses (13%), depressing measured recall by ~3 points with a
+    label defect rather than a tool limitation.
+    """
     found = set()
     for line in deleted_lines(patch):
         for pat in DECL:
             for m in pat.finditer(line):
                 ident = m.group(1)
-                if ident.lower() in STOP or len(ident) < 3:
+                # Compare on the bare name: __init__ -> init, _private -> private
+                bare = ident.strip("_")
+                if not bare or bare.lower() in STOP or len(bare) < 3:
                     continue
                 found.add(ident)
     return found
