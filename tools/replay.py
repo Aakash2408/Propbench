@@ -117,8 +117,14 @@ def main() -> int:
 
     sys.path.insert(0, args.ripple)
     sys.path.insert(0, str(HERE))
-    from app.smart_consumer_finder import find_field_consumers, find_consumers
-    from app.rag_engine import _detect_language
+    from app.smart_consumer_finder import find_field_consumers, find_matches_in_file
+    # Import the CANONICAL detector, the same object app/webhook.py uses. This
+    # used to come from app.rag_engine, which held its own 15-language map while
+    # production ran a separate 5-language one -- so the recall figure described
+    # a capability the deployed system did not have. Ripple's regression suite
+    # asserts these are the same function object; importing it here rather than
+    # via a re-export keeps that assertion meaningful.
+    from app.languages import detect as _detect_language
     from extract_seed import extract
 
     token = os.environ.get("GITHUB_TOKEN", "")
@@ -170,7 +176,7 @@ def main() -> int:
                 continue
             # Query by the entry's VECTOR KIND. Querying a symbol on a
             # package deletion under-reports: 38.5% vs 90.9% on the same PR.
-            matches = find_consumers(content, path, target, lang,
+            matches = find_matches_in_file(content, path, target, lang,
                                      vector=r['vector'])
             (flagged if matches else missed).append(path)
             by_lang[lang]["flagged" if matches else "missed"] += 1
