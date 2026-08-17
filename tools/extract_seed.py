@@ -91,6 +91,19 @@ DECL = [
     re.compile(rf"^\s*(?:public|private|protected|internal)\s+[\w<>\[\],\s\.]+?\s+{_ID}\s*[\(;=]"),
     # proto / thrift field:  optional string phone_number = 4;
     re.compile(rf"^\s*(?:optional|required|repeated)?\s*[\w.<>]+\s+{_ID}\s*=\s*\d+\s*;"),
+    # A removed PARAMETER declaration -- `name: Type` (kotlin/swift/ts/python) or
+    # `name: Type,` inside a signature. Removing a parameter is one of the most
+    # common breaking changes there is, and it was invisible here: the previous
+    # pattern was `{_ID}\s*:\s*[\w\[\]!]+\s*$`, whose character class excludes
+    # generics, so `sessionIsAliveFlagFile: Lazy<File>` never became a candidate.
+    #
+    # On JetBrains/kotlin#7223 that mattered a lot. The PR removed
+    # sessionIsAliveFlagFile from a signature across ~10 sibling files, all of
+    # which name it. With it unavailable the extractor selected
+    # `compileInProcess`, which those siblings do NOT name -- so every one of
+    # them was recorded as a miss, and the sub-classification attributed them to
+    # path locality. They were symbol misses with the wrong symbol.
+    re.compile(rf"^\s*{_ID}\s*:\s*[\w\[\]<>,.?!\s|&]+,?\s*$"),
     # graphql / yaml-ish key removal
     re.compile(rf"^\s*{_ID}\s*:\s*[\w\[\]!]+\s*$"),
     # module-level constant
